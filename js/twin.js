@@ -299,7 +299,7 @@ function initView(p,t,g,lines,labels){
   const zoom=g?17:p.position_precision==='address'?16.8:p.position_precision==='municipality'?11.8:exact?15.5:13.2;
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   let map; try{ map=new maplibregl.Map({container:box,style:STYLE_URL,center:ll,zoom,pitch:58,bearing:-20,maxPitch:78,attributionControl:{compact:true},cooperativeGestures:true}); }catch(_){ return fail('The 3D view is not available in this browser. The data sheet is complete without it.'); }
-  map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'top-right');
+  map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'top-right'); window.__map=map;
   const anchors=(t&&t.anchors)||[];
   const pop=(at,title,rows)=>new maplibregl.Popup({maxWidth:'300px'}).setLngLat(at).setHTML(`<b>${T(title)}</b>${rows.filter(r=>r[1]!=null&&r[1]!=='').map(r=>`<div class="row"><span>${esc(r[0])}</span><span>${r[2]?r[1]:T(r[1])}</span></div>`).join('')}`).addTo(map);
   const mid=l=>l[Math.floor(l.length/2)];
@@ -318,7 +318,11 @@ function initView(p,t,g,lines,labels){
   map.on('move',readout);
   const set=(b,on)=>{ if(b) b.setAttribute('aria-pressed',on?'true':'false'); };
   const stopOrbit=()=>{ orbiting=false; set($('vOrbit'),false); };
-  const spin=()=>{ if(!orbiting) return; map.easeTo({bearing:map.getBearing()+30,duration:20000,easing:x=>x}); map.once('moveend',()=>{ if(orbiting) spin(); }); };
+  let spinT=0; const spinStep=ts=>{ if(!orbiting) return; if(spinT&&!document.hidden&&inView) map.setBearing(map.getBearing()+(ts-spinT)*0.0015); spinT=ts; requestAnimationFrame(spinStep); };
+  const spin=()=>{ spinT=0; requestAnimationFrame(spinStep); };
+  /* MapLibre 5 can leave the camera at its old height after a programmatic move when terrain tiles arrive later, which puts the view under the ground. Release it. */
+  const unfreeze=()=>{ try{ if(map.terrain&&map._elevationFreeze===true){ map._elevationFreeze=false; map.triggerRepaint(); } }catch(_){} };
+  map.on('moveend',unfreeze); map.on('sourcedata',e=>{ if(e.sourceId==='dem'&&e.isSourceLoaded) unfreeze(); });
   for(const ev of ['mousedown','touchstart','wheel']) box.addEventListener(ev,()=>{ if(orbiting){ stopOrbit(); map.stop(); } },{passive:true});
   const hover=id=>{ map.on('mouseenter',id,()=>map.getCanvas().style.cursor='pointer'); map.on('mouseleave',id,()=>map.getCanvas().style.cursor=''); };
 
@@ -365,7 +369,7 @@ function initView(p,t,g,lines,labels){
       map.addLayer({id:'pulse',type:'circle',source:'pulse',paint:{'circle-radius':4,'circle-color':'#FFFFFF','circle-stroke-color':'#7FD4FF','circle-stroke-width':1.5}}); }
     if(!lines.length&&!(g&&g.geometry)&&(exact||p.position_precision==='user')){ const el=document.createElement('div'); el.className='beacon'+(reduced?'':' live');
       new maplibregl.Marker({element:el}).setLngLat(ll).setPopup(new maplibregl.Popup({offset:14}).setHTML(`<b>${T(p.name_en||p.name)}</b><div class="row"><span>Position</span><span>${esc(PREC[p.position_precision]||'')}</span></div>`)).addTo(map); }
-    fit(false); readout(); startLight();
+    fit(false); readout(); startLight(); unfreeze();
     if(!reduced&&(lines.length||g)){ orbiting=true; set($('vOrbit'),true); setTimeout(spin,900); }
   });
   const vL=$('vLight'); if(!tracks.length){ vL.hidden=true; } else set(vL,lightOn);
@@ -373,7 +377,7 @@ function initView(p,t,g,lines,labels){
   const setSat=on=>{ try{map.setLayoutProperty('sat','visibility',on?'visible':'none');}catch(_){} set($('vMap'),!on); set($('vSat'),on); };
   $('vMap').onclick=()=>setSat(false); $('vSat').onclick=()=>setSat(true);
   $('v3d').onclick=()=>{ stopOrbit(); is3d=!is3d; set($('v3d'),is3d); map.easeTo({pitch:Pch(),bearing:B(),duration:600}); };
-  $('vOrbit').onclick=()=>{ if(orbiting){ stopOrbit(); map.stop(); } else { orbiting=true; set($('vOrbit'),true); if(!is3d){ is3d=true; set($('v3d'),true); map.easeTo({pitch:58,duration:500}); map.once('moveend',spin); } else spin(); } };
+  $('vOrbit').onclick=()=>{ if(orbiting){ stopOrbit(); map.stop(); } else { orbiting=true; set($('vOrbit'),true); if(!is3d){ is3d=true; set($('v3d'),true); map.jumpTo({pitch:58}); } spin(); } };
   $('vReset').onclick=()=>{ stopOrbit(); fit(true); };
   const act=tr=>{ stopOrbit();
     if(tr.dataset.line!=null){const i=+tr.dataset.line,l=lines[i];map.easeTo({center:mid(l),duration:600});showLine(i);} else {const i=+tr.dataset.anchor,a=anchors[i];map.easeTo({center:[+a.lon,+a.lat],zoom:Math.max(map.getZoom(),16),duration:600});showAnchor(i);} };
