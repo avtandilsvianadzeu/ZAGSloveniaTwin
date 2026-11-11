@@ -206,7 +206,7 @@ body.embed .thdr,body.embed .hero,body.embed .dims,body.embed .cols,body.embed .
 body.embed .wrap{padding:0;max-width:none}
 body.embed .stage{border-radius:0;border:0;box-shadow:none;background:#fff}
 body.embed .stagebar{padding:8px;gap:6px}
-body.embed .stagebar .seg:first-child{display:none}
+body.embed .stagebar>.seg{display:none}
 body.embed .stagebody{height:calc(100vh - 96px);min-height:180px;display:block;background:none}
 body.embed #fem{position:absolute;inset:0;height:100%;min-height:0}
 body.embed .pickbox{position:absolute;right:6px;top:6px;width:min(210px,62%);padding:8px 10px;border-radius:12px;border-width:1px;box-shadow:0 4px 14px rgba(32,52,105,.14)}
