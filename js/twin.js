@@ -63,7 +63,7 @@ function inspWire(p){ const f=$('iform'); if(!f) return; $('iDate').value=new Da
   const entry=()=>({date:$('iDate').value,kind:$('iKind').value,condition:$('iCond').value,inspector:$('iWho').value.trim(),notes:$('iNotes').value.trim(),report:/^https?:\/\//i.test($('iRep').value.trim())?$('iRep').value.trim():'',created:new Date().toISOString()});
   f.onsubmit=e=>{ e.preventDefault(); const en=entry(); if(!en.date){ $('iMsg').textContent='Give the date of the inspection.'; return; } const all=inspLocal(); (all[p.id]=all[p.id]||[]).push(en);
     try{ localStorage.setItem(INSP_KEY,JSON.stringify(all)); }catch(_){ $('iMsg').textContent='This browser did not allow saving. Use Send by email instead.'; return; }
-    const sec=$('inspect'), body=sec.querySelector('.ibody'); body.innerHTML=inspHTML(p); inspWire(p); $('iMsg').textContent='Saved in this browser.'; };
+    const body=document.querySelector('#inspect .ibody'); body.innerHTML=inspHTML(p); inspWire(p); $('iMsg').textContent='Saved in this browser.'; };
   $('iMail').onclick=()=>{ const en=entry(); location.href=mailto(D.contacts.by_id[p.id]||D.contacts.default,'Inspection record: '+(p.name_en||p.name),'Dear colleague,\n\n'+inspText(p,en)+'\nHvala.\nKind regards,\n'); }; }
 /* objects added with the Add object tool: published in data/user_objects.json or kept in this browser. Always marked as not verified. */
 const USER_KEY='zag_user_objects';
@@ -114,7 +114,7 @@ function renderTwin(f){
   const coord=`${p.latitude.toFixed(6)}, ${p.longitude.toFixed(6)}`;
   const secs=[];
   const OPEN=new Set(['about','zag','specs','check']);
-  const sec=(sid,title,html)=>{ if(html) secs.push({sid,title,html:`<details class="sec" id="${sid}"${OPEN.has(sid)?' open':''}><summary><h2>${esc(title)}</h2><span class="chev" aria-hidden="true"></span></summary>${html}</details>`}); };
+  const sec=(sid,title,html)=>{ if(html) secs.push({sid,title,html:`<section class="blk" id="${sid}"><h3 class="blk-h">${esc(title)}</h3>${html}</section>`}); };
 
   sec('about','About',(p.description||t&&t.summary)?`<div class="in">${p.description?`<p>${T(p.description)}</p>`:''}${t&&t.summary?`<p class="muted">${T(t.summary)}</p>`:''}</div>`:'');
   sec('zag','ZAG involvement',!(p.zag_role||inv.length||p.year||(p.people||[]).length||(p.partners||[]).length)?'':`<div class="in">${p.zag_role?`<p>${T(p.zag_role)}</p>`:''}${inv.length?`<div class="tags">${inv.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`:''}
@@ -142,58 +142,81 @@ function renderTwin(f){
   document.title=`${clean(p.name_en||p.name)}, digital twin, ZAG Digital Atlas`;
   $('crumb').textContent=`Digital twins, ${GROUP_NAME[p.object_type]||cap(p.object_type)}`;
   const order=D.features.map(x=>x.properties.id), sheet=order.indexOf(id)+1;
-  const model=buildModel(p,t,g,lines,labels), hasModel=model.els.length>0;
+  const model=buildModel(p,t,g,lines,labels), hasModel=model.els.length>0, EMBED=document.body.classList.contains('embed');
   const dataRows=[...((t&&t.specs)||[]).map(x=>[x.label,clean(x.value)+(x.unit?' '+x.unit:''),x.source]),...sRows.map(x=>[x[0],x[1],null]),...((p.facts||[]).map(x=>[x[0],x[1],null]))];
-  $('main').innerHTML=`<div class="wrap">
-    <header class="hero">
-      <p class="kind">${esc(kind)}, ${esc(p.object_type)}</p>
-      <h1>${T(p.name_en||p.name)}</h1>
-      ${p.name_sl&&p.name_sl!==p.name_en?`<p class="sl" lang="sl">${T(p.name_sl)}</p>`:''}
-      <div class="tags">${where?`<span class="tag">${T(where)}</span>`:''}<span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only',user:'Added by a user, not verified'}[p.evidence_level]||p.evidence_level)}</span><span class="tag ${exact?'ok':'warn'}">${esc(PREC[p.position_precision]||p.position_precision)}</span><span class="tag">Sheet ${sheet} of ${order.length}</span></div>
-      <div class="reqrow"><a class="tbtn solid" id="req" href="#">Request latest information</a><a class="tbtn" id="toinsp" href="#inspect">Add inspection record</a></div>
-    </header>
-    <section class="glass stage" aria-label="Structure on the map, its data and its model">
-      <div class="stagebar">
+  const anchors=(t&&t.anchors)||[], nd0=t?(t.differences||[]).length:0, nSrc=dataRows.filter(r=>r[2]).length;
+  const blk=ids=>secs.filter(x=>ids.includes(x.sid)).sort((x,y)=>ids.indexOf(x.sid)-ids.indexOf(y.sid)).map(x=>x.html).join('')||'<p class="note pad">Nothing is recorded here for this asset.</p>';
+  const modelPane=hasModel?`<div class="pane pane-model" id="paneModel"><canvas id="fem" tabindex="0" aria-label="Model of ${T(p.name_en||p.name)}. Drag to turn it any way, scroll to zoom, double click to reset."></canvas>
+      <div class="ptools"><div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div><button class="tbtn" id="mMeasure" type="button" aria-pressed="false" title="Click two nodes to read the distance between them">Measure</button><button class="tbtn" id="mReset" type="button">Reset</button></div>
+      <div class="plabel">Schematic model</div></div>`:'';
+  if(EMBED){ $('main').innerHTML=`<div class="embedbox">${modelPane}<div class="pickbox" id="pick" aria-live="polite"></div><p class="note stage-note">${T(model.note||'')}</p></div>`; }
+  else $('main').innerHTML=`<div class="ws${hasModel?'':' nomodel'}">
+    <aside class="tree" aria-label="Asset and its parts">
+      <div class="asset"><p class="kind">${esc(kind)}</p><h1>${T(p.name_en||p.name)}</h1>${p.name_sl&&p.name_sl!==p.name_en?`<p class="sl" lang="sl">${T(p.name_sl)}</p>`:''}
+        <div class="tags"><span class="tag">${esc(cap(p.object_type))}</span>${where?`<span class="tag">${T(where)}</span>`:''}<span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only',user:'Added by a user, not verified'}[p.evidence_level]||p.evidence_level)}</span></div>
+        <dl class="meta"><div><dt>Asset ID</dt><dd class="mono">${esc(id)}</dd></div><div><dt>Position basis</dt><dd class="${exact?'okc':'warnc'}">${esc(PREC[p.position_precision]||p.position_precision)}</dd></div><div><dt>WGS 84</dt><dd class="mono">${coord}</dd></div><div><dt>Register</dt><dd>${sheet} of ${order.length}</dd></div></dl>
+        <div class="btnrow"><a class="tbtn solid" id="req" href="#">Request latest information</a><a class="tbtn" id="toinsp" href="#inspect">Add inspection</a></div></div>
+      ${figs.length?`<div class="tsec"><h2>Key figures</h2>${figs.map(x=>`<div class="kf"><span>${T(x.k)}</span><b>${T(x.v)}${x.unit?` <small>${esc(x.unit)}</small>`:''}</b>${x.src?(x.src[0]==='#'?`<a href="${x.src}">${esc(x.srcText)}</a>`:link(x.src,x.srcText)):''}</div>`).join('')}</div>`:''}
+      <div class="tsec"><h2>Structure breakdown</h2>
+        ${hasModel?`<ul class="nodes">${model.parts.map((pt,i)=>`<li><button type="button" class="trow" data-part="${i}"><span class="tic ${pt.kind==='building'?'b':'l'}"></span><span class="tn">${T(pt.name)}</span><span class="tv">${pt.kind==='building'&&pt.height?pt.height.toFixed(1)+' m high':num(Math.round(pt.len))+' m'}</span></button></li>`).join('')}
+          ${anchors.map((a,i)=>`<li><button type="button" class="trow" data-ref="${i}"><span class="tic r"></span><span class="tn">${T(a.label)}</span><span class="tv">ref</span></button></li>`).join('')}</ul>
+          <p class="note">${model.nodes.length} nodes and ${model.els.length} elements in the schematic mesh.</p>`
+          :`<p class="note">${exact?'No drawn geometry is recorded for this asset, so it has no parts and no model. The map shows the recorded position.':'The position is approximate. The map shows an area, not a point, and there is no model.'}</p>`}</div>
+      <div class="tsec"><h2>Tools</h2><div class="btncol"><button class="tbtn" id="share" type="button">Copy link to this asset</button>${hasModel?'<button class="tbtn" id="csv" type="button">Export mesh as CSV</button>':''}<button class="tbtn" id="print" type="button">Print data sheet</button></div></div>
+    </aside>
+    <section class="view" aria-label="Viewport">
+      <div class="vtools">
+        ${hasModel?`<div class="seg" role="group" aria-label="Layout"><button id="lSplit" type="button" aria-pressed="true">Split</button><button id="lMap" type="button" aria-pressed="false">Site</button><button id="lModel" type="button" aria-pressed="false">Model</button></div>`:''}
         <div class="seg" role="group" aria-label="Background"><button id="vMap" type="button" aria-pressed="true">Map</button><button id="vSat" type="button" aria-pressed="false">Satellite</button></div>
         <div class="seg" role="group" aria-label="Tilt"><button id="v3d" type="button" aria-pressed="true">3D</button><button id="v2d" type="button" aria-pressed="false">Flat</button></div>
-        <button class="tbtn" id="vReset" type="button">Reset view</button>
-        <span class="hint">${hasModel?'Click the structure for its data. Drag to move, scroll to zoom, right button or Ctrl and drag to turn.':'Drag to move, scroll to zoom, right button or Ctrl and drag to turn.'}</span>
+        <button class="tbtn" id="vReset" type="button">Fit</button>
       </div>
-      <div class="stagegrid${hasModel?'':' nomodel'}">
-        <div class="mapcol"><div id="tmap" role="application" aria-label="Map with the structure in place"></div><div class="readout" id="readout" aria-hidden="true"></div></div>
-        <aside class="side" aria-label="Selected part, model and data">
-          ${hasModel?`<div class="modelbox"><canvas id="fem" tabindex="0" aria-label="Model of ${T(p.name_en||p.name)}. Drag to turn it any way, scroll to zoom, double click to reset."></canvas>
-            <div class="mbar"><div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div><button class="tbtn" id="mReset" type="button">Reset</button></div></div>`:''}
-          <div class="pickbox" id="pick" aria-live="polite"></div>
-          <div class="alldata"><h3>All data on this object</h3>${dataRows.length?dataRows.map(r=>`<div class="row"><span>${T(r[0])}</span><span>${T(r[1])}${r[2]?` ${link(r[2])}`:''}</span></div>`).join(''):'<p class="note">No specifications are recorded for this object yet.</p>'}</div>
-        </aside>
+      <div class="panes" id="panes" data-layout="split">
+        <div class="pane pane-map" id="paneMap"><div id="tmap" role="application" aria-label="Site map with the structure in place"></div><div class="plabel">Site</div></div>
+        ${modelPane}
       </div>
-      <p class="note stage-note" id="snote">${hasModel?T(model.note):(exact?'No drawn geometry is recorded for this object yet, so there is no model. The map shows the recorded position.':'The position is approximate, so the map shows an area and not a point. There is no model for this object.')}</p>
+      <div class="vstatus"><span class="mono" id="readout">WGS 84</span><span>${hasModel?T(model.note):'Site view only'}</span></div>
     </section>
-    ${figs.length?`<section class="dims" aria-label="Key figures">${figs.map(x=>`<div class="dim"><div class="v">${T(x.v)}${x.unit?`<small>${esc(x.unit)}</small>`:''}</div><div class="k">${T(x.k)}</div><div class="s">${x.src?(x.src[0]==='#'?`<a href="${x.src}">${esc(x.srcText)}</a>`:link(x.src,x.srcText)):''}</div></div>`).join('')}</section>`:''}
-    <div class="cols">
-      <nav class="toc" aria-label="Sections">${secs.map(s=>`<a href="#${s.sid}">${esc(s.title)}</a>`).join('')}<button class="tbtn" id="expand" type="button" aria-pressed="false">Expand all</button></nav>
-      <div class="secs">${hero?`<figure class="photo"><img alt="" src="${esc(hero.src)}">${hero.credit?`<figcaption>${T(hero.credit)}</figcaption>`:''}</figure>`:''}${secs.map(s=>s.html).join('')}</div>
-    </div></div>`;
-  const ids=D.features.map(x=>x.properties.id), i=ids.indexOf(id), pv=$('prev'), nx=$('next');
-  pv.hidden=nx.hidden=false; pv.href='twin.html?id='+encodeURIComponent(ids[(i-1+ids.length)%ids.length]); nx.href='twin.html?id='+encodeURIComponent(ids[(i+1)%ids.length]);
-  $('tomap').href='index.html#'+encodeURIComponent(id);
-  const openSec=h=>{ const d=h&&document.getElementById(h.replace('#','')); if(d&&d.tagName==='DETAILS') d.open=true; };
-  document.querySelectorAll('.toc a, .dim .s a').forEach(a=>a.addEventListener('click',()=>openSec(a.getAttribute('href'))));
-  const ex=$('expand'); ex.onclick=()=>{ const all=ex.getAttribute('aria-pressed')!=='true'; document.querySelectorAll('details.sec').forEach(d=>d.open=all); ex.setAttribute('aria-pressed',all?'true':'false'); ex.textContent=all?'Collapse all':'Expand all'; };
-  const cp=$('copy'); if(cp) cp.onclick=async()=>{try{await navigator.clipboard.writeText(coord);cp.textContent='Copied';}catch(_){cp.textContent='Copy is not available here';}setTimeout(()=>cp.textContent='Copy coordinates',1800);};
-  /* one stage: the structure in place on the map, and beside it the selected part, the model and all data. A click on either side selects on both. */
-  const EMBED=document.body.classList.contains('embed'), home=()=>{ const el=$('pick'); if(el) el.innerHTML=`<b>${T(p.name_en||p.name)}</b><div class="row"><span>Type</span><span>${esc(cap(p.object_type))}</span></div><div class="row"><span>Position</span><span>${esc(PREC[p.position_precision]||p.position_precision)}</span></div><div class="row"><span>WGS84</span><span>${coord}</span></div>${hasModel?'<p>Click a part of the structure on the map or in the model.</p>':''}`; };
+    <aside class="insp" aria-label="Inspector">
+      <div class="tabs" role="tablist">${[['props','Properties'],['data','Data'],['quality','Quality'+(nd0?' '+nd0:'')],['insp','Inspections'],['src','Sources']].map((x,i)=>`<button role="tab" id="tab-${x[0]}" aria-controls="pan-${x[0]}" aria-selected="${i===0}" type="button">${x[1]}</button>`).join('')}</div>
+      <div class="tabpan" id="pan-props" role="tabpanel"><div class="pickbox" id="pick" aria-live="polite"></div>
+        <div class="alldata"><h3 class="blk-h">All data on this asset <small>${dataRows.length} values, ${nSrc} with a source link</small></h3>${dataRows.length?dataRows.map(r=>`<div class="row"><span>${T(r[0])}</span><span>${T(r[1])}${r[2]?` ${link(r[2])}`:''}</span></div>`).join(''):'<p class="note">No specifications are recorded for this asset yet.</p>'}</div>
+        ${hero?`<figure class="photo"><img alt="" src="${esc(hero.src)}">${hero.credit?`<figcaption>${T(hero.credit)}</figcaption>`:''}</figure>`:''}</div>
+      <div class="tabpan" id="pan-data" role="tabpanel" hidden>${blk(['about','zag','specs','geometry','record','history'])}</div>
+      <div class="tabpan" id="pan-quality" role="tabpanel" hidden>
+        <section class="blk"><h3 class="blk-h">Data quality</h3><div class="qgrid"><div><b>${dataRows.length}</b><span>values</span></div><div><b>${nSrc}</b><span>with source</span></div><div><b>${nd0}</b><span>source conflicts</span></div><div><b>${t&&t.open?1:0}</b><span>open question</span></div></div></section>${blk(['check','position'])}</div>
+      <div class="tabpan" id="pan-insp" role="tabpanel" hidden>${blk(['inspect'])}</div>
+      <div class="tabpan" id="pan-src" role="tabpanel" hidden>${blk(['sources','news'])}</div>
+    </aside></div>`;
+  document.title=`${clean(p.name_en||p.name)}, ZAG Digital Atlas`;
+  const cr=$('crumb'); if(cr) cr.innerHTML=`<a href="twin.html">Assets</a> / ${esc(GROUP_NAME[p.object_type]||cap(p.object_type))} / <b>${T(p.name_en||p.name)}</b>`;
+  const i0=order.indexOf(id), pv=$('prev'), nx=$('next'); if(pv&&nx){ pv.hidden=nx.hidden=false; pv.href='twin.html?id='+encodeURIComponent(order[(i0-1+order.length)%order.length]); nx.href='twin.html?id='+encodeURIComponent(order[(i0+1)%order.length]); }
+  const tm=$('tomap'); if(tm) tm.href='index.html#'+encodeURIComponent(id);
+  const home=()=>{ const el=$('pick'); if(el) el.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(p.name_en||p.name)}</b><div class="row"><span>Type</span><span>${esc(cap(p.object_type))}</span></div><div class="row"><span>Position</span><span>${esc(PREC[p.position_precision]||p.position_precision)}</span></div>${hasModel?'<p>Nothing selected. Click a part on the site map, in the model or in the structure breakdown.</p>':''}`; };
   const ctl={fem:null,map:null}; home();
-  { const open=t&&t.open?'\nStill to confirm: '+clean(t.open):'', nd=t?(t.differences||[]).length:0, last=inspFor(id)[0];
+  const markTree=sel=>{ document.querySelectorAll('.trow').forEach(b=>b.classList.toggle('on',!!sel&&((sel.part!=null&&b.dataset.part==sel.part&&sel.kind!=='ref')||(sel.kind==='ref'&&b.dataset.ref==sel.ref)))); };
+  if(hasModel) ctl.fem=initModel(model,p,{home,onSelect:sel=>{ if(ctl.map&&ctl.map.highlight) ctl.map.highlight(sel&&sel.part!=null?sel.part:null); markTree(sel); if(sel&&!EMBED) tab('props'); }});
+  if(EMBED) return;
+  ctl.map=initView(p,t,g,lines,labels,{select:(type,i)=>{ if(!ctl.fem) return; if(type==='part') ctl.fem.pickPart(i); else ctl.fem.pickRef(i); }})||{};
+  /* inspector tabs, in-page links, tree, layout, tools */
+  function tab(k){ document.querySelectorAll('.tabs [role=tab]').forEach(b=>b.setAttribute('aria-selected',b.id==='tab-'+k?'true':'false')); document.querySelectorAll('.tabpan').forEach(x=>x.hidden=x.id!=='pan-'+k); }
+  document.querySelectorAll('.tabs [role=tab]').forEach(b=>b.onclick=()=>tab(b.id.slice(4)));
+  const goto=h=>{ const el=document.getElementById(String(h).replace('#','')); if(!el) return false; const pan=el.closest('.tabpan'); if(pan) tab(pan.id.slice(4)); el.scrollIntoView({block:'start',behavior:'smooth'}); return true; };
+  document.querySelector('.ws').addEventListener('click',e=>{ const a=e.target.closest('a[href^="#"]'); if(a&&a.getAttribute('href').length>1&&goto(a.getAttribute('href'))) e.preventDefault(); });
+  document.querySelectorAll('.trow').forEach(b=>b.onclick=()=>{ if(b.dataset.part!=null){ const i=+b.dataset.part; if(ctl.fem) ctl.fem.pickPart(i); if(ctl.map&&ctl.map.focusLine&&i<lines.length) ctl.map.focusLine(i); } else { const i=+b.dataset.ref; if(ctl.fem) ctl.fem.pickRef(i); if(ctl.map&&ctl.map.focusAnchor) ctl.map.focusAnchor(i); markTree({kind:'ref',ref:i}); } });
+  const layout=k=>{ $('panes').dataset.layout=k; [['lSplit','split'],['lMap','map'],['lModel','model']].forEach(([b,v])=>{ const el=$(b); if(el) el.setAttribute('aria-pressed',v===k?'true':'false'); }); setTimeout(()=>{ if(ctl.map&&ctl.map.resize) ctl.map.resize(); if(ctl.fem) ctl.fem.wake(); },30); };
+  [['lSplit','split'],['lMap','map'],['lModel','model']].forEach(([b,v])=>{ const el=$(b); if(el) el.onclick=()=>layout(v); });
+  const flash=(el,txt)=>{ const o=el.textContent; el.textContent=txt; setTimeout(()=>el.textContent=o,1600); };
+  $('share').onclick=async()=>{ const u=location.origin+location.pathname+'?id='+encodeURIComponent(id); try{ await navigator.clipboard.writeText(u); flash($('share'),'Link copied'); }catch(_){ prompt('Copy this link',u); } };
+  $('print').onclick=()=>{ document.querySelectorAll('.tabpan').forEach(x=>x.hidden=false); window.print(); tab('props'); };
+  if($('csv')) $('csv').onclick=()=>{ const blob=new Blob([ctl.fem.csv()],{type:'text/csv'}), x=document.createElement('a'); x.href=URL.createObjectURL(blob); x.download=id+'_mesh.csv'; document.body.appendChild(x); x.click(); x.remove(); };
+  if($('mMeasure')) $('mMeasure').onclick=()=>{ const on=$('mMeasure').getAttribute('aria-pressed')!=='true'; $('mMeasure').setAttribute('aria-pressed',on?'true':'false'); ctl.fem.measure(on); if(on) tab('props'); };
+  { const open=t&&t.open?'\nStill to confirm: '+clean(t.open):'', last=inspFor(id)[0];
     $('req').href=mailto(D.contacts.by_id[id]||D.contacts.default,'Latest information needed: '+(p.name_en||p.name),
-      `Dear colleague,\n\nPlease send the latest information on this structure for the ZAG Digital Atlas.\n\nObject: ${p.name_en||p.name}${p.name_sl&&p.name_sl!==p.name_en?' ('+p.name_sl+')':''}\nType: ${p.object_type}\nPlace: ${where||''}\nPage: ${location.origin+location.pathname}?id=${id}\n${open}${nd?'\nSources disagree on '+nd+(nd===1?' point':' points')+', listed on the page.':''}\nLast inspection in the atlas: ${last?last.date+', '+(COND[last.condition]||COND.none)[0].toLowerCase():'none recorded'}\n\nUseful to have: current condition, date and kind of the last inspection, any change to the structure, and a link to the report.\n\nHvala.\nKind regards,\n`);
-    $('toinsp').onclick=()=>{ const d=$('inspect'); if(d) d.open=true; }; inspWire(p); }
-  if(hasModel) ctl.fem=initModel(model,p,{home,onSelect:sel=>{ if(ctl.map&&ctl.map.highlight) ctl.map.highlight(sel&&sel.part!=null?sel.part:null); }});
-  if(!EMBED) ctl.map=initView(p,t,g,lines,labels,{select:(type,i)=>{ if(!ctl.fem) return; if(type==='part') ctl.fem.pickPart(i); else ctl.fem.pickRef(i); }})||{};
-  const rowAct=tr=>{ document.querySelector('.stage').scrollIntoView({block:'start',behavior:'smooth'});
-    if(tr.dataset.line!=null){ if(ctl.fem) ctl.fem.pickPart(+tr.dataset.line); if(ctl.map&&ctl.map.focusLine) ctl.map.focusLine(+tr.dataset.line); } else { if(ctl.fem) ctl.fem.pickRef(+tr.dataset.anchor); if(ctl.map&&ctl.map.focusAnchor) ctl.map.focusAnchor(+tr.dataset.anchor); } };
-  document.querySelectorAll('tr.pick').forEach(tr=>{tr.onclick=()=>rowAct(tr);tr.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();rowAct(tr);}};});
+      `Dear colleague,\n\nPlease send the latest information on this structure for the ZAG Digital Atlas.\n\nObject: ${p.name_en||p.name}${p.name_sl&&p.name_sl!==p.name_en?' ('+p.name_sl+')':''}\nType: ${p.object_type}\nPlace: ${where||''}\nPage: ${location.origin+location.pathname}?id=${id}\n${open}${nd0?'\nSources disagree on '+nd0+(nd0===1?' point':' points')+', listed on the page.':''}\nLast inspection in the atlas: ${last?last.date+', '+(COND[last.condition]||COND.none)[0].toLowerCase():'none recorded'}\n\nUseful to have: current condition, date and kind of the last inspection, any change to the structure, and a link to the report.\n\nHvala.\nKind regards,\n`);
+    inspWire(p); }
+  const cp=$('copy'); if(cp) cp.onclick=async()=>{try{await navigator.clipboard.writeText(coord);cp.textContent='Copied';}catch(_){cp.textContent='Copy is not available here';}setTimeout(()=>cp.textContent='Copy coordinates',1800);};
+  document.querySelectorAll('tr.pick').forEach(tr=>{ const act=()=>{ if(tr.dataset.line!=null){ const i=+tr.dataset.line; if(ctl.fem) ctl.fem.pickPart(i); if(ctl.map.focusLine) ctl.map.focusLine(i); } else { const i=+tr.dataset.anchor; if(ctl.fem) ctl.fem.pickRef(i); if(ctl.map.focusAnchor) ctl.map.focusAnchor(i); } }; tr.onclick=act; tr.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); act(); } }; });
 }
 
 /* ---------- schematic model ----------
@@ -202,7 +225,7 @@ function renderTwin(f){
    Element size is a drawing choice. Nothing here is a structural analysis model, and no pier, span or cross section is assumed. */
 function buildModel(p,t,g,lines,labels){
   const all=[...lines.flat()], ring0=g&&g.geometry?(g.geometry.type==='Polygon'?[g.geometry.coordinates]:g.geometry.type==='MultiPolygon'?g.geometry.coordinates:[]).map(x=>x[0]):[];
-  ring0.forEach(r=>all.push(...r)); const M={nodes:[],els:[],parts:[],refs:[],note:'',R:1};
+  ring0.forEach(r=>all.push(...r)); const M={nodes:[],els:[],parts:[],refs:[],faces:[],note:'',R:1};
   if(!all.length) return M;
   const o=[all.reduce((a,c)=>a+c[0],0)/all.length,all.reduce((a,c)=>a+c[1],0)/all.length], kx=RAD*Math.cos(o[1]*RAD)*R, ky=RAD*R;
   const xy=c=>[(c[0]-o[0])*kx,(c[1]-o[1])*ky], ll=(x,y)=>[o[0]+x/kx,o[1]+y/ky];
@@ -217,21 +240,23 @@ function buildModel(p,t,g,lines,labels){
       if(W){ left.push(node(x+nx*W/2,y+ny*W/2,0,part,{ch:d,role:'edge'})); right.push(node(x-nx*W/2,y-ny*W/2,0,part,{ch:d,role:'edge'})); } }
     for(let k=0;k<n;k++){ el(axis[k],axis[k+1],part,'axis'); if(W){ el(left[k],left[k+1],part,'edge'); el(right[k],right[k+1],part,'edge'); } }
     if(W) for(let k=0;k<=n;k++){ el(left[k],axis[k],part,'cross'); el(axis[k],right[k],part,'cross'); }
+    if(W) for(let k=0;k<n;k++) M.faces.push({v:[left[k],left[k+1],right[k+1],right[k]],part,kind:'deck'});
     M.parts.push({name:labels[i]||(lines.length>1?'Part '+(i+1):p.name_en||p.name),len:L,track:axis,kind:'line',width:W}); });
-  ring0.forEach((r,i)=>{ const P=r.slice(0,-1).map(xy); if(P.length<3) return; const h=g.height_m||0, lv=h?Math.max(2,Math.min(8,Math.round(h/4))):0, part=M.parts.length, rings=[];
+  ring0.forEach((r,i)=>{ const P=r.slice(0,-1).map(xy); if(P.length<3) return; const h=g.height_m||0, lv=h?1:0, part=M.parts.length, rings=[];
     for(let k=0;k<=lv;k++){ const z=lv?h*k/lv:0; rings.push(P.map(c=>node(c[0],c[1],z,part,{role:k===0?'ground':k===lv?'top':'level'}))); }
     rings.forEach(rg=>rg.forEach((a,q)=>el(a,rg[(q+1)%rg.length],part,'ring')));
     for(let k=0;k<lv;k++) rings[k].forEach((a,q)=>el(a,rings[k+1][q],part,'vertical'));
+    if(lv){ const r0=rings[0], rT=rings[lv]; r0.forEach((a,q)=>M.faces.push({v:[a,r0[(q+1)%r0.length],rT[(q+1)%r0.length],rT[q]],part,kind:'wall'})); M.faces.push({v:rT.slice(),part,kind:'roof'}); }
     const top=rings[rings.length-1]; M.parts.push({name:ring0.length>1?'Outline '+(i+1):'Building outline',len:P.reduce((a,c,q)=>a+Math.hypot(P[(q+1)%P.length][0]-c[0],P[(q+1)%P.length][1]-c[1]),0),track:[...top,top[0]],kind:'building',height:h||null}); });
   ((t&&t.anchors)||[]).forEach((a,i)=>{ const c=xy([+a.lon,+a.lat]); M.refs.push({i,x:c[0],y:c[1],z:0,label:a.label,lat:+a.lat,lon:+a.lon,source:a.source}); });
   M.R=Math.max(1,...M.nodes.map(n=>Math.hypot(n.x,n.y,n.z)),...M.refs.map(n=>Math.hypot(n.x,n.y)));
   const bits=[]; if(lines.length) bits.push('the drawn alignment'+(W?' and the deck width of '+W+(p.category==='user_object'?' m entered by the user':' m given in the sources'):'')); if(ring0.length) bits.push((g.user?'the outline entered by the user':'the official GURS outline')+(g.height_m?(g.user?' raised to the entered height of ':' raised to its surveyed height of ')+g.height_m.toFixed(1)+' m':''));
-  M.note='Schematic mesh generated from '+bits.join(' and ')+'. It is not a structural analysis model. Element size is a drawing choice'+(lines.length?', and heights along the alignment are not in the sources, so those parts are drawn flat':'')+'.'+(ring0.length?' The horizontal rings on the building are mesh levels, not floors.':'');
+  M.note='Schematic mesh generated from '+bits.join(' and ')+'. It is not a structural analysis model. Element size is a drawing choice'+(lines.length?', and heights along the alignment are not in the sources, so those parts are drawn flat':'')+'.';
   return M;
 }
 function initModel(M,p,opt){
   opt=opt||{}; const cv=$('fem'), ctx=cv.getContext('2d'), info=$('pick');
-  const HOME={yaw:-.6,pitch:.95}; let yaw=HOME.yaw,pitch=HOME.pitch,zoom=1,panX=0,panY=0,w=0,h=0,dpr=1,sel=null,hov=null,P=[],PR=[],queued=0,awake=true;
+  const HOME={yaw:-.6,pitch:.95}; let yaw=HOME.yaw,pitch=HOME.pitch,zoom=1,panX=0,panY=0,w=0,h=0,dpr=1,sel=null,hov=null,P=[],PR=[],queued=0,awake=true,meas=false,mp=[];
   const press=(id,on)=>{ const el=$(id); if(el) el.setAttribute('aria-pressed',on?'true':'false'); };
   const size=()=>{ const r=cv.getBoundingClientRect(); dpr=Math.min(2,window.devicePixelRatio||1); w=r.width; h=r.height; cv.width=Math.round(w*dpr); cv.height=Math.round(h*dpr); };
   const proj=(x,y,z)=>{ const c=Math.cos(yaw),s=Math.sin(yaw),x1=x*c-y*s,y1=x*s+y*c,k=Math.min(w,h)*.40/M.R*zoom; return [w/2+panX+x1*k,h/2+panY-(y1*Math.cos(pitch)+z*Math.sin(pitch))*k]; };
@@ -243,6 +268,11 @@ function initModel(M,p,opt){
     for(let v=-half;v<=half+1e-6;v+=step){ let a=proj(v,-half,0),b=proj(v,half,0); ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]); a=proj(-half,v,0); b=proj(half,v,0); ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]); } ctx.stroke();
     P=M.nodes.map(n=>proj(n.x,n.y,n.z)); PR=M.refs.map(n=>proj(n.x,n.y,n.z));
     const selPart=sel&&sel.type==='part'?sel.i:null;
+    if(M.faces.length){ const cy=Math.cos(yaw), sy=Math.sin(yaw), sp=Math.sin(pitch), cp=Math.cos(pitch), dep=n=>(n.x*sy+n.y*cy)*sp-n.z*cp, L=[-.45,-.55,.7];
+      const fs=M.faces.map(f=>{ const A=M.nodes[f.v[0]],B=M.nodes[f.v[1]],C=M.nodes[f.v[2]], ux=B.x-A.x,uy=B.y-A.y,uz=B.z-A.z,vx=C.x-A.x,vy=C.y-A.y,vz=C.z-A.z; let nx=uy*vz-uz*vy,ny=uz*vx-ux*vz,nz=ux*vy-uy*vx; const nl=Math.hypot(nx,ny,nz)||1;
+        return {f,d:f.v.reduce((a,i)=>a+dep(M.nodes[i]),0)/f.v.length,sh:f.kind==='wall'?.62+.38*Math.abs((nx*L[0]+ny*L[1])/nl):f.kind==='roof'?1:.94}; }).sort((a,b)=>b.d-a.d);
+      for(const {f,sh} of fs){ const on=selPart===f.part, base=on?[70,140,235]:f.kind==='roof'?[226,231,240]:f.kind==='deck'?[205,213,228]:[186,197,219];
+        ctx.beginPath(); f.v.forEach((i,k)=>k?ctx.lineTo(P[i][0],P[i][1]):ctx.moveTo(P[i][0],P[i][1])); ctx.closePath(); ctx.fillStyle=`rgba(${Math.round(base[0]*sh)},${Math.round(base[1]*sh)},${Math.round(base[2]*sh)},.93)`; ctx.fill(); } }
     for(const pass of [0,1]){ ctx.beginPath(); for(const e of M.els){ const main=e.kind==='axis'||e.kind==='ring'||e.kind==='edge'; if((pass===1)!==main) continue; ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); }
       ctx.strokeStyle=pass?'#203469':'rgba(32,52,105,.35)'; ctx.lineWidth=pass?2:1; ctx.stroke(); }
     if(selPart!=null){ ctx.beginPath(); for(const e of M.els) if(e.part===selPart){ ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); } ctx.strokeStyle='#007AFF'; ctx.lineWidth=3; ctx.stroke(); }
@@ -252,24 +282,26 @@ function initModel(M,p,opt){
     const dot=(o,r,col)=>{ if(o&&o.type==='node'){ const q=P[o.i]; ctx.beginPath(); ctx.arc(q[0],q[1],r,0,7); ctx.fillStyle=col; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle='#fff'; ctx.stroke(); } };
     dot(hov,5,'rgba(0,122,255,.5)'); dot(sel,6,'#007AFF');
     PR.forEach((q,i)=>{ const on=sel&&sel.type==='ref'&&sel.i===i; ctx.beginPath(); ctx.moveTo(q[0],q[1]-6); ctx.lineTo(q[0]+6,q[1]); ctx.lineTo(q[0],q[1]+6); ctx.lineTo(q[0]-6,q[1]); ctx.closePath(); ctx.fillStyle=on?'#007AFF':'#fff'; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle=on?'#fff':'#5856D6'; ctx.stroke(); });
+    if(mp.length){ ctx.strokeStyle='#D9480F'; ctx.fillStyle='#D9480F'; ctx.lineWidth=2; if(mp.length===2){ ctx.setLineDash([6,4]); ctx.beginPath(); ctx.moveTo(P[mp[0]][0],P[mp[0]][1]); ctx.lineTo(P[mp[1]][0],P[mp[1]][1]); ctx.stroke(); ctx.setLineDash([]); } for(const k of mp){ ctx.beginPath(); ctx.arc(P[k][0],P[k][1],5,0,7); ctx.fill(); } }
     ctx.font='500 11.5px Inter,system-ui,sans-serif'; ctx.textBaseline='middle'; ctx.fillStyle='#6E6E73'; ctx.fillText('Grid '+(step>=1000?step/1000+' km':step+' m'),10,h-12);
     const c0=proj(0,0,0), cn=proj(0,M.R*.25,0), dx=cn[0]-c0[0], dy=cn[1]-c0[1], dl=Math.hypot(dx,dy); if(dl>1){ const ax=w-30, ay=h-30; ctx.strokeStyle='#203469'; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(ax,ay); ctx.lineTo(ax+dx/dl*16,ay+dy/dl*16); ctx.stroke(); ctx.fillStyle='#203469'; ctx.font='700 11px Inter,system-ui,sans-serif'; ctx.fillText('N',ax+dx/dl*24-4,ay+dy/dl*24); }
   }
   const redraw=()=>{ if(!queued) queued=requestAnimationFrame(draw); };
   const row=(k,v,html)=>v==null||v===''?'':`<div class="row"><span>${esc(k)}</span><span>${html?v:T(v)}</span></div>`;
   function describe(){
-    if(opt.onSelect) opt.onSelect(!sel?null:{part:sel.type==='part'?sel.i:sel.type==='node'?M.nodes[sel.i].part:sel.type==='el'?M.els[sel.i].part:null});
+    if(opt.onSelect) opt.onSelect(!sel?null:sel.type==='ref'?{kind:'ref',ref:M.refs[sel.i].i,part:null}:{kind:sel.type,part:sel.type==='part'?sel.i:sel.type==='node'?M.nodes[sel.i].part:M.els[sel.i].part});
     if(!info) return; if(!sel){ if(opt.home) opt.home(); else info.innerHTML='<b>Model</b><p>Click a node or an element for its data.</p>'; return; }
     if(sel.type==='node'){ const n=M.nodes[sel.i], pt=M.parts[n.part];
-      info.innerHTML=`<b>Node ${n.id}</b>${row('Part',pt.name)}${row('Role',{axis:'on the centre line',edge:'deck edge',ground:'ground level',top:'top of the building',level:'mesh level'}[n.role])}${row('Distance along the part',n.ch!=null?num(Math.round(n.ch*10)/10)+' m':null)}${row('Height above ground',pt.kind==='building'?n.z.toFixed(1)+' m':null)}${row('Latitude',n.lat.toFixed(6))}${row('Longitude',n.lon.toFixed(6))}`; }
+      info.innerHTML=`<h3 class="blk-h">Selection</h3><b>Node ${n.id}</b>${row('Part',pt.name)}${row('Role',{axis:'on the centre line',edge:'deck edge',ground:'ground level',top:'top of the building',level:'mesh level'}[n.role])}${row('Distance along the part',n.ch!=null?num(Math.round(n.ch*10)/10)+' m':null)}${row('Height above ground',pt.kind==='building'?n.z.toFixed(1)+' m':null)}${row('Latitude',n.lat.toFixed(6))}${row('Longitude',n.lon.toFixed(6))}`; }
     else if(sel.type==='el'){ const e=M.els[sel.i], pt=M.parts[e.part];
-      info.innerHTML=`<b>Element ${e.id}</b>${row('Part',pt.name)}${row('Kind',{axis:'centre line',edge:'deck edge',cross:'across the deck',ring:'outline',vertical:'vertical'}[e.kind])}${row('Length',num(Math.round(e.len*10)/10)+' m')}${row('Nodes',M.nodes[e.a].id+' to '+M.nodes[e.b].id)}`; }
+      info.innerHTML=`<h3 class="blk-h">Selection</h3><b>Element ${e.id}</b>${row('Part',pt.name)}${row('Kind',{axis:'centre line',edge:'deck edge',cross:'across the deck',ring:'outline',vertical:'vertical'}[e.kind])}${row('Length',num(Math.round(e.len*10)/10)+' m')}${row('Nodes',M.nodes[e.a].id+' to '+M.nodes[e.b].id)}`; }
     else if(sel.type==='part'){ const pt=M.parts[sel.i], ne=M.els.filter(e=>e.part===sel.i).length, nn=M.nodes.filter(n=>n.part===sel.i).length;
-      info.innerHTML=`<b>${T(pt.name)}</b>${row(pt.kind==='building'?'Outline length':'Length on the map',num(Math.round(pt.len))+' m')}${row('Deck width',pt.width?pt.width+' m':null)}${row('Height above ground',pt.height?pt.height.toFixed(1)+' m':null)}${row('Mesh',nn+' nodes, '+ne+' elements')}${row('Object',p.name_en||p.name)}`; }
-    else { const r=M.refs[sel.i]; info.innerHTML=`<b>${T(r.label)}</b>${row('Kind','reference point')}${row('Latitude',r.lat.toFixed(6))}${row('Longitude',r.lon.toFixed(6))}${row('Source',r.source?link(r.source):'',true)}`; }
+      info.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(pt.name)}</b>${row(pt.kind==='building'?'Outline length':'Length on the map',num(Math.round(pt.len))+' m')}${row('Deck width',pt.width?pt.width+' m':null)}${row('Height above ground',pt.height?pt.height.toFixed(1)+' m':null)}${row('Mesh',nn+' nodes, '+ne+' elements')}${row('Object',p.name_en||p.name)}`; }
+    else { const r=M.refs[sel.i]; info.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(r.label)}</b>${row('Kind','reference point')}${row('Latitude',r.lat.toFixed(6))}${row('Longitude',r.lon.toFixed(6))}${row('Source',r.source?link(r.source):'',true)}`; }
   }
   const segD=(x,y,a,b)=>{ const dx=b[0]-a[0],dy=b[1]-a[1],l=dx*dx+dy*dy; let u=l?((x-a[0])*dx+(y-a[1])*dy)/l:0; u=Math.max(0,Math.min(1,u)); return Math.hypot(x-a[0]-u*dx,y-a[1]-u*dy); };
-  function hit(x,y){ let best=null,bd=11; PR.forEach((q,i)=>{ const d=Math.hypot(q[0]-x,q[1]-y); if(d<bd){bd=d;best={type:'ref',i};} }); if(best) return best;
+  function hit(x,y,nodesOnly){ let best=null,bd=11; if(nodesOnly){ bd=14; P.forEach((q,i)=>{ const d=Math.hypot(q[0]-x,q[1]-y); if(d<bd){bd=d;best={type:'node',i};} }); return best; }
+    PR.forEach((q,i)=>{ const d=Math.hypot(q[0]-x,q[1]-y); if(d<bd){bd=d;best={type:'ref',i};} }); if(best) return best;
     bd=9; P.forEach((q,i)=>{ const d=Math.hypot(q[0]-x,q[1]-y); if(d<bd){bd=d;best={type:'node',i};} }); if(best) return best;
     bd=7; M.els.forEach((e,i)=>{ const d=segD(x,y,P[e.a],P[e.b]); if(d<bd){bd=d;best={type:'el',i};} }); return best; }
   /* free handling: drag turns the model about both axes without limits, the wheel zooms at once, Shift or the right button moves it */
@@ -284,7 +316,10 @@ function initModel(M,p,opt){
     if(pts.size===2){ const a=[...pts.values()], d=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]); if(pinch) zoom=clampZ(zoom*d/pinch); pinch=d; }
     else if(e.shiftKey||btn===2||btn===1){ panX+=dx; panY+=dy; } else { yaw+=dx*.009; pitch+=dy*.009; ['m3d','mTop','mSide'].forEach(k=>press(k,false)); }
     redraw(); });
-  const up=e=>{ const had=pts.has(e.pointerId); pts.delete(e.pointerId); pinch=0; cv.style.cursor='grab'; if(had&&moved<5&&btn===0){ const q=pos(e); sel=hit(q[0],q[1]); describe(); redraw(); } };
+  const up=e=>{ const had=pts.has(e.pointerId); pts.delete(e.pointerId); pinch=0; cv.style.cursor='grab'; if(had&&moved<5&&btn===0){ const q=pos(e), hh=hit(q[0],q[1],meas); if(meas){ if(hh&&hh.type==='node'){ if(mp.length>=2) mp=[]; mp.push(hh.i); showMeasure(); redraw(); } return; } sel=hh; describe(); redraw(); } };
+  function showMeasure(){ if(!info) return; if(mp.length<2){ info.innerHTML=`<h3 class="blk-h">Measure</h3><b>${mp.length?'Node '+M.nodes[mp[0]].id+' picked':'Pick the first node'}</b><p>Click ${mp.length?'a second':'a'} node in the model.</p>`; return; }
+    const A=M.nodes[mp[0]],Bn=M.nodes[mp[1]],dx=Bn.x-A.x,dy=Bn.y-A.y,dz=Bn.z-A.z,dh=Math.hypot(dx,dy),brg=((Math.atan2(dx,dy)/RAD)%360+360)%360;
+    info.innerHTML=`<h3 class="blk-h">Measure</h3><b>Node ${A.id} to node ${Bn.id}</b>${row('Distance',num(Math.round(Math.hypot(dh,dz)*100)/100)+' m')}${row('Horizontal distance',num(Math.round(dh*100)/100)+' m')}${row('Height difference',(Math.round(dz*100)/100)+' m')}${row('Bearing from north',brg.toFixed(1)+'°')}<p>Measured on the schematic mesh, so it is as exact as the mapped geometry.</p>`; }
   cv.addEventListener('pointerup',up); cv.addEventListener('pointercancel',e=>{pts.delete(e.pointerId);pinch=0;});
   cv.addEventListener('wheel',e=>{ e.preventDefault(); const q=pos(e), k0=zoom; zoom=clampZ(zoom*Math.exp(-e.deltaY*.0022)); const f=zoom/k0; panX=(q[0]-w/2)-(q[0]-w/2-panX)*f; panY=(q[1]-h/2)-(q[1]-h/2-panY)*f; redraw(); },{passive:false});
   const view=(y,pt,id)=>{ yaw=y; pitch=pt; panX=panY=0; zoom=1; ['m3d','mTop','mSide'].forEach(k=>press(k,k===id)); redraw(); };
@@ -296,7 +331,9 @@ function initModel(M,p,opt){
   size(); draw();
   const api={ wake(){ awake=true; size(); redraw(); }, sleep(){ awake=false; },
     pickPart(i){ if(M.parts[i]){ sel={type:'part',i}; describe(); redraw(); } }, pickRef(i){ const k=M.refs.findIndex(r=>r.i===i); if(k>=0){ sel={type:'ref',i:k}; describe(); redraw(); } },
-    state:()=>({nodes:M.nodes.length,els:M.els.length,parts:M.parts.length,sel,yaw,pitch,zoom}), screen:(type,i)=>type==='node'?P[i]:type==='ref'?PR[i]:[(P[M.els[i].a][0]+P[M.els[i].b][0])/2,(P[M.els[i].a][1]+P[M.els[i].b][1])/2] };
+    measure(on){ meas=!!on; mp=[]; cv.classList.toggle('measuring',meas); if(meas) showMeasure(); else { sel=null; describe(); } redraw(); },
+    csv(){ const L=['node,part,role,latitude,longitude,height_m,distance_along_part_m']; for(const n of M.nodes) L.push([n.id,'"'+M.parts[n.part].name.replace(/"/g,'')+'"',n.role,n.lat.toFixed(7),n.lon.toFixed(7),n.z.toFixed(2),n.ch!=null?n.ch.toFixed(2):''].join(',')); L.push('','element,part,kind,node_a,node_b,length_m'); for(const e of M.els) L.push([e.id,'"'+M.parts[e.part].name.replace(/"/g,'')+'"',e.kind,M.nodes[e.a].id,M.nodes[e.b].id,e.len.toFixed(2)].join(',')); return L.join('\n'); },
+    state:()=>({nodes:M.nodes.length,els:M.els.length,parts:M.parts.length,sel,yaw,pitch,zoom,meas,mp}), screen:(type,i)=>type==='node'?P[i]:type==='ref'?PR[i]:[(P[M.els[i].a][0]+P[M.els[i].b][0])/2,(P[M.els[i].a][1]+P[M.els[i].b][1])/2] };
   window.__fem=api; return api;
 }
 
@@ -313,7 +350,7 @@ function initView(p,t,g,lines,labels,opt){
   function fit(animate){ const pts=[...lines.flat(),...anchors.map(a=>[+a.lon,+a.lat])];
     if(pts.length>1){ const b=pts.reduce((bb,c)=>bb.extend(c),new maplibregl.LngLatBounds(pts[0],pts[0])); map.fitBounds(b,{padding:60,maxZoom:18.3,pitch:Pch(),bearing:B(),duration:animate?700:0}); }
     else map[animate?'easeTo':'jumpTo']({center:ll,zoom,pitch:Pch(),bearing:B(),duration:700}); }
-  const ro=$('readout'), readout=()=>{ if(!ro) return; const c=map.getCenter(); ro.textContent=`${c.lat.toFixed(5)} N, ${c.lng.toFixed(5)} E, zoom ${map.getZoom().toFixed(1)}`; };
+  const ro=$('readout'), readout=()=>{ if(!ro) return; const c=map.getCenter(); ro.textContent=`WGS 84  ${c.lat.toFixed(5)} N  ${c.lng.toFixed(5)} E  zoom ${map.getZoom().toFixed(1)}  pitch ${map.getPitch().toFixed(0)}°`; };
   map.on('move',readout);
   /* MapLibre 5 can leave the camera at its old height after a programmatic move when terrain tiles arrive later, which puts the view under the ground. Release it. */
   const unfreeze=()=>{ try{ if(map.terrain&&map._elevationFreeze===true){ map._elevationFreeze=false; map.triggerRepaint(); } }catch(_){} };
@@ -385,5 +422,7 @@ if(!window.TWIN_NO_BOOT) (async()=>{
   try{ await load(); }catch(e){ $('main').innerHTML=`<p class="loading">${esc(e.message)}</p>`; return; }
   const id=new URLSearchParams(location.search).get('id')||location.hash.slice(1), f=id&&D.byId[id];
   if(id&&!f){ $('main').innerHTML=`<div class="wrap"><p>No object with the id "${esc(id)}". <a href="twin.html">See all objects</a>.</p></div>`; return; }
-  if(f) renderTwin(f); else renderIndex();
+  const jl=$('jumplist'), ji=$('jump'); if(jl&&ji){ const names=D.features.map(x=>[x.properties.name_en||x.properties.name,x.properties.id]); jl.innerHTML=names.map(n=>`<option value="${esc(n[0])}">`).join('');
+    ji.onchange=()=>{ const q=ji.value.trim().toLowerCase(), hit=names.find(n=>n[0].toLowerCase()===q)||names.find(n=>n[0].toLowerCase().includes(q)); if(q&&hit) location.href='twin.html?id='+encodeURIComponent(hit[1]); }; }
+  if(f){ if(!document.body.classList.contains('embed')) document.body.classList.add('wsbody'); renderTwin(f); } else renderIndex();
 })();

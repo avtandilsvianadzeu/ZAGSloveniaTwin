@@ -186,3 +186,15 @@ Checked on the live site through the owner's browser: a twin page with its model
 
 Still wanted by the owner and not built: sensor layer, traffic replay and alerts (these need measured data and a data format agreed with ZAG), compare mode, timeline, measure tool, sections and profiles, guided tour, share and print.
 
+## 15. Asset workspace (11 November 2026, late evening)
+
+The owner asked for the look and flow of professional digital twin platforms. The twin page is now an asset workspace, and section 14 is out of date where it describes the stage.
+
+- Layout of `twin.html?id=...`: app bar with breadcrumbs and an asset search, then three columns. Left: the asset card (identity, asset id, position basis, coordinates), key figures with their source, the structure breakdown (parts and reference points, clickable) and tools. Centre: the viewport with the site map and the model side by side (Split, Site or Model), background and tilt switches, and a status bar with live coordinates. Right: the inspector with tabs Properties, Data, Quality, Inspections and Sources.
+- Selection is shared. A click in the breakdown, on the map or in the model selects the same part everywhere and shows it under Properties.
+- Model: surfaces are filled and shaded where the data supports them (deck plate when a width is sourced, building walls and roof from the GURS outline and height). Buildings are drawn as their real massing, with no intermediate mesh levels.
+- New tools: Measure (pick two nodes: distance, horizontal distance, height difference, bearing), Export mesh as CSV (nodes and elements with coordinates), Copy link, Print data sheet.
+- `css/platform.css` is the shared professional skin for `twin.html`, `add.html` and `dashboard.html` (white panels, cool grey ground, one blue, no blur). `css/twin.css` still holds the base rules. Versions are at `?v=6`.
+- In the map panel of the main map the model is embedded through `twin.html?id=...&embed=1`, which renders only the model and the selection.
+- Tested headless: all 73 asset pages at desktop and phone width, breakdown clicks, measure, tabs, in-page links, layouts, CSV, asset search, embed, home, add and dashboard pages.
+
