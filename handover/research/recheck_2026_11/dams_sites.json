@@ -1,0 +1,651 @@
+[
+ {
+  "id": "he_solkan",
+  "verdict": "confirmed",
+  "stored": [
+   45.984312,
+   13.654821
+  ],
+  "independent": {
+   "lat": 45.978981,
+   "lon": 13.651822,
+   "source_url": "https://en.wikipedia.org/wiki/Solkan_Bridge",
+   "quote": "45°58′44″N 13°39′07″E / 45.978981°N 13.651822°E",
+   "note": "Anchor only: this is the Solkan Bridge, not the dam. No independent coordinate of the dam itself was found."
+  },
+  "distance_m": 636,
+  "evidence": "Operator brochure places the dam 'okoli 700 metrov gorvodno od znanega solkanskega mostu' (SENG brochure). The stored point is 636 m from the en.wikipedia coordinate of the Solkan Bridge, to the north-north-east, which fits. Confirmed by location description, not by an independent dam coordinate. Pin is on the dam and powerhouse block (one structure, run-of-river). ZAG role (grouts) concerns the plant structure itself.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "sources",
+    "current": "brochure cited without the location sentence",
+    "proposed": "add the location sentence as position evidence",
+    "source_url": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+    "quote": "okoli 700 metrov gorvodno od znanega solkanskega mostu"
+   }
+  ],
+  "source_differences": [],
+  "searched": "en.wikipedia list of power stations (no coordinates in Solkan row), SENG large HPP page (no location), SENG brochure, openinframap plant 427961750 (no coordinates shown, Wikidata Q12790969), komoot viewpoint (a viewpoint, not the dam). Not reachable from this session: sl.wikipedia.org, wikidata.org, OpenStreetMap, structurae.net (site error), www.gem.wiki pages for Zlatoličje and Solkan (site error or blocked). USGS event pages opened but need JavaScript, so only their titles from the search listing are known."
+ },
+ {
+  "id": "he_zlatolicje",
+  "verdict": "confirmed",
+  "stored": [
+   46.44789,
+   15.786944
+  ],
+  "independent": {
+   "lat": 46.4562111,
+   "lon": 15.790083,
+   "source_url": "https://wiki.riteme.site/wiki/Zlatoli%C4%8Dje",
+   "quote": "46.4562111°N 15.790083°E ... South of the settlement",
+   "note": "Anchor only: village coordinate from a mirror of the en.wikipedia article Zlatoličje, which says the plant is south of the settlement."
+  },
+  "distance_m": 956,
+  "evidence": "Stored point is 956 m south of the village coordinate, matching 'South of the settlement'. The pin is on the powerhouse on the canal, about 17 km from the Melje weir, which is a separate record (jez_melje). That is the right part: ZAG's sources name 'HE Zlatoličje' (grouts, and material control for the upgrade of the plant). No independent coordinate of the powerhouse itself was found.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.crosses",
+    "current": "Drava",
+    "proposed": "powerhouse stands on the diversion canal, not on the Drava channel (already noted in the twin sheet, record field still says Drava)",
+    "source_url": "https://wiki.riteme.site/wiki/Zlatoli%C4%8Dje",
+    "quote": "South of the settlement"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Installed capacity",
+    "a": "136 MW",
+    "a_url": "https://wiki.riteme.site/wiki/Zlatoli%C4%8Dje",
+    "b": "126 MW Zlatoličje hydro project",
+    "b_url": "https://balkangreenenergynews.com/dem-seeks-bids-for-rehabilitation-of-melje-hydro-facility/"
+   },
+   {
+    "what": "Installed capacity",
+    "a": "136 MW",
+    "a_url": "https://wiki.riteme.site/wiki/Zlatoli%C4%8Dje",
+    "b": "114 (list row 'HPP Zlatoličje | Drava | Zlatoličje | Run-of-river | 114 | 1969-')",
+    "b_url": "https://en.wikipedia.org/wiki/List_of_power_stations_in_Slovenia"
+   }
+  ],
+  "searched": "gem.wiki Zlatoličje page (site error on both hostnames), en.wikipedia list (no coordinates), wiki mirror of Zlatoličje article. Not reachable from this session: sl.wikipedia.org, wikidata.org, OpenStreetMap, structurae.net (site error), www.gem.wiki pages for Zlatoličje and Solkan (site error or blocked). USGS event pages opened but need JavaScript, so only their titles from the search listing are known."
+ },
+ {
+  "id": "he_vuhred",
+  "verdict": "confirmed",
+  "stored": [
+   46.587562,
+   15.275391
+  ],
+  "independent": {
+   "lat": 46.5876,
+   "lon": 15.2756,
+   "source_url": "https://gem.wiki/Vuhred_hydroelectric_plant",
+   "quote": "46.5876, 15.2756 (exact)"
+  },
+  "distance_m": 17,
+  "evidence": "Global Energy Monitor gives the plant on the Drava at 46.5876, 15.2756 marked exact, 17 m from the stored point. Dam and powerhouse are one structure here. GEM may itself draw on OpenStreetMap, so independence is not certain.",
+  "proposed_position": null,
+  "improvements": [],
+  "source_differences": [
+   {
+    "what": "Municipality",
+    "a": "Radlje ob Dravi (kraji.eu: 'Hydroelectric power station in the Radlje ob Dravi Municipality')",
+    "a_url": "https://kraji.eu/slovenija/he_vuhred/eng",
+    "b": "Podvelka (record field 'municipality', per twin sheet)",
+    "b_url": "https://gem.wiki/Vuhred_hydroelectric_plant"
+   }
+  ],
+  "searched": "gem.wiki Vuhred, kraji.eu Vuhred (no coordinates), en.wikipedia list (72 MW, 1956, no coordinates)."
+ },
+ {
+  "id": "he_vrhovo",
+  "verdict": "confirmed",
+  "stored": [
+   46.044564,
+   15.224149
+  ],
+  "independent": {
+   "lat": 46.0395472,
+   "lon": 15.2213139,
+   "source_url": "https://wiki.riteme.site/wiki/Vrhovo",
+   "quote": "46.0395472°N 15.2213139°E ... on the right bank of the Sava River",
+   "note": "Anchor only: Vrhovo village coordinate (mirror of en.wikipedia)."
+  },
+  "distance_m": 599,
+  "evidence": "SEL says the plant 'lies on the plain below the village of Vrhovo'. IBE 2010: 'Pregrada je situirana v km 778 + 027 reke Save'. Stored point is 599 m from the village coordinate. Confirmed by description only, no independent dam coordinate found. ZAG modelled the dam structure, and the pin is on the dam.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.typ / facts",
+    "current": "null, only client and years",
+    "proposed": "34 MW, 3 units, start of operation 1993, structural height 27 m",
+    "source_url": "https://www.sel.si/en/production-facilities/",
+    "quote": "with a structural height of 27 m"
+   },
+   {
+    "field": "structure.built",
+    "current": "null",
+    "proposed": "1993 (SEL). IBE 2010: completed 1993, use permit since 1997",
+    "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "Pregrada je situirana v km 778 + 027 reke Save"
+   }
+  ],
+  "source_differences": [],
+  "searched": "SEL production facilities page, IBE paper (Gradbeni vestnik 2010) on dlib, mirror of en.wikipedia Vrhovo. No GEM page found by search. Not reachable from this session: sl.wikipedia.org, wikidata.org, OpenStreetMap, structurae.net (site error), www.gem.wiki pages for Zlatoličje and Solkan (site error or blocked). USGS event pages opened but need JavaScript, so only their titles from the search listing are known."
+ },
+ {
+  "id": "jez_melje",
+  "verdict": "cannot_check",
+  "stored": [
+   46.560151,
+   15.673475
+  ],
+  "independent": {
+   "lat": 46.56405,
+   "lon": 15.670225,
+   "source_url": "https://en.wikipedia.org/wiki/Meljski_Hrib",
+   "quote": "46°33′50.58″N 15°40′12.81″E / 46.5640500°N 15.6702250°E",
+   "note": "Weak anchor: neighbouring settlement Meljski Hrib, the page does not mention the weir."
+  },
+  "distance_m": 500,
+  "evidence": "No independent coordinate or location sentence for the weir was found. Stored point is 500 m from the settlement Meljski Hrib, which is only plausibility. Identity is clear: Balkan Green Energy News describes the small plant as 'built at Melje dam near the 126 MW Zlatoličje hydro project' on the Drava. ZAG's source names the Melje Dam and the Melje small HPP, and both sit at the weir, so a pin on the weir is the right part.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "facts / structure.typ",
+    "current": "null, only client and years",
+    "proposed": "gated weir on the Drava, intake of the Zlatoličje canal, small HPP 2.26 MW with two units",
+    "source_url": "https://balkangreenenergynews.com/dem-seeks-bids-for-rehabilitation-of-melje-hydro-facility/",
+    "quote": "2.26 MW Melje hydroelectric project"
+   }
+  ],
+  "source_differences": [],
+  "searched": "Search for Jez Melje coordinates returned no page with a coordinate. Opened en.wikipedia Meljski Hrib and the Balkan Green Energy News article. DEM page not reached. Not reachable from this session: sl.wikipedia.org, wikidata.org, OpenStreetMap, structurae.net (site error), www.gem.wiki pages for Zlatoličje and Solkan (site error or blocked). USGS event pages opened but need JavaScript, so only their titles from the search listing are known."
+ },
+ {
+  "id": "he_bostanj",
+  "verdict": "cannot_check",
+  "stored": [
+   46.017682,
+   15.281293
+  ],
+  "independent": null,
+  "distance_m": null,
+  "evidence": "No independent coordinate found. IBE 2010 fixes the plant only by river chainage: 'HE Boštanj se nahaja v km 769 + 677 reke Save'. The chainage step from Vrhovo (km 778+027) is 8.35 km along the river, and the stored points of the two plants are about 5.3 km apart in a straight line, which does not contradict it but proves little. Identity (HESS plant at Boštanj, Sevnica) is not in doubt.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.built / facts",
+    "current": "null, only client and years",
+    "proposed": "32 MW, gross head 7.6 m, dam height 26.85 m, construction completed 2006",
+    "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "HE Boštanj se nahaja v km 769 + 677 reke Save"
+   },
+   {
+    "field": "year (ZAG involvement)",
+    "current": "2007-2013",
+    "proposed": "check: IBE 2010 says construction of Boštanj was completed in 2006, before the stated ZAG years; the ZAG entry covers three plants together",
+    "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "HE Boštanj se nahaja v km 769 + 677 reke Save"
+   }
+  ],
+  "source_differences": [],
+  "searched": "structurae.net Boštanj page (site error), openinframap plant 965129575 (no coordinates), gen-energija HESS page (no plant data), en.wikipedia Boštanj settlement (blocked). Not reachable from this session: sl.wikipedia.org, wikidata.org, OpenStreetMap, structurae.net (site error), www.gem.wiki pages for Zlatoličje and Solkan (site error or blocked). USGS event pages opened but need JavaScript, so only their titles from the search listing are known."
+ },
+ {
+  "id": "he_arto",
+  "verdict": "confirmed",
+  "stored": [
+   45.990577,
+   15.381242
+  ],
+  "independent": {
+   "lat": 45.9926694,
+   "lon": 15.3893833,
+   "source_url": "https://wiki.riteme.site/wiki/Blanca,_Sevnica",
+   "quote": "45.9926694°N 15.3893833°E ... on the left bank of the Sava River",
+   "note": "Anchor only: Blanca village coordinate (mirror of en.wikipedia)."
+  },
+  "distance_m": 671,
+  "evidence": "IBE 2010 places the dam 'nekaj 100 m gorvodno od vasi Blanca na levem bregu' at river km 760+627. Stored point is 671 m west (upstream) of the village coordinate, which fits. Confirmed by description only. The name in OpenStreetMap and IBE is 'HE Blanca', the record uses 'HE Arto Blanca', same plant.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.built / facts",
+    "current": "null, only client and years",
+    "proposed": "40 MW (IBE) or 39.12 MW (3 x 13.04, openinframap), gross head 9.19 m, dam height 31.35 m, technically completed 2009",
+    "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "nekaj 100 m gorvodno od vasi Blanca na levem bregu"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Construction period",
+    "a": "'built in the settlement between 2005 and 2008' (en.wikipedia mirror, Blanca)",
+    "a_url": "https://wiki.riteme.site/wiki/Blanca,_Sevnica",
+    "b": "technically completed 2009, trial operation (IBE 2010)",
+    "b_url": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF"
+   },
+   {
+    "what": "Annual generation",
+    "a": "144 GWh (en.wikipedia mirror, Blanca)",
+    "a_url": "https://wiki.riteme.site/wiki/Blanca,_Sevnica",
+    "b": "142 GWh IBE 2010 and 148 GWh CFBR (both already in twin sheet)",
+    "b_url": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF"
+   }
+  ],
+  "searched": "IBE 2010 paper, mirror of en.wikipedia Blanca, openinframap plant 325991561 (Wikidata Q20088141, no coordinates). Not reachable from this session: sl.wikipedia.org, wikidata.org, OpenStreetMap, structurae.net (site error), www.gem.wiki pages for Zlatoličje and Solkan (site error or blocked). USGS event pages opened but need JavaScript, so only their titles from the search listing are known."
+ },
+ {
+  "id": "he_krsko",
+  "verdict": "cannot_check",
+  "stored": [
+   45.974811,
+   15.481494
+  ],
+  "independent": null,
+  "distance_m": null,
+  "evidence": "No independent coordinate found. IBE 2012 gives an unambiguous description: 'savskem km 751 + 575 v bližini vasi Sotelsko na levem bregu' and about 300 m upstream of the first houses of Krško on the right bank. I could not obtain a coordinate for Sotelsko or the first houses to measure against. The stored point is 4.8 km from the Krško nuclear plant (GEM 45.9389, 15.51601), so it is not confused with the NPP.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.built / facts",
+    "current": "null, only client and years",
+    "proposed": "43 MW (IBE 2012) or 40 MW (IBE 2010), gross head 9.3 m, dam height 31.35 m, construction from 2007, completion planned 2012",
+    "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+    "quote": "ca. 300 m gorvodno od prvih hiš v Krškem na desnem bregu Save"
+   },
+   {
+    "field": "position note",
+    "current": "NPP is about 4 km SE",
+    "proposed": "about 4.8 km (measured from the GEM coordinate of the NPP)",
+    "source_url": "https://www.gem.wiki/Kr%C5%A1ko_nuclear_power_plant",
+    "quote": "45.9389, 15.51601 (exact)"
+   }
+  ],
+  "source_differences": [],
+  "searched": "IBE 2010 and IBE 2012 papers on dlib, GEM page of the nuclear plant, search for Sotelsko coordinates (no page found). Not reachable from this session: sl.wikipedia.org, wikidata.org, OpenStreetMap, structurae.net (site error), www.gem.wiki pages for Zlatoličje and Solkan (site error or blocked). USGS event pages opened but need JavaScript, so only their titles from the search listing are known."
+ },
+ {
+  "id": "che_avce",
+  "verdict": "confirmed",
+  "stored": [
+   46.102596,
+   13.670792
+  ],
+  "independent": {
+   "lat": 46.1027,
+   "lon": 13.6707,
+   "source_url": "https://gem.wiki/Av%C4%8De_hydroelectric_plant",
+   "quote": "46.1027, 13.6707 (exact)"
+  },
+  "distance_m": 14,
+  "evidence": "GEM gives 46.1027, 13.6707 marked exact, 14 m from the stored point. The inzonex atlas shows 46.1027, 13.6708 and credits the WRI Global Power Plant Database. SENG places the powerhouse 'na levem bregu Soče ob izlivu potoka Avšček'. The stored point is 994 m west of the Avče village coordinate (en.wikipedia 46.10167, 13.68361). So the pin is on the powerhouse. Open point: ZAG's role names 'the dam', and the only dams of this plant are the upper reservoir embankments near Kanalski Vrh, well away from the pin. en.wikipedia's plant coordinate lies 2,108 m from the pin and 813 m from the Kanalski Vrh village coordinate (46.0771306, 13.6625139), so it probably marks the upper reservoir, but the article does not say what it marks.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.typ / facts",
+    "current": "null, only client and years",
+    "proposed": "pumped storage, 185 MW turbine and 180 MW pump, maximum gross head 521 m, upper reservoir 2,200,000 m3, built August 2005 to August 2009",
+    "source_url": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "Maksimalni bruto padec: Hbruto max = 521 m"
+   },
+   {
+    "field": "facts",
+    "current": "none",
+    "proposed": "penstock 1,567 m, headrace tunnel 697 m",
+    "source_url": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "Cevovod dolžine 1.567 m poteka po pobočju Avškega Kuka"
+   },
+   {
+    "field": "description / label",
+    "current": "pin unlabelled as to part",
+    "proposed": "say that the pin is the powerhouse on the Soča and that the dam work concerns the upper reservoir near Kanalski Vrh (no coordinate proposed, its position is not sourced)",
+    "source_url": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "zgrajen v naravni kotanji v bližini vasi Kanalski Vrh"
+   },
+   {
+    "field": "structure.crosses",
+    "current": "Soča",
+    "proposed": "not apt, the powerhouse stands on the left bank of the Soča",
+    "source_url": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "na levem bregu Soče ob izlivu potoka Avšček"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Plant coordinate",
+    "a": "46.1027, 13.6707 (exact)",
+    "a_url": "https://gem.wiki/Av%C4%8De_hydroelectric_plant",
+    "b": "46.0838583°N 13.6666500°E, 2.1 km to the south, part not stated",
+    "b_url": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant"
+   },
+   {
+    "what": "Capacity",
+    "a": "180 MW",
+    "a_url": "https://gem.wiki/Av%C4%8De_hydroelectric_plant",
+    "b": "185 megawatts when producing electricity",
+    "b_url": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant"
+   },
+   {
+    "what": "Start",
+    "a": "2009",
+    "a_url": "https://gem.wiki/Av%C4%8De_hydroelectric_plant",
+    "b": "put into commercial use in April 2010",
+    "b_url": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant"
+   }
+  ],
+  "searched": "gem.wiki Avče, en.wikipedia Avče Pumped Storage Plant, en.wikipedia Avče and Kanalski Vrh, inzonex atlas, SENG publication, soca-valley.com reservoir page (no coordinates)."
+ },
+ {
+  "id": "slano_blato",
+  "verdict": "confirmed",
+  "stored": [
+   45.913056,
+   13.865278
+  ],
+  "independent": {
+   "lat": 45.9,
+   "lon": 13.85,
+   "source_url": "https://www.landslides.org/report/slano-blato-landslide/",
+   "quote": "is located at 45°54? N 13°51? E in the Eocene flysch region",
+   "note": "Arc-minute precision only (about 1.9 km resolution)."
+  },
+  "distance_m": 1872,
+  "evidence": "The stored point is the en.wikipedia coordinate (45.91306°N 13.86528°E), so that page is the source, not an independent check. The landslides.org report gives 45°54' N 13°51' E at arc-minute precision. The stored point is 1,872 m from that rounded corner, which is within the rounding of a minute grid. NHESS 2005 gives no coordinate, only 'only 220 m away from Lokavec village' for the toe. The body is more than 1 km long, so the point stands for an area and should stay labelled as such. The precision value 'surveyed' overstates it: the coordinate comes from Wikipedia, which does not say what it marks.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "position_precision",
+    "current": "surveyed",
+    "proposed": "a label that says published coordinate for an elongated landslide body about 1.3 km long, not a survey",
+    "source_url": "https://en.wikipedia.org/wiki/Slano_Blato_Landslide",
+    "quote": "1,010 to 1,300 metres (3,310 to 4,270 ft) long"
+   },
+   {
+    "field": "facts",
+    "current": "only client and years",
+    "proposed": "main triggering 19 November 2000, more than 1,290 m long, 60 to 200 m wide, about 700,000 m3, elevation 270 to 640 m",
+    "source_url": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+    "quote": "The initial sliding was triggered on 19 November 2000"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Length and volume",
+    "a": "more than 1290 m long, about 700 000 m3",
+    "a_url": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+    "b": "about 1,600 m long, total sliding mass of about 900,000 m3",
+    "b_url": "https://www.landslides.org/report/slano-blato-landslide/"
+   },
+   {
+    "what": "First record",
+    "a": "event on 20 October 1885 and a debris flow in 1786",
+    "a_url": "https://en.wikipedia.org/wiki/Slano_Blato_Landslide",
+    "b": "'The landslide was first mentioned in 1887', table date Nov 11, 1887",
+    "b_url": "https://www.landslides.org/report/slano-blato-landslide/"
+   }
+  ],
+  "searched": "en.wikipedia Slano Blato Landslide, landslides.org report, NHESS 2005 paper (no coordinates)."
+ },
+ {
+  "id": "stoze",
+  "verdict": "confirmed",
+  "stored": [
+   46.431593,
+   13.604744
+  ],
+  "independent": {
+   "lat": 46.429,
+   "lon": 13.6102,
+   "source_url": "https://www.hiking-trail.net/hiking_trip/mangartska_planina_sober___monte_sciober_grande_via_stoze/1/1280/7032",
+   "quote": "46,429°N 13,6102°E ... Mangartska planina (1295 m)",
+   "note": "Anchor only: Mangartska planina, the reference point used by the ZAG author."
+  },
+  "distance_m": 508,
+  "evidence": "Petkovšek (ZAG, Ujma 2001) places the slide '200-500 m severozahodno od Mangartske planine' with the scarp at 1,525 m. The stored point is 508 m from the Mangartska planina coordinate, to the west-north-west, which fits at the upper end of that range. NHESS 2013 puts Log pod Mangartom about 4 km downstream. Confirmed by description, no independent coordinate of the slide found. Text error in the record: 'hist' still says 'The position shown is the village, not the source area', and the twin sheet says the same under differences and open. Both are out of date, the pin is now on the slide outline.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "hist",
+    "current": "The position shown is the village, not the source area on the Stože slope.",
+    "proposed": "delete this sentence, the point is now on the landslide",
+    "source_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9175/8604/24578",
+    "quote": "200‡500 m severozahodno od Mangartske planine"
+   },
+   {
+    "field": "twins.json differences and open",
+    "current": "Current point is the village Log pod Mangartom / the slide body is not mapped",
+    "proposed": "remove both, out of date",
+    "source_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9175/8604/24578",
+    "quote": "Odlomni rob je v času glavne sprožitve segel na koto 1525 m"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Date of failure",
+    "a": "triggered on 17 November 2000",
+    "a_url": "https://nhess.copernicus.org/articles/13/2543/2013/nhess-13-2543-2013.pdf",
+    "b": "'v dneh med 15. in 17. novembrom 2000'",
+    "b_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9177/8606/24582"
+   }
+  ],
+  "searched": "NHESS 2013 paper, Ujma articles 9175 and 9177 (no coordinates in any), hiking-trail.net for Mangartska planina. sl.wikipedia and Wikidata Q20522219 not reachable. The spelling 'Stovže' appears in titles of gov.si and legal pages in the search listing, which were not opened, so no change is proposed."
+ },
+ {
+  "id": "strunjan",
+  "verdict": "confirmed",
+  "stored": [
+   45.537026,
+   13.608536
+  ],
+  "independent": {
+   "lat": 45.537287,
+   "lon": 13.606312,
+   "source_url": "https://www.komoot.com/highlight/5798980",
+   "quote": "Strunjan Cross Viewpoint ... @45.5372870,13.6063120",
+   "note": "Anchor: the cross viewpoint on the cliff top above the bay of Sv. Križ. A user-contributed point."
+  },
+  "distance_m": 176,
+  "evidence": "Stored point is 176 m from the komoot point of the Strunjan cross viewpoint, on the same cliff top above the bay of Sv. Križ. That confirms the cliff section. It does not confirm the exact place of the 2019 collapse: the University of Ljubljana says only 'A nearby significant collapse in late 2019 involved a volume of about 2,000 m³', near the 2023 site in the Bay of St. Cross. The record name 'Sveti Križ Bay Cliff' is therefore slightly more exact than the source. Keep the drawn cliff line as the honest geometry.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "description",
+    "current": "rockfall placed at the Sveti Križ bay cliff",
+    "proposed": "say the 2019 collapse was near the bay of Sv. Križ, the source does not place it exactly",
+    "source_url": "https://www.uni-lj.si/en/news/2024-12-09-sunbathing-under-cliffs-is-dangerous",
+    "quote": "A nearby significant collapse in late 2019"
+   }
+  ],
+  "source_differences": [],
+  "searched": "uni-lj.si news, portoroz.si Moon Bay page (no coordinates), kraji.eu Mesečev zaliv (no coordinates), komoot highlight."
+ },
+ {
+  "id": "sitarjevec",
+  "verdict": "confirmed",
+  "stored": [
+   46.04978,
+   14.83038
+  ],
+  "independent": {
+   "lat": 46.049342,
+   "lon": 14.830746,
+   "source_url": "https://www.visitljubljana.com/sl/poi/rudnik-sitarjevec-litija",
+   "quote": "Sitarjevška cesta 46 1270 Litija ... 46.049342,14.830746"
+  },
+  "distance_m": 56,
+  "evidence": "Visit Ljubljana gives 46.049342, 14.830746 for the mine, 56 m from the stored point. The Podsitarjevec settlement coordinate on en.wikipedia is 168 m away. Neither source says which portal the point marks. ZAG's work was on ochre from the mine, so a pin at the visitor entrance is fair.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "address spelling",
+    "current": "Sitarjevska cesta 46 (record note, per twin sheet)",
+    "proposed": "Sitarjevška cesta 46",
+    "source_url": "https://www.visitljubljana.com/sl/poi/rudnik-sitarjevec-litija",
+    "quote": "Sitarjevška cesta 46 1270 Litija"
+   }
+  ],
+  "source_differences": [],
+  "searched": "visitljubljana.com Slovene page, en.wikipedia Podsitarjevec."
+ },
+ {
+  "id": "bovec_quake",
+  "verdict": "confirmed",
+  "stored": [
+   46.3386,
+   13.5524
+  ],
+  "independent": {
+   "lat": 46.3367917,
+   "lon": 13.5509861,
+   "source_url": "https://wiki.kidzsearch.com/wiki/Bovec",
+   "quote": "46°20′12.45″N 13°33′3.55″E / 46.3367917°N 13.5509861°E",
+   "note": "Town coordinate of Bovec from a Wikipedia mirror."
+  },
+  "distance_m": 229,
+  "evidence": "The label 'settlement' is honest: the point is Bovec town (230 m from the Wikipedia town coordinate), not the epicentre. The epicentre of 12 April 1998 was 'about 8 km south-east from the town of Bovec' (Geologija paper), so the record must not be read as an epicentre. Study area stays an area.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "facts",
+    "current": "only client and years",
+    "proposed": "earthquake 12 April 1998 at 10:55 UTC, epicentre 46.309° N, 13.632° E, depth 7.6 km, maximum intensity VII-VIII EMS-98, stated as text and not as the pin",
+    "source_url": "https://www.dlib.si/stream/URN:NBN:SI:DOC-CZQLUYHP/0f735c63-44ad-40b1-a596-37deeaea6bfb/TEXT",
+    "quote": "The hypocentral co-ordinates are 46.309° N, 13.632° E and its depth 7.6 km"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Epicentre and magnitude of 12 April 1998",
+    "a": "46.309° N, 13.632° E, depth 7.6 km, Mw 5.6",
+    "a_url": "https://www.dlib.si/stream/URN:NBN:SI:DOC-CZQLUYHP/0f735c63-44ad-40b1-a596-37deeaea6bfb/TEXT",
+    "b": "46.320 13.663, magnitude 5.8, focal depth about 10 km",
+    "b_url": "https://wcee.nicee.org/wcee/article/0447.pdf"
+   },
+   {
+    "what": "Place name of the epicentre",
+    "a": "about 8 km south-east from the town of Bovec",
+    "a_url": "https://www.dlib.si/stream/URN:NBN:SI:DOC-CZQLUYHP/0f735c63-44ad-40b1-a596-37deeaea6bfb/TEXT",
+    "b": "USGS event title 'M 5.6 - 5 km E of Kobarid, Slovenia' (title from the search listing, the page needs JavaScript)",
+    "b_url": "https://earthquake.usgs.gov/earthquakes/eventpage/usp0008jyj/origin"
+   }
+  ],
+  "searched": "Geologija paper on dlib, WCEE paper 0447, USGS event page usp0008jyj (no content without JavaScript), earthquaketrack (depth 10.0 km, no coordinates), Wikipedia mirror for Bovec."
+ },
+ {
+  "id": "soca_quake",
+  "verdict": "confirmed",
+  "stored": [
+   46.32,
+   13.63
+  ],
+  "independent": {
+   "lat": 46.32,
+   "lon": 13.63,
+   "source_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+   "quote": "Začasno ocenjeni koordinati nadžarišča sta 46,32 N in 13,63 E"
+  },
+  "distance_m": 0,
+  "evidence": "The point equals the ARSO provisional epicentre of the 12 July 2004 earthquake, which is the earthquake this record is about. The position itself is right. Two text errors: (1) the note in position_corrections.json calls it the 'epicentre of the 12 April 1998 earthquake'. The cited ARSO article is about 12 July 2004 (13:04 UTC, magnitude 4.9, depth about 8 km). The 1998 epicentre is a different point (46.309, 13.632 or 46.320, 13.663). (2) the record 'facts' say Position 'the settlement centre' while position_precision is 'epicentre'. Also note that ARSO calls the coordinate provisional ('začasno ocenjeni'), and that the pin is the epicentre in the Krn mountains, not the places where ZAG reviewed repairs (Čezsoča, Bovec).",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "position_corrections.json note",
+    "current": "ARSO provisional epicentre of the 12 April 1998 earthquake",
+    "proposed": "ARSO provisional epicentre of the 12 July 2004 earthquake",
+    "source_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+    "quote": "Nastal je ob 13. uri in 4 minute po UTC"
+   },
+   {
+    "field": "facts Position",
+    "current": "the settlement centre",
+    "proposed": "provisional epicentre (ARSO), not a settlement",
+    "source_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+    "quote": "Začasno ocenjeni koordinati nadžarišča sta 46,32 N in 13,63 E"
+   },
+   {
+    "field": "facts",
+    "current": "only client and years",
+    "proposed": "12 July 2004, 13:04 UTC, moment magnitude 5.2, maximum intensity VI-VII EMS-98",
+    "source_url": "https://potresi.arso.gov.si/doc/dokumenti/mocni_potresi/Mocni_potresi_20040712_Posocje_karta.pdf",
+    "quote": "Navorna magnituda potresa je bila 5,2"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Magnitude of 12 July 2004",
+    "a": "Potres z magnitudo 4,9 (ARSO, Ujma)",
+    "a_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+    "b": "Navorna magnituda potresa je bila 5,2 (ARSO map sheet). EMSC title says mb 5.1",
+    "b_url": "https://potresi.arso.gov.si/doc/dokumenti/mocni_potresi/Mocni_potresi_20040712_Posocje_karta.pdf"
+   },
+   {
+    "what": "Depth",
+    "a": "okoli 8 km (ARSO)",
+    "a_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+    "b": "Depth: 7.0 km (earthquaketrack, USGS-derived)",
+    "b_url": "https://earthquaketrack.com/quakes/2004-07-12-13-04-07-utc-5-2-7"
+   },
+   {
+    "what": "Place name of the epicentre",
+    "a": "46,32 N in 13,63 E, effects strongest in Čezsoča (ARSO)",
+    "a_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+    "b": "USGS event title 'M 5.2 - 7 km NE of Kobarid, Slovenia' (title from the search listing, the page needs JavaScript, no coordinate read)",
+    "b_url": "https://earthquake.usgs.gov/earthquakes/eventpage/usp000d00p/origin"
+   }
+  ],
+  "searched": "ARSO Ujma article, ARSO map sheet PDF (no coordinates), EMSC special report 85 (no coordinates), USGS event page usp000d00p (no content without JavaScript), earthquaketrack (no coordinates)."
+ },
+ {
+  "id": "lj_seismic",
+  "verdict": "confirmed",
+  "stored": [
+   46.05237,
+   14.50504
+  ],
+  "independent": {
+   "lat": 46.051389,
+   "lon": 14.506111,
+   "source_url": "https://www.wikiwand.com/en/Ljubljana",
+   "quote": "Coordinates: 46°03′05″N 14°30′22″E"
+  },
+  "distance_m": 137,
+  "evidence": "The label 'settlement' is honest: the study covers the whole municipality and the point is a city-centre marker, 137 m from the Wikipedia city coordinate. No epicentre is claimed. The record has an empty position_sources list and no entry in position_corrections.json, so the point has no cited source at all.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "position_sources",
+    "current": "[] (empty)",
+    "proposed": "cite a source for the representative city-centre point, for example the Wikipedia city coordinate",
+    "source_url": "https://www.wikiwand.com/en/Ljubljana",
+    "quote": "Coordinates: 46°03′05″N 14°30′22″E"
+   }
+  ],
+  "source_differences": [],
+  "searched": "wikiwand mirror of en.wikipedia Ljubljana."
+ },
+ {
+  "id": "idrija_cherplan",
+  "verdict": "confirmed",
+  "stored": [
+   46.0024,
+   14.0273
+  ],
+  "independent": {
+   "lat": 46.0025,
+   "lon": 14.0275,
+   "source_url": "https://en.wikipedia.org/wiki/Idrija",
+   "quote": "46°00′09″N 14°01′39″E / 46.00250°N 14.02750°E"
+  },
+  "distance_m": 19,
+  "evidence": "The label 'settlement' is honest: the study covers the Municipality of Idrija and the point is Idrija town, 19 m from the en.wikipedia town coordinate. Representative only, no structure or epicentre claimed.",
+  "proposed_position": null,
+  "improvements": [],
+  "source_differences": [],
+  "searched": "en.wikipedia Idrija."
+ }
+]

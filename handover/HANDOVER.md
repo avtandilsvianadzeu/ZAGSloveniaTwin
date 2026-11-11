@@ -1,0 +1,170 @@
+# ZAG Digital Atlas: handover for the next build
+
+> **Where things are in this repository (added 11 November 2026).** This file was written for a zip package. In the repository `avtandilsvianadzeu/ZAGSloveniaTwin` the website is the repository root (what this file calls `site/`), the AI reader is in `server/`, and this file, `research/` and `dev_tools/` are in `handover/`. The news workflow is kept as `handover/workflows/news.yml` and is not active. To switch it on, copy it to `.github/workflows/news.yml` and allow "Read and write permissions" for workflows in the repository settings. The earlier map only site stays in `avtandilsvianadzeu/ZAGMapLive` and is not changed by this work.
+
+Read this whole file before changing anything. It describes the project, the data, how every position and value was verified, what is still open, and the next version to build. The owner is Avtandil Svianadze (Avto), doctoral candidate at ZAG, Ljubljana. His supervisors Aleš Žnidarič and Andrej Anžlin review the map.
+
+## 1. What the project is
+
+A public web map of structures and sites in Slovenia where ZAG (Zavod za gradbeništvo Slovenije, Slovenian National Building and Civil Engineering Institute) has documented involvement: 73 records (buildings, bridges, tunnels, cableways, dams and hydropower plants, towers, landslides, earthquake study areas, other sites). Every record has ZAG's role, a description, cited sources, a position with an honest precision label and, for most, a "digital twin" sheet of verified specifications.
+
+- Live site: https://avtandilsvianadzeu.github.io/ZAGMapLive/ (GitHub Pages, repository `avtandilsvianadzeu/ZAGMapLive`, branch `main`, root folder).
+- Stack: plain HTML, CSS and JavaScript with MapLibre GL JS 5.24.0 from a CDN. No build step for the page. Node is used only for the data build script.
+- Base maps: OpenFreeMap (OpenStreetMap vector tiles), Esri World Imagery for satellite, Mapzen / AWS Terrain Tiles for 3D terrain, GURS orthophoto via Level2.si. Geocoding: Photon.
+
+## 2. Package contents
+
+```
+HANDOVER.md                this file
+server/                    AI reader for the Add object tool (Cloudflare Worker), not part of the website
+site/                      the complete website, ready to publish (same as the repository)
+research/                  raw research and verification results (JSON), kept for traceability
+dev_tools/                 Python scripts used to verify positions against OpenStreetMap and GURS
+```
+
+`site/` layout:
+
+- `index.html`, `css/atlas.css`, `js/*.js`: the application.
+- `data/zag_projects.geojson`: the 73 records. Generated, do not edit by hand.
+- `data.js`: the master record store (legacy format) that the build reads.
+- `tools/position_corrections.json`: verified positions per record id (point, optional `lines` = drawn geometry such as bridge decks, tunnel tubes, lift lines, `precision`, `sources`, `note`).
+- `tools/build_geojson.js`: run `node tools/build_geojson.js` to regenerate the GeoJSON from `data.js` plus the corrections. Always rebuild after editing either.
+- `data/gurs_buildings.json`: official GURS building outline and height for 10 building records, made by `tools/gurs_buildings.py` from the GURS topographic building layer (DTM_SLO_ZGRADBE_BU_STAVBE_P, free from https://ipi.eprostor.gov.si/jgp/data).
+- `data/twins.json`: digital twin sheets (specs with source per value, verified reference points, source differences, open questions).
+
+## 3. How the page works (key functions)
+
+- `js/main.js` creates the map; `js/basemap.js` switches Map, Satellite and 3D terrain.
+- `js/atlas-data.js` loads the GeoJSON, `data/gurs_buildings.json` and `data/twins.json` into `ZA`.
+- `js/panel.js` `showInfo(id)` opens a record: panel HTML (`infoHTML`, `twinHTML`), pin (`setSel`), drawn geometry (`showLine` with `p.lines` or `p.line`), twin reference points (`showTwinPoints`), then `locate()`.
+- `js/locate.js` `locate()` highlights the building: if the record has an official GURS building, that exact outline is extruded at its real height (`officialBuilding`); otherwise it falls back to the nearest OpenStreetMap footprint. Records with fixed `lines` skip all live guessing.
+- Precision labels live in `PREC` in `js/locate.js`: `surveyed` (published coordinate), `matched` (matched to the mapped structure), `address`, `site`, `epicentre`, `settlement`, `locality`, `municipality`, `approximate`, `derived`.
+
+## 4. Verification standard (keep it)
+
+The owner's rule: everything evidence based, exact links, never invent. "If you cannot find it, leave it out."
+
+What was done in November 2026:
+
+1. **Buildings:** each record whose coordinate falls on a GURS building is tied to that official building (outline, height, ground, eave and ridge levels, survey date). Where GURS holds overlapping outlines from different surveys, the newest survey wins. Example: ZAG Fire Laboratory Logatec, Obrtna cona Logatec 35, GURS height 18.0 m, surveyed July 2023, confirmed by the address register.
+2. **Bridges, tunnels, cableways, dams, sites:** matched through the OpenStreetMap API by name, ref and type (not just proximity), tubes and decks chained portal to portal, then checked against the record (river or road crossed, number of decks, length). Examples: Ravbarkomanda viaduct confirmed by crossing a double-track railway and a state road twice each, the old pin was 3.8 km off; Leščevje tunnel was 15 km off (pin was the village of that name, the tunnel is on the A2 near Belšinja vas).
+3. **Specifications:** collected by research per object group, each value with its source URL. Where sources disagree the value is not resolved; the disagreement is listed in the twin sheet under "Where the sources differ".
+4. **Independent check:** two separate passes that had not seen the work. Positions: all 56 records with an exact precision checked against OpenStreetMap and the GURS address register, 55 correct, 1 doubtful (the ice-storm masts, now labelled as a site area), none wrong; every drawn line lies on the matching OpenStreetMap way. Specifications: 206 values checked against their sources, 192 confirmed, the other 14 corrected or removed, and missed source disagreements added. Results in `research/check_pos/` and `research/check_specs/`.
+5. **Result:** 40 records matched to the mapped structure, 9 published coordinates, 5 street addresses, 4 site areas, 1 epicentre, and 14 that stay at settlement, locality or municipality level because no source places them more exactly. 29 records draw their real geometry. All 73 records open without errors.
+6. **Weak source to replace:** lotsberg.net (cited for several tunnel lengths and opening dates) looks like an automatically generated mirror. Its numbers agreed with other sources everywhere they were checked, but prefer Structurae, DARS or official documents.
+
+Precision honesty: a record is never shown more precisely than its evidence. Areas (earthquake studies, municipal projects) stay areas.
+
+## 5. Still open (do not guess these)
+
+- **Vransko bridge, resolved in part:** identified as the A1 motorway bridge at Brode near Vransko. The IM-SAFE case study gives 46° 14' 54.20" N, 14° 58' 7.70" E and describes two independent superstructures, one per travel direction. The point lies on OpenStreetMap way 202466220, with the twin deck way 202466216 beside it. Still open: which of the two decks carried the SiWIM system, and the year of construction.
+- **Črna na Koroškem bridge:** the CIRCUIT pilot bridge over the Meža. Client corrected to the Municipality. It is not the bridge opened on 7 September 2025, because visit-crna.si still announced it as a future structure on 1 October 2025. Still open: the exact site (the marker on the CIRCUIT pilot page, 46.47286, 14.85117, and the text "Center 2 to 4" do not clearly agree) and whether it has been built since.
+- **Grosuplje and Kamnik bridges:** the records name no single bridge. A second search in November 2026 found no document that names them. Keep them as municipal areas unless ZAG confirms which.
+- **Planica and Rateče cableways:** the records do not name the lift and share one coordinate in Rateče. New evidence by client name only: Smuk (client of the Rateče record) is the operator and concession holder of the Macesnovc lifts (skiresort.com, Gorenjski glas 12 March 2016), chairlift base about 46.491714, 13.7073. Zavod za šport RS Planica (client of the Planica record) manages the Planica Nordic Centre, whose chairlift is Čaplja. No ZAG document names either lift, so both pins were left unchanged. Note that Macesnovc was reported closed for eight years before February 2016.
+- **SIJ Acroni pavers:** SIJ Acroni places the paved bicycle area in front of the steelworks building. No source gives the exact spot, so it stays a site area.
+- **Vzideh tunnel:** now named in press reports as "predor V Zideh" on the regional road Trojane to Izlake in Lukovica, which is the road of the matched tunnel. The tunnel is still unnamed in OpenStreetMap, and length and opening year rest on Lotsberg only.
+- **RTP Gorica, resolved to an address:** ELES lists RTP Gorica 110/20 kV at Ulica Vinka Vodopivca 13, Kromberk. The point is the ELES building at that address (OpenStreetMap way 853682719). The switchyard outline is not confirmed.
+- **Old fire laboratory Gameljne, resolved to an address:** Srednje Gameljne 41, 1211 Ljubljana-Šmartno, from the annex to accreditation certificate LP-005 of 23 May 2014 (section 3.2.7). OpenStreetMap way 316700919 carries that address but is tagged residential and has no name, so the map confirms the address, not the laboratory.
+- **Tabor tunnel:** the point is right for the H4 Podnanos (Tabor) tunnel. No source settles whether ZAG's reference list means this one or the A3 Tabor tunnel near Sežana.
+- **Cenkova tunnel opening date:** Lotsberg gives 30 May 2008, while the official 2008 plan lists the section for December 2008 and RTV SLO reports the section opened on 30 October 2008. Listed in the twin sheet, not resolved.
+- **Rakuschev mlin:** demolished from 4 April 2015. No street address or coordinate was found, so it stays at municipality level.
+- **P2B3 Šenčur and Maribor pilot sites:** no source places them more exactly. CINDERELA is reported at Nigrad in Dogoše and the URBAN SOIL 4 FOOD gardens near the Pekre creek, both without an address.
+- **Pečna Reber tower:** a 2013 Ministry of Defence tender lists a 40 m antenna tower on parcel 2297/91, k.o. Postojna. The parcel allows an exact check in the GURS cadastre, not done yet.
+- **ZAG Maribor (Dobrovce, Kidričeva cesta 47) and InnoRenew (Izola, Livade 6a):** addresses confirmed, but the buildings are newer than the GURS building survey, so they use the OpenStreetMap footprint.
+- **Live cadastre panel:** the page queries the GURS cadastre service live; the service refuses requests from some origins (CORS). It fails quietly. Consider pre-fetching the cadastre data at build time instead.
+
+Ask Aleš or Andrej for the open structures; they know them.
+
+## 6. Next version: design brief
+
+The owner wants a more professional, expert-grade design while keeping every current function.
+
+- House style: ZAG blue `#203469` for titles, clean white surfaces, restrained shadows, no heavy glass effects on hover (an earlier version clipped on hover), British spelling, no en or em dashes, no semicolons in visible text, no wording that sounds like an AI wrote it, nothing negative about Slovenia.
+- Panel as an expert data sheet: identity block, a compact key figures strip (length, height, year, capacity), the twin specs table with a source link per value, the geometry summary, ZAG involvement, then sources. Collapsible "Where the sources differ".
+- Map: keep Map, Satellite, 3D. Consider official GURS orthophoto and lidar-based terrain as layers. For structures, show the drawn geometry (decks, tubes, lift lines, dam outlines) prominently.
+- Google Maps photorealistic 3D tiles are possible only with a Google Maps Platform API key with billing (owner's decision). Do not add them without a key.
+- Performance: the page must stay fast on a laptop; avoid loading large files on start.
+
+## 7. Live news per object (built, November 2026)
+
+Each record shows recent Slovenian news, for example closures of the Kastelec tunnel or the November 2026 rescue drill in the Pletovarje tunnel ("reported by 10 outlets"). Records with news from the last 7 days get a red ring on the map.
+
+- `data/news_keywords.json`: per record a Google News query `q` and headline filters `must` (any), `all` (every), `not` (none). Tune these when an unrelated article slips through, or add the link to `data/news_ignore.json`.
+- `tools/fetch_news.mjs` (Node 18+, no packages): Google News RSS in Slovenian (`hl=sl&gl=SI&ceid=SI:sl`), which already covers 24ur, STA, Delo, RTV SLO, Dnevnik, Večer and local outlets. Keeps the last 12 months, groups the same story across outlets, stores headline, outlet, date and link only, keeps the previous result for a record when a request fails.
+- `.github/workflows/news.yml`: runs every 20 minutes (GitHub may start scheduled runs some minutes late) and commits `data/news.json` only when it changed. Needs "Read and write permissions" for workflows in the repository settings.
+- The page re-reads the news file every 15 minutes and labels the section as automatic keyword matching.
+
+Ideas for the next version: an email or push notice to the owner when a ZAG record gets new news; per-record news archive beyond 12 months; a small review page where the owner can hide articles without editing JSON.
+
+## 8. Working rules from the owner
+
+- No Claude attribution in his commits or files. He uploads files himself through GitHub's web interface ("Add files via upload"), so deliver a zip of the site folder without git history unless he asks you to push.
+- Keep his structure and style; change only what is asked.
+- Every number needs a source. Mark anything unverified as unverified.
+- Emails he sends are short and direct, open with "Dear Aleš and Andrej," and end with "Hvala." then "Kind regards, Avto".
+- His supervisor Aleš reported the Logatec fire laboratory problem on 6 October 2026; it is now fixed (official GURS building, 18.0 m).
+
+## 9. How to publish
+
+1. Rebuild data if you edited `data.js` or the corrections: `node tools/build_geojson.js`.
+2. Test locally: `python -m http.server` in `site/`, open http://localhost:8000, open several records (for example `#zag_logatec`, `#lescevje`, `#kanin_z`, `#ravbarkomanda`), check the browser console for errors.
+3. Zip the contents of `site/` (not the folder itself) and give it to the owner, or push if he asks.
+
+## 10. Recheck of November 2026 (second pass)
+
+Five independent passes rechecked all 73 records against outside sources (bridges, tunnels, dams and sites, cableways and towers, buildings and institutions). No record was found on a wrong structure. Their full results, with a source link and a short quote per finding, are in `research/recheck_2026_11/`. Several findings in those files were not applied and are worth reading before the next build (key figures for the hydropower plants, building data for InnoRenew, TR3, KPD and NUK, the Verd contractor question).
+
+What changed in the data, all through `tools/apply_recheck_2026_11.js` (kept for traceability, already applied, do not run it again):
+
+- Positions moved: Vransko bridge (about 1.9 km, now on the A1 bridge at Brode, both decks drawn), old fire laboratory Gameljne (about 1.1 km, to Srednje Gameljne 41), RTP Gorica (about 620 m, to Ulica Vinka Vodopivca 13).
+- Črna na Koroškem: client corrected to the Municipality, status planned, built year removed.
+- Text errors corrected: Soča earthquake note said 12 April 1998 for the 12 July 2004 epicentre, Stože still said the pin was the village, the funicular note called the upper station the valley station, three records still said "Position: the settlement centre", the three timeline stories for ZAG headquarters sat 535 m south of ZAG, spellings Kidričeva, Špruha, Sitarjevška and Ulica heroja Starihe.
+- Sourced additions: Tomačevo length 204 m, Rakuschev mlin built 1903 and demolished 2015, Vzideh name and road, Čatež wording on the seven bridges, Smuk linked to the Macesnovc lifts.
+- 36 source differences added to the twin sheets, listed and not resolved.
+
+How it was checked: the three moved positions and the Vransko decks were read from OpenStreetMap (Nominatim and the OpenStreetMap API). Six of the source statements behind the text edits were opened again and confirmed. The 36 added source differences come from the five passes and were filtered, but not each one was opened a second time. All 73 records open without script errors in a local test.
+
+One correction to section 4: Lotsberg is a hand-compiled list by Gunnar Lotsberg, not an automatic mirror. It is still a weak source for exact dates.
+
+## 11. Digital twin pages (built November 2026)
+
+Every record has its own page: `twin.html?id=<record id>`. `twin.html` without an id is the platform home: counts, a type filter, a text filter and a card per object. The map panel has a button "Open digital twin" (added in `js/panel.js`, styled in `css/atlas.css`). The main map is unchanged.
+
+Style, as asked by the owner on 11 November 2026: the light glass style of the ZAG Partnerships page (translucent white cards over soft blue, lilac and green washes, navy headings, iOS colours, Inter, pills and segmented controls). Not dark. For these pages this replaces the plain white style of section 6. Blur is used only on the header, the stage and the key figures, to keep the page fast, and nothing moves on hover.
+
+- Files: `twin.html`, `css/twin.css`, `js/twin.js`. The page does not load `data.js`. It reads `data/zag_projects.geojson`, `data/twins.json`, `data/gurs_buildings.json`, `data/news.json` and `data/images.json`.
+- Stage with two tabs. **Model** is a schematic mesh in the manner of a finite element model, drawn on a canvas with no library (`buildModel()` and `initModel()`). **Map** is the MapLibre 3D view (`initView()`), created only when its tab is first opened.
+- What the model is built from, and nothing else: the drawn alignment of each part, a deck width only when the twin sheet has a `Width` value in metres, and the official GURS outline raised to its surveyed height. Element size is a drawing choice (8 to 48 elements per part). No pier, span, cross section or floor is assumed. Parts along an alignment are drawn flat because the sources give no heights. The page says this under the model.
+- 41 records have a model (31 with drawn geometry, 10 with a GURS building). The other 32 have no geometry in the data, so they open on the Map tab and say so.
+- Using the model: drag to rotate, Shift and drag to move, click the model first and then scroll to zoom, pinch on a phone, arrow keys and plus or minus on the keyboard. 3D, Top and Side views. Click a node, an element, a part label or a reference point for its data (number, part, distance along the part, length, height, coordinates, source). Rows in the Geometry tables select the same part.
+- Moving light: a point of light travels along every part, in the model and on the map. It is an animation and carries no measured data. The Light button switches it off, and it stays off when the system asks for reduced motion. All animation stops when the stage is off screen or the tab is hidden.
+- Sections are expandable cards, with "Expand all" in the section list. About, ZAG involvement, Specifications, Geometry and Verification start open.
+- Key figures are picked by rule in `keyFigures()` from the twin sheet, the GURS building, the record structure fields and the drawn geometry. Nothing is typed in by hand, and each figure shows where it comes from.
+- Visible text is passed through `clean()`, which removes en and em dashes, semicolons and middle dots. Headlines of news and titles of sources keep their original wording.
+- Known oddity: at Vransko the two decks overlap in the model, because the two OpenStreetMap centre lines lie about 9 m apart while the source gives a deck width of 12 m.
+- Tested in a headless browser: all 73 pages and the home page open without script errors at desktop and phone width with no sideways scrolling, node and element clicks return the right data, rotate, zoom, the three views, the Map tab, Expand all and both filters work. Not tested: the map with live tiles, terrain and satellite, because the tile servers were not reachable from the build workspace. Check a few pages in a browser after upload.
+
+Ideas for the next step: real heights along alignments from a terrain or survey source, true structural models where ZAG holds them, per part values (per tube, per deck, per station), photographs per object.
+
+## 12. Platform step 1: Add object tool and models on the map (built November 2026)
+
+Everything here runs in the browser. There is no server and no AI in it.
+
+- `add.html` with `js/add.js`: the Add object tool. Name, type, description, optional source link, optional length, width and height. The shape comes from clicks on the map, pasted rows of latitude and longitude, or a file: GeoJSON, KML, GPX, CSV, or a text file with fields such as `name: ...`, `type: ...`, `height: ...` followed by coordinate rows. The model preview updates while you work.
+- It does not read photographs, graphs or free text. That needs an AI service behind a small server that keeps the key secret (step 2, not built). GitHub Pages alone cannot do it safely.
+- Saving: objects are kept in the browser (`localStorage`, key `zag_user_objects`). "Download my objects" gives `user_objects.json`. Uploading that file to the repository as `data/user_objects.json` shows the objects to everyone. The repository ships an empty file so nothing fails.
+- User objects are never mixed into the ZAG records. They have ids that start with `user_`, their own orange layer on the map (`js/userobjects.js`), and every view labels them "Added by a user, not verified". Their twin page shows the entered dimensions as "entered by the user". Links from user files are accepted only when they start with http or https.
+- Models on the full map: the panel of every record with geometry shows its model in a small frame (`twin.html?id=...&embed=1`, embed styles in `css/twin.css`), under the button "Open digital twin". The header of the map has links to the twins and to the tool.
+- `js/twin.js` is shared: `add.html` loads it with `window.TWIN_NO_BOOT=true` to reuse `buildModel()` and `initModel()`.
+- Tested in a headless browser: the readers for all five file kinds, drawing three points on the map, the building outline from pasted rows, saving, the list, the twin pages of saved objects, the home page count, the embedded model in the panel, phone width. The user layer on the main map was tested with the map marked ready by hand, because the main map does not finish loading without its tile servers in the build workspace.
+
+## 13. Platform step 2: AI reader (code written November 2026, not deployed)
+
+`server/worker.js` is a Cloudflare Worker that reads a description, a text file or a picture and returns a draft object. `server/README.md` has the setup steps and `server/test.mjs` tests it without any account (22 checks pass). It is kept outside `site/` and is not part of the upload zip.
+
+- Not deployed. It needs the owner's Cloudflare account, the owner's AI key and an access code the owner chooses. It has never been run against the real AI service, only against a stand-in, so the quality of real drafts is not measured yet.
+- The site side is in place: `add.html` has the panel "Read a description, a drawing or a photo", and `data/ai_service.json` holds the service address (empty now, so the reader is switched off). No key and no access code is ever stored in the repository. The access code is kept only for the browser session.
+- Rules: the AI may report only what the input states or shows, with a quote per value. The Worker drops values that do not fit. Drafts are marked "AI draft, not verified" in the tool, in the list and on the twin page.
+- Limits are best effort (6 per minute per address, 200 per day by default). The real budget is the spending limit of the AI account.
+- Not built: a login per person and a shared review queue.
+

@@ -24,6 +24,10 @@ Earlier map only version: https://avtandilsvianadzeu.github.io/ZAGMapLive/
 - `tools/terrain/`: options for national terrain (see README there)
 - `tools/fetch_news.mjs`: reads recent Slovenian news per record. The scheduled workflow that runs it is not installed in this repository yet
 
+## Handover
+
+Start with `handover/HANDOVER.md`. It describes the data, how every position and value was checked, what is still open and how each part was built. `handover/research/` holds the research and check results, `handover/dev_tools/` the scripts used for checking positions, and `server/` the optional AI reader (a Cloudflare Worker, see `server/README.md`).
+
 ## Publishing
 
 GitHub Pages, branch `main`, folder `/ (root)`.

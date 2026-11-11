@@ -1,0 +1,344 @@
+[
+ {
+  "id": "tomacevo",
+  "verdict": "cannot_check",
+  "stored": [
+   46.08743,
+   14.532388
+  ],
+  "independent": null,
+  "distance_m": null,
+  "evidence": "Identity is consistent but no independent source with a coordinate of the bridge was found. Sources describe a twin structure over the Sava, built 1982, 204 m, seven spans, linking Ljubljana with its northern suburbs. The only other road bridge named for this reach in Wikipedia, Črnuče Bridge (46.1006139, 14.5190750, built 1906, 143 m, Dunajska cesta), is a different structure 1790 m from the stored point. Wikipedia places Tomačevo village at 46.0807333, 14.5346500, 765 m from the stored point, which fits a bridge named after the village but does not fix the deck.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.length_m",
+    "current": null,
+    "proposed": 204,
+    "source_url": "https://www.is-wim.net/wp-content/uploads/2025/09/Doron-Hekic-Using-Bridge-WIM-for-Structural-Health-Monitoring-of-Bridges.pdf",
+    "quote": "204 m long"
+   },
+   {
+    "field": "structure.carries",
+    "current": "Road no. 104 (Ljubljana ring road)",
+    "proposed": "No opened source ties this bridge to road 104 or to the ring road. DRSI names G2-104 as Trzin-Ljubljana (Črnuče). Keep the road number only if the journal paper (not fully readable here, page truncated) states it, and drop 'Ljubljana ring road' unless sourced.",
+    "source_url": "https://www.gov.si/novice/2020-10-07-zacetek-nujno-potrebne-obnove-vozisca-ceste-g2-104-trzin-lj-crnuce",
+    "quote": "G2-104/0295 Trzin-Ljubljana (Črnuče)"
+   },
+   {
+    "field": "sources",
+    "current": "cestel.si/en/siwim and ZAG section page (generic)",
+    "proposed": "Add the Interreg BIM4CE page and the ISWIM presentation, both name the bridge",
+    "source_url": "https://www.interreg-central.eu/?p=25329",
+    "quote": "one of the main thoroughfares connecting Ljubljana"
+   },
+   {
+    "field": "hist (instrumented deck)",
+    "current": "not stated which deck",
+    "proposed": "Monitored structure is the one carrying traffic towards Ljubljana",
+    "source_url": "https://dewesoft.com/blog/bridge-weigh-in-motion-structural-health-monitoring-tomacevo-bridge",
+    "quote": "carries traffic toward Ljubljana"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "lanes",
+    "a": "'two-lane bridge'",
+    "a_url": "https://www.interreg-central.eu/?p=25329",
+    "b": "same page: two separate structures, 'two lanes in each direction'",
+    "b_url": "https://www.interreg-central.eu/?p=25329"
+   }
+  ],
+  "searched": "Dewesoft blog, MDPI Appl. Sci. 15(8) 4514 (first 100k characters only), SVIBS page, Interreg BIM4CE page, ISWIM presentation PDF, Wikipedia Tomačevo and Črnuče Bridge, web searches for Wikidata, Commons, komoot and mapcarta entries. No page gives a coordinate for the bridge."
+ },
+ {
+  "id": "ravbarkomanda",
+  "verdict": "confirmed",
+  "stored": [
+   45.790251,
+   14.227194
+  ],
+  "independent": {
+   "lat": 45.787454,
+   "lon": 14.223617,
+   "source_url": "https://www.komoot.com/highlight/7371165",
+   "quote": "View of Ravbarkomanda Viaduct from Below"
+  },
+  "distance_m": 417,
+  "evidence": "Komoot highlight named after the viaduct lies 115 m from the south-west end of the stored deck line, so it is a viewpoint at the foot of the structure, not a deck centre. Distance to the stored midpoint is within the length of the viaduct (about 600 m). RTV SLO places the viaduct on the Unec to Postojna section and Wikipedia at km 191.9 of the A1.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "municipality / locality",
+    "current": "A1 between Planina and Postojna",
+    "proposed": "A1, section Unec to Postojna",
+    "source_url": "https://www.rtvslo.si/n/299013",
+    "quote": "Največji zalogaj na odseku med Uncem in Postojno"
+   },
+   {
+    "field": "facts (contractor)",
+    "current": "not given",
+    "proposed": "Built by Gradis, Ljubljana, piers up to 33 m high",
+    "source_url": "https://www.rtvslo.si/n/299013",
+    "quote": "izdelalo ga je podjetje Gradis iz Ljubljane"
+   },
+   {
+    "field": "facts (A1 chainage)",
+    "current": "not given",
+    "proposed": "km 191.9",
+    "source_url": "https://en.wikipedia.org/wiki/A1_motorway_(Slovenia)",
+    "quote": "Bridge - 588 m / 553 m"
+   },
+   {
+    "field": "sources",
+    "current": "mapcarta.com/W279720823 (database mirror)",
+    "proposed": "RTV SLO article on 40 years of the Vrhnika to Postojna motorway as a named, dated source",
+    "source_url": "https://www.rtvslo.si/n/299013",
+    "quote": "40 let avtoceste Vrhnika-Postojna"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "lengths of the two structures",
+    "a": "588 m and 544 m",
+    "a_url": "https://mdpi.com/1424-8220/23/4/2067",
+    "b": "588 m / 553 m in the junction table and 591 m (right) / 533 m (left) in the viaduct list of the same article",
+    "b_url": "https://en.wikipedia.org/wiki/A1_motorway_(Slovenia)"
+   },
+   {
+    "what": "length and spans",
+    "a": "588 m and 544 m, 15 spans left and 17 right",
+    "a_url": "https://mdpi.com/1424-8220/23/4/2067",
+    "b": "'560 m long', '16-span' (Sensors 2024)",
+    "b_url": "https://www.mdpi.com/1424-8220/24/9/2788/html"
+   },
+   {
+    "what": "length",
+    "a": "'dolg nekaj manj kot 600 metrov'",
+    "a_url": "https://www.rtvslo.si/n/299013",
+    "b": "'both viaducts in the length of 600 m'",
+    "b_url": "https://kolektor.cr74.creatim.serv.si/en/our-stories/reconstruction-of-the-highway-section-unec-postojna-with-the-rehabilitation-of-the-ravbarkomanda-viaduct"
+   },
+   {
+    "what": "year built",
+    "a": "'The construction finished in 1972'",
+    "a_url": "https://mdpi.com/1424-8220/23/4/2067",
+    "b": "'leta 1970 zgrajena Ravbarkomanda' (page meta description)",
+    "b_url": "https://www.24ur.com/novice/slovenija/je-voznja-skozi-ravbarkomando-sploh-se-varna.html"
+   },
+   {
+    "what": "end of rehabilitation",
+    "a": "'May 2017-July 2019'",
+    "a_url": "https://kolektor.cr74.creatim.serv.si/en/our-stories/reconstruction-of-the-highway-section-unec-postojna-with-the-rehabilitation-of-the-ravbarkomanda-viaduct",
+    "b": "'lasted from May 2017 to June 2019'",
+    "b_url": "https://www.kolektor.com/en/about-us/media/news/completed-restoration-of-a-nearly-half-a-century-old-viaduct-2019-06-27"
+   }
+  ],
+  "searched": "Sensors 2023 and 2024 papers, Kolektor reference and news pages, RTV SLO, 24ur, Wikipedia A1 article, komoot. Which length belongs to the left or right structure is not stated in Sensors 2023 (the record assigns 588 m to the left)."
+ },
+ {
+  "id": "vransko",
+  "verdict": "identity_doubt",
+  "stored": [
+   46.25111,
+   14.94472
+  ],
+  "independent": null,
+  "distance_m": null,
+  "evidence": "Still unnamed. No opened source gives the road, the obstacle crossed or a coordinate. The Baltic Journal paper and the ARCHES final report call it only 'a bridge at Vransko' / 'Vransko Bridge'. The record's 'A1 motorway' is not stated by any source opened.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.carries / structure.crosses",
+    "current": "A1 motorway / Motorway crossing in the Savinja valley",
+    "proposed": "Not stated in any source, set to null until a source names the road",
+    "source_url": "https://bjrbe-journals.rtu.lv/bjrbe/article/download/bjrbe.2013.34/242/461",
+    "quote": "A bridge at Vransko in Slovenia was instrumented"
+   },
+   {
+    "field": "sources",
+    "current": "UCD repository conference version",
+    "proposed": "Add the journal version (Baltic Journal of Road and Bridge Engineering 2013)",
+    "source_url": "https://bjrbe-journals.rtu.lv/bjrbe/article/view/bjrbe.2013.34",
+    "quote": "Direct Measurement of Dynamics in Road Bridges"
+   }
+  ],
+  "source_differences": [],
+  "searched": "ARCHES D08 exists on Scribd (https://www.scribd.com/document/467545177/ARCHES-02-DE08-pdf, 55 pages, uploaded by Arturo Gonzalez) but its text is not readable from here. An IM-SAFE wiki page titled 'Vransko bridge (case study)' exists (https://imsafe.wikixl.nl/index.php/Vransko_bridge_(case_study)) but returned only a browser check, so its content is unknown. Both are worth opening by hand. ARCHES final report on CORDIS, BJRBE paper, UCD repository item 4855 and COBISS 2273383 name no road."
+ },
+ {
+  "id": "nm_brv",
+  "verdict": "confirmed",
+  "stored": [
+   45.801001,
+   15.15108
+  ],
+  "independent": {
+   "lat": 45.801095,
+   "lon": 15.152007,
+   "source_url": "https://www.komoot.com/highlight/6520852",
+   "quote": "The footbridge in Irča vas is a great engineering achievement"
+  },
+  "distance_m": 73,
+  "evidence": "Komoot highlight 'Štukljeva Footbridge', Novo Mesto, lies 13 m from the eastern end of the stored deck line and 73 m from the stored midpoint, inside the 126 m deck.",
+  "proposed_position": null,
+  "improvements": [],
+  "source_differences": [],
+  "searched": "Komoot highlight only, Ponting and Freyssinet pages were found in search but not reopened because the record already lists their span difference."
+ },
+ {
+  "id": "crna",
+  "verdict": "cannot_check",
+  "stored": [
+   46.4697417,
+   14.8489639
+  ],
+  "independent": null,
+  "distance_m": null,
+  "evidence": "No source found that says the CIRCUIT bridge is built or where it stands. A bridge over the Meža in Črna na Koroškem opened on 7 September 2025 (about EUR 880,000), but the government notice names no street, no investor and does not mention CIRCUIT, ZAG or reused girders. The CORDIS reporting page for CIRCUIT (101104283) names only Spain and the Netherlands as started pilots. Stored point is 386 m from the CIRCUIT pilot page marker already known (46.47286, 14.85117).",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "built / structure.built / hist ('rebuilt in 2024')",
+    "current": 2024,
+    "proposed": "Unsupported. No opened source says the bridge was built in 2024, remove the year until a source confirms completion",
+    "source_url": "https://cordis.europa.eu/project/id/101104283/reporting",
+    "quote": "Two out of the five pilots have formally started (Spain and The Netherlands)"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "is the bridge opened on 7 September 2025 the CIRCUIT bridge",
+    "a": "opening of a bridge over the Meža, no mention of CIRCUIT or reuse",
+    "a_url": "https://www.gov.si/novice/2025-09-07-drzavni-sekretar-na-slovesnem-odprtju-mostu-cez-reko-mezo-v-crni-na-koroskem/",
+    "b": "record and ZAG page describe a CIRCUIT reuse bridge (not reopened here)",
+    "b_url": "https://www.zag.si/en/bridge-crna-na-koroskem-slovenia-reconstruction-sustainability-circularity/"
+   }
+  ],
+  "searched": "gov.si opening notice of 7 September 2025, CORDIS CIRCUIT reporting page, RTV SLO article of 10 January 2026 on building work in Črna (no bridge mentioned), several Slovene and English web searches for CIRCUIT plus Črna in 2026."
+ },
+ {
+  "id": "verd",
+  "verdict": "confirmed",
+  "stored": [
+   45.955716,
+   14.305218
+  ],
+  "independent": {
+   "lat": 45.9531444,
+   "lon": 14.3000444,
+   "source_url": "https://en.wikipedia.org/wiki/Verd",
+   "quote": "Verd Viaduct on the A1 motorway from Ljubljana to Koper runs above the settlement"
+  },
+  "distance_m": 492,
+  "evidence": "Confirmed at settlement level only. The coordinate is that of Verd village, not of the viaduct. It lies 298 m from the southern end of the stored deck line and 492 m from the stored midpoint, less than the length of the viaduct (about 620 m). Wikipedia lists the Verd Viaduct at km 168.1 of the A1. No source with a coordinate of the structure itself was found.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.length_m",
+    "current": null,
+    "proposed": "See source differences (619 or 620 m and 586 m per carriageway, or 630 m)",
+    "source_url": "https://en.wikipedia.org/wiki/A1_motorway_(Slovenia)",
+    "quote": "Bridge - 619 m / 586 m"
+   },
+   {
+    "field": "built / structure.built",
+    "current": null,
+    "proposed": "Vrhnika to Postojna section in operation from 29 December 1972 (section date, not a viaduct completion date)",
+    "source_url": "https://en.wikipedia.org/wiki/A1_motorway_(Slovenia)",
+    "quote": "Everyday operation of this initial stretch started on 29 December 1972"
+   },
+   {
+    "field": "sources",
+    "current": "si.geoview.info (database mirror)",
+    "proposed": "RTV SLO article on 40 years of the Vrhnika to Postojna motorway",
+    "source_url": "https://www.rtvslo.si/n/299013",
+    "quote": "največji je bil 630 metrov dolg viadukt Verd"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "contractor",
+    "a": "Record (citing ZAG bilten 2024, not reopened here): Beograjska Mostogradnja",
+    "a_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+    "b": "GIPOSS Ljubljana",
+    "b_url": "https://www.rtvslo.si/n/299013"
+   },
+   {
+    "what": "length",
+    "a": "630 m",
+    "a_url": "https://www.rtvslo.si/n/299013",
+    "b": "619 m / 586 m in the junction table, 620 m (right) / 586 m (left) in the viaduct list",
+    "b_url": "https://en.wikipedia.org/wiki/A1_motorway_(Slovenia)"
+   }
+  ],
+  "searched": "Wikipedia Verd and A1 articles, RTV SLO 2012 article, web searches for Structurae, komoot and DARS pages on the viaduct (none found). The contractor difference matters because the record's story rests on who built it, check the bilten wording."
+ },
+ {
+  "id": "grosuplje_most",
+  "verdict": "cannot_check",
+  "stored": [
+   45.95512,
+   14.6562
+  ],
+  "independent": null,
+  "distance_m": null,
+  "evidence": "No document found that names the bridge assessed in 2012.",
+  "proposed_position": null,
+  "improvements": [],
+  "source_differences": [],
+  "searched": "Web searches in Slovene and English for the 2012 traffic load safety analysis. COBISS hits were unrelated (6141025 is a UL FGG junction study on Adamičeva cesta, 6034017 a level crossing thesis). COBISS itself could not be queried directly from here."
+ },
+ {
+  "id": "catez_bridge",
+  "verdict": "cannot_check",
+  "stored": [
+   45.894229,
+   15.603299
+  ],
+  "independent": null,
+  "distance_m": null,
+  "evidence": "No independent source names this bridge and gives its coordinate. The CROSScade paper gives 359.8 m, 12 spans, Sava, but no coordinate and no road number. Supporting only: Wikipedia places Čatež ob Savi at 45.8926083, 15.5978944 (455 m from the stored point) and a komoot highlight 'Confluence of the Krka and Sava Rivers' sits at 45.8933600, 15.6031060 (98 m from the stored point, on the stored deck line), but that page does not name the bridge.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "structure.carries",
+    "current": "Regional road",
+    "proposed": "Possibly R2-419 (section 1206 Križaj to Čatež ob Savi ends at the village), but the notice does not mention the bridge, so not confirmed",
+    "source_url": "https://www.gov.si/novice/2022-11-23-popolna-zapora-ceste-krizaj-catez-ob-savi-zaradi-asfaltiranja/",
+    "quote": "R2-419, odsek 1206 Križaj–Čatež ob Savi"
+   },
+   {
+    "field": "description ('seven bridges in the Sava reach below the Brežice hydropower plant')",
+    "current": "seven bridges below the Brežice plant",
+    "proposed": "Paper says seven bridges, two in Slovenia near the Brežice plant and the others on the outskirts of Zagreb",
+    "source_url": "https://mdpi.com/2412-3811/10/8/214",
+    "quote": "seven bridges, two of which are located in Slovenia, near the Brežice HPP"
+   },
+   {
+    "field": "hist ('close to the Slovenia to Croatia border')",
+    "current": "close to the border",
+    "proposed": "Not stated in the readable part of the paper (first 100k characters), check or drop",
+    "source_url": "https://mdpi.com/2412-3811/10/8/214",
+    "quote": "the Čatež Bridge in Slovenia was identified as the most critical"
+   }
+  ],
+  "source_differences": [],
+  "searched": "CROSScade paper on MDPI (first 100k characters), Wikipedia Čatež ob Savi, DRSI notices, komoot highlights around Brežice, searches for DRSI or municipal pages on the old Sava bridge. Note the new Brežice bypass bridge over the Sava (Ponting) is a different, recent structure."
+ },
+ {
+  "id": "kamnik_bridges",
+  "verdict": "cannot_check",
+  "stored": [
+   46.22608,
+   14.61083
+  ],
+  "independent": null,
+  "distance_m": null,
+  "evidence": "No document found that names the bridges assessed in 2015.",
+  "proposed_position": null,
+  "improvements": [],
+  "source_differences": [],
+  "searched": "Web searches in Slovene and English for the 2015 damage assessment for the Municipality of Kamnik. Hits concern the 2023 flood damage on the Kamniška Bistrica bridges, not the 2015 ZAG work. COBISS hit 2456423 is a ZAG inspection of a railway bridge in Laško, unrelated."
+ }
+]

@@ -1,0 +1,38 @@
+name: Refresh news
+
+# Reads Slovenian news per record from Google News and updates data/news.json.
+# GitHub runs scheduled jobs on a best-effort basis, so a run can start some minutes late.
+on:
+  schedule:
+    - cron: '7,27,47 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news
+  cancel-in-progress: false
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Fetch news
+        run: node tools/fetch_news.mjs
+      - name: Save if changed
+        run: |
+          if git diff --quiet -- data/news.json; then
+            echo "No new articles."
+          else
+            git config user.name "news-bot"
+            git config user.email "news-bot@users.noreply.github.com"
+            git add data/news.json
+            git commit -m "Update news"
+            git push
+          fi

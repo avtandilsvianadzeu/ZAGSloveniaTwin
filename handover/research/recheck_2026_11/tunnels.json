@@ -1,0 +1,1006 @@
+[
+ {
+  "id": "karavanke_c",
+  "verdict": "confirmed",
+  "stored": [
+   46.453764,
+   13.990241
+  ],
+  "independent": {
+   "lat": 46.519167,
+   "lon": 14.022778,
+   "source_url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Karawanks_Tunnel_(motorway).html",
+   "quote": "46°31′09″N 14°01′22″E",
+   "note": "single coordinate on the page",
+   "points": [
+    [
+     46.519167,
+     14.022778
+    ]
+   ]
+  },
+  "distance_m": 7687,
+  "distance_to_each_point_m": [
+   7687
+  ],
+  "evidence": "Stored point is the Slovenian (Hrusica) portal. The only independent coordinate I could open is the English Wikipedia one (mirror copy), which sits at the Austrian end; it is about one tunnel length from the stored point, so it agrees with the stored portal plus the drawn tube, but it does not pin the south portal itself. Wikipedia infobox location names Hrusica, Jesenice. Open House Slovenia gives the address Hrusica 224 for the second tube. No independent coordinate of the south portal was found. Distance is to the far (Austrian) end, not an error.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Length original tube",
+    "current": "8019 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "7,864 m, or 8,019 m with portal",
+    "source_url": "https://en.wikipedia.org/wiki/A2_motorway_(Slovenia)",
+    "quote": "7,864 m or 25,801 ft, 8,019 m or 26,309 ft with portal"
+   },
+   {
+    "field": "Opened original",
+    "current": "1 June 1991 (wikiwand)",
+    "current_source": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)",
+    "proposed": "June 1, 1991 (same date, Wikipedia mirror infobox)",
+    "source_url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Karawanks_Tunnel_(motorway).html",
+    "quote": "Opened: June 1, 1991"
+   },
+   {
+    "field": "Length slovenian part original",
+    "current": "3450 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "3450 m (Croatian Wikipedia via wikiwand, agrees)",
+    "source_url": "https://wikiwand.com/hr/Tunel_Karavanke",
+    "quote": "slovenski dio iznosi 3450 m"
+   },
+   {
+    "field": "Portal elevations",
+    "current": "620 to 655 m (Lotsberg only)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "No better source found; keep flagged as Lotsberg only",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html",
+    "quote": "(not re-quoted; value not found elsewhere)"
+   },
+   {
+    "field": "Address of Slovenian portal area",
+    "current": null,
+    "current_source": null,
+    "proposed": "Hrusica 224, Hrusica",
+    "source_url": "https://odprtehiseslovenije.org/en/objekt/predor-karavanke-druga-cev/",
+    "quote": "Hrušica 224, Hrušica"
+   },
+   {
+    "field": "note on lotsberg.net",
+    "current": "HANDOVER calls it an automatically generated mirror",
+    "current_source": "/tmp/claude-0/-home-claude/d5d6b429-9f47-5e61-8955-9b9b9382d061/scratchpad/handover/HANDOVER.md",
+    "proposed": "Hand-compiled list by Gunnar Lotsberg (since 1997), links to dars.si as its source; still secondary",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html",
+    "quote": "page compiled from 1997 onward by Gunnar Lotsberg (fetch summary, not verbatim)"
+   }
+  ],
+  "source_differences": [],
+  "searched": "Structurae Karawanks road pages (en and de) returned a site error. Slovenian Wikipedia list of road tunnels and dars.si were not reachable (not found / robots / allowlist). Opened: Wikipedia mirror, hr wikiwand, en.wikipedia A2 page, odprtehiseslovenije.org."
+ },
+ {
+  "id": "karavanke_r",
+  "verdict": "confirmed",
+  "stored": [
+   46.449259,
+   14.015491
+  ],
+  "independent": {
+   "lat": 46.521,
+   "lon": 14.026,
+   "source_url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Karawanks_Tunnel_(railway).html",
+   "quote": "46°31′16″N 14°01′34″E / 46.521°N 14.026°E",
+   "note": "single coordinate on the page",
+   "points": [
+    [
+     46.521,
+     14.026
+    ]
+   ]
+  },
+  "distance_m": 8018,
+  "distance_to_each_point_m": [
+   8018
+  ],
+  "evidence": "Stored point is the south (Hrusica/Jesenice) portal. English Wikipedia (mirror copy) gives 46.521, 14.026, which is the north portal: it lies about 60 m from the stored drawn line end (portal B 46.520635, 14.025786 in twins.json) and one tunnel length (about 8 km) from the stored point. So the drawn tunnel is confirmed at its north end; the south portal itself has no independent coordinate that I could open.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Length",
+    "current": "8176 m (en.wikipedia current)",
+    "current_source": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
+    "proposed": "7,976 m in wikiwand copy of the same article",
+    "source_url": "https://wikiwand.com/en/Karawanks_Tunnel_(railway)",
+    "quote": "7,976 metres (26,168 ft) (4.96 miles)"
+   },
+   {
+    "field": "Opened",
+    "current": "1 October 1906",
+    "current_source": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
+    "proposed": "agrees",
+    "source_url": "https://wikiwand.com/en/Karawanks_Tunnel_(railway)",
+    "quote": "1 October 1906"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Length of railway tunnel",
+    "a": "8,176 m (value stored in twins.json from current en.wikipedia; not re-opened by me)",
+    "a_url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
+    "b": "7,976 m (wikiwand and IPFS copies; OSM geometry in the project is 7978 m)",
+    "b_url": "https://wikiwand.com/en/Karawanks_Tunnel_(railway)"
+   }
+  ],
+  "searched": "Structurae karawankentunnel-bahn returned a site error. Wikimedia file page for the south entrance photo not found. OeBB map PDF seen in search but not opened."
+ },
+ {
+  "id": "golovec",
+  "verdict": "confirmed",
+  "stored": [
+   46.019797,
+   14.561003
+  ],
+  "independent": {
+   "lat": 46.019562,
+   "lon": 14.561342,
+   "source_url": "https://structurae.net/structures/golovec-tunnel",
+   "quote": "46° 1' 2.62\" N 14° 33' 32.16\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     46.017394,
+     14.558933
+    ],
+    [
+     46.021731,
+     14.56375
+    ]
+   ]
+  },
+  "distance_m": 37,
+  "distance_to_each_point_m": [
+   311,
+   302
+  ],
+  "span_between_points_m": 609,
+  "evidence": "Structurae gives two portal coordinates for the Golovec tunnel on A1; stored point lies between them. gov.si places the tunnel on A1 between Bizovik (Litijska cesta) and Malence.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Length (Lotsberg)",
+    "current": "622 + 595",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "Agrees: Structurae eastern 595 / western 622; en.wikipedia A1 right 622 / left 595",
+    "source_url": "https://structurae.net/structures/golovec-tunnel",
+    "quote": "eastern tube length 595 m"
+   },
+   {
+    "field": "Opened",
+    "current": "27 August 1999 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "Year 1999 confirmed by gov.si; exact day 27 August found only on Lotsberg",
+    "source_url": "https://www.gov.si/novice/2020-05-19-pricela-se-je-obnova-predora-golovec/",
+    "quote": "Promet skozi predor je stekel v letu 1999."
+   }
+  ],
+  "source_differences": [],
+  "searched": "Structurae, gov.si, en.wikipedia A1. No second source for the exact day."
+ },
+ {
+  "id": "sentvid",
+  "verdict": "confirmed",
+  "stored": [
+   46.094743,
+   14.461525
+  ],
+  "independent": {
+   "lat": 46.094349,
+   "lon": 14.463243,
+   "source_url": "https://structurae.net/structures/sentvid-tunnel",
+   "quote": "46° 6' 1.92\" N 14° 27' 57.62\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     46.100533,
+     14.466006
+    ],
+    [
+     46.088164,
+     14.460481
+    ]
+   ]
+  },
+  "distance_m": 140,
+  "distance_to_each_point_m": [
+   731,
+   736
+  ],
+  "span_between_points_m": 1440,
+  "evidence": "Structurae gives two portal coordinates for the Sentvid tunnel on A2, Ljubljana; stored point lies between them.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Opened",
+    "current": "1 July 2008 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "1 July 2008 confirmed by RTV SLO article of that day",
+    "source_url": "https://www.rtvslo.si/n/89851",
+    "quote": "Ob tem se je odprl tudi težko pričakovani predor Šentvid."
+   },
+   {
+    "field": "Length (Lotsberg)",
+    "current": "1,486 + 1,461",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "Structurae 1,462 east / 1,490 west; RTV SLO 1,480 m including gallery; en.wikipedia A2 1,072 / 1,047 (see differences)",
+    "source_url": "https://structurae.net/structures/sentvid-tunnel",
+    "quote": "Eastern tube 1 462 m, western tube 1 490 m (fetch summary)"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Tube lengths",
+    "a": "1,072 m right / 1,047 m left (en.wikipedia A2 tunnel list, uncited)",
+    "a_url": "https://en.wikipedia.org/wiki/A2_motorway_(Slovenia)",
+    "b": "1,462 / 1,490 m (Structurae); 1,486 / 1,461 (Lotsberg)",
+    "b_url": "https://structurae.net/structures/sentvid-tunnel"
+   },
+   {
+    "what": "Length incl. gallery",
+    "a": "1,480 m together with the gallery (RTV SLO, 1 July 2008)",
+    "a_url": "https://www.rtvslo.si/n/89851",
+    "b": "1,490 m western tube (Structurae)",
+    "b_url": "https://structurae.net/structures/sentvid-tunnel"
+   }
+  ],
+  "searched": "Structurae, RTV SLO, en.wikipedia A2, 2008 annual motorway plan (planned June 2008 for phase I)."
+ },
+ {
+  "id": "trojane",
+  "verdict": "confirmed",
+  "stored": [
+   46.187514,
+   14.877806
+  ],
+  "independent": {
+   "lat": 46.186749,
+   "lon": 14.878642,
+   "source_url": "https://structurae.net/structures/trojane-tunnel",
+   "quote": "46° 11' 1.13\" N 14° 51' 37.45\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     46.183647,
+     14.860403
+    ],
+    [
+     46.18985,
+     14.896881
+    ]
+   ]
+  },
+  "distance_m": 107,
+  "distance_to_each_point_m": [
+   1407,
+   1491
+  ],
+  "span_between_points_m": 2892,
+  "evidence": "Structurae gives two portal coordinates for the Trojane tunnel (A 1, Lukovica); stored point lies between them, close to the middle.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Length (Lotsberg)",
+    "current": "2,931 + 2,840",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "DRI reference sheet 2005: left 2,931 m, right 2,840 m (agrees)",
+    "source_url": "https://www.dri.si/uploads/reference/pdf/06_reference-2005.pdf",
+    "quote": "leva cev: 2.931 m, desna cev: 2.840 m"
+   },
+   {
+    "field": "Opened",
+    "current": "12 August 2005 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "Ceremony 12 August 2005 (DRI, RTV SLO); RTV SLO says open to traffic the next morning",
+    "source_url": "https://www.dri.si/uploads/reference/pdf/06_reference-2005.pdf",
+    "quote": "12. avgusta 2005"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Tube 2 length",
+    "a": "2,841 m (Structurae)",
+    "a_url": "https://structurae.net/structures/trojane-tunnel",
+    "b": "2,840 m (DRI 2005, Lotsberg, en.wikipedia A1)",
+    "b_url": "https://www.dri.si/uploads/reference/pdf/06_reference-2005.pdf"
+   },
+   {
+    "what": "Opening to traffic",
+    "a": "12 August 2005 (DRI: section opened to traffic)",
+    "a_url": "https://www.dri.si/uploads/reference/pdf/06_reference-2005.pdf",
+    "b": "ceremony 12 August 2005, traffic from Saturday morning (13 August)",
+    "b_url": "https://www.rtvslo.si/slovenija/koper-in-maribor-koncno-povezana/41219"
+   }
+  ],
+  "searched": "Structurae, DRI 2005 reference PDF, RTV SLO 2004 and 2005 articles, en.wikipedia A1."
+ },
+ {
+  "id": "podmilj",
+  "verdict": "confirmed",
+  "stored": [
+   46.182322,
+   14.845365
+  ],
+  "independent": {
+   "lat": 46.182301,
+   "lon": 14.845321,
+   "source_url": "https://structurae.net/structures/podmilj-tunnel",
+   "quote": "46° 10' 59.53\" N 14° 50' 29.51\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     46.183203,
+     14.841531
+    ],
+    [
+     46.1814,
+     14.849111
+    ]
+   ]
+  },
+  "distance_m": 4,
+  "distance_to_each_point_m": [
+   311,
+   306
+  ],
+  "span_between_points_m": 617,
+  "evidence": "Structurae gives two portal coordinates for the Podmilj tunnel on A1; stored point lies between them. DRI and RTV SLO name Podmilj as the second twin-tube tunnel on the Trojane to Blagovica subsection.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Opened",
+    "current": "12 August 2005 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "Section Trojane to Blagovica opened 12 August 2005 (DRI names Podmilj on it)",
+    "source_url": "https://www.dri.si/uploads/reference/pdf/06_reference-2005.pdf",
+    "quote": "12. avgusta 2005"
+   },
+   {
+    "field": "Length",
+    "current": "northern 622; southern 613 (Structurae)",
+    "current_source": "https://structurae.net/structures/podmilj-tunnel",
+    "proposed": "en.wikipedia A1 agrees: right 622, left 613; RTV SLO 2004: about 600 m",
+    "source_url": "https://en.wikipedia.org/wiki/A1_motorway_(Slovenia)",
+    "quote": "Podmilj right 622 m (2,041 ft), Podmilj left 613 m"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Opening to traffic",
+    "a": "12 August 2005 (DRI, Lotsberg)",
+    "a_url": "https://www.dri.si/uploads/reference/pdf/06_reference-2005.pdf",
+    "b": "ceremony 12 August, traffic from Saturday morning",
+    "b_url": "https://www.rtvslo.si/slovenija/koper-in-maribor-koncno-povezana/41219"
+   }
+  ],
+  "searched": "Structurae, DRI 2005, RTV SLO, en.wikipedia A1."
+ },
+ {
+  "id": "vzideh",
+  "verdict": "confirmed",
+  "stored": [
+   46.188631,
+   14.897392
+  ],
+  "independent": {
+   "lat": null,
+   "lon": null,
+   "source_url": "https://domzalec.si/kronika/z-osebnim-vozilom-trcil-v-steno-predora/",
+   "quote": "na regionalni cesti Trojane-Izlake v predoru V Zideh, v občini Lukovica"
+  },
+  "distance_m": null,
+  "evidence": "Identity now sourced by name, not only by place and length: three news reports name \"predor V Zideh\" on the regional road Trojane to Izlake (the road OSM tags 221), in the Municipality of Lukovica. This is the road the stored unnamed tunnel (OSM way 38002450) lies on, so the tunnel is a regional-road tunnel, not an A1 tube (Lotsberg lists it under A1). No source gives a coordinate, a road number or a length for the named tunnel, so the exact way is confirmed by road + municipality + settlement, not by coordinate. Context distances from the stored point: V Zideh settlement (mdwiki) 320 m; Structurae east portal coordinate of the A1 Trojane tunnel 141 m. I found no statement that it is the only tunnel on that road within Lukovica.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Road designation",
+    "current": "R 336A deviation (1996 plan); OSM ref 221",
+    "current_source": "https://tax-fin-lex.si/Dokument/Podrobnosti/c30411e0-18ac-4e58-b50a-5415d52001c1",
+    "proposed": "Add: named in press as on the regional road Izlake to Trojane",
+    "source_url": "https://siol.net/novice/slovenija/nesreca-zaprla-cesto-v-predoru-pri-trojanah-705974",
+    "quote": "zaprla cesto Izlake–Trojane, v predoru V Zideh"
+   },
+   {
+    "field": "Municipality",
+    "current": null,
+    "current_source": null,
+    "proposed": "Lukovica",
+    "source_url": "https://siol.net/novice/slovenija/nesreca-zaprla-cesto-v-predoru-pri-trojanah-705974",
+    "quote": "v predoru v Zideh v občini Lukovica"
+   },
+   {
+    "field": "Name evidence",
+    "current": "unnamed in OSM",
+    "current_source": null,
+    "proposed": "\"predor V Zideh\" used by NaDlani.si traffic report",
+    "source_url": "https://www.nadlani.si/novice/nesreca-zaprla-predor-pri-trojanah-cesta-izlake-trojane-neprevozna-zastoji-tudi-drugod-po-sloveniji/",
+    "quote": "regionalna cesta Izlake–Trojane zaradi prometne nesreče zaprta v predoru V Zideh"
+   },
+   {
+    "field": "Length",
+    "current": "296 m (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "No better source found; 296 m stays Lotsberg only, 260 m is the 1996 design",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html",
+    "quote": "(Lotsberg row: V Zideh, 296, A1, 2002; fetch summary)"
+   },
+   {
+    "field": "Opened",
+    "current": "2002 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "No better source found. Context only: Vransko to Trojane subsection opened June 2002",
+    "source_url": "https://www.rtvslo.si/gospodarstvo/avtocesta-prek-trojan-se-letos/17151",
+    "quote": "8,6-kilometrski pododsek Vransko-Trojane so predali prometu junija 2002"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Road the tunnel is on",
+    "a": "A1 (Lotsberg)",
+    "a_url": "https://www.lotsberg.net/data/slovenia/list.html",
+    "b": "regional road Trojane to Izlake (domzalec.si 2021, siol.net 2026, nadlani.si 2026)",
+    "b_url": "https://domzalec.si/kronika/z-osebnim-vozilom-trcil-v-steno-predora/"
+   }
+  ],
+  "searched": "Searched \"predor V Zideh\" with R1-221, R 336A, DRSI, DARS. Opened siol.net, nadlani.si, domzalec.si, mdwiki, DRI 2005 references, RTV SLO 2004, Zagorje Ruardi plan (no mention). Could not open: uradni-list.si (robots), pisrs.si (JavaScript), dars.si history page (robots), 24ur.com (site error), Slovenian Wikipedia tunnel list (not found)."
+ },
+ {
+  "id": "kastelec",
+  "verdict": "confirmed",
+  "stored": [
+   45.58384,
+   13.884767
+  ],
+  "independent": {
+   "lat": 45.580947,
+   "lon": 13.88629,
+   "source_url": "https://structurae.net/structures/kastelec-tunnel",
+   "quote": "45° 35' 4.76\" N, 13° 53' 55.90\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     45.584656,
+     13.898861
+    ],
+    [
+     45.577239,
+     13.873719
+    ]
+   ]
+  },
+  "distance_m": 343,
+  "distance_to_each_point_m": [
+   1101,
+   1130
+  ],
+  "span_between_points_m": 2123,
+  "evidence": "Structurae gives two portal coordinates for the Kastelec tunnel on A1; stored point lies between them. URSZR Koper lists Kastelec on the Klanec to Ankaran (Srmin) section.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Length (Lotsberg)",
+    "current": "2,303 + 2,195",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "Third official value: URSZR Koper 2021 left 2,278 m, right 2,237 m",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
+    "quote": "Leva cev 2.278 m ... Desna cev 2.237 m"
+   },
+   {
+    "field": "Cross passages",
+    "current": null,
+    "current_source": null,
+    "proposed": "5 cross passages, spacing 310 to 400 m; roadway 7.70 m",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
+    "quote": "Prečni rovi 5 5 8"
+   },
+   {
+    "field": "Opened",
+    "current": "22 November 2004 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "No better source opened for the day; Structurae gives completion 2004",
+    "source_url": "https://structurae.net/structures/kastelec-tunnel",
+    "quote": "Completion: 2004 (fetch summary)"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Tube lengths",
+    "a": "left 2,278 / right 2,237 m (URSZR Koper 2021)",
+    "a_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
+    "b": "2,292 / 2,240 (Structurae) and 2,303 / 2,195 (Lotsberg, en.wikipedia A1)",
+    "b_url": "https://structurae.net/structures/kastelec-tunnel"
+   }
+  ],
+  "searched": "Structurae, URSZR Koper 2021 assessment, en.wikipedia A1 and Crni Kal Viaduct page (viaduct dates only, 23 or 24 September 2004, no tunnel date). 24ur.com articles on the 2004 opening could not be opened."
+ },
+ {
+  "id": "dekani",
+  "verdict": "confirmed",
+  "stored": [
+   45.553379,
+   13.81703
+  ],
+  "independent": {
+   "lat": 45.552993,
+   "lon": 13.816932,
+   "source_url": "https://structurae.net/structures/dekani-tunnel",
+   "quote": "45° 33' 5.8\" N 13° 49' 49.43\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     45.551611,
+     13.830397
+    ],
+    [
+     45.554375,
+     13.803467
+    ]
+   ]
+  },
+  "distance_m": 44,
+  "distance_to_each_point_m": [
+   1059,
+   1062
+  ],
+  "span_between_points_m": 2119,
+  "evidence": "Structurae gives two portal coordinates for the Dekani tunnel on A1, Koper; stored point lies at their midpoint.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Length",
+    "current": "northern 2,190; southern 2,182 (Structurae)",
+    "current_source": "https://structurae.net/structures/dekani-tunnel",
+    "proposed": "URSZR Koper 2021 agrees: left 2,182 m, right 2,190 m",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
+    "quote": "Leva cev 2.182 m ... Desna cev 2.190 m"
+   },
+   {
+    "field": "Cross passages",
+    "current": "5 (Doka)",
+    "current_source": "https://www.doka.com/uk/references/europe/Dekani_Tunnel",
+    "proposed": "5 confirmed by URSZR Koper; roadway 7.70 m",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
+    "quote": "Prečni rovi 5 5 8"
+   },
+   {
+    "field": "Opened",
+    "current": "22 November 2004 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "No better source opened for the day; Structurae gives completion 2004",
+    "source_url": "https://structurae.net/structures/dekani-tunnel",
+    "quote": "Completion: 2004 (fetch summary)"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Left tube length",
+    "a": "2,181 m (en.wikipedia A1 tunnel list)",
+    "a_url": "https://en.wikipedia.org/wiki/A1_motorway_(Slovenia)",
+    "b": "2,182 m (Structurae, URSZR Koper, Lotsberg)",
+    "b_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf"
+   }
+  ],
+  "searched": "Structurae, URSZR Koper 2021, en.wikipedia A1, STA 2003 (breakthrough of second tube, paywalled)."
+ },
+ {
+  "id": "markovec",
+  "verdict": "confirmed",
+  "stored": [
+   45.541886,
+   13.702504
+  ],
+  "independent": {
+   "lat": 45.541261,
+   "lon": 13.702539,
+   "source_url": "https://structurae.net/structures/monte-san-marco-tunnel",
+   "quote": "45° 32' 35.44\" N 13° 42' 57.26\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     45.543178,
+     13.715906
+    ],
+    [
+     45.539344,
+     13.689172
+    ]
+   ]
+  },
+  "distance_m": 70,
+  "distance_to_each_point_m": [
+   1054,
+   1076
+  ],
+  "span_between_points_m": 2125,
+  "evidence": "Structurae gives two portal coordinates for the Monte San Marco (Markovec) tunnel on H6, Koper; stored point lies between them.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Opened",
+    "current": "completion 2013 (Structurae); opened 2015 (DRI)",
+    "current_source": "https://dri.si/en/fields-of-work/railways/expressway-koper-izola",
+    "proposed": "Opened to traffic 5 June 2015 (RTV SLO, same day)",
+    "source_url": "https://www.rtvslo.si/slovenija/foto-gradnja-predora-markovec-je-trajala-predolgo/366795",
+    "quote": "sta prometu predala petkilometrski odsek hitre ceste Koper-Izola"
+   },
+   {
+    "field": "Length",
+    "current": "northern 2,145; southern 2,175 (Structurae)",
+    "current_source": "https://structurae.net/structures/monte-san-marco-tunnel",
+    "proposed": "URSZR Koper 2021: left 2,174 m, right 2,145 m (agrees with DRI 2,174 / 2,144 within 1 m)",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
+    "quote": "Leva cev 2.174 m ... Desna cev 2.145 m"
+   },
+   {
+    "field": "Cross passages",
+    "current": null,
+    "current_source": null,
+    "proposed": "8 cross passages at 250 m; twin tube, two lanes, one way",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
+    "quote": "Dvocevni dvopasovni enosmerni"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Southern/left tube length",
+    "a": "2,175 m (Structurae)",
+    "a_url": "https://structurae.net/structures/monte-san-marco-tunnel",
+    "b": "2,174 m (URSZR Koper, DRI); Lotsberg 2,173",
+    "b_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf"
+   }
+  ],
+  "searched": "Structurae, URSZR Koper 2021, RTV SLO 2015."
+ },
+ {
+  "id": "lescevje",
+  "verdict": "cannot_check",
+  "stored": [
+   45.905394,
+   14.97867
+  ],
+  "independent": {
+   "lat": null,
+   "lon": null,
+   "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/E_23d29577-a159-4ab5-a4fe-60ee1a099884",
+   "quote": "Območje nad predorom Leščevje obsega ... parcel v k.o. Štefan"
+  },
+  "distance_m": null,
+  "evidence": "No source with a coordinate for the tunnel could be opened. What is sourced: the national location plan for the A2 section Pluska to Ponikve places the area above the Lescevje tunnel in cadastral municipality Stefan, and Elea places it in Trebnje. The settlement Stefan pri Trebnjem (Wikipedia mirror: 45.9089389, 14.988778, Municipality of Trebnje) is 876 m from the stored point, which fits a tunnel in k.o. Stefan and rules out the old Lescevje-village position. Not a coordinate confirmation.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Length (Lotsberg)",
+    "current": "369 + 363",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "Official design: left tube 372.00 m, right tube 370.00 m, tolerance 10 %",
+    "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/E_23d29577-a159-4ab5-a4fe-60ee1a099884",
+    "quote": "dolžino leve cevi 372,00 m in desne cevi 370,00 m"
+   },
+   {
+    "field": "Opened",
+    "current": "30 June 2010 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "30 June 2010 confirmed as announced opening of Pluska to Ponikve (zurnal24, 19 June 2010, written before the event)",
+    "source_url": "https://www.zurnal24.si/slovenija/koncno-je-tu-a-z-grenkim-priokusom-85726",
+    "quote": "Za promet bodo 30. junija odprli odseka Pluska–Ponikve in Ponikve–Hrastje"
+   },
+   {
+    "field": "Location",
+    "current": null,
+    "current_source": null,
+    "proposed": "Cadastral municipality Stefan (Trebnje)",
+    "source_url": "https://bb.si/f/docs/diplomska-dela/strmsek_pavla-avtocestni_odsek_pluska-ponikve_0_1.pdf",
+    "quote": "območje nad predorom Leščevje obsega parcele oz. dele parcel v k.o. Štefan"
+   },
+   {
+    "field": "Construction start",
+    "current": null,
+    "current_source": null,
+    "proposed": "about 5 March 2008 (article of 6 March 2008 says \"yesterday\"); my reading of the date",
+    "source_url": "https://svet24.si/novice/promet/zaceli-z-gradnjo-predora-lescevje-1428-1669685",
+    "quote": "384 metrov dolg predor Leščevje"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Right tube length",
+    "a": "386 m (en.wikipedia A2 junction table \"386 / 363\")",
+    "a_url": "https://en.wikipedia.org/wiki/A2_motorway_(Slovenia)",
+    "b": "369 m (en.wikipedia A2 tunnel list and Lotsberg); 370 m design (location plan); 348.9 m (Elea)",
+    "b_url": "https://www.elea.si/en/portfolio/the-a2-karavanke-obrezje-motorway-lescevje-tunnel-trebnje/"
+   }
+  ],
+  "searched": "Structurae has no entry found. Opened: Elea, svet24, zurnal24, location plan (tax-fin-lex), diploma thesis (bb.si), en.wikipedia A2, Wikipedia mirror for Stefan pri Trebnjem. uradni-list.si blocked."
+ },
+ {
+  "id": "cenkova",
+  "verdict": "confirmed",
+  "stored": [
+   46.577272,
+   15.938634
+  ],
+  "independent": {
+   "lat": 46.577131,
+   "lon": 15.9389,
+   "source_url": "https://structurae.net/structures/cenkova-tunnel",
+   "quote": "46° 34' 31.55\" N, 15° 56' 8.31\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     46.575431,
+     15.935642
+    ],
+    [
+     46.578831,
+     15.942158
+    ]
+   ]
+  },
+  "distance_m": 26,
+  "distance_to_each_point_m": [
+   307,
+   320
+  ],
+  "span_between_points_m": 625,
+  "evidence": "Structurae gives two portal coordinates for the Cenkova tunnel on A5; stored point lies between them. The national location plan puts the tunnel on the Spodnja Senarska to Cogetinci section, under the Cenkova ridge.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Opened",
+    "current": "30 May 2008 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "DOUBTFUL. Official 2008 plan (consolidated 13 June 2008) still lists the section with the tunnel as planned for December 2008; RTV SLO reports the last Pomurje section (Lenart/Spodnja Senarska to Vucja vas, 26.1 km) opened 30 October 2008",
+    "source_url": "https://www.tax-fin-lex.si/Dokument/Podrobnosti/475d78ee-901c-49cb-b21c-8a9ea1450d1c",
+    "quote": "predvidena predaja prometu: december 2008"
+   },
+   {
+    "field": "Design length",
+    "current": null,
+    "current_source": null,
+    "proposed": "Location plan 2005: bored tunnel 360 m (km 21+500 to 21+860) plus covered cut 230 m (km 21+270 to 21+500)",
+    "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/90bf7a8f-c0a2-4dd9-a69c-5435a251f987",
+    "quote": "dvocevni predor dolžine 360,00 m od km 21+500 do km 21+860"
+   },
+   {
+    "field": "Length (Lotsberg)",
+    "current": "615 + 602, cut-and-cover 258 / 241",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "No DARS figure found; Structurae 595 north / 609 south stays the alternative",
+    "source_url": "https://structurae.net/structures/cenkova-tunnel",
+    "quote": "Northern tube 595 m; southern tube 609 m (fetch summary)"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Opening date",
+    "a": "30 May 2008 (Lotsberg)",
+    "a_url": "https://www.lotsberg.net/data/slovenia/list.html",
+    "b": "30 October 2008 for the section Spodnja Senarska to Vucja vas (RTV SLO, 30 Oct 2008); tunnel not named in the article",
+    "b_url": "https://www.rtvslo.si/slovenija/pomurci-so-koncno-zadihali/93739"
+   },
+   {
+    "what": "Tunnel length",
+    "a": "360 m bored + 230 m covered cut = 590 m (2005 location plan)",
+    "a_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/90bf7a8f-c0a2-4dd9-a69c-5435a251f987",
+    "b": "595 / 609 m (Structurae); 615 / 602 m (Lotsberg)",
+    "b_url": "https://structurae.net/structures/cenkova-tunnel"
+   }
+  ],
+  "searched": "Structurae, 2005 location plan and 2008 annual plan (tax-fin-lex), RTV SLO August and October 2008. The 24ur.com article on a Pomurje opening could not be opened, so what opened on 30 May 2008 is not established."
+ },
+ {
+  "id": "pletovarje",
+  "verdict": "cannot_check",
+  "stored": [
+   46.295081,
+   15.440755
+  ],
+  "independent": {
+   "lat": null,
+   "lon": null,
+   "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+   "quote": "leva cev (smer Celje) 743 m dolžine"
+  },
+  "distance_m": null,
+  "evidence": "No source with a coordinate for the tunnel could be opened (Structurae page pletovarjetunnel-1996 returns a site error). Sourced location: A1, section between Arja vas and Hoce, tunnel through the Pletovarje ridge; en.wikipedia says the A1 crosses the territory of the settlement Pletovarje (46.2839417, 15.432667, Sentjur), which is 1386 m from the stored point. Order along A1 also fits: the Structurae-confirmed Golo Rebro tunnel is the next tunnel, about 2.4 km north-east. Not a coordinate confirmation.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Length",
+    "current": "745 (1996 tube) + 708 (1976 tube) (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "URSZR Celje: left tube (towards Celje) 743 m, right tube (towards Ljubljana) 728 m",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+    "quote": "desna cev (smer Ljubljana) 728 m dolžine"
+   },
+   {
+    "field": "Opened",
+    "current": "first tube 21 July 1976; second 25 October 1996 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "Only 1996 for the two-tube state found in an official source; days stay Lotsberg only",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+    "quote": "Promet skozi predora je stekel leta 1996."
+   },
+   {
+    "field": "Elevation",
+    "current": null,
+    "current_source": null,
+    "proposed": "about 430 m above sea level; one cross passage; no forced ventilation",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+    "quote": "Predor leži na nadmorski višini približno 430 m."
+   },
+   {
+    "field": "Municipality",
+    "current": "Sentjur (correction note, from en.wikipedia)",
+    "current_source": null,
+    "proposed": "Settlement Pletovarje is in Sentjur; no source says the tunnel is",
+    "source_url": "https://en.wikipedia.org/wiki/Pletovarje",
+    "quote": "the Slovenian A1 motorway crosses the settlement's territory"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Tube lengths",
+    "a": "743 m left / 728 m right (URSZR Celje)",
+    "a_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+    "b": "745 m left / 708 m right (en.wikipedia A1, Lotsberg)",
+    "b_url": "https://en.wikipedia.org/wiki/A1_motorway_(Slovenia)"
+   }
+  ],
+  "searched": "Structurae 1996 page (site error; the other URL form is not allowed), URSZR Celje plan, Geologija 2009 abstract, en.wikipedia A1 and Pletovarje."
+ },
+ {
+  "id": "tabor_h4",
+  "verdict": "confirmed",
+  "stored": [
+   45.800167,
+   13.980767
+  ],
+  "independent": {
+   "lat": 45.800564,
+   "lon": 13.981454,
+   "source_url": "https://structurae.net/structures/podnanos-tunnel",
+   "quote": "45° 47' 54.94\" N 13° 59' 2.62\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     45.798594,
+     13.984061
+    ],
+    [
+     45.802533,
+     13.978847
+    ]
+   ]
+  },
+  "distance_m": 69,
+  "distance_to_each_point_m": [
+   309,
+   302
+  ],
+  "span_between_points_m": 596,
+  "evidence": "Structurae gives two portal coordinates for the Podnanos tunnel on H4; stored point lies at their midpoint. Identity: URSZR Nova Gorica lists the tunnel Podnanos on H4 Razdrto to Vipava at km 7.360 to 7.974, after the Tabor viaduct; it lists Tabor only as a viaduct. Lotsberg lists \"Podnanos (Tabor)\" on H4 and a separate Tabor tunnel on A3 near Sezana (289 / 282 m, 1997). ZAG's list says \"Tabor\" tunnel; the record assumes the H4 one. That choice between H4 Podnanos (Tabor) and A3 Tabor is not settled by any source I opened, so a residual identity doubt remains although the point is right for the H4 tunnel.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "Opened",
+    "current": "13 August 2009 (Lotsberg)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "13 August (Thursday) confirmed by STA for the last H4 section; year not on the visible page, Structurae gives completion 2009",
+    "source_url": "https://english.sta.si/1417714/final-stretch-of-western-slovenian-motorway-opened-today",
+    "quote": "will be inaugurated on Thursday"
+   },
+   {
+    "field": "Length",
+    "current": "northern 612; southern 590 (Structurae)",
+    "current_source": "https://structurae.net/structures/podnanos-tunnel",
+    "proposed": "URSZR: right about 614 m, left about 589 m (already in sheet; re-read and agrees)",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-NG/Ocene-ogrozenosti/Ocena-ogrozenosti-ob-nesrecah-v-vkopih-in-predorih.pdf",
+    "quote": "cca 614 m"
+   },
+   {
+    "field": "Neighbouring structure",
+    "current": null,
+    "current_source": null,
+    "proposed": "Tabor viaduct: 375 m left, 326 m right",
+    "source_url": "https://www.ponting.si/en/news/fifteenth-anniversary-of-the-opening-of-the-expressway-through-rebernice-171.html",
+    "quote": "375 meters long on the left and 326 meters on the right"
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Which \"Tabor\" tunnel ZAG means",
+    "a": "H4 Podnanos (Tabor), 612 / 590 m, 2009 (record)",
+    "a_url": "https://structurae.net/structures/podnanos-tunnel",
+    "b": "A3 Tabor near Sezana, 289 / 282 m, opened 14 November 1997 (Lotsberg row)",
+    "b_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   }
+  ],
+  "searched": "Structurae, URSZR Nova Gorica, STA, Ponting, Lotsberg. ZAG reference page not re-opened."
+ },
+ {
+  "id": "golo_rebro",
+  "verdict": "confirmed",
+  "stored": [
+   46.313671,
+   15.45799
+  ],
+  "independent": {
+   "lat": 46.313661,
+   "lon": 15.457735,
+   "source_url": "https://structurae.net/structures/golo-rebro-tunnel",
+   "quote": "46° 19' 0.36\" N, 15° 27' 33.62\" E",
+   "note": "midpoint of the two coordinates the page gives",
+   "points": [
+    [
+     46.316767,
+     15.459339
+    ],
+    [
+     46.310556,
+     15.456131
+    ]
+   ]
+  },
+  "distance_m": 20,
+  "distance_to_each_point_m": [
+   359,
+   375
+  ],
+  "span_between_points_m": 733,
+  "evidence": "Structurae gives two portal coordinates for the Golo Rebro tunnel on A1; stored point lies at their midpoint. Geologija paper: tunnel on the Styrian motorway through the eastern part of Konjiska gora.",
+  "proposed_position": null,
+  "improvements": [
+   {
+    "field": "length_m (record)",
+    "current": "788",
+    "current_source": "record structure.length_m",
+    "proposed": "URSZR Celje: 786 m for each tube; Structurae 786 west / 750 east",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+    "quote": "leva cev (smer Celje) 786 m dolžine"
+   },
+   {
+    "field": "Length (Lotsberg)",
+    "current": "788 (1976) + 757 (1996)",
+    "current_source": "https://www.lotsberg.net/data/slovenia/list.html",
+    "proposed": "en.wikipedia A1 repeats 788 right / 757 left; URSZR Celje gives 786 / 786; Structurae 750 / 786",
+    "source_url": "https://structurae.net/structures/golo-rebro-tunnel",
+    "quote": "eastern tube is 750 m and the western tube is 786 m (fetch summary)"
+   },
+   {
+    "field": "Opened",
+    "current": "first tube July 1976; second October 1996 (Structurae)",
+    "current_source": "https://structurae.net/structures/golo-rebro-tunnel",
+    "proposed": "Re-read, agrees; URSZR Celje gives 1996 for two-tube traffic",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+    "quote": "Promet skozi predora je stekel leta 1996."
+   },
+   {
+    "field": "Elevation",
+    "current": null,
+    "current_source": null,
+    "proposed": "about 380 m above sea level; one cross passage",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+    "quote": "Predor leži na nadmorski višini približno 380 m."
+   }
+  ],
+  "source_differences": [
+   {
+    "what": "Tube lengths",
+    "a": "786 m left and 786 m right (URSZR Celje)",
+    "a_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+    "b": "750 east / 786 west (Structurae); 788 / 757 (Lotsberg, en.wikipedia A1)",
+    "b_url": "https://structurae.net/structures/golo-rebro-tunnel"
+   }
+  ],
+  "searched": "Structurae main page (the golorebrotunnel-1996 page returns a site error), URSZR Celje, Geologija 2007 abstract, en.wikipedia A1."
+ }
+]

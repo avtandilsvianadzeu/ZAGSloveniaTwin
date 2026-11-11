@@ -1,0 +1,788 @@
+[
+ {
+  "id": "krvavec",
+  "identity": "Krvavec 6-seat detachable gondola (krožnokabinska žičnica, KKŽ) from the valley (Grad, Cerklje na Gorenjskem) to Gospinca, Krvavec ski resort; operator RTC Krvavec d.d.",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Station elevations differ: lift-world 595 m / 1480 m vs 2006 official cableway list (Uradni list RS 103/2006 annex) 602 m / 1487 m. Length (2356 m) and rise (885 m) agree.",
+   "Manufacturer: lift-world 'Girak-Garaventa', Wikipedia 'Garaventa' (same lineage, naming only).",
+   "The correction note says the old point (46.28495, 14.49594) is ~150 m west and 'likely the parking'. The operator's own map pin on rtc-krvavec.si/where-are-we is 46.2849476, 14.4959366, i.e. the OLD point to within ~2 m; the operator says parking is directly at the lower station. The Trailforks point 46.284790, 14.497920 used in the correction could not be opened/verified in this check.",
+   "Correction note says top station not found; hiking-trail.net gives a Dom na Gospincu trailhead next to the upper station (see anchors)."
+  ],
+  "anchors": [
+   {
+    "label": "Valley station area (operator map pin 'Krvavec'; operator says parking is directly at the lower cable-car station)",
+    "lat": 46.284948,
+    "lon": 14.495937,
+    "source_url": "https://rtc-krvavec.si/where-are-we"
+   },
+   {
+    "label": "Valley station trailhead 'Bottom station of cableway on Krvavec', 602 m (4-decimal source precision)",
+    "lat": 46.2849,
+    "lon": 14.4968,
+    "source_url": "https://hiking-trail.net/hiking_trip/bottom_station_of_cableway_on_krvavec_dom_na_gospincu_hotel_rozka/3/1063/2631"
+   },
+   {
+    "label": "Top station area: trailhead 'Dom na Gospincu', 1492 m; page says the upper station of the cable car is next to Dom na Gospincu (4-decimal source precision; hut, not station building)",
+    "lat": 46.2957,
+    "lon": 14.5214,
+    "source_url": "https://www.hiking-trail.net/hiking_trip/dom_na_gospincu_hotel_krvavec/3/2512/5373"
+   }
+  ],
+  "specs": {
+   "lift_type": {
+    "value": "6-MGD detachable monocable gondola (KKŽ, krožna kabinska žičnica)",
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "manufacturer": {
+    "value": "Girak-Garaventa",
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "year_built": {
+    "value": 1999,
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "slope_length_m": {
+    "value": 2356,
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "vertical_rise_m": {
+    "value": 885,
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "valley_station_elev_m": {
+    "value": "595 (lift-world); 602 (Uradni list 2006 annex)",
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "top_station_elev_m": {
+    "value": "1480 (lift-world); 1487 (Uradni list 2006 annex)",
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "towers": {
+    "value": 20,
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "capacity_pph": {
+    "value": 2000,
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "carriers": {
+    "value": "79 cabins, Swoboda ULTRA 6, 6 persons each",
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "speed_mps": {
+    "value": 6.0,
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "travel_time_min": {
+    "value": 6.7,
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "haul_rope_diameter_mm": {
+    "value": 44,
+    "source_url": "https://lift-world.info/en/lifts/2772/datas.htm"
+   },
+   "drive_power_kw": {
+    "value": 980,
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "operator": {
+    "value": "RTC Krvavec, Grad 76, 4207 Cerklje na Gorenjskem",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   }
+  },
+  "notes": "Hiking-trail.net trailhead coordinates are where hikers park/start; here that is the lower-station car park. Horizontal distance valley->Gospinca anchor ~2.2 km, consistent with 2356 m rope and 885 m rise. Wikipedia lists the gondola as Garaventa 1999, replacing an older lift (lift-world has the earlier Poma 4-MGD 1973 and Žičnica Ljubljana 1958 lifts)."
+ },
+ {
+  "id": "velikaplanina",
+  "identity": "Velika planina pendulum aerial tramway (nihalka), Kamniška Bistrica valley station to the upper station at Šimnovec on Velika planina; 2 cabins x 32 persons; operator Velika planina d.o.o.",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Length: lift-world 1643 m vs 2006 official list 1442 m. The coordinate geometry (valley 46.3055,14.6086 to OSM top 46.3037,14.6260: ~1.35 km horizontal, 858 m rise) fits ~1.6 km, i.e. lift-world's 1643 m; 1442 m looks wrong or refers to something else.",
+   "Year: lift-world 1991 (manufacturer Hölzl) vs 2006 list 1963 vs Kamnik museum 'officially opened 13 Sept 1964'. 1964 is the opening of the line; 1991/Hölzl is probably a rebuild (not confirmed by a second source).",
+   "Capacity/speed: lift-world 300 p/h, 8 m/s vs 2006 list 360 p/h, 7 m/s.",
+   "Station elevations: lift-world 558/1416 m vs 2006 list 548/1405 m.",
+   "Operator in 2006 list: 'Zaklad narave, Kamnik'; today Velika planina d.o.o. (RTV SLO). Record client 'Velika planina d.o.o.' matches the current operator.",
+   "Top station coordinate in the correction note (46.303726, 14.625989, Mapcarta/OSM) could not be re-opened in this check (mapcarta page not found by search); not verified."
+  ],
+  "anchors": [
+   {
+    "label": "Valley station car park (hiking-trail.net 'park in the large parking lot at the bottom pendulum station'; the page labels the point 'Hotel Šimnovec 1407 m' but the coordinate is the valley parking, 4-decimal precision)",
+    "lat": 46.3061,
+    "lon": 14.6088,
+    "source_url": "https://www.hiking-trail.net/hiking_trip/hotel_simnovec_gradisce_velika_planina/3/169/236"
+   },
+   {
+    "label": "NOT this lift: top station of the Šimnovec chairlift (komoot highlight), confirms the correction note's exclusion",
+    "lat": 46.300246,
+    "lon": 14.640093,
+    "source_url": "https://www.komoot.com/highlight/3334443"
+   }
+  ],
+  "specs": {
+   "lift_type": {
+    "value": "32-AT pendulum aerial tramway (nihalka), no intermediate towers",
+    "source_url": "https://lift-world.info/en/lifts/2505/datas.htm"
+   },
+   "manufacturer": {
+    "value": "Hölzl (lift-world, with year 1991)",
+    "source_url": "https://lift-world.info/en/lifts/2505/datas.htm"
+   },
+   "year_built": {
+    "value": "Opened 13 Sep 1964 (construction from 1961); lift-world lists 1991",
+    "source_url": "https://www.muzej-kamnik-on.net/?p=15313"
+   },
+   "slope_length_m": {
+    "value": 1643,
+    "source_url": "https://lift-world.info/en/lifts/2505/datas.htm"
+   },
+   "vertical_rise_m": {
+    "value": 858,
+    "source_url": "https://lift-world.info/en/lifts/2505/datas.htm"
+   },
+   "valley_station_elev_m": {
+    "value": 558,
+    "source_url": "https://lift-world.info/en/lifts/2505/datas.htm"
+   },
+   "top_station_elev_m": {
+    "value": 1416,
+    "source_url": "https://lift-world.info/en/lifts/2505/datas.htm"
+   },
+   "towers": {
+    "value": 0,
+    "source_url": "https://www.muzej-kamnik-on.net/?p=15313"
+   },
+   "capacity_pph": {
+    "value": 300,
+    "source_url": "https://lift-world.info/en/lifts/2505/datas.htm"
+   },
+   "carriers": {
+    "value": "2 cabins, 32 persons each",
+    "source_url": "https://lift-world.info/en/lifts/2505/datas.htm"
+   },
+   "speed_mps": {
+    "value": 8,
+    "source_url": "https://lift-world.info/en/lifts/2505/datas.htm"
+   },
+   "rope_notes": {
+    "value": "Main (support) rope replaced early 2020 after a Dec 2019 shutdown over worn ropes; up to ~300 m above ground mid-span",
+    "source_url": "https://www.rtvslo.si/zabava-in-slog/ture-avanture/gondola-na-veliko-planino-spet-obratuje/513476"
+   },
+   "drive_power_kw": {
+    "value": 180,
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "operator": {
+    "value": "Velika planina (company), director Leon Keder",
+    "source_url": "https://www.rtvslo.si/zabava-in-slog/ture-avanture/gondola-na-veliko-planino-spet-obratuje/513476"
+   }
+  },
+  "notes": "The operator access page (velikaplanina.si) is not reachable by the fetch tool, so the 46.305534, 14.6086337 point was not re-read; the hiking-trail valley point agrees within ~70 m. Šimnovec chairlift (separate installation) was replaced by Leitner CD6 in Dec 2023 (leitner.com)."
+ },
+ {
+  "id": "grad_vzpenjaca",
+  "identity": "Ljubljana Castle funicular (Tirna vzpenjača na Ljubljanski grad), Krekov trg to Ljubljana Castle; Doppelmayr, opened 28 Dec 2006",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Length: lift-world 118 m (matches the correction note's ordinance value 118.21 m) vs English Wikipedia and Lonely Planet '70 m'. Lift-world gives 70 m as the vertical rise, supporting the note that '70 m' is the height difference.",
+   "Station elevations: lift-world 300 m / 370 m vs the note's ordinance values 294.5 m / 365 m. The ordinance docx on ljubljana.si was found but could not be read (binary), so the ordinance figures remain unverified here.",
+   "No station coordinate could be verified: Mapcarta pages for the stations were not returned by search; komoot 794344 (46.048506, 14.509414) is the castle itself, not a station."
+  ],
+  "anchors": [],
+  "specs": {
+   "lift_type": {
+    "value": "33-FUC cable funicular, 1 cabin",
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "manufacturer": {
+    "value": "Doppelmayr",
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "year_built": {
+    "value": 2006,
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "opening_date": {
+    "value": "28 Dec 2006",
+    "source_url": "https://en.wikipedia.org/wiki/Ljubljana_Castle_funicular"
+   },
+   "slope_length_m": {
+    "value": 118,
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "vertical_rise_m": {
+    "value": 70,
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "valley_station_elev_m": {
+    "value": 300,
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "top_station_elev_m": {
+    "value": 370,
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "capacity_pph": {
+    "value": 575,
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "carriers": {
+    "value": "1 cabin, 33 persons, standing, with attendant",
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "speed_mps": {
+    "value": 3,
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "travel_time_s": {
+    "value": 60,
+    "source_url": "https://en.wikipedia.org/wiki/Ljubljana_Castle_funicular"
+   },
+   "drive": {
+    "value": "Electric, at mountain station",
+    "source_url": "https://lift-world.info/en/lifts/12495/datas.htm"
+   },
+   "valley_station_location": {
+    "value": "Krekov trg (Krek Square), next to the Puppet Theatre",
+    "source_url": "https://kraji.eu/slovenija/ljubljana_spodnja_postaja_vzpenjace/eng"
+   },
+   "top_station_address": {
+    "value": "Grajska planota 1, Ljubljana",
+    "source_url": "https://www.lonelyplanet.com/points-of-interest/funicular-upper-station/1282811"
+   },
+   "operator": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Operator not stated in any opened source (record client Javni zavod Ljubljanski grad is plausible but unconfirmed here). City news: >525,000 rides and 47,500 operating hours in first 10 years; suspended in 2013 for planned repairs (ljubljana.si/en/news/10-years-of-the-funicular-to-the-ljubljana-castle). Current point 46.050132, 14.509677 not verified."
+ },
+ {
+  "id": "kranjskagora_z",
+  "identity": "Kranjska Gora ski resort lift system (RTC Žičnice Kranjska Gora d.d.), multiple chairlifts and surface lifts on Vitranc/Podkoren; not a single installation",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Record is resort-wide; no single valley/top station applies. Current point (46.48537, 13.7871) is the settlement centre; Wikipedia resort coordinate is 46.4849, 13.7794 (~0.6 km west).",
+   "Wikipedia base elevation inconsistent (785 m infobox vs 795 m statistics)."
+  ],
+  "anchors": [
+   {
+    "label": "Resort coordinate (Wikipedia 'Kranjska Gora Ski Resort', read via a Wikipedia IPFS mirror; not a station)",
+    "lat": 46.4849,
+    "lon": 13.7794,
+    "source_url": "https://www.chise.org/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Kranjska_Gora_Ski_Resort.html"
+   }
+  ],
+  "specs": {
+   "lifts": {
+    "value": "lift-world lists 23 lifts incl. 4-CLD Dolenčev Rut (Doppelmayr 2000, 807-1058 m), 4-CLF Podkoren (Doppelmayr 2004, 836-1278 m), 4-CLF Vitranc 1 (Doppelmayr 2005, 810-1110 m), 4-CLF Vitranc 2 (Leitner 2021/25, 1021-1569 m), 4-CLF Kekec (Leitner 2007), 2-CLF Velika Dolina (Graffer 1981), 10-MGD Vitranc I (planned)",
+    "source_url": "https://lift-world.info/en/lifts/place/kransjka_gora/index.htm"
+   },
+   "lifts_2006": {
+    "value": "Dolenčev rut 4-VKS 2000, 961 m, 2400 p/h; Vitranc II SED 1957, 1048 m; Podkoren 4-VKS-tr 2004, 1264 m, 1600 p/h; Velika dolina 2-SED 1981, 1237 m",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "operator": {
+    "value": "RTC Žičnice Kranjska Gora, Borovška cesta 103a, 4280 Kranjska Gora",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "resort_top_elev_m": {
+    "value": 1623,
+    "source_url": "https://www.chise.org/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Kranjska_Gora_Ski_Resort.html"
+   }
+  },
+  "notes": "Per-lift specs (towers, rope, speed) not collected because the ZAG record does not name a lift. If the atlas wants one anchor, the resort coordinate above is sourced; station coordinates were not found."
+ },
+ {
+  "id": "vogel",
+  "identity": "Vogel aerial tramway (nihalka) Ukanc (Bohinj) to Vogel ski centre; Poma 2001, 2 x 80-person cabins; replaced the 1964 Waagner-Biro tramway; operator Žičnice Vogel Bohinj",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Company form: record and OSM say 'Žičnice Vogel Bohinj, d.d.'; operator site vogel.si/en/about says 'Žičnice Vogel Bohinj, d.o.o.' (Ukanc 6).",
+   "Length/elevations: lift-world 1663 m, 574/1537 m, rise 963 m vs 2006 list 1670 m, 569/1533 m, rise 964 m.",
+   "lift-world's 1964 Waagner-Biro entry (ID 5674) gives 703/1666 m, inconsistent with the lake-level valley station; treat as unreliable.",
+   "aroundus.com 'Nihalka Vogel' 46.26975, 13.83809 is unlabeled and only ~0.7 km from the valley parking, while the line spans ~1.35 km horizontally; it matches neither station and was not used.",
+   "Current point (46.27717, 13.82933) is the Ukanc settlement centre, ~0.5 km west of the valley-station car park."
+  ],
+  "anchors": [
+   {
+    "label": "Valley station car park, Ukanc 570 m ('park in the large parking lot at the bottom station of the lift to Vogel'; 4-decimal precision)",
+    "lat": 46.2758,
+    "lon": 13.8358,
+    "source_url": "https://www.hiking-trail.net/hiking_trip/ukanc_vogel_via_planina_zadnji_vogel/1/588/3511"
+   }
+  ],
+  "specs": {
+   "lift_type": {
+    "value": "80-AT pendulum aerial tramway",
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "manufacturer": {
+    "value": "Poma",
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "year_built": {
+    "value": 2001,
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "slope_length_m": {
+    "value": 1663,
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "vertical_rise_m": {
+    "value": 963,
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "valley_station_elev_m": {
+    "value": 574,
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "top_station_elev_m": {
+    "value": 1537,
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "towers": {
+    "value": 2,
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "capacity_pph": {
+    "value": 950,
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "carriers": {
+    "value": "2 cabins, 80 persons each",
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "speed_mps": {
+    "value": 9.0,
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "travel_time_min": {
+    "value": 6,
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "rope_manufacturer": {
+    "value": "Austria Draht",
+    "source_url": "https://lift-world.info/en/lifts/494/datas.htm"
+   },
+   "drive_power_kw": {
+    "value": 600,
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "operator": {
+    "value": "Žičnice Vogel Bohinj, d.o.o., Ukanc 6, 4265 Bohinjsko jezero",
+    "source_url": "https://vogel.si/en/about/"
+   },
+   "predecessor": {
+    "value": "30-AT Bohinj-Vogel, Waagner Biro, 1964",
+    "source_url": "https://www.lift-world.info/en/lifts/place/bohinj/index.htm"
+   }
+  },
+  "notes": "Top station coordinate not found in an openable source. hiking-trail.net's 'Ski hotel Vogel' trailhead returns the same 46.2758, 13.8358 (it is the valley parking, not the top), so it was not used for the top."
+ },
+ {
+  "id": "cerkno_z",
+  "identity": "Cerkno ski resort lift system (Smučarski center Cerkno, Cerkno Hills/Davča), several chairlifts; not a single installation",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Operator name varies: record 'Hotel Cerkno d.o.o.'; 2006 list 'Hotel Cerkno, RTC Cerkno, Sedejev trg 8'; remontees-mecaniques 'Cerkno d.o.o.'.",
+   "Current point (46.15026, 14.05896) is a settlement point; Wikipedia resort coordinate is 46.1556, 14.0491 (~0.9 km NW)."
+  ],
+  "anchors": [
+   {
+    "label": "Resort coordinate (Wikipedia 'Cerkno Ski Resort'; not a station)",
+    "lat": 46.1556,
+    "lon": 14.0491,
+    "source_url": "https://en.wikipedia.org/wiki/Cerkno_Ski_Resort"
+   }
+  ],
+  "specs": {
+   "lifts": {
+    "value": "A Brdo 4-seat, B Brdo 2-seat, C Počivalo 6-seat, D Grič 2-seat, G Lom 6-seat, H Davča 4-seat chairlifts; E Dolina, F Lom T-bars",
+    "source_url": "https://en.wikipedia.org/wiki/Cerkno_Ski_Resort"
+   },
+   "lift_brdo": {
+    "value": "4-CLD/B Girak 1995, 1678 m, 326 m rise, 874-1200 m, 14 towers, 2400 p/h, 5 m/s",
+    "source_url": "https://www.lift-world.info/en/lifts/10924/datas.htm"
+   },
+   "lift_pocivalo": {
+    "value": "TSD6 Doppelmayr 2004, 1087 m, 330 m rise, ~870-1200 m, 12 towers, 40 chairs, 1800 p/h, 5 m/s, rope Austria Draht",
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsd6-pocivalo-doppelmayr-2611.html"
+   },
+   "lifts_2006": {
+    "value": "Brdo 2-SED 1986; Grič 2-SED 1983; Brdo 4-VKS 1995 (1800 m); Davča 4-SED 2002; Lom 6-VKS 1999",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "resort_elevations_m": {
+    "value": "base 900, top 1287, vertical 387",
+    "source_url": "https://en.wikipedia.org/wiki/Cerkno_Ski_Resort"
+   },
+   "operator": {
+    "value": "Hotel Cerkno, RTC Cerkno, Sedejev trg 8, 5282 Cerkno (2006)",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   }
+  },
+  "notes": "Resort opened 1984 (Wikipedia). Lift lengths for Brdo differ: lift-world 1678 m vs 2006 list 1800 m. Station coordinates not found."
+ },
+ {
+  "id": "golte",
+  "identity": "Golte (Žekovec) pendulum aerial tramway (nihalka), Žekovec (Radegunda, Mozirje) to Golte at Hotel Montis; Ceretti Tanfani 1969, new cabins 2002; operator Golte d.o.o.",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Type: record note and operator call it a 'gondola'; lift-world (75-AT), the 2006 list (N = nihalka) and RTV SLO ('nihalka') show it is a pendulum aerial tramway with 2 x 75-person cabins.",
+   "Length: operator 3265 m, lift-world 3263 m, 2006 list 3320 m.",
+   "Vertical: lift-world 914 m (but 1411-492 = 919 m), 2006 list 915 m, operator 'about 1000 m'.",
+   "Valley elevation: operator 490 m, lift-world 492 m, 2006 list 495 m.",
+   "Capacity: lift-world 350 p/h vs 2006 list 275 p/h. Travel time: lift-world 7 min vs operator/RTV ~8 min.",
+   "Correction note says both points are operator GPS; no GPS was found on the operator pages opened here (en.golte.si/panoramska-nihalka, /o-golteh). Valley point agrees with the hiking-trail car park (~60 m); top point not compared because the note's value isn't in the input record."
+  ],
+  "anchors": [
+   {
+    "label": "Valley station car park, Žekovec 500 m ('park at the bottom station of the cable car'; 4-decimal precision)",
+    "lat": 46.3565,
+    "lon": 14.931,
+    "source_url": "https://www.hiking-trail.net/hiking_trip/zekovec_mozirska_koca_na_golteh/3/593/5218"
+   },
+   {
+    "label": "Top station area: Golte Hotel & Mountain Resort (Hotel Montis), 1410 m; RTV/operator place the upper station at the hotel reception (komoot coordinate, approx.)",
+    "lat": 46.36855,
+    "lon": 14.894181,
+    "source_url": "https://www.komoot.com/highlight/593963"
+   }
+  ],
+  "specs": {
+   "lift_type": {
+    "value": "75-AT pendulum aerial tramway (nihalka)",
+    "source_url": "https://lift-world.info/en/lifts/10925/datas.htm"
+   },
+   "manufacturer": {
+    "value": "Ceretti Tanfani",
+    "source_url": "https://lift-world.info/en/lifts/10925/datas.htm"
+   },
+   "year_built": {
+    "value": "1969 (new cabins 2002)",
+    "source_url": "https://lift-world.info/en/lifts/10925/datas.htm"
+   },
+   "slope_length_m": {
+    "value": 3265,
+    "source_url": "https://en.golte.si/panoramska-nihalka"
+   },
+   "vertical_rise_m": {
+    "value": 914,
+    "source_url": "https://lift-world.info/en/lifts/10925/datas.htm"
+   },
+   "valley_station_elev_m": {
+    "value": 490,
+    "source_url": "https://en.golte.si/panoramska-nihalka"
+   },
+   "top_station_elev_m": {
+    "value": 1410,
+    "source_url": "https://en.golte.si/panoramska-nihalka"
+   },
+   "towers": {
+    "value": null,
+    "source_url": null
+   },
+   "capacity_pph": {
+    "value": 350,
+    "source_url": "https://lift-world.info/en/lifts/10925/datas.htm"
+   },
+   "carriers": {
+    "value": "2 cabins, 75 persons each",
+    "source_url": "https://lift-world.info/en/lifts/10925/datas.htm"
+   },
+   "speed_mps": {
+    "value": 8,
+    "source_url": "https://lift-world.info/en/lifts/10925/datas.htm"
+   },
+   "travel_time_min": {
+    "value": "~8 (operator); 7 (lift-world)",
+    "source_url": "https://en.golte.si/panoramska-nihalka"
+   },
+   "rope_manufacturer": {
+    "value": "Teufelberger; tension by counterweight; drive at mountain station",
+    "source_url": "https://lift-world.info/en/lifts/10925/datas.htm"
+   },
+   "rope_notes": {
+    "value": "Traction rope replaced (unplanned) during 2025/26 pre-season maintenance; reopened ~14 Mar 2026",
+    "source_url": "https://www.rtvslo.si/zabava-in-slog/ture-avanture/najdaljsa-gondolska-zicnica-pri-nas-nihalka-na-golte-znova-obratuje/776348"
+   },
+   "drive_power_kw": {
+    "value": 295,
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "operator": {
+    "value": "Golte Slovenija, Radegunda 19c, 3330 Mozirje (2006 list)",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   }
+  },
+  "notes": "Distance valley car park -> hotel anchor ~3.1 km horizontal, consistent with 3265 m rope and ~920 m rise."
+ },
+ {
+  "id": "kanin_z",
+  "identity": "Bovec-Kanin 4-seat detachable gondola (krožnokabinska žičnica) in three sections A (Dvor, Bovec) - B (Čelo) - C (Skripi) - D (Podi); Poma 1973; operator ATC Kanin Bovec d.o.o.; out of service since end of 2023",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Year: lift-world and 2006 list 1973; remontees-mecaniques 1972.",
+   "Capacity: lift-world/remontees 900 p/h vs 2006 list 1020 p/h.",
+   "Section A-B length: lift-world 2689 m vs 2006 list 2680 m; station C 1649 m (lift-world, 2006 list) vs 1639 m (remontees); D 2200 m vs 2204 m vs hiking-trail 2202 m.",
+   "Correction note relies on Wikipedia 'closed 2013, reopen 2016/17'. Newer sources: lift-world and remontees mark it closed 2023; Slovenia Times reports ZAG found not all sections fit to operate and Poma advised no operation beyond 2022. The record's status text should not imply current operation.",
+   "Current point (46.33392, 13.5424) vs hiking-trail lower-station car park 46.3326, 13.5384: ~340 m apart; the A and D Mapcarta coordinates in the note could not be re-opened here."
+  ],
+  "anchors": [
+   {
+    "label": "Valley station A car park, Bovec, near the petrol station (hiking-trail.net 'D station' tour: 'park at the lower station of the circular cable car'; the page's 2202 m label is the D station, the coordinate is the parking; 4-decimal precision)",
+    "lat": 46.3326,
+    "lon": 13.5384,
+    "source_url": "https://www.hiking-trail.net/hiking_trip/d_station_dom_petra_skalarja_na_kaninu/1/328/591"
+   },
+   {
+    "label": "Intermediate station B (Čelo) car park, 970 m (4-decimal precision)",
+    "lat": 46.3478,
+    "lon": 13.505,
+    "source_url": "https://www.hiking-trail.net/hiking_trip/b_station_planina_krnica/1/421/593"
+   }
+  ],
+  "specs": {
+   "lift_type": {
+    "value": "4-MGD detachable gondola, 3 sections (A-B, B-C, C-D)",
+    "source_url": "https://lift-world.info/en/lifts/2532/datas.htm"
+   },
+   "manufacturer": {
+    "value": "Poma",
+    "source_url": "https://lift-world.info/en/lifts/2532/datas.htm"
+   },
+   "year_built": {
+    "value": 1973,
+    "source_url": "https://lift-world.info/en/lifts/2532/datas.htm"
+   },
+   "closed": {
+    "value": 2023,
+    "source_url": "https://lift-world.info/en/lifts/2532/datas.htm"
+   },
+   "slope_length_m": {
+    "value": "5110 total (A-B 2689, B-C 1870, C-D 1310)",
+    "source_url": "https://www.remontees-mecaniques.net/bdd/reportage-tcd4-kanin-poma-3416.html"
+   },
+   "vertical_rise_m": {
+    "value": 1768,
+    "source_url": "https://www.remontees-mecaniques.net/bdd/reportage-tcd4-kanin-poma-3416.html"
+   },
+   "station_elevations_m": {
+    "value": "A 436, B 980, C 1649, D 2200",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "towers": {
+    "value": "A-B 23, B-C 19, C-D 11",
+    "source_url": "https://lift-world.info/en/lifts/2532/datas.htm"
+   },
+   "capacity_pph": {
+    "value": 900,
+    "source_url": "https://lift-world.info/en/lifts/2532/datas.htm"
+   },
+   "carriers": {
+    "value": "Sigma Espace4 4-person cabins (since 2000; originally Sigma 'egg' cabins)",
+    "source_url": "https://www.remontees-mecaniques.net/bdd/reportage-tcd4-kanin-poma-3416.html"
+   },
+   "speed_mps": {
+    "value": 4.0,
+    "source_url": "https://lift-world.info/en/lifts/2532/datas.htm"
+   },
+   "travel_time": {
+    "value": "21 min 20 s (whole line)",
+    "source_url": "https://www.remontees-mecaniques.net/bdd/reportage-tcd4-kanin-poma-3416.html"
+   },
+   "haul_rope_diameter_mm": {
+    "value": 32,
+    "source_url": "https://lift-world.info/en/lifts/2532/datas.htm"
+   },
+   "drive_power_kw": {
+    "value": "A-B 200, B-C 230, C-D 180",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "operator": {
+    "value": "ATC Kanin Bovec d.o.o., Dvor 43, 5230 Bovec",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   }
+  },
+  "notes": "Per-section lift-world IDs: 2532 (A-B), 2533 (B-C), 2534 (C-D). Pylon wheel sets fully replaced 2016 (Slovenia Times). ZAG's support-column inspection (2012) predates the 2023 closure."
+ },
+ {
+  "id": "straza_bled",
+  "identity": "Straža (Bled) 2-seat fixed-grip chairlift, Doppelmayr 1989 (replaced a 1953 single chair); operator Infrastruktura Bled d.o.o.",
+  "identity_confirmed": true,
+  "conflicts": [
+   "remontees-mecaniques gives winter capacity '114 p/h', clearly a typo for 1114 (lift-world and 2006 list give 1114)."
+  ],
+  "anchors": [],
+  "specs": {
+   "lift_type": {
+    "value": "2-CLF fixed-grip double chairlift",
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "manufacturer": {
+    "value": "Doppelmayr",
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "year_built": {
+    "value": 1989,
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "slope_length_m": {
+    "value": 354,
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "vertical_rise_m": {
+    "value": 131,
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "valley_station_elev_m": {
+    "value": 503,
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "top_station_elev_m": {
+    "value": 634,
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "towers": {
+    "value": 4,
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "capacity_pph": {
+    "value": "1114 (winter), 581 (summer)",
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "carriers": {
+    "value": "49 two-seat chairs",
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "speed_mps": {
+    "value": "2.3 winter, 1.2 summer",
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-straza-doppelmayr-2621.html"
+   },
+   "travel_time": {
+    "value": "2 min 35 s winter, 4 min 52 s summer",
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-straza-doppelmayr-2621.html"
+   },
+   "rope_tension": {
+    "value": "hydraulic, at valley station",
+    "source_url": "https://lift-world.info/en/lifts/10975/datas.htm"
+   },
+   "drive_power_kw": {
+    "value": 74,
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "operator": {
+    "value": "Infrastruktura Bled d.o.o., Rečiška cesta 2, 4250 Bled",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   },
+   "predecessor": {
+    "value": "TSF1 Žičnica Ljubljana 1953",
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-straza-doppelmayr-2621.html"
+   }
+  },
+  "notes": "No station coordinates found in an openable source (search budget ran out before more could be tried). Keep settlement precision or source from OSM separately."
+ },
+ {
+  "id": "planica_z",
+  "identity": "Probably the Čaplja 2-seat chairlift at the Planica Nordic Centre (Leitner 2009, valley station by Bloudek's hill, top by the in-run of the Gorišek brothers' flying hill); operator Nordic Centre Planica / ZŠRS Planica. The ZAG record does not name the lift; Planica also has a zipline and an inclined lift ('Hugo').",
+  "identity_confirmed": false,
+  "conflicts": [
+   "Record point (46.4965, 13.71314) is Rateče settlement centre, identical to ratece_cable; the Nordic Centre is ~2.5 km south (Wikipedia 46.4758, 13.7240).",
+   "Client name: record 'Zavod za šport RS Planica'; Wikipedia operator 'ZŠRS Planica'; remontees 'Nordijski Center Planica' (same body, naming only)."
+  ],
+  "anchors": [
+   {
+    "label": "Planica Nordic Centre (Wikipedia coordinate; not a station)",
+    "lat": 46.4758,
+    "lon": 13.724,
+    "source_url": "https://en.wikipedia.org/wiki/Planica_Nordic_Centre"
+   }
+  ],
+  "specs": {
+   "lift_type": {
+    "value": "2-CLF fixed-grip double chairlift with 2 intermediate stations (no exit)",
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html"
+   },
+   "manufacturer": {
+    "value": "Leitner",
+    "source_url": "https://lift-world.info/en/lifts/14707/datas.htm"
+   },
+   "year_built": {
+    "value": 2009,
+    "source_url": "https://lift-world.info/en/lifts/14707/datas.htm"
+   },
+   "slope_length_m": {
+    "value": 476,
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html"
+   },
+   "horizontal_length_m": {
+    "value": 434,
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html"
+   },
+   "vertical_rise_m": {
+    "value": 209,
+    "source_url": "https://lift-world.info/en/lifts/14707/datas.htm"
+   },
+   "station_elevations_m": {
+    "value": "valley 935, intermediate 1009 and 1067, top 1144",
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html"
+   },
+   "towers": {
+    "value": 9,
+    "source_url": "https://lift-world.info/en/lifts/14707/datas.htm"
+   },
+   "capacity_pph": {
+    "value": 436,
+    "source_url": "https://lift-world.info/en/lifts/14707/datas.htm"
+   },
+   "carriers": {
+    "value": "37 two-seat chairs (Leitner S2/96)",
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html"
+   },
+   "speed_mps": {
+    "value": "~1.2",
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html"
+   },
+   "travel_time_min": {
+    "value": "~7 one way",
+    "source_url": "https://www.nc-planica.si/en/?p=3656"
+   },
+   "rope_tension": {
+    "value": "hydraulic (controlled)",
+    "source_url": "https://lift-world.info/en/lifts/14707/datas.htm"
+   },
+   "operator": {
+    "value": "Nordijski Center Planica",
+    "source_url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html"
+   }
+  },
+  "notes": "A 2009 government concession decree for building the Čaplja chairlift exists (Uradni list 2009-01-3644) but could not be fetched (robots). Station coordinates not found."
+ },
+ {
+  "id": "ratece_cable",
+  "identity": "Not confirmed. Rateče has the Macesnovc (Macesnovec) 2-seat chairlift (Doppelmayr 2004) and a Slatna surface lift; no source links 'Smuk d.o.o.' to them.",
+  "identity_confirmed": false,
+  "conflicts": [
+   "Client 'Smuk d.o.o.' not found in any source tied to Rateče lifts; the 2006 official list names 'Športni center Rateče Planica' as operator of a Rateče lift 'Lom 1' (2-SED, 1975).",
+   "Same coordinate as planica_z (Rateče settlement centre).",
+   "Facts list has duplicate 'Years' and 'Year' = 2012."
+  ],
+  "anchors": [],
+  "specs": {
+   "candidate_lift_macesnovec": {
+    "value": "2-CLF Doppelmayr, built 2004, commissioned 14 Jan 2006, 1300 m, 330 m rise, 870-1200 m, 1100 p/h, Icolan seats",
+    "source_url": "https://lift-world.info/en/lifts/10974/datas.htm"
+   },
+   "candidate_lift_slatna": {
+    "value": "1-SL Graffer, 230 m, 915-970 m",
+    "source_url": "https://lift-world.info/en/lifts/22350/datas.htm"
+   },
+   "lifts_2006": {
+    "value": "Lom 1, 2-SED, 1975, 860/1172 m, 1010 m, 1200 p/h; operator Športni center Rateče Planica, Teslova 3, Ljubljana",
+    "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF"
+   }
+  },
+  "notes": "Before mapping, confirm which installation ZAG inspected for Smuk d.o.o. (possibly a ski-school or rental company running Macesnovc). Do not upgrade precision."
+ }
+]

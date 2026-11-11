@@ -1,0 +1,1426 @@
+[
+ {
+  "id": "karavanke_c",
+  "identity": "Karavanke (Karawanken) motorway tunnel, A2 (SI) / A11 (AT), Slovenian portal at Hrušica; two tubes now: original 1991 west tube (under reconstruction) and new east tube opened March 2026",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Correction note says the west tube is under reconstruction until end-2028; gov.si (sanacija 1. cevi) gives works March 2026 to approx. April 2029, and ic-group says full two-tube operation mid-2029.",
+   "Correction note says the old dataset point (46.45371, 13.99048) is consistent with being the east-tube portal. OSM does not support this: the open east-tube (new) way ends at 46.453011, 13.991006, about 88 m from the old point; the old point is about 75 m north of the OSM west-tube end.",
+   "Length of original tube: 7,864 m (en.wikipedia/wikiwand) vs 8,019 m (Lotsberg; wikiwand calls 8,019 m the enclosure between portals). Slovenian part: 3,450 m (Lotsberg, hr.wikipedia) for the original tube vs 3,546 m for the new east tube (DRI).",
+   "Structurae Karavanke road pages could not be read in this pass (site error), so the current anchor 46.453408, 13.990164 attributed to Structurae was NOT re-verified; it lies about 44 m from the OSM west-tube portal end."
+  ],
+  "anchors": [
+   {
+    "label": "West tube (1991, now under reconstruction; OSM highway=construction), Slovenian portal end",
+    "lat": 46.453042,
+    "lon": 13.99038,
+    "source_url": "https://www.openstreetmap.org/way/1202222649"
+   },
+   {
+    "label": "East tube (new, open; OSM highway=motorway), Slovenian portal end",
+    "lat": 46.453011,
+    "lon": 13.991006,
+    "source_url": "https://www.openstreetmap.org/way/1552066870"
+   },
+   {
+    "label": "West tube, OSM way split at state border (north end of Slovenian section)",
+    "lat": 46.481375,
+    "lon": 14.007588,
+    "source_url": "https://www.openstreetmap.org/way/64031972"
+   },
+   {
+    "label": "East tube, OSM way split at state border (north end of Slovenian section)",
+    "lat": 46.481555,
+    "lon": 14.008829,
+    "source_url": "https://www.openstreetmap.org/way/370831408"
+   },
+   {
+    "label": "Wikipedia/Wikidata tunnel coordinate (not a portal; Austrian side of mid-length)",
+    "lat": 46.519167,
+    "lon": 14.022778,
+    "source_url": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)"
+   }
+  ],
+  "specs": {
+   "length_m_original_tube": {
+    "value": "7,864 (tunnel); 8,019 enclosure between portals",
+    "source_url": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)"
+   },
+   "length_m_original_tube_lotsberg": {
+    "value": 8019,
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "length_m_slovenian_part_original": {
+    "value": 3450,
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "length_m_new_east_tube": {
+    "value": 7948,
+    "source_url": "https://www.dri.si/en/fields-of-work/railways/eastern-tunnel-tube-of-the-karavanke-motorway-tunnel"
+   },
+   "length_m_new_east_tube_slovenian_part": {
+    "value": "3,546 (3,446 m underground + 100 m gallery)",
+    "source_url": "https://www.dri.si/en/fields-of-work/railways/eastern-tunnel-tube-of-the-karavanke-motorway-tunnel"
+   },
+   "length_m_new_east_tube_austrian_part": {
+    "value": 4402,
+    "source_url": "https://ic-group.org/en/magazine/detail/karawanken-tunnel-new-tunnel-marks-a-milestone-in-european-north-south-transport"
+   },
+   "tubes": {
+    "value": "2 (original 1991 single tube + new east tube opened 2026)",
+    "source_url": "https://ic-group.org/en/magazine/detail/karawanken-tunnel-new-tunnel-marks-a-milestone-in-european-north-south-transport"
+   },
+   "lanes": {
+    "value": "2 per tube (original tube ran two-way)",
+    "source_url": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)"
+   },
+   "width_m": {
+    "value": 7.5,
+    "source_url": "https://wikiwand.com/hr/Tunel_Karavanke"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "opened_original": {
+    "value": "1 June 1991 (works began August 1986)",
+    "source_url": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)"
+   },
+   "opened_new_tube": {
+    "value": "officially opened 18 March 2026; phased operation from 20 March 2026",
+    "source_url": "https://ic-group.org/en/magazine/detail/karawanken-tunnel-new-tunnel-marks-a-milestone-in-european-north-south-transport"
+   },
+   "old_tube_reconstruction": {
+    "value": "March 2026 to approx. April 2029 (tunnel and road over 3.4 km, plus 1.9 km route, replacement bridge, new toll station)",
+    "source_url": "https://www.gov.si/zbirke/projekti-in-programi/sanacija-1-cevi-obstojecega-avtocestnega-predora-karavanke/"
+   },
+   "owner_operator": {
+    "value": "ASFINAG / DARS; by treaty both states supervise and operate the tunnel",
+    "source_url": "https://www.gov.si/zbirke/projekti-in-programi/izgradnja-druge-cevi-avtocestnega-predora-karavanke-izvedbena-dela/"
+   },
+   "road_designation": {
+    "value": "A2 (Slovenia) / A11 Karawanken Autobahn (Austria)",
+    "source_url": "https://transport.danube-region.eu/?p=923"
+   },
+   "portal_elevations_m": {
+    "value": "620 to 655",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "cross_passages_new_tube": {
+    "value": "26 cross-passages to the existing tube, 330 m spacing",
+    "source_url": "https://ic-group.org/en/magazine/detail/karawanken-tunnel-new-tunnel-marks-a-milestone-in-european-north-south-transport"
+   },
+   "slovenian_side_new_tube_features": {
+    "value": "10 cross passages for pedestrians/emergency vehicles, 2 ventilation cross passages, 4 lay-by niches of 112.50 m each, new underground water intake",
+    "source_url": "https://www.gov.si/zbirke/projekti-in-programi/izgradnja-druge-cevi-avtocestnega-predora-karavanke-izvedbena-dela/"
+   },
+   "monitoring_systems": {
+    "value": "original tube at opening: emergency phones, fire detectors, video surveillance, traffic signalling, air monitoring, CO sensors; new tube: traffic sensors and video surveillance",
+    "source_url": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)"
+   }
+  },
+  "notes": "Anchor recommendation: for ZAG work 1990-2014 (before the new tube), the relevant tube is the original west tube; OSM gives its Slovenian portal end at 46.453042, 13.990380. OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "karavanke_r",
+  "identity": "Karavanke (Karawanken) railway tunnel, Jesenice to Rosenbach (Karawanken railway), south portal at Hrušica/Jesenice; double-track bore converted to single track in 2020-2021",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Length: 8,176 m (current en.wikipedia) vs 7,976 m (older en.wikipedia copy on IPFS; correction note also cites Structurae/Austria-Forum 7,976 m, not re-read here).",
+   "Structurae and Austria-Forum pages could not be fetched in this pass, so their portal coordinates cited in the correction note were not re-verified; OSM independently agrees with the stored anchor to about 3 m."
+  ],
+  "anchors": [
+   {
+    "label": "South (Slovenian) portal, OSM operational track (railway=rail)",
+    "lat": 46.44926,
+    "lon": 14.015514,
+    "source_url": "https://www.openstreetmap.org/way/992211990"
+   },
+   {
+    "label": "Point where OSM splits the tunnel ways (north end of Slovenian section, near border)",
+    "lat": 46.481507,
+    "lon": 14.020024,
+    "source_url": "https://www.openstreetmap.org/way/986213097"
+   },
+   {
+    "label": "Wikipedia coordinate (not a portal; mid-tunnel)",
+    "lat": 46.521111,
+    "lon": 14.026111,
+    "source_url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Karawanks_Tunnel_(railway).html"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": 8176,
+    "source_url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)"
+   },
+   "length_m_alt": {
+    "value": 7976,
+    "source_url": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Karawanks_Tunnel_(railway).html"
+   },
+   "tubes": {
+    "value": 1,
+    "source_url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)"
+   },
+   "tracks": {
+    "value": "originally twin-track; single track since 2020-2021 renovation, freed space used as rescue/evacuation route",
+    "source_url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)"
+   },
+   "opened": {
+    "value": "1 October 1906",
+    "source_url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)"
+   },
+   "line": {
+    "value": "Karawanken Railway, Jesenice to Rosenbach (Trieste to Klagenfurt link with the Bohinj Railway)",
+    "source_url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)"
+   },
+   "electrification": {
+    "value": "electrified (OSM electrified=contact_line); voltage not sourced",
+    "source_url": "https://www.openstreetmap.org/way/986213097"
+   },
+   "renovation_2020_2021": {
+    "value": "single-track conversion, evacuation route with lighting, power supply line, telecom/safety equipment, enlarged niches, cross-section repair, drainage renewal, dry hydrant network on Slovenian side; full closure Oct 2020 to Jul 2021",
+    "source_url": "https://www.gov.si/zbirke/projekti-in-programi/varnostno-tehnicna-nadgradnja-zelezniskega-predora-karavanke/"
+   },
+   "renovation_budget": {
+    "value": "EUR 115 million total (Slovenia EUR 50 m, Austria EUR 65.3 m); contractor Strabag",
+    "source_url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)"
+   },
+   "owner_operator": {
+    "value": null,
+    "source_url": null
+   },
+   "construction_method": {
+    "value": "bored from both ends, 1901-1906 (conventional)",
+    "source_url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)"
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "OSM also maps two abandoned track ways (former second track) in the same bore. OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "golovec",
+  "identity": "Golovec tunnel, A1 eastern Ljubljana ring between Bizovik (Litijska cesta) and Malence junction; twin tube, three lanes per tube",
+  "identity_confirmed": true,
+  "conflicts": [],
+  "anchors": [
+   {
+    "label": "Portal 1 (south, Malence side)",
+    "lat": 46.017394,
+    "lon": 14.558933,
+    "source_url": "https://structurae.net/en/structures/golovec-tunnel"
+   },
+   {
+    "label": "Portal 2 (north, Bizovik side)",
+    "lat": 46.021731,
+    "lon": 14.56375,
+    "source_url": "https://structurae.net/en/structures/golovec-tunnel"
+   },
+   {
+    "label": "Tube A south end (OSM)",
+    "lat": 46.017733,
+    "lon": 14.55839,
+    "source_url": "https://www.openstreetmap.org/way/190905187"
+   },
+   {
+    "label": "Tube A north end (OSM)",
+    "lat": 46.021843,
+    "lon": 14.563151,
+    "source_url": "https://www.openstreetmap.org/way/5247586"
+   },
+   {
+    "label": "Tube B south end (OSM)",
+    "lat": 46.017751,
+    "lon": 14.559181,
+    "source_url": "https://www.openstreetmap.org/way/5247589"
+   },
+   {
+    "label": "Tube B north end (OSM)",
+    "lat": 46.02166,
+    "lon": 14.563663,
+    "source_url": "https://www.openstreetmap.org/way/5247589"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "eastern tube 595, western tube 622",
+    "source_url": "https://structurae.net/en/structures/golovec-tunnel"
+   },
+   "length_m_lotsberg": {
+    "value": "622 + 595",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/en/structures/golovec-tunnel"
+   },
+   "lanes": {
+    "value": "3 per tube (three-lane motorway)",
+    "source_url": "https://www.gov.si/novice/2020-05-19-pricela-se-je-obnova-predora-golovec/"
+   },
+   "opened": {
+    "value": "27 August 1999",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "owner_operator": {
+    "value": "DARS",
+    "source_url": "https://www.gov.si/novice/2020-05-19-pricela-se-je-obnova-predora-golovec/"
+   },
+   "road_designation": {
+    "value": "A1",
+    "source_url": "https://structurae.net/en/structures/golovec-tunnel"
+   },
+   "renovation": {
+    "value": "2020: west tube fully closed 12 June to 16 August 2020 for repair; east tube later",
+    "source_url": "https://www.gov.si/novice/2020-05-19-pricela-se-je-obnova-predora-golovec/"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "cross_section": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Current anchor equals the Structurae portal midpoint exactly (derived). Structurae does not label which pair is which portal; labels inferred from latitude. OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "sentvid",
+  "identity": "Šentvid tunnel, A2 north-western Ljubljana ring (Šentvid to Koseze), twin tube with underground Celovška interchange branches",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Tube lengths differ by source: Structurae 1,462 (east) / 1,490 (west) m; Lotsberg 1,486 / 1,461 m; Tunnelbuilder notices 2,148 m, 1,100 m and 2 x 1,209 m (different definitions/phases)."
+  ],
+  "anchors": [
+   {
+    "label": "North portal (Šentvid side)",
+    "lat": 46.100533,
+    "lon": 14.466006,
+    "source_url": "https://structurae.net/structures/sentvid-tunnel"
+   },
+   {
+    "label": "South portal (Koseze side)",
+    "lat": 46.088164,
+    "lon": 14.460481,
+    "source_url": "https://structurae.net/structures/sentvid-tunnel"
+   },
+   {
+    "label": "Tube (2 lanes, OSM) north end",
+    "lat": 46.100557,
+    "lon": 14.465908,
+    "source_url": "https://www.openstreetmap.org/way/25267928"
+   },
+   {
+    "label": "Tube (2 lanes, OSM) south end",
+    "lat": 46.088253,
+    "lon": 14.459966,
+    "source_url": "https://www.openstreetmap.org/way/64017143"
+   },
+   {
+    "label": "Tube (3 lanes, OSM) south end",
+    "lat": 46.08826,
+    "lon": 14.460496,
+    "source_url": "https://www.openstreetmap.org/way/35964273"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "eastern tube 1,462; western tube 1,490; branches A 240, B 243, C 341, D 240",
+    "source_url": "https://structurae.net/structures/sentvid-tunnel"
+   },
+   "length_m_lotsberg": {
+    "value": "1,486 + 1,461; 414 m built cut-and-cover",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/structures/sentvid-tunnel"
+   },
+   "lanes": {
+    "value": "2 and 3 lanes in parts (OSM tags lanes=2 / lanes=3)",
+    "source_url": "https://www.openstreetmap.org/way/35964273"
+   },
+   "cross_section": {
+    "value": "95 to 140 m2 for two- and three-lane tube, plus 350 m2 cavern",
+    "source_url": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl16-Motorway.aspx"
+   },
+   "construction_method": {
+    "value": "NATM (drill and blast), first 200 m cut-and-cover; rock mass classes C2/C3",
+    "source_url": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl16-Motorway.aspx"
+   },
+   "opened": {
+    "value": "1 July 2008 (work start October 2004)",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "owner_operator": {
+    "value": "DARS",
+    "source_url": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl16-Motorway.aspx"
+   },
+   "road_designation": {
+    "value": "A2",
+    "source_url": "https://structurae.net/structures/sentvid-tunnel"
+   },
+   "monitoring_systems": {
+    "value": "geotechnical monitoring during construction by IRGO Consulting and Geoinženiring",
+    "source_url": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl16-Motorway.aspx"
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Current anchor equals Structurae portal midpoint (derived). The east tube in OSM is split into several overlapping ways with the interchange; only clean ends listed. OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "trojane",
+  "identity": "Trojane tunnel, A1 Vransko to Blagovica section, twin tube, Lukovica municipality",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Tunnelbuilder 2003 notice gives 5,711 m (apparently both tubes combined) and a 2000 notice says 'each around 1 km'; neither matches the 2,931/2,841 m tubes."
+  ],
+  "anchors": [
+   {
+    "label": "West portal",
+    "lat": 46.183647,
+    "lon": 14.860403,
+    "source_url": "https://structurae.net/structures/trojane-tunnel"
+   },
+   {
+    "label": "East portal",
+    "lat": 46.18985,
+    "lon": 14.896881,
+    "source_url": "https://structurae.net/structures/trojane-tunnel"
+   },
+   {
+    "label": "Tube 5247101 west end (OSM)",
+    "lat": 46.183532,
+    "lon": 14.860466,
+    "source_url": "https://www.openstreetmap.org/way/5247101"
+   },
+   {
+    "label": "Tube 5247101 east end (OSM)",
+    "lat": 46.189561,
+    "lon": 14.896598,
+    "source_url": "https://www.openstreetmap.org/way/5247101"
+   },
+   {
+    "label": "Tube 5247098 west end (OSM)",
+    "lat": 46.183858,
+    "lon": 14.86039,
+    "source_url": "https://www.openstreetmap.org/way/5247098"
+   },
+   {
+    "label": "Tube 5247098 east end (OSM)",
+    "lat": 46.189514,
+    "lon": 14.895489,
+    "source_url": "https://www.openstreetmap.org/way/5247098"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "tube 1 2,931; tube 2 2,841",
+    "source_url": "https://structurae.net/structures/trojane-tunnel"
+   },
+   "length_m_lotsberg": {
+    "value": "2,931 + 2,840",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/structures/trojane-tunnel"
+   },
+   "lanes": {
+    "value": "2 per tube (OSM lanes=2)",
+    "source_url": "https://www.openstreetmap.org/way/5247101"
+   },
+   "opened": {
+    "value": "12 August 2005",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "construction_method": {
+    "value": "NATM, four headings, conventional excavator, up to 9 phases per advance",
+    "source_url": "https://graz.elsevierpure.com/files/2761969/6637.pdf"
+   },
+   "diameter_m": {
+    "value": "approx. 11",
+    "source_url": "https://graz.elsevierpure.com/files/2761969/6637.pdf"
+   },
+   "geology": {
+    "value": "tectonically sheared Carboniferous meta-sediments (mudstone, claystone, sandstone); low overburden under Trojane village",
+    "source_url": "https://graz.elsevierpure.com/files/2761969/6637.pdf"
+   },
+   "monitoring_systems": {
+    "value": "geodetic 3D surface and absolute tunnel displacement monitoring, extensometers, measuring anchors, horizontal chain inclinometers above the crown (1-minute readings)",
+    "source_url": "https://graz.elsevierpure.com/files/2761969/6637.pdf"
+   },
+   "owner_operator": {
+    "value": "DARS",
+    "source_url": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl13-Motorway.aspx"
+   },
+   "road_designation": {
+    "value": "A1",
+    "source_url": "https://structurae.net/structures/trojane-tunnel"
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Current anchor equals Structurae portal midpoint (derived). OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "podmilj",
+  "identity": "Podmilj tunnel, A1 Vransko to Blagovica section, twin tube, immediately west of Trojane tunnel",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Structurae files it under Domžale (administrative unit); OSM places it at Log, Lukovica (Upravna enota Domžale): consistent with municipality Lukovica, not a real conflict."
+  ],
+  "anchors": [
+   {
+    "label": "West portal",
+    "lat": 46.183203,
+    "lon": 14.841531,
+    "source_url": "https://structurae.net/en/structures/podmilj-tunnel"
+   },
+   {
+    "label": "East portal",
+    "lat": 46.1814,
+    "lon": 14.849111,
+    "source_url": "https://structurae.net/en/structures/podmilj-tunnel"
+   },
+   {
+    "label": "Tube 5247105 west end (OSM)",
+    "lat": 46.183465,
+    "lon": 14.841848,
+    "source_url": "https://www.openstreetmap.org/way/5247105"
+   },
+   {
+    "label": "Tube 5247105 east end (OSM)",
+    "lat": 46.181584,
+    "lon": 14.849271,
+    "source_url": "https://www.openstreetmap.org/way/5247105"
+   },
+   {
+    "label": "Tube 5247107 west end (OSM)",
+    "lat": 46.183158,
+    "lon": 14.841579,
+    "source_url": "https://www.openstreetmap.org/way/5247107"
+   },
+   {
+    "label": "Tube 5247107 east end (OSM)",
+    "lat": 46.181407,
+    "lon": 14.848912,
+    "source_url": "https://www.openstreetmap.org/way/5247107"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "northern tube 622; southern tube 613",
+    "source_url": "https://structurae.net/en/structures/podmilj-tunnel"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/en/structures/podmilj-tunnel"
+   },
+   "lanes": {
+    "value": "2 per tube",
+    "source_url": "https://structurae.net/en/structures/podmilj-tunnel"
+   },
+   "opened": {
+    "value": "12 August 2005",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "road_designation": {
+    "value": "A1",
+    "source_url": "https://structurae.net/en/structures/podmilj-tunnel"
+   },
+   "owner_operator": {
+    "value": "DARS",
+    "source_url": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl13-Motorway.aspx"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "cross_section": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "East portal is about 1.0 km west of the Trojane west portal (Structurae). The 1996 location plan (Uredba Vransko-Blagovica) confirms a Podmilj tunnel bypassing Podmilj. OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "vzideh",
+  "identity": "V Zideh tunnel: single-tube, two-lane tunnel on the relocated regional road R 336A (deviation from the Trojane interchange under the ridge), built in the A1 Vransko to Blagovica scheme",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Length: 260 m in the 1996 location plan (design) vs 296 m (Lotsberg, which lists it under A1 with year 2002); OSM geometry of the candidate way is 284 m.",
+   "Lotsberg labels the road A1, while the 1996 location plan places it on the R 336A deviation; record follows the location plan.",
+   "Current point (46.1884, 14.8933) is the V Zideh settlement (mdwiki gives 46.188358, 14.893253), about 350 m west of the candidate tunnel."
+  ],
+  "anchors": [
+   {
+    "label": "North end of candidate tunnel (OSM way, unnamed, highway=secondary, ref 221, tunnel=yes) - identification as V Zideh is by location and length only, not by a name tag",
+    "lat": 46.189796,
+    "lon": 14.898105,
+    "source_url": "https://www.openstreetmap.org/way/38002450"
+   },
+   {
+    "label": "South end of same candidate OSM way (1996 plan mentions a 'south portal of the V Zideh tunnel' at km 0.670 of R 336A)",
+    "lat": 46.187371,
+    "lon": 14.897519,
+    "source_url": "https://www.openstreetmap.org/way/38002450"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": 296,
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "length_m_design": {
+    "value": 260,
+    "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/c30411e0-18ac-4e58-b50a-5415d52001c1"
+   },
+   "tubes": {
+    "value": 1,
+    "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/c30411e0-18ac-4e58-b50a-5415d52001c1"
+   },
+   "lanes": {
+    "value": 2,
+    "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/c30411e0-18ac-4e58-b50a-5415d52001c1"
+   },
+   "road_designation": {
+    "value": "R 336A (deviation of the regional road); OSM currently tags ref 221",
+    "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/c30411e0-18ac-4e58-b50a-5415d52001c1"
+   },
+   "opened": {
+    "value": 2002,
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "owner_operator": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "No source with a coordinate explicitly named V Zideh tunnel was found (no Structurae/Wikipedia entry). The OSM way is the only road tunnel near the Trojane east portal besides the motorway tubes, 284 m long, 2 lanes, single tube, which matches the plan; treat as probable, verify on DARS/GURS data before marking surveyed. Owner of a regional road would normally be DRSI, but no source was found for that, so left null."
+ },
+ {
+  "id": "kastelec",
+  "identity": "Kastelec tunnel, A1 Klanec to Srmin (Kozina towards Črni Kal), twin tube",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Lengths: Structurae 2,292 (north) / 2,240 (south) m vs Lotsberg 2,303 / 2,195 m.",
+   "Nominatim/OSM address of way 6994418 resolves to Ocizla, Municipality of Hrpelje-Kozina, so the east part may lie in Hrpelje-Kozina rather than Koper; not checked against official boundaries."
+  ],
+  "anchors": [
+   {
+    "label": "East portal (Kozina side)",
+    "lat": 45.584656,
+    "lon": 13.898861,
+    "source_url": "https://structurae.net/structures/kastelec-tunnel"
+   },
+   {
+    "label": "West portal (Črni Kal side)",
+    "lat": 45.577239,
+    "lon": 13.873719,
+    "source_url": "https://structurae.net/structures/kastelec-tunnel"
+   },
+   {
+    "label": "Tube 6994411 east end (OSM)",
+    "lat": 45.584645,
+    "lon": 13.898935,
+    "source_url": "https://www.openstreetmap.org/way/6994411"
+   },
+   {
+    "label": "Tube 6994411 west end (OSM)",
+    "lat": 45.577802,
+    "lon": 13.873886,
+    "source_url": "https://www.openstreetmap.org/way/6994411"
+   },
+   {
+    "label": "Tube 6994418 east end (OSM)",
+    "lat": 45.584283,
+    "lon": 13.899004,
+    "source_url": "https://www.openstreetmap.org/way/6994418"
+   },
+   {
+    "label": "Tube 6994418 west end (OSM)",
+    "lat": 45.577229,
+    "lon": 13.873736,
+    "source_url": "https://www.openstreetmap.org/way/6994418"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "northern tube 2,292; southern tube 2,240",
+    "source_url": "https://structurae.net/structures/kastelec-tunnel"
+   },
+   "length_m_lotsberg": {
+    "value": "2,303 + 2,195",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/structures/kastelec-tunnel"
+   },
+   "lanes": {
+    "value": "2 per tube (OSM lanes=2)",
+    "source_url": "https://www.openstreetmap.org/way/6994411"
+   },
+   "opened": {
+    "value": "22 November 2004",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "road_designation": {
+    "value": "A1",
+    "source_url": "https://structurae.net/structures/kastelec-tunnel"
+   },
+   "geology_note": {
+    "value": "karst; cave LC-S647, the largest cave found in a Slovenian motorway tunnel, was found in the Kastelec tunnel during construction and preserved",
+    "source_url": "https://link.springer.com/doi/10.1007/s00254-007-0840-5"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "owner_operator": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Current anchor equals Structurae portal midpoint (derived). OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "dekani",
+  "identity": "Dekani tunnel, A1 Klanec to Srmin (Črni Kal towards Srmin), twin tube",
+  "identity_confirmed": true,
+  "conflicts": [],
+  "anchors": [
+   {
+    "label": "East portal",
+    "lat": 45.551611,
+    "lon": 13.830397,
+    "source_url": "https://structurae.net/en/structures/dekani-tunnel"
+   },
+   {
+    "label": "West portal",
+    "lat": 45.554375,
+    "lon": 13.803467,
+    "source_url": "https://structurae.net/en/structures/dekani-tunnel"
+   },
+   {
+    "label": "Tube 6994481 west end (OSM)",
+    "lat": 45.554412,
+    "lon": 13.803354,
+    "source_url": "https://www.openstreetmap.org/way/6994481"
+   },
+   {
+    "label": "Tube 6994481 east end (OSM)",
+    "lat": 45.551296,
+    "lon": 13.830708,
+    "source_url": "https://www.openstreetmap.org/way/6994481"
+   },
+   {
+    "label": "Tube 6994485 east end (OSM)",
+    "lat": 45.551632,
+    "lon": 13.830488,
+    "source_url": "https://www.openstreetmap.org/way/6994485"
+   },
+   {
+    "label": "Tube 6994485 west end (OSM)",
+    "lat": 45.55467,
+    "lon": 13.802993,
+    "source_url": "https://www.openstreetmap.org/way/6994485"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "northern tube 2,190; southern tube 2,182",
+    "source_url": "https://structurae.net/en/structures/dekani-tunnel"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/en/structures/dekani-tunnel"
+   },
+   "lanes": {
+    "value": "2 per tube (OSM lanes=2)",
+    "source_url": "https://www.openstreetmap.org/way/6994481"
+   },
+   "opened": {
+    "value": "22 November 2004",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "road_designation": {
+    "value": "A1",
+    "source_url": "https://structurae.net/en/structures/dekani-tunnel"
+   },
+   "construction_method": {
+    "value": "underground construction with Doka tunnel formwork travellers; 4 emergency lay-bys and 5 cross-passages",
+    "source_url": "https://www.doka.com/uk/references/europe/Dekani_Tunnel"
+   },
+   "owner_operator": {
+    "value": null,
+    "source_url": null
+   },
+   "cross_section": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Current anchor equals Structurae portal midpoint (derived). Note the 2TDK railway tunnel T8 (Škofije) passes near the west portal in OSM; do not confuse. OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "markovec",
+  "identity": "Markovec (Monte San Marco) tunnel, Koper to Izola expressway (H6), twin tube",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Opening: Structurae completion 2013 and Lotsberg 2013 (breakthrough 17 Jan 2012) vs DRI, which says the Koper-Izola expressway section including the tunnel opened to traffic in 2015.",
+   "OSM tags the road ref 111 (trunk), not H6; record says H6 (Structurae address H6)."
+  ],
+  "anchors": [
+   {
+    "label": "East portal (Koper side)",
+    "lat": 45.543178,
+    "lon": 13.715906,
+    "source_url": "https://structurae.net/structures/monte-san-marco-tunnel"
+   },
+   {
+    "label": "West portal (Izola side)",
+    "lat": 45.539344,
+    "lon": 13.689172,
+    "source_url": "https://structurae.net/structures/monte-san-marco-tunnel"
+   },
+   {
+    "label": "Tube 129025215 east end (OSM)",
+    "lat": 45.543179,
+    "lon": 13.715865,
+    "source_url": "https://www.openstreetmap.org/way/129025215"
+   },
+   {
+    "label": "Tube 129025215 west end (OSM)",
+    "lat": 45.539341,
+    "lon": 13.689159,
+    "source_url": "https://www.openstreetmap.org/way/129025215"
+   },
+   {
+    "label": "Tube 330567446 east end (OSM)",
+    "lat": 45.542938,
+    "lon": 13.716228,
+    "source_url": "https://www.openstreetmap.org/way/330567446"
+   },
+   {
+    "label": "Tube 330567446 west end (OSM)",
+    "lat": 45.539161,
+    "lon": 13.689165,
+    "source_url": "https://www.openstreetmap.org/way/330567446"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "northern tube 2,145; southern tube 2,175",
+    "source_url": "https://structurae.net/structures/monte-san-marco-tunnel"
+   },
+   "length_m_dri": {
+    "value": "right tube 2,144; left tube 2,174",
+    "source_url": "https://dri.si/en/fields-of-work/railways/expressway-koper-izola"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/structures/monte-san-marco-tunnel"
+   },
+   "lanes": {
+    "value": "2 per tube (OSM lanes=2)",
+    "source_url": "https://www.openstreetmap.org/way/129025215"
+   },
+   "opened": {
+    "value": "completion 2013 (Structurae); section opened to traffic 2015 (DRI)",
+    "source_url": "https://dri.si/en/fields-of-work/railways/expressway-koper-izola"
+   },
+   "owner_operator": {
+    "value": "DARS (investor)",
+    "source_url": "https://dri.si/en/fields-of-work/railways/expressway-koper-izola"
+   },
+   "road_designation": {
+    "value": "H6",
+    "source_url": "https://structurae.net/structures/monte-san-marco-tunnel"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "cross_section": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Fourth-longest tunnel in Slovenia per DRI. Current anchor equals Structurae portal midpoint (derived). OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "lescevje",
+  "identity": "Leščevje tunnel, A2 Bič to Trebnje (Pluska to Ponikve subsection), twin tube, at Belšinja vas, Municipality of Trebnje",
+  "identity_confirmed": true,
+  "conflicts": [
+   "POSITION ERROR: current point (45.9159, 14.7844) is the Leščevje settlement, which en.wikipedia places in the Municipality of Ivančna Gorica (45.915936, 14.784450); the tunnel is about 15 km east, near Belšinja vas, Trebnje (OSM).",
+   "Locality 'Leščevje, Trebnje' mixes the settlement name with the tunnel's municipality; the settlement is not in Trebnje.",
+   "Lengths: Elea 348.9 (right) / 349 (left) m; Lotsberg 369 / 363 m; svet24 (2008, DARS) 384 m; OSM geometry 362 / 368 m."
+  ],
+  "anchors": [
+   {
+    "label": "Tube 121184031 west end (OSM)",
+    "lat": 45.905956,
+    "lon": 14.976511,
+    "source_url": "https://www.openstreetmap.org/way/121184031"
+   },
+   {
+    "label": "Tube 121184031 east end (OSM)",
+    "lat": 45.904719,
+    "lon": 14.98091,
+    "source_url": "https://www.openstreetmap.org/way/121184031"
+   },
+   {
+    "label": "Tube 121184030 west end (OSM)",
+    "lat": 45.906207,
+    "lon": 14.976548,
+    "source_url": "https://www.openstreetmap.org/way/121184030"
+   },
+   {
+    "label": "Tube 121184030 east end (OSM)",
+    "lat": 45.904992,
+    "lon": 14.980884,
+    "source_url": "https://www.openstreetmap.org/way/121184030"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "right tube 348.9; left tube 349",
+    "source_url": "https://www.elea.si/en/?p=58122"
+   },
+   "length_m_lotsberg": {
+    "value": "369 + 363",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://www.elea.si/en/?p=58122"
+   },
+   "lanes": {
+    "value": 2,
+    "source_url": "https://www.elea.si/en/?p=58122"
+   },
+   "cross_section": {
+    "value": "10.2 m profile per tube; minimum axis spacing 25 m",
+    "source_url": "https://svet24.si/novice/promet/zaceli-z-gradnjo-predora-lescevje-1428-1669685"
+   },
+   "max_overburden_m": {
+    "value": "approx. 40 (plateau-like ridge)",
+    "source_url": "https://svet24.si/novice/promet/zaceli-z-gradnjo-predora-lescevje-1428-1669685"
+   },
+   "geology": {
+    "value": "Lower Jurassic limestones, often karstified, fractures and caverns filled with clay and debris",
+    "source_url": "https://www.elea.si/en/?p=58122"
+   },
+   "construction": {
+    "value": "2008-2009 (works started 5 March 2008)",
+    "source_url": "https://www.elea.si/en/?p=58122"
+   },
+   "opened": {
+    "value": "30 June 2010",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "owner_operator": {
+    "value": "DARS (investor), investment EUR 11,633,000",
+    "source_url": "https://www.elea.si/en/?p=58122"
+   },
+   "road_designation": {
+    "value": "A2",
+    "source_url": "https://www.openstreetmap.org/way/121184031"
+   },
+   "monitoring_systems": {
+    "value": "geotechnical: daily face logging, geological map, forecasting 15-20 m ahead (construction phase)",
+    "source_url": "https://www.elea.si/en/?p=58122"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "No Structurae entry found. Midpoint of OSM tube ends is about 45.9055, 14.9787 (derived). OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "cenkova",
+  "identity": "Cenkova tunnel, A5 Pomurska motorway (Spodnja Senarska to Cogetinci), twin tube, Municipality of Cerkvenjak",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Lengths: Structurae 595 (north) / 609 (south) m vs Lotsberg 615 / 602 m (artificial parts 258 / 241 m); OSM geometry 618 / 605 m."
+  ],
+  "anchors": [
+   {
+    "label": "West portal",
+    "lat": 46.575431,
+    "lon": 15.935642,
+    "source_url": "https://structurae.net/en/structures/cenkova-tunnel"
+   },
+   {
+    "label": "East portal",
+    "lat": 46.578831,
+    "lon": 15.942158,
+    "source_url": "https://structurae.net/en/structures/cenkova-tunnel"
+   },
+   {
+    "label": "Tube 28131446 west end (OSM)",
+    "lat": 46.575411,
+    "lon": 15.935598,
+    "source_url": "https://www.openstreetmap.org/way/28131446"
+   },
+   {
+    "label": "Tube 28131446 east end (OSM)",
+    "lat": 46.578769,
+    "lon": 15.942019,
+    "source_url": "https://www.openstreetmap.org/way/28131446"
+   },
+   {
+    "label": "Tube 28464806 east end (OSM)",
+    "lat": 46.578839,
+    "lon": 15.941887,
+    "source_url": "https://www.openstreetmap.org/way/28464806"
+   },
+   {
+    "label": "Tube 28464806 west end (OSM)",
+    "lat": 46.575549,
+    "lon": 15.935605,
+    "source_url": "https://www.openstreetmap.org/way/28464806"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "northern tube 595; southern tube 609",
+    "source_url": "https://structurae.net/en/structures/cenkova-tunnel"
+   },
+   "length_m_lotsberg": {
+    "value": "615 + 602, of which cut-and-cover 258 / 241",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/en/structures/cenkova-tunnel"
+   },
+   "lanes": {
+    "value": "2 per tube (OSM lanes=2)",
+    "source_url": "https://www.openstreetmap.org/way/28131446"
+   },
+   "opened": {
+    "value": "30 May 2008",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "road_designation": {
+    "value": "A5",
+    "source_url": "https://structurae.net/en/structures/cenkova-tunnel"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "owner_operator": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "OSM address of the tunnel way resolves to Komarnica, Cenkova, Cerkvenjak. Current anchor equals Structurae portal midpoint (derived). OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "pletovarje",
+  "identity": "Pletovarje tunnel, A1 Štajerska motorway, Žiče to Dramlje, twin tube (1976 and 1996)",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Structurae page could not be read in this pass; the 743 m (1976) figure in the correction note is unverified. Lotsberg gives 745 m (opened 25.10.1996) and 708 m (21.07.1976); OSM geometry 710 / 721 m.",
+   "Municipality: correction note says Šentjur (from en.wikipedia); not re-verified here."
+  ],
+  "anchors": [
+   {
+    "label": "Tube 5245525 north end (OSM)",
+    "lat": 46.298191,
+    "lon": 15.442156,
+    "source_url": "https://www.openstreetmap.org/way/5245525"
+   },
+   {
+    "label": "Tube 5245525 south end (OSM)",
+    "lat": 46.292244,
+    "lon": 15.438925,
+    "source_url": "https://www.openstreetmap.org/way/5245525"
+   },
+   {
+    "label": "Tube 5245527 north end (OSM)",
+    "lat": 46.298001,
+    "lon": 15.442507,
+    "source_url": "https://www.openstreetmap.org/way/5245527"
+   },
+   {
+    "label": "Tube 5245527 south end (OSM)",
+    "lat": 46.291984,
+    "lon": 15.439129,
+    "source_url": "https://www.openstreetmap.org/way/5245527"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "745 (1996 tube) + 708 (1976 tube)",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "lanes": {
+    "value": "2 per tube (OSM lanes=2)",
+    "source_url": "https://www.openstreetmap.org/way/5245525"
+   },
+   "opened": {
+    "value": "first tube 21 July 1976; second 25 October 1996",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "road_designation": {
+    "value": "A1 (E57)",
+    "source_url": "https://www.openstreetmap.org/way/5245525"
+   },
+   "geology": {
+    "value": "crosses the Pletovarje ridge in the easternmost extension of the Southern Karavanke tectonic unit; three geological sections incl. the Donat/Donačka fault zone (Geologija 2009)",
+    "source_url": "https://openaccess.library.uitm.edu.my/Record/doaj-2002650d399a4be5bab3dbfbb1f59daa"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "owner_operator": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Current anchor (46.294949, 15.440759) is about 34 m from the midpoint of the OSM tube ends, so consistent. OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "tabor_h4",
+  "identity": "Podnanos tunnel on H4 Razdrto to Vipava (planned as 'predor Tabor I/II' in the 1999 location plan), twin tube; as-built name is Podnanos",
+  "identity_confirmed": true,
+  "conflicts": [
+   "Name: the 1999 location plan calls it Tabor I/II (km 7.420-7.940 / 7.414-7.947, 520/533 m); the as-built tunnel at km 7.360-7.975 is named Podnanos (URSZR, OSM, Structurae). 'Tabor' as-built is the adjacent viaduct. Lotsberg lists 'Podnanos (Tabor)'.",
+   "Do not confuse with the A3 Tabor tunnel near Sežana (289/282 m, 1997, Lotsberg).",
+   "Lengths: design 520/533 m (1999 plan) vs as-built 612/590 m (Structurae, Lotsberg) or 614/589 m (URSZR).",
+   "POSITION: current point (45.808, 13.9679) is the Podnanos settlement, about 1.3 km from the tunnel midpoint."
+  ],
+  "anchors": [
+   {
+    "label": "East portal (Razdrto side)",
+    "lat": 45.798594,
+    "lon": 13.984061,
+    "source_url": "https://structurae.net/structures/podnanos-tunnel"
+   },
+   {
+    "label": "West portal (Vipava side)",
+    "lat": 45.802533,
+    "lon": 13.978847,
+    "source_url": "https://structurae.net/structures/podnanos-tunnel"
+   },
+   {
+    "label": "Tube 39917420 east end (OSM)",
+    "lat": 45.798631,
+    "lon": 13.984034,
+    "source_url": "https://www.openstreetmap.org/way/39917420"
+   },
+   {
+    "label": "Tube 39917420 west end (OSM)",
+    "lat": 45.802493,
+    "lon": 13.978886,
+    "source_url": "https://www.openstreetmap.org/way/39917420"
+   },
+   {
+    "label": "Tube 39917422 east end (OSM)",
+    "lat": 45.798488,
+    "lon": 13.983418,
+    "source_url": "https://www.openstreetmap.org/way/39917422"
+   },
+   {
+    "label": "Tube 39917422 west end (OSM)",
+    "lat": 45.802214,
+    "lon": 13.97857,
+    "source_url": "https://www.openstreetmap.org/way/39917422"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "northern tube 612; southern tube 590",
+    "source_url": "https://structurae.net/structures/podnanos-tunnel"
+   },
+   "length_m_urszr": {
+    "value": "right ~614 (km 7.360-7.974); left ~589 (km 7.386-7.975)",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-NG/Ocene-ogrozenosti/Ocena-ogrozenosti-ob-nesrecah-v-vkopih-in-predorih.pdf"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/structures/podnanos-tunnel"
+   },
+   "lanes": {
+    "value": "2 per tube, one-way",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-NG/Ocene-ogrozenosti/Ocena-ogrozenosti-ob-nesrecah-v-vkopih-in-predorih.pdf"
+   },
+   "roadway_width_m": {
+    "value": "7.70 roadway; 1.7 combined walkway",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-NG/Ocene-ogrozenosti/Ocena-ogrozenosti-ob-nesrecah-v-vkopih-in-predorih.pdf"
+   },
+   "alignment": {
+    "value": "gradient -3.3%; min. horizontal radius 700 m (left), 900 m (right)",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-NG/Ocene-ogrozenosti/Ocena-ogrozenosti-ob-nesrecah-v-vkopih-in-predorih.pdf"
+   },
+   "portal_elevations_m": {
+    "value": "max. altitude about 249 m at the east (V) portal",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-NG/Ocene-ogrozenosti/Ocena-ogrozenosti-ob-nesrecah-v-vkopih-in-predorih.pdf"
+   },
+   "opened": {
+    "value": "13 August 2009",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "road_designation": {
+    "value": "H4",
+    "source_url": "https://www.openstreetmap.org/way/39917420"
+   },
+   "monitoring_systems": {
+    "value": "natural ventilation; 24 h control centre RNC Kozina with traffic cameras, automatic incident detection, CO and visibility sensors; 4 emergency call niches per tube, wet hydrant network, 2 cross passages",
+    "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-NG/Ocene-ogrozenosti/Ocena-ogrozenosti-ob-nesrecah-v-vkopih-in-predorih.pdf"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "owner_operator": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Identity link Tabor = Podnanos is from matching chainages between the 1999 Uredba (tax-fin-lex.si/Dokument/Podrobnosti/1baf3633-e096-4dee-9612-0c7db39474b9) and the URSZR assessment, plus Lotsberg's 'Podnanos (Tabor)'. Structurae Podnanos page gives no name and does not label portals; east/west inferred from longitude. OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ },
+ {
+  "id": "golo_rebro",
+  "identity": "Golo Rebro tunnel, A1 Štajerska motorway, Žiče to Dramlje, twin tube (1976 and 1996), at Blato, Žiče, Slovenske Konjice",
+  "identity_confirmed": true,
+  "conflicts": [
+   "History text says 'Structurae gives 788 m for the 1996 tube' (golorebrotunnel-1996 page, unreadable this pass). The readable Structurae page gives eastern 750 / western 786 m, completion 1976. Lotsberg gives 788 m for the 1976 tube (21.07.1976) and 757 m for the 1996 tube (25.10.1996). So 788 m is attributed to the 1976 tube by Lotsberg; which tube is 788 m is unresolved.",
+   "length_m 788 in the record conflicts with Structurae's 786/750 m; OSM geometry 764 / 731 m."
+  ],
+  "anchors": [
+   {
+    "label": "Portal 1 (north)",
+    "lat": 46.316767,
+    "lon": 15.459339,
+    "source_url": "https://structurae.net/en/structures/golo-rebro-tunnel"
+   },
+   {
+    "label": "Portal 2 (south)",
+    "lat": 46.310556,
+    "lon": 15.456131,
+    "source_url": "https://structurae.net/en/structures/golo-rebro-tunnel"
+   },
+   {
+    "label": "Tube 5245477 north end (OSM)",
+    "lat": 46.316976,
+    "lon": 15.459215,
+    "source_url": "https://www.openstreetmap.org/way/5245477"
+   },
+   {
+    "label": "Tube 5245477 south end (OSM)",
+    "lat": 46.310526,
+    "lon": 15.455925,
+    "source_url": "https://www.openstreetmap.org/way/5245477"
+   },
+   {
+    "label": "Tube 724700071 north end (OSM)",
+    "lat": 46.316822,
+    "lon": 15.459463,
+    "source_url": "https://www.openstreetmap.org/way/724700071"
+   },
+   {
+    "label": "Tube 724700071 south end (OSM)",
+    "lat": 46.310628,
+    "lon": 15.456388,
+    "source_url": "https://www.openstreetmap.org/way/724700071"
+   }
+  ],
+  "specs": {
+   "length_m": {
+    "value": "eastern tube 750; western tube 786",
+    "source_url": "https://structurae.net/en/structures/golo-rebro-tunnel"
+   },
+   "length_m_lotsberg": {
+    "value": "788 (1976) + 757 (1996)",
+    "source_url": "https://www.lotsberg.net/data/slovenia/list.html"
+   },
+   "tubes": {
+    "value": 2,
+    "source_url": "https://structurae.net/en/structures/golo-rebro-tunnel"
+   },
+   "lanes": {
+    "value": "2 per tube (OSM lanes=2)",
+    "source_url": "https://www.openstreetmap.org/way/5245477"
+   },
+   "opened": {
+    "value": "first tube July 1976; second tube October 1996",
+    "source_url": "https://structurae.net/en/structures/golo-rebro-tunnel"
+   },
+   "road_designation": {
+    "value": "A1",
+    "source_url": "https://structurae.net/en/structures/golo-rebro-tunnel"
+   },
+   "construction_method": {
+    "value": null,
+    "source_url": null
+   },
+   "owner_operator": {
+    "value": null,
+    "source_url": null
+   },
+   "max_overburden_m": {
+    "value": null,
+    "source_url": null
+   },
+   "portal_elevations_m": {
+    "value": null,
+    "source_url": null
+   },
+   "monitoring_systems": {
+    "value": null,
+    "source_url": null
+   }
+  },
+  "notes": "Current anchor (46.3137, 15.45759) is about 12 m from the Structurae portal midpoint 46.313661, 15.457735 (derived). OSM coordinates are the end nodes of the named tunnel ways, read from the OSM API (api.openstreetmap.org/api/0.6) for the way ids given; OSM portal ends can sit at the start of the portal structure rather than the face."
+ }
+]

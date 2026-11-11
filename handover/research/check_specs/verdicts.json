@@ -1,0 +1,1856 @@
+[
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Slope length",
+  "value": "2356 m",
+  "source": "https://lift-world.info/en/lifts/2772/datas.htm",
+  "verdict": "confirmed",
+  "note": "lift-world: route distance 2356 m"
+ },
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Vertical rise",
+  "value": "885 m",
+  "source": "https://lift-world.info/en/lifts/2772/datas.htm",
+  "verdict": "confirmed",
+  "note": "885 m"
+ },
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Valley station elev",
+  "value": "595 (lift-world); 602 (Uradni list 2006 annex) m",
+  "source": "https://lift-world.info/en/lifts/2772/datas.htm",
+  "verdict": "confirmed",
+  "note": "lift-world 595; Uradni list 2006 row gives 602"
+ },
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Top station elev",
+  "value": "1480 (lift-world); 1487 (Uradni list 2006 annex) m",
+  "source": "https://lift-world.info/en/lifts/2772/datas.htm",
+  "verdict": "confirmed",
+  "note": "lift-world 1480; Uradni list 1487"
+ },
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Towers",
+  "value": "20",
+  "source": "https://lift-world.info/en/lifts/2772/datas.htm",
+  "verdict": "confirmed",
+  "note": "20 pillars"
+ },
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Capacity",
+  "value": "2000 persons per hour",
+  "source": "https://lift-world.info/en/lifts/2772/datas.htm",
+  "verdict": "confirmed",
+  "note": "2000 p/h"
+ },
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Carriers",
+  "value": "79 cabins, Swoboda ULTRA 6, 6 persons each",
+  "source": "https://lift-world.info/en/lifts/2772/datas.htm",
+  "verdict": "confirmed",
+  "note": "79 cabs, Swoboda ULTRA 6, 6 persons"
+ },
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Speed mps",
+  "value": "6.0",
+  "source": "https://lift-world.info/en/lifts/2772/datas.htm",
+  "verdict": "confirmed",
+  "note": "6,0 m/s"
+ },
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Haul rope diameter",
+  "value": "44 mm",
+  "source": "https://lift-world.info/en/lifts/2772/datas.htm",
+  "verdict": "confirmed",
+  "note": "44 mm"
+ },
+ {
+  "id": "krvavec",
+  "kind": "Cableway",
+  "label": "Drive power",
+  "value": "980 kW",
+  "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+  "verdict": "confirmed",
+  "note": "Uradni list row: 980 kW (lift-world gives 986 kW operation; difference not listed)"
+ },
+ {
+  "id": "velikaplanina",
+  "kind": "Cableway",
+  "label": "Slope length",
+  "value": "1643 m",
+  "source": "https://lift-world.info/en/lifts/2505/datas.htm",
+  "verdict": "confirmed",
+  "note": "1643 m (Uradni list 2006 gives 1442 m, not listed as a difference)"
+ },
+ {
+  "id": "velikaplanina",
+  "kind": "Cableway",
+  "label": "Vertical rise",
+  "value": "858 m",
+  "source": "https://lift-world.info/en/lifts/2505/datas.htm",
+  "verdict": "confirmed",
+  "note": "858 m"
+ },
+ {
+  "id": "velikaplanina",
+  "kind": "Cableway",
+  "label": "Capacity",
+  "value": "300 persons per hour",
+  "source": "https://lift-world.info/en/lifts/2505/datas.htm",
+  "verdict": "confirmed",
+  "note": "300 p/h on lift-world; Uradni list 2006 gives 360 p/h (unlisted difference)"
+ },
+ {
+  "id": "velikaplanina",
+  "kind": "Cableway",
+  "label": "Drive power",
+  "value": "180 kW",
+  "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+  "verdict": "confirmed",
+  "note": "180 kW in Uradni list (lift-world 170 kW)"
+ },
+ {
+  "id": "velikaplanina",
+  "kind": "Cableway",
+  "label": "Towers",
+  "value": "0",
+  "source": "https://www.muzej-kamnik-on.net/?p=15313",
+  "verdict": "confirmed",
+  "note": "museum page: \"without a single support pillar\""
+ },
+ {
+  "id": "velikaplanina",
+  "kind": "Cableway",
+  "label": "Year built",
+  "value": "Opened 13 Sep 1964 (construction from 1961); lift-world lists 1991",
+  "source": "https://www.muzej-kamnik-on.net/?p=15313",
+  "verdict": "confirmed",
+  "note": "museum: opened 13 Sep 1964, construction began 1961; lift-world 1991. Museum page text is garbled (\"On September 13, 1964, it was exactly sixty years since...\") but supports the date"
+ },
+ {
+  "id": "velikaplanina",
+  "kind": "Cableway",
+  "label": "Lift type",
+  "value": "32-AT pendulum aerial tramway (nihalka), no intermediate towers",
+  "source": "https://lift-world.info/en/lifts/2505/datas.htm",
+  "verdict": "confirmed",
+  "note": "32-AT confirmed; \"no intermediate towers\" is not on lift-world (pillars \"??\"), it comes from the museum page"
+ },
+ {
+  "id": "vogel",
+  "kind": "Cableway",
+  "label": "Slope length",
+  "value": "1663 m",
+  "source": "https://lift-world.info/en/lifts/494/datas.htm",
+  "verdict": "confirmed",
+  "note": "1663 m (Uradni list 1670)"
+ },
+ {
+  "id": "vogel",
+  "kind": "Cableway",
+  "label": "Vertical rise",
+  "value": "963 m",
+  "source": "https://lift-world.info/en/lifts/494/datas.htm",
+  "verdict": "confirmed",
+  "note": "963 m"
+ },
+ {
+  "id": "vogel",
+  "kind": "Cableway",
+  "label": "Towers",
+  "value": "2",
+  "source": "https://lift-world.info/en/lifts/494/datas.htm",
+  "verdict": "confirmed",
+  "note": "2 pillars"
+ },
+ {
+  "id": "vogel",
+  "kind": "Cableway",
+  "label": "Capacity",
+  "value": "950 persons per hour",
+  "source": "https://lift-world.info/en/lifts/494/datas.htm",
+  "verdict": "confirmed",
+  "note": "950 p/h"
+ },
+ {
+  "id": "vogel",
+  "kind": "Cableway",
+  "label": "Drive power",
+  "value": "600 kW",
+  "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+  "verdict": "confirmed",
+  "note": "600 kW in Uradni list (lift-world 633 kW)"
+ },
+ {
+  "id": "golte",
+  "kind": "Cableway",
+  "label": "Slope length",
+  "value": "3265 m",
+  "source": "https://en.golte.si/panoramska-nihalka",
+  "verdict": "confirmed",
+  "note": "operator page: 3,265 m (lift-world 3263, Uradni list 3320)"
+ },
+ {
+  "id": "golte",
+  "kind": "Cableway",
+  "label": "Valley station elev",
+  "value": "490 m",
+  "source": "https://en.golte.si/panoramska-nihalka",
+  "verdict": "confirmed",
+  "note": "490 m on operator page"
+ },
+ {
+  "id": "golte",
+  "kind": "Cableway",
+  "label": "Vertical rise",
+  "value": "914 m",
+  "source": "https://lift-world.info/en/lifts/10925/datas.htm",
+  "verdict": "confirmed",
+  "note": "914 m"
+ },
+ {
+  "id": "golte",
+  "kind": "Cableway",
+  "label": "Capacity",
+  "value": "350 persons per hour",
+  "source": "https://lift-world.info/en/lifts/10925/datas.htm",
+  "verdict": "confirmed",
+  "note": "350 p/h (Uradni list 275)"
+ },
+ {
+  "id": "golte",
+  "kind": "Cableway",
+  "label": "Drive power",
+  "value": "295 kW",
+  "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+  "verdict": "confirmed",
+  "note": "295 kW"
+ },
+ {
+  "id": "kanin_z",
+  "kind": "Cableway",
+  "label": "Slope length",
+  "value": "5110 total (A-B 2689, B-C 1870, C-D 1310) m",
+  "source": "https://www.remontees-mecaniques.net/bdd/reportage-tcd4-kanin-poma-3416.html",
+  "verdict": "wrong",
+  "note": "remontees-mecaniques gives only the 5110 m total. The section split is not on that page, and it does not add up: 2689+1870+1310 = 5869 m (Uradni list gives 2680/1870/1310 = 5860 m), not 5110. Total and split cannot both be right as stated"
+ },
+ {
+  "id": "kanin_z",
+  "kind": "Cableway",
+  "label": "Vertical rise",
+  "value": "1768 m",
+  "source": "https://www.remontees-mecaniques.net/bdd/reportage-tcd4-kanin-poma-3416.html",
+  "verdict": "confirmed",
+  "note": "1768 m"
+ },
+ {
+  "id": "kanin_z",
+  "kind": "Cableway",
+  "label": "Station elevations",
+  "value": "A 436, B 980, C 1649, D 2200 m",
+  "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+  "verdict": "confirmed",
+  "note": "Uradni list: 436/980/1649/2200. remontees-mecaniques gives C 1639, D 2204 (unlisted difference)"
+ },
+ {
+  "id": "kanin_z",
+  "kind": "Cableway",
+  "label": "Towers",
+  "value": "A-B 23, B-C 19, C-D 11",
+  "source": "https://lift-world.info/en/lifts/2532/datas.htm",
+  "verdict": "not stated in source",
+  "note": "lift-world 2532 covers only section A-B (23 pillars). The B-C 19 and C-D 11 counts are not on that page (11 for C-D is on remontees-mecaniques)"
+ },
+ {
+  "id": "kanin_z",
+  "kind": "Cableway",
+  "label": "Capacity",
+  "value": "900 persons per hour",
+  "source": "https://lift-world.info/en/lifts/2532/datas.htm",
+  "verdict": "confirmed",
+  "note": "900 p/h for section A-B on lift-world. Uradni list gives 1020 p/h per section"
+ },
+ {
+  "id": "kanin_z",
+  "kind": "Cableway",
+  "label": "Drive power",
+  "value": "A-B 200, B-C 230, C-D 180 kW",
+  "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+  "verdict": "confirmed",
+  "note": "200/230/180 kW per section"
+ },
+ {
+  "id": "kanin_z",
+  "kind": "Cableway",
+  "label": "Year built",
+  "value": "1973",
+  "source": "https://lift-world.info/en/lifts/2532/datas.htm",
+  "verdict": "confirmed",
+  "note": "lift-world 1973 (remontees-mecaniques says 1972)"
+ },
+ {
+  "id": "straza_bled",
+  "kind": "Cableway",
+  "label": "Capacity",
+  "value": "1114 (winter), 581 (summer) persons per hour",
+  "source": "https://lift-world.info/en/lifts/10975/datas.htm",
+  "verdict": "confirmed",
+  "note": "1114 (581) p/h. remontees-mecaniques page has a typo, 114 p/h"
+ },
+ {
+  "id": "straza_bled",
+  "kind": "Cableway",
+  "label": "Travel time",
+  "value": "2 min 35 s winter, 4 min 52 s summer",
+  "source": "https://remontees-mecaniques.net/bdd/reportage-tsf2-straza-doppelmayr-2621.html",
+  "verdict": "confirmed",
+  "note": "2min35sec (4min52s summer)"
+ },
+ {
+  "id": "straza_bled",
+  "kind": "Cableway",
+  "label": "Drive power",
+  "value": "74 kW",
+  "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+  "verdict": "confirmed",
+  "note": "74 kW"
+ },
+ {
+  "id": "planica_z",
+  "kind": "Cableway",
+  "label": "Lift type",
+  "value": "2-CLF fixed-grip double chairlift with 2 intermediate stations (no exit)",
+  "source": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html",
+  "verdict": "wrong",
+  "note": "Source says both intermediate stations allow boarding and alighting: the 1009 m station on the uphill side only, the 1067 m station in both directions. \"(no exit)\" is wrong"
+ },
+ {
+  "id": "planica_z",
+  "kind": "Cableway",
+  "label": "Slope length",
+  "value": "476 m",
+  "source": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html",
+  "verdict": "confirmed",
+  "note": "longueur developpee 476 m"
+ },
+ {
+  "id": "planica_z",
+  "kind": "Cableway",
+  "label": "Station elevations",
+  "value": "valley 935, intermediate 1009 and 1067, top 1144",
+  "source": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html",
+  "verdict": "confirmed",
+  "note": "935 / 1009 / 1067 / 1144"
+ },
+ {
+  "id": "planica_z",
+  "kind": "Cableway",
+  "label": "Capacity",
+  "value": "436 persons per hour",
+  "source": "https://lift-world.info/en/lifts/14707/datas.htm",
+  "verdict": "confirmed",
+  "note": "436 p/h"
+ },
+ {
+  "id": "grad_vzpenjaca",
+  "kind": "Cableway",
+  "label": "Slope length",
+  "value": "118 m",
+  "source": "https://lift-world.info/en/lifts/12495/datas.htm",
+  "verdict": "confirmed",
+  "note": "118 m"
+ },
+ {
+  "id": "grad_vzpenjaca",
+  "kind": "Cableway",
+  "label": "Capacity",
+  "value": "575 persons per hour",
+  "source": "https://lift-world.info/en/lifts/12495/datas.htm",
+  "verdict": "confirmed",
+  "note": "575 p/h"
+ },
+ {
+  "id": "grad_vzpenjaca",
+  "kind": "Cableway",
+  "label": "Travel time",
+  "value": "60",
+  "source": "https://en.wikipedia.org/wiki/Ljubljana_Castle_funicular",
+  "verdict": "confirmed",
+  "note": "Wikipedia: 60 seconds. Unit field is empty; should be s"
+ },
+ {
+  "id": "kranjskagora_z",
+  "kind": "Cableway",
+  "label": "Lifts 2006",
+  "value": "Dolenčev rut 4-VKS 2000, 961 m, 2400 p/h; Vitranc II SED 1957, 1048 m; Podkoren 4-VKS-tr 2004, 1264 m, 1600 p/h; Velika dolina 2-SED 1981, 1237 m",
+  "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+  "verdict": "confirmed",
+  "note": "Uradni list rows match (961 m 2400 p/h; 1048 m; 1264 m 1600 p/h; 1237 m)"
+ },
+ {
+  "id": "cerkno_z",
+  "kind": "Cableway",
+  "label": "Lift pocivalo",
+  "value": "TSD6 Doppelmayr 2004, 1087 m, 330 m rise, ~870-1200 m, 12 towers, 40 chairs, 1800 p/h, 5 m/s, rope Austria Draht",
+  "source": "https://remontees-mecaniques.net/bdd/reportage-tsd6-pocivalo-doppelmayr-2611.html",
+  "verdict": "confirmed",
+  "note": "Doppelmayr 2004, 1087 m, 330 m, 12 pylons, 1800 p/h, 5 m/s, Austria Draht, ~870-1200 m"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Length original tube",
+  "value": "7,864 (tunnel); 8,019 enclosure between portals",
+  "source": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)",
+  "verdict": "confirmed",
+  "note": "Wikipedia: 7,864 m tunnel, 8,019 m enclosure. Infobox also shows 8,138 m (unlisted)"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Length original tube (Lotsberg)",
+  "value": "8019",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "8 019. Unit empty"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Length slovenian part original",
+  "value": "3450",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "In Slovenija: 3450 m"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Portal elevations",
+  "value": "620 to 655 m",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "620 - 655 m"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Length new east tube",
+  "value": "7948",
+  "source": "https://www.dri.si/en/fields-of-work/railways/eastern-tunnel-tube-of-the-karavanke-motorway-tunnel",
+  "verdict": "confirmed",
+  "note": "DRI: 7,948 m"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Length new east tube slovenian part",
+  "value": "3,546 (3,446 m underground + 100 m gallery)",
+  "source": "https://www.dri.si/en/fields-of-work/railways/eastern-tunnel-tube-of-the-karavanke-motorway-tunnel",
+  "verdict": "confirmed",
+  "note": "3,546 m incl. 3,446 underground + 100 m gallery"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Length new east tube austrian part",
+  "value": "4402",
+  "source": "https://ic-group.org/en/magazine/detail/karawanken-tunnel-new-tunnel-marks-a-milestone-in-european-north-south-transport",
+  "verdict": "confirmed",
+  "note": "4,402 m in Austria"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Cross passages new tube",
+  "value": "26 cross-passages to the existing tube, 330 m spacing",
+  "source": "https://ic-group.org/en/magazine/detail/karawanken-tunnel-new-tunnel-marks-a-milestone-in-european-north-south-transport",
+  "verdict": "confirmed",
+  "note": "26 cross-passages, 330 m"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Opened new tube",
+  "value": "officially opened 18 March 2026; phased operation from 20 March 2026",
+  "source": "https://ic-group.org/en/magazine/detail/karawanken-tunnel-new-tunnel-marks-a-milestone-in-european-north-south-transport",
+  "verdict": "confirmed",
+  "note": "18 March official, phased from 20 March"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Slovenian side new tube features",
+  "value": "10 cross passages for pedestrians/emergency vehicles, 2 ventilation cross passages, 4 lay-by niches of 112.50 m each, new underground water intake",
+  "source": "https://www.gov.si/zbirke/projekti-in-programi/izgradnja-druge-cevi-avtocestnega-predora-karavanke-izvedbena-dela/",
+  "verdict": "confirmed",
+  "note": "gov.si: 10 cross passages, 2 ventilation cross passages, 4 niches x 112.50 m, new water intake"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Opened original",
+  "value": "1 June 1991 (works began August 1986)",
+  "source": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)",
+  "verdict": "confirmed",
+  "note": "opened 1 June 1991, work began August 1986"
+ },
+ {
+  "id": "karavanke_c",
+  "kind": "Tunnel",
+  "label": "Lanes",
+  "value": "2 per tube (original tube ran two-way)",
+  "source": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)",
+  "verdict": "confirmed",
+  "note": "Wikipedia: single tube, one lane each way, two-way; infobox 2 lanes"
+ },
+ {
+  "id": "karavanke_r",
+  "kind": "Tunnel",
+  "label": "Length",
+  "value": "8176 m",
+  "source": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
+  "verdict": "confirmed",
+  "note": "8,176 m"
+ },
+ {
+  "id": "karavanke_r",
+  "kind": "Tunnel",
+  "label": "Opened",
+  "value": "1 October 1906",
+  "source": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
+  "verdict": "confirmed",
+  "note": "1 October 1906"
+ },
+ {
+  "id": "karavanke_r",
+  "kind": "Tunnel",
+  "label": "Renovation budget",
+  "value": "EUR 115 million total (Slovenia EUR 50 m, Austria EUR 65.3 m); contractor Strabag",
+  "source": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
+  "verdict": "confirmed",
+  "note": "115 M total, SI 50 M, AT 65.3 M, Strabag. The source adds up to 115.3 M itself"
+ },
+ {
+  "id": "karavanke_r",
+  "kind": "Tunnel",
+  "label": "Construction method",
+  "value": "bored from both ends, 1901-1906 (conventional)",
+  "source": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
+  "verdict": "confirmed",
+  "note": "bored from both ends. The source says only that building the railway was decided in 1901; it gives no tunnel construction start, so \"1901-1906\" is a loose reading"
+ },
+ {
+  "id": "golovec",
+  "kind": "Tunnel",
+  "label": "Length",
+  "value": "eastern tube 595, western tube 622 m",
+  "source": "https://structurae.net/en/structures/golovec-tunnel",
+  "verdict": "confirmed",
+  "note": "Structurae: eastern 595, western 622"
+ },
+ {
+  "id": "golovec",
+  "kind": "Tunnel",
+  "label": "Length (Lotsberg)",
+  "value": "622 + 595",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "622 + 595"
+ },
+ {
+  "id": "golovec",
+  "kind": "Tunnel",
+  "label": "Opened",
+  "value": "27 August 1999",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "27.08.1999"
+ },
+ {
+  "id": "sentvid",
+  "kind": "Tunnel",
+  "label": "Length (Lotsberg)",
+  "value": "1,486 + 1,461; 414 m built cut-and-cover",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "1 486 + 1 461; 414 m C&C"
+ },
+ {
+  "id": "sentvid",
+  "kind": "Tunnel",
+  "label": "Opened",
+  "value": "1 July 2008 (work start October 2004)",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "01.07.2008, work start 10.2004"
+ },
+ {
+  "id": "sentvid",
+  "kind": "Tunnel",
+  "label": "Cross section",
+  "value": "95 to 140 m2 for two- and three-lane tube, plus 350 m2 cavern",
+  "source": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl16-Motorway.aspx",
+  "verdict": "confirmed",
+  "note": "tunnelbuilder: 95-140 sq m, 350 sq m cavern"
+ },
+ {
+  "id": "sentvid",
+  "kind": "Tunnel",
+  "label": "Construction method",
+  "value": "NATM (drill and blast), first 200 m cut-and-cover; rock mass classes C2/C3",
+  "source": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl16-Motorway.aspx",
+  "verdict": "confirmed",
+  "note": "NATM, first 200 m cut-and-cover, rock mass C2 and C3. \"drill and blast\" not stated for Sentvid itself"
+ },
+ {
+  "id": "sentvid",
+  "kind": "Tunnel",
+  "label": "Monitoring systems",
+  "value": "geotechnical monitoring during construction by IRGO Consulting and Geoinženiring",
+  "source": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl16-Motorway.aspx",
+  "verdict": "confirmed",
+  "note": "IRGO Consulting and Geoinzeniring geotechnical monitoring contract"
+ },
+ {
+  "id": "trojane",
+  "kind": "Tunnel",
+  "label": "Length",
+  "value": "tube 1 2,931; tube 2 2,841 m",
+  "source": "https://structurae.net/structures/trojane-tunnel",
+  "verdict": "confirmed",
+  "note": "Structurae: tube 1 2 931, tube 2 2 841"
+ },
+ {
+  "id": "trojane",
+  "kind": "Tunnel",
+  "label": "Length (Lotsberg)",
+  "value": "2,931 + 2,840",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "2 931 + 2 840"
+ },
+ {
+  "id": "trojane",
+  "kind": "Tunnel",
+  "label": "Opened",
+  "value": "12 August 2005",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "12.08.2005"
+ },
+ {
+  "id": "podmilj",
+  "kind": "Tunnel",
+  "label": "Opened",
+  "value": "12 August 2005",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "12.08.2005"
+ },
+ {
+  "id": "vzideh",
+  "kind": "Tunnel",
+  "label": "Length",
+  "value": "296 m",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "296 m, opened 2002"
+ },
+ {
+  "id": "kastelec",
+  "kind": "Tunnel",
+  "label": "Length",
+  "value": "northern tube 2,292; southern tube 2,240 m",
+  "source": "https://structurae.net/structures/kastelec-tunnel",
+  "verdict": "confirmed",
+  "note": "Structurae: northern 2 292, southern 2 240"
+ },
+ {
+  "id": "kastelec",
+  "kind": "Tunnel",
+  "label": "Length (Lotsberg)",
+  "value": "2,303 + 2,195",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "2 303 + 2 195"
+ },
+ {
+  "id": "kastelec",
+  "kind": "Tunnel",
+  "label": "Opened",
+  "value": "22 November 2004",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "22.11.2004"
+ },
+ {
+  "id": "dekani",
+  "kind": "Tunnel",
+  "label": "Opened",
+  "value": "22 November 2004",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "22.11.2004"
+ },
+ {
+  "id": "lescevje",
+  "kind": "Tunnel",
+  "label": "Length",
+  "value": "right tube 348.9; left tube 349 m",
+  "source": "https://www.elea.si/en/?p=58122",
+  "verdict": "confirmed",
+  "note": "Elea: \"Section length Right tube: 348,9 m; left tube: 349 m\". MISLEADING: Elea calls this the \"section length\" (likely its own monitored or contract section). Lotsberg gives 369/363 and OSM 362/368, so this probably is not the full tube length"
+ },
+ {
+  "id": "lescevje",
+  "kind": "Tunnel",
+  "label": "Length (Lotsberg)",
+  "value": "369 + 363",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "369 + 363"
+ },
+ {
+  "id": "lescevje",
+  "kind": "Tunnel",
+  "label": "Construction",
+  "value": "2008-2009 (works started 5 March 2008)",
+  "source": "https://www.elea.si/en/?p=58122",
+  "verdict": "not stated in source",
+  "note": "Elea gives Year(s) 2008-2009 only; \"works started 5 March 2008\" is not on the page"
+ },
+ {
+  "id": "lescevje",
+  "kind": "Tunnel",
+  "label": "Owner (operator)",
+  "value": "DARS (investor), investment EUR 11,633,000",
+  "source": "https://www.elea.si/en/?p=58122",
+  "verdict": "confirmed",
+  "note": "Investor DARS d.d., inv. value EUR 11,633,000"
+ },
+ {
+  "id": "lescevje",
+  "kind": "Tunnel",
+  "label": "Opened",
+  "value": "30 June 2010",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "30.06.2010"
+ },
+ {
+  "id": "cenkova",
+  "kind": "Tunnel",
+  "label": "Length (Lotsberg)",
+  "value": "615 + 602, of which cut-and-cover 258 / 241",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "615 + 602, artificial 258-241"
+ },
+ {
+  "id": "pletovarje",
+  "kind": "Tunnel",
+  "label": "Length",
+  "value": "745 (1996 tube) + 708 (1976 tube) m",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "745 (25.10.1996) + 708 (21.07.1976)"
+ },
+ {
+  "id": "golo_rebro",
+  "kind": "Tunnel",
+  "label": "Length (Lotsberg)",
+  "value": "788 (1976) + 757 (1996)",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "788 (21.07.1976) + 757 (25.10.1996)"
+ },
+ {
+  "id": "tabor_h4",
+  "kind": "Tunnel",
+  "label": "Opened",
+  "value": "13 August 2009",
+  "source": "https://www.lotsberg.net/data/slovenia/list.html",
+  "verdict": "confirmed",
+  "note": "13.08.2009"
+ },
+ {
+  "id": "he_solkan",
+  "kind": "Dam and hydropower plant",
+  "label": "Min upper water level",
+  "value": "75.5 m",
+  "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+  "verdict": "confirmed",
+  "note": "75,5 m"
+ },
+ {
+  "id": "he_solkan",
+  "kind": "Dam and hydropower plant",
+  "label": "Reservoir useful volume",
+  "value": "1150000 m³",
+  "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+  "verdict": "confirmed",
+  "note": "1.150.000 m3"
+ },
+ {
+  "id": "he_solkan",
+  "kind": "Dam and hydropower plant",
+  "label": "Installed power",
+  "value": "3 x 10.8 MW (SENG web page: 32 MW)",
+  "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+  "verdict": "confirmed",
+  "note": "3 x 10,8 MW. Unit field empty"
+ },
+ {
+  "id": "he_solkan",
+  "kind": "Dam and hydropower plant",
+  "label": "Turbines",
+  "value": "3 Kaplan, 10.8 MW, 214.3 rpm; generators 13 MVA, 6.3 kV",
+  "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+  "verdict": "confirmed",
+  "note": "Kaplan 10,8 MW 214,3 rpm; generator 13 MVA, 6,3 kV"
+ },
+ {
+  "id": "he_solkan",
+  "kind": "Dam and hydropower plant",
+  "label": "Design flow",
+  "value": "180 m³/s",
+  "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+  "verdict": "confirmed",
+  "note": "pozirnost turbin 180 m3/s"
+ },
+ {
+  "id": "he_solkan",
+  "kind": "Dam and hydropower plant",
+  "label": "Gross head",
+  "value": "20.55 m",
+  "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+  "verdict": "confirmed",
+  "note": "20,55 m. Source qualifies it: gross head AT 60 m3/s flow; the label drops that condition"
+ },
+ {
+  "id": "he_solkan",
+  "kind": "Dam and hydropower plant",
+  "label": "Annual generation",
+  "value": "105",
+  "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+  "verdict": "confirmed",
+  "note": "105 GWh. Unit field empty"
+ },
+ {
+  "id": "he_solkan",
+  "kind": "Dam and hydropower plant",
+  "label": "Catchment",
+  "value": "1632 km²",
+  "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+  "verdict": "confirmed",
+  "note": "1.632 km2"
+ },
+ {
+  "id": "he_solkan",
+  "kind": "Dam and hydropower plant",
+  "label": "Construction",
+  "value": "began 1978; in operation since 15 November 1984; reconstruction planned after 2025",
+  "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+  "verdict": "confirmed",
+  "note": "began 1978, in operation since 15 Nov 1984, reconstruction after 2025"
+ },
+ {
+  "id": "he_vrhovo",
+  "kind": "Dam and hydropower plant",
+  "label": "Reservoir volume",
+  "value": "8,650,000 total; 1,350,000 useful m³",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "IBE 2010: 8 650 / 1 350 (x1000 m3)"
+ },
+ {
+  "id": "he_vrhovo",
+  "kind": "Dam and hydropower plant",
+  "label": "Gross head",
+  "value": "8.1 m",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "8,1 m"
+ },
+ {
+  "id": "he_vrhovo",
+  "kind": "Dam and hydropower plant",
+  "label": "Mean flow",
+  "value": "218.6 m³/s",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "218,6 m3/s"
+ },
+ {
+  "id": "he_vrhovo",
+  "kind": "Dam and hydropower plant",
+  "label": "Q100",
+  "value": "3200 m³/s",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "3200 m3/s"
+ },
+ {
+  "id": "he_vrhovo",
+  "kind": "Dam and hydropower plant",
+  "label": "Turbines",
+  "value": "3 bulb (cevne) turbines (Litostroj); generators Rade Končar",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "not stated in source",
+  "note": "IBE 2010 states 3 units of \"cevne\" turbines; Litostroj and Rade Koncar are not in this source"
+ },
+ {
+  "id": "he_vrhovo",
+  "kind": "Dam and hydropower plant",
+  "label": "Height",
+  "value": "27 (structural, SEL); 25.65 (IBE 2010) m",
+  "source": "https://www.sel.si/en/production-facilities/",
+  "verdict": "confirmed",
+  "note": "SEL: structural height 27 m; IBE 2010: 25,65 m"
+ },
+ {
+  "id": "he_vrhovo",
+  "kind": "Dam and hydropower plant",
+  "label": "Installed power",
+  "value": "34 (3 x 14.3 MVA)",
+  "source": "https://www.sel.si/en/production-facilities/",
+  "verdict": "confirmed",
+  "note": "SEL: 34 MW, 3 x 14.3 MVA. Unit field empty"
+ },
+ {
+  "id": "he_vrhovo",
+  "kind": "Dam and hydropower plant",
+  "label": "Annual generation",
+  "value": "118 (SEL); 126 (IBE 2010)",
+  "source": "https://www.sel.si/en/production-facilities/",
+  "verdict": "confirmed",
+  "note": "SEL 118 GWh; IBE 126"
+ },
+ {
+  "id": "he_vrhovo",
+  "kind": "Dam and hydropower plant",
+  "label": "Year completed",
+  "value": "1993",
+  "source": "https://www.sel.si/en/production-facilities/",
+  "verdict": "confirmed",
+  "note": "SEL: start of operation 1993"
+ },
+ {
+  "id": "he_bostanj",
+  "kind": "Dam and hydropower plant",
+  "label": "Height",
+  "value": "26.85 m",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "26,85 m"
+ },
+ {
+  "id": "he_bostanj",
+  "kind": "Dam and hydropower plant",
+  "label": "Reservoir volume",
+  "value": "8,131,000 total; 1,167,000 useful m³",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "8 131 / 1 167"
+ },
+ {
+  "id": "he_bostanj",
+  "kind": "Dam and hydropower plant",
+  "label": "Gross head",
+  "value": "7.6 m",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "7,6 m"
+ },
+ {
+  "id": "he_bostanj",
+  "kind": "Dam and hydropower plant",
+  "label": "Q100",
+  "value": "3210 m³/s",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "3210"
+ },
+ {
+  "id": "he_bostanj",
+  "kind": "Dam and hydropower plant",
+  "label": "Annual generation",
+  "value": "115",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "115 GWh. Unit empty"
+ },
+ {
+  "id": "he_bostanj",
+  "kind": "Dam and hydropower plant",
+  "label": "Year completed",
+  "value": "construction 2002-2006",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "start 2002, operation 2006"
+ },
+ {
+  "id": "he_arto",
+  "kind": "Dam and hydropower plant",
+  "label": "Height",
+  "value": "31.35 m",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "31,35 m"
+ },
+ {
+  "id": "he_arto",
+  "kind": "Dam and hydropower plant",
+  "label": "Left bank embankment crown",
+  "value": "175.7 m",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "krona na koti 175,70 m n.m. MISLEADING unit: this is an elevation (m a.s.l.), not a height"
+ },
+ {
+  "id": "he_arto",
+  "kind": "Dam and hydropower plant",
+  "label": "Reservoir volume",
+  "value": "9,950,000 total; 1,300,000 useful m³",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "9 950 / 1 300"
+ },
+ {
+  "id": "he_arto",
+  "kind": "Dam and hydropower plant",
+  "label": "Installed power",
+  "value": "39.12 (3 x 13.04)",
+  "source": "https://www.barrages-cfbr.eu/IMG/pdf/marseille_atelierct_g_8._smolar-zvanut_blanca.pdf",
+  "verdict": "confirmed",
+  "note": "CFBR: 39,12 MW. The \"3 x 13.04\" split is not in the source (derived)"
+ },
+ {
+  "id": "he_arto",
+  "kind": "Dam and hydropower plant",
+  "label": "Design flow",
+  "value": "500 m³/s",
+  "source": "https://www.barrages-cfbr.eu/IMG/pdf/marseille_atelierct_g_8._smolar-zvanut_blanca.pdf",
+  "verdict": "confirmed",
+  "note": "500 m3/s"
+ },
+ {
+  "id": "he_arto",
+  "kind": "Dam and hydropower plant",
+  "label": "Rated head",
+  "value": "9.29 m",
+  "source": "https://www.barrages-cfbr.eu/IMG/pdf/marseille_atelierct_g_8._smolar-zvanut_blanca.pdf",
+  "verdict": "confirmed",
+  "note": "nominal head 9,29 m"
+ },
+ {
+  "id": "he_arto",
+  "kind": "Dam and hydropower plant",
+  "label": "Annual generation",
+  "value": "148",
+  "source": "https://www.barrages-cfbr.eu/IMG/pdf/marseille_atelierct_g_8._smolar-zvanut_blanca.pdf",
+  "verdict": "confirmed",
+  "note": "148 GWh"
+ },
+ {
+  "id": "he_arto",
+  "kind": "Dam and hydropower plant",
+  "label": "Year completed",
+  "value": "construction 2005, technically completed 2009; operating licence 2011",
+  "source": "https://www.barrages-cfbr.eu/IMG/pdf/marseille_atelierct_g_8._smolar-zvanut_blanca.pdf",
+  "verdict": "confirmed",
+  "note": "CFBR: construction 2005, licence 2011. \"technically completed 2009\" is in IBE 2010, not in this source"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Height",
+  "value": "31.35 (dam, IBE 2010); 39.25 structure foundation-to-roof (IBE 2012)",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+  "verdict": "confirmed",
+  "note": "IBE 2012: total structural height 39,25 m (foundation 134,65 to roof 173,90)"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Crest elevation",
+  "value": "173.90 m a.s.l. = roof top of dam structure; foundation 134.65",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+  "verdict": "confirmed",
+  "note": "173,90 is the top of the roof structure. MISLEADING label: this is not a dam crest; the note admits it, but the label says \"Crest\""
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Normal water level",
+  "value": "164.0 m",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+  "verdict": "confirmed",
+  "note": "kota zajezitve 164,00. Unit should be m a.s.l."
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Installed power",
+  "value": "43 (IBE 2012); 40 (IBE 2010)",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+  "verdict": "confirmed",
+  "note": "IBE 2012: 43 MW; IBE 2010: 40 MW"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Design flow",
+  "value": "500 m³/s",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+  "verdict": "confirmed",
+  "note": "500 m3/s installed"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Gross head",
+  "value": "9.3 (9.23 after HE Brežice) m",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+  "verdict": "confirmed",
+  "note": "9,3 m (9,23 after HE Brezice)"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Spillway",
+  "value": "5 fields, 15 m wide each, 8.17 m segment gates with 2.95 m flap gates",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+  "verdict": "confirmed",
+  "note": "5 fields 15 m wide, 8,17 m segment gates, 2,95 m flaps"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Q100",
+  "value": "3750 m³/s",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+  "verdict": "confirmed",
+  "note": "3750 m3/s (100-year). IBE 2010 gives 3290 for Krsko; the difference is not listed"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Annual generation",
+  "value": "155",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+  "verdict": "confirmed",
+  "note": "155 GWh"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Year completed",
+  "value": "construction from Nov/end 2007; grid connection July 2012; one-year trial operation from 2 April 2013",
+  "source": "https://www.rtvslo.si/lokalne-novice/he-krsko-zacel-poskusno-obratovati/306007",
+  "verdict": "confirmed",
+  "note": "RTV: construction from November 2007, grid July 2012, one-year trial from 2 April 2013"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Investment",
+  "value": "just over 100 million EUR",
+  "source": "https://www.rtvslo.si/lokalne-novice/he-krsko-zacel-poskusno-obratovati/306007",
+  "verdict": "confirmed",
+  "note": "dobrih 100 milijonov evrov"
+ },
+ {
+  "id": "he_krsko",
+  "kind": "Dam and hydropower plant",
+  "label": "Reservoir volume",
+  "value": "6,309,000 total; 1,178,000 useful m³",
+  "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+  "verdict": "confirmed",
+  "note": "IBE 2010: 6 309 / 1 178"
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Height",
+  "value": "10 and 15 (two embankments)",
+  "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+  "verdict": "confirmed",
+  "note": "10 m and 15 m embankments"
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Upper reservoir level",
+  "value": "625.0 m",
+  "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+  "verdict": "confirmed",
+  "note": "625.00 m asl"
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Max tailwater level",
+  "value": "106 m",
+  "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+  "verdict": "confirmed",
+  "note": "106 m asl"
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Reservoir volume",
+  "value": "2,200,000 effective (upper); area ~15 ha m³",
+  "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+  "verdict": "confirmed",
+  "note": "2,200,000 m3 effective, ~15 ha"
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Installed power",
+  "value": "185 turbine / 180 pump",
+  "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+  "verdict": "confirmed",
+  "note": "185 MW turbine / 180 MW pump. Unit field empty"
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Flow",
+  "value": "40 turbine / 34 pump m³/s",
+  "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+  "verdict": "confirmed",
+  "note": "40 / 34 m3/s"
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Gross head",
+  "value": "521 m",
+  "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+  "verdict": "confirmed",
+  "note": "Source says MAX gross head 521 m; the label drops \"max\""
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Waterways",
+  "value": "headrace tunnel 697 m (D 3.90 m); penstock 1,567 m; powerhouse shaft 80 m deep, 18 m ID",
+  "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+  "verdict": "confirmed",
+  "note": "headrace 697 m D 3.90; penstock 1,567 m; shaft 80 m deep, 18 m ID"
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Turbines",
+  "value": "1 reversible Francis pump-turbine, variable speed (DFIM), 600 rpm nominal",
+  "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+  "verdict": "confirmed",
+  "note": "Francis type, 600 rpm, varspeed"
+ },
+ {
+  "id": "che_avce",
+  "kind": "Dam and hydropower plant",
+  "label": "Year completed",
+  "value": "construction Aug 2005-Aug 2009; trial operation permit Dec 2009; commercial operation April 2010",
+  "source": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant",
+  "verdict": "wrong",
+  "note": "Wikipedia (the cited source): completed June 2009, commercial use April 2010. It does not state Aug 2005 or Aug 2009 (Dec 2009 trial permit is in the SENG brochure, not Wikipedia)"
+ },
+ {
+  "id": "he_vuhred",
+  "kind": "Dam and hydropower plant",
+  "label": "Reservoir volume",
+  "value": "10300000 m³",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
+  "verdict": "confirmed",
+  "note": "10.3 million m3"
+ },
+ {
+  "id": "he_vuhred",
+  "kind": "Dam and hydropower plant",
+  "label": "Installed power",
+  "value": "72.3",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
+  "verdict": "confirmed",
+  "note": "72.3 MW. Unit field empty"
+ },
+ {
+  "id": "he_vuhred",
+  "kind": "Dam and hydropower plant",
+  "label": "Turbines",
+  "value": "3 Kaplan (Litostroj Power), 24.55 MW nameplate each; Koncar generators 3 x 30 MVA",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
+  "verdict": "confirmed",
+  "note": "3 Kaplan Litostroj 24.55 MW; Koncar 30 MVA"
+ },
+ {
+  "id": "he_vuhred",
+  "kind": "Dam and hydropower plant",
+  "label": "Net head",
+  "value": "17.4 m",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
+  "verdict": "confirmed",
+  "note": "17.4 m"
+ },
+ {
+  "id": "he_vuhred",
+  "kind": "Dam and hydropower plant",
+  "label": "Annual generation",
+  "value": "297",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
+  "verdict": "confirmed",
+  "note": "\"generated 297 GWh\"; the source gives no period, so \"annual\" is an assumption. Unit empty"
+ },
+ {
+  "id": "he_vuhred",
+  "kind": "Dam and hydropower plant",
+  "label": "Year completed",
+  "value": "construction 1952, commercial operation 1956; rehabilitation 2000-2005",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
+  "verdict": "confirmed",
+  "note": "1952 / 1956 / rehab 2000-2005"
+ },
+ {
+  "id": "he_zlatolicje",
+  "kind": "Dam and hydropower plant",
+  "label": "Installed power",
+  "value": "126 (after refurbishment; 2 units x 79 MW nameplate)",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
+  "verdict": "wrong",
+  "note": "Source: 126 MW and 2 Kaplan units x 79 MW nameplate. \"after refurbishment\" is not stated, and 2 x 79 = 158 MW contradicts 126 MW. The value as written implies a reconciliation the source does not give"
+ },
+ {
+  "id": "he_zlatolicje",
+  "kind": "Dam and hydropower plant",
+  "label": "Turbines",
+  "value": "2 Kaplan (Litostroj Power); generators 2 x 85 MVA",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
+  "verdict": "confirmed",
+  "note": "2 Kaplan, Litostroj; generators 85 MVA"
+ },
+ {
+  "id": "he_zlatolicje",
+  "kind": "Dam and hydropower plant",
+  "label": "Annual generation",
+  "value": "577",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
+  "verdict": "confirmed",
+  "note": "577 GWh (no period given)"
+ },
+ {
+  "id": "he_zlatolicje",
+  "kind": "Dam and hydropower plant",
+  "label": "Year completed",
+  "value": "construction from 1964, commercial operation 1968",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
+  "verdict": "confirmed",
+  "note": "1964 / 1968"
+ },
+ {
+  "id": "he_zlatolicje",
+  "kind": "Dam and hydropower plant",
+  "label": "Owner (operator)",
+  "value": "Dravske elektrarne Maribor (100%)",
+  "source": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
+  "verdict": "not stated in source",
+  "note": "owner DEM is stated; the \"(100%)\" stake is not"
+ },
+ {
+  "id": "slano_blato",
+  "kind": "Site",
+  "label": "Length",
+  "value": "about 1,290 (end 2004); Wikipedia 1,010-1,300 m",
+  "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+  "verdict": "confirmed",
+  "note": "NHESS: more than 1290 m"
+ },
+ {
+  "id": "slano_blato",
+  "kind": "Site",
+  "label": "Width",
+  "value": "60-200 (Wikipedia 60-250) m",
+  "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+  "verdict": "confirmed",
+  "note": "60 to 200 m (Wikipedia 60-250)"
+ },
+ {
+  "id": "slano_blato",
+  "kind": "Site",
+  "label": "Depth",
+  "value": "3-11 m",
+  "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+  "verdict": "confirmed",
+  "note": "3 to 11 m"
+ },
+ {
+  "id": "slano_blato",
+  "kind": "Site",
+  "label": "Volume",
+  "value": "about 700,000 m³",
+  "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+  "verdict": "confirmed",
+  "note": "about 700 000 m3"
+ },
+ {
+  "id": "slano_blato",
+  "kind": "Site",
+  "label": "Area",
+  "value": "about 15 ha",
+  "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+  "verdict": "confirmed",
+  "note": "approximately 15 ha"
+ },
+ {
+  "id": "slano_blato",
+  "kind": "Site",
+  "label": "Elevation",
+  "value": "270-640 a.s.l.; main scarp ~640; initiation ~570; Dec 2000 front ~380",
+  "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+  "verdict": "confirmed",
+  "note": "270-640, scarp 640, ~570, front stopped 380"
+ },
+ {
+  "id": "slano_blato",
+  "kind": "Site",
+  "label": "Event dates",
+  "value": "1786 (Hacquet); 20 Oct 1885; 19 Nov 2000 main triggering; 20 Mar-25 Apr 2001; Oct 2001 mudflows",
+  "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+  "verdict": "not stated in source",
+  "note": "NHESS gives 20 Oct 1885, 19 Nov 2000 etc.; \"1786 (Hacquet)\" comes from Wikipedia, not from the cited NHESS paper (which says \"first mentioned about 200 years ago\")"
+ },
+ {
+  "id": "slano_blato",
+  "kind": "Site",
+  "label": "Remediation",
+  "value": "drainage trenches, ~200,000 m3 removed, rockfill dam (up to 5,000 m3), two 5 m diameter concrete shafts, Grajšček bed rip-rap",
+  "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+  "verdict": "confirmed",
+  "note": "MISLEADING: \"rockfill dam (up to 5,000 m3)\": the source says up to 5000 m3 of debris could be RETAINED behind the dam (retention capacity, not dam volume). 200 000 m3 removed and 5 m shafts confirmed"
+ },
+ {
+  "id": "slano_blato",
+  "kind": "Site",
+  "label": "Max flow rate",
+  "value": "100 m/day",
+  "source": "https://en.wikipedia.org/wiki/Slano_Blato_Landslide",
+  "verdict": "confirmed",
+  "note": "Wikipedia: 100 m/day"
+ },
+ {
+  "id": "stoze",
+  "kind": "Site",
+  "label": "Crown elevation",
+  "value": "1525 m",
+  "source": "https://nhess.copernicus.org/articles/13/2543/2013/nhess-13-2543-2013.pdf",
+  "verdict": "confirmed",
+  "note": "1525 m"
+ },
+ {
+  "id": "stoze",
+  "kind": "Site",
+  "label": "Length",
+  "value": "about 1,500 m",
+  "source": "https://nhess.copernicus.org/articles/13/2543/2013/nhess-13-2543-2013.pdf",
+  "verdict": "confirmed",
+  "note": "1.5 km"
+ },
+ {
+  "id": "stoze",
+  "kind": "Site",
+  "label": "Width",
+  "value": "about 300 m",
+  "source": "https://nhess.copernicus.org/articles/13/2543/2013/nhess-13-2543-2013.pdf",
+  "verdict": "confirmed",
+  "note": "300 m"
+ },
+ {
+  "id": "stoze",
+  "kind": "Site",
+  "label": "Thickness",
+  "value": "up to 10, locally up to 50 m",
+  "source": "https://nhess.copernicus.org/articles/13/2543/2013/nhess-13-2543-2013.pdf",
+  "verdict": "confirmed",
+  "note": "up to 10 m, locally 50 m"
+ },
+ {
+  "id": "stoze",
+  "kind": "Site",
+  "label": "Volume",
+  "value": "about 1 million displaced; >1.5 million still mobilisable m³",
+  "source": "https://nhess.copernicus.org/articles/13/2543/2013/nhess-13-2543-2013.pdf",
+  "verdict": "confirmed",
+  "note": "~1 million m3 displaced; >1.5 million unstable"
+ },
+ {
+  "id": "stoze",
+  "kind": "Site",
+  "label": "Event date",
+  "value": "17 November 2000 (after 1,638.4 mm rain in 46 days)",
+  "source": "https://nhess.copernicus.org/articles/13/2543/2013/nhess-13-2543-2013.pdf",
+  "verdict": "confirmed",
+  "note": "1638.4 mm in 46 days"
+ },
+ {
+  "id": "stoze",
+  "kind": "Site",
+  "label": "Casualties",
+  "value": "7",
+  "source": "https://www.gov.si/novice/2020-11-17-izvedena-dela-na-plazu-stovze-so-bistveno-prispevala-k-povecani-stopnji-varnosti-prebivalcev/",
+  "verdict": "confirmed",
+  "note": "umrlo je sedem"
+ },
+ {
+  "id": "stoze",
+  "kind": "Site",
+  "label": "Damage",
+  "value": "6 buildings destroyed, 23 damaged; 150 m of Bovec-Predel road, 2 bridges; est. EUR 31.7 million",
+  "source": "https://www.gov.si/novice/2020-11-17-izvedena-dela-na-plazu-stovze-so-bistveno-prispevala-k-povecani-stopnji-varnosti-prebivalcev/",
+  "verdict": "confirmed",
+  "note": "6 destroyed, 23 damaged, ~150 m road, 2 bridges, 31.7 M EUR"
+ },
+ {
+  "id": "stoze",
+  "kind": "Site",
+  "label": "Remediation cost",
+  "value": "EUR 26.4 million spent by 2020, ~EUR 5 million still needed",
+  "source": "https://www.gov.si/novice/2020-11-17-izvedena-dela-na-plazu-stovze-so-bistveno-prispevala-k-povecani-stopnji-varnosti-prebivalcev/",
+  "verdict": "confirmed",
+  "note": "26,4 M spent; another 5 M needed"
+ },
+ {
+  "id": "bovec_quake",
+  "kind": "Site",
+  "label": "Depth",
+  "value": "7.6 (rupture 3-9 km per strong-motion inversion) km",
+  "source": "https://nhess.copernicus.org/articles/12/1659/2012/nhess-12-1659-2012.pdf",
+  "verdict": "wrong",
+  "note": "NHESS 2012 says \"Both earthquakes [1998 and 2004] occurred at a depth of 7.6-11 km\"; rupture 3-9 km confirmed. The source gives no single 7.6 km hypocentre for 1998; value should read 7.6-11 km"
+ },
+ {
+  "id": "bovec_quake",
+  "kind": "Site",
+  "label": "Buildings inspected",
+  "value": "3,390, of which 462 undamaged",
+  "source": "https://wcee.nicee.org/wcee/article/0447.pdf",
+  "verdict": "confirmed",
+  "note": "WCEE 0447: 3,390 buildings (as at Aug 1998), 462 grade 0"
+ },
+ {
+  "id": "bovec_quake",
+  "kind": "Site",
+  "label": "Most damaged",
+  "value": "Mala vas (Bovec), Spodnje Drežniške Ravne, Magozd, Lepena, Polog alp",
+  "source": "https://wcee.nicee.org/wcee/article/0447.pdf",
+  "verdict": "confirmed",
+  "note": "Mala vas, Sp. Drezniske Ravne, Magozd, Lepena, Polog alp"
+ },
+ {
+  "id": "bovec_quake",
+  "kind": "Site",
+  "label": "Fault",
+  "value": "Ravne fault",
+  "source": "https://nhess.copernicus.org/articles/12/1659/2012/nhess-12-1659-2012.pdf",
+  "verdict": "confirmed",
+  "note": "Ravne fault"
+ },
+ {
+  "id": "soca_quake",
+  "kind": "Site",
+  "label": "Magnitude",
+  "value": "ML 4.9 (ARSO); Mw 5.2",
+  "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+  "verdict": "not stated in source",
+  "note": "Ujma gives M 4,9 (ML); Mw 5.2 is not in the Ujma article (it is in NHESS 2012)"
+ },
+ {
+  "id": "soca_quake",
+  "kind": "Site",
+  "label": "Depth",
+  "value": "about 8 km",
+  "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+  "verdict": "confirmed",
+  "note": "okoli 8 km"
+ },
+ {
+  "id": "soca_quake",
+  "kind": "Site",
+  "label": "Intensity",
+  "value": "VI-VII EMS",
+  "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+  "verdict": "confirmed",
+  "note": "VI-VII EMS"
+ },
+ {
+  "id": "lj_seismic",
+  "kind": "Site",
+  "label": "Area",
+  "value": "275 km²",
+  "source": "https://en.wikipedia.org/wiki/Urban_Municipality_of_Ljubljana",
+  "verdict": "confirmed",
+  "note": "275 km2"
+ },
+ {
+  "id": "lj_seismic",
+  "kind": "Site",
+  "label": "Population",
+  "value": "297,575 (1 Jul 2024)",
+  "source": "https://en.wikipedia.org/wiki/Urban_Municipality_of_Ljubljana",
+  "verdict": "confirmed",
+  "note": "297,575 as of 1 July 2024"
+ },
+ {
+  "id": "lj_seismic",
+  "kind": "Site",
+  "label": "Districts",
+  "value": "17",
+  "source": "https://en.wikipedia.org/wiki/Urban_Municipality_of_Ljubljana",
+  "verdict": "confirmed",
+  "note": "17 districts"
+ },
+ {
+  "id": "lj_seismic",
+  "kind": "Site",
+  "label": "Reference event",
+  "value": "14 Apr 1895 Ljubljana earthquake, ML 6.1, VIII-IX, epicentre Janče, 21 deaths",
+  "source": "https://en.wikipedia.org/wiki/List_of_earthquakes_in_Slovenia",
+  "verdict": "confirmed",
+  "note": "14 Apr 1895, Jance, 6.1 ML, VIII-IX, 21"
+ },
+ {
+  "id": "idrija_cherplan",
+  "kind": "Site",
+  "label": "Area",
+  "value": "293.7 km²",
+  "source": "https://en.wikipedia.org/wiki/Municipality_of_Idrija",
+  "verdict": "confirmed",
+  "note": "293.7 km2"
+ },
+ {
+  "id": "idrija_cherplan",
+  "kind": "Site",
+  "label": "Project dates",
+  "value": "1 Jan 2011 - 31 Dec 2013",
+  "source": "https://giam.zrc-sazu.si/en/programi-in-projekti/cherplan",
+  "verdict": "confirmed",
+  "note": "1 January 2011-31 December 2013, lead Regione Autonoma FVG"
+ },
+ {
+  "id": "strunjan",
+  "kind": "Site",
+  "label": "Height",
+  "value": "up to about 80 m",
+  "source": "https://www.portoroz.si/en/objects/strunjan-cliff/",
+  "verdict": "confirmed",
+  "note": "up to 80 m"
+ },
+ {
+  "id": "strunjan",
+  "kind": "Site",
+  "label": "Length",
+  "value": "about 4 km",
+  "source": "https://www.portoroz.si/en/objects/strunjan-cliff/",
+  "verdict": "confirmed",
+  "note": "about 4 km"
+ },
+ {
+  "id": "strunjan",
+  "kind": "Site",
+  "label": "Geology",
+  "value": "flysch, about 40 million years old",
+  "source": "https://www.portoroz.si/en/objects/strunjan-cliff/",
+  "verdict": "confirmed",
+  "note": "flysch ~40 million years"
+ },
+ {
+  "id": "strunjan",
+  "kind": "Site",
+  "label": "Protection",
+  "value": "nature reserve incl. 200 m marine strip",
+  "source": "https://www.portoroz.si/en/objects/strunjan-cliff/",
+  "verdict": "confirmed",
+  "note": "200-meter-wide marine strip"
+ },
+ {
+  "id": "sitarjevec",
+  "kind": "Site",
+  "label": "Hill summit elevation",
+  "value": "448 m",
+  "source": "https://en.wikipedia.org/wiki/Podsitarjevec",
+  "verdict": "confirmed",
+  "note": "Sitarjevec Hill 448 m"
+ },
+ {
+  "id": "sz_masts",
+  "kind": "Site",
+  "label": "Station elevation",
+  "value": "582 m",
+  "source": "https://en.wikipedia.org/wiki/Postojna_railway_station",
+  "verdict": "confirmed",
+  "note": "Postojna station 582 m. MISLEADING context: this is the elevation of Postojna railway station, not of the masts or affected section"
+ },
+ {
+  "id": "innorenew",
+  "kind": "Building",
+  "label": "Gross floor area",
+  "value": "8200 m²",
+  "source": "https://innorenew.eu/2020/01/innorenew-coe-begins-construction/",
+  "verdict": "confirmed",
+  "note": "8.200 m2 gross built area"
+ },
+ {
+  "id": "innorenew",
+  "kind": "Building",
+  "label": "Construction",
+  "value": "contract signed 8 Jan 2020; works began January 2020; contractor VG5 with Marles hiše Maribor",
+  "source": "https://innorenew.eu/2020/01/innorenew-coe-begins-construction/",
+  "verdict": "confirmed",
+  "note": "contract 8 Jan 2020 with VG5 and Marles hise Maribor"
+ },
+ {
+  "id": "maribor_pilots",
+  "kind": "Site",
+  "label": "CINDERELA dates",
+  "value": "1 Jun 2018 - 30 Nov 2022",
+  "source": "https://cordis.europa.eu/project/id/776751",
+  "verdict": "confirmed",
+  "note": "1 June 2018 - 30 November 2022"
+ },
+ {
+  "id": "maribor_pilots",
+  "kind": "Site",
+  "label": "CINDERELA budget",
+  "value": "EUR 7,596,365.25 total; EU EUR 6,729,219",
+  "source": "https://cordis.europa.eu/project/id/776751",
+  "verdict": "confirmed",
+  "note": "7 596 365,25 / EU 6 729 219"
+ },
+ {
+  "id": "sij_acroni_pavers",
+  "kind": "Site",
+  "label": "Composition",
+  "value": "62% SIJ Acroni slag, 78% industrial secondary raw materials, cement-free",
+  "source": "https://sij.si/en/news/sij-acronis-slag-in-sustainable-pavement-blocks",
+  "verdict": "confirmed",
+  "note": "62% slag, 78% secondary raw materials, cement-free"
+ },
+ {
+  "id": "sij_acroni_pavers",
+  "kind": "Site",
+  "label": "Project",
+  "value": "GEORIS, 11 partners, lead Enalos, EIT RawMaterials; SI partners ZAG, SIJ Acroni, GeoZS, Gorenjska gradbena družba",
+  "source": "https://sij.si/en/news/sij-acronis-slag-in-sustainable-pavement-blocks",
+  "verdict": "confirmed",
+  "note": "11 partners, lead Enalos, EIT RawMaterials"
+ },
+ {
+  "id": "vransko",
+  "kind": "Site",
+  "label": "Length total",
+  "value": "26 m",
+  "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+  "verdict": "confirmed",
+  "note": "26 m in total"
+ },
+ {
+  "id": "vransko",
+  "kind": "Site",
+  "label": "Span between bearings",
+  "value": "24.8 m",
+  "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+  "verdict": "confirmed",
+  "note": "24,8 m"
+ },
+ {
+  "id": "vransko",
+  "kind": "Site",
+  "label": "Width",
+  "value": "12 m",
+  "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+  "verdict": "confirmed",
+  "note": "12 m"
+ },
+ {
+  "id": "vransko",
+  "kind": "Site",
+  "label": "Skew",
+  "value": "none",
+  "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+  "verdict": "confirmed",
+  "note": "no skew"
+ },
+ {
+  "id": "vransko",
+  "kind": "Site",
+  "label": "Campaign",
+  "value": "25 Sep - 21 Nov 2006, 58 days",
+  "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+  "verdict": "confirmed",
+  "note": "25 Sep to 21 Nov 2006, 58 days"
+ },
+ {
+  "id": "vransko",
+  "kind": "Site",
+  "label": "Vehicles recorded",
+  "value": "147,524 (about 74,000 five-axle articulated)",
+  "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+  "verdict": "confirmed",
+  "note": "147 524 vehicles; approximately 74 000 articulated 5-axle trucks"
+ },
+ {
+  "id": "vransko",
+  "kind": "Site",
+  "label": "Instruments",
+  "value": "10 strain sensors at midspan soffit (2 per beam) + 1 upstream and 1 downstream gauge per instrumented lane; SiWIM Nothing-On-the-Road",
+  "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+  "verdict": "confirmed",
+  "note": "ten strain sensors (two on each of five beams) at midspan soffit"
+ },
+ {
+  "id": "vransko",
+  "kind": "Site",
+  "label": "First natural frequency",
+  "value": "5.32 (measured, first longitudinal mode) Hz",
+  "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+  "verdict": "wrong",
+  "note": "Source: 5,32 Hz is the first longitudinal mode of the orthotropic plate NUMERICAL MODEL (Section 3, model properties), not a measured value. \"(measured)\" is wrong. The paper also quotes 4,33 Hz for the simulated 25 m bridge in Fig. 2"
+ },
+ {
+  "id": "tomacevo",
+  "kind": "Bridge",
+  "label": "Mapped geometry",
+  "value": "east deck 205 m; west deck 205 m",
+  "source": "https://www.openstreetmap.org/#map=17/46.08741/14.53244",
+  "verdict": "not stated in source",
+  "note": "Cited source is a generic OSM map-view URL (#map=17/...) with no feature id; it states no length. 205 m is derived from geometry and cannot be checked from the link as given"
+ },
+ {
+  "id": "catez_bridge",
+  "kind": "Bridge",
+  "label": "Mapped geometry",
+  "value": "road deck 371 m",
+  "source": "https://www.openstreetmap.org/#map=17/45.89423/15.60330",
+  "verdict": "not stated in source",
+  "note": "Same issue: OSM map-view URL, no feature id, no stated length"
+ }
+]
