@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Add an object, ZAG Digital Atlas</title>
+<meta name="description" content="Add a structure to the ZAG Digital Atlas from a drawing on the map, pasted coordinates or a file, and see its model at once.">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/twin.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="thdr">
+  <a class="brand" href="index.html" title="Back to the map"><img src="img/logo.webp" alt="ZAG"><b>ZAG DIGITAL ATLAS</b></a>
+  <span class="crumb">Add an object</span>
+  <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
+</header>
+<main id="main"><div class="wrap home">
+  <h1>Add an object</h1>
+  <p class="lead">Draw a structure on the map, paste its coordinates or load a file. The model appears at once and the object is placed on the map. Everything added here is marked as not verified.</p>
+  <section class="panel aip" style="margin-top:20px;text-align:left" aria-label="AI reader">
+    <h2>Read a description, a drawing or a photo</h2>
+    <p class="note">Optional. An AI reads your text or picture and fills the form below as a draft. It reports only what the input states or shows, and it never invents dimensions or coordinates. Check every value before saving. The draft stays marked as not verified.</p>
+    <p class="msg" id="aiState" role="status">Checking the AI reader</p>
+    <div class="aigrid">
+      <label class="fld"><span>Description or pasted text</span><textarea id="aiText" maxlength="20000" style="font-family:inherit;font-size:inherit" placeholder="For example: steel footbridge over the Krka in Novo mesto, 126 m long and 3 m wide"></textarea></label>
+      <div>
+        <label class="fld"><span>Picture or text file</span><input id="aiFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif,.txt,.md,.csv,text/plain"></label>
+        <label class="fld"><span>Access code</span><input id="aiCode" type="password" autocomplete="off" placeholder="Given by the atlas owner"></label>
+        <label class="fld" id="aiUrlRow"><span>Service address</span><input id="aiUrl" type="url" placeholder="https://your-worker.workers.dev"></label>
+        <div class="btnrow"><button class="tbtn solid" type="button" id="aiGo">Read with AI</button></div>
+      </div>
+    </div>
+    <div id="aiOut"></div>
+  </section>
+  <div class="tool">
+    <form class="panel" id="form" autocomplete="off">
+      <h2>What is it</h2>
+      <label class="fld"><span>Name</span><input id="fName" required maxlength="80" placeholder="For example, footbridge over the Sava"></label>
+      <label class="fld"><span>Type</span><select id="fType"><option value="bridge">Bridge</option><option value="footbridge">Footbridge</option><option value="tunnel">Tunnel</option><option value="building">Building</option><option value="cableway">Cableway</option><option value="dam / hydropower">Dam or hydropower plant</option><option value="tower / mast">Tower or mast</option><option value="other">Other site</option></select></label>
+      <label class="fld"><span>Description</span><textarea id="fDesc" maxlength="1200" style="font-family:inherit;font-size:inherit" placeholder="What it is and what was done there"></textarea></label>
+      <label class="fld"><span>Source link, if there is one</span><input id="fSrc" type="url" placeholder="https://"></label>
+      <h2>Dimensions in metres</h2>
+      <p class="note">Leave a field empty when the value is not known. Length is measured from the drawing when left empty.</p>
+      <div class="fld3"><label class="fld"><span>Length</span><input id="fLen" inputmode="decimal"></label><label class="fld"><span>Width</span><input id="fWid" inputmode="decimal"></label><label class="fld"><span>Height</span><input id="fHei" inputmode="decimal"></label></div>
+      <h2>Where is it</h2>
+      <div class="seg" role="group" aria-label="Shape" style="margin-bottom:10px"><button type="button" id="gLine" aria-pressed="true">Line</button><button type="button" id="gPoly" aria-pressed="false">Outline</button><button type="button" id="gPoint" aria-pressed="false">Point</button></div>
+      <p class="note" id="gHelp"></p>
+      <label class="fld"><span>Coordinates, one point per row as latitude, longitude</span><textarea id="fPts" placeholder="46.0569, 14.5058&#10;46.0575, 14.5071"></textarea></label>
+      <label class="fld"><span>Or load a file: GeoJSON, KML, GPX, CSV or a text file with fields</span><input id="fFile" type="file" accept=".geojson,.json,.kml,.gpx,.csv,.txt,application/json,text/plain,text/csv"></label>
+      <p class="msg" id="msg" role="status">Click the map to add points, or paste coordinates.</p>
+      <div class="btnrow"><button class="tbtn solid" type="submit">Save object</button><button class="tbtn" type="button" id="undo">Undo last point</button><button class="tbtn" type="button" id="clear">Clear shape</button></div>
+    </form>
+    <div class="geo">
+      <div class="panel"><h2>Place it on the map</h2><div id="amap" role="application" aria-label="Map for drawing the object"></div></div>
+      <section class="glass stage pstage" aria-label="Model preview">
+        <div class="stagebar"><div class="ctl" id="modelctl">
+          <div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div>
+          <div class="seg" role="group" aria-label="Motion"><button id="mSpin" type="button" aria-pressed="false">Rotate</button><button id="mLight" type="button" aria-pressed="false">Light</button></div>
+          <button class="tbtn" id="mReset" type="button">Reset</button></div></div>
+        <div class="stagebody" id="pbody"><canvas id="fem" tabindex="0" aria-label="Model preview"></canvas><aside class="pickbox" id="pick" aria-live="polite"><b>Model</b><p>The model appears when the shape has enough points.</p></aside></div>
+        <p class="note stage-note" id="snote">A line needs two points and an outline needs three.</p>
+      </section>
+    </div>
+  </div>
+  <section class="panel" style="margin-top:16px;text-align:left">
+    <h2>My objects</h2>
+    <p class="note">Saved in this browser only. To show them to everyone, download the file and upload it to the repository as <code>data/user_objects.json</code>.</p>
+    <div class="btnrow"><button class="tbtn" type="button" id="dl">Download my objects</button><label class="tbtn" style="cursor:pointer">Load a saved file<input id="imp" type="file" accept=".json,.geojson,application/json" hidden></label></div>
+    <div class="mine" id="mine"></div>
+  </section>
+</div></main>
+<footer class="tfoot"><p>The form reads coordinates and dimensions without any AI. The optional AI reader works only when the owner has connected the service. Objects added here are shown as not verified until a source confirms them.</p></footer>
+<script>window.TWIN_NO_BOOT=true;</script>
+<script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+<script src="js/twin.js"></script>
+<script src="js/add.js"></script>
+</body>
+</html>

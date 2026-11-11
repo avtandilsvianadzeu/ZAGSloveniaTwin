@@ -1,0 +1,826 @@
+{
+ "updated": "2026-11-11T18:04:49.069Z",
+ "source": "Google News (sl-SI), headline match on Slovenian keywords",
+ "items": {
+  "ravbarkomanda": [
+   {
+    "title": "Galerija: viadukt Ravbarkomanda nekoč",
+    "source": "Siol.net",
+    "date": "2026-09-09T22:22:39.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
+    "outlets": 1
+   }
+  ],
+  "nm_brv": [
+   {
+    "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
+    "source": "Svet24.si",
+    "date": "2025-12-10T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
+    "outlets": 1
+   }
+  ],
+  "strunjan": [
+   {
+    "title": "Strunjanski klif: naravni biser, ki ga ogroža erozija",
+    "source": "Najdi.si novice",
+    "date": "2026-08-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOUjZNT19kX0tlbExJc3p6YWx6RWxwcFJnSDlQcFJYUkJRdkRnbXlMU2NWWE5IWkl6ZlFQVUtGWEpzQTFtYWtNNEUxdHBDRmRSZlJvMnBoV2ZMNmZUOUJRblhsRGNOR1ZULUJFbF9weDg0SlVTbFFTTUpDWG15dzNRS1FGNFUtN2Vwak12NTczbmFiUTZSdVBXNXY4akdDMEFLQnpCYnhTdUVic0hET3M1dnpXSkpzRl9yN282dmFuN0M3bVZ0eWdscTI2b244U0stSUprdzhTcWFvdzg?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Mesečev zaliv: Skriti biser slovenske obale",
+    "source": "Najdi.si novice",
+    "date": "2026-07-07T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOUWQ3VjBBSUlzaFhfbWhHRWwzS1J3eVNMcnpSQ2RNQXFfYzZRUU1tNV9FbHNnY18zeWlFNWJ5M1daMXZjWks1d2pqNkNvS3NzdllXWjdtZERCYkdkZHkyQTBJSlRzanBFSDhVX2NjMFp5ZlJtSzFxaW9mLUxSVzNBVU1PaVd4czRCMk00NzN5bFFXRkdrTGFVbmRXb0k1RlBUbGcydFRfaEdSMjYtdGRReVVxamZXWm5hRmxJbWMtRFRJRjVacmRaRUpZcG1naEk?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Dva mejnikа za Strunjan: ohranitev strunjanske artičoke in obnova poti v Mesečev zaliv",
+    "source": "OBALAplus",
+    "date": "2025-12-04T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPczFzcVRnRHNCU1FGb2hzVi0zRk85LXktN3NXQW1YQVFjWENjQjdMTkZXc01UT3VQU1Z0dVAyMDRTSXRIU0pWeTlhSUlQM3ZXZjNIV1pOUldzcXhaQlExQndDNExXZHl0ZWFoVGQtNWs3RkJoV2QteUxBRGJrc3hXT2NWRDhsbEVKNVRaa2xjUERMWi1PTTJuMVp4WWEtN21kZzBsVUhzQXNFd1FnWlR1eTBB?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Zgradila sta jih oče in sin: Kakšna zgodba stoji za stopnicami, ki vodijo v Mesečev zaliv?",
+    "source": "Večer",
+    "date": "2025-11-21T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUnNZUWtFQVVKQldmS0x0WHlvT2EtMkhJa252czQwRW9XTG91OXNPVzg4V3gxUGJDOGlBbDd2TDFVQl9vS3BBaWg2QXBTT3hTNmx0Ym9TTjlBbzJVU3F4T1hEMUNVeUZXYmFGaG44cnd2VGFZblQ5RkJwY3MwWHNqV1Q4NnFKcW4tQ0EzMkIzelA2TUlDZXlocHZhZmZjby1ZZ09SWGJhcE9FZVVhOGRMTjEyUFU0dWVtOS0xWWZhRm5lZw?oc=5",
+    "outlets": 1
+   }
+  ],
+  "sitarjevec": [
+   {
+    "title": "Rudnik Sitarjevec v Litiji eno najbogatejših najdišč različnih mineralov v svetovnem merilu",
+    "source": "rtvslo.si",
+    "date": "2026-04-26T06:40:38.000Z",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdW1JWUcxWnRkb09hcGJ3Q2YxRVVtVWhTalk1MTUwZG1iazFreUoyR1FkV1Juc1oyRE81SzM1WGRZQjNDWm5fY3NIZFVVNFdwVXFoSU5LYld1VTdjQlh6Vlhfbk9yN2N4dFZoMDltMmt5MmtNVWdTRmdkRlVCLVBINg?oc=5",
+    "outlets": 1
+   }
+  ],
+  "zag": [
+   {
+    "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
+    "source": "Večer",
+    "date": "2026-10-08T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhiUk5DMU9IdmZzN0s1SFZzOHlYTm5rcHlobGttQ29uMjgzVERyM1VjLUdpTTIwNFQ0dDY3Yk9SeDZNTkNiaGQ5UVh1Uy1CRlk4YTZwdWNCZUJkcmVFWnVSNUlremJxQ2NObDNMbnBtdDF0V0tyeHgyWkZ4MkpiMmlxSExWN3ZLcmw5ZWd5d3Q4dGNnc0RhOU5KRVdDMXRWNTZzcFZDT2huU0xSZXRma2hmcDM?oc=5",
+    "outlets": 1
+   }
+  ],
+  "zag_logatec": [
+   {
+    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
+    "source": "MojaObčina.si",
+    "date": "2026-10-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
+    "outlets": 1
+   }
+  ],
+  "innorenew": [
+   {
+    "title": "V Izoli uspešna izvedba Mednarodne konference InnoRenew CoE 2026",
+    "source": "Primorske novice",
+    "date": "2026-11-07T06:04:26.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxON2JmQTVwM0tUb1R2TG02SjJqOEhKVFRPaGNKNEdjS3B2THV4cDNaaDY2b3FCRTh4LUtCdXUxckRRTmh0YkJlREc3Y2kxMjRiMmtqeVVoVHp6SUljSWVnc0ZlMGROZU5wNzduMTB6UlZkZl9leVFxV0RROFh6S3hsRlJ3Q3ZSYmFQWENXZGhrZ1ZBQWFzWjZ4N3dqMk1VNzlXZFZoRlVDT1lYVHYyN2c?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "Uradni začetek projekta WISE na UP IAM, InnoRenew CoE v Izoli",
+    "source": "Primorske novice",
+    "date": "2026-09-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPalMwRmcwaU5Hdjd3MXM0VUZrTDJDa3dJOXVKRVk5RTJfcjQ5Nmh3dGlKdWtxZElQQkZ5WVhvRVNTTEIzUktUdUh6UXYwRmJna3BUcVYxY0RjaEJqeDNoME1ZdUdQQzktVkpZenpUZmt5TXJ6VG90aGtHUzdyRkFCNm1kQ1NIOTk4MElOQjlTV2QwSEY3My00SldYd2p3NmwxUTdWbU5iTEM?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Raziskava o zaščiti lesa na biološki osnovi raziskovalcev UP IAM, InnoRenew CoE, prejela priznanje Editor’s Choice revije Forests",
+    "source": "Primorske novice",
+    "date": "2026-08-08T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQNXFfVjNyZi14WHV5VGNXOGNPZDUwQTZmbGFPT2FVZnk0Z19KTGdNejRkaVFYWWRnMGhta0tKQlAwZ1loWGlmWHJTX3NOZWxONEpfcm1QNWJCT2haVndZbXMtNFZPSjZYdEN3ZU90aWtpeUFhWEpSR2UwWFkxVG5naWdxdy1jME5mcVlQLTJJcklnX2RVVElqZldUaXl1ODAwQld3bVg4d1N3MFhiQ2FydXFGbVdsQ1VJZC1KUGV3YWVnUDhBTnhNZ0dEXzgzWVBFNjNXZ2hWUGdyT1RzbTl6eWZOVEdXd0ZZNnZ3b285WWtTR010NmZIajB5Qm0tbjlnNUE?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Želite izvedeti več o kakovosti zraka v vašem domu? Sodelujte v raziskavi Innorenew CoE, UP IAM",
+    "source": "Primorske novice",
+    "date": "2026-08-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVJxdUFqWEc0c2x4OExmcER6RkJUS0xIcHhFV2poOE5FaEFiQ0drazBCbUhvVTNtM3VaTmR4bXBVV0p0c2hVSFFUTWE4aU1INktKWm5xaEVrY1JhWnByR2Ntb0tQcC14cDNXWUlTNnJMdFJsc2ZNVTNpRVJOcHQ4VlFjTVJVZEVha2xMUld4S2JISi0wOF9EMjFzcEtzMFVNOHVISXlSWlpFdDBkY2J3QVNIYXFLaDBHc1l5T2Jpa1RxcGE4d1VUVXVUOFFQODByUFVHQQ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "InnoRenew CoE, UP IAM organizira konferenco IRIC2026",
+    "source": "Primorske novice",
+    "date": "2026-06-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "ZA BOLJ ZDRAVE IN PRIJETNE STAVBE: InnoRenew CoE in UP IAM z inovativnim projektom 'BUILDWELL'",
+    "source": "regionalobala.si",
+    "date": "2026-01-31T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVXIyc1FLaTFKU1dnWTVBX1hQdVc5MEdxVGp4TjNjQlEwQmhYdmdrN1cwMzRQSXNRNVhhaEdIQXJuMXFSNVIzZ0lwWVZzdl8xRkszeFdOU1lvMXpaYlhYZDhCMDZsQlRCaTZKTGZ5RFhqYlFkMzlqbEhXQkMyM0JUX2ZjdXJtZlNabmRtX1RrYk80YV9aYzVEcUhJOWhPNk9tUnY3R1pRaVZWTFBXeHRyV3g0dXJSb1duWlpaZTdjWmhHNmRQT1E?oc=5",
+    "outlets": 1
+   }
+  ],
+  "ulfgg": [
+   {
+    "title": "IZS študentom ljubljanske fakultete za gradbeništvo in geodezijo podelil najvišja priznanja",
+    "source": "Finance.si",
+    "date": "2026-06-17T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxONllRclhtYzJ3RkRYb1FROTNOTmpVVnozSHNTS2VaNWtQdGxCbExkV1RDR2xhTXZlYjdCRUtxRm01aGVOb1NOQ2xDZlg2MXcwVkxobzl6SU9zc3NxZFJudGl1VmVST214SmJFZkxxY3dUUVc0QkxPMUtyNTNkalB6a2RGQUo0YlgyaTRXeVh4UjNfRXNWQzk3TFBGNXdUMmhkZU5VRVhadWxETVZpMU10clV1ZmdKYWRzMHZnNEZ2TUFIQ2thSUMtdVNwTmFHb3hucXZsUUVlSE0?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Hackathon GEO Slovenija: drugo mesto študentov ljubljanske fakultete za gradbeništvo in geodezijo",
+    "source": "Finance.si",
+    "date": "2026-06-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQS0pScG9YaFVyTGItZGc3bHFQTElPVlh2X3ExT3ZWS2RDbk0zMHBJaEpwZzQwdDV4TEVZVWFtdko3VEYxbHVLZWxhSUVhb3hBM0k0WUd3TlllOTRaYWlzZXp0RnZSazVLYkZrQWZMdnEzNGNlUmNtV25YTFhMUURPakh3bUF4bDFxUkdHR2NBUFhkNnRFWnhGdllLVDFFUWk1cnU0LVEtTTJYaWZvNEZ5QlI4NF91VmoyeUlfb1B4eTBaNUNRRkdCamxzcEpTRUdjM3QwdkFMeUFLU3o2em9F?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Študentke ljubljanske fakultete za gradbeništvo in geodezijo prejele prvo nagrado",
+    "source": "Finance.si",
+    "date": "2025-11-21T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOMkFMNG55Q2xBWVd4cEZqcWxYemEwMy13MTlqUUxTQWNvRGJGOU1iWEdDa0NMSC1ERU1OdURpeFhETGZZblNJckpwZzNOMlJKZDZsTkdxMUUtZXRrWVpLNUJfbWt2UWt2RDN2TW5oRnY2Y2pidGduT2xTcVo4NEdLVWFza1JiRkxhajYyQXRFdjRDdHEzN1lPNkh3QTkzS2dhc0dGUXZNV3VheGxuaGVQeFBVOVhJdjVMYTY1TXJhVlNoN0pYM3RyNFc1SQ?oc=5",
+    "outlets": 1
+   }
+  ],
+  "karavanke_c": [
+   {
+    "title": "Zaradi varnosti zapirajo predor Karavanke",
+    "source": "Siol.net",
+    "date": "2026-09-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "Predor Karavanke: na avstrijski strani se kolona krajša, na slovenski daljša",
+    "source": "Delo.si",
+    "date": "2026-08-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdURWdFlIRXZfMGlZSFM1cjVMWmZUVjR4WklsXzVScG04ZzN0N1FCaktWLVBrckNkSFRwajAxVm1KNkEzMllDeXRkT3QyRl85eHpXN1hnY2wtOHcyUmV2YklxT3dVbGZDTTZ0S0h2YmJyLTlZWjBkTlV5cm9CRmZoOEFxTQ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Na avtocestah tudi danes kolone pločevine, predor Karavanke občasno zapirajo",
+    "source": "Dnevnik",
+    "date": "2026-08-02T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOTXl3ZTdDbm9CUl94S1VaZWJjX2lnS1VwVHRoR3NQRzZ5Wk03VEg5WVlDWkpCMXhzOU1fclRLVHVURGh5a0Y1TWxyM25PMk8teW9ubnRGWEVRd1l1Z2FOTDN5bnBwTFNKMXU5UnM2cGlmZXhpaHBjbUMxY1Z0a3lod2tIY1otZ2F5UUpsd0tYemNxeGc2SHRvUl9SOXllMDU2V3pfZ3Z1cXRPMl9KSlFEZ0xqc0kwbmRtYVZz?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Kako je videti vožnja skozi novo cev predora Karavanke (VIDEO)",
+    "source": "N1 Slovenija",
+    "date": "2026-03-24T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPUDVrdUZ4aDhVQVh4Rk4wb0Q4ZGlrRGhEQkl4LWd1eFphM21sRFNRbTJEaDNjT0pkdkxXeUJranphVVdEZmFCYjZPUWFHNWRBV0NXeHBPVW9hdDBWVXE0MDRuQnZGa2t0bkRPLU5YdGUxaE5zZkpSNTVhRUxjYkduWHhNM0NGWjRkVDcwZTFUeGtSWUVl?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Stekel bo promet po novi cevi predora Karavanke",
+    "source": "Siol.net",
+    "date": "2026-03-20T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUndjQ3hWbXJVR1hmSkl0ZV9HX3ZFOEdXSkFmVl9IVkl6cnNzNC15UzZ5c3dwSHV2MW9kWEVWUGV0UkppS3NMZm03S2tjRlMycmszbE10MEFKa3RpTzVyNEZEb3ZRRktWeHVEQk9EbFViYUwwS3hOdmwzT2E1alVabEJLLTh1Q1dhYzJyNTh6MWhFZw?oc=5",
+    "outlets": 8
+   },
+   {
+    "title": "Predor Karavanke: za 78 bazenov betona in za Eifflov stolp jekla",
+    "source": "Slovenske novice",
+    "date": "2026-03-19T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaU9kdGgzM0JkVFJzMFpYQldVVjU2MXc1Q1RlY2lfb3F5US1HQlpnSFMwaUpMMmhGUnVSYVg3eHgzWjdxM05EZ25DNXdZY2ZOM3VIR1BRekd1VE51MmxtQXdrNDcyaFhvWVBSeFNBTUZIRmpVY1EzOUN1Qm5SMXoxTERiX1VQd2FRaGpLRlJpdVRweTJQakoySEVxN1ljX1NxeHJHZWh0WkN4cXh5WnRDRllR?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "(VIDEO) Zapeljali smo se skozi novi karavanški predor",
+    "source": "Dnevnik",
+    "date": "2026-03-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVFpoZF9Sa0J0dUV6TUFCVDN0YmlQcWdtTFJKVG9NajJleTF2YkxXMENBUi1GTmtabzlhMkNLQnByZTRMMWE3QlEyMWlsS1E1Z1F5enRyb290TUpzdlByMUlzaTI1ZjN3d2ZPclBlZEdvNjJOZjJiTVNHVW5JUzNNbjBrdWtEODBFbDN3ZDFJVkM3MEUyOHVmYm0zdVVSaHN6TlE?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Druga cev predora Karavanke se odpira kmalu, a se za tri leta zapira prva",
+    "source": "Forbes Slovenija",
+    "date": "2026-03-08T08:27:21.000Z",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU2w4TWtGSkJmTGRJWmk3VVVNUEk1MlQ2TGxBeEhwbXVoQy1FaVh3YjdzaC1mWlRabVBWcjVOX2xlaTBQc1hhYWZrMnAtT1I4Q1VjeUhOQ192LWk4Y2hEalU1SXNXNV9IYlpqekU1QVlLekJNcUVnbDU4WXIyeFFpVHAzajlybjl4SE4yTTczOGZzUWEyN3E1R2x5dV9qZ0NIa0FRQ25FSQ?oc=5",
+    "outlets": 1
+   }
+  ],
+  "golovec": [
+   {
+    "title": "Vozniki pozor: Predor Golovec bo zaprt v obe smeri",
+    "source": "Svet24.si",
+    "date": "2026-04-09T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZlVldlc1cUFsZG9tUDdXb29iZ1hpRUZxLWpVYXpUWW43NFFrdEU3b290YWhiVFNPN253UGg0U190QV9CbTFfajZIaUpIWWc3dDBrdVhkb01qb25yaUxqVDNqR092cUhIRDJXVUJEbC1PcEpkSTJmT2NtODFOWGlZWF95WGtFYUdBZ0d0YVJB?oc=5",
+    "outlets": 1
+   }
+  ],
+  "sentvid": [
+   {
+    "title": "Predor Šentvid bo nocoj zaprt v obe smeri: preverite obvoz",
+    "source": "domžalec.si",
+    "date": "2026-10-08T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSk9DNGY4NHE2RjR2NE50SVVDLS05T0VKUVBSOGpQOHlHSTZkdlV3eGdCMkdlYXphT0R5STlfNUFmWXo1RE84ekh2d3E1b0RiaDg1Mk84bVNwZ3d1NGEyR01TWXo2UHRHLTd4eExRV2VJbHBTZnplSEgxZENNMkxLWWN5VVVYV2xfRTRvWUo1UGVKYk9QUnJ6dWZ0UQ?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "Na primorki zaradi okvare vozila zaprt vozni pas. Predor Šentvid ponovno odprt",
+    "source": "Dnevnik",
+    "date": "2026-06-30T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPQ3FvclpFSjVOR3hERS03QlpXSDlYYlRkQldJbUJ0Y2dXekpPWGdGNkNLaTdMbklNMERQME9HVDJfQjdta0VqYkFVSjB6VnROdzE3aWdLeHV1eHZEcWZPcURRT2JybUMzSUoxMVgwam9PQ3FXU1hDMjlWWGdqU3QteXhYX2xJeW5zcG9pTlI0ckhZQnk3TTVJZTdtQlVVSHVFNGlFcmZJUGszZnc4ZGRGdVBBaXNhRWJ1aWdKT2xsam5vLXBrOUdUUkMyQlI?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "(Foto) Zastoj po prometni nesreči v predoru Šentvid",
+    "source": "Svet24.si",
+    "date": "2026-03-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOUXhXN2ZZOHZfc2FISVRFcmVkVmZaZkttLWZPN3pVMTRCMlFpeFI5NnhSUGQwUVdVZ00wQ29NRkpGNG1lUnFMMV9nMTcxZ1IwUWs0ajU2LWhpUWhDRU85eThiY1drNUxHSklISHlpbmtMakdwMnd1Ylh2R3B4ME55TVdsOA?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Pazljivo na gorenjski avtocesti! Zaradi prometne nesreče je zaprt predor Šentvid proti Ljubljani",
+    "source": "NaDlani.si",
+    "date": "2026-03-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSk84OUgtSkxIMjE5U3ZaS0U2cXNUWlJLVEdieEZwQmg2RTN3ZEFDV1NHVWRfLVNUUmtuSV8yZHg0MElYakduUEJLTHZEdzVtTXRnRmRuMFV1OHRYcDcwY2h4bktXcnM1R1ZEcEVMbHFsWlFKWlVRLUxxNXVsSGNBRnZ2MGh2MktiMFlwTXJjbnk2cnRnR0NORS1oU1hyQi11VkNWWUdEQ2JTLThjWld4dnNrWkFMZGNVNUNIcUZJWXhyRXo4?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Zapora predora Šentvid zaradi vzdrževalnih del",
+    "source": "domžalec.si",
+    "date": "2026-02-19T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVzhkRDFGNldfS0pjWkEwbFdaQWh4WmdYSGkwZE5sbUgzYzNWS2s3Nm12UWJ4eEtLeDlXbGxyUUVHdTFPNzB5TzF4Y1FwYlllaWZlMEZVR0dtU0ZmUzdWRS1lQ3ZQdHVHQ2VfYWdKdWZMdk1CVkE5TGJicFliNm1EU1hYTnB6R1pqUGw0Yw?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Kolaps na cestah: od centra Ljubljane do predora Šentvid ena ura vožnje (FOTO & VIDEO)",
+    "source": "N1 Slovenija",
+    "date": "2026-01-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYkpKWmNFZnpmM0E3aFdxN0ZtaGZQMkpVUnZ2Y2UybWozYWpQSU9fbmVwN2JJal85bTVwdnVMWHFIdUY3cGlsbjN4MzdaZVdiMkdGQlFucEY3d2lGRkp3MFljUjlwMURFbnN3REZPOU85V1p2RWJWV2lrZmJlc3J4SFR0c3VlMzgwOFBRcU50RGRLamUzTHdkTnp0NkdxZw?oc=5",
+    "outlets": 1
+   }
+  ],
+  "trojane": [
+   {
+    "title": "Drama na Štajerki: V predoru Trojane v kratkem času dve nesreči, obakrat zaradi iste napake",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-11-01T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdktoZWM4emRiUURVb19wWGl5ZEg5dlYweU9pbF8wekVkMXpmRkxKR2toRnRDc09UUXFTMnNueEdXTl84eHVjUGRMdDVBX1JmOTlVS3JfVjBxek1pNmFXWkUtdDVZR01JXzhYcXNpbURQYks3a2hQcFNlVFlxa2JtNXV2QkRFNFc2QXRzUmJKa0xrdGtmbGtranRZTXpwWGFOY2tlWk1pSjA3YVVVWjlYR3o0UEEwSWgtMjBlNHBTRlpvUmpiaFJvT093cFFfOU5uWkV3?oc=5",
+    "outlets": 4
+   },
+   {
+    "title": "Med vikendom bodo zaprti trojanski predori",
+    "source": "Svet24.si",
+    "date": "2026-09-04T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPXzFTXzlGUWRpa2ZVVUx1YkgxQWNSTk1vY2Z2VWVocFlsdTVuZDhkYS1jTHVZVkpwWmk0bDlkQlYtSUl0MTNQYTlhMEp5WkN5ci04MnZ3ZUdtZnp5MUkwdnFEYnY4WVdoWE95V3Z6bC1YNzBPVXlyVDJkRk5wb2RDNm5IRUZyWDF1b01PSFJ6aEtnbHIxTmZN?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Trčenje štirih vozil v predoru Trojane: dve osebi poškodovani",
+    "source": "Siol.net",
+    "date": "2026-03-02T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVE4tVW4wcHhlVXN2NTF3YkV6cG83RHlaa3FPQ3pteXBLVTdpMi1HYnRqMDhNM1pPNzlkYXNhd1I0Z0ZQam9wX1FLTnUzNUFBQkVsNy15SnJsN25EalhtLTIwaHJjbGhWdmExS19FZlJQV3ZwOG5DeWlFRFV1MGV2bHdhSVpUVjVSelhtMWhYLXRndEN3UUwxVDRDMDFycTQ1Zmdn?oc=5",
+    "outlets": 1
+   }
+  ],
+  "kastelec": [
+   {
+    "title": "Na jugozahodu težave zaradi burje, proti Ljubljani je zaprt predor Kastelec",
+    "source": "rtvslo.si",
+    "date": "2026-11-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
+    "outlets": 5
+   },
+   {
+    "title": "Objavljeno policijsko poročilo o nesreči Pirc Musar v predoru Kastelec",
+    "source": "Info360",
+    "date": "2026-09-29T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPaWxQSEFZQWg4VFZQWTd1bzRSRGxIZkpPcDU0Y0RTU08yZGtuVVlfZTE0bWlsWHRuYTRGMC1Ta3l4cHlUT0xNUmcwQ1NHRDAzRjR6b0xLX1lVY2NMclJDVDRwZVdKaXMyT0d0T2pKMlBqbFZ1QUg2OFBHczlLRUNoV0hMb3daZ1NHc0MwelEwQlRGbGp3Tko4S3JqZ0dRVC1P?oc=5",
+    "outlets": 6
+   },
+   {
+    "title": "(FOTO) Predor Kastelec je bil znova zaprt zaradi prometne nesreče",
+    "source": "Večer",
+    "date": "2026-09-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1rTi02bS1vR3I3WGdQVG45RUpFRVFqT2VMU0dQQ2t6X1NyMHdQaTJ0d1hsWnBvZ1JmOFdnbnB6bDNBcVZlOWRlclg2U3MwTThOeE9USkstNTFpR2tEUkx4VTNOaDR4aVdjX2pvdnd3dWctV0ZZMUE?oc=5",
+    "outlets": 6
+   },
+   {
+    "title": "Prometna nesreča v predoru Kastelec: vozili je po trčenju odbilo v steno",
+    "source": "OBALAplus",
+    "date": "2026-09-25T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVnJNeVNJeDB6cFNxVTZscHRDVHByWl9uRjQtUTB5X3JVYTR1bzA4RDdoRzQyaFdWdDc1YjVGUUp1OFAyUnhNOUNVTHJkTHp1Vm5zT3pOVzNRV2xwby14Zng1alRHcW01aDJCVVlMendfTzRwdWRGOW9zQUU1Z1pjZW5fV0NkQUpQMGlNa3lGMk9sSER6cVo5Rg?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "(FOTO) 50-letnik v hudem nalivu zapeljal v predor Kastelec, ga uspešno prevozil, nato pa ...",
+    "source": "Večer",
+    "date": "2026-09-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNaDEtQWplLUZWRVg1SlNiQUg2aEtkc3R3eXJxUUxMRTVFQTM5VkNWblIwNlRITHlncTNNRmhXZ3YzZThIY2hoS2IwLU05RG1nc0htUktKY1liZno4bzV5b2hNQVZwak1IYnZLQ2FrYmRfRGx1VlR4dm5majF1YnR6dnlLZWRqWUZLSTNv?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "DARS PO MESECU MOLKA: Posnetek nesreče v predoru Kastelec na voljo – a le osebno ali po kurirju?!",
+    "source": "regionalobala.si",
+    "date": "2026-09-02T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQbzQyRUxGUGlWOC1wVTFOR0hyOTZNWjN2S3dzWGZOMm1iaWJweDRwVGlLazlRekJoVXlBajdGLVdVOXUxSnZCNTNCMkhJZWx1QTU4VFMzbnJQalA3Ui05enlNTW5CTTFVRnJiekZJRVJ6eVE4emRnWXlQRm1MT1dPdU9mOHdZamdvSUdURU0wNmNmNl9BSG9zbEZScVRLNGY1QW1FTmRZeklIUHh6bjVtNHNLcWNqaHlLV19EYkw1dFZZMEU?oc=5",
+    "outlets": 3
+   },
+   {
+    "title": "Nesreča v predoru Kastelec: Laži, šoping s pretresom možganov in skrivnostna ruska prijateljica predsednice",
+    "source": "Moja Dolenjska",
+    "date": "2026-08-09T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNZDJuZEEtR3FGUTBGWHc5RTJodWhtTUdneHNGa0tKSVhVVUZWVzk2R05PMy1BXzVzVV9sM2FRQjJtXzVLNmQzY2wxcWNwekJCSnJTSDBkQzZiNVpOVHN4SmdTdVlIaktuV0VxSGMyNXVHbHltT0tTQVhjS1NzUi1iYjNNdFN4S2h3UXRkRzVheXc2bV9rdmx2dUlhZlRSbEpJdDRrZTQ2WVE2QUNUSElCbnE2cUZNWE5yT0IzNlNUUGlYREs5QkFEZmJUWlQ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Kaj je povzročilo prometno nesrečo v predoru Kastelec? | TV sporedi",
+    "source": "24ur.com",
+    "date": "2026-08-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMzNCYklTOFZGNDVZVnFKaUpjVTZaREt3RjJxY3JtQlFhMEtfa25IRmxwN3NrMVB3SnctaDJ1cFVUNjZ4RkRGYWtYQkhVNEhBMTFPMjBObW4tTERla1drVnRyOWR5WTB1YlQzV01WQjRjWjRmYkotR0xvbXRreFVfM0Jic3VMcmN2S0R2elI2QldRdV9EdjRTNWViYWlzTUVnS0t3?oc=5",
+    "outlets": 6
+   }
+  ],
+  "dekani": [
+   {
+    "title": "Počena pnevmatika in neustrezna varnostna razdalja botrovali prometni nesreči izven predora Dekani",
+    "source": "Primorske novice",
+    "date": "2026-09-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOdlBCNjNCT2lKZlZiNTBzZUVqZGRxbU4zMGprRHhrNVUxWTNmTnhxMmFWRUFiaVlTRUdPYk9ncUJYQlJmdGtjeVFOMEQta3JZenhLQnlOcmRPT1pqM3Z3U2pQVzZTcXhVLTRsbXB3TXhXUGpMWU5XdnZGc1QxUk8yaUJCOFp6WV9pTEhJeFlyX0xfVlNJc0kxWDVOcjJ2VnZOZFZrWmFmLXY1RU1aR1NDOWE1SWZHdDRmRGt4d2U2YkV5R2ZXRVdn?oc=5",
+    "outlets": 1
+   }
+  ],
+  "markovec": [
+   {
+    "title": "Po predoru Markovec kar z električnim skirojem",
+    "source": "Dnevnik",
+    "date": "2026-11-02T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNX2tCa2hDZGRwY2dPeGR0VUlub0dBNWlVODhjSXdqa1F0LTU0SVV2dWlnT3ktam85ZW9MaXlRQktqYXNJZlZlVlY5SFQ5b0Q2d0RxRTh1S1NkQmZvdTEwUGFkdG4xa3B5dTRkQ3ZwU1FZcTU4dXJmOHNKcy1sMkR1Rk8zZGppSTA?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Zaradi pranja predora Markovec ponoči omejitve prometa",
+    "source": "OBALAplus",
+    "date": "2026-10-22T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "15-LETNIK PO ZADNJEM KOLESU SKOZI PREDOR MARKOVEC: Predelani moped zmogel vrtoglavih 109 km/h",
+    "source": "regionalobala.si",
+    "date": "2026-10-20T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNbzNKWGNhR2JkWEg1RjRHOWlGemNxNlRBNjFqdTEySmE5OVZMc1Jrenh6c3JlaDJWbjVwUTFkeEpPR2Y0Umw2UjYzZzA5UXREZkRZYTVjLThyS0RUUEd1ZC1sVkNoUHM0VDVtVTF3Yy10cFVDMHJWNzFrS3BXcUpXcGRycGVESHJEMEx3RWhyamtBWTkzMmJwSTJvSzZ1bG5Sb3RaUEZ6c2ctMkV2cEV2MG9ObGljNTg5M1pRMXo2RnZaeGFBWHc?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "NESREČA V PREDORU MARKOVEC: Pijan 82-letni Italijan trčil v steno in obstal na cesti v Kopru",
+    "source": "regionalobala.si",
+    "date": "2026-10-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPamswRWYxUDZLZjNpQmlEeU53Z2tCME9veUd1Y18yQXkxZ19Jd3hjYTBLV1BXX200V1MxVXpweW5JdW5LV0pGR2RvNl9ZQVBQSUpDekliZjBNQmM1RXpqVVp2YTd5Y25pdnQzazJ1amc4T21PcmJGaVpmUWpjWEtXU0Ftb1ZGNjhacHlfbUVjNU5iMld2ei1WQl9ySFhlcGx5bWVLSUF2QTVGMTRpSWtPVFVrbUtxT2lyZk5yNFZuOW9oOVJITXc?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "DRAMA V PREDORU MARKOVEC: Eden izgubil nadzor, drugi ni uspel pravočasno ustaviti",
+    "source": "regionalobala.si",
+    "date": "2026-06-29T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRnRMcENGN0t3bkxYcVJxTVlmeTJteW5jWVNfXzlzTWdJZUY4Z2ZCeWJvckJKYklTc3Y3QjRqYmtQUjBTVU1pOVRXdGRDUFFMNEM2WmRZUDBEb0VvYjNPeG1nM25Tal9pV0hFcUwyZlZkMjgxUXAtVVFmRWFGcExrTHJpUDlUNllzMlRjSEUyRkJEamdSbWd4ekFnbU9Valk2RW9zeWZ6ZTVuaDVyRjJFa1lVdGdoQQ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "VOZNIKI, POZOR: Prali bodo predor Markovec, promet bo potekal po enem pasu",
+    "source": "regionalobala.si",
+    "date": "2026-05-21T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSXZObHVEcWpramdDNGJkeWt0bnl3RXZIUHE5ZXFtdzdPaHBhTm9sVFB5RW9hUEV5a0FuNXlVTXdlRFZzWnhZaktNRjk3Nmg3QXc2RkFUSjVEdzNnaVpfZG9NdW9sWVN3YzBJckNLc1VNS0gzM1NfaWhVOU40emF0cHlGcUVjMGxlcDNsSVdSaXJHd1NkcXN0OWdLMUIwbk4zS1JZRDIxZmdTMkxJ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Znano je, kaj se je zgodilo včeraj v predoru Markovec",
+    "source": "Primorske novice",
+    "date": "2026-05-01T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNelFxTEJrVkJqNTV4U3VSeGRrR1VQNjhHdXVTUGRmVGNfdGtGWDdzQzBDWkNGUllLMmpYZ3NyU3hsNHVCdjJRVk9WcDJydlZycFJENzBPeFBTSW5oTzBYOHR2WGZJYWpsYU5yUkJ4TXhpNUw2OVJZdmRrYW9ZZVI4LWF1WDdnb2Jt?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "Predor Markovec ponovno odprt",
+    "source": "OBALAplus",
+    "date": "2026-04-30T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VVWhOYklWT2dTYVZCdVR0NmhheWlPc1c4R2pLcm1ZMDZsSnh0VHF4a2d3X0hYeEJEQnFxQ2tncnRRQ0tKQUlwRG5zSGpEUzJLcnFwRUJfamg5a0V5QklXMQ?oc=5",
+    "outlets": 2
+   }
+  ],
+  "pletovarje": [
+   {
+    "title": "V predoru Pletovarje vadilo 160 reševalcev",
+    "source": "Novice.si",
+    "date": "2026-11-09T13:24:12.000Z",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lbHpPU19KN2pDai05V0l3NW9TNF9CSlFxalRpTG1mZ3Jfa2hOZkNNVFVRYUZqS0k2OWZUYkdsel9tdHlMX3N0dTZuODlBUXRKNGFrLVVfOU5ERS1XdGt3RHY2VGVHMzB5ZjVwTnB4WUt5Skd3?oc=5",
+    "outlets": 10
+   },
+   {
+    "title": "V predoru Pletovarje odstranili posledice prometne nesreče, ostaja zastoj",
+    "source": "Siol.net",
+    "date": "2026-08-21T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQc2tXYkw2LXlXYXRwRHRlT04yVzc2cWVjZXZueG50anBJQ19vU19zbno3cnZOWnlNQzh1SmYwTzJzMVF1WVkyV3BkUnM3aVhTU2l6RFd0UGZsUlNuSEk3SGZybWhlQkpnaG5DM3lyd0Jmc2FwdEFiOTJMaUFDR0ZlZmo1VFdFYl9vM1F1SHFrcXhBQS1UN19YUE9vN0tMMGpB?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "Policija razkrila dramatične podrobnosti nesreče v predoru Pletovarje: Tovornjak odbil vozilo še v druga dva",
+    "source": "Žurnal24",
+    "date": "2026-07-14T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaUs5SzlSRENzYWNtbzlYNXdEbThtNk10Q3lZSHg3eG9ETFZ6S1RlMlluQ2JINnpIZjJLYnNZRVVuVHJHV0JKMnU2a1VzYWJ0RlpiazBSanFGUUQzMzZZX2dvRS00eDBsYkpWa01IemJpelNBNW44dlFIYjl2Z2J3NDYzYkVIRUltNVBZSnIwQjZwNHVOdDdYWE5ydWJORXM1bnBNU29Mbkhma2dLWF83cTdjTXZCWUNEX2Qw0gHAAUFVX3lxTE5tRzJOYWVyXzVtNV9mWG1nTU9BMk1SOE5UZGE4MjlsTEVzWWduY1NlVWVZSjlGajg0c0ZkTXFuRVAxVEx5dTZvX2JiU3o3akVzNFc1cG1ESDlFYklONExLaTlBMzQxQUVBUk9meGoxZHptNnhwdTZIOWJ6emE4QlkxVWNGR3lEbmdFQjRrOFMySEJGRm5DUldac09WWGFRQ3dhdHF0WmczVm92OGNNcjFOTHgybk03TjZJOTh2dHBlYw?oc=5",
+    "outlets": 6
+   }
+  ],
+  "he_arto": [
+   {
+    "title": "Na Savi pri Boštanju in pri pretočni akumulaciji HE Arto-Blanca znižali gladino: razlog so sanacijska dela",
+    "source": "ePosavje",
+    "date": "2026-09-20T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOLVRzSkxjYWJXMUpNSl9paUloM0J0YnNZT0txZ3BnbVpCcFlJenZobV92X2tZTG1JVGFpYTV6MTQ3VXp6UzFvdS1aM05LSmg4WjR2d254RENEX21Cd2VZRmppRnF2UVJhWWlIZlBNcHFmNWwzaWtaSVdZM0ZBbU9taExLRW5OQ3JtUDNnRUoxOF9UbWI0Uk0wVS1qMGluWjYzcVZKbWtwaUR4clZMR3htVGN4b2JVY2FKMFhOdnpwc1J2S0ZieW00?oc=5",
+    "outlets": 1
+   }
+  ],
+  "che_avce": [
+   {
+    "title": "Posebnost ČHE Avče",
+    "source": "nas-stik.si",
+    "date": "2026-08-31T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5zbFYyeDJRbU9XQnpnRnpDZllTTjRQMmpzNnhaMVFyYnhBN2puSHAteGl0QVpUMTJ3MHlQUmhFTFk0U0NEYk1nRzB3a2MwamRyUVBXVHg5S1VWVl8y?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Podpisana pogodba za drugi remont ČHE Avče",
+    "source": "nas-stik.si",
+    "date": "2026-01-22T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa19CMDNLVVNyMU4zeXpOZkFiWFZfU282VzczYTY2eWxOWUJXa2RIMjFybDl5a0hGMUNrUE1kX2ZIQWxrVlJBOUs4T1FOd0U4M1J5bUt4ck5JUkFPTG9mN3JUVWR1bVNjX3ZHUm5NYUlhbF90OFhIUUNiSjA4SWhTejluMkRNUUg3bTYyWUxidHNoS1FXMktF?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Črpalna hidroelektrarna Avče – primer uspešnega sobivanja ljudi, energetike in narave",
+    "source": "Maribor24.si",
+    "date": "2025-11-20T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaHlzd2NjZEVSQXNNZ3ctQkVhbnFjRjkyOHdZUzRzM2V4eGFiZHVzdjVUNFJyTUNHVms2WFU2ZHVKY3VsMFpjcUkyRjg2cTZXdE4zNGtWODBTeWZHakt0VDc5SjhPMW1KVXAwWHJSMjdVR3B1QkVBOEpLTUhVdTVIRWZKblJiclo1ekNYdTdWczBBV20yb0U3ekswZlJIR2s0bWpZOXE4a2FuS3doZ3VjSVdJSEI?oc=5",
+    "outlets": 1
+   }
+  ],
+  "stoze": [
+   {
+    "title": "25 let od tragedije v Logu pod Mangartom: Spomin na plaz Stože",
+    "source": "Goriške novice",
+    "date": "2025-11-17T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOMlFWYUZWR2p2QldNNGVKcHhUb0l4dm12R3BJeUZnc1lpTlVLZTcxSmJ3S3BOSEJyWHdWaWkweTJHX2hRcnJkTnZaRUNaLWRBMG8zSGtHYjlfT0RUS3JtQzhmTm9CUGc3Rjg0MzJCWGFtbEVmU1J1b0xSUVZUaDJCam9md1VVR0NYMzY4YUo3TTY?oc=5",
+    "outlets": 1
+   }
+  ],
+  "velikaplanina": [
+   {
+    "title": "Nihalka na Veliko planino bo zaradi remonta zaprta mesec dni",
+    "source": "Dnevnik",
+    "date": "2026-09-30T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQmtMdUJ1b0pIbnlaaF9URzlQaTdLeWhGa3RiSmoxSlMtRE5TbVNQbG5RZDExY3kxb1c0SUZ6SVllSEd1cXNhLXYyWXB6OHAzWEJrR2tNY1ZSeXp0bWx6ZWZoVDFNMU16SURwNVE1TEZWNXdSRng3S2lBNi1rUnpDUkhCa1R6VVdaU0lFTUhjM3NFcXN0VHZjYkpaSFo4X2c5TV93eVZHSzdxTms?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Snežna odeja na Veliki planini že vabi",
+    "source": "Slovenske novice",
+    "date": "2025-12-09T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNN1pwcEtXRnB4c3YtUlV2NGFjeWk5V2pwWXdLTGVTOTQ2R0hLdVhLUDI2c180OEF6eGVPMW1XWnFOSndlaXpMZzVjaFZtTGdSRlVxLTdyREF5ZVlkNWh0X2IzSUNWSTY4MUwwbDh0VHNwWEpidVVwSEtQTDc5di1TYi1xeUlEMlM1TWstc1ZsSzQ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Nihalka na Veliko planino popravljena, ponovno bi lahko začela obratovati že v petek",
+    "source": "N1 Slovenija",
+    "date": "2025-12-02T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQa0l1WTdQN0prZEpXTEpQc0VVQXE4a3gwU0t6Q2QtbDNUdFpfNUM1emdpX0pURW81b3hCbnZCQV92Q2t3SFZLUGxGdjVPU1pCUWxYM2FkVXNnOHBIanpsWnhwQU1UU1dpbjlsN0Q2TGxmMDBQNUR0b3ZWa1k5SE1NZlVkclYyRDBKX2MtcFJPR05qSnpySjNUTEJ6cTZoamRCaWx0ektwb3c2NjFVUzc4R1NZZnFiVi13OExv?oc=5",
+    "outlets": 1
+   }
+  ],
+  "grad_vzpenjaca": [
+   {
+    "title": "Podrobnosti prenove vzpenjače na Ljubljanski grad: kje naj bi vozila druga kabina?",
+    "source": "Dnevnik",
+    "date": "2026-05-25T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMVZTekhPazBsckJfRGowMi1CTno0SkdST2EyMFVkOXdyZ0ZFRWpLR29BZGtxalBaTDZaSm1vUXgwc1NHcXk3ay1EbHVmUE0wTHV2RzNiUkltMEU0S1VTdjQ5ZXdpX2pfcnNLNlpneVV6V1VyMHJHR1A4eFE0OUpZQ0ZkalktVS1lY3hEUTRsSzhFQkk?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Janković napovedal drugi tir vzpenjače. Kaj se bo res gradilo?",
+    "source": "Svet24.si",
+    "date": "2026-05-19T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWWl1NWVQdGhZWm9WUnJjMjNud014Wm1nQ0tnS2tlUmdfX0VtZlJGZHpqcnZ6aTktUHF4eDNDbGJnd2MtYUZHVGlxekhjRzkxMHM1d1NmNjF5aFg0MTlIeGQzN0FWWWQ0M3VnMjY3Q2JTd19uY08tUzFGck5ROV9aVDdoOVdYVWRsZDNENEkzR1oxS3BkMlc5SkhPOA?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Vzpenjača na Ljubljanski grad od danes ne obratuje",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-03-02T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUDFST2xRMjJic0d0UEE3eEpFaW10d2FFMlJvT0RWVjllOFFoTWtJTnZaMmRZMVJkaXFfdUVxWk91cGg1U3pOTi1PMFQ5eWhSYmFYOWFwT0k3eW1rWWxHS002RElta3BBX1c4QTJoQkI4OFg1ZHRXOVdVaDY5V04yUU1PcWFSN3FFREhpWUFZejVHb3cwa01HVWJTWG1NWUk?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Milijone voženj in 20 let pozneje: vzpenjača marca nekaj dni ne bo delovala",
+    "source": "Dnevnik",
+    "date": "2026-02-19T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMlk4bTRQSHJyeEx6emdpMXhOSkZOT2pTbnhoT0RFZ0hCWUZIUkpINWdWUVJhazdYeEFuTUtmUk9HNkFIUERxS3AzSkNlaWRsNkdyU29MOVIzWUxOY0dMbFhnQVc1a3IwY0NsRXpBcVpuaEFtZXlkN0NqTndkM3BOWk5EODBNZFg5eUJzMnh3c21PRHZYNmJXTU9mdE5zSjBYX2lleW9vTVNsaDBJOENsNw?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Ljubljanski grad: zgodovina, pregled gradu, dogodki, cenik, dostop, parkirišče, vzpenjača, poroka",
+    "source": "Znaki FM",
+    "date": "2026-01-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1JM3F5MVhyYWlUNFJqR25zZjBTdTczQjZvUHFLSDJoN2liZ1ZEQWNrNTlfa084WjNRNVdzVWNORjhISGt2aGlJUFB0b1dXOGs2MlRTY1lyWQ?oc=5",
+    "outlets": 1
+   }
+  ],
+  "kranjskagora_z": [
+   {
+    "title": "Kranjska Gora z Vitrancem 2 v novo obdobje: poletni obisk že prehitel zimsko sezono",
+    "source": "Slovenske novice",
+    "date": "2026-07-04T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
+    "outlets": 1
+   }
+  ],
+  "cerkno_z": [
+   {
+    "title": "Na Smučišču Cerkno prve smučarje pričakujejo v drugi polovici decembra",
+    "source": "www.primorski.eu",
+    "date": "2026-10-28T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbUk3bnM3TnNGLWh1Wk9pUGdZQUd3SVU2U0ZfR2lQdXBsVnJ1MDRvSGtzLUtPSGZqTlQ4WUpfQzl0em1oQS1IZG1QMGxqOHdRTWxDTXo0UFBVdkd1V25ZcUJHc1dVT2xrRXh0dHFhT09naVVpWHdPMy12NDBXNzJJYU9tYWFTNEVuTzZEU1doYjRrSDBaOG42b0FKMW9ETHRqUXRvUjdGa254c291?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Smučišče Cerkno v nedeljo odpira še preostale proge, med novostmi otroški vrtec in sankališče",
+    "source": "robin.si",
+    "date": "2026-01-08T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOb0hkRDBscF9rQy1FRmgybDNCOEZWLTc2X0x1ZFl1Q0hoZWoyLVJyY0wxQXJZekYwSndUSUJHeldoUVJfeURSaUYtN0N5cllmRG9qR1FvZzkyRFVrSWdaN1gxMlIzVmJDODFLVl83SE10dFM0cF9IOFk3WDI1U3RyVG5tVFlicy1VeGZCRC16VFZnT1dVekRsdTRxWE5yYk80NzNIN2RUTF9vZFB6N1NPWHNGSklxRENOQ1o1QVU5NU9Za1lUV2h0Qg?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Smučišče Cerkno vabi na bele strmine: začenja se smučarska sezona 2025/26",
+    "source": "Izvozniki.si",
+    "date": "2026-01-02T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPT1dwbXhhOW84NjhCU3cxWkVOYVQ2eVRudFZZQXZ3OUlSdlV2cjN4dHRPQWpHSVYxMk5iV2RwVmZHakQ0MkFoVi1vSlBCU1gtR1dMQ2UtT2dBaUZ0MW94c1huX294ZjZfcms2cnE1VW1aRnNMMmZ2UXVLX0lqaHVwd0V0VGljenZ2b2E0QXJxbEpLM29lNWQtb05GNzd0Vl9ockI2SjduVVEzRld1ekg0dlBoNW0zY1lwR1VKdEx4VV9RNEZTX3lxZXRR?oc=5",
+    "outlets": 1
+   }
+  ],
+  "golte": [
+   {
+    "title": "Na Golteh pripravljeni na zimsko sezono",
+    "source": "Naš čas",
+    "date": "2026-10-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQlFYamY3dzV4cExtbUJrVnJYRERjVXVyT0ZGZ05Pci1UN1NGaXp1NEpLdWpLZzczZlVDNUtUTlI0ZkFEWVNqZXl1Z21ndjkwaUdrWjE5bzhaWTZFWWE4eWx5Qmp4WjBsNXBOQWpVc3Rmb21XaDdPVDV2VG1TYV9ZMUFyZzRGQQ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "First minute smučanje na Golteh: dopoldne na smučeh, popoldne v savni",
+    "source": "Vandraj",
+    "date": "2026-08-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA4VkF5MjNOdjhoNG85X2R1eWpCeWctejlaM2JfS1hiVXdhXzhoSXR4dlFlZlJBTGFYRWNJX2lKVFlhWkNrUnZoRXlkejVvZkZIbEFnZUY0M3R1UHhHVGxJNGM0RGpvSG1HYWFTdGFiMWs2eTlkZXZBQkxYZ0x1ajA?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Smučišče Golte: kljub nižjim cenam vozovnic obiskovalcev toliko kot lani",
+    "source": "Dnevnik",
+    "date": "2026-03-31T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUlZ1dHZIMlV4RnZVbm1sTU9fQ09leEVXeGdSVU1BVEQ4SV91WWJCZUVDYlNRN0RuQWV0Tng5aHpHdGZFWHZPOFZHV1VYcWp2SDZYRzRDck9iMm9HcW1tR2EwcW85VkdWN0FiaXVXbkxxWG4xSUV3Y3UwZ05HNU1NSWlUN19SWFRVeGNpVG5BclhyMkgyS0pjTFYzWFFVMnJSNERhOTNYbm15Vk9KVHFFREhVaEN2b1NzbHlreA?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Nihalka na Golte bo z jutrišnjim dnem znova obratovala",
+    "source": "Svet24.si",
+    "date": "2026-03-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVU1Idmh1UmFJbVgtckhlbFZZNGRsdlZPLVZIejZybnItSW1ET2d2bEFwdzcycXoxZDlRUzV0QUd6aWw2d0lpakhJcWhzOHVvdEd4RU94WlpVTkNENzlOOUtzelAzWHAwZXJtMUtBd2lrbkl6MWhMb29SanJOa3FjQ3ItYXItVTZJeFRzb2d3?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Zakaj nihalka na Golte še vedno ne obratuje?",
+    "source": "Svet24.si",
+    "date": "2026-01-15T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTHF1Y092WkxVZ0ZqWnUtdXRVa2pmQ21HQ0hVZlY3V1ZPZlJLZi1aTzN2eFA1ck1tRkp5QzROay1RVF9RYzJqWXlkZy1kVE5Yc1FGRHNuQ2xjNkc1LWxfbTd6eUF4MTNsVHZnSjEwc2hSM1RCZFFqZGZrRlc0TFJWQjNn?oc=5",
+    "outlets": 1
+   }
+  ],
+  "kanin_z": [
+   {
+    "title": "Vlada naj bi podvojila državno pomoč za oživitev smučišča Kanin",
+    "source": "Delo.si",
+    "date": "2026-10-02T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNDFZVV90eU9MM3FVc0V6ci0xa2YyM2RLNGJGcG43VlA5eTlEaGxvV29mdEJRSVlzbHRNVDhoTWprNzFRMmVvWEhRa0pINEx5WG1wX2NIalo0ODA3TGltYmZCMFJtMTlzNVF2VHBuU09majNneGxoTmlmeXpPOU1NMFZHNmctbmJVOFlYNkltbEZMYmxx?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Na mizi nove rešitve za smučišče Kanin",
+    "source": "OBALAplus",
+    "date": "2026-02-26T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LTVJLU09uUnBhdVhpcU9vSGlKNGprRk9GWHpHb1pSRDZJcUhUdEtDdlRLOXhYTEhFMTBLU0R0bVA4OS1lRll1RUtiLUZ3aW9EQS1Zb1Z0VTMzeXdFZGhGRFdZWTllc0trZlJKVw?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Bo Bojan Križaj vlagal v smučišče Kanin?",
+    "source": "Dnevnik",
+    "date": "2025-12-22T18:01:25.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcnNpbnh2b2ppWmdLRmZPbkp0T3E3bTNrdGhYYXlmUktLVkE0Q29PbjRaNGRqYmo4VVFTMXJmblJvR1VFUGNwMGh4bEZfcmNlNnJmeEh5S0NhTm9jTjZubF96aFJiZzRfbXR6N0FsN3YySlJaTzMwRl9Qb1lPMW1MM3BxVGVob2FHQklCTjNmQ3M0dw?oc=5",
+    "outlets": 1
+   }
+  ],
+  "livarna_crnomelj": [
+   {
+    "title": "Novi posnetki: kljub opozorilom iz Livarja še naprej gost dim",
+    "source": "Radio Odeon",
+    "date": "2026-08-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUkhBOThtdWFPZERPOVVoeWladEs4b2VPTkR2Zmp3MFhZRl9zaTlxNjJVYkl1aDFBVjExSXoxYkI5MFBMcWNPcGJCb0RRSGRhVkVDNnVLaFFiM3R5UU4zWU9hNDlkQkNRYWRvN2dBV2NqU2dhOFZrTl82S0ZFcXZWeVpVU0REMmRWOTRiSE4zUlNMRHpvSVQwY25iS2o?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Za Livarjem še eno zahtevno poslovno leto",
+    "source": "Radio Odeon",
+    "date": "2026-06-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQQjd1djFIeVBzX2Nrcm5JcmpUTkkzV1lXclVGb1V6MFBfc3IxMGJLbVNwdjQ1MkhfTThDaVBhUnhMSTVHYzRsU2lSQzZQRDhqV2lPaFc0V3BPdEtfMWlWWktPTGdJbHZwaUFVZGc3S0h5TEluTmxMemN6cWE1YmpjZVlvQQ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Zaskrbljeni Belokranjci znova opozarjajo na gost dim iz Livarja",
+    "source": "Radio Odeon",
+    "date": "2026-06-16T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNm9WcTFlcmoybmhhc1V6NEtWVmdfNFJIenZFUVJDY3RoZlpsRnFEZE1sYmRHYmdmR19LcVFoS1RVMDZVZDFUdVIxX2txalIxeTVGT3ZqY2wwc2l6ZDJlRV9PWndGdU5la1RyZDZsU2s2Wm9xdjItdE40SjlmbzlpRTY5LTBsaC1SUUwtd29XRnZ3ZUVNVzQyZUVJZkhTT2xI?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Livar v krču: Padec prodaje, izgube in kadrovski odhodi",
+    "source": "Svet24.si",
+    "date": "2026-05-28T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOakl1X3oxT04tLVpNbWVPU3JFMXNjOEpUV3lmb0tUMjVib2J1NmYyczFWblh2UFpXVFpXNm9OVEhKQzRKNGM5bGtTdnlERTQ2WWo5QkY0dXU1R1JEVERMUXNiOEJRNUdKZFNGblotYzBTeGplYV8wZ08zODFjTzNFcXpJVVgwZHhkUzA0NEczVUdpLVFEaWd6YVdVS1BHTEhBQXh0dG5iYURWWkJzS2QxTWVQSDd5ZmVxcUY2TnZHYWpGMTBk?oc=5",
+    "outlets": 1
+   }
+  ],
+  "ss_kocevje": [
+   {
+    "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
+    "source": "E-utrip",
+    "date": "2026-02-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPSVRXVW1ULVU4SHJPR2tuOWFqV2VWNmpfRWw2Vy1CVGFFRzc0c3YtbTVWcExqWUF4cndPVEdvX0ZaOEprVXN4OU5YN0pXRDJNaG54clM1cTJvcTFmN3puc2R3REtINHZVd3Y4OXlJM3AwNEstS2c3VGtLT3NHRXhza3RR?oc=5",
+    "outlets": 1
+   }
+  ],
+  "bovec_quake": [
+   {
+    "title": "Goriško streslo še drugič: tokrat precej močneje, potres čutili tudi v Tolminu in Bovcu",
+    "source": "NaDlani.si",
+    "date": "2026-08-21T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdVFVZG1QZ1hxWTJVdndneTlNQWF1RnJWVXptYWJkS3BvdGtCS3BWd3NhbE5VNWxYM01mQXZrN1pHN085SF95ZTV2ekNtWEZxSDdkbFNRbUI5T0VWRGJQRzVnYnBCQTg5cExCanFVblBXSmpPTlo4SnFteUxIdE11ektJQTNncGlubjRUVHhIRGVBX0R6WEdPWi05QlhhZW84QW1RcWkzY1lZNlNsTktnN0hfRWlZcFk?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "Slovenijo stresel šibek potres",
+    "source": "Svet24.si",
+    "date": "2026-05-10T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9LcHVrQjJPVVBtU2R3RW9fVHlCU0Y5cGFmVlkwclhGLVR6cWNnMFpyMEN5WXZSbXIxaVlNOVpNUEUwa0dGLVJnYlU0bDdEQlNGZzFBTXhHQnFoRV80ZWpTQlQ1eWVZXzYwOU9vZ3ZGS2w5bE5qcmJR?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Potresni sunek na Goriškem: v bližini Bovca so se zatresla tla",
+    "source": "Metropolitan.si",
+    "date": "2026-05-10T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1dTB0eUh0VEJndEk2NmJaR1Nrc2FYemw5SDZqUUJscHhFdWtISERIQzB5eGFWRmx3ZHJ4T2lzZHZvU3UxZGhudEV6eE5LSnpWNXpSRlNTYWRoNTdkajRfVUhwX1lPbi1rdmhDcldHU0d4TFA4dnItRXhubTd2VVU?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Zatresla so se tla, potres čutili številni",
+    "source": "Žurnal24",
+    "date": "2026-05-10T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMzdnakZLblNpMU5uQlAtd3pBaHBtdVlROVBfbVdRdGE1TWpyT1BWVWR0X2ptZFhjOWRxUm1yNEJhWG9TU2pyMWxXOHBpT0hsa2d6NllrNzBQSFBvYWlIekdkU1A0UFhmaEh4bEpSbEF5NmNXYWQ5RDBhX1V6VFQtOThJamwyemFGWVHSAY8BQVVfeXFMUHpGaHg4Z09Fb2c1VF9ncWRrZDdHRVVFellkUk85UEZDc25iWWRQSGtQMnNUc3E1Z3I4ZVcyNkJZcGN1a19yVTd1RzgwWFBrNFFDZldxX0VVUWg0ZnU1R0g2LTd1SW03RUttWkQ3dkVCLTB2WlhXdjJINExBdXRURE1aRFhwT015YjFad1BrVWs?oc=5",
+    "outlets": 1
+   }
+  ],
+  "soca_quake": [
+   {
+    "title": "Okolico Tolmina stresel potres. Ste ga čutili?",
+    "source": "N1 Slovenija",
+    "date": "2026-10-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZTJfaXRoQUVqRld4TmJySFdmV3BGN2FseXdOTk81STVrbElmRXY1OWdNYlhYMFFzMDR4aFlHUTMwYkVfLVAwNkE2TGR0XzN6WkcydXBKLV9fcTk0aG9lVTZTNnJYdGliTGJaZWlMX2F0dlhxNEVuZkthMmFuX0Fjek1QQnhfWk0?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
+    "source": "telegraf.si",
+    "date": "2026-08-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "V Posočju je radiestezist Jože Munih dan pred potresom zaznal nenavadno spremembo",
+    "source": "Sensa.si",
+    "date": "2026-08-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB2QWV3eklDSUhrT2F2bEY1My1HSlVucG9wZzI2UTVVaVZTaXpVamdRbFBWRU9lanBzWTZETk0yMzRkZ0pmXzBxbFljcWYwV0w0V2xUVnQtZm1mZXdfNkRyVHJTcXZHRjlWRWY5bDRJX2kxUmVL?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Pri Kobaridu so se stresla tla, potres čutili tudi v Tolminu",
+    "source": "Žurnal24",
+    "date": "2026-08-21T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZWNXczVnSldUTG1sc2xzZy1KWXhEcS1xMWNtcmdoaEZnTTQ1Q3V4SHE1WXNWS05hRFFSQkhkeDRmMDQ2UW5tTDVxMVRWejVuZ2RwWWdBeU5lcllZVjNyWkxBcFZDRk9OalQ4SWhRaE1zX3hnT2hHaWN1R3BzUlJ3a1Vjc1pZdndtUnZGbVZRTWdubi1IendtZnlQU2ZiR2vSAaQBQVVfeXFMTmpuV0J5OUZXaUw4QmowRVZsZEYxSG1NQmszdGl6MVNyU1NOLUVRWVAxWjZ2NHFudnE2SUpBMVozS013a1dfcDZON2xRS3pjRF9KY215VWYySDNBREZzQnMycWVtRmVndFVscm5iYjNTdFAtZHRVRVU0bjNNR3lmU3hrUjhyc3ZsV3FZbmVCa1c5cHBRUThYVjg2azc3eERYRFI0N0s?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Šibek jutranji potres stresel Posočje",
+    "source": "Radio Robin",
+    "date": "2026-07-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBEVkYtUG5DVEFYYzFzNGxJdmROV3pEZFN3Ul9DY1lRYTZfeFFXZXdGM0U1QXR2aXd5ellVVXh2aWJjRU9GOUF3Z3JRWE14Tk9qWnZfS1JfSDl1eHNGRTBjRDdId3JJUjJlT1F5Y290R1hYcjJDZ2c?oc=5",
+    "outlets": 2
+   },
+   {
+    "title": "50 let pozneje: spomin na potres, ki je pretresel Furlanijo in Posočje",
+    "source": "24ur.com",
+    "date": "2026-05-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYkZMaVd1Y2U3T290NThUU1FDc19Vcmw0MjlYNHZuVzBJTllKMG91SHRMR1U0Uy1hVEhoUGZGVWl1TnV5VTczWHdpaVhhaXZxY2JFYURZTkNnWkxkeWk4TU9ma04zV3FkXzRYaE9tWV82TUExSi1uZXN3OGdxMmE4bWlEdEVQZk5FY3BsLXJ6TzRIemFXX294WlNvYWVJNHdrZ3BjTVJhV2hmVjQyTUtjVg?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Strokovni posvet: 50 let po prvem potresu v Posočju – prehitimo naslednjega",
+    "source": "Portal GOV.SI",
+    "date": "2026-05-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNY1QzSGhWVVJZYkdIdDlxWDlGTmtkVXFzNlhRZ3RTSmgwT2ZHUHMyNENQOXFROThLN19EelZOdWNfTWFNQjRxczVQZ3ZNd1ZaRmRZcmN4YWtkM3pqWEQwQ0ZJbHhVb2NNbGl5RFdVNXpmUU5OSWlWY1BZTU1qekl4U2lsNGU0UXdFcXlnVENJR3ZNTkxiMEd3YnFCOVpQSHBvd0NQLUdFYV9VZklzdk1CeA?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "50 let od rušilnega potresa: \"Strehe so se rušile, zemlja valovila, skale kotalile, živali norele\"",
+    "source": "rtvslo.si",
+    "date": "2026-05-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
+    "outlets": 1
+   }
+  ],
+  "golo_rebro": [
+   {
+    "title": "Nesreča zaprla predor Golo Rebro, po odprtju štajerke ostajajo zastoji",
+    "source": "NaDlani.si",
+    "date": "2026-07-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUkNVbGdFWHdCaXVaTEJ3MTJnbkJaamprRVhPdDhLZ2hFTkV6MVBaWS1SSzRWQjZneUF4ZXpHNzE0NEhmaE1LelNpZ2VuVmVnSzZuMUJRT0MxREdrREdnN25WWEpuRlZld3piUjNxRERKT1I2OVlKQ1Q4Ny1NWUNQcTdUS0N3NVNrZ01sRnpfa2F4cmNycGJvUDRxSWhWZFVSNHc?oc=5",
+    "outlets": 1
+   }
+  ],
+  "tr3": [
+   {
+    "title": "Prvi april: Golob ni prepustil mandatarstva Stevanoviću, znak NLB na TR3 še ostaja",
+    "source": "Dnevnik",
+    "date": "2026-04-02T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbkZ6aHFaME54UC1iLTBWcUpTbjd6ZF9tbGVzclZEZFgycDM4T2NGSnY3VWpMRUg4eGlncllQVkpUTTRtcDVkNWtfS3h1ZFF2OFNpU0lSYXlBMjdTVXBUUXlPT0pUcWtncFJ3SWFiWllIbVp1LXlEcHdObEhWeGpvbGVuUlJjNFpZYU1xZ0NfMy1RbzI3ZEZlVW1iN3BzQXI1NGM2WXhR?oc=5",
+    "outlets": 1
+   }
+  ],
+  "nuk": [
+   {
+    "title": "Galerija: Izkopavanja, NUK II, Ljubljana",
+    "source": "Siol.net",
+    "date": "2026-10-07T18:58:59.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPZENTb3pNT3JhQ3NVZk9BWGhUZVpBLUoxX1YtMHcxVjVQUElwanFxWVFUTzZ6bzI4RmRobXdNM21qNmV4OE83d2lXczJJYnlvTHhjUloyYldfa1BYRkEtSDk0T0FCQml0V0tBU09WVDMzQi1kanlYS0R6RjhkZDkxM2ZVYVk1cXVnSjl4V2RGR1paWlQ2V0J4TFBaUFVxSDcxQWVmbGs3ckpVb0FrQUQ0UEg4WE1ZVnVlOWRTNnZCZDhrLXJfNVBYM2swcS1MZHdjakd0a29rUk1VZFI1c2FZeTgzZHdhR053bzU1LQ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Maximarket naj postane NUK 2",
+    "source": "Dnevnik",
+    "date": "2026-09-25T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZlUyamVLb3MtODdyOHByWmIxMVFmMF9DSGlBTDEtNFR4dlB6Z3lxVVZQRW5OU1oxRkN1VUlCamZOTDNybElPd3hpekR1OGtlWlMzSFMzeHIzLUEwcGg2UGdnSTNYNkVDbVY2UDZTSldpWm9LUEZTRnhPSDdyZ2k2c3ZwdzNvVE0?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Ljubljanska univerza in Centralna tehniška knjižnica z NUK podpisali namero za sodelovanje v NUK 2",
+    "source": "rtvslo.si",
+    "date": "2026-09-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOM2dqUkdaczMxbFVQWWsteUgwNEE3ak1qekx5S2FYQU1WOGluRHVhYkFDcVJkQzE4Z1gxdW1vc1N5V1BhUWdBenAyYWI4Nzk2ZEpUa0YwamhSWUFoTlFkel80NTM0T3R3bThfWmVJZGVkLXVzcG1BVzZlNFMxMVBtd24yVnZDUHhnNzNUUFA4VXdWTDNFTm1NWUY0Z051ODAzYzNac3lMSlBLaWlwcS04RUlVSzdaV1hyU3dSY0pNQnhBaFkybFQ0eEdwVjlJb2Yzdk1iYzhUVTFIZw?oc=5",
+    "outlets": 3
+   },
+   {
+    "title": "Tri ključne ustanove podpisale pismo o nameri o sodelovanju pri projektu NUK 2",
+    "source": "N1 Slovenija",
+    "date": "2026-09-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZUViWHhEUzZITXFsN0I4WEVBSkVxWjYwdVFPLXdkTW5ZbDBYVUFtTFBFUlI1dkZwaURMNWtrc3NObzkxb0JjYVZCRkIxTFhsZTUyVHlIUHdsWHFqYUM1YjVlc3NLTC1qQnIzZWVfTmQ3dXVZdjhKc2tVd0dQaWx2dDB5b0pfaWFjMFQ4VzN4aFVGLW1vOGJOQlRqUGFEbWp1NFBRMFlHYVpqSTBBYXdJRWRtekk?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Kmalu v NUK ne bo več prostora niti za eno samo knjigo",
+    "source": "Dnevnik",
+    "date": "2026-08-22T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Super novica za študente! NUK podaljšuje odprtje čitalnice",
+    "source": "Student.si",
+    "date": "2025-12-30T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2dpVmJwMEVaM2lLdy10SXNEVzRCVTlhSXBUaVp3MTdqbTlOa09JM053REJsT0JJbDktaDd2OE91SzZ2c2kwY2ItVFpIUmJ3a2tNMTVfWjFYN280Tm1XZGZPbUFZOVNzVXkwelpPTHhsVXBUWmtHMXd1QzRhb2p2U3JvenNOa1RuWUhwb1d5VHVkYzVuMThUa1Vtc0pNT2U5VW14ZTE5MEE0UQ?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Zaščita Plečnikove mojstrovine: zakaj je obnova fasade NUK poseben izziv?",
+    "source": "Dnevnik",
+    "date": "2025-12-23T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUVhrUDlUeXI3ejBnbmZKZkhPZWRLY1pIdGZvVG5ycUFaNmxqVmk5NE5kRnVfOFFwaGM1aXk1R2R2d0hzajluX2NRMkFNUmF5anNKajVId09ZTVFpMExSQmtaVkdvNGxjcFpJbi1DSGpIWTlQZFg0S19NYW5mYUEyeVpBUkhEODZlZFowYjJBcw?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Druga faza gradnje NUK II ostaja še neznanka",
+    "source": "www.primorski.eu",
+    "date": "2025-12-16T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSkQ3NHVoUjNneTl2MndVWmtMMTRQdl9zWnpjRGxDUUpNY1FpcGFwVWMwWF9ITXFWLVFUVzZHV0VhNDBDbFliRGpKa0ExVkFGamU0cEpwSWNGc1BZQkpvWm1JSHNLanduTlFzZ29PbUdfeWdGZ0NGZ0Z6aFpSakdIVEZ6YmJYOFZJRnc?oc=5",
+    "outlets": 1
+   }
+  ]
+ }
+}

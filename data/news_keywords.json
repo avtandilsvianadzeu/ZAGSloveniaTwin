@@ -1,0 +1,441 @@
+{
+ "_about": "Slovenian news search per record. q: Google News query. must: headline contains at least one. all: headline contains every one. not: headline contains none. Matching ignores case and accents.",
+ "tomacevo": {
+  "q": "\"most v Tomačevem\" OR \"Tomačevski most\" OR \"most čez Savo v Tomačevem\"",
+  "must": [
+   "tomacev"
+  ]
+ },
+ "ravbarkomanda": {
+  "q": "\"viadukt Ravbarkomanda\" OR Ravbarkomanda viadukt",
+  "must": [
+   "ravbarkomand"
+  ],
+  "all": [
+   "viadukt"
+  ]
+ },
+ "nm_brv": {
+  "q": "\"Štukljeva brv\" OR \"brv v Irči vasi\" OR \"brv čez Krko\" Novo mesto",
+  "must": [
+   "stukljev",
+   "irc",
+   "brv"
+  ]
+ },
+ "crna": {
+  "q": "most \"Črna na Koroškem\" OR most \"v Črni na Koroškem\"",
+  "must": [
+   "na koroskem"
+  ],
+  "all": [
+   "most"
+  ],
+  "not": [
+   "crni gori",
+   "crna gora"
+  ]
+ },
+ "verd": {
+  "q": "\"viadukt Verd\"",
+  "must": [
+   "verd"
+  ]
+ },
+ "he_solkan": {
+  "q": "\"HE Solkan\" OR \"hidroelektrarna Solkan\"",
+  "must": [
+   "solkan"
+  ]
+ },
+ "he_zlatolicje": {
+  "q": "\"HE Zlatoličje\" OR \"hidroelektrarna Zlatoličje\"",
+  "must": [
+   "zlatolic"
+  ]
+ },
+ "he_vuhred": {
+  "q": "\"HE Vuhred\" OR \"hidroelektrarna Vuhred\"",
+  "must": [
+   "vuhred"
+  ],
+  "not": [
+   "izklop",
+   "obvestilo"
+  ]
+ },
+ "strunjan": {
+  "q": "\"Mesečev zaliv\" OR \"strunjanski klif\" OR \"klif v Strunjanu\"",
+  "must": [
+   "mesecev",
+   "klif",
+   "strunjan"
+  ]
+ },
+ "sitarjevec": {
+  "q": "\"rudnik Sitarjevec\" OR Sitarjevec",
+  "must": [
+   "sitarjev"
+  ]
+ },
+ "zag": {
+  "q": "\"Zavod za gradbeništvo Slovenije\" OR \"Zavoda za gradbeništvo\"",
+  "must": [
+   "zavod za gradbenistvo",
+   "zavoda za gradbenistvo",
+   "zag"
+  ]
+ },
+ "zag_logatec": {
+  "q": "\"požarni laboratorij\" Logatec OR \"požarnega laboratorija\" Logatec",
+  "must": [
+   "pozarn",
+   "logatec"
+  ]
+ },
+ "zag_maribor": {
+  "q": "\"Zavod za gradbeništvo\" Maribor OR \"ZAG\" Dobrovce",
+  "must": [
+   "dobrovc",
+   "zag"
+  ],
+  "not": [
+   "zagreb"
+  ]
+ },
+ "cestel": {
+  "q": "Cestel tehtanje OR \"Cestel d.o.o.\"",
+  "must": [
+   "cestel"
+  ]
+ },
+ "innorenew": {
+  "q": "InnoRenew",
+  "must": [
+   "innorenew"
+  ]
+ },
+ "ulfgg": {
+  "q": "\"Fakulteta za gradbeništvo in geodezijo\" OR \"Fakultete za gradbeništvo in geodezijo\"",
+  "must": [
+   "gradbenistvo in geodezijo"
+  ]
+ },
+ "karavanke_c": {
+  "q": "\"predor Karavanke\" OR \"karavanški predor\" OR \"predora Karavanke\"",
+  "must": [
+   "karavank",
+   "karavansk"
+  ]
+ },
+ "karavanke_r": {
+  "q": "\"železniški predor Karavanke\" OR \"karavanški železniški predor\"",
+  "must": [
+   "zelezni"
+  ]
+ },
+ "golovec": {
+  "q": "\"predor Golovec\" OR \"predoru Golovec\" OR \"predora Golovec\"",
+  "must": [
+   "golovec"
+  ]
+ },
+ "sentvid": {
+  "q": "\"predor Šentvid\" OR \"predoru Šentvid\" OR \"predora Šentvid\"",
+  "must": [
+   "sentvid"
+  ]
+ },
+ "trojane": {
+  "q": "\"predor Trojane\" OR \"predoru Trojane\" OR \"predora Trojane\"",
+  "must": [
+   "trojan"
+  ]
+ },
+ "podmilj": {
+  "q": "\"predor Podmilj\" OR \"predoru Podmilj\"",
+  "must": [
+   "podmilj"
+  ]
+ },
+ "vzideh": {
+  "q": "\"predor V Zideh\" OR \"predoru V Zideh\"",
+  "must": [
+   "zideh"
+  ]
+ },
+ "kastelec": {
+  "q": "\"predor Kastelec\" OR \"predoru Kastelec\" OR \"predora Kastelec\"",
+  "must": [
+   "kastelec"
+  ]
+ },
+ "dekani": {
+  "q": "\"predor Dekani\" OR \"predoru Dekani\" OR \"predora Dekani\"",
+  "must": [
+   "dekan"
+  ]
+ },
+ "markovec": {
+  "q": "\"predor Markovec\" OR \"predoru Markovec\" OR \"predora Markovec\"",
+  "must": [
+   "markovec"
+  ]
+ },
+ "lescevje": {
+  "q": "\"predor Leščevje\" OR \"predoru Leščevje\"",
+  "must": [
+   "lescevj"
+  ]
+ },
+ "cenkova": {
+  "q": "\"predor Cenkova\" OR \"predoru Cenkova\"",
+  "must": [
+   "cenkov"
+  ]
+ },
+ "pletovarje": {
+  "q": "\"predor Pletovarje\" OR \"predoru Pletovarje\"",
+  "must": [
+   "pletovarj"
+  ]
+ },
+ "tabor_h4": {
+  "q": "\"predor Podnanos\" OR \"predoru Podnanos\"",
+  "must": [
+   "podnanos"
+  ]
+ },
+ "he_vrhovo": {
+  "q": "\"HE Vrhovo\" OR \"hidroelektrarna Vrhovo\"",
+  "must": [
+   "vrhovo"
+  ]
+ },
+ "jez_melje": {
+  "q": "\"jez Melje\" OR \"jezu Melje\" OR \"MHE Melje\"",
+  "must": [
+   "melje"
+  ]
+ },
+ "he_bostanj": {
+  "q": "\"HE Boštanj\" OR \"hidroelektrarna Boštanj\"",
+  "must": [
+   "bostanj"
+  ]
+ },
+ "he_arto": {
+  "q": "\"HE Arto-Blanca\" OR \"HE Blanca\" OR \"hidroelektrarna Blanca\"",
+  "must": [
+   "blanca"
+  ]
+ },
+ "he_krsko": {
+  "q": "\"HE Krško\" OR \"hidroelektrarna Krško\"",
+  "must": [
+   "he krsko",
+   "hidroelektrarn"
+  ],
+  "not": [
+   "cest",
+   "zapor",
+   "poti",
+   "g1-5"
+  ]
+ },
+ "che_avce": {
+  "q": "\"ČHE Avče\" OR \"črpalna hidroelektrarna Avče\" OR \"elektrarna Avče\"",
+  "must": [
+   "avce"
+  ]
+ },
+ "slano_blato": {
+  "q": "\"Slano blato\"",
+  "must": [
+   "slano blato"
+  ]
+ },
+ "stoze": {
+  "q": "\"plaz Stože\" OR \"plazu Stože\" OR \"Log pod Mangartom\" plaz",
+  "must": [
+   "stoze",
+   "mangart"
+  ]
+ },
+ "krvavec": {
+  "q": "\"RTC Krvavec\" OR \"kabinska žičnica Krvavec\" OR \"Krvavec\" žičnica",
+  "must": [
+   "krvavec"
+  ]
+ },
+ "velikaplanina": {
+  "q": "\"nihalka\" \"Velika planina\" OR \"žičnica Velika planina\"",
+  "must": [
+   "velik"
+  ]
+ },
+ "grad_vzpenjaca": {
+  "q": "\"vzpenjača na Ljubljanski grad\" OR \"vzpenjača\" Ljubljanski grad",
+  "must": [
+   "vzpenjac"
+  ]
+ },
+ "kranjskagora_z": {
+  "q": "\"RTC Žičnice Kranjska Gora\" OR \"smučišče Kranjska Gora\"",
+  "must": [
+   "kranjsk"
+  ]
+ },
+ "vogel": {
+  "q": "\"žičnica Vogel\" OR \"nihalka Vogel\" OR \"smučišče Vogel\"",
+  "must": [
+   "vogel"
+  ]
+ },
+ "cerkno_z": {
+  "q": "\"smučišče Cerkno\" OR \"Smučarski center Cerkno\"",
+  "must": [
+   "cerkn"
+  ]
+ },
+ "golte": {
+  "q": "\"žičnica Golte\" OR \"nihalka Golte\" OR \"smučišče Golte\"",
+  "must": [
+   "golte"
+  ]
+ },
+ "kanin_z": {
+  "q": "\"žičnica Kanin\" OR \"kabinska žičnica Kanin\" OR \"smučišče Kanin\"",
+  "must": [
+   "kanin"
+  ]
+ },
+ "straza_bled": {
+  "q": "\"Straža\" Bled smučišče OR \"sedežnica Straža\"",
+  "must": [
+   "straz"
+  ]
+ },
+ "planica_z": {
+  "q": "\"sedežnica\" Planica OR \"žičnica\" Planica",
+  "must": [
+   "planic"
+  ]
+ },
+ "pecna_reber": {
+  "q": "\"Pečna reber\"",
+  "must": [
+   "pecn"
+  ]
+ },
+ "livarna_crnomelj": {
+  "q": "\"Livar\" Črnomelj OR \"livarna Črnomelj\"",
+  "must": [
+   "livar"
+  ]
+ },
+ "sz_masts": {
+  "q": "\"Slovenske železnice\" žled OR \"vozna mreža\" žled",
+  "must": [
+   "zled"
+  ]
+ },
+ "ss_kocevje": {
+  "q": "\"Gimnazija in srednja šola Kočevje\" OR \"Gimnazije in srednje šole Kočevje\"",
+  "must": [
+   "gimnazij"
+  ]
+ },
+ "os_stara_cerkev": {
+  "q": "\"OŠ Stara Cerkev\" OR \"Osnovna šola Stara Cerkev\"",
+  "must": [
+   "stara cerkev"
+  ]
+ },
+ "rakuschev_mlin": {
+  "q": "\"Rakuschev mlin\"",
+  "must": [
+   "rakusch"
+  ]
+ },
+ "fibran_sodrazica": {
+  "q": "Fibran Sodražica",
+  "must": [
+   "fibran"
+  ]
+ },
+ "bovec_quake": {
+  "q": "potres Bovec",
+  "must": [
+   "potres"
+  ]
+ },
+ "soca_quake": {
+  "q": "potres Posočje",
+  "must": [
+   "potres"
+  ]
+ },
+ "lj_seismic": {
+  "q": "\"potresna ogroženost\" Ljubljana OR \"potresno tveganje\" Ljubljana",
+  "must": [
+   "potres"
+  ]
+ },
+ "idrija_cherplan": {
+  "q": "CHERPLAN Idrija OR \"potresna\" Idrija",
+  "must": [
+   "cherplan",
+   "potres"
+  ]
+ },
+ "catez_bridge": {
+  "q": "\"most čez Savo\" Čatež OR \"most v Čatežu\" OR \"most pri Čatežu\"",
+  "must": [
+   "catez"
+  ],
+  "all": [
+   "most"
+  ]
+ },
+ "maribor_pilots": {
+  "q": "CINDERELA Maribor krožno gospodarstvo",
+  "must": [
+   "cinderela",
+   "krozn"
+  ]
+ },
+ "sij_acroni_pavers": {
+  "q": "\"SIJ Acroni\" tlakovci OR \"SIJ Acroni\" žlindra",
+  "must": [
+   "acroni"
+  ]
+ },
+ "golo_rebro": {
+  "q": "\"predor Golo Rebro\" OR \"predoru Golo Rebro\"",
+  "must": [
+   "golo reb"
+  ]
+ },
+ "tr3": {
+  "q": "\"stolpnica TR3\" OR \"TR3\" Ljubljana",
+  "must": [
+   "tr3"
+  ]
+ },
+ "kpd": {
+  "q": "\"nekdanja kaznilnica\" Maribor OR \"KPD Maribor\"",
+  "must": [
+   "kaznilnic",
+   "kpd"
+  ]
+ },
+ "nuk": {
+  "q": "\"Narodna in univerzitetna knjižnica\" OR NUK Ljubljana OR \"NUK 2\"",
+  "must": [
+   "nuk",
+   "univerzitetna knjiznica",
+   "univerzitetne knjiznice"
+  ]
+ }
+}
