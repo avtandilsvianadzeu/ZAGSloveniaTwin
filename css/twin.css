@@ -200,19 +200,41 @@ details.sub ul{margin:0;padding:0 18px 14px 36px;max-width:84ch}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.beacon.live{animation:none}}
 
-/* embedded model inside the map panel: only the stage */
+/* stage: map with the structure in place, and a side column with the model, the selected part and all data */
+.hint{font-size:12.5px;color:var(--muted);margin-left:4px}
+.stagegrid{display:grid;grid-template-columns:minmax(0,1fr) 370px;min-height:0}
+.stagegrid.nomodel{grid-template-columns:minmax(0,1fr) 320px}
+.mapcol{position:relative;min-height:600px}
+.mapcol #tmap{position:absolute;inset:0}
+.side{border-left:1px solid var(--line);display:flex;flex-direction:column;max-height:600px;overflow:auto;background:rgba(255,255,255,.55)}
+.modelbox{position:relative;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,rgba(240,245,255,.6))}
+.modelbox #fem{position:relative;inset:auto;width:100%;height:250px;display:block}
+.mbar{display:flex;gap:6px;align-items:center;justify-content:space-between;padding:6px 8px 8px}
+.mbar .seg button{height:26px;padding:0 11px;font-size:12px}
+.mbar .tbtn{height:30px;padding:0 12px;font-size:12px}
+.side .pickbox{position:static;width:auto;border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none;background:transparent;pointer-events:auto;padding:12px 14px}
+.side .pickbox p{margin:8px 0 0}
+.alldata{padding:12px 14px}
+.alldata h3{margin:0 0 6px}
+.alldata .row span:last-child a{font-weight:500;font-size:11.5px;margin-left:4px}
+@media (max-width:900px){
+  .stagegrid,.stagegrid.nomodel{grid-template-columns:1fr}
+  .mapcol{min-height:0;height:56vh}
+  .side{border-left:0;border-top:1px solid var(--line);max-height:none}
+  .hint{display:none}
+}
+
+/* embedded model inside the map panel: only the model and the selected part */
 body.embed{background:#fff;min-height:0}
-body.embed .thdr,body.embed .hero,body.embed .dims,body.embed .cols,body.embed .tfoot,body.embed #tMap,body.embed .pickbox p{display:none}
+body.embed .thdr,body.embed .hero,body.embed .dims,body.embed .cols,body.embed .tfoot,body.embed .stagebar,body.embed .mapcol,body.embed .alldata,body.embed .reqrow{display:none}
 body.embed .wrap{padding:0;max-width:none}
 body.embed .stage{border-radius:0;border:0;box-shadow:none;background:#fff}
-body.embed .stagebar{padding:8px;gap:6px}
-body.embed .stagebar>.seg{display:none}
-body.embed .stagebody{height:calc(100vh - 96px);min-height:180px;display:block;background:none}
-body.embed #fem{position:absolute;inset:0;height:100%;min-height:0}
-body.embed .pickbox{position:absolute;right:6px;top:6px;width:min(210px,62%);padding:8px 10px;border-radius:12px;border-width:1px;box-shadow:0 4px 14px rgba(32,52,105,.14)}
-body.embed .stage-note{padding:6px 10px;font-size:11.5px;max-height:44px;overflow:auto}
-body.embed .seg button{height:26px;padding:0 10px;font-size:12px}
-body.embed .stagebar .tbtn{height:30px;padding:0 11px;font-size:12px}
+body.embed .stagegrid,body.embed .stagegrid.nomodel{grid-template-columns:1fr}
+body.embed .side{border:0;max-height:none}
+body.embed .modelbox #fem{height:calc(100vh - 150px);min-height:150px}
+body.embed .side .pickbox{padding:8px 10px;font-size:12px}
+body.embed .side .pickbox p{display:none}
+body.embed .stage-note{padding:6px 10px;font-size:11.5px;max-height:40px;overflow:auto}
 
 /* add object tool */
 .tool{display:grid;grid-template-columns:minmax(300px,400px) 1fr;gap:16px;align-items:start;margin-top:20px;text-align:left}
@@ -245,3 +267,19 @@ body.embed .stagebar .tbtn{height:30px;padding:0 11px;font-size:12px}
 .aiout ul{margin:0;padding-left:18px;font-size:13.5px}
 .aiout q{color:var(--muted)}
 @media (max-width:900px){.aigrid{grid-template-columns:1fr}}
+
+/* request button, inspection log, dashboard */
+.reqrow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.tag.bad{color:#A1140C;background:rgba(255,59,48,.12);border-color:rgba(255,59,48,.35)}
+.iform{border-top:1px solid var(--line);max-width:none}
+.igrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.nitem b{color:var(--navy)}
+.dash{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px;text-align:left}
+.dash>*{min-width:0}
+.dash .panel.wide{grid-column:1/-1}
+.bar{display:flex;height:12px;border-radius:999px;overflow:hidden;background:rgba(118,118,128,.14);margin:8px 0 6px}
+.bar i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.dash table a{font-weight:600}
+@media (max-width:900px){.dash{grid-template-columns:1fr}.igrid{grid-template-columns:1fr 1fr}}

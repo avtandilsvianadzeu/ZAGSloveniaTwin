@@ -31,15 +31,40 @@ const meters=(a,b)=>{const x=(b[0]-a[0])*RAD*Math.cos((a[1]+b[1])/2*RAD),y=(b[1]
 const lineLen=l=>l.reduce((s,c,i)=>i?s+meters(l[i-1],c):0,0);
 function circle(c,m,n){n=n||72;const out=[];for(let i=0;i<=n;i++){const a=i/n*2*Math.PI;out.push([c[0]+m*Math.cos(a)/(R*Math.cos(c[1]*RAD))/RAD,c[1]+m*Math.sin(a)/R/RAD]);}return {type:'Polygon',coordinates:[out]};}
 
-const D={features:[],byId:{},twins:{},gurs:{},gursMeta:null,news:{},newsUpdated:null,images:{}};
+const D={features:[],byId:{},twins:{},gurs:{},gursMeta:null,news:{},newsUpdated:null,images:{},insp:{},contacts:{default:'',by_id:{}}};
 async function getJSON(u){try{const r=await fetch(u);return r.ok?await r.json():null;}catch(_){return null;}}
 async function load(){
   const g=await getJSON('data/zag_projects.geojson'); if(!g) throw new Error('The atlas data did not load.');
   D.features=g.features; D.byId=Object.fromEntries(g.features.map(f=>[f.properties.id,f]));
   const [tw,gu,nw,im]=await Promise.all([getJSON('data/twins.json'),getJSON('data/gurs_buildings.json'),getJSON('data/news.json'),getJSON('data/images.json')]);
   if(tw) D.twins=tw.objects||{}; if(gu){D.gurs=gu.buildings||{};D.gursMeta=gu.meta||null;} if(nw){D.news=nw.items||{};D.newsUpdated=nw.updated||null;} if(im) D.images=im;
+  const [ins,con]=await Promise.all([getJSON('data/inspections.json'),getJSON('data/contacts.json')]); if(ins&&ins.items) D.insp=ins.items; if(con) D.contacts={default:con.default||'',by_id:con.by_id||{}};
   adoptUser((await getJSON('data/user_objects.json')||{}).features,'published'); adoptUser(localUser().features,'this browser');
 }
+/* inspection log: entries published in data/inspections.json plus entries kept in this browser. Entries are what a person typed in, not measurements. */
+const INSP_KEY='zag_inspections', COND={good:['Good','ok'],fair:['Fair','warn'],poor:['Poor','bad'],critical:['Critical','bad'],none:['Not rated','']};
+const KINDS=['Visual inspection','Detailed inspection','Load test','Monitoring visit','Other'];
+function inspLocal(){ try{ const j=JSON.parse(localStorage.getItem(INSP_KEY)||'{}'); return j&&typeof j==='object'?j:{}; }catch(_){ return {}; } }
+function inspFor(id){ const pub=(D.insp[id]||[]).map(e=>Object.assign({origin:'published'},e)), loc=(inspLocal()[id]||[]).map(e=>Object.assign({origin:'this browser'},e)); return [...pub,...loc].filter(e=>e&&/^\d{4}-\d{2}-\d{2}$/.test(e.date||'')).sort((a,b)=>a.date<b.date?1:-1); }
+function inspText(p,e){ return `Inspection record, ZAG Digital Atlas\n\nObject: ${p.name_en||p.name}\nDate: ${e.date}\nKind: ${e.kind||''}\nInspector: ${e.inspector||''}\nCondition: ${(COND[e.condition]||COND.none)[0]}\nNotes: ${e.notes||''}\n${e.report?'Report: '+e.report+'\n':''}Object page: ${location.origin+location.pathname}?id=${p.id}\n`; }
+const mailto=(to,subject,body)=>'mailto:'+encodeURIComponent(to||'').replace(/%40/g,'@').replace(/%2C/g,',')+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+function inspHTML(p){ const list=inspFor(p.id);
+  return `${list.length?list.map(e=>`<div class="nitem"><b>${esc(e.date)}</b> <span class="tag ${(COND[e.condition]||COND.none)[1]}">${esc((COND[e.condition]||COND.none)[0])}</span> <span class="tag">${T(e.kind||'Inspection')}</span>${e.origin==='this browser'?' <span class="tag warn">in this browser only</span>':''}
+      <div class="note">${e.inspector?T(e.inspector)+'. ':''}${T(e.notes||'')}${e.report&&/^https?:\/\//i.test(e.report)?' '+link(e.report,'report'):''}</div></div>`).join(''):'<p class="note" style="padding:12px 18px 0">No inspection is recorded for this object.</p>'}
+    <form class="in iform" id="iform" autocomplete="off"><h3>Add an inspection record</h3>
+      <div class="igrid"><label class="fld"><span>Date</span><input id="iDate" type="date" required></label><label class="fld"><span>Kind</span><select id="iKind">${KINDS.map(k=>`<option>${k}</option>`).join('')}</select></label>
+        <label class="fld"><span>Condition</span><select id="iCond"><option value="none">Not rated</option><option value="good">Good</option><option value="fair">Fair</option><option value="poor">Poor</option><option value="critical">Critical</option></select></label>
+        <label class="fld"><span>Inspector</span><input id="iWho" maxlength="80"></label></div>
+      <label class="fld"><span>Findings and notes</span><textarea id="iNotes" maxlength="1500" style="font-family:inherit;font-size:inherit;min-height:70px"></textarea></label>
+      <label class="fld"><span>Link to the report, if there is one</span><input id="iRep" type="url" placeholder="https://"></label>
+      <div class="btnrow"><button class="tbtn solid" type="submit">Save record</button><button class="tbtn" type="button" id="iMail">Send by email</button></div>
+      <p class="note" id="iMsg" role="status">Records are kept in this browser. Download them from the dashboard to publish them for everyone.</p></form>`; }
+function inspWire(p){ const f=$('iform'); if(!f) return; $('iDate').value=new Date().toISOString().slice(0,10);
+  const entry=()=>({date:$('iDate').value,kind:$('iKind').value,condition:$('iCond').value,inspector:$('iWho').value.trim(),notes:$('iNotes').value.trim(),report:/^https?:\/\//i.test($('iRep').value.trim())?$('iRep').value.trim():'',created:new Date().toISOString()});
+  f.onsubmit=e=>{ e.preventDefault(); const en=entry(); if(!en.date){ $('iMsg').textContent='Give the date of the inspection.'; return; } const all=inspLocal(); (all[p.id]=all[p.id]||[]).push(en);
+    try{ localStorage.setItem(INSP_KEY,JSON.stringify(all)); }catch(_){ $('iMsg').textContent='This browser did not allow saving. Use Send by email instead.'; return; }
+    const sec=$('inspect'), body=sec.querySelector('.ibody'); body.innerHTML=inspHTML(p); inspWire(p); $('iMsg').textContent='Saved in this browser.'; };
+  $('iMail').onclick=()=>{ const en=entry(); location.href=mailto(D.contacts.by_id[p.id]||D.contacts.default,'Inspection record: '+(p.name_en||p.name),'Dear colleague,\n\n'+inspText(p,en)+'\nHvala.\nKind regards,\n'); }; }
 /* objects added with the Add object tool: published in data/user_objects.json or kept in this browser. Always marked as not verified. */
 const USER_KEY='zag_user_objects';
 function localUser(){ try{ const j=JSON.parse(localStorage.getItem(USER_KEY)||'null'); return j&&Array.isArray(j.features)?j:{type:'FeatureCollection',features:[]}; }catch(_){ return {type:'FeatureCollection',features:[]}; } }
@@ -88,7 +113,7 @@ function renderTwin(f){
   const news=D.news[id]||[], fresh=d=>Date.now()-Date.parse(d)<7*864e5;
   const coord=`${p.latitude.toFixed(6)}, ${p.longitude.toFixed(6)}`;
   const secs=[];
-  const OPEN=new Set(['about','zag','specs','geometry','check']);
+  const OPEN=new Set(['about','zag','specs','check']);
   const sec=(sid,title,html)=>{ if(html) secs.push({sid,title,html:`<details class="sec" id="${sid}"${OPEN.has(sid)?' open':''}><summary><h2>${esc(title)}</h2><span class="chev" aria-hidden="true"></span></summary>${html}</details>`}); };
 
   sec('about','About',(p.description||t&&t.summary)?`<div class="in">${p.description?`<p>${T(p.description)}</p>`:''}${t&&t.summary?`<p class="muted">${T(t.summary)}</p>`:''}</div>`:'');
@@ -107,6 +132,7 @@ function renderTwin(f){
   sec('history','History and engineering',p.hist?`<div class="in"><p>${T(p.hist)}</p></div>`:'');
   const nd=t?(t.differences||[]).length:0;
   sec('check','Verification',(nd||t&&t.open)?`${nd?`<details class="sub"${nd<=4?' open':''}><summary>Where the sources differ (${nd})</summary><ul>${t.differences.map(x=>`<li>${T(x)}</li>`).join('')}</ul></details>`:''}${t&&t.open?`<p class="open"><b>Not yet verified.</b> ${T(cap(t.open))}</p>`:''}`:'');
+  sec('inspect','Inspection log',`<div class="ibody">${inspHTML(p)}</div>`);
   sec('news','Recent news',news.length?`${news.map(n=>`<div class="nitem${fresh(n.date)?' fresh':''}"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a><div class="note">${esc(n.source)}, ${fmtDate(n.date)}${n.outlets>1?`, reported by ${n.outlets} outlets`:''}</div></div>`).join('')}<p class="note" style="padding:8px 18px">Matched automatically on Slovenian keywords from Google News, so an unrelated article can slip through.${D.newsUpdated?' Checked '+fmtDate(D.newsUpdated)+'.':''}</p>`:'');
   sec('position','Position',`<div class="tscroll"><table><tbody><tr><td class="l">Basis</td><td class="v">${esc(PREC[p.position_precision]||p.position_precision)}</td></tr><tr><td class="l">WGS84</td><td class="n">${coord}</td></tr>
     ${p.address?`<tr><td class="l">Address</td><td class="v">${T(p.address)}</td></tr>`:''}${(p.position_sources||[]).length?`<tr><td class="l">Position sources</td><td class="v">${p.position_sources.map(u=>link(u)).join(', ')}</td></tr>`:''}</tbody></table></div>
@@ -117,31 +143,30 @@ function renderTwin(f){
   $('crumb').textContent=`Digital twins, ${GROUP_NAME[p.object_type]||cap(p.object_type)}`;
   const order=D.features.map(x=>x.properties.id), sheet=order.indexOf(id)+1;
   const model=buildModel(p,t,g,lines,labels), hasModel=model.els.length>0;
+  const dataRows=[...((t&&t.specs)||[]).map(x=>[x.label,clean(x.value)+(x.unit?' '+x.unit:''),x.source]),...sRows.map(x=>[x[0],x[1],null]),...((p.facts||[]).map(x=>[x[0],x[1],null]))];
   $('main').innerHTML=`<div class="wrap">
     <header class="hero">
       <p class="kind">${esc(kind)}, ${esc(p.object_type)}</p>
       <h1>${T(p.name_en||p.name)}</h1>
       ${p.name_sl&&p.name_sl!==p.name_en?`<p class="sl" lang="sl">${T(p.name_sl)}</p>`:''}
       <div class="tags">${where?`<span class="tag">${T(where)}</span>`:''}<span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only',user:'Added by a user, not verified'}[p.evidence_level]||p.evidence_level)}</span><span class="tag ${exact?'ok':'warn'}">${esc(PREC[p.position_precision]||p.position_precision)}</span><span class="tag">Sheet ${sheet} of ${order.length}</span></div>
+      <div class="reqrow"><a class="tbtn solid" id="req" href="#">Request latest information</a><a class="tbtn" id="toinsp" href="#inspect">Add inspection record</a></div>
     </header>
-    <section class="glass stage" aria-label="Model and map">
+    <section class="glass stage" aria-label="Structure on the map, its data and its model">
       <div class="stagebar">
-        <div class="seg" role="group" aria-label="View"><button id="tModel" type="button" aria-pressed="${hasModel}"${hasModel?'':' hidden'}>Model</button><button id="tMap" type="button" aria-pressed="${!hasModel}">Map</button></div>
-        <div class="ctl" id="modelctl"${hasModel?'':' hidden'}>
-          <div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div>
-          <div class="seg" role="group" aria-label="Motion"><button id="mSpin" type="button" aria-pressed="false">Rotate</button><button id="mLight" type="button" aria-pressed="false" title="Moving light along the elements. It is an animation, not measured data.">Light</button></div>
-          <button class="tbtn" id="mReset" type="button">Reset</button>
-        </div>
-        <div class="ctl" id="mapctl"${hasModel?' hidden':''}>
-          <div class="seg" role="group" aria-label="Background"><button id="vMap" type="button" aria-pressed="true">Map</button><button id="vSat" type="button" aria-pressed="false">Satellite</button></div>
-          <div class="seg" role="group" aria-label="Map view"><button id="v3d" type="button" aria-pressed="true">3D</button><button id="vOrbit" type="button" aria-pressed="false">Orbit</button><button id="vLight" type="button" aria-pressed="true" title="Moving light along the structure. It is an animation, not measured data.">Light</button></div>
-          <button class="tbtn" id="vReset" type="button">Reset</button>
-        </div>
+        <div class="seg" role="group" aria-label="Background"><button id="vMap" type="button" aria-pressed="true">Map</button><button id="vSat" type="button" aria-pressed="false">Satellite</button></div>
+        <div class="seg" role="group" aria-label="Tilt"><button id="v3d" type="button" aria-pressed="true">3D</button><button id="v2d" type="button" aria-pressed="false">Flat</button></div>
+        <button class="tbtn" id="vReset" type="button">Reset view</button>
+        <span class="hint">${hasModel?'Click the structure for its data. Drag to move, scroll to zoom, right button or Ctrl and drag to turn.':'Drag to move, scroll to zoom, right button or Ctrl and drag to turn.'}</span>
       </div>
-      <div class="stagebody">
-        <canvas id="fem" tabindex="0" aria-label="Schematic model of ${T(p.name_en||p.name)}. Drag to rotate, click a node or an element for its data."${hasModel?'':' hidden'}></canvas>
-        <div id="mapwrap"${hasModel?' hidden':''}><div id="tmap" role="application" aria-label="3D map view of the object"></div><div class="readout" id="readout" aria-hidden="true"></div></div>
-        <aside class="pickbox" id="pick" aria-live="polite"${hasModel?'':' hidden'}><b>Model</b><p>Click a node or an element for its data. Drag to rotate. Click the model first, then scroll to zoom.</p></aside>
+      <div class="stagegrid${hasModel?'':' nomodel'}">
+        <div class="mapcol"><div id="tmap" role="application" aria-label="Map with the structure in place"></div><div class="readout" id="readout" aria-hidden="true"></div></div>
+        <aside class="side" aria-label="Selected part, model and data">
+          ${hasModel?`<div class="modelbox"><canvas id="fem" tabindex="0" aria-label="Model of ${T(p.name_en||p.name)}. Drag to turn it any way, scroll to zoom, double click to reset."></canvas>
+            <div class="mbar"><div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div><button class="tbtn" id="mReset" type="button">Reset</button></div></div>`:''}
+          <div class="pickbox" id="pick" aria-live="polite"></div>
+          <div class="alldata"><h3>All data on this object</h3>${dataRows.length?dataRows.map(r=>`<div class="row"><span>${T(r[0])}</span><span>${T(r[1])}${r[2]?` ${link(r[2])}`:''}</span></div>`).join(''):'<p class="note">No specifications are recorded for this object yet.</p>'}</div>
+        </aside>
       </div>
       <p class="note stage-note" id="snote">${hasModel?T(model.note):(exact?'No drawn geometry is recorded for this object yet, so there is no model. The map shows the recorded position.':'The position is approximate, so the map shows an area and not a point. There is no model for this object.')}</p>
     </section>
@@ -157,16 +182,17 @@ function renderTwin(f){
   document.querySelectorAll('.toc a, .dim .s a').forEach(a=>a.addEventListener('click',()=>openSec(a.getAttribute('href'))));
   const ex=$('expand'); ex.onclick=()=>{ const all=ex.getAttribute('aria-pressed')!=='true'; document.querySelectorAll('details.sec').forEach(d=>d.open=all); ex.setAttribute('aria-pressed',all?'true':'false'); ex.textContent=all?'Collapse all':'Expand all'; };
   const cp=$('copy'); if(cp) cp.onclick=async()=>{try{await navigator.clipboard.writeText(coord);cp.textContent='Copied';}catch(_){cp.textContent='Copy is not available here';}setTimeout(()=>cp.textContent='Copy coordinates',1800);};
-  /* Model and Map share one stage. The map is created only when its tab is first opened. */
-  const ctl={mode:hasModel?'model':'map',fem:null,map:null};
-  const press=(el,on)=>el.setAttribute('aria-pressed',on?'true':'false');
-  const openMap=()=>{ if(!ctl.map) ctl.map=initView(p,t,g,lines,labels)||{}; else if(ctl.map.resize) ctl.map.resize(); };
-  const show=m=>{ ctl.mode=m; const isM=m==='model'; $('fem').hidden=!isM; $('pick').hidden=!isM; $('modelctl').hidden=!isM; $('mapwrap').hidden=isM; $('mapctl').hidden=isM; press($('tModel'),isM); press($('tMap'),!isM);
-    if(isM){ if(ctl.fem) ctl.fem.wake(); } else { if(ctl.fem) ctl.fem.sleep(); openMap(); } };
-  $('tModel').onclick=()=>show('model'); $('tMap').onclick=()=>show('map');
-  if(hasModel) ctl.fem=initModel(model,p); else openMap();
+  /* one stage: the structure in place on the map, and beside it the selected part, the model and all data. A click on either side selects on both. */
+  const EMBED=document.body.classList.contains('embed'), home=()=>{ const el=$('pick'); if(el) el.innerHTML=`<b>${T(p.name_en||p.name)}</b><div class="row"><span>Type</span><span>${esc(cap(p.object_type))}</span></div><div class="row"><span>Position</span><span>${esc(PREC[p.position_precision]||p.position_precision)}</span></div><div class="row"><span>WGS84</span><span>${coord}</span></div>${hasModel?'<p>Click a part of the structure on the map or in the model.</p>':''}`; };
+  const ctl={fem:null,map:null}; home();
+  { const open=t&&t.open?'\nStill to confirm: '+clean(t.open):'', nd=t?(t.differences||[]).length:0, last=inspFor(id)[0];
+    $('req').href=mailto(D.contacts.by_id[id]||D.contacts.default,'Latest information needed: '+(p.name_en||p.name),
+      `Dear colleague,\n\nPlease send the latest information on this structure for the ZAG Digital Atlas.\n\nObject: ${p.name_en||p.name}${p.name_sl&&p.name_sl!==p.name_en?' ('+p.name_sl+')':''}\nType: ${p.object_type}\nPlace: ${where||''}\nPage: ${location.origin+location.pathname}?id=${id}\n${open}${nd?'\nSources disagree on '+nd+(nd===1?' point':' points')+', listed on the page.':''}\nLast inspection in the atlas: ${last?last.date+', '+(COND[last.condition]||COND.none)[0].toLowerCase():'none recorded'}\n\nUseful to have: current condition, date and kind of the last inspection, any change to the structure, and a link to the report.\n\nHvala.\nKind regards,\n`);
+    $('toinsp').onclick=()=>{ const d=$('inspect'); if(d) d.open=true; }; inspWire(p); }
+  if(hasModel) ctl.fem=initModel(model,p,{home,onSelect:sel=>{ if(ctl.map&&ctl.map.highlight) ctl.map.highlight(sel&&sel.part!=null?sel.part:null); }});
+  if(!EMBED) ctl.map=initView(p,t,g,lines,labels,{select:(type,i)=>{ if(!ctl.fem) return; if(type==='part') ctl.fem.pickPart(i); else ctl.fem.pickRef(i); }})||{};
   const rowAct=tr=>{ document.querySelector('.stage').scrollIntoView({block:'start',behavior:'smooth'});
-    if(ctl.mode==='model'&&ctl.fem){ if(tr.dataset.line!=null) ctl.fem.pickPart(+tr.dataset.line); else ctl.fem.pickRef(+tr.dataset.anchor); } else if(ctl.map&&ctl.map.act) ctl.map.act(tr); };
+    if(tr.dataset.line!=null){ if(ctl.fem) ctl.fem.pickPart(+tr.dataset.line); if(ctl.map&&ctl.map.focusLine) ctl.map.focusLine(+tr.dataset.line); } else { if(ctl.fem) ctl.fem.pickRef(+tr.dataset.anchor); if(ctl.map&&ctl.map.focusAnchor) ctl.map.focusAnchor(+tr.dataset.anchor); } };
   document.querySelectorAll('tr.pick').forEach(tr=>{tr.onclick=()=>rowAct(tr);tr.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();rowAct(tr);}};});
 }
 
@@ -203,49 +229,37 @@ function buildModel(p,t,g,lines,labels){
   M.note='Schematic mesh generated from '+bits.join(' and ')+'. It is not a structural analysis model. Element size is a drawing choice'+(lines.length?', and heights along the alignment are not in the sources, so those parts are drawn flat':'')+'.'+(ring0.length?' The horizontal rings on the building are mesh levels, not floors.':'');
   return M;
 }
-function initModel(M,p){
-  const cv=$('fem'), ctx=cv.getContext('2d'), info=$('pick'), reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const HOME={yaw:-.6,pitch:.95}; let yaw=HOME.yaw,pitch=HOME.pitch,zoom=1,panX=0,panY=0,w=0,h=0,dpr=1;
-  let spin=!reduced, light=!reduced, active=false, awake=true, inView=true, raf=0, t0=performance.now(), sel=null, hov=null, P=[], PR=[];
-  const press=(id,on)=>$(id).setAttribute('aria-pressed',on?'true':'false');
+function initModel(M,p,opt){
+  opt=opt||{}; const cv=$('fem'), ctx=cv.getContext('2d'), info=$('pick');
+  const HOME={yaw:-.6,pitch:.95}; let yaw=HOME.yaw,pitch=HOME.pitch,zoom=1,panX=0,panY=0,w=0,h=0,dpr=1,sel=null,hov=null,P=[],PR=[],queued=0,awake=true;
+  const press=(id,on)=>{ const el=$(id); if(el) el.setAttribute('aria-pressed',on?'true':'false'); };
   const size=()=>{ const r=cv.getBoundingClientRect(); dpr=Math.min(2,window.devicePixelRatio||1); w=r.width; h=r.height; cv.width=Math.round(w*dpr); cv.height=Math.round(h*dpr); };
   const proj=(x,y,z)=>{ const c=Math.cos(yaw),s=Math.sin(yaw),x1=x*c-y*s,y1=x*s+y*c,k=Math.min(w,h)*.40/M.R*zoom; return [w/2+panX+x1*k,h/2+panY-(y1*Math.cos(pitch)+z*Math.sin(pitch))*k]; };
-  const along=(tr,f)=>{ const m=tr.length-1, q=Math.min(m-1e-6,f*m), i=Math.floor(q), u=q-i, A=M.nodes[tr[i]], B=M.nodes[tr[i+1]]; return proj(A.x+(B.x-A.x)*u,A.y+(B.y-A.y)*u,A.z+(B.z-A.z)*u); };
-  function draw(now){
+  const along=(tr,f)=>{ const m=tr.length-1, q=Math.max(0,Math.min(m-1e-6,f*m)), i=Math.floor(q), u=q-i, A=M.nodes[tr[i]], B=M.nodes[tr[i+1]]; return proj(A.x+(B.x-A.x)*u,A.y+(B.y-A.y)*u,A.z+(B.z-A.z)*u); };
+  function draw(){ queued=0; if(!awake||!w) return;
     ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h);
-    /* ground grid with a stated spacing */
     const span=M.R*2.4, raw=span/10, pw=Math.pow(10,Math.floor(Math.log10(raw))), step=[1,2,5,10].map(m=>m*pw).find(v=>v>=raw), half=Math.ceil(span/2/step)*step;
     ctx.lineWidth=1; ctx.strokeStyle='rgba(32,52,105,.10)'; ctx.beginPath();
     for(let v=-half;v<=half+1e-6;v+=step){ let a=proj(v,-half,0),b=proj(v,half,0); ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]); a=proj(-half,v,0); b=proj(half,v,0); ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]); } ctx.stroke();
     P=M.nodes.map(n=>proj(n.x,n.y,n.z)); PR=M.refs.map(n=>proj(n.x,n.y,n.z));
     const selPart=sel&&sel.type==='part'?sel.i:null;
     for(const pass of [0,1]){ ctx.beginPath(); for(const e of M.els){ const main=e.kind==='axis'||e.kind==='ring'||e.kind==='edge'; if((pass===1)!==main) continue; ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); }
-      ctx.strokeStyle=pass?'#007AFF':'rgba(0,122,255,.38)'; ctx.lineWidth=pass?2:1; ctx.stroke(); }
-    if(selPart!=null){ ctx.beginPath(); for(const e of M.els) if(e.part===selPart){ ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); } ctx.strokeStyle='#FF9500'; ctx.lineWidth=2.5; ctx.stroke(); }
-    const mark=(o,col)=>{ if(!o) return; if(o.type==='el'){ const e=M.els[o.i]; ctx.beginPath(); ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); ctx.strokeStyle=col; ctx.lineWidth=5; ctx.lineCap='round'; ctx.stroke(); ctx.lineCap='butt'; } };
-    mark(hov,'rgba(255,149,0,.45)'); mark(sel,'#FF9500');
+      ctx.strokeStyle=pass?'#203469':'rgba(32,52,105,.35)'; ctx.lineWidth=pass?2:1; ctx.stroke(); }
+    if(selPart!=null){ ctx.beginPath(); for(const e of M.els) if(e.part===selPart){ ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); } ctx.strokeStyle='#007AFF'; ctx.lineWidth=3; ctx.stroke(); }
+    const mark=(o,col)=>{ if(o&&o.type==='el'){ const e=M.els[o.i]; ctx.beginPath(); ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); ctx.strokeStyle=col; ctx.lineWidth=5; ctx.lineCap='round'; ctx.stroke(); ctx.lineCap='butt'; } };
+    mark(hov,'rgba(0,122,255,.4)'); mark(sel,'#007AFF');
     ctx.fillStyle='#203469'; const ns=M.nodes.length>260?2:3; for(const q of P) ctx.fillRect(q[0]-ns/2,q[1]-ns/2,ns,ns);
     const dot=(o,r,col)=>{ if(o&&o.type==='node'){ const q=P[o.i]; ctx.beginPath(); ctx.arc(q[0],q[1],r,0,7); ctx.fillStyle=col; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle='#fff'; ctx.stroke(); } };
-    dot(hov,5,'rgba(255,149,0,.6)'); dot(sel,6,'#FF9500');
-    PR.forEach((q,i)=>{ const on=sel&&sel.type==='ref'&&sel.i===i; ctx.beginPath(); ctx.moveTo(q[0],q[1]-6); ctx.lineTo(q[0]+6,q[1]); ctx.lineTo(q[0],q[1]+6); ctx.lineTo(q[0]-6,q[1]); ctx.closePath(); ctx.fillStyle=on?'#FF9500':'#fff'; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle=on?'#fff':'#5856D6'; ctx.stroke(); });
-    if(light){ const sec=(now-t0)/1000; for(const pt of M.parts){ const T=Math.max(3.5,Math.min(9,pt.len/60)), n=pt.len>600?2:1;
-        for(let j=0;j<n;j++){ const f=((((sec/T)+j/n)%1)+1)%1, q=along(pt.track,f), gr=ctx.createRadialGradient(q[0],q[1],0,q[0],q[1],16); gr.addColorStop(0,'rgba(255,255,255,1)'); gr.addColorStop(.25,'rgba(90,200,250,.9)'); gr.addColorStop(1,'rgba(90,200,250,0)');
-          ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(q[0],q[1],16,0,7); ctx.fill(); } } }
-    /* part names and the grid spacing */
-    ctx.font='600 12px Inter,system-ui,sans-serif'; ctx.textBaseline='middle';
-    if(M.parts.length<=6) M.parts.forEach((pt,i)=>{ const q=along(pt.track,.5), tx=pt.name, tw=ctx.measureText(tx).width+16, x=q[0]-tw/2, y=q[1]-34;
-      ctx.fillStyle='rgba(255,255,255,.92)'; ctx.strokeStyle=selPart===i?'#FF9500':'rgba(32,52,105,.25)'; ctx.lineWidth=1; ctx.beginPath(); ctx.roundRect(x,y,tw,22,11); ctx.fill(); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(q[0],y+22); ctx.lineTo(q[0],q[1]-4); ctx.stroke(); ctx.fillStyle='#203469'; ctx.fillText(tx,x+8,y+11.5); });
-    ctx.font='500 12px Inter,system-ui,sans-serif'; ctx.fillStyle='#6E6E73'; ctx.fillText('Grid '+(step>=1000?step/1000+' km':step+' m')+', north is '+(Math.abs(yaw)<.02?'up':'marked N'),14,h-16);
-    const c0=proj(0,0,0), cn=proj(0,M.R*.25,0), dx=cn[0]-c0[0], dy=cn[1]-c0[1], dl=Math.hypot(dx,dy)||1, ax=w-44, ay=h-44;
-    ctx.strokeStyle='#203469'; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(ax,ay); ctx.lineTo(ax+dx/dl*22,ay+dy/dl*22); ctx.stroke(); ctx.fillStyle='#203469'; ctx.font='700 12px Inter,system-ui,sans-serif'; ctx.fillText('N',ax+dx/dl*31-4,ay+dy/dl*31);
+    dot(hov,5,'rgba(0,122,255,.5)'); dot(sel,6,'#007AFF');
+    PR.forEach((q,i)=>{ const on=sel&&sel.type==='ref'&&sel.i===i; ctx.beginPath(); ctx.moveTo(q[0],q[1]-6); ctx.lineTo(q[0]+6,q[1]); ctx.lineTo(q[0],q[1]+6); ctx.lineTo(q[0]-6,q[1]); ctx.closePath(); ctx.fillStyle=on?'#007AFF':'#fff'; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle=on?'#fff':'#5856D6'; ctx.stroke(); });
+    ctx.font='500 11.5px Inter,system-ui,sans-serif'; ctx.textBaseline='middle'; ctx.fillStyle='#6E6E73'; ctx.fillText('Grid '+(step>=1000?step/1000+' km':step+' m'),10,h-12);
+    const c0=proj(0,0,0), cn=proj(0,M.R*.25,0), dx=cn[0]-c0[0], dy=cn[1]-c0[1], dl=Math.hypot(dx,dy); if(dl>1){ const ax=w-30, ay=h-30; ctx.strokeStyle='#203469'; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(ax,ay); ctx.lineTo(ax+dx/dl*16,ay+dy/dl*16); ctx.stroke(); ctx.fillStyle='#203469'; ctx.font='700 11px Inter,system-ui,sans-serif'; ctx.fillText('N',ax+dx/dl*24-4,ay+dy/dl*24); }
   }
-  const running=()=>awake&&inView&&!document.hidden&&(spin||light);
-  function loop(now){ raf=0; if(spin) yaw+=.0032; draw(now); if(running()) raf=requestAnimationFrame(loop); }
-  const kick=()=>{ if(!raf&&awake) raf=requestAnimationFrame(loop); };
+  const redraw=()=>{ if(!queued) queued=requestAnimationFrame(draw); };
   const row=(k,v,html)=>v==null||v===''?'':`<div class="row"><span>${esc(k)}</span><span>${html?v:T(v)}</span></div>`;
   function describe(){
-    if(!sel){ info.innerHTML='<b>Model</b><p>Click a node or an element for its data. Drag to rotate. Click the model first, then scroll to zoom.</p>'; return; }
+    if(opt.onSelect) opt.onSelect(!sel?null:{part:sel.type==='part'?sel.i:sel.type==='node'?M.nodes[sel.i].part:sel.type==='el'?M.els[sel.i].part:null});
+    if(!info) return; if(!sel){ if(opt.home) opt.home(); else info.innerHTML='<b>Model</b><p>Click a node or an element for its data.</p>'; return; }
     if(sel.type==='node'){ const n=M.nodes[sel.i], pt=M.parts[n.part];
       info.innerHTML=`<b>Node ${n.id}</b>${row('Part',pt.name)}${row('Role',{axis:'on the centre line',edge:'deck edge',ground:'ground level',top:'top of the building',level:'mesh level'}[n.role])}${row('Distance along the part',n.ch!=null?num(Math.round(n.ch*10)/10)+' m':null)}${row('Height above ground',pt.kind==='building'?n.z.toFixed(1)+' m':null)}${row('Latitude',n.lat.toFixed(6))}${row('Longitude',n.lon.toFixed(6))}`; }
     else if(sel.type==='el'){ const e=M.els[sel.i], pt=M.parts[e.part];
@@ -258,91 +272,55 @@ function initModel(M,p){
   function hit(x,y){ let best=null,bd=11; PR.forEach((q,i)=>{ const d=Math.hypot(q[0]-x,q[1]-y); if(d<bd){bd=d;best={type:'ref',i};} }); if(best) return best;
     bd=9; P.forEach((q,i)=>{ const d=Math.hypot(q[0]-x,q[1]-y); if(d<bd){bd=d;best={type:'node',i};} }); if(best) return best;
     bd=7; M.els.forEach((e,i)=>{ const d=segD(x,y,P[e.a],P[e.b]); if(d<bd){bd=d;best={type:'el',i};} }); return best; }
-  const stopSpin=()=>{ if(spin){ spin=false; press('mSpin',false); } };
-  const pts=new Map(); let moved=0, pinch=0;
+  /* free handling: drag turns the model about both axes without limits, the wheel zooms at once, Shift or the right button moves it */
+  const pts=new Map(); let moved=0, pinch=0, btn=0;
   const pos=e=>{ const r=cv.getBoundingClientRect(); return [e.clientX-r.left,e.clientY-r.top]; };
-  cv.addEventListener('pointerdown',e=>{ cv.setPointerCapture(e.pointerId); pts.set(e.pointerId,pos(e)); moved=0; active=true; cv.classList.add('active'); stopSpin(); if(pts.size===2){ const a=[...pts.values()]; pinch=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]); } });
+  const clampZ=z=>Math.max(.15,Math.min(80,z));
+  cv.addEventListener('contextmenu',e=>e.preventDefault());
+  cv.addEventListener('pointerdown',e=>{ try{cv.setPointerCapture(e.pointerId);}catch(_){} pts.set(e.pointerId,pos(e)); moved=0; btn=e.button; cv.style.cursor='grabbing'; if(pts.size===2){ const a=[...pts.values()]; pinch=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]); } });
   cv.addEventListener('pointermove',e=>{ const q=pos(e);
-    if(!pts.has(e.pointerId)){ const hh=hit(q[0],q[1]); if(JSON.stringify(hh)!==JSON.stringify(hov)){ hov=hh; cv.style.cursor=hh?'pointer':'grab'; if(!raf) draw(performance.now()); } return; }
+    if(!pts.has(e.pointerId)){ const hh=hit(q[0],q[1]); if(JSON.stringify(hh)!==JSON.stringify(hov)){ hov=hh; cv.style.cursor=hh?'pointer':'grab'; redraw(); } return; }
     const o=pts.get(e.pointerId), dx=q[0]-o[0], dy=q[1]-o[1]; pts.set(e.pointerId,q); moved+=Math.abs(dx)+Math.abs(dy);
-    if(pts.size===2){ const a=[...pts.values()], d=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]); if(pinch) zoom=Math.max(.3,Math.min(30,zoom*d/pinch)); pinch=d; }
-    else if(e.shiftKey||e.button===2){ panX+=dx; panY+=dy; } else { yaw+=dx*.008; pitch=Math.max(0,Math.min(Math.PI/2,pitch+dy*.006)); ['m3d','mTop','mSide'].forEach(k=>press(k,false)); }
-    if(!raf) draw(performance.now()); });
-  const up=e=>{ const had=pts.has(e.pointerId); pts.delete(e.pointerId); pinch=0; if(had&&moved<5){ const q=pos(e); sel=hit(q[0],q[1]); describe(); if(!raf) draw(performance.now()); } };
+    if(pts.size===2){ const a=[...pts.values()], d=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]); if(pinch) zoom=clampZ(zoom*d/pinch); pinch=d; }
+    else if(e.shiftKey||btn===2||btn===1){ panX+=dx; panY+=dy; } else { yaw+=dx*.009; pitch+=dy*.009; ['m3d','mTop','mSide'].forEach(k=>press(k,false)); }
+    redraw(); });
+  const up=e=>{ const had=pts.has(e.pointerId); pts.delete(e.pointerId); pinch=0; cv.style.cursor='grab'; if(had&&moved<5&&btn===0){ const q=pos(e); sel=hit(q[0],q[1]); describe(); redraw(); } };
   cv.addEventListener('pointerup',up); cv.addEventListener('pointercancel',e=>{pts.delete(e.pointerId);pinch=0;});
-  cv.addEventListener('wheel',e=>{ if(!active) return; e.preventDefault(); stopSpin(); zoom=Math.max(.3,Math.min(30,zoom*Math.exp(-e.deltaY*.0015))); if(!raf) draw(performance.now()); },{passive:false});
-  cv.addEventListener('blur',()=>{ active=false; cv.classList.remove('active'); });
-  document.addEventListener('pointerdown',e=>{ if(e.target!==cv){ active=false; cv.classList.remove('active'); } });
-  cv.addEventListener('keydown',e=>{ const k=e.key; let ok=true; if(k==='ArrowLeft') yaw-=.1; else if(k==='ArrowRight') yaw+=.1; else if(k==='ArrowUp') pitch=Math.min(Math.PI/2,pitch+.08); else if(k==='ArrowDown') pitch=Math.max(0,pitch-.08); else if(k==='+'||k==='=') zoom=Math.min(30,zoom*1.2); else if(k==='-') zoom=Math.max(.3,zoom/1.2); else if(k==='Escape'){ sel=null; describe(); } else ok=false;
-    if(ok){ e.preventDefault(); stopSpin(); if(!raf) draw(performance.now()); } });
-  const view=(y,pt,id)=>{ stopSpin(); yaw=y; pitch=pt; panX=panY=0; zoom=1; ['m3d','mTop','mSide'].forEach(k=>press(k,k===id)); if(!raf) draw(performance.now()); };
-  $('m3d').onclick=()=>view(HOME.yaw,HOME.pitch,'m3d'); $('mTop').onclick=()=>view(0,0,'mTop'); $('mSide').onclick=()=>view(0,Math.PI/2,'mSide');
-  $('mReset').onclick=()=>{ sel=null; describe(); view(HOME.yaw,HOME.pitch,'m3d'); };
-  $('mSpin').onclick=()=>{ spin=!spin; press('mSpin',spin); kick(); };
-  $('mLight').onclick=()=>{ light=!light; press('mLight',light); kick(); if(!light&&!raf) draw(performance.now()); };
-  press('mSpin',spin); press('mLight',light);
-  if('ResizeObserver' in window) new ResizeObserver(()=>{ if(cv.hidden) return; size(); if(!raf) draw(performance.now()); }).observe(cv);
-  if('IntersectionObserver' in window) new IntersectionObserver(es=>{ inView=es[0].isIntersecting; if(inView) kick(); }).observe(cv);
-  document.addEventListener('visibilitychange',()=>{ if(!document.hidden) kick(); });
-  size(); draw(performance.now()); kick();
-  const api={ wake(){ awake=true; size(); draw(performance.now()); kick(); }, sleep(){ awake=false; },
-    pickPart(i){ if(M.parts[i]){ sel={type:'part',i}; describe(); if(!raf) draw(performance.now()); } }, pickRef(i){ const k=M.refs.findIndex(r=>r.i===i); if(k>=0){ sel={type:'ref',i:k}; describe(); if(!raf) draw(performance.now()); } },
-    state:()=>({nodes:M.nodes.length,els:M.els.length,parts:M.parts.length,sel,yaw,pitch,zoom,running:!!raf}), screen:(type,i)=>type==='node'?P[i]:type==='ref'?PR[i]:[(P[M.els[i].a][0]+P[M.els[i].b][0])/2,(P[M.els[i].a][1]+P[M.els[i].b][1])/2] };
+  cv.addEventListener('wheel',e=>{ e.preventDefault(); const q=pos(e), k0=zoom; zoom=clampZ(zoom*Math.exp(-e.deltaY*.0022)); const f=zoom/k0; panX=(q[0]-w/2)-(q[0]-w/2-panX)*f; panY=(q[1]-h/2)-(q[1]-h/2-panY)*f; redraw(); },{passive:false});
+  const view=(y,pt,id)=>{ yaw=y; pitch=pt; panX=panY=0; zoom=1; ['m3d','mTop','mSide'].forEach(k=>press(k,k===id)); redraw(); };
+  cv.addEventListener('dblclick',()=>view(HOME.yaw,HOME.pitch,'m3d'));
+  cv.addEventListener('keydown',e=>{ const k=e.key; let ok=true; if(k==='ArrowLeft') yaw-=.1; else if(k==='ArrowRight') yaw+=.1; else if(k==='ArrowUp') pitch+=.08; else if(k==='ArrowDown') pitch-=.08; else if(k==='+'||k==='=') zoom=clampZ(zoom*1.25); else if(k==='-') zoom=clampZ(zoom/1.25); else if(k==='Escape'){ sel=null; describe(); } else ok=false; if(ok){ e.preventDefault(); redraw(); } });
+  const on=(id,fn)=>{ const el=$(id); if(el) el.onclick=fn; };
+  on('m3d',()=>view(HOME.yaw,HOME.pitch,'m3d')); on('mTop',()=>view(0,0,'mTop')); on('mSide',()=>view(0,Math.PI/2,'mSide')); on('mReset',()=>{ sel=null; describe(); view(HOME.yaw,HOME.pitch,'m3d'); });
+  if('ResizeObserver' in window) new ResizeObserver(()=>{ if(cv.hidden) return; size(); redraw(); }).observe(cv);
+  size(); draw();
+  const api={ wake(){ awake=true; size(); redraw(); }, sleep(){ awake=false; },
+    pickPart(i){ if(M.parts[i]){ sel={type:'part',i}; describe(); redraw(); } }, pickRef(i){ const k=M.refs.findIndex(r=>r.i===i); if(k>=0){ sel={type:'ref',i:k}; describe(); redraw(); } },
+    state:()=>({nodes:M.nodes.length,els:M.els.length,parts:M.parts.length,sel,yaw,pitch,zoom}), screen:(type,i)=>type==='node'?P[i]:type==='ref'?PR[i]:[(P[M.els[i].a][0]+P[M.els[i].b][0])/2,(P[M.els[i].a][1]+P[M.els[i].b][1])/2] };
   window.__fem=api; return api;
 }
 
-/* ---------- 3D view: terrain, satellite, the highlighted geometry with a moving light, reference points and the official building, all clickable ---------- */
-function initView(p,t,g,lines,labels){
-  const box=$('tmap'), fail=m=>{box.outerHTML=`<div class="vfail">${esc(m)}</div>`;for(const q of ['#mapctl','.readout']){const n=document.querySelector(q);if(n)n.remove();}};
-  if(typeof maplibregl==='undefined') return fail('The 3D view could not load. The data sheet is complete without it.');
+/* ---------- map view: the structure in its real place on terrain, with satellite. Plain handling: drag, scroll, right button or Ctrl and drag to turn. ---------- */
+function initView(p,t,g,lines,labels,opt){
+  opt=opt||{}; const box=$('tmap'), fail=m=>{box.outerHTML=`<div class="vfail">${esc(m)}</div>`;const n=document.querySelector('.readout');if(n)n.remove();};
+  if(typeof maplibregl==='undefined') return fail('The map could not load. The data sheet is complete without it.');
   const ll=[p.longitude,p.latitude], exact=EXACT(p.position_precision), unc=UNC[p.position_precision];
   const zoom=g?17:p.position_precision==='address'?16.8:p.position_precision==='municipality'?11.8:exact?15.5:13.2;
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let map; try{ map=new maplibregl.Map({container:box,style:STYLE_URL,center:ll,zoom,pitch:58,bearing:-20,maxPitch:78,attributionControl:{compact:true},cooperativeGestures:true}); }catch(_){ return fail('The 3D view is not available in this browser. The data sheet is complete without it.'); }
+  let map; try{ map=new maplibregl.Map({container:box,style:STYLE_URL,center:ll,zoom,pitch:55,bearing:-20,maxPitch:85,attributionControl:{compact:true}}); }catch(_){ return fail('The map is not available in this browser. The data sheet is complete without it.'); }
   map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'top-right'); window.__map=map;
-  const anchors=(t&&t.anchors)||[];
-  const pop=(at,title,rows)=>new maplibregl.Popup({maxWidth:'300px'}).setLngLat(at).setHTML(`<b>${T(title)}</b>${rows.filter(r=>r[1]!=null&&r[1]!=='').map(r=>`<div class="row"><span>${esc(r[0])}</span><span>${r[2]?r[1]:T(r[1])}</span></div>`).join('')}`).addTo(map);
-  const mid=l=>l[Math.floor(l.length/2)];
-  const partName=i=>labels[i]||(lines.length>1?'Part '+(i+1):p.name_en||p.name);
-  const showLine=i=>{const l=lines[i]; pop(mid(l),partName(i),[['Length on the map',num(Math.round(lineLen(l)))+' m'],['Object',p.name_en||p.name],['Type',cap(p.object_type)]]);};
-  const showAnchor=i=>{const a=anchors[i]; pop([+a.lon,+a.lat],a.label,[['Latitude',(+a.lat).toFixed(6)],['Longitude',(+a.lon).toFixed(6)],['Source',a.source?link(a.source):'',true]]);};
-  const showBld=at=>pop(at,p.name_en||p.name,[['Height above ground',g.height_m!=null?g.height_m.toFixed(1)+' m':null],['Footprint area',g.area_m2?num(g.area_m2)+' m²':null],['Ridge level',g.ridge_m!=null?g.ridge_m.toFixed(1)+' m above sea level':null],['Surveyed',g.captured],['Source',g.user?'entered by the user':'GURS building register']]);
-  let is3d=true, orbiting=false, lightOn=!reduced, inView=true, raf=0;
-  const B=()=>is3d?-20:0, Pch=()=>is3d?58:0;
-  function fit(animate){
-    const pts=[...lines.flat(),...anchors.map(a=>[+a.lon,+a.lat])], wide=box.clientWidth>900;
-    if(pts.length>1){ const b=pts.reduce((bb,c)=>bb.extend(c),new maplibregl.LngLatBounds(pts[0],pts[0])); map.fitBounds(b,{padding:{top:90,bottom:wide?90:50,left:70,right:70},maxZoom:18.3,pitch:Pch(),bearing:B(),duration:animate?900:0}); }
-    else map[animate?'easeTo':'jumpTo']({center:ll,zoom,pitch:Pch(),bearing:B(),duration:900});
-  }
+  const anchors=(t&&t.anchors)||[], mid=l=>l[Math.floor(l.length/2)];
+  let is3d=true; const B=()=>is3d?-20:0, Pch=()=>is3d?55:0;
+  function fit(animate){ const pts=[...lines.flat(),...anchors.map(a=>[+a.lon,+a.lat])];
+    if(pts.length>1){ const b=pts.reduce((bb,c)=>bb.extend(c),new maplibregl.LngLatBounds(pts[0],pts[0])); map.fitBounds(b,{padding:60,maxZoom:18.3,pitch:Pch(),bearing:B(),duration:animate?700:0}); }
+    else map[animate?'easeTo':'jumpTo']({center:ll,zoom,pitch:Pch(),bearing:B(),duration:700}); }
   const ro=$('readout'), readout=()=>{ if(!ro) return; const c=map.getCenter(); ro.textContent=`${c.lat.toFixed(5)} N, ${c.lng.toFixed(5)} E, zoom ${map.getZoom().toFixed(1)}`; };
   map.on('move',readout);
-  const set=(b,on)=>{ if(b) b.setAttribute('aria-pressed',on?'true':'false'); };
-  const stopOrbit=()=>{ orbiting=false; set($('vOrbit'),false); };
-  let spinT=0; const spinStep=ts=>{ if(!orbiting) return; if(spinT&&!document.hidden&&inView) map.setBearing(map.getBearing()+(ts-spinT)*0.0015); spinT=ts; requestAnimationFrame(spinStep); };
-  const spin=()=>{ spinT=0; requestAnimationFrame(spinStep); };
   /* MapLibre 5 can leave the camera at its old height after a programmatic move when terrain tiles arrive later, which puts the view under the ground. Release it. */
   const unfreeze=()=>{ try{ if(map.terrain&&map._elevationFreeze===true){ map._elevationFreeze=false; map.triggerRepaint(); } }catch(_){} };
   map.on('moveend',unfreeze); map.on('sourcedata',e=>{ if(e.sourceId==='dem'&&e.isSourceLoaded) unfreeze(); });
-  for(const ev of ['mousedown','touchstart','wheel']) box.addEventListener(ev,()=>{ if(orbiting){ stopOrbit(); map.stop(); } },{passive:true});
   const hover=id=>{ map.on('mouseenter',id,()=>map.getCanvas().style.cursor='pointer'); map.on('mouseleave',id,()=>map.getCanvas().style.cursor=''); };
-
-  /* moving light: points that travel along every drawn part and around the building outline. An animation only, it carries no measured data. */
-  const tracks=[]; const addTrack=c=>{ if(!c||c.length<2) return; const cum=[0]; for(let i=1;i<c.length;i++) cum.push(cum[i-1]+meters(c[i-1],c[i])); const len=cum[cum.length-1]; if(len>0) tracks.push({c,cum,len,n:Math.max(1,Math.min(3,Math.round(len/900))),T:Math.max(3.5,Math.min(10,len/160))}); };
-  lines.forEach(addTrack);
-  if(g&&g.geometry) (g.geometry.type==='Polygon'?[g.geometry.coordinates]:g.geometry.type==='MultiPolygon'?g.geometry.coordinates:[]).forEach(poly=>addTrack(poly[0]));
-  const at=(tr,f)=>{ const d=f*tr.len; let i=1; while(i<tr.cum.length-1&&tr.cum[i]<d) i++; const a=tr.c[i-1],b=tr.c[i],seg=tr.cum[i]-tr.cum[i-1]||1,u=(d-tr.cum[i-1])/seg; return [a[0]+(b[0]-a[0])*u,a[1]+(b[1]-a[1])*u]; };
-  let last=0;
-  function frame(ts){ raf=0; if(!lightOn||!inView||document.hidden||!map.getSource('pulse')) return;
-    if(ts-last>40){ last=ts; const sec=ts/1000, fs=[];
-      for(const tr of tracks) for(let j=0;j<tr.n;j++) fs.push({type:'Feature',properties:{},geometry:{type:'Point',coordinates:at(tr,((((sec/tr.T)+j/tr.n)%1)+1)%1)}});
-      map.getSource('pulse').setData({type:'FeatureCollection',features:fs});
-      if(map.getLayer('bld')) map.setPaintProperty('bld','fill-extrusion-opacity',.74+.14*Math.sin(sec*1.6)); }
-    raf=requestAnimationFrame(frame); }
-  const startLight=()=>{ if(!raf&&lightOn&&tracks.length) raf=requestAnimationFrame(frame); };
-  const clearLight=()=>{ try{ map.getSource('pulse').setData({type:'FeatureCollection',features:[]}); if(map.getLayer('bld')) map.setPaintProperty('bld','fill-extrusion-opacity',.85); }catch(_){} };
-  if('IntersectionObserver' in window) new IntersectionObserver(es=>{ inView=es[0].isIntersecting; if(inView) startLight(); }).observe(box);
-  document.addEventListener('visibilitychange',()=>{ if(!document.hidden) startLight(); });
-
+  const highlight=i=>{ try{ if(map.getLayer('ln-sel')) map.setFilter('ln-sel',['==',['get','i'],i==null?-1:i]); if(map.getLayer('bld')) map.setPaintProperty('bld','fill-extrusion-color',i==null?'#203469':'#007AFF'); }catch(_){} };
+  const pick=(type,i)=>{ if(type==='part') highlight(i); if(opt.select) opt.select(type,i); };
   map.on('load',()=>{
     try{ map.addSource('dem',{type:'raster-dem',tiles:[DEM_URL],tileSize:256,maxzoom:15,encoding:'terrarium',attribution:'Terrain: Mapzen, AWS Terrain Tiles'}); map.setTerrain({source:'dem',exaggeration:1}); }catch(_){}
     const firstSym=(map.getStyle().layers.find(l=>l.type==='symbol')||{}).id;
@@ -350,38 +328,26 @@ function initView(p,t,g,lines,labels){
     if(unc&&!lines.length){ map.addSource('unc',{type:'geojson',data:{type:'Feature',properties:{},geometry:circle(ll,unc)}});
       map.addLayer({id:'unc-f',type:'fill',source:'unc',paint:{'fill-color':'#FF9500','fill-opacity':.12}}); map.addLayer({id:'unc-l',type:'line',source:'unc',paint:{'line-color':'#C76A00','line-width':1.5,'line-dasharray':[3,3]}}); }
     if(g&&g.geometry){ map.addSource('bld',{type:'geojson',data:{type:'Feature',properties:{h:g.height_m||8},geometry:g.geometry}});
-      map.addLayer({id:'bld-glow',type:'line',source:'bld',paint:{'line-color':'#007AFF','line-width':10,'line-blur':8,'line-opacity':.55}});
-      map.addLayer({id:'bld',type:'fill-extrusion',source:'bld',paint:{'fill-extrusion-color':'#007AFF','fill-extrusion-height':['get','h'],'fill-extrusion-opacity':.85,'fill-extrusion-vertical-gradient':true}});
-      map.on('click','bld',e=>showBld(e.lngLat)); hover('bld'); }
+      map.addLayer({id:'bld',type:'fill-extrusion',source:'bld',paint:{'fill-extrusion-color':'#203469','fill-extrusion-height':['get','h'],'fill-extrusion-opacity':.88,'fill-extrusion-vertical-gradient':true}});
+      const nLine=lines.length; map.on('click','bld',()=>pick('part',nLine)); hover('bld'); }
     if(lines.length){ map.addSource('ln',{type:'geojson',data:{type:'FeatureCollection',features:lines.map((l,i)=>({type:'Feature',properties:{i},geometry:{type:'LineString',coordinates:l}}))}});
       const lay={'line-cap':'round','line-join':'round'};
-      map.addLayer({id:'ln-glow',type:'line',source:'ln',layout:lay,paint:{'line-color':'#007AFF','line-width':20,'line-blur':14,'line-opacity':.45}});
-      map.addLayer({id:'ln-c',type:'line',source:'ln',layout:lay,paint:{'line-color':'#007AFF','line-width':7}});
-      map.addLayer({id:'ln',type:'line',source:'ln',layout:lay,paint:{'line-color':'#FFFFFF','line-width':2,'line-opacity':.9}});
-      map.on('click','ln-c',e=>showLine(e.features[0].properties.i)); hover('ln-c');
-      if(lines.length<=4) lines.forEach((l,i)=>{ const el=document.createElement('button'); el.type='button'; el.className='callout'; el.innerHTML=`<span>${T(partName(i))}</span><b>${num(Math.round(lineLen(l)))} m</b>`; el.onclick=ev=>{ev.stopPropagation();showLine(i);};
-        new maplibregl.Marker({element:el,anchor:'bottom',offset:[0,-10]}).setLngLat(mid(l)).addTo(map); }); }
+      map.addLayer({id:'ln-c',type:'line',source:'ln',layout:lay,paint:{'line-color':'#ffffff','line-width':9}});
+      map.addLayer({id:'ln',type:'line',source:'ln',layout:lay,paint:{'line-color':'#203469','line-width':5}});
+      map.addLayer({id:'ln-sel',type:'line',source:'ln',layout:lay,filter:['==',['get','i'],-1],paint:{'line-color':'#007AFF','line-width':6}});
+      map.on('click','ln-c',e=>pick('part',e.features[0].properties.i)); hover('ln-c'); }
     if(anchors.length){ map.addSource('an',{type:'geojson',data:{type:'FeatureCollection',features:anchors.map((a,i)=>({type:'Feature',properties:{i},geometry:{type:'Point',coordinates:[+a.lon,+a.lat]}}))}});
-      map.addLayer({id:'an',type:'circle',source:'an',paint:{'circle-radius':5.5,'circle-color':'#FFFFFF','circle-stroke-color':'#203469','circle-stroke-width':2.5}});
-      map.on('click','an',e=>showAnchor(e.features[0].properties.i)); hover('an'); }
-    if(tracks.length){ map.addSource('pulse',{type:'geojson',data:{type:'FeatureCollection',features:[]}});
-      map.addLayer({id:'pulse-glow',type:'circle',source:'pulse',paint:{'circle-radius':16,'circle-color':'#7FD4FF','circle-blur':1,'circle-opacity':.95}});
-      map.addLayer({id:'pulse',type:'circle',source:'pulse',paint:{'circle-radius':4,'circle-color':'#FFFFFF','circle-stroke-color':'#7FD4FF','circle-stroke-width':1.5}}); }
-    if(!lines.length&&!(g&&g.geometry)&&(exact||p.position_precision==='user')){ const el=document.createElement('div'); el.className='beacon'+(reduced?'':' live');
-      new maplibregl.Marker({element:el}).setLngLat(ll).setPopup(new maplibregl.Popup({offset:14}).setHTML(`<b>${T(p.name_en||p.name)}</b><div class="row"><span>Position</span><span>${esc(PREC[p.position_precision]||'')}</span></div>`)).addTo(map); }
-    fit(false); readout(); startLight(); unfreeze();
-    if(!reduced&&(lines.length||g)){ orbiting=true; set($('vOrbit'),true); setTimeout(spin,900); }
+      map.addLayer({id:'an',type:'circle',source:'an',paint:{'circle-radius':5.5,'circle-color':'#FFFFFF','circle-stroke-color':'#5856D6','circle-stroke-width':2.5}});
+      map.on('click','an',e=>pick('ref',e.features[0].properties.i)); hover('an'); }
+    if(!lines.length&&!(g&&g.geometry)&&(exact||p.position_precision==='user')){ const el=document.createElement('div'); el.className='beacon'; new maplibregl.Marker({element:el}).setLngLat(ll).addTo(map); }
+    fit(false); readout(); unfreeze();
   });
-  const vL=$('vLight'); if(!tracks.length){ vL.hidden=true; } else set(vL,lightOn);
-  vL.onclick=()=>{ lightOn=!lightOn; set(vL,lightOn); if(lightOn) startLight(); else clearLight(); };
-  const setSat=on=>{ try{map.setLayoutProperty('sat','visibility',on?'visible':'none');}catch(_){} set($('vMap'),!on); set($('vSat'),on); };
-  $('vMap').onclick=()=>setSat(false); $('vSat').onclick=()=>setSat(true);
-  $('v3d').onclick=()=>{ stopOrbit(); is3d=!is3d; set($('v3d'),is3d); map.easeTo({pitch:Pch(),bearing:B(),duration:600}); };
-  $('vOrbit').onclick=()=>{ if(orbiting){ stopOrbit(); map.stop(); } else { orbiting=true; set($('vOrbit'),true); if(!is3d){ is3d=true; set($('v3d'),true); map.jumpTo({pitch:58}); } spin(); } };
-  $('vReset').onclick=()=>{ stopOrbit(); fit(true); };
-  const act=tr=>{ stopOrbit();
-    if(tr.dataset.line!=null){const i=+tr.dataset.line,l=lines[i];map.easeTo({center:mid(l),duration:600});showLine(i);} else {const i=+tr.dataset.anchor,a=anchors[i];map.easeTo({center:[+a.lon,+a.lat],zoom:Math.max(map.getZoom(),16),duration:600});showAnchor(i);} };
-  return {act,resize:()=>map.resize()};
+  const set=(id,on)=>{ const b=$(id); if(b) b.setAttribute('aria-pressed',on?'true':'false'); };
+  const setSat=on=>{ try{map.setLayoutProperty('sat','visibility',on?'visible':'none');}catch(_){} set('vMap',!on); set('vSat',on); };
+  const tilt=on=>{ is3d=on; set('v3d',on); set('v2d',!on); map.easeTo({pitch:Pch(),bearing:B(),duration:500}); };
+  const bind=(id,fn)=>{ const b=$(id); if(b) b.onclick=fn; };
+  bind('vMap',()=>setSat(false)); bind('vSat',()=>setSat(true)); bind('v3d',()=>tilt(true)); bind('v2d',()=>tilt(false)); bind('vReset',()=>{ highlight(null); fit(true); });
+  return {highlight, resize:()=>map.resize(), focusLine:i=>{ if(lines[i]){ highlight(i); map.easeTo({center:mid(lines[i]),duration:600}); } }, focusAnchor:i=>{ const a=anchors[i]; if(a) map.easeTo({center:[+a.lon,+a.lat],zoom:Math.max(map.getZoom(),16),duration:600}); }};
 }
 
 /* ---------- platform home: all objects with counts, a type filter and a text filter ---------- */

@@ -168,3 +168,21 @@ Everything here runs in the browser. There is no server and no AI in it.
 - Limits are best effort (6 per minute per address, 200 per day by default). The real budget is the spending limit of the AI account.
 - Not built: a login per person and a shared review queue.
 
+## 14. Changes after going live (11 November 2026, evening)
+
+The platform is live at https://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/ and this repository is the working copy. Sections 11 to 13 describe the first build. This section says what changed after the owner saw it live. Where the two differ, this section is right.
+
+- Twin stage rebuilt at the owner's request. There are no Model and Map tabs any more. The map shows the structure in its real place and is always visible. Beside it are the model, the data of the selected part and a list of all data on the object (twin sheet specifications with their source links, record structure fields, record facts). A click on the structure on the map selects the same part in the model, and the other way round.
+- Removed: the moving light, the automatic rotation, the permanent labels on the map.
+- Handling: on the map, plain drag, scroll to zoom, right button or Ctrl and drag to turn (cooperative gestures are off). In the model, drag turns it about both axes without limits, the wheel zooms at once towards the pointer, Shift or the right button moves it, double click resets.
+- Bug found on the live site and fixed: the 3D map was blank because the camera stayed under the terrain after a programmatic move. `initView()` now releases the terrain height (`unfreeze`), the same way `js/main.js` does.
+- Script and style links carry a version (`?v=5`). Raise it when `js/twin.js`, `js/add.js`, `js/dashboard.js` or `css/twin.css` change, or browsers keep the old file for up to ten minutes.
+- "Request latest information" on every twin page opens an email with the object, its page link, its open points and the last inspection. The recipient comes from `data/contacts.json` (empty now, so the sender chooses).
+- Inspection log on every twin page: date, kind, condition (good, fair, poor, critical, not rated), inspector, notes, report link. Records are kept in the browser (`localStorage`, key `zag_inspections`) and can be sent by email. Published records live in `data/inspections.json` (empty now).
+- `dashboard.html` with `js/dashboard.js`: totals, condition from inspection records, objects by type, objects with the fewest specifications, open questions, recent news, and a download of all inspection records. Condition is shown only where a person entered a record. The atlas holds no sensor data.
+- `.nojekyll` makes GitHub Pages serve the files as they are.
+
+Checked on the live site through the owner's browser: a twin page with its model, the map with terrain and the raised building, the full map with the model inside the panel. Not checked live: satellite view, the Add object tool, phone width.
+
+Still wanted by the owner and not built: sensor layer, traffic replay and alerts (these need measured data and a data format agreed with ZAG), compare mode, timeline, measure tool, sections and profiles, guided tour, share and print.
+
