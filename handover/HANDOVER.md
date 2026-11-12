@@ -252,3 +252,12 @@ The owner asked for the look and flow of professional digital twin platforms. Th
 - No cadastre building contains the stored point for Cestel, Former Maribor Prison, NUK and Gameljne. Their points sit beside or between cadastre outlines.
 - The cadastre service rejects coordinates with long decimals. Requests now round to six decimals. The same fault was in the map panel and is fixed.
 - Building models are drawn as solid volumes: hidden edges are no longer drawn through the roof, and volumes are ordered far to near. Storey lines come from the cadastre storey count. The window pattern is illustrative and the page says so.
+
+### ZAG site at Dimičeva rebuilt, 12 November 2026
+
+- The owner drew the site boundary on a Google Maps view. It was transferred by eye to coordinates (good to about 10 m) and stored as `site` on the ZAG record.
+- The record now holds the 15 buildings of the GURS cadastre with at least half of their outline inside that boundary, each with its own cadastre number, year, storey count and height (H2 minus H3). Source data: `handover/research/recheck_2026_11/zag_site_cadastre_2026_11_12.json`.
+- The office building in the owner's photographs is cadastre building 892: built 1984, 8 storeys in all, 23.5 m above ground. The earlier model showed only hall building 962 (1953, 14.5 m).
+- Five cadastre buildings are cut by the boundary with less than half inside and are left out (8291, 768, 1281, 1250, 1354). The owner should confirm these and the boundary.
+- Parking areas and yards are not modelled. The cadastre holds buildings only.
+- Storeys above ground are derived: height above ground divided by (full height H2 minus H1 divided by the cadastre storey count). For building 892 this gives 7, which matches the source that states 7 floors.
