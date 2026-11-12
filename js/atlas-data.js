@@ -1,7 +1,7 @@
 'use strict';
 /* Atlas data: loads data/zag_projects.geojson and applies the active filters (section, layer toggles, timeline year). */
 const ZA={features:[],byId:{},images:{},gurs:{},gursMeta:null,twins:{},news:{},newsUpdated:null,nav:'projects',showProj:true,showFac:true,upTo:null};
-const GROUPS={building:'buildings',institution:'buildings',bridge:'bridges',footbridge:'bridges','road structure':'bridges',
+const GROUPS={building:'buildings',institution:'buildings',company:'buildings',bridge:'bridges',footbridge:'bridges','road structure':'bridges',
   tunnel:'infrastructure','dam / hydropower':'infrastructure',cableway:'infrastructure','tower / mast':'infrastructure'};
 const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):'';
 const INV_LABEL={research:'Research','inspection':'Inspection','structural assessment':'Structural assessment',monitoring:'Monitoring',

@@ -80,7 +80,7 @@ function pickAt(point,ll){
   if(tr){ const types=tr.properties.class==='aerialway'?['cableway']:tr.properties.brunnel==='tunnel'?['tunnel']:['bridge','footbridge','road structure'];
     const id=recordNear(ll,types,2500); return id?{kind:'record',id}:{kind:'structure',f:tr}; }
   const bl=hit.find(f=>f.sourceLayer==='building');
-  if(bl){ const id=recordNear(ll,['building','institution'],120); return id?{kind:'record',id}:{kind:'building',f:bl}; }
+  if(bl){ const id=recordNear(ll,['building','institution','company'],120); return id?{kind:'record',id}:{kind:'building',f:bl}; }
   return null;
 }
 

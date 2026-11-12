@@ -10,7 +10,7 @@ async function boot(){
     style=prep({version:8,glyphs:'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf',sources:{},layers:[{id:'background',type:'background',paint:{}}]});
   }
   style.sky=skyFor();
-  map=new maplibregl.Map({container:'map',style,center:[14.99,46.15],zoom:7.1,pitch:0,maxPitch:80,hash:false,
+  map=new maplibregl.Map({container:'map',style,center:[14.99,46.15],zoom:7.1,pitch:0,maxPitch:80,hash:false,maxTileCacheSize:600,pixelRatio:Math.min(window.devicePixelRatio||1,1.5),
     attributionControl:{compact:true,customAttribution:'Geocoding <a href="https://photon.komoot.io" target="_blank" rel="noopener">Photon</a>'},
     maxBounds:[[11.5,44.6],[18.5,47.7]],fadeDuration:200,canvasContextAttributes:{antialias:true}});
   window.zagMap=map;

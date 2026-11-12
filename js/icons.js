@@ -22,7 +22,7 @@ const ICON={
 const MARK={
   bridge:'M3 15h18M5 15V10M19 15V10M5 10q7-6 14 0M9 15v-3M15 15v-3', footbridge:'M3 15h18M5 15V10M19 15V10M5 10q7-6 14 0M9 15v-3M15 15v-3','road structure':'M3 15h18M5 15V10M19 15V10M5 10q7-6 14 0',
   tunnel:'M4 19V11a8 8 0 0 1 16 0v8M9 19v-5h6v5', 'dam / hydropower':'M3 8q3-3 6 0t6 0 6 0M3 14q3-3 6 0t6 0 6 0M4 19h16', cableway:'M3 6h18M12 6v4M8 10h8v6H8z',
-  'tower / mast':'M12 3v18M7 21l5-18 5 18M9 14h6', building:'M5 20V9l7-5 7 5v11M10 20v-6h4v6M5 20h14', institution:'M4 10h16M6 10v8M10 10v8M14 10v8M18 10v8M4 20h16M4 10l8-5 8 5',
+  'tower / mast':'M12 3v18M7 21l5-18 5 18M9 14h6', building:'M5 20V9l7-5 7 5v11M10 20v-6h4v6M5 20h14', company:'M5 20V9l7-5 7 5v11M10 20v-6h4v6M5 20h14', institution:'M4 10h16M6 10v8M10 10v8M14 10v8M18 10v8M4 20h16M4 10l8-5 8 5',
   'study area (earthquake)':'M3 12h4l2-5 3 10 3-8 2 3h4', 'geotechnical site':'M3 18l6-10 4 6 3-3 5 7z', landslide:'M4 6l8 8-4 6M12 14l8 4', other:'M12 4v16M4 12h16'};
 function markerImage(type,kind){
   const S=56,c=document.createElement('canvas');c.width=c.height=S;const g=c.getContext('2d');

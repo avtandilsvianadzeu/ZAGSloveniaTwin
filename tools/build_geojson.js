@@ -66,6 +66,7 @@ for (const e of ENTRIES) {
   structure: { crosses: e.crosses || null, carries: e.carries || null, typ: e.typ || null, built: e.opened || e.built || null, spans: e.spans || null, length_m: e.len_m || null },
   image: null, image_credit: null, source_title: s0.title || null, source_url: s0.url || null, source_type: s0.type || null, sources: srcs,
   evidence_level: ev, position_precision: c ? (c.precision || 'surveyed') : e.prec, position_sources: c ? c.sources : [], address: (c && c.addr) || e.addr || null };
+ if (e.id === 'cestel') p.object_type = 'company';   // a limited company (d.o.o.), not an institution
  if (c && c.line) { p.line = c.line; p.line_labels = c.line_labels; }
  if (c && c.lines) p.lines = c.lines;
  push(p, [lon, lat]);
