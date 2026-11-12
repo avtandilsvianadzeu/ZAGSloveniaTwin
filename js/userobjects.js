@@ -10,7 +10,7 @@
   function show(p){ const hasModel=!!(p.lines||(p.user&&p.user.polygon));
     openShell(`<div class="body"><div class="kicker ref">Added by a user, not verified</div><h1>${esc(p.name_en||p.name||'Unnamed object')}</h1>
       <p class="where">${esc(cap(p.object_type||'other'))}</p>
-      <p><a class="btn twinlink" href="twin.html?id=${encodeURIComponent(p.id)}">Open digital twin</a></p>
+      <p><a class="btn twinlink" href="twin.html?id=${encodeURIComponent(p.id)}">Open the asset page</a></p>
       ${hasModel?`<iframe class="twinframe" loading="lazy" title="Model" src="twin.html?id=${encodeURIComponent(p.id)}&embed=1"></iframe>`:''}
       ${p.description?`<h3>About</h3><p>${esc(p.description)}</p>`:''}
       <h3>Position</h3>${kv('Basis','Placed by a user, not verified')}${kv('WGS84',(+p.latitude).toFixed(6)+', '+(+p.longitude).toFixed(6))}

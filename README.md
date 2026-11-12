@@ -1,6 +1,6 @@
 # ZAG Slovenia Twin
 
-Platform version of the ZAG Digital Atlas: the full map, a digital twin page per object and a tool to add objects.
+Platform version of the ZAG Digital Atlas: the full map, a record page per object and a tool to add objects.
 
 Geographic atlas of buildings, bridges, tunnels, dams, cableways and research sites in Slovenia where the Slovenian National Building and Civil Engineering Institute (ZAG) has documented involvement.
 
@@ -11,7 +11,7 @@ Earlier map only version: https://avtandilsvianadzeu.github.io/ZAGMapLive/
 ## Layout
 
 - `index.html`, `css/`, `js/`: the application (MapLibre GL JS, no build step)
-- `twin.html`, `css/twin.css`, `js/twin.js`: digital twin page per object (`twin.html?id=<record id>`) and the list of all objects (`twin.html`), with a schematic model built only from the mapped geometry and official building data
+- `twin.html`, `css/twin.css`, `js/twin.js`: record page per object (`twin.html?id=<record id>`) and the list of all objects (`twin.html`), with a schematic model built only from the mapped geometry and official building data
 - `add.html`, `js/add.js`: Add object tool. Draw, paste coordinates or load a file. Objects are kept in the browser and marked as not verified
 - `data/user_objects.json`: objects published from the Add object tool (empty by default)
 - `data/ai_service.json`: address of the optional AI reader service (empty by default, never holds a key)
@@ -43,7 +43,7 @@ Building records whose coordinate is surveyed or an address are tied to their of
     py -m pip install pyshp shapely pyproj
     py tools/gurs_buildings.py "C:/Users/<you>/Downloads/DTM_SLO_ZGRADBE_20261003"
 
-## Verified positions and digital twins
+## Verified positions and asset records
 
 `tools/position_corrections.json` holds the verified position of each record, with `precision` (matched, surveyed, address, site, epicentre), `sources`, a `note` on how it was verified and, for 29 records, `lines`: the real geometry drawn on the map (bridge decks, tunnel tubes portal to portal, lift lines, dam outlines, the Stože landslide outline). Structures were matched in OpenStreetMap by name, ref and type, then checked against the record (river or road crossed, number of decks, length). `data/twins.json` holds the digital twin sheet per record: specifications each linked to its source, verified reference points (portals, stations, dam axis) and the points where sources disagree. After editing the corrections or `data.js`, run `node tools/build_geojson.js`.
 

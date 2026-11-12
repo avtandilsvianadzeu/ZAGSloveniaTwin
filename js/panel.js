@@ -28,7 +28,7 @@ function twinHTML(id){
   const val=s=>`${tidy(s.value)}${s.unit?' '+esc(s.unit):''}`;
   const rows=(t.specs||[]).map(s=>`<div class="kv tw"><span>${esc(s.label)}</span><span>${val(s)}${s.source?` <a class="sref" href="${esc(s.source)}" target="_blank" rel="noopener" title="${esc(s.source)}">${esc(srcHost(s.source))}</a>`:''}</span></div>`).join('');
   const pts=(t.anchors||[]).map(a=>`<div class="kv tw"><span>${esc(a.label)}</span><span>${(+a.lat).toFixed(6)}, ${(+a.lon).toFixed(6)}${a.source?` <a class="sref" href="${esc(a.source)}" target="_blank" rel="noopener">${esc(srcHost(a.source))}</a>`:''}</span></div>`).join('');
-  return `<section class="twin"><h3>Digital twin</h3>${t.summary?`<p class="note">${tidy(t.summary)}</p>`:''}${rows}${pts?`<h4>Verified reference points</h4>${pts}`:''}${(t.differences||[]).length?`<details class="twdiff"><summary class="note">Where the sources differ (${t.differences.length})</summary><ul>${t.differences.map(x=>`<li>${tidy(x)}</li>`).join('')}</ul></details>`:''}${t.open?`<p class="note twopen">Not yet verified: ${tidy(t.open)}</p>`:''}</section>`;
+  return `<section class="twin"><h3>Asset record</h3>${t.summary?`<p class="note">${tidy(t.summary)}</p>`:''}${rows}${pts?`<h4>Verified reference points</h4>${pts}`:''}${(t.differences||[]).length?`<details class="twdiff"><summary class="note">Where the sources differ (${t.differences.length})</summary><ul>${t.differences.map(x=>`<li>${tidy(x)}</li>`).join('')}</ul></details>`:''}${t.open?`<p class="note twopen">Not yet verified: ${tidy(t.open)}</p>`:''}</section>`;
 }
 function showTwinPoints(id){
   const t=id&&ZA.twins[id]; const fc={type:'FeatureCollection',features:t?(t.anchors||[]).map(a=>({type:'Feature',properties:{label:a.label},geometry:{type:'Point',coordinates:[+a.lon,+a.lat]}})):[]};
@@ -65,8 +65,8 @@ function infoHTML(f){
     <h1>${esc(p.name_en||p.name)}</h1>
     ${p.name_sl&&p.name_sl!==p.name_en?`<p class="sl">${esc(p.name_sl)}</p>`:''}
     ${where?`<p class="where">${esc(where)}</p>`:''}
-    <p><a class="btn twinlink" href="twin.html?id=${encodeURIComponent(p.id)}">Open digital twin</a></p>
-    ${(p.lines||p.line||ZA.gurs[p.id])?`<iframe class="twinframe" loading="lazy" title="Model of ${esc(p.name_en||p.name)}" src="twin.html?id=${encodeURIComponent(p.id)}&embed=1"></iframe>`:''}
+    <p><a class="btn twinlink" href="twin.html?id=${encodeURIComponent(p.id)}">Open the asset page</a></p>
+    ${(p.lines||p.line||ZA.gurs[p.id])?`<iframe class="twinframe" title="Model of ${esc(p.name_en||p.name)}" src="twin.html?id=${encodeURIComponent(p.id)}&embed=1"></iframe>`:''}
     <h3>Project type</h3>
     <p><span class="tag">${esc(cap(p.object_type))}</span><span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only'}[p.evidence_level])}</span></p>
     ${bullets?`<h3>ZAG involvement</h3><ul>${bullets}</ul>`:''}

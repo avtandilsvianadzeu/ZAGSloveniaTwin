@@ -394,3 +394,15 @@ Open after the checks:
 - `handover/dev_tools/qf.js` is the reader used in Chrome: on a page of the source site it fetches the listed pages of that site and saves them as one file. Chrome refused to open dlib.si and uradni-list.si ("Navigation to this domain is not allowed"), so only gov.si was read this way.
 - Still without a quote, 388 values: 86 cadastre values (the evidence is the attribute record, kept in `handover/research`), 51 values computed from OpenStreetMap geometry (no sentence exists), and about 250 from other pages: Structurae (31), lift-world (23, two pages refused), Wikipedia (20), remontees-mecaniques (15), Ujma (10) and many single pages.
 - What the fresh reads showed: lift-world gives 170 kW for Velika planina and 986 kW for Krvavec against 180 and 980 kW in the official list of 2006, already listed as differences. The railway magazine says all concrete masts between Logatec and Verd had to be removed, which is not the same as "fell over about 1 km".
+
+### Changes asked by the owner, 12 November 2026, afternoon
+
+- ZAG site at Dimičeva: the south-west corner towards Ptujska ulica is not part of ZAG according to the owner. Buildings 1079, 1321 and 1365 and parcels 258/1, 258/6, 258/7, 259/1, 259/2, 245/1, 249/2, 246/4 are not drawn. The cadastre still lists ZAG as manager of them. They are kept under `site.excluded` in `data/gurs_buildings.json`, and the page lists the conflict under "Where the sources differ". Earlier the owner had asked to draw the long building 1079 in blue, so this point changed twice. Ask before changing it again.
+- Office building 892: 7 floors, confirmed by the owner for the left side.
+- Wording: the pages are called asset records and asset pages, no longer digital twins. The file stays `twin.html` so that links keep working.
+- Site map on the asset page: the 3D buildings of the base map are hidden once the cadastre answers, and the cadastre buildings within about 230 m (up to 200, read in pages of 50) are drawn instead as solid grey blocks. The record's own buildings are not drawn a second time. Before, three sources overlapped and flickered.
+- Map and model turn together: turning or tilting the site map turns the model, and turning the model turns the map (`setCamera` and `setView` in `js/twin.js`). The map stops at 85° tilt, the model does not.
+- A click on a building of a site picks that building and shows its cadastre and laser scan values under Properties.
+- Map settings for smoother drawing: no label fade on the site map, a tile store of 600 tiles, pixel ratio capped at 1.5. The frame rate itself is set by the screen and the browser.
+- Cestel is shown as a company, not an institution. Cadastre read of the same day: building 1365 at Špruha 36 with a share of 1/1, building 1362 at Špruha 32 (registered address) with a share of 1/4.
+- Not verified on the live map: the Chrome tab used for checking was not being painted (no animation frames), so the map there never finished loading. The changes were tested locally with stand-in map and cadastre answers.

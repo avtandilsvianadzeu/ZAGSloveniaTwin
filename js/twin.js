@@ -155,8 +155,8 @@ function renderTwin(f){
     <div class="in">${exact?'':'<p class="note">The position is approximate. The shaded circle on the view marks the area, not the object.</p>'}<div class="btnrow"><a class="tbtn" href="https://www.google.com/maps/search/?api=1&query=${p.latitude},${p.longitude}" target="_blank" rel="noopener">Open in Google Maps</a><button class="tbtn" id="copy" type="button">Copy coordinates</button></div></div>`);
   sec('sources','Sources',(p.sources||[]).length?p.sources.map(s=>`<div class="src"><span>${T(s.title||s.key)}${s.type?`<br><span class="note">${esc(SRC_KIND[s.type]||cap(s.type))}</span>`:''}</span>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">Open source</a>`:''}</div>`).join(''):'');
 
-  document.title=`${clean(p.name_en||p.name)}, digital twin, ZAG Digital Atlas`;
-  $('crumb').textContent=`Digital twins, ${GROUP_NAME[p.object_type]||cap(p.object_type)}`;
+  document.title=`${clean(p.name_en||p.name)}, asset record, ZAG Digital Atlas`;
+  $('crumb').textContent=`Assets, ${GROUP_NAME[p.object_type]||cap(p.object_type)}`;
   const order=D.features.map(x=>x.properties.id), sheet=order.indexOf(id)+1;
   const model=buildModel(p,t,g,lines,labels), hasModel=model.els.length>0, EMBED=document.body.classList.contains('embed');
   const dataRows=[...((t&&t.specs)||[]).map(x=>[x.label,clean(x.value)+(x.unit?' '+x.unit:''),x.source,x]),...sRows.map(x=>[x[0],x[1],null]),...((p.facts||[]).map(x=>[x[0],x[1],null]))];
@@ -211,11 +211,11 @@ function renderTwin(f){
   const home=()=>{ const el=$('pick'); if(el) el.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(p.name_en||p.name)}</b><div class="row"><span>Type</span><span>${esc(cap(p.object_type))}</span></div><div class="row"><span>Position</span><span>${esc(PREC[p.position_precision]||p.position_precision)}</span></div>${hasModel?'<p>Nothing selected. Click a part on the site map, in the model or in the structure breakdown.</p>':''}`; };
   const ctl={fem:null,map:null}; home();
   const markTree=sel=>{ document.querySelectorAll('.trow').forEach(b=>b.classList.toggle('on',!!sel&&((sel.part!=null&&b.dataset.part==sel.part&&sel.kind!=='ref')||(sel.kind==='ref'&&b.dataset.ref==sel.ref)))); };
-  if(hasModel) ctl.fem=initModel(model,p,{home,onSelect:sel=>{ if(ctl.map&&ctl.map.highlight) ctl.map.highlight(sel&&sel.part!=null?sel.part:null); markTree(sel); if(sel&&!EMBED) tab('props'); }});
+  if(hasModel) ctl.fem=initModel(model,p,{home,onView:(y,pt)=>{ if(ctl.map&&ctl.map.setCamera) ctl.map.setCamera(y/RAD,pt/RAD); },onSelect:sel=>{ if(ctl.map&&ctl.map.highlight) ctl.map.highlight(sel&&sel.part!=null?sel.part:null); markTree(sel); if(sel&&!EMBED) tab('props'); }});
   if(ctl.fem&&g&&g.scan&&g.scan.grid) getJSON(g.scan.grid).then(S=>{ if(!S||!ctl.fem.setScan(S)) return; const b=$('mScan'), lab=$('plabel'), base=lab?lab.textContent:'', show=on=>{ if(b) b.setAttribute('aria-pressed',on?'true':'false'); if(lab) lab.textContent=on?'Surface from laser scanning (GURS), read as height above ground':base; };
     if(b){ b.hidden=false; b.onclick=()=>show(ctl.fem.scan(b.getAttribute('aria-pressed')!=='true')); } show(true); });
   if(EMBED) return;
-  ctl.map=initView(p,t,g,lines,labels,{select:(type,i)=>{ if(!ctl.fem) return; if(type==='part') ctl.fem.pickPart(i); else ctl.fem.pickRef(i); }})||{};
+  ctl.map=initView(p,t,g,lines,labels,{camera:(b,pt)=>{ if(ctl.fem) ctl.fem.setView(b*RAD,pt*RAD); },select:(type,i)=>{ if(!ctl.fem) return; if(type==='part') ctl.fem.pickPart(i); else ctl.fem.pickRef(i); }})||{};
   /* inspector tabs, in-page links, tree, layout, tools */
   function tab(k){ document.querySelectorAll('.tabs [role=tab]').forEach(b=>b.setAttribute('aria-selected',b.id==='tab-'+k?'true':'false')); document.querySelectorAll('.tabpan').forEach(x=>x.hidden=x.id!=='pan-'+k); }
   document.querySelectorAll('.tabs [role=tab]').forEach(b=>b.onclick=()=>tab(b.id.slice(4)));
@@ -272,13 +272,13 @@ function buildModel(p,t,g,lines,labels){
     M.parts.push({name:labels[i]||(lines.length>1?'Part '+(i+1):p.name_en||p.name),len:Lm,track:axis,kind:'line',width:W}); });
   /* building volumes: the parts with storey counts where the source has them, else the single outline at its surveyed height */
   const STOREY=(g&&g.storey_m)||3;
-  const vols=g&&g.parts?g.parts.map((q,i)=>q.kn!=null?{ring:q.ring,h:q.h!=null?q.h:q.scan?q.scan.median_m:0,name:`Building ${q.kn}, ${q.year||'year not recorded'}`}:q.scan?{ring:q.ring,h:q.scan.median_m,name:`Part ${i+1}, ${q.levels} ${q.levels===1?'storey':'storeys'}`}:{ring:q.ring,h:q.levels*STOREY,derived:true,name:`Part ${i+1}, ${q.levels} ${q.levels===1?'storey':'storeys'}`}):ring0.map((r,i)=>({ring:r,h:g.height_m||0,name:ring0.length>1?'Outline '+(i+1):'Building outline'}));
+  const vols=g&&g.parts?g.parts.map((q,i)=>q.kn!=null?{ring:q.ring,h:q.h!=null?q.h:q.scan?q.scan.median_m:0,name:`Building ${q.kn}, ${q.year||'year not recorded'}`,info:[['Cadastre building',String(q.kn)],['Year built',q.year?String(q.year):null],['Storeys, below and above ground',q.storeys_all?String(q.storeys_all):null],['Highest point above terrain (cadastre)',q.h!=null?q.h.toFixed(1)+' m':'not recorded'],['Footprint',q.area_m2?num(q.area_m2)+' m²':null],['Laser scan, middle height',q.scan?q.scan.median_m.toFixed(1)+' m':null],['Laser scan, 99 % level',q.scan?q.scan.p99_m.toFixed(1)+' m':null]]}:q.scan?{ring:q.ring,h:q.scan.median_m,name:`Part ${i+1}, ${q.levels} ${q.levels===1?'storey':'storeys'}`}:{ring:q.ring,h:q.levels*STOREY,derived:true,name:`Part ${i+1}, ${q.levels} ${q.levels===1?'storey':'storeys'}`}):ring0.map((r,i)=>({ring:r,h:g.height_m||0,name:ring0.length>1?'Outline '+(i+1):'Building outline'}));
   vols.forEach(v=>{ const P=v.ring.slice(0,-1).map(xy); if(P.length<3) return; const h=v.h, lv=h?1:0, part=M.parts.length, rings=[];
     for(let k=0;k<=lv;k++){ const z=lv?h*k/lv:0; rings.push(P.map(c=>node(c[0],c[1],z,part,{role:k===0?'ground':k===lv?'top':'level'}))); }
     rings.forEach(rg=>rg.forEach((a,q)=>el(a,rg[(q+1)%rg.length],part,'ring')));
     for(let k=0;k<lv;k++) rings[k].forEach((a,q)=>el(a,rings[k+1][q],part,'vertical'));
     if(lv){ const r0=rings[0], rT=rings[lv]; const sa=P.reduce((a,c,q)=>a+c[0]*P[(q+1)%P.length][1]-P[(q+1)%P.length][0]*c[1],0)>0?1:-1; r0.forEach((a,q)=>{ const c=P[q], d=P[(q+1)%P.length], ex=d[0]-c[0], ey=d[1]-c[1], el2=Math.hypot(ex,ey)||1; M.faces.push({v:[a,r0[(q+1)%r0.length],rT[(q+1)%r0.length],rT[q]],part,kind:'wall',h,n:[sa*ey/el2,-sa*ex/el2]}); }); M.faces.push({v:rT.slice(),part,kind:'roof'}); }
-    const top=rings[rings.length-1]; M.parts.push({name:v.name,len:P.reduce((a,c,q)=>a+Math.hypot(P[(q+1)%P.length][0]-c[0],P[(q+1)%P.length][1]-c[1]),0),track:[...top,top[0]],kind:'building',height:v.derived?null:(h||null)}); });
+    const top=rings[rings.length-1]; M.parts.push({name:v.name,len:P.reduce((a,c,q)=>a+Math.hypot(P[(q+1)%P.length][0]-c[0],P[(q+1)%P.length][1]-c[1]),0),track:[...top,top[0]],kind:'building',height:v.derived?null:(h||null),info:v.info||null}); });
   ((t&&t.anchors)||[]).forEach((a,i)=>{ const c=xy([+a.lon,+a.lat]); M.refs.push({i,x:c[0],y:c[1],z:0,label:a.label,lat:+a.lat,lon:+a.lon,source:a.source}); });
   M.R=Math.max(1,...M.nodes.map(n=>Math.hypot(n.x,n.y,n.z)),...M.refs.map(n=>Math.hypot(n.x,n.y)),...(g&&g.site?(g.site.rings||[g.site.ring]).flat().map(c=>Math.hypot(...xy(c))):[]));
   const bits=[]; if(lines.length) bits.push('the drawn alignment'+(W?' and the deck width of '+W+(p.category==='user_object'?' m entered by the user':' m given in the sources'):'')); if(ring0.length) bits.push(g.parts&&g.parts[0].kn!=null?`${g.parts.length} ${g.parts.length===1?'building':'buildings'} of the GURS cadastre, each raised to its own recorded height`:g.parts?g.parts[0].scan?`${g.parts.length} building parts from OpenStreetMap, each raised to the middle height that the laser scanning measured inside its outline`:`${g.parts.length} building parts from OpenStreetMap, each drawn in proportion to its storey count, since only the highest point of the whole building is measured`:(g.user?'the outline entered by the user':g.outline?`the OpenStreetMap outline (edit of ${g.outline.edited})`:'the official GURS outline')+(g.height_m?(g.user?' raised to the entered height of ':' raised to the height surveyed by GURS, ')+g.height_m.toFixed(1)+' m':''));
@@ -366,7 +366,7 @@ function initModel(M,p,opt){
     else if(sel.type==='el'){ const e=M.els[sel.i], pt=M.parts[e.part];
       info.innerHTML=`<h3 class="blk-h">Selection</h3><b>Element ${e.id}</b>${row('Part',pt.name)}${row('Kind',{axis:'centre line',edge:'deck edge',cross:'across the deck',ring:'outline',vertical:'vertical'}[e.kind])}${row('Length',num(Math.round(e.len*10)/10)+' m')}${row('Nodes',M.nodes[e.a].id+' to '+M.nodes[e.b].id)}`; }
     else if(sel.type==='part'){ const pt=M.parts[sel.i], ne=M.els.filter(e=>e.part===sel.i).length, nn=M.nodes.filter(n=>n.part===sel.i).length;
-      info.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(pt.name)}</b>${row(pt.kind==='building'?'Outline length':'Length on the map',num(Math.round(pt.len))+' m')}${row('Deck width',pt.width?pt.width+' m':null)}${row('Height above ground',pt.height?pt.height.toFixed(1)+' m':null)}${row('Mesh',nn+' nodes, '+ne+' elements')}${row('Object',p.name_en||p.name)}`; }
+      info.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(pt.name)}</b>${row(pt.kind==='building'?'Outline length':'Length on the map',num(Math.round(pt.len))+' m')}${row('Deck width',pt.width?pt.width+' m':null)}${row('Height above ground',pt.height&&!pt.info?pt.height.toFixed(1)+' m':null)}${(pt.info||[]).map(([a,b])=>row(a,b)).join('')}${row('Mesh',nn+' nodes, '+ne+' elements')}${row('Object',p.name_en||p.name)}`; }
     else { const r=M.refs[sel.i]; info.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(r.label)}</b>${row('Kind','reference point')}${row('Latitude',r.lat.toFixed(6))}${row('Longitude',r.lon.toFixed(6))}${row('Source',r.source?link(r.source):'',true)}`; }
   }
   const segD=(x,y,a,b)=>{ const dx=b[0]-a[0],dy=b[1]-a[1],l=dx*dx+dy*dy; let u=l?((x-a[0])*dx+(y-a[1])*dy)/l:0; u=Math.max(0,Math.min(1,u)); return Math.hypot(x-a[0]-u*dx,y-a[1]-u*dy); };
@@ -384,7 +384,7 @@ function initModel(M,p,opt){
     if(!pts.has(e.pointerId)){ const hh=hit(q[0],q[1]); if(JSON.stringify(hh)!==JSON.stringify(hov)){ hov=hh; cv.style.cursor=hh?'pointer':'grab'; redraw(); } return; }
     const o=pts.get(e.pointerId), dx=q[0]-o[0], dy=q[1]-o[1]; pts.set(e.pointerId,q); moved+=Math.abs(dx)+Math.abs(dy);
     if(pts.size===2){ const a=[...pts.values()], d=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]); if(pinch) zoom=clampZ(zoom*d/pinch); pinch=d; }
-    else if(e.shiftKey||btn===2||btn===1){ panX+=dx; panY+=dy; } else { yaw+=dx*.009; pitch+=dy*.009; ['m3d','mTop','mSide'].forEach(k=>press(k,false)); }
+    else if(e.shiftKey||btn===2||btn===1){ panX+=dx; panY+=dy; } else { yaw+=dx*.009; pitch+=dy*.009; ['m3d','mTop','mSide'].forEach(k=>press(k,false)); if(opt.onView) opt.onView(yaw,pitch); }
     redraw(); });
   const up=e=>{ const had=pts.has(e.pointerId); pts.delete(e.pointerId); pinch=0; cv.style.cursor='grab'; if(had&&moved<5&&btn===0){ const q=pos(e), hh=hit(q[0],q[1],meas); if(meas){ if(hh&&hh.type==='node'){ if(mp.length>=2) mp=[]; mp.push(hh.i); showMeasure(); redraw(); } return; } sel=hh; describe(); redraw(); } };
   function showMeasure(){ if(!info) return; if(mp.length<2){ info.innerHTML=`<h3 class="blk-h">Measure</h3><b>${mp.length?'Node '+M.nodes[mp[0]].id+' picked':'Pick the first node'}</b><p>Click ${mp.length?'a second':'a'} node in the model.</p>`; return; }
@@ -392,9 +392,9 @@ function initModel(M,p,opt){
     info.innerHTML=`<h3 class="blk-h">Measure</h3><b>Node ${A.id} to node ${Bn.id}</b>${row('Distance',num(Math.round(Math.hypot(dh,dz)*100)/100)+' m')}${row('Horizontal distance',num(Math.round(dh*100)/100)+' m')}${row('Height difference',(Math.round(dz*100)/100)+' m')}${row('Bearing from north',brg.toFixed(1)+'°')}<p>Measured on the schematic mesh, so it is as exact as the mapped geometry.</p>`; }
   cv.addEventListener('pointerup',up); cv.addEventListener('pointercancel',e=>{pts.delete(e.pointerId);pinch=0;});
   cv.addEventListener('wheel',e=>{ e.preventDefault(); const q=pos(e), k0=zoom; zoom=clampZ(zoom*Math.exp(-e.deltaY*.0022)); const f=zoom/k0; panX=(q[0]-w/2)-(q[0]-w/2-panX)*f; panY=(q[1]-h/2)-(q[1]-h/2-panY)*f; redraw(); },{passive:false});
-  const view=(y,pt,id)=>{ yaw=y; pitch=pt; panX=panY=0; zoom=1; ['m3d','mTop','mSide'].forEach(k=>press(k,k===id)); redraw(); };
+  const view=(y,pt,id)=>{ yaw=y; pitch=pt; panX=panY=0; zoom=1; ['m3d','mTop','mSide'].forEach(k=>press(k,k===id)); redraw(); if(opt.onView) opt.onView(yaw,pitch); };
   cv.addEventListener('dblclick',()=>view(HOME.yaw,HOME.pitch,'m3d'));
-  cv.addEventListener('keydown',e=>{ const k=e.key; let ok=true; if(k==='ArrowLeft') yaw-=.1; else if(k==='ArrowRight') yaw+=.1; else if(k==='ArrowUp') pitch+=.08; else if(k==='ArrowDown') pitch-=.08; else if(k==='+'||k==='=') zoom=clampZ(zoom*1.25); else if(k==='-') zoom=clampZ(zoom/1.25); else if(k==='Escape'){ sel=null; describe(); } else ok=false; if(ok){ e.preventDefault(); redraw(); } });
+  cv.addEventListener('keydown',e=>{ const k=e.key; let ok=true; if(k==='ArrowLeft') yaw-=.1; else if(k==='ArrowRight') yaw+=.1; else if(k==='ArrowUp') pitch+=.08; else if(k==='ArrowDown') pitch-=.08; else if(k==='+'||k==='=') zoom=clampZ(zoom*1.25); else if(k==='-') zoom=clampZ(zoom/1.25); else if(k==='Escape'){ sel=null; describe(); } else ok=false; if(ok){ e.preventDefault(); redraw(); if(opt.onView&&/^Arrow/.test(k)) opt.onView(yaw,pitch); } });
   const on=(id,fn)=>{ const el=$(id); if(el) el.onclick=fn; };
   on('m3d',()=>view(HOME.yaw,HOME.pitch,'m3d')); on('mTop',()=>view(0,0,'mTop')); on('mSide',()=>view(0,Math.PI/2,'mSide')); on('mReset',()=>{ sel=null; describe(); view(HOME.yaw,HOME.pitch,'m3d'); });
   if('ResizeObserver' in window) new ResizeObserver(()=>{ if(cv.hidden) return; size(); redraw(); }).observe(cv);
@@ -407,6 +407,7 @@ function initModel(M,p,opt){
         const rings=M.parts.map((pt,i)=>pt.kind==='building'?pt.track.map(q=>[M.nodes[q].x,M.nodes[q].y]):null);
         for(let j=0;j<g.ny;j++) for(let i=0;i<g.nx;i++){ const k=j*g.nx+i; if(z[k]!==z[k]) continue; for(const [fa,fb] of [[.5,.5],[.25,.25],[.75,.25],[.25,.75],[.75,.75]]){ const px=o[0]+(i+fa)*u[0]+(j+fb)*v[0], py=o[1]+(i+fa)*u[1]+(j+fb)*v[1]; for(let q=0;q<rings.length;q++) if(rings[q]&&pip(px,py,rings[q])){ own[k]=q; break; } if(own[k]>=0) break; } }
         scan={nx:g.nx,ny:g.ny,z,zmax:zmax||1,o,u,v,own,files:S.files||[],source:S.source||'',read:S.read||''}; scanOn=true; redraw(); return true; }catch(_){ return false; } },
+    setView(y,pt){ if(Math.abs(y-yaw)<1e-6&&Math.abs(pt-pitch)<1e-6) return; yaw=y; pitch=pt; ['m3d','mTop','mSide'].forEach(k=>press(k,false)); redraw(); },
     scan(on){ if(!scan) return false; scanOn=!!on; if(!scanOn&&sel&&sel.type==='cell'){ sel=null; describe(); } hov=null; redraw(); return scanOn; },
     pickPart(i){ if(M.parts[i]){ sel={type:'part',i}; describe(); redraw(); } }, pickRef(i){ const k=M.refs.findIndex(r=>r.i===i); if(k>=0){ sel={type:'ref',i:k}; describe(); redraw(); } },
     measure(on){ meas=!!on; mp=[]; cv.classList.toggle('measuring',meas); if(meas) showMeasure(); else { sel=null; describe(); } redraw(); },
@@ -430,12 +431,12 @@ function initView(p,t,g,lines,labels,opt){
     if(pts.length>1){ const b=pts.reduce((bb,c)=>bb.extend(c),new maplibregl.LngLatBounds(pts[0],pts[0])); map.fitBounds(b,{padding:60,maxZoom:18.3,pitch:Pch(),bearing:B(),duration:animate?700:0}); }
     else map[animate?'easeTo':'jumpTo']({center:ll,zoom,pitch:Pch(),bearing:B(),duration:700}); }
   const ro=$('readout'), readout=()=>{ if(!ro) return; const c=map.getCenter(); ro.textContent=`WGS 84  ${c.lat.toFixed(5)} N  ${c.lng.toFixed(5)} E  zoom ${map.getZoom().toFixed(1)}  pitch ${map.getPitch().toFixed(0)}°`; };
-  map.on('move',readout);
+  let mute=false; map.on('move',()=>{ readout(); if(opt.camera&&!mute) opt.camera(map.getBearing(),map.getPitch()); });
   /* MapLibre 5 can leave the camera at its old height after a programmatic move when terrain tiles arrive later, which puts the view under the ground. Release it. */
   const unfreeze=()=>{ try{ if(map.terrain&&map._elevationFreeze===true){ map._elevationFreeze=false; map.triggerRepaint(); } }catch(_){} };
   map.on('moveend',unfreeze); map.on('sourcedata',e=>{ if(e.sourceId==='dem'&&e.isSourceLoaded) unfreeze(); });
   const hover=id=>{ map.on('mouseenter',id,()=>map.getCanvas().style.cursor='pointer'); map.on('mouseleave',id,()=>map.getCanvas().style.cursor=''); };
-  const highlight=i=>{ try{ if(map.getLayer('ln-sel')){ const f=['==',['get','i'],i==null?-1:i]; map.setFilter('ln-sel',f); map.setFilter('ln-sel-c',f); map.setPaintProperty('ln','line-opacity',i==null?1:.45); } if(map.getLayer('bld')) map.setPaintProperty('bld','fill-extrusion-color',i==null?'#203469':'#0A66D8'); }catch(_){} };
+  const highlight=i=>{ try{ if(map.getLayer('ln-sel')){ const f=['==',['get','i'],i==null?-1:i]; map.setFilter('ln-sel',f); map.setFilter('ln-sel-c',f); map.setPaintProperty('ln','line-opacity',i==null?1:.45); } if(map.getLayer('bld')) map.setPaintProperty('bld','fill-extrusion-color',['case',['==',['get','i'],i==null?-1:i],'#2F80ED','#203469']); }catch(_){} };
   const pick=(type,i)=>{ if(type==='part') highlight(i); if(opt.select) opt.select(type,i); };
   map.on('load',()=>{
     try{ map.addSource('dem',{type:'raster-dem',tiles:[DEM_URL],tileSize:256,maxzoom:15,encoding:'terrarium',attribution:'Terrain: Mapzen, AWS Terrain Tiles'}); map.setTerrain({source:'dem',exaggeration:1}); }catch(_){}
@@ -443,9 +444,9 @@ function initView(p,t,g,lines,labels,opt){
     try{ map.addSource('sat',{type:'raster',tiles:[SAT_URL],tileSize:256,maxzoom:19,attribution:'Imagery: Esri, Maxar, Earthstar Geographics'}); map.addLayer({id:'sat',type:'raster',source:'sat',layout:{visibility:'none'}},firstSym); }catch(_){}
     if(unc&&!lines.length){ map.addSource('unc',{type:'geojson',data:{type:'Feature',properties:{},geometry:circle(ll,unc)}});
       map.addLayer({id:'unc-f',type:'fill',source:'unc',paint:{'fill-color':'#FF9500','fill-opacity':.12}}); map.addLayer({id:'unc-l',type:'line',source:'unc',paint:{'line-color':'#C76A00','line-width':1.5,'line-dasharray':[3,3]}}); }
-    if(g&&g.geometry){ map.addSource('bld',{type:'geojson',data:g.parts?{type:'FeatureCollection',features:g.parts.map(q=>({type:'Feature',properties:{h:q.h!=null?q.h:q.scan?q.scan.median_m:q.levels*(g.storey_m||3)},geometry:{type:'Polygon',coordinates:[q.ring]}}))}:{type:'Feature',properties:{h:g.height_m||0.5},geometry:g.geometry}});
+    if(g&&g.geometry){ map.addSource('bld',{type:'geojson',data:g.parts?{type:'FeatureCollection',features:g.parts.map((q,k)=>({type:'Feature',properties:{i:lines.length+k,h:q.h!=null?q.h:q.scan?q.scan.median_m:q.levels*(g.storey_m||3)},geometry:{type:'Polygon',coordinates:[q.ring]}}))}:{type:'Feature',properties:{i:lines.length,h:g.height_m||0.5},geometry:g.geometry}});
       map.addLayer({id:'bld',type:'fill-extrusion',source:'bld',paint:{'fill-extrusion-color':'#203469','fill-extrusion-height':['get','h'],'fill-extrusion-opacity':1,'fill-extrusion-vertical-gradient':true}});
-      const nLine=lines.length; map.on('click','bld',()=>pick('part',nLine)); hover('bld');
+      map.on('click','bld',e=>pick('part',e.features[0].properties.i)); hover('bld');
       if(g.site){ map.addSource('site',{type:'geojson',data:{type:'Feature',properties:{},geometry:{type:'MultiPolygon',coordinates:(g.site.rings||[g.site.ring]).map(r=>[r])}}}); map.addLayer({id:'site-f',type:'fill',source:'site',paint:{'fill-color':'#0A66D8','fill-opacity':.10}},'bld'); map.addLayer({id:'site-l',type:'line',source:'site',paint:{'line-color':'#0A66D8','line-width':1,'line-opacity':.6}},'bld'); } }
     const ownR=g&&g.geometry?(g.parts?g.parts.map(q=>q.ring):(g.geometry.type==='Polygon'?[g.geometry.coordinates[0]]:g.geometry.coordinates.map(q=>q[0]))):[], ownN=new Set(g&&g.parts?g.parts.filter(q=>q.kn!=null).map(q=>q.kn):[]);
     const mine=f=>f.rings.some(rg=>{ const c=[rg.reduce((a,v)=>a+v[0],0)/rg.length,rg.reduce((a,v)=>a+v[1],0)/rg.length]; return ownR.some(r=>ptIn(c,r)); })||(ownN.has(f.q.ST_STAVBE)&&f.rings.some(rg=>ownR.some(r=>ptIn(rg[0],r)||ptIn(r[0],rg))));
@@ -469,7 +470,7 @@ function initView(p,t,g,lines,labels,opt){
   const tilt=on=>{ is3d=on; set('v3d',on); set('v2d',!on); map.easeTo({pitch:Pch(),bearing:B(),duration:500}); };
   const bind=(id,fn)=>{ const b=$(id); if(b) b.onclick=fn; };
   bind('vMap',()=>setSat(false)); bind('vSat',()=>setSat(true)); bind('v3d',()=>tilt(true)); bind('v2d',()=>tilt(false)); bind('vReset',()=>{ highlight(null); fit(true); });
-  return {highlight, resize:()=>map.resize(), focusLine:i=>{ if(lines[i]){ highlight(i); map.easeTo({center:mid(lines[i]),duration:600}); } }, focusAnchor:i=>{ const a=anchors[i]; if(a) map.easeTo({center:[+a.lon,+a.lat],zoom:Math.max(map.getZoom(),16),duration:600}); }};
+  return {highlight, setCamera:(b,pt)=>{ mute=true; try{ map.jumpTo({bearing:b,pitch:Math.max(0,Math.min(85,pt))}); }catch(_){} mute=false; }, resize:()=>map.resize(), focusLine:i=>{ if(lines[i]){ highlight(i); map.easeTo({center:mid(lines[i]),duration:600}); } }, focusAnchor:i=>{ const a=anchors[i]; if(a) map.easeTo({center:[+a.lon,+a.lat],zoom:Math.max(map.getZoom(),16),duration:600}); }};
 }
 
 /* ---------- platform home: all objects with counts, a type filter and a text filter ---------- */
@@ -514,7 +515,7 @@ async function drawProfiles(lines,labels){ const box=$('prof'); if(!box) return;
     svg.addEventListener('mousemove',mv); svg.addEventListener('touchmove',mv,{passive:true}); });
 }
 function renderIndex(){
-  document.title='Digital twins, ZAG Digital Atlas';
+  document.title='Assets, ZAG Digital Atlas';
   const groups={}; for(const f of D.features){const k=f.properties.object_type||'other';(groups[k]=groups[k]||[]).push(f.properties);}
   const order=[...GROUP_ORDER.filter(k=>groups[k]),...Object.keys(groups).filter(k=>!GROUP_ORDER.includes(k))];
   const hasGeo=p=>!!(p.lines||p.line||D.gurs[p.id]);
@@ -524,7 +525,7 @@ function renderIndex(){
     return `<a class="obj" href="twin.html?id=${encodeURIComponent(p.id)}" data-g="${esc(p.object_type||'other')}" data-q="${esc((p.name_en+' '+(p.name_sl||'')+' '+(p.locality||'')).toLowerCase())}"><b>${T(p.name_en||p.name)}</b><span>${T(p.locality||p.municipality||'')}</span>
       <div class="tags">${n?`<span class="tag">${n} ${n===1?'specification':'specifications'}</span>`:''}${hasGeo(p)?'<span class="tag ok">3D geometry</span>':''}${EXACT(p.position_precision)?'':'<span class="tag warn">approximate position</span>'}</div></a>`;};
   const COLS=[['Name',p=>p.name_en||p.name],['Type',p=>GROUP_NAME[p.object_type]||cap(p.object_type||'other')],['Place',p=>p.locality||p.municipality||''],['ZAG work',p=>String(p.year||'').replace(/^(\d{4})-(\d{4})$/,'$1 to $2').replace(/^(\d{4})-$/,'since $1')],['Built',p=>p.built||''],['Position',p=>EXACT(p.position_precision)?'exact':'approximate'],['Sourced values',p=>{const t=D.twins[p.id];return t?(t.specs||[]).filter(x=>x.source).length:0;}]];
-  $('main').innerHTML=`<div class="wrap home"><h1>Digital twins</h1><p class="lead">Structures and sites where ZAG has documented work. Each opens its own sheet with a 3D view, key figures and specifications with sources.</p>
+  $('main').innerHTML=`<div class="wrap home"><h1>Assets</h1><p class="lead">Structures and sites where ZAG has documented work. Each opens its own sheet with a 3D view, key figures and specifications with sources.</p>
     <section class="dims" aria-label="Platform figures">
       <div class="dim"><div class="v">${D.features.length}</div><div class="k">objects</div></div>
       <div class="dim"><div class="v">${nGeo}</div><div class="k">with 3D geometry</div></div>
