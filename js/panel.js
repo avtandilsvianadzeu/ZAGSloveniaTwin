@@ -46,7 +46,7 @@ function newsHTML(id){
 function infoHTML(f){
   const p=f.properties, e=EBY[p.id], st=S.find(s=>s.key===p.story||s.key===p.id), k=kindOf(p);
   const kicker={fac:['ZAG facility','fac'],doc:['ZAG project',''],ref:['Referenced in sources','ref']}[k];
-  const where=[p.municipality&&p.municipality!==p.name_en?p.municipality:p.locality,p.year||null].filter(Boolean).join(' · ');
+  const where=[p.municipality&&p.municipality!==p.name_en?p.municipality:p.locality,p.year||null].filter(Boolean).join(', ');
   const inv=(p.zag_involvement_types||[]).map(t=>INV_LABEL[t]||cap(t));
   const bullets=[...inv.map(t=>`<li>${esc(t)}</li>`), p.zag_role?`<li>${esc(p.zag_role)}</li>`:''].join('');
   const about=p.description||'';
@@ -79,7 +79,7 @@ function infoHTML(f){
     ${kv('WGS84',coord)}
     <p class="note" id="enote"></p>
     ${(p.position_sources||[]).length?`<p class="note">Position source: ${p.position_sources.slice(0,3).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(srcHost(u))}</a>`).join(', ')}</p>`:''}
-    <div class="btnrow"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=${p.latitude},${p.longitude}" target="_blank" rel="noopener">Google Maps ↗</a>
+    <div class="btnrow"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=${p.latitude},${p.longitude}" target="_blank" rel="noopener">Google Maps</a>
       <button class="btn" data-copy="${coord}">Copy coordinates</button></div>
     ${more?`<details style="margin-top:14px"><summary class="note" style="cursor:pointer">More details</summary>${more}</details>`:''}
   </div>`;
@@ -158,10 +158,10 @@ function showAddress(f){
   const isHouse=!!p.housenumber||p.osm_key==='building';
   curId=null;
   openShell(`<div class="body"><div class="kicker ref">Location</div><h1>${esc(title)}</h1>
-    <p class="where">${esc([p.osm_value&&!p.housenumber?p.osm_value:'Address',p.city||p.county].filter(Boolean).join(' · '))}</p>
+    <p class="where">${esc([p.osm_value&&!p.housenumber?p.osm_value:'Address',p.city||p.county].filter(Boolean).join(', '))}</p>
     <h3>Position</h3><div class="kv"><span>Basis</span><span id="epos">Search result</span></div>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}
     <p class="note">Search result from OpenStreetMap (Photon). This is not a ZAG record.</p>
-    <div class="btnrow"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=${ll[1]},${ll[0]}" target="_blank" rel="noopener">Google Maps ↗</a>
+    <div class="btnrow"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=${ll[1]},${ll[0]}" target="_blank" rel="noopener">Google Maps</a>
     <button class="btn" data-copy="${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}">Copy coordinates</button></div></div>`);
   showLine(null); setSel({id:null,ll,label:title,glyph:'pin'}); orbitOn=false; emit('selected',null);
   const x={lon:ll[0],lat:ll[1],prec:'surveyed',cat:isHouse?'build':'other'};
@@ -179,7 +179,7 @@ function showStructurePick(f,ll){
   const name=q.name||(q.brunnel?cap(q.brunnel):'Aerialway')+(q.ref?' '+q.ref:'');
   setSel({id:null,ll,label:name,glyph:'pin'});
   openShell(`<div class="body"><div class="kicker ref">${q.brunnel?cap(q.brunnel):'Aerialway'}</div><h1>${esc(name)}</h1>
-    <p class="where">${esc([q.ref?'Ref '+q.ref:'',q.class?cap(q.class):''].filter(Boolean).join(' · '))}</p>
+    <p class="where">${esc([q.ref?'Ref '+q.ref:'',q.class?cap(q.class):''].filter(Boolean).join(', '))}</p>
     <div id="bim" class="bim"></div><h3>Position</h3>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}
     <p class="note">Structure from OpenStreetMap. Not a ZAG record.</p></div>`);
   structureData({props:q,lines:all},{});
@@ -187,7 +187,7 @@ function showStructurePick(f,ll){
 function showBuildingPick(ll,feat){
   const tok=++hlToken; const b=feat?buildingFromFeature(feat):findBuilding(ll,3); if(tok!==hlToken) return; showBuilding(b);
   map.getSource('unc').setData({type:'FeatureCollection',features:[]}); showLine(null); setSel(null); curId=null;
-  openShell(`<div class="body"><div class="kicker ref">Building</div><h1 id="bt">Looking up the nearest address…</h1><p class="where" id="bs"></p>
+  openShell(`<div class="body"><div class="kicker ref">Building</div><h1 id="bt">Looking up the nearest address</h1><p class="where" id="bs"></p>
     <div id="bim" class="bim"></div><h3>Position</h3>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}
     <p class="note">${b?'Footprint from OpenStreetMap building data.':'No footprint found at this point.'} Not a ZAG record.</p></div>`);
   if(b) buildingData(b,{id:null});

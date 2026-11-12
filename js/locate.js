@@ -148,7 +148,7 @@ async function locate(x,onPos){
   }
   const wantBuilding=!!x.addr||(x.prec==='surveyed'&&/^(build|inst)$/.test(x.cat));
   let target=ll, how=null, g=null;
-  if(x.addr){ onPos&&onPos({state:'busy',text:'Matching the address…'}); g=await within(geocodeAddress(x.addr),6000); if(tok!==hlToken) return;
+  if(x.addr){ onPos&&onPos({state:'busy',text:'Matching the address'}); g=await within(geocodeAddress(x.addr),6000); if(tok!==hlToken) return;
     if(g&&meters(g.ll,ll)<(x.tol||1500)){target=g.ll;how='address';} }
   if(how==='address'&&meters(target,ll)>25){ await new Promise(r=>moveThen('easeTo',{center:target,duration:reduced?0:900},r)); }
   if(!wantBuilding){ onPos&&onPos({state:'done',kind:unc?'area':'point'}); return; }
@@ -166,7 +166,7 @@ async function locate(x,onPos){
   });
 }
 function posChip(info,x){
-  if(!info||info.state==='busy') return `<span class="chip busy"><span class="spin"></span>${esc(info?info.text:'Locating…')}</span>`;
+  if(!info||info.state==='busy') return `<span class="chip busy"><span class="spin"></span>${esc(info?info.text:'Locating')}</span>`;
   if(info.kind==='building') return `<span class="chip ok">${info.how==='gurs'?'Official building (GURS)':'Building highlighted'+(info.how==='address'?' from the street address':'')}</span>`;
   if(info.kind==='area') return `<span class="chip warn">${esc(PREC[x.prec]||'Approximate')} · shaded area</span>`;
   return `<span class="chip ${PRECOK(x.prec)?'ok':'warn'}">${esc(PREC[x.prec]||x.prec)}</span>`;

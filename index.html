@@ -7,7 +7,7 @@
 <meta name="description" content="GIS atlas of buildings, bridges and infrastructure where ZAG has documented involvement.">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
-<link rel="stylesheet" href="css/atlas.css">
+<link rel="stylesheet" href="css/atlas.css?v=7">
 </head>
 <body>
 <a class="skip" href="#map">Skip to map</a>
@@ -25,7 +25,7 @@
     <button data-nav="about" aria-pressed="false" title="About this atlas and its sources"><i data-ic="about"></i>About</button>
   </nav>
   <div class="hsearch"><i data-ic="search"></i>
-    <input id="q" type="search" placeholder="Search projects, buildings, bridges, locations…" autocomplete="off" aria-label="Search projects, buildings, bridges, locations" aria-controls="results">
+    <input id="q" type="search" placeholder="Search projects, buildings, bridges, locations" autocomplete="off" aria-label="Search projects, buildings, bridges, locations" aria-controls="results">
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
   <div class="hright">
@@ -90,7 +90,7 @@
     <button id="zhome" aria-label="Show all of Slovenia" title="All of Slovenia"><i data-ic="home"></i></button>
   </div>
 
-  <div class="status" id="status"><span id="stCoord"></span><span id="stScale"></span><span id="stZoom"></span><span>WGS 84 · EPSG:4326</span><span id="srcnote"></span></div>
+  <div class="status" id="status"><span id="stCoord"></span><span id="stScale"></span><span id="stZoom"></span><span>WGS 84, EPSG:4326</span><span id="srcnote"></span></div>
   <div class="toast" id="toast" role="status"></div>
 </main>
 
@@ -110,17 +110,17 @@
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="data.js"></script>
-<script src="js/icons.js"></script>
-<script src="js/config.js"></script>
-<script src="js/basemap.js"></script>
-<script src="js/locate.js"></script>
+<script src="js/icons.js?v=7"></script>
+<script src="js/config.js?v=7"></script>
+<script src="js/basemap.js?v=7"></script>
+<script src="js/locate.js?v=7"></script>
 <script src="js/atlas-data.js"></script>
-<script src="js/layers.js"></script>
-<script src="js/panel.js"></script>
-<script src="js/list.js"></script>
-<script src="js/search.js"></script>
-<script src="js/controls.js"></script>
-<script src="js/main.js"></script>
-<script src="js/userobjects.js"></script>
+<script src="js/layers.js?v=7"></script>
+<script src="js/panel.js?v=7"></script>
+<script src="js/list.js?v=7"></script>
+<script src="js/search.js?v=7"></script>
+<script src="js/controls.js?v=7"></script>
+<script src="js/main.js?v=7"></script>
+<script src="js/userobjects.js?v=7"></script>
 </body>
 </html>

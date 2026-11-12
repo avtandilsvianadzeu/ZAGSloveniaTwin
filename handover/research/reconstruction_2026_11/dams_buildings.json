@@ -1,0 +1,1542 @@
+[
+ {
+  "id": "he_solkan",
+  "specs": [
+   {
+    "label": "Spillway bays",
+    "value": "2",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/8807/8241/23854",
+    "quote": "Pri HE Solkan se je voda prelivala čez obe prelivni polji."
+   },
+   {
+    "label": "Spillway capacity",
+    "value": "3000",
+    "unit": "m³/s",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/8807/8241/23854",
+    "quote": "pretočna zmogljivost prelivov pregrade 3000 m3/s"
+   },
+   {
+    "label": "Reservoir volume, total",
+    "value": "7.6",
+    "unit": "million m³",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/8807/8241/23854",
+    "quote": "Solkan 7,6 1,15 3000"
+   },
+   {
+    "label": "Reservoir volume, effective (SENG web page)",
+    "value": "1000000",
+    "unit": "m³",
+    "source": "https://www.seng.si/en/hydropower-plants/large-hydropower-plants/",
+    "quote": "Effective storage capacity (m3): 1000000"
+   },
+   {
+    "label": "Flood of 25 December 2009, peak flow at the dam",
+    "value": "2362",
+    "unit": "m³/s",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/8807/8241/23854",
+    "quote": "Pretok 2362 m3/s pa ni bil kritičen"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "dam type",
+   "structural height",
+   "crest length",
+   "width of the two spillway bays",
+   "gate dimensions",
+   "powerhouse dimensions",
+   "reservoir length",
+   "designer and contractor"
+  ],
+  "notes": "Effective storage differs between sources: SENG English web page 1,000,000 m3, SENG brochure and Ujma table 1,150,000 m3 (the brochure value is already in twins.json). The SENG brochure cross section \"Prerez pretočnega polja\" prints 58.25 m, 35 m, 54.10 m and 133.5 m without saying what they measure, so they are not entered as values. Searched: SENG pages and brochure, Ujma, Kronika (ojs.inz.si), dlib.si, JET review 2014. No published dam height or crest length was found."
+ },
+ {
+  "id": "he_zlatolicje",
+  "specs": [
+   {
+    "label": "Gross head",
+    "value": "33",
+    "unit": "m",
+    "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-VYGF4Z7A/15627dc1-a29c-4c79-a6c5-f0ced5657453/PDF",
+    "quote": "The Zlatoličje HPP makes use of the 33 m head"
+   },
+   {
+    "label": "Reservoir volume",
+    "value": "4.5",
+    "unit": "million m³",
+    "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-VYGF4Z7A/15627dc1-a29c-4c79-a6c5-f0ced5657453/PDF",
+    "quote": "a 4.5 million m³ reservoir"
+   },
+   {
+    "label": "Turbine unit nameplate capacity",
+    "value": "79",
+    "unit": "MW",
+    "source": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
+    "quote": "2 units of kaplan turbines, each with 79MW nameplate capacity"
+   },
+   {
+    "label": "Refurbished",
+    "value": "1993 and 2007 to 2012",
+    "unit": "",
+    "source": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
+    "quote": "rehabilitation & modernization during 1993, 2007-2012"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "canal cross section (bottom width, depth, side slope)",
+   "powerhouse dimensions",
+   "intake structure dimensions",
+   "rated head as used by the operator",
+   "designer and contractor"
+  ],
+  "notes": "The power-technology profile also prints a net head of 5.9 m, which contradicts its own 33 m gross head and is not entered. Refurbishment years differ: power-technology gives 2007 to 2012, the record text in the atlas gives 2006 to 2013. Canal lengths, runner diameter and discharge are already in the atlas record text. The operator site dem.si could not be opened from this session, nor could the paid Hydropower and Dams article of 2008."
+ },
+ {
+  "id": "he_vuhred",
+  "specs": [],
+  "rebuildable": "partly",
+  "missing": [
+   "dam type (pier type is not confirmed by an opened source)",
+   "structural height",
+   "crest length",
+   "gate type and height",
+   "powerhouse dimensions",
+   "designer and contractor"
+  ],
+  "notes": "Nothing new. Opened: gem.wiki (72 MW, 1956, coordinates 46.5876, 15.2756), power-technology profile, JET review 2014 (units 1956 and 1958, refurbishment concluded 2005). All of this is already held. The atlas text already holds 4 bays of 17 m and reservoir length 13.1 km. dem.si and sl.wikipedia.org could not be opened, and the 2020 diploma thesis on spillway bay maintenance at Ožbalt and Vuhred (academia.si) redirects to a blocked file host."
+ },
+ {
+  "id": "he_vrhovo",
+  "specs": [
+   {
+    "label": "Turbine type",
+    "value": "horizontal axis double regulated bulb turbine",
+    "unit": "",
+    "source": "https://journals.um.si/index.php/jet/article/download/5798/3543/17342",
+    "quote": "horizontal-axis double-regulated bulb turbine"
+   },
+   {
+    "label": "Unit rated power",
+    "value": "11.0",
+    "unit": "MW",
+    "source": "https://journals.um.si/index.php/jet/article/download/5798/3543/17342",
+    "quote": "each of rated power Pr = 11.0 MW"
+   },
+   {
+    "label": "Gross head (JET 2024 paper)",
+    "value": "7.5",
+    "unit": "m",
+    "source": "https://journals.um.si/index.php/jet/article/download/5798/3543/17342",
+    "quote": "at the gross head Hg = 7.5 m"
+   },
+   {
+    "label": "Turbine speed",
+    "value": "107.14",
+    "unit": "rpm",
+    "source": "https://journals.um.si/index.php/jet/article/download/5798/3543/17342",
+    "quote": "rotational speed is n0 = 107.14 min-1"
+   },
+   {
+    "label": "Rated discharge",
+    "value": "500",
+    "unit": "m³/s",
+    "source": "https://www.gov.si/assets/ministrstva/MNVP/Dokumenti/CPVO/Postopek_prevlade_javne_koristi/Mokrice/Zvezek-1.pdf",
+    "quote": "Za vseh šest je predviden enak inštaliran pretok 500 m3/s."
+   },
+   {
+    "label": "Embankment length, left bank",
+    "value": "250",
+    "unit": "m",
+    "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "Dolžina nasipa – levi breg (m) 250 1000 2000 0"
+   },
+   {
+    "label": "Embankment length, right bank",
+    "value": "1000",
+    "unit": "m",
+    "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "Dolžina nasipa – desni breg (m) 1000 350 0 0"
+   },
+   {
+    "label": "Installed capacity (JET review 2014)",
+    "value": "34.2",
+    "unit": "MW",
+    "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-VYGF4Z7A/15627dc1-a29c-4c79-a6c5-f0ced5657453/PDF",
+    "quote": "With three generators, Vrhovo HPP produces 34.2 MW of power"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "width of the 5 spillway bays",
+   "gate type and height",
+   "crest length",
+   "powerhouse dimensions",
+   "reservoir length",
+   "designer and contractor"
+  ],
+  "notes": "Gross head differs: 7.5 m (JET 2024) against 8.1 m (IBE 2010, already held). Installed capacity differs slightly: 34.2 MW (JET review) against 34 MW (SEL). Three units of 11.0 MW give 33 MW, so the unit rating and the plant rating do not add up exactly in the sources. Table columns in the IBE paper are in the order Vrhovo, Boštanj, Blanca, Krško, Brežice, Mokrice. The rated discharge of 500 m3/s is stated for all six plants of the chain, not for Vrhovo by name."
+ },
+ {
+  "id": "jez_melje",
+  "specs": [
+   {
+    "label": "Spillway bay width",
+    "value": "17",
+    "unit": "m",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+    "quote": "V VSAKEM PRETOČNEM POLJU ŠIRINE 17 m"
+   },
+   {
+    "label": "Spillway bays, right group (horizontal foundation)",
+    "value": "3",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+    "quote": "Med gradnjo desnih treh pretočnih polj, ki so imela horizontalno temeljno ploskev"
+   },
+   {
+    "label": "Spillway bays, left group (built later)",
+    "value": "3",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+    "quote": "V treh levih pretočnih poljih, ki so jih gradili pozneje"
+   },
+   {
+    "label": "Foundation key under the left bays",
+    "value": "2",
+    "unit": "m deep",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+    "quote": "varnost proti zdrsu dosežena z 2 m globoko poglobitvijo"
+   },
+   {
+    "label": "Prestressed anchors per bay",
+    "value": "6, each 20.5 m long, at 3.2 m spacing, inclined 15° and 25°",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+    "quote": "po 6 sider, dolgih po 20,5 m, v razdalji po 3,2 m"
+   },
+   {
+    "label": "Anchor design force",
+    "value": "1150 per anchor, 6180 per bay",
+    "unit": "kN",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+    "quote": "natezna sila 6180 kN ali 1150 kN na posamezno sidro"
+   },
+   {
+    "label": "Anchor prestressing force",
+    "value": "1678",
+    "unit": "kN",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+    "quote": "in natezno silo 1678 kN ob prednapenjanju."
+   },
+   {
+    "label": "Anchor head",
+    "value": "8 m long with 11 bulb widenings of 20 cm diameter",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+    "quote": "Osem metrov dolge sidrne glave naših sider imajo 11 čebulastih razširitev"
+   },
+   {
+    "label": "Anchor wires",
+    "value": "78 wires of 5 mm diameter per anchor",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+    "quote": "v sidru od 78 žic s premerom 5 mm pretrganih 36"
+   },
+   {
+    "label": "Impoundment level at Melje, design stage",
+    "value": "253 (raised from a mean level of 246)",
+    "unit": "m a.s.l.",
+    "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-95IJLL78/84bac1c0-b05a-440d-91e2-206d78dd128f/PDF",
+    "quote": "dvignila od sedanje povprečne kote 246 m na 253 m"
+   },
+   {
+    "label": "Water level rise at Melje, design stage",
+    "value": "7 to 8",
+    "unit": "m",
+    "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-95IJLL78/84bac1c0-b05a-440d-91e2-206d78dd128f/PDF",
+    "quote": "Umetni dvig gladine bo v Melju 7 do 8 m"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "structural height of piers and sills",
+   "gate heights (segment gate and flap)",
+   "crest length",
+   "sill elevation",
+   "stilling basin dimensions",
+   "small plant MHE Melje head and discharge"
+  ],
+  "notes": "The Ujma article does not state a total number of bays. Three right plus three left agrees with the six gates named in the atlas record text. The two design stage values come from a geological study in Geologija vol. 7 written before construction (the scheme is called HE Loka there, with a 9 km canal that was later changed), so they are design figures, not as built ones."
+ },
+ {
+  "id": "he_bostanj",
+  "specs": [
+   {
+    "label": "Spillway bay width",
+    "value": "15",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "Ima pet pretočnih polj, širine po 15 m"
+   },
+   {
+    "label": "Gate type and height",
+    "value": "segment gates, 10.5 m high",
+    "unit": "",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "opremljenih s segmentnimi zapornicami višine 10,5 m"
+   },
+   {
+    "label": "Dam location on the Sava",
+    "value": "769.677",
+    "unit": "river km",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "Jez je lociran v koritu reke Save v km 769.677"
+   },
+   {
+    "label": "Powerhouse plan, first level",
+    "value": "42 x 52 (plus or minus 10 %)",
+    "unit": "m (printed as mm)",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "prva etaža - 42 x 52 mm (+ / - 10%"
+   },
+   {
+    "label": "Powerhouse plan, second level",
+    "value": "42 x 36 (plus or minus 10 %)",
+    "unit": "m (printed as mm)",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "druga etaža - 42 x 36 mm (+ / - 10%)"
+   },
+   {
+    "label": "Powerhouse plan, third level",
+    "value": "57 x 36 (plus or minus 10 %)",
+    "unit": "m (printed as mm)",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "tretja etaža - 57 x 36 mm (+ / - 10%)"
+   },
+   {
+    "label": "Powerhouse crane superstructure plan",
+    "value": "57 x 13 (plus or minus 10 %)",
+    "unit": "m (printed as mm)",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "nadgradnja za mostni žerjav - 57 mm x 13 mm"
+   },
+   {
+    "label": "Powerhouse first level",
+    "value": "elevation 158.85 m, height 18.5 m",
+    "unit": "",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "prva etaža - kota 158,85 m; višina 18,5 m"
+   },
+   {
+    "label": "Powerhouse second level",
+    "value": "elevation 177.10 m, height 3.5 m",
+    "unit": "",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "druga etaža - kota 177,10 m; višina 3,5 m"
+   },
+   {
+    "label": "Powerhouse third level",
+    "value": "elevation 180.60 m, height 3.6 m",
+    "unit": "",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "tretja etaža - kota 180,60 m; višina 3,6 m"
+   },
+   {
+    "label": "Powerhouse superstructure",
+    "value": "elevation 185.60 m, height 5.5 m",
+    "unit": "",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "nadgradnja - kota 185,60; višina 5,5 m"
+   },
+   {
+    "label": "Normal water level",
+    "value": "182.50",
+    "unit": "m a.s.l.",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "površino 1,04 km2 pri koti zajezitve 182,50 m"
+   },
+   {
+    "label": "Reservoir area",
+    "value": "1.04",
+    "unit": "km²",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "Akumulacijski bazen ima površino 1,04 km2"
+   },
+   {
+    "label": "Permitted drawdown",
+    "value": "1",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "največje dovoljeno znižanje gladine vode 1 m"
+   },
+   {
+    "label": "Reservoir useful volume (location plan decree)",
+    "value": "about 1,000,000",
+    "unit": "m³",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+    "quote": "koristna prostornina bazena približno 1,000.000 kubičnih metrov"
+   },
+   {
+    "label": "Reservoir volume (ARSO comparison)",
+    "value": "8.06",
+    "unit": "million m³",
+    "source": "https://www.arso.gov.si/novice/datoteke/041629-Priloga%201%20-%20Primerjava%20bazenov%20HE%20na%20Savi.pdf",
+    "quote": "8,06 mio m3"
+   },
+   {
+    "label": "Rated discharge",
+    "value": "500",
+    "unit": "m³/s",
+    "source": "https://www.gov.si/assets/ministrstva/MNVP/Dokumenti/CPVO/Postopek_prevlade_javne_koristi/Mokrice/Zvezek-1.pdf",
+    "quote": "Za vseh šest je predviden enak inštaliran pretok 500 m3/s."
+   },
+   {
+    "label": "Embankment length, left bank",
+    "value": "1000",
+    "unit": "m",
+    "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "Dolžina nasipa – levi breg (m) 250 1000 2000 0"
+   },
+   {
+    "label": "Embankment length, right bank",
+    "value": "350",
+    "unit": "m",
+    "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "Dolžina nasipa – desni breg (m) 1000 350 0 0"
+   }
+  ],
+  "rebuildable": "yes",
+  "missing": [
+   "crest length as one published figure",
+   "pier width",
+   "sill elevation",
+   "turbine runner diameter",
+   "designer and contractor"
+  ],
+  "notes": "The location plan decree prints the powerhouse plan sizes in \"mm\", which can only mean metres. This is a misprint in the source and is flagged in the unit field. Useful volume differs: about 1,000,000 m3 in the decree against 1,167,000 m3 in IBE 2010 (already held). Total volume differs: 8.06 million m3 (ARSO) against 8.131 million m3 (IBE 2010, already held). Decree values are planning figures with a stated tolerance, not as built survey values. he-ss.si could not be opened."
+ },
+ {
+  "id": "he_arto",
+  "specs": [
+   {
+    "label": "Spillway bay width",
+    "value": "15",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "pet prelivnih polj širine po 15 m"
+   },
+   {
+    "label": "Pier width",
+    "value": "3",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "ki so med seboj ločena s stebri širine 3 m"
+   },
+   {
+    "label": "Spillway sill elevation",
+    "value": "163.50",
+    "unit": "m a.s.l.",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "Kota prelivnega praga 163,50 m n.m."
+   },
+   {
+    "label": "Dam location on the Sava",
+    "value": "760.627",
+    "unit": "river km",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "deloma na obrežju, v km 760.627"
+   },
+   {
+    "label": "Turbine arrangement",
+    "value": "vertical units",
+    "unit": "",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "Strojnica z vertikalnimi agregati, s skupno nazivno požiralnostjo 500 m3/s"
+   },
+   {
+    "label": "Normal water level",
+    "value": "174.20",
+    "unit": "m a.s.l.",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "ob zajezitvi na koti 174,20 m n.m."
+   },
+   {
+    "label": "Reservoir area",
+    "value": "130",
+    "unit": "ha",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "Bazen ima površino 130 ha in prostornino 9,95 milijona m3"
+   },
+   {
+    "label": "Permitted drawdown",
+    "value": "1",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "najvišji dovoljeni denivelaciji 1 m"
+   },
+   {
+    "label": "Left bank protection works, total length",
+    "value": "3147",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "v skupni dolžini 3147 m."
+   },
+   {
+    "label": "Left bank embankment",
+    "value": "2000 m long, average height 4 m, sealed to the impermeable base",
+    "unit": "",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "V dolžini 2000 m se izvede klasični nasip s povprečno višino 4 m"
+   },
+   {
+    "label": "Powerhouse length to width ratio (without assembly platform)",
+    "value": "2.4 : 1",
+    "unit": "",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "znaša 2,4: 1."
+   },
+   {
+    "label": "Crane track elevation, upstream side",
+    "value": "175.90",
+    "unit": "m a.s.l.",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "Proga je na koti 175,90 m n.m."
+   },
+   {
+    "label": "Crane track elevation, downstream side",
+    "value": "171.80",
+    "unit": "m a.s.l.",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "poteka na koti 171,80 m n.m."
+   },
+   {
+    "label": "Annual generation (location plan decree)",
+    "value": "169 before HE Krško, 150 after",
+    "unit": "GWh",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+    "quote": "ocenjeno skupno srednjo letno proizvodnjo 169 GWh pred izgradnjo hidroelektrarne Krško"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "gate type and height",
+   "powerhouse dimensions in metres",
+   "crest length",
+   "turbine runner diameter",
+   "reservoir length",
+   "designer named in an opened source only as a reference (IBE, Idejni projekt 2005)",
+   "contractor"
+  ],
+  "notes": "Annual generation differs: 150 GWh after HE Krško (decree) against 148 GWh (already held). Installed capacity is 40 MW in the IBE 2010 chain table against 39.12 MW already held. HE Krško is described by IBE as unified with Blanca in its main dimensions, so the Krško gate and powerhouse figures are a likely match, but no opened source states them for Blanca. he-ss.si could not be opened."
+ },
+ {
+  "id": "he_krsko",
+  "specs": [
+   {
+    "label": "Pier width",
+    "value": "3",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/aE_769c8e1c-1a7f-44fa-a75e-20477626b07a",
+    "quote": "ki so med seboj ločena s stebri širine 3 m"
+   },
+   {
+    "label": "Dam location on the Sava",
+    "value": "751.575",
+    "unit": "river km",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/aE_769c8e1c-1a7f-44fa-a75e-20477626b07a",
+    "quote": "Jezovna zgradba se uredi v koritu reke Save v km 751.575."
+   },
+   {
+    "label": "Powerhouse dimensions",
+    "value": "about 85 x 20, height 40",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/aE_769c8e1c-1a7f-44fa-a75e-20477626b07a",
+    "quote": "dimenzije objekta znašajo približno 85 m × 20 m z višino 40 m."
+   },
+   {
+    "label": "Reservoir area",
+    "value": "117",
+    "unit": "ha",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/aE_769c8e1c-1a7f-44fa-a75e-20477626b07a",
+    "quote": "Bazen ima površino 117 ha in prostornino 6,31 milijona m³"
+   },
+   {
+    "label": "Permitted drawdown",
+    "value": "1",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/aE_769c8e1c-1a7f-44fa-a75e-20477626b07a",
+    "quote": "najvišji dovoljeni denivelaciji 1 m"
+   },
+   {
+    "label": "Embankment crest above impoundment level",
+    "value": "at least 1.5",
+    "unit": "m",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/aE_769c8e1c-1a7f-44fa-a75e-20477626b07a",
+    "quote": "z nasipi, visokimi vsaj 1,5 m nad koto zajezitve."
+   },
+   {
+    "label": "Bank embankment length (IBE chain table)",
+    "value": "0 on both banks",
+    "unit": "m",
+    "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "Dolžina nasipa – desni breg (m) 1000 350 0 0"
+   },
+   {
+    "label": "Powerhouse hall height relative to HE Blanca",
+    "value": "1.2 m higher",
+    "unit": "",
+    "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+    "quote": "višina strojnične hale, ki je pri HE Krško višja za 1,2 m."
+   },
+   {
+    "label": "Powerhouse position",
+    "value": "right part of the dam structure, 3 units",
+    "unit": "",
+    "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/aE_769c8e1c-1a7f-44fa-a75e-20477626b07a",
+    "quote": "Desni del jezovne zgradbe predstavlja strojnica s tremi agregati"
+   }
+  ],
+  "rebuildable": "yes",
+  "missing": [
+   "crest length as one published figure",
+   "sill elevation",
+   "turbine runner diameter",
+   "reservoir length",
+   "contractor"
+  ],
+  "notes": "With what is already held (5 bays of 15 m, segment gates 8.17 m with 2.95 m flaps, foundation 134.65 and top 173.90 m a.s.l., level 164.0) the dam can be modelled at massing level. The decree gives the reservoir as 6.31 million m3 total and 1.18 million m3 useful, which agrees with the values already held. The powerhouse height of 40 m (decree, approximate) and 39.25 m (IBE 2012, already held) are consistent."
+ },
+ {
+  "id": "che_avce",
+  "specs": [
+   {
+    "label": "Penstock diameter",
+    "value": "3.3 reducing to 2.6",
+    "unit": "m",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "premer cevovoda zmanjšuje od 3,3 m do 2,6 m."
+   },
+   {
+    "label": "Penstock, above ground section",
+    "value": "862 m on six fixed supports",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "Nadzemni del cevovoda v dolžini 862 m je vpet v šest"
+   },
+   {
+    "label": "Penstock, vertical shaft",
+    "value": "190 m deep, 3.1 m diameter",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "v vertikalni jašek globine 190 m in premera 3,1 m."
+   },
+   {
+    "label": "Penstock, horizontal pressure tunnel",
+    "value": "395 m long, 3.1 m diameter",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "v horizontalnem tlačnem tunelu dolžine 395 m in premera 3,1 m"
+   },
+   {
+    "label": "Penstock, inclined pressure tunnel",
+    "value": "120 m long, 2.6 m diameter",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "kot poševni tlačni tunel dolžine 120 m in premera 2,6 m."
+   },
+   {
+    "label": "Headrace tunnel lining",
+    "value": "reinforced concrete over the whole length",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "je na celotni dolžini obdan z armirano betonsko oblogo"
+   },
+   {
+    "label": "Surge tank, lower chamber",
+    "value": "117 m long, 3.5 m diameter",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "spodnja komora dolžine 117 m in premera 3,5 m"
+   },
+   {
+    "label": "Surge tank, shaft",
+    "value": "41 m high, 4.5 m diameter",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "jašek višine 41 m in premera 4,5 m"
+   },
+   {
+    "label": "Surge tank, upper chamber",
+    "value": "40 m long, 4.5 x 4.5 m section",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "zgornja komora dolžine 40 m in dimenzijami v prerezu 4,5 m x 4,5 m."
+   },
+   {
+    "label": "Upper reservoir asphalt lining, slopes",
+    "value": "two layers of 8 cm (bearing and sealing)",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "po 8 cm debeline nosilne plasti in zaporne plasti na poševnini"
+   },
+   {
+    "label": "Upper reservoir asphalt lining, floor",
+    "value": "two layers of 7 cm",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "po 7 cm debeline vsakega sloja na horizontalnem delu bazena."
+   },
+   {
+    "label": "Upper reservoir usable volume (SENG presentation)",
+    "value": "2170000",
+    "unit": "m³",
+    "source": "https://www.ice.it/it/sites/default/files/inline-files/Rajko%20Volk%20-%20presentation.pdf",
+    "quote": "2,170,000 m³"
+   },
+   {
+    "label": "Lower reservoir",
+    "value": "existing Ajba reservoir on the Soča, free volume 416,000 m³",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "prost volumen akumulacije, ki znaša 416.000 m³."
+   },
+   {
+    "label": "Motor generator rating",
+    "value": "195",
+    "unit": "MVA",
+    "source": "https://library.e.abb.com/public/8dcc2cabb5e54184c12579200036a08d/26-31%203m124_ENG_72dpi.pdf",
+    "quote": "SENG decided to install a 195 MVA reversible variable-speed unit."
+   },
+   {
+    "label": "Grid transformer",
+    "value": "200",
+    "unit": "MVA",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "mrežni transformator z močjo 200 MVA"
+   },
+   {
+    "label": "Turbine mode operating range",
+    "value": "25 to 40 m³/s, 90 to 180 MW",
+    "unit": "",
+    "source": "https://www.ice.it/it/sites/default/files/inline-files/Rajko%20Volk%20-%20presentation.pdf",
+    "quote": "25–40 m³/s"
+   },
+   {
+    "label": "Cycle efficiency",
+    "value": "77",
+    "unit": "%",
+    "source": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant",
+    "quote": "The efficiency of the process is 77%."
+   },
+   {
+    "label": "Designer",
+    "value": "IBE d.d.",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "IBE d.d."
+   },
+   {
+    "label": "Contractor",
+    "value": "Primorje Ajdovščina (main building contractor), in consortium Primorje and SCT",
+    "unit": "",
+    "source": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant",
+    "quote": "The main building contractor was Primorje Ajdovščina."
+   },
+   {
+    "label": "Equipment supplier",
+    "value": "consortium Melco, Rudis, Sumitomo (Mitsubishi Electric Corporation)",
+    "unit": "",
+    "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+    "quote": "Konzorcij Consortium Melco – Rudis – Sumitomo"
+   },
+   {
+    "label": "Cost",
+    "value": "122",
+    "unit": "million EUR",
+    "source": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant",
+    "quote": "The cost of the Avče pumped storage plant was €122 million."
+   }
+  ],
+  "rebuildable": "yes",
+  "missing": [
+   "upper reservoir plan dimensions and embankment crest lengths",
+   "embankment slopes",
+   "powerhouse building dimensions above ground",
+   "penstock wall thickness"
+  ],
+  "notes": "Upper reservoir volume differs: 2,170,000 m3 usable (SENG presentation at ICE) against 2,200,000 m3 (SENG brochure, already held). The same slide gives the power range as 90 to 180 MW. The ICE presentation gives 90 to 180 MW, the brochure 185 MW in turbine mode. The consortium Primorje and SCT is named in the SENG brochure list of contractors. Penstock total length 1,567 m, headrace tunnel 697 m with 3.90 m diameter and the 80 m by 18 m powerhouse shaft are already held."
+ },
+ {
+  "id": "zag",
+  "specs": [
+   {
+    "label": "Main laboratory and office building",
+    "value": "built 1984",
+    "unit": "",
+    "source": "https://dlib.si/stream/URN:NBN:SI:DOC-24TY2AFI/47c0f8ff-bb91-45d1-991b-cc6e7751892f/PDF",
+    "quote": "1984: A seven-storey facility is built with new laboratories and office space."
+   },
+   {
+    "label": "Floors",
+    "value": "7",
+    "unit": "",
+    "source": "https://dlib.si/stream/URN:NBN:SI:DOC-24TY2AFI/47c0f8ff-bb91-45d1-991b-cc6e7751892f/PDF",
+    "quote": "1984: A seven-storey facility is built with new laboratories and office space."
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "structural system",
+   "gross floor area",
+   "architect",
+   "floors below ground",
+   "test hall dimensions and strong floor or reaction wall data",
+   "facade"
+  ],
+  "notes": "Source is the ZAG 75 year bulletin (2024) on dlib.si, of which the first 100,000 of about 258,000 characters were read. It does not say which of the buildings on the Dimičeva site the 1984 building is. Height 14.3 m from GURS (already held) is low for a building with that many storeys, so the GURS record may describe another building part. This needs a check on site data."
+ },
+ {
+  "id": "zag_logatec",
+  "specs": [],
+  "rebuildable": "partly",
+  "missing": [
+   "furnace dimensions (vertical and horizontal)",
+   "hall clear height",
+   "structural system",
+   "architect and contractor",
+   "floors"
+  ],
+  "notes": "Nothing new. RTV SLO (2 September 2022) and STA (9 August 2022) repeat what the atlas text already holds: nearly 3,500 m2, two large furnaces with cleaning plant, specimens up to 4 by 8 m, close to EUR 11 million. No opened source gives furnace or hall dimensions."
+ },
+ {
+  "id": "zag_maribor",
+  "specs": [],
+  "rebuildable": "partly",
+  "missing": [
+   "year the building was first built",
+   "structural system",
+   "footprint and height",
+   "architect of the renovation"
+  ],
+  "notes": "Nothing new. The ZAG bulletin 2024 only repeats the 2021 opening in Dobrovci. The atlas text already holds 3 storeys, 480 m2 and the opening date. Searches for the Večer article and other news returned no further page with dimensions."
+ },
+ {
+  "id": "innorenew",
+  "specs": [
+   {
+    "label": "Year built",
+    "value": "2021 (year of completion)",
+    "unit": "",
+    "source": "https://odprtehiseslovenije.org/en/objekt/innorenew-coe-center-of-excellence-for-research-and-innovation-in-the-%ef%ac%81eld-of-renewable-materials-and-a-healthy-living-environment/",
+    "quote": "Year of completion: 2021"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "building height",
+   "footprint dimensions",
+   "storey heights",
+   "split between the timber part and the concrete and steel part",
+   "column grid"
+  ],
+  "notes": "Only the completion year is new. Open House Slovenia confirms 8,200 m2 (already held). The official opening on 15 February 2022 is already held. innorenew.eu pages were not returned by search in this session."
+ },
+ {
+  "id": "ulfgg",
+  "specs": [
+   {
+    "label": "Architect",
+    "value": "Edvard Ravnikar",
+    "unit": "",
+    "source": "https://media.fgg.uni-lj.si/brosure/FGG_brosura_SLO_2019.pdf",
+    "quote": "ki se nahaja na Jamovi cesti 2, je delo arhitekta Ravnikarja"
+   },
+   {
+    "label": "Year built",
+    "value": "1969",
+    "unit": "",
+    "source": "https://media.fgg.uni-lj.si/brosure/FGG_brosura_SLO_2019.pdf",
+    "quote": "Leta 1969 je bila po načrtih prof. ing. arh. E. Ravnikarja zgrajena nova stavba"
+   },
+   {
+    "label": "Floor area of all buildings owned by UL FGG",
+    "value": "13261",
+    "unit": "m²",
+    "source": "https://media.fgg.uni-lj.si/brosure/FGG_brosura_SLO_2019.pdf",
+    "quote": "13.261 m2"
+   },
+   {
+    "label": "Teaching floor area",
+    "value": "4078",
+    "unit": "m²",
+    "source": "https://media.fgg.uni-lj.si/brosure/FGG_brosura_SLO_2019.pdf",
+    "quote": "4.078 m2"
+   },
+   {
+    "label": "Heritage status",
+    "value": "part of Slovenian cultural heritage (faculty statement)",
+    "unit": "",
+    "source": "https://media.fgg.uni-lj.si/brosure/FGG_brosura_SLO_2019.pdf",
+    "quote": "saj sta obe del slovenske kulturne dediščine"
+   },
+   {
+    "label": "Second site, Hajdrihova",
+    "value": "hydraulic laboratory complex completed 1949, designed by M. Goljevšček, architect J. Valentinčič",
+    "unit": "",
+    "source": "https://media.fgg.uni-lj.si/brosure/FGG_brosura_SLO_2019.pdf",
+    "quote": "Leta 1949 je bil dograjen stavbni kompleks na Hajdrihovi ulici."
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "number of floors",
+   "structural system",
+   "facade",
+   "gross floor area of the Jamova 2 building alone",
+   "test hall of the structural and traffic laboratory (dimensions, equipment)"
+  ],
+  "notes": "The 13,261 m2 figure covers all buildings owned by the faculty, not Jamova 2 alone. The heritage statement comes from the Open House Slovenia page on Cafe FGG, which describes the building as a listed lamella designed by Edvard Ravnikar in 1969. The faculty brochure says both of its buildings are part of Slovenian cultural heritage. No heritage register number was found."
+ },
+ {
+  "id": "cestel",
+  "specs": [],
+  "rebuildable": "no",
+  "missing": [
+   "year built",
+   "floors",
+   "structural system",
+   "floor area"
+  ],
+  "notes": "Nothing new. This is a company office in Trzin. No search in this session returned a page with building data beyond the GURS height and footprint already held. Searched: company name with address, building and year terms."
+ },
+ {
+  "id": "ss_kocevje",
+  "specs": [
+   {
+    "label": "Fire",
+    "value": "night before 27 December, started in the attic",
+    "unit": "",
+    "source": "https://www.24ur.com/novice/slovenija/pogorela-sola-bo-docakala-prenovo.html",
+    "quote": "Požar je izbruhnil v noči na 27. december."
+   },
+   {
+    "label": "Fire damage",
+    "value": "13 classrooms and the roof structure destroyed",
+    "unit": "",
+    "source": "https://www.24ur.com/novice/slovenija/pogorela-sola-bo-docakala-prenovo.html",
+    "quote": "Uničenih je bilo 13 učilnic in ostrešje."
+   },
+   {
+    "label": "Renovation investment",
+    "value": "3240180",
+    "unit": "EUR",
+    "source": "https://www.24ur.com/novice/slovenija/pogorela-sola-bo-docakala-prenovo.html",
+    "quote": "Vrednost naložbe je 3.240.180 evrov."
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "year built",
+   "architect",
+   "number of floors",
+   "structural system",
+   "roof structure type",
+   "year of the fire (not stated in the opened article)"
+  ],
+  "notes": "The 24ur article does not print the year of the fire. It says the fire spread to the whole first floor. No opened source gives the construction year or structure of the school building."
+ },
+ {
+  "id": "os_stara_cerkev",
+  "specs": [
+   {
+    "label": "Fire damage estimate",
+    "value": "at least 1.5",
+    "unit": "million EUR",
+    "source": "https://www.zurnal24.si/slovenija/pouk-tudi-v-gasilskem-domu-196295",
+    "quote": "po prvih ocenah za vsaj 1,5 milijona evrov"
+   }
+  ],
+  "rebuildable": "no",
+  "missing": [
+   "year built",
+   "floors",
+   "structural system",
+   "roof structure",
+   "date of the fire in a verbatim source",
+   "what was rebuilt after the fire"
+  ],
+  "notes": "The Žurnal24 article is dated 10 June 2013 and says the fire was \"on Sunday\", so 9 June 2013 is likely but not printed. The second entry has no verbatim quote because the reading tool returned only a paraphrase. Treat it as unverified until the page is read directly. The 24ur and Delo articles on the fire could not be opened (site error and redirect to an error page)."
+ },
+ {
+  "id": "fibran_sodrazica",
+  "specs": [],
+  "rebuildable": "no",
+  "missing": [
+   "hall dimensions",
+   "structural system (steel or precast concrete frame)",
+   "roof build up",
+   "year built",
+   "date and extent of the fire"
+  ],
+  "notes": "Nothing new. Both 24ur articles on the fire (one says most damage was on the roof of the production hall, per its title only) failed to open with a site error. The GURS footprint of 411 m2 already held looks too small for a production hall and may belong to a different building part."
+ },
+ {
+  "id": "tr3",
+  "specs": [
+   {
+    "label": "Architect",
+    "value": "Edvard Ravnikar",
+    "unit": "",
+    "source": "https://odprtehiseslovenije.org/en/objekt/the-tr3-high-rise-and-trg-republike-in-ljubljana/",
+    "quote": "Architecture: Edvard Ravnikar"
+   },
+   {
+    "label": "Structural engineer",
+    "value": "Ervin Prelog",
+    "unit": "",
+    "source": "https://www.archiweb.cz/en/b/namesti-republiky-trg-republike",
+    "quote": "created in collaboration with engineer Ervin Prelog"
+   },
+   {
+    "label": "Structural system",
+    "value": "prefabricated elements cantilevered from a central reinforced concrete core",
+    "unit": "",
+    "source": "https://www.archiweb.cz/en/b/namesti-republiky-trg-republike",
+    "quote": "a system of prefabricated elements cantilevered from a central reinforced concrete core"
+   },
+   {
+    "label": "Plan form",
+    "value": "triangular floor plan",
+    "unit": "",
+    "source": "https://www.archiweb.cz/en/b/namesti-republiky-trg-republike",
+    "quote": "a triangular floor plan"
+   },
+   {
+    "label": "Facade",
+    "value": "granite cladding",
+    "unit": "",
+    "source": "https://www.archiweb.cz/en/b/namesti-republiky-trg-republike",
+    "quote": "heavy granite cladding"
+   },
+   {
+    "label": "Tower tops",
+    "value": "copper",
+    "unit": "",
+    "source": "https://www.total-slovenia-news.com/lifestyle/1975-republic-square-ljubljana-s-own-concrete-utopia",
+    "quote": "the use of copper for the tops of both towers"
+   },
+   {
+    "label": "Floors",
+    "value": "17",
+    "unit": "",
+    "source": "https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Slovenia",
+    "quote": "Trg Republike 3 (TR3) | Ljubljana | 69 metres (226 ft) | 17 | 1973"
+   },
+   {
+    "label": "Height (Wikipedia list)",
+    "value": "69",
+    "unit": "m",
+    "source": "https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Slovenia",
+    "quote": "Trg Republike 3 (TR3) | Ljubljana | 69 metres (226 ft) | 17 | 1973"
+   },
+   {
+    "label": "Cornice height (2026 competition drawing)",
+    "value": "50",
+    "unit": "m",
+    "source": "https://zaps.si/wp-content/uploads/2026/02/X_ST001_plakati.pdf",
+    "quote": "venec TR3: 50 m"
+   },
+   {
+    "label": "Year built (Wikipedia list)",
+    "value": "1973",
+    "unit": "",
+    "source": "https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Slovenia",
+    "quote": "Trg Republike 3 (TR3) | Ljubljana | 69 metres (226 ft) | 17 | 1973"
+   },
+   {
+    "label": "Year built (Open House Slovenia, text)",
+    "value": "1976",
+    "unit": "",
+    "source": "https://odprtehiseslovenije.org/en/objekt/the-tr3-high-rise-and-trg-republike-in-ljubljana/",
+    "quote": "In 1976, the TR3 high-rise building with an extension was added"
+   },
+   {
+    "label": "Year built (Open House Slovenia, data box)",
+    "value": "1982",
+    "unit": "",
+    "source": "https://odprtehiseslovenije.org/en/objekt/the-tr3-high-rise-and-trg-republike-in-ljubljana/",
+    "quote": "Year of completion: 1982"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "floors below ground",
+   "gross floor area",
+   "core dimensions and cantilever length",
+   "storey height",
+   "side length of the triangular plan"
+  ],
+  "notes": "Completion year disagrees across four sources: 1971 (Total Slovenia News says both towers were finished in 1971, but no verbatim sentence was returned, so it is not entered as a value), 1973 (Wikipedia list), 1976 (Open House Slovenia text) and 1982 (Open House Slovenia data box, which may refer to the whole square). Height also disagrees: 69 m (Wikipedia, close to the GURS 69.2 m already held) against a cornice at 50 m on a 2026 ZAPS competition drawing for a monument on the square, where the reference level of the drawing is not known. Archiweb describes the pair of towers together, not TR3 alone."
+ },
+ {
+  "id": "kpd",
+  "specs": [
+   {
+    "label": "Year built",
+    "value": "1884 to 1889",
+    "unit": "",
+    "source": "https://press.um.si/index.php/ump/catalog/view/232/192/553",
+    "quote": "Zgrajena je bila med letoma 1884 in 1889"
+   },
+   {
+    "label": "Plan form",
+    "value": "5 larger wings in a star arrangement and 3 smaller side wings",
+    "unit": "",
+    "source": "https://press.um.si/index.php/ump/catalog/view/232/192/553",
+    "quote": "pet večjih zvezdasto razporejenih traktov in trije manjši stranski trakti"
+   },
+   {
+    "label": "Floors",
+    "value": "4 (cell wings)",
+    "unit": "",
+    "source": "https://press.um.si/index.php/ump/catalog/view/232/192/553",
+    "quote": "nanizani ob ozkih hodnikih v štirih etažah"
+   },
+   {
+    "label": "Floor area",
+    "value": "almost 16,000 (without the two renovated parts)",
+    "unit": "m²",
+    "source": "https://press.um.si/index.php/ump/catalog/view/232/192/553",
+    "quote": "skoraj 16.000 m2"
+   },
+   {
+    "label": "Heritage status",
+    "value": "protected monument building",
+    "unit": "",
+    "source": "https://press.um.si/index.php/ump/catalog/view/232/192/553",
+    "quote": "spomeniško zaščitene stavbe"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "architect",
+   "wing lengths and widths",
+   "wall construction (brick masonry is likely but not stated)",
+   "heritage register number",
+   "roof form"
+  ],
+  "notes": "Source is a University of Maribor Press book chapter. The last entry (use history) was returned as a summary without a verbatim sentence and should be checked against the page before use."
+ },
+ {
+  "id": "nuk",
+  "specs": [
+   {
+    "label": "Architect",
+    "value": "Jože Plečnik",
+    "unit": "",
+    "source": "https://en.wikipedia.org/wiki/National_and_University_Library_of_Slovenia",
+    "quote": "designed by the architect Jože Plečnik in the years 1930–31"
+   },
+   {
+    "label": "Year built",
+    "value": "1936 to 1941",
+    "unit": "",
+    "source": "https://en.wikipedia.org/wiki/National_and_University_Library_of_Slovenia",
+    "quote": "constructed between 1936 and 1941"
+   },
+   {
+    "label": "Floors",
+    "value": "4",
+    "unit": "",
+    "source": "https://culture.ljudmila.net/en/National_and_University_Library",
+    "quote": "A four-storey, four-winged building in the shape of an irregular rectangle"
+   },
+   {
+    "label": "Plan form",
+    "value": "four wings around two small inner yards, irregular rectangle",
+    "unit": "",
+    "source": "https://culture.ljudmila.net/en/National_and_University_Library",
+    "quote": "with two small inner yards"
+   },
+   {
+    "label": "Facade",
+    "value": "brick with uneven, differently worked stone blocks and convex windows",
+    "unit": "",
+    "source": "https://culture.ljudmila.net/en/National_and_University_Library",
+    "quote": "The outer facade is made of brick, complemented by uneven and differently worked stone"
+   },
+   {
+    "label": "Main reading room height",
+    "value": "10 m ceiling, open through four floors",
+    "unit": "",
+    "source": "https://archiweb.cz/en/b/slovinska-narodni-a-univerzitni-knihovna-narodna-in-univerzitetna-knjiznica",
+    "quote": "a ten-meter high ceiling"
+   },
+   {
+    "label": "Main reading room seats",
+    "value": "236",
+    "unit": "",
+    "source": "https://culture.ljudmila.net/en/National_and_University_Library",
+    "quote": "There is a large reading room (236 seats)"
+   },
+   {
+    "label": "Later works",
+    "value": "cellar renovated in 2000 by Marko Mušič, with added earthquake protection",
+    "unit": "",
+    "source": "https://en.wikipedia.org/wiki/National_and_University_Library_of_Slovenia",
+    "quote": "additionally protected against earthquakes"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "plan dimensions",
+   "gross floor area",
+   "floors below ground",
+   "structural system (reinforced concrete frame with brick and stone, stated only in the ZAG survey description)",
+   "storey heights"
+  ],
+  "notes": "Construction years differ inside one source: culture.si gives 1936 to 1941, 1938 to 1940 and 1935 to 1940 in different sections. Wikipedia and Archiweb give 1936 to 1941, and Archiweb adds that interior furnishing lasted until 1947. Three facts on the Wikipedia page were returned without a verbatim sentence and are therefore not entered as values: builder Matko Curk, 32 dark stone columns on the main staircase, and UNESCO World Heritage listing in 2021 as part of the Plečnik works in Ljubljana (reference 1643). They should be confirmed on the page before use."
+ },
+ {
+  "id": "rakuschev_mlin",
+  "specs": [
+   {
+    "label": "Plan dimensions",
+    "value": "about 55 x 30",
+    "unit": "m",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "Mere so bile približno 55 x 30 m"
+   },
+   {
+    "label": "Floors",
+    "value": "at least 4 upper floors (a fourth floor is named)",
+    "unit": "",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "četrto nadstropje ima 45 cm"
+   },
+   {
+    "label": "Wall thickness",
+    "value": "almost 1 m at ground floor, 45 cm at fourth floor",
+    "unit": "",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "stene so bile debele v pritličju skoraj 1 m"
+   },
+   {
+    "label": "Structural system",
+    "value": "brick masonry walls with timber internal structure",
+    "unit": "",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "Notranja konstrukcija je bila lesena"
+   },
+   {
+    "label": "Facade",
+    "value": "unrendered brick, main facade of 11 bays, side facade of 3 bays",
+    "unit": "",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "Njegova glavna fasada je bila 11-osna, stranska pa 3-osna."
+   },
+   {
+    "label": "Heritage status",
+    "value": "monument of local importance since 29 June 2002, EŠD 10268",
+    "unit": "",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "Rakušev mlin v Celju – EŠD 10268"
+   },
+   {
+    "label": "Milling capacity",
+    "value": "70,000 kg per day",
+    "unit": "",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "dnevno so je lahko zmleli 70.000 kg."
+   },
+   {
+    "label": "Fires",
+    "value": "27 February 2012 and 6 October 2014",
+    "unit": "",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "6. oktobra 2014 okrog enajstih Rakuschev mlin prizadel hud požar"
+   },
+   {
+    "label": "Demolition consent",
+    "value": "18 November 2014 (Ministry of Culture)",
+    "unit": "",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "18. 11. 2014 izdalo soglasje za odstranitev spomenika."
+   },
+   {
+    "label": "Adjacent flour warehouse",
+    "value": "1930, built by Konrad Gologranc",
+    "unit": "",
+    "source": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+    "quote": "izdelal ga je Konrad Gologranc"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "building height",
+   "exact number of floors",
+   "roof form",
+   "chimney height",
+   "architect or builder of the mill"
+  ],
+  "notes": "Source is a student research paper hosted by I. gimnazija v Celju, of which the first 100,000 of about 126,000 characters were read. It says the main building was most probably completed in 1903, the year the company was registered. The building no longer stands, so a model would be a reconstruction. The Uradni list decree of 2002 could not be opened (robots rule)."
+ },
+ {
+  "id": "pecna_reber",
+  "specs": [],
+  "rebuildable": "no",
+  "missing": [
+   "tower type (lattice or tubular)",
+   "tower height",
+   "year built",
+   "owner"
+  ],
+  "notes": "Nothing new. The RTV SLO FM transmitter list has no entry named Pečna reber (the nearest name is Peč). igorfuna.com list page returned no entry. No opened source gives tower height or type."
+ },
+ {
+  "id": "livarna_crnomelj",
+  "specs": [],
+  "rebuildable": "no",
+  "missing": [
+   "chimney height",
+   "diameter",
+   "year built",
+   "whether guyed or self supporting"
+  ],
+  "notes": "Nothing new. The 2026 permit amendment for the Livar Črnomelj plant gives no outlet heights, only coordinates of four points whose meaning is not stated. The 2023 inspection report is a .docx file that the reading tool could not decode. The original environmental permit, which normally lists outlet heights, was not found."
+ },
+ {
+  "id": "slano_blato",
+  "specs": [
+   {
+    "label": "Remediation, first drainage shafts",
+    "value": "2 hollow concrete shafts, 5 m diameter",
+    "unit": "",
+    "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+    "quote": "the first two large hollow concrete shafts with a diameter of 5 m"
+   },
+   {
+    "label": "Remediation, planned shafts",
+    "value": "5 reinforced concrete shafts acting as dewatering wells and dowels",
+    "unit": "",
+    "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+    "quote": "Construction of a set of 5 reinforced concrete shafts"
+   },
+   {
+    "label": "Shaft inflow",
+    "value": "up to 15 m³ of water per day per shaft",
+    "unit": "",
+    "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+    "quote": "Up to 15 m3 of water per day can be collected in one shaft."
+   },
+   {
+    "label": "Remediation, wells in the upper part",
+    "value": "built 2004 to 2007, also act as shear reinforcement",
+    "unit": "",
+    "source": "https://sloged.si/wp-content/uploads/zborniki%20sukljetovih%20dnevov/14/3.pdf",
+    "quote": "med leti 2004 in 2007 pa se je v zgornjem delu plazu zgradilo vodnjake"
+   },
+   {
+    "label": "Remediation, barrier for mud flows",
+    "value": "built from 2002",
+    "unit": "",
+    "source": "https://sloged.si/wp-content/uploads/zborniki%20sukljetovih%20dnevov/14/3.pdf",
+    "quote": "leta 2002 pričelo z interventnimi deli na plazu Slano blato"
+   },
+   {
+    "label": "Historic remediation",
+    "value": "torrential check dams, completed 1903, cost 49,857 crowns",
+    "unit": "",
+    "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+    "quote": "The main remediation works were completed in 1903 and cost 49 857 crowns"
+   },
+   {
+    "label": "Extent in December 2000",
+    "value": "1010 m long, 60 to 200 m wide, between 360 and 660 m a.s.l.",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9179/8608/24586",
+    "quote": "obsega 1010 m dolgo in 60 do 200 m"
+   },
+   {
+    "label": "Terraces of the slid mass",
+    "value": "4 terraces at 580, 550, 500 and 450 m, each 20 to 30 m high",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9179/8608/24586",
+    "quote": "Terase so bile visoke 20 do 30 m."
+   },
+   {
+    "label": "Mud lake volume, 2000",
+    "value": "100000",
+    "unit": "m³",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9179/8608/24586",
+    "quote": "Prostornino blata ocenjujemo na 100.000 m3."
+   },
+   {
+    "label": "Slide channel",
+    "value": "about 350 m long, 60 to 100 m wide",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9179/8608/24586",
+    "quote": "dolg pribliæno 350 m in πirok 60 do 100 m"
+   },
+   {
+    "label": "Advance rate, 27 to 30 November 2000",
+    "value": "50 to 60 m per day (300 m in total)",
+    "unit": "",
+    "source": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9179/8608/24586",
+    "quote": "50 do 60 m/dan (skupaj 300 m)"
+   },
+   {
+    "label": "Volume (Geologija 2008)",
+    "value": "about 1,000,000",
+    "unit": "m³",
+    "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-CVEGXS86/e101c640-119d-4908-a7d2-5b93edbfd55a/PDF",
+    "quote": "Volumen je ocenjen na okoli 1.000.000 m3"
+   },
+   {
+    "label": "Length (Geologija 2008)",
+    "value": "more than 1300",
+    "unit": "m",
+    "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-CVEGXS86/e101c640-119d-4908-a7d2-5b93edbfd55a/PDF",
+    "quote": "Plaz Slano blato je dolg več kot 1300 m"
+   },
+   {
+    "label": "Bedrock contact dip",
+    "value": "10° towards NE",
+    "unit": "",
+    "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+    "quote": "with a dip of 10"
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "depth of the drainage shafts",
+   "number of wells finally built",
+   "positions of the wells",
+   "drainage trench lengths",
+   "rockfill dam height and crest length",
+   "longitudinal profile of the slope"
+  ],
+  "notes": "Volume disagrees: about 700,000 m3 (NHESS 2005, already held) against about 1,000,000 m3 (Geologija 51/2, 2008). Length disagrees with the stage of the event: 1010 m in December 2000 (Ujma), 1,290 m at the end of 2004 (already held), more than 1,300 m in 2008. The Ujma PDF text has damaged characters, so its quotes are copied as they appear. The terrain slope entry had no verbatim quote and is removed from the list. The 24ur article on the wells could not be opened, and the Springer Landslides paper is behind a login."
+ },
+ {
+  "id": "stoze",
+  "specs": [
+   {
+    "label": "First slide, 15 November 2000",
+    "value": "length 1 km, width about 0.1 km, volume about 600,000 m³",
+    "unit": "",
+    "source": "https://www.interpraevent.at/reference/media/1741/download/2004_4_IX-77.pdf?v=1",
+    "quote": "The length of the landslide was 1 km, the width approximately 0,1 km"
+   },
+   {
+    "label": "Second slide, 17 November 2000",
+    "value": "area 200,000 m², volume 1,000,000 m³",
+    "unit": "",
+    "source": "https://www.interpraevent.at/reference/media/1741/download/2004_4_IX-77.pdf?v=1",
+    "quote": "landslide area 200.000 m2, landslide volume 1.000.000 m3"
+   },
+   {
+    "label": "Elevation range of the Stože area",
+    "value": "1340 to 1580",
+    "unit": "m a.s.l.",
+    "source": "https://www.interpraevent.at/reference/media/1741/download/2004_4_IX-77.pdf?v=1",
+    "quote": "Stože area (1.340-1.580 m.a.s.l."
+   },
+   {
+    "label": "Failure zone on the slope (second paper)",
+    "value": "between 1200 and 1500",
+    "unit": "m a.s.l.",
+    "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
+    "quote": "failed between 1200 m and 1500 m"
+   },
+   {
+    "label": "Release height above the torrent bed",
+    "value": "130 to 150",
+    "unit": "m",
+    "source": "https://www.interpraevent.at/reference/media/1741/download/2004_4_IX-77.pdf?v=1",
+    "quote": "about 130 to 150 meters above the torrent bed of Mangartski potok"
+   },
+   {
+    "label": "Torrent bed slope, Mangartski potok",
+    "value": "15",
+    "unit": "%",
+    "source": "https://www.interpraevent.at/reference/media/1741/download/2004_4_IX-77.pdf?v=1",
+    "quote": "The maximum inclination of the torrent bed is 15%."
+   },
+   {
+    "label": "Speed of the second slide",
+    "value": "8 to 10",
+    "unit": "m/s",
+    "source": "https://www.interpraevent.at/reference/media/1741/download/2004_4_IX-77.pdf?v=1",
+    "quote": "with an estimated speed of 8 – 10 m/s."
+   },
+   {
+    "label": "Debris deposited in the valley",
+    "value": "nearly 700,000 m³, locally up to 10 m thick",
+    "unit": "",
+    "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
+    "quote": "Nearly 700,000 m3 of debris material were deposited"
+   },
+   {
+    "label": "Remediation, channel excavation 2001",
+    "value": "Predelica bed 3 m wide, Koritnica bed 6 m and 8 m wide",
+    "unit": "",
+    "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
+    "quote": "the channel bottom of the Predelica was excavated to 3 m in width"
+   },
+   {
+    "label": "Remediation, excavated volume",
+    "value": "85,000 m³, of which 15,000 m³ to the dumping site",
+    "unit": "",
+    "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
+    "quote": "Altogether, 85,000 m3 was excavated, 15,000 m3 of which was put"
+   },
+   {
+    "label": "Deposits removed by river erosion to late 2003",
+    "value": "nearly 240,000",
+    "unit": "m³",
+    "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
+    "quote": "nearly 240,000 m3 of the debris flow deposits have already been eroded"
+   },
+   {
+    "label": "Remediation, debris flow breaker (planned in 2004)",
+    "value": "10 m high, in the Predelica",
+    "unit": "",
+    "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
+    "quote": "a 10 m high debris flow breaker is planned to be built"
+   },
+   {
+    "label": "Remediation, bridges",
+    "value": "two destroyed road bridges replaced by a temporary steel bridge",
+    "unit": "",
+    "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
+    "quote": "two destroyed bridges on the regional road have been replaced by a temporary"
+   },
+   {
+    "label": "Estimated remediation cost (feasibility study)",
+    "value": "about 35",
+    "unit": "million EUR",
+    "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
+    "quote": "estimated the cost at around € 35 million."
+   },
+   {
+    "label": "Mangart road destroyed",
+    "value": "about 1 km",
+    "unit": "",
+    "source": "https://www.interpraevent.at/reference/media/1741/download/2004_4_IX-77.pdf?v=1",
+    "quote": "cut off and destroyed in the length of ca 1km."
+   }
+  ],
+  "rebuildable": "partly",
+  "missing": [
+   "slope angle of the Stože slope itself",
+   "as built dimensions of the debris flow breaker",
+   "new Predelica bridge span and type",
+   "drainage works on the slide with lengths",
+   "digital terrain data before and after the event"
+  ],
+  "notes": "The two Interpraevent 2004 papers differ from each other and from what is held. First slide date is 15 November 2000 in both. One paper gives it about 600,000 m3 and the other nearly 1 million m3 on 25 ha. Elevations differ: 1,340 to 1,580 m, 1,200 to 1,500 m, and a crown at 1,525 m (already held). The debris flow breaker is described as planned in 2004. No opened source confirms its built dimensions. The gov.si 2020 note gives costs only."
+ }
+]
