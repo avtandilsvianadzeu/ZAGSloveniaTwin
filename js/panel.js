@@ -22,11 +22,12 @@ const kv=(k,v)=>v?`<div class="kv"><span>${esc(k)}</span><span>${esc(v)}</span><
 const srcLine=s=>`<div class="src"><span>${esc(s.title||s.key)}${s.type?`<br><small class="note">${esc(SRC_KIND[s.type]||s.type)}</small>`:''}</span>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">Open source ${ICON.ext}</a>`:''}</div>`;
 
 /* digital twin sheet: verified geometry and specifications, every value with its source */
-function twinHTML(id){
+/* for buildings the map panel leaves out the list of values (sizes, counts, heights). They stay on the asset page. */
+function twinHTML(id,noRows){
   const t=ZA.twins[id]; if(!t) return '';
   const tidy=s=>esc(String(s==null?'':s).replace(/\s*—\s*/g,', ').replace(/(\d)\s*–\s*(\d)/g,'$1 to $2').replace(/–/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+·\s+/g,', ').replace(/~(?=\d)/g,'about ').replace(/→/g,' to '));
   const val=s=>`${tidy(s.value)}${s.unit?' '+esc(s.unit):''}`;
-  const rows=(t.specs||[]).map(s=>`<div class="kv tw"><span>${esc(s.label)}</span><span>${val(s)}${s.source?` <a class="sref" href="${esc(s.source)}" target="_blank" rel="noopener" title="${esc(s.source)}">${esc(srcHost(s.source))}</a>`:''}</span></div>`).join('');
+  const rows=noRows?'':(t.specs||[]).map(s=>`<div class="kv tw"><span>${esc(s.label)}</span><span>${val(s)}${s.source?` <a class="sref" href="${esc(s.source)}" target="_blank" rel="noopener" title="${esc(s.source)}">${esc(srcHost(s.source))}</a>`:''}</span></div>`).join('');
   const pts=(t.anchors||[]).map(a=>`<div class="kv tw"><span>${esc(a.label)}</span><span>${(+a.lat).toFixed(6)}, ${(+a.lon).toFixed(6)}${a.source?` <a class="sref" href="${esc(a.source)}" target="_blank" rel="noopener">${esc(srcHost(a.source))}</a>`:''}</span></div>`).join('');
   return `<section class="twin"><h3>Asset record</h3>${t.summary?`<p class="note">${tidy(t.summary)}</p>`:''}${rows}${pts?`<h4>Verified reference points</h4>${pts}`:''}${(t.differences||[]).length?`<details class="twdiff"><summary class="note">Where the sources differ (${t.differences.length})</summary><ul>${t.differences.map(x=>`<li>${tidy(x)}</li>`).join('')}</ul></details>`:''}${t.open?`<p class="note twopen">Not yet verified: ${tidy(t.open)}</p>`:''}</section>`;
 }
@@ -71,7 +72,7 @@ function infoHTML(f){
     <p><span class="tag">${esc(cap(p.object_type))}</span><span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only'}[p.evidence_level])}</span></p>
     ${bullets?`<h3>ZAG involvement</h3><ul>${bullets}</ul>`:''}
     ${about?`<h3>About</h3><p>${esc(about)}</p>`:''}
-    ${twinHTML(p.id)}
+    ${twinHTML(p.id,['building','institution','company'].includes(p.object_type))}
     ${newsHTML(p.id)}
     ${sources}
     <div id="bim" class="bim"></div>
