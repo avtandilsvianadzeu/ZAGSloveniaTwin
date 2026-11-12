@@ -97,6 +97,10 @@ function applyLook(){
   const dk=theme==='dark'||base==='sat'||base==='dof';
   map.setPaintProperty('pt-l','text-color',dk?'#FFFFFF':'#1C1C1E');
   map.setPaintProperty('pt-l','text-halo-color',dk?'rgba(0,0,0,.78)':'rgba(255,255,255,.95)');
+  /* selection: on imagery the real building must stay visible, so the volume is see-through and the footprint outline carries the shape */
+  const img=base==='sat'||base==='dof';
+  for(const id of ['hl-ext','hl-tile']) try{ if(map.getLayer(id)){ map.setPaintProperty(id,'fill-extrusion-opacity',img?.34:.88); map.setPaintProperty(id,'fill-extrusion-color',img?'#4C9BFF':'#0A66D8'); } }catch(_){}
+  try{ if(map.getLayer('hl-line')){ map.setPaintProperty('hl-line','line-color',img?'#FFFFFF':'#083F8C'); map.setPaintProperty('hl-line','line-width',img?2.5:1.5); } if(map.getLayer('hl-case')) map.setLayoutProperty('hl-case','visibility',img?'visible':'none'); }catch(_){}
   
 }
 

@@ -13,6 +13,7 @@ function addAtlasLayers(){
   const ACC='#0A66D8', ACCD='#083F8C';
   try{ map.addLayer({id:'hl-tile',type:'fill-extrusion',source:'openmaptiles','source-layer':'building',filter:['==',['id'],-1],paint:{'fill-extrusion-color':ACC,'fill-extrusion-height':['+',['coalesce',['get','render_height'],8],0.4],'fill-extrusion-base':['coalesce',['get','render_min_height'],0],'fill-extrusion-opacity':.92,'fill-extrusion-vertical-gradient':true}},firstSym); }catch(_){}
   map.addLayer({id:'hl-ext',type:'fill-extrusion',source:'hl',paint:{'fill-extrusion-color':ACC,'fill-extrusion-height':['get','h'],'fill-extrusion-base':['get','b'],'fill-extrusion-opacity':.92,'fill-extrusion-vertical-gradient':true}},firstSym);
+  map.addLayer({id:'hl-case',type:'line',source:'hl',layout:{'line-join':'round',visibility:'none'},paint:{'line-color':'#0A3D91','line-width':5.5,'line-opacity':.9}},firstSym);
   map.addLayer({id:'hl-line',type:'line',source:'hl',layout:{'line-join':'round'},paint:{'line-color':ACCD,'line-width':1.5}},firstSym);
   map.addLayer({id:'sel-c',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#fff','line-width':['interpolate',['linear'],['zoom'],10,6,16,10]}});
   map.addLayer({id:'sel-l',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':ACC,'line-width':['interpolate',['linear'],['zoom'],10,3.5,16,6]}});

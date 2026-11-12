@@ -405,7 +405,7 @@ function initView(p,t,g,lines,labels,opt){
     fit(false); readout(); unfreeze();
   });
   const set=(id,on)=>{ const b=$(id); if(b) b.setAttribute('aria-pressed',on?'true':'false'); };
-  const setSat=on=>{ try{map.setLayoutProperty('sat','visibility',on?'visible':'none');}catch(_){} set('vMap',!on); set('vSat',on); };
+  const setSat=on=>{ try{map.setLayoutProperty('sat','visibility',on?'visible':'none');}catch(_){} try{ if(map.getLayer('bld')) map.setPaintProperty('bld','fill-extrusion-opacity',on?.36:.88); }catch(_){} set('vMap',!on); set('vSat',on); };
   const tilt=on=>{ is3d=on; set('v3d',on); set('v2d',!on); map.easeTo({pitch:Pch(),bearing:B(),duration:500}); };
   const bind=(id,fn)=>{ const b=$(id); if(b) b.onclick=fn; };
   bind('vMap',()=>setSat(false)); bind('vSat',()=>setSat(true)); bind('v3d',()=>tilt(true)); bind('v2d',()=>tilt(false)); bind('vReset',()=>{ highlight(null); fit(true); });
