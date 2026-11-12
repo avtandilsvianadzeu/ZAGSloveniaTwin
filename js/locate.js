@@ -53,7 +53,7 @@ function buildingFromFeature(f){
 function officialBuilding(o){
   /* no surveyed height: the outline is shown almost flat instead of an invented height */
   const f={type:'Feature',id:null,properties:{render_height:o.height_m!=null?o.height_m:0.6,render_min_height:0},geometry:o.geometry};
-  const fs=o.parts?o.parts.map(q=>({type:'Feature',id:null,properties:{render_height:q.levels*3,render_min_height:0},geometry:{type:'Polygon',coordinates:[q.ring]}})):[f];
+  const fs=o.parts?o.parts.map(q=>({type:'Feature',id:null,properties:{render_height:q.levels*(o.storey_m||3),render_min_height:0},geometry:{type:'Polygon',coordinates:[q.ring]}})):[f];
   const c=centroid(o.geometry); const osm=c?findBuilding(c,2):null;
   return {feature:f,parts:fs,g:o.geometry,dist:0,id:osm?osm.id:null,h:o.height_m,hknown:o.height_m!=null,b:0,c,official:o};
 }

@@ -145,7 +145,7 @@ async function buildingData(b,p){
   if(!b.c) return;
   const [lon,lat]=b.c, d=0.00025;
   try{
-    const r=await within(fetch(`${KN}?f=json&limit=3&bbox=${lon-d},${lat-d},${lon+d},${lat+d}`),8000);
+    const r=await within(fetch(`${KN}?f=json&limit=3&bbox=${(lon-d).toFixed(6)},${(lat-d).toFixed(6)},${(lon+d).toFixed(6)},${(lat+d).toFixed(6)}`),8000);
     if(!r||!r.ok||curId!==p.id) return; const j=await r.json(); const ft=(j.features||[])[0]; if(!ft) return;
     const rows=Object.entries(ft.properties||{}).filter(([k,v])=>v!=null&&v!==''&&!/^(geom|the_geom)$/i.test(k)).slice(0,14);
     if(rows.length) m.insertAdjacentHTML('beforeend',`<h3>Cadastre (GURS Kataster nepremičnin)</h3>${rows.map(([k,v])=>kv(k.replace(/_/g,' '),String(v))).join('')}<p class="note">Record nearest to the highlighted footprint, from the GURS OGC API Features service (CC BY 4.0).</p>`);

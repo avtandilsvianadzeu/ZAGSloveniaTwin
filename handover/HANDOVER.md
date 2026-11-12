@@ -244,3 +244,11 @@ The owner asked for the look and flow of professional digital twin platforms. Th
 - InnoRenew is drawn from six OpenStreetMap building parts with storey counts. Storey height is not in the sources, so 3 m per storey is used and stated as a drawing choice.
 - Live cadastre: each asset page with a building asks the GURS Kataster nepremičnin service for the current record at the point (storeys, year built, H1 and H2 levels) and draws the neighbouring cadastre buildings on the site map at their recorded heights. The service refuses several requests at once, so the page sends one. If it does not answer, the page says so.
 - Shapes from Google Maps are not used. They are not open data.
+
+### Cadastre facts and solid building models, 12 November 2026
+
+- `data/gurs_buildings.json` holds per building a `kn` block: the GURS Kataster nepremičnin record of the building that contains the stored point (storeys, year built, H1 lowest point, H2 highest point, H3 ground level), read on 12 November 2026. Height above ground is H2 minus H3. It agrees with the GURS topographic height within 1 m for six buildings. It differs for UL FGG (28.0 against 23.7 m) and Fibran (5.9 against 8.6 m), and both values are listed on those pages.
+- ZAG Maribor and InnoRenew had no height. They now use the cadastre height (8.4 m and 18.1 m).
+- No cadastre building contains the stored point for Cestel, Former Maribor Prison, NUK and Gameljne. Their points sit beside or between cadastre outlines.
+- The cadastre service rejects coordinates with long decimals. Requests now round to six decimals. The same fault was in the map panel and is fixed.
+- Building models are drawn as solid volumes: hidden edges are no longer drawn through the roof, and volumes are ordered far to near. Storey lines come from the cadastre storey count. The window pattern is illustrative and the page says so.
