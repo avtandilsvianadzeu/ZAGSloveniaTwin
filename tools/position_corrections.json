@@ -10370,5 +10370,198 @@
       "https://www.kamra.si/en/digitalne-zbirke/prvi-mestni-mlin-rakusev-mlin/"
     ],
     "note": "Point is the Google Maps place pin 'Mestni (Rakušev) mlin' (marked permanently closed), read on 12 November 2026. Kamra places the mill in Gaberje, directly by the railway towards Velenje. The old point was a placeholder in the old town centre, about 660 m to the south-west. The mill was demolished from April 2015, so no building can be matched on current imagery."
+  },
+  "planica_z": {
+    "lat": 46.478136,
+    "lon": 13.722168,
+    "confidence": "medium",
+    "status": "site",
+    "sources": [
+      "https://www.openstreetmap.org/way/373928812",
+      "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html"
+    ],
+    "note": "Placed on the chairlift mapped at the Planica Nordic Centre (OpenStreetMap way 373928812, named Sedežnica, read 12 November 2026). It is about 420 m long in plan, against 434 m horizontal length in the report on the Čaplja chairlift, which \"provides access to almost all the ski jumps in the Planica Nordic Centre\". The ZAG reference list does not name the lift, so the link to this lift is an inference. The point is the lower station.",
+    "line": [
+      [
+        13.722168,
+        46.478136
+      ],
+      [
+        13.721449,
+        46.478046
+      ],
+      [
+        13.719691,
+        46.477827
+      ],
+      [
+        13.718466,
+        46.477674
+      ],
+      [
+        13.718303,
+        46.477653
+      ],
+      [
+        13.717681,
+        46.477574
+      ],
+      [
+        13.716776,
+        46.477459
+      ]
+    ],
+    "lines": [
+      [
+        [
+          13.722168,
+          46.478136
+        ],
+        [
+          13.721449,
+          46.478046
+        ],
+        [
+          13.719691,
+          46.477827
+        ],
+        [
+          13.718466,
+          46.477674
+        ],
+        [
+          13.718303,
+          46.477653
+        ],
+        [
+          13.717681,
+          46.477574
+        ],
+        [
+          13.716776,
+          46.477459
+        ]
+      ]
+    ],
+    "line_labels": [
+      "chairlift line (OpenStreetMap)"
+    ],
+    "precision": "site"
+  },
+  "ratece_cable": {
+    "lat": 46.491633,
+    "lon": 13.707302,
+    "confidence": "low",
+    "status": "site",
+    "sources": [
+      "https://www.openstreetmap.org/way/292050650"
+    ],
+    "note": "Placed on the only chairlift mapped at Rateče (OpenStreetMap way 292050650, named Macesnovec and tagged as not operating, read 12 November 2026). It is about 1,040 m long in plan, against 1,010 m for the lift \"Lom 1\" in the official list of 2006. The names differ and the ZAG reference list does not name the lift, so the link to this lift is an inference. The point is the northern end at the village.",
+    "line": [
+      [
+        13.707302,
+        46.491633
+      ],
+      [
+        13.707327,
+        46.49148
+      ],
+      [
+        13.70743,
+        46.490827
+      ],
+      [
+        13.7077,
+        46.489138
+      ],
+      [
+        13.707901,
+        46.487875
+      ],
+      [
+        13.708107,
+        46.486585
+      ],
+      [
+        13.708141,
+        46.486372
+      ],
+      [
+        13.708217,
+        46.485896
+      ],
+      [
+        13.708475,
+        46.484277
+      ],
+      [
+        13.708644,
+        46.483214
+      ],
+      [
+        13.708746,
+        46.482574
+      ],
+      [
+        13.708781,
+        46.482354
+      ]
+    ],
+    "lines": [
+      [
+        [
+          13.707302,
+          46.491633
+        ],
+        [
+          13.707327,
+          46.49148
+        ],
+        [
+          13.70743,
+          46.490827
+        ],
+        [
+          13.7077,
+          46.489138
+        ],
+        [
+          13.707901,
+          46.487875
+        ],
+        [
+          13.708107,
+          46.486585
+        ],
+        [
+          13.708141,
+          46.486372
+        ],
+        [
+          13.708217,
+          46.485896
+        ],
+        [
+          13.708475,
+          46.484277
+        ],
+        [
+          13.708644,
+          46.483214
+        ],
+        [
+          13.708746,
+          46.482574
+        ],
+        [
+          13.708781,
+          46.482354
+        ]
+      ]
+    ],
+    "line_labels": [
+      "chairlift line (OpenStreetMap)"
+    ],
+    "precision": "site"
   }
 }
