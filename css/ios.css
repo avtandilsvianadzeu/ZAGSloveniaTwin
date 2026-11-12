@@ -1,0 +1,150 @@
+/* ZAG Digital Atlas, iOS look. Loaded last on every page. It changes colour, shape, type and touch feedback only, never the layout.
+   System colours, large soft radii, hairline separators, filled grey controls, one blue for action.
+   Blur is used on the top bar only. Panels that lie over the map stay solid, so the map keeps its frame rate. */
+:root{
+  --blue:#007AFF; --blue-d:#0062CC; --green:#34C759; --orange:#FF9500; --red:#FF3B30; --indigo:#5856D6; --teal:#30B0C7;
+  --ink:#1D1D1F; --muted:#6E6E73; --tert:#8E8E93;
+  --sep:rgba(60,60,67,.13); --line:rgba(60,60,67,.13); --edge:rgba(60,60,67,.16); --rule:rgba(60,60,67,.16); --rule2:rgba(60,60,67,.10);
+  --fill:rgba(118,118,128,.12); --fill2:rgba(118,118,128,.20);
+  --bg2:#F5F5F7; --navy:#1F3A6B; --zag:#007AFF; --zag-d:#1F3A6B;
+  --r:14px; --r2:10px;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 6px 20px rgba(0,0,0,.06);
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",system-ui,"Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--font);color:var(--ink);letter-spacing:-.011em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body:not(.embed){background:#F5F5F7}
+button,input,select,textarea{font-family:var(--font);letter-spacing:inherit}
+h1,h2,h3,.asset h1,.info h1{letter-spacing:-.022em}
+a{color:var(--blue)}
+::selection{background:rgba(0,122,255,.22)}
+*{scrollbar-width:thin;scrollbar-color:rgba(60,60,67,.28) transparent}
+*::-webkit-scrollbar{width:9px;height:9px}*::-webkit-scrollbar-thumb{background:rgba(60,60,67,.26);border-radius:9px;border:2px solid transparent;background-clip:content-box}
+:focus-visible{outline:3px solid rgba(0,122,255,.45);outline-offset:2px;border-radius:8px}
+
+/* top bars: the only translucent surface */
+.thdr,.hdr{background:rgba(255,255,255,.80);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border:0;border-bottom:1px solid var(--sep);box-shadow:none}
+.brand b{color:var(--navy);letter-spacing:.02em}
+.crumb{color:var(--muted)}.crumb a{color:var(--blue);text-decoration:none}
+
+/* buttons: filled grey, blue label. The main action is solid blue. */
+.tbtn,.btn,.tgl,.pill,.vctl button,.tl button{transition:background-color .16s var(--ease),color .16s var(--ease),transform .12s var(--ease),box-shadow .16s var(--ease)}
+.tbtn{height:34px;padding:0 14px;border:0;border-radius:var(--r2);background:var(--fill);color:var(--blue);font-weight:600;font-size:13.5px}
+.tbtn:hover{background:var(--fill2);border:0}
+.tbtn:active,.btn:active,.tgl:active,.seg button:active,.pill:active{transform:scale(.97)}
+.tbtn.solid,.tbtn[aria-pressed="true"]{background:var(--blue);color:#fff;border:0}
+.tbtn.solid:hover,.tbtn[aria-pressed="true"]:hover{background:var(--blue-d)}
+.btn{border:0;border-radius:var(--r2);padding:8px 14px;background:var(--fill);color:var(--blue);font-size:13.5px;font-weight:600}
+.btn:hover{background:var(--fill2)}
+.btn.twinlink{background:var(--blue);color:#fff;padding:9px 16px;border-radius:12px}.btn.twinlink:hover{background:var(--blue-d)}
+.asset .btnrow .tbtn,.btncol .tbtn{height:40px;border-radius:12px;font-size:14px}
+
+/* segmented controls */
+.seg{border:0;border-radius:9px;background:var(--fill);padding:2px;overflow:visible;gap:0}
+.seg button{height:30px;padding:0 13px;border:0;border-radius:7px;background:transparent;color:var(--ink);font-size:13px;font-weight:500;letter-spacing:-.006em;transition:background-color .2s var(--ease),box-shadow .2s var(--ease),transform .12s var(--ease)}
+.seg button+button{border-left:0}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--ink);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.12),0 0 0 .5px rgba(0,0,0,.04)}
+.seg button:hover:not([aria-pressed="true"]){background:rgba(118,118,128,.08);color:var(--ink)}
+.tgl{height:34px;padding:0 13px;border:0;border-radius:var(--r2);background:var(--fill);color:var(--ink);font-size:13px;font-weight:500;letter-spacing:-.006em}
+.tgl:hover:not([aria-pressed="true"]){background:var(--fill2);color:var(--ink)}
+.tgl[aria-pressed="true"]{background:var(--blue);color:#fff}
+.tgl[aria-expanded="true"]{background:rgba(0,122,255,.14);color:var(--blue);border:0}
+#nav button{color:var(--muted);font-weight:500;border-bottom:2px solid transparent;transition:color .16s var(--ease)}
+#nav button[aria-pressed="true"]{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
+
+/* fields */
+.jump,.hsearch input,.find,.fld input,.fld select,.fld textarea{border:0;border-radius:var(--r2);background:var(--fill);color:var(--ink);box-shadow:none;transition:background-color .16s var(--ease),box-shadow .16s var(--ease)}
+.jump:focus,.hsearch input:focus,.find:focus,.fld input:focus,.fld select:focus,.fld textarea:focus{background:#fff;outline:0;box-shadow:0 0 0 3px rgba(0,122,255,.35)}
+.jump::placeholder,.hsearch input::placeholder,.find::placeholder{color:var(--tert)}
+.pill{border:0;border-radius:999px;height:32px;padding:0 14px;background:var(--fill);color:var(--ink);font-weight:500}
+.pill[aria-pressed="true"]{background:var(--blue);color:#fff}
+
+/* tags and chips */
+.tag{height:24px;padding:0 10px;border:0;border-radius:999px;background:var(--fill);color:var(--ink);font-size:12px;font-weight:600}
+.tag.ok,.chip.ok{color:#1B7F3B;background:rgba(52,199,89,.16);border:0}
+.tag.warn,.chip.warn{color:#9A5B00;background:rgba(255,149,0,.16);border:0}
+.tag.bad{color:#C41E16;background:rgba(255,59,48,.14);border:0}
+.chip{border:0;border-radius:999px}
+.kicker,.asset .kind{text-transform:none;letter-spacing:-.006em;font-size:13px;font-weight:600;color:var(--blue)}
+.okc{color:#1B7F3B}
+
+/* surfaces */
+.ws{background:#fff}
+.view{background:#F5F5F7}
+.vtools{background:rgba(255,255,255,.92);border-bottom:1px solid var(--sep)}
+.vstatus{border-top:1px solid var(--sep);color:var(--muted)}
+.pane{background:#FBFBFD}
+.panel,.obj,.sec,.photo,.dims{border:0;border-radius:var(--r);box-shadow:var(--shadow);background:#fff}
+.obj{transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.obj:hover{transform:translateY(-1px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 12px 28px rgba(0,0,0,.09)}
+.asset,.tsec,.blk{border-bottom:1px solid var(--sep)}
+.asset h1{font-size:26px;font-weight:700}
+.tsec h2,.blk-h{font-size:13px;font-weight:600;letter-spacing:-.006em;color:var(--muted)}
+.kf{border-top:1px solid var(--sep);padding:7px 0;font-size:13px}
+.kf a,.kf span a{color:var(--tert)}
+.meta div{border-color:var(--sep)}
+.trow{border-radius:9px;padding:8px 10px;transition:background-color .16s var(--ease)}
+.trow:hover{background:var(--fill)}.trow.on{background:rgba(0,122,255,.12);color:var(--blue)}
+.plabel{border:0;border-radius:8px;background:rgba(255,255,255,.94);box-shadow:0 1px 2px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.08);color:var(--muted)}
+
+/* tabs: text with a short blue bar */
+.tabs{border-bottom:1px solid var(--sep);background:rgba(255,255,255,.96)}
+.tabs button{height:44px;font-size:13.5px;font-weight:500;color:var(--muted);border-bottom:2px solid transparent;transition:color .16s var(--ease),border-color .2s var(--ease)}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{color:var(--blue);font-weight:600;border-bottom-color:var(--blue)}
+.tabpan .pickbox{background:#F5F5F7;border-bottom:1px solid var(--sep)}
+.pickbox b{color:var(--ink);font-size:17px;letter-spacing:-.02em}
+.row{border-color:var(--sep)}.pickbox .row,.alldata .row{padding:8px 0;font-size:13px;border-top:1px solid var(--sep)}
+.pickbox .row span:first-child,.alldata .row span:first-child{color:var(--muted)}
+
+/* tables */
+table{font-size:13.5px;border-collapse:separate;border-spacing:0}
+th{background:transparent;color:var(--muted);font-weight:600;border-bottom:1px solid var(--sep)}
+td{border-color:var(--sep)}
+.blk table,.regwrap{border:0;border-radius:12px;box-shadow:0 0 0 1px var(--sep);overflow:hidden;background:#fff}
+.reg tbody tr{transition:background-color .12s var(--ease)}.reg tbody tr:hover{background:rgba(0,122,255,.06)}
+.reg td.l a{color:var(--blue)}
+
+/* evidence */
+.ev summary{border:0;border-radius:999px;padding:3px 10px;background:rgba(0,122,255,.12);color:var(--blue);font-size:12px}
+.ev[open] summary{background:rgba(0,122,255,.2)}
+.ev blockquote{border-left:3px solid var(--blue);border-radius:0 10px 10px 0;background:#F5F5F7}
+.ev mark{background:rgba(255,204,0,.45);border-radius:3px}
+
+/* main map: floating cards */
+.info,.layers,.results,.vctl,.tl,dialog{border:0;border-radius:16px;background:rgba(255,255,255,.97);box-shadow:0 2px 6px rgba(0,0,0,.06),0 12px 32px rgba(0,0,0,.14)}
+.vctl{border-radius:12px}.vctl button{border-color:var(--sep)}.vctl button:hover{background:var(--fill)}
+.info h1{font-size:22px;font-weight:700}
+.info h3,.layers h2,legend{text-transform:none;letter-spacing:-.006em;color:var(--muted);font-size:13px;font-weight:600}
+.info .x,.list header .x,dialog .x{border-radius:999px;background:var(--fill)}
+.kv{border-color:var(--sep)}
+.row:hover{background:rgba(118,118,128,.08)}.row[aria-current="true"]{background:rgba(0,122,255,.10)}
+.results button:hover,.results button[aria-selected="true"]{background:rgba(0,122,255,.10)}
+.status{background:rgba(255,255,255,.94);border-top:1px solid var(--sep);color:var(--muted)}
+.twinframe{border:0;border-radius:14px;box-shadow:0 0 0 1px var(--sep)}
+.tl button{border:0;border-radius:9px;background:var(--fill);color:var(--blue)}.tl button[aria-pressed=true]{background:var(--blue);color:#fff}
+.tl input[type=range]{accent-color:var(--blue)}
+.toast{border-radius:999px;background:rgba(29,29,31,.92);color:#fff}
+dialog::backdrop{background:rgba(0,0,0,.28)}
+
+/* map controls of the library */
+.maplibregl-ctrl-group{border-radius:12px!important;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.10),0 6px 16px rgba(0,0,0,.10)!important}
+.maplibregl-ctrl-group button{width:34px;height:34px}
+.maplibregl-ctrl-group button+button{border-top:1px solid var(--sep)}
+.maplibregl-ctrl-attrib{border-radius:10px 0 0 0;font-size:10.5px}
+
+/* inspection form and messages */
+.blk .iform,.insp{border-radius:12px}
+.msg{border-radius:12px;border:0;background:rgba(0,122,255,.10);color:var(--ink)}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media print{.thdr,.hdr{-webkit-backdrop-filter:none;backdrop-filter:none;background:#fff}}
+
+/* main map bar: tighter spacing so every control stays on screen */
+.hdr{gap:10px;padding:0 12px}
+.hdr #nav button{padding:0 8px}
+.hdr .tgl,.hdr .seg button{padding:0 10px}
+.hdr .hright{gap:6px}
+.hdr .hsearch{min-width:120px;flex:1 1 140px}
+@media (max-width:1480px){.hdr #nav button{padding:0 6px;font-size:13px}.hdr .tgl,.hdr .seg button{padding:0 8px;font-size:12.5px}.hdr .hsearch{min-width:90px;flex-basis:90px}.hdr .brand b{display:none}}
