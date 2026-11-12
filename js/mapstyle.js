@@ -10,6 +10,8 @@ window.iosMap=function(map){
     if(t==='background'){ set(id,'background-color',C.land); continue; }
     if(t==='fill'){
       if(/water/.test(id)) set(id,'fill-color',C.water);
+      else if(/ice|glacier/.test(id)) set(id,'fill-color','#FFFFFF');
+      else if(/sand|beach/.test(id)) set(id,'fill-color','#F3ECD6');
       else if(/wood|forest/.test(id)) set(id,'fill-color',C.wood);
       else if(/park|grass|landcover|green|pitch|cemetery/.test(id)) set(id,'fill-color',C.park);
       else if(/residential|landuse/.test(id)) set(id,'fill-color',C.resid);
