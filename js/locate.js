@@ -54,7 +54,7 @@ let HL_NOW=null;
 function officialBuilding(o){
   /* no surveyed height: the outline is shown almost flat instead of an invented height */
   const f={type:'Feature',id:null,properties:{render_height:o.height_m!=null?o.height_m:0.6,render_min_height:0},geometry:o.geometry};
-  const fs=o.parts?o.parts.map(q=>({type:'Feature',id:null,properties:{render_height:q.h!=null?q.h:q.kn!=null?0.6:q.scan?q.scan.median_m:q.levels*(o.storey_m||3),render_min_height:0},geometry:{type:'Polygon',coordinates:[q.ring]}})):[f];
+  const fs=o.parts?o.parts.map(q=>({type:'Feature',id:null,properties:{render_height:q.h!=null?q.h:q.scan?q.scan.median_m:q.kn!=null?0.6:q.levels*(o.storey_m||3),render_min_height:0},geometry:{type:'Polygon',coordinates:[q.ring]}})):[f];
   const c=centroid(o.geometry); const osm=c?findBuilding(c,2):null;
   return {feature:f,parts:fs,g:o.geometry,dist:0,id:osm?osm.id:null,h:o.height_m,hknown:o.height_m!=null,b:0,c,official:o};
 }
@@ -181,7 +181,7 @@ async function locate(x,onPos){
 function posChip(info,x){
   if(!info||info.state==='busy') return `<span class="chip busy"><span class="spin"></span>${esc(info?info.text:'Locating')}</span>`;
   if(info.kind==='building') return `<span class="chip ok">${info.how==='gurs'?(info.b.official.outline?(info.b.official.outline.way?'Building outline (OpenStreetMap)':'Site buildings (GURS cadastre)'):'Official building (GURS)'):'Building highlighted'+(info.how==='address'?' from the street address':'')}</span>`;
-  if(info.kind==='area') return `<span class="chip warn">${esc(PREC[x.prec]||'Approximate')} · shaded area</span>`;
+  if(info.kind==='area') return `<span class="chip warn">${esc(PREC[x.prec]||'Approximate')}, shaded area</span>`;
   return `<span class="chip ${PRECOK(x.prec)?'ok':'warn'}">${esc(PREC[x.prec]||x.prec)}</span>`;
 }
 function posNote(info,x){

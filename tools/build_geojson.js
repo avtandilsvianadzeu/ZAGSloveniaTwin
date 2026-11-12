@@ -30,13 +30,20 @@ const TEXT_FIX = [
  ['pletovarje', 'loc', 'Slovenske Konjice', 'Šentjur'],
  ['pecna_reber', 'sl', 'Pecna', 'Pečna'],
  ['rtp_gorica', 'detail', 'RTP 110/20/10 kV', 'RTP 110/20 kV'],
+ /* 12 November 2026, after the independent source check */
+ ['he_solkan', 'hist', 'a gross head of 20.55 m at that flow', 'a gross head of 20.55 m at a flow of 60 cubic metres per second'],
+ ['he_solkan', 'hist', 'is the lowest and the youngest of the large plants', 'is the lowest of the large plants'],
+ ['he_solkan', 'hist', 'because the Soča fell below the flow needed to run a single unit', 'because of the low flow of the Soča'],
+ ['ss_kocevje', 'sl', 'sola', 'šola'],
+ ['os_stara_cerkev', 'sl', 'sola', 'šola'],
+ ['sz_masts', 'loc', 'Ljubljana', 'Postojna'],
 ];
 const ENTRIES = JSON.parse(JSON.stringify(Z.entries));
 const E = Object.fromEntries(ENTRIES.map(e => [e.id, e]));
 const misses = [];
 for (const [id, k, from, to] of TEXT_FIX) { const e = E[id]; if (e && typeof e[k] === 'string' && e[k].includes(from)) e[k] = e[k].replace(from, to); else misses.push(id + '.' + k); }
 if (E.he_zlatolicje) E.he_zlatolicje.__mw = 126;
-for (const e of ENTRIES) for (const k of ['detail', 'role', 'hist', 'zagn', 'note']) if (typeof e[k] === 'string') e[k] = e[k].replace(/\b136 MW\b/g, '126 MW');
+for (const e of ENTRIES) for (const k of ['detail', 'role', 'hist', 'zagn', 'note', 'typ']) if (typeof e[k] === 'string') e[k] = e[k].replace(/\b136 MW\b/g, '126 MW');
 
 const yr = t => { const m = String(t || '').match(/\d{4}/g); if (!m) return [null, null]; const open = /\d{4}\s*[--]\s*$/.test(String(t).trim()); return [+m[0], open ? null : +m[m.length - 1]]; };
 const srcOf = e => (e.src || []).map(k => Z.src[k] && { key: k, title: Z.src[k].t, url: Z.src[k].u || (Z.src[k].doi ? 'https://doi.org/' + Z.src[k].doi : null), type: Z.src[k].k }).filter(Boolean);
@@ -76,7 +83,7 @@ const STORY_SRC = {
    { key: 'zag_kons_tr3_inv', title: 'Vabljeni na razstavo KONS-TR3', url: 'https://www.zag.si/vabljeni-na-razstavo-kons-tr3/', type: 'zag_publication' },
    { key: 'outsider_kons', title: 'Vabilo: Razstavi KONS TR³, Konstrukcija nove ere in EDVARD (Outsider, 11 Oct 2023)', url: 'https://outsider.si/vabilo-razstavi-kons-tr%C2%B3-konstrukcija-nove-ere-in-edvard/', type: 'web' }] },
  kpd: { ev: 'referenced', inv: ['research'],
-  role: 'Partner in the project CABE, Circular Approaches in the Built Environment (Driving Urban Transitions, 2025-2028), with a demonstration case in Slovenia',
+  role: 'Partner in the project CABE, Circular Approaches in the Built Environment (Driving Urban Transitions, January 2025 to December 2027), with a demonstration case in Slovenia',
   about: 'CABE develops and pilots urban resource-sharing infrastructures and circular solutions that reuse construction and demolition waste, with demonstration cases planned in Switzerland, Slovenia and Turkey. The former prison (KPD) on Pobreška cesta is the Maribor site presented at the ZAG Open Day.',
   sources: [
    { key: 'zhaw_cabe', title: 'Circular Approaches in the Built Environment (CABE), project page', url: 'https://www.zhaw.ch/en/research/project/76605', type: 'web' },

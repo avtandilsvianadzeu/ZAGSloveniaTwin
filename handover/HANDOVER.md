@@ -341,3 +341,35 @@ GURS Javni vpogled (https://ipi.eprostor.gov.si/jv/) is the public viewer of the
 
 - The cadastre lists ZAG as owner of two dwellings: one in Čatež ob Savi (community 1297 Mostec, building 224, 37.1 m²) and one flat in Ljubljana (community 2680 Nove Jarše, building 343, part 184, 46.9 m²). They are not research facilities and are not on the map. Details in `handover/research/recheck_2026_11/zag_managed_buildings_cadastre_2026_11_12.json`.
 - A second, separate read of the manager records in Chrome gave the same 30 buildings and 42 parcels as the first read.
+
+### Independent checks, 12 November 2026
+
+Three separate checkers, which had not seen the work being made, went through the data: one audited the files against each other, two opened the stated sources for all 73 records. They could not open the GURS cadastre, OpenStreetMap or Wikipedia, so cadastre and mapped values rest on the atlas's own reads.
+
+Result of the source check: ZAG involvement is confirmed for every record except the former Maribor prison (the listed sources do not name the prison as the CABE case) and UL FGG (a partner entry). 25 records are only partly supported. No record was found on a provably wrong structure.
+
+Fixed on the same day:
+- Footprint areas were about 0.7 % low, because the formula used the equator length of a degree. They are now computed through the D96/TM projection (ZAG site 8,464 m², before 8,402). The laser scan pixel count confirms the new values. Older sections of this file still quote the old numbers.
+- HE Solkan: the gross head of 20.55 m holds at 60 m³/s (SENG brochure, checked again), "youngest" and "a single unit" removed.
+- CABE runs from January 2025 to December 2027 (Driving Urban Transitions page, checked again).
+- Ten stale position notes removed from "Where the sources differ". They described points that were corrected long ago.
+- Railway masts record: the straight line between Borovnica and Divača was not real geometry. The two stations are now reference points, and the municipality is Postojna.
+- RTP Gorica: the unsourced "Owner" value is now "Client named in the ZAG reference list" with its link, and the cadastre owner ELES is listed as a difference.
+- API: quotes are no longer altered, and `position_exact` is false for site areas, as on the pages.
+- Geometry table: each row names its survey (cadastre or topographic survey of the given date).
+- Spelling of two school names, units (m³, m², m/s, min), three semicolons in the credits, text tidy-up in the map panel.
+- `data/rebuild_status.json`: items the cadastre now answers were removed from the missing lists.
+
+Listed on the pages under "Where the sources differ", not resolved (each needs a person to decide):
+- Former Maribor prison: link to CABE not in a public source.
+- HE Solkan, HE Zlatoličje, HE Vuhred: the ZAG book credits the predecessor ZRMK. HE Vuhred municipality. HE Zlatoličje refurbishment years, and several figures that no opened source confirms (17.2 km, 6.2 km, 450 to 530 m³/s, 62 million euros, runner size, MHE Melje date).
+- Ravbarkomanda deck lengths and sides, Verd contractor, Tomačevo details, Novo mesto footbridge load test wording, Tabor tunnel identity, Jez Melje model scale, Črna wording, SIJ Acroni wording, Strunjan years, TR3 role, ZAG staff and department counts, Logatec staff, Soča earthquake municipality, CINDERELA end date, CROSScade years.
+- Pairs of values that differ inside one sheet (UL FGG year, KPD year, Šentvid start, Karavanke lay-bys, anchors of the Novo mesto footbridge, HE Vrhovo head, HE Arto generation, Slano Blato volume, cross passage spacing in Kastelec and Dekani).
+
+Open after the checks:
+- 618 of 1,104 values have a source link but no stored quote. 73 quotes miss part of the numbers of their value, 20 of them all numbers (for example tomacevo 1980, ravbarkomanda moduli, karavanke_c 3332 and 1200, nuk 2000).
+- Tunnel records: "1998 to 2014" and "1990 to 2013" are the ranges of the whole ZAG reference list, not years per tunnel. The ZAG page says "External control of the following tunnels".
+- No raw evidence file holds the rows behind `data/ownership.json` and behind some `kn` blocks (ulfgg, ss_kocevje, tr3, innorenew). They were read live and only the result was stored.
+- Ownership file: Gameljne has no building entry, and four records at settlement precision are in although the note says such points were left out.
+- Working notes still read as notes in some difference lists (Karavanke, Krvavec, Golte, Velika planina).
+- Several statements in sections 2, 4.5, 5 and 11 of this file are older than the data (counts of building records, of matched positions and of models).

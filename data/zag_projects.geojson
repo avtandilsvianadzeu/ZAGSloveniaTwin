@@ -1151,7 +1151,7 @@
     "zag_involvement_type": "materials testing",
     "zag_role": "Expansive and non-shrink cement grouts",
     "description": "One of the hydroelectric plants where ZAG grout formulations were used for cable duct grouting and non-shrink structural grouting.",
-    "hist": "HE Solkan is the lowest and the youngest of the large plants on the Soča, standing roughly 700 m upstream of the Solkan railway bridge. It is a run of river plant with three Kaplan units, a combined swallowing capacity of 180 cubic metres per second and a gross head of 20.55 m at that flow. The reservoir holds about 1.15 million cubic metres of useful storage, the permitted water level fluctuation is 1.5 m, and the catchment is 1,632 square kilometres. Average annual generation is about 105 GWh. In July 2022 the plant stopped generating entirely because the Soča fell below the flow needed to run a single unit. The operator brochure records that a reconstruction is planned for after 2025.",
+    "hist": "HE Solkan is the lowest of the large plants on the Soča, standing roughly 700 m upstream of the Solkan railway bridge. It is a run of river plant with three Kaplan units, a combined swallowing capacity of 180 cubic metres per second and a gross head of 20.55 m at a flow of 60 cubic metres per second. The reservoir holds about 1.15 million cubic metres of useful storage, the permitted water level fluctuation is 1.5 m, and the catchment is 1,632 square kilometres. Average annual generation is about 105 GWh. In July 2022 the plant stopped generating entirely because of the low flow of the Soča. The operator brochure records that a reconstruction is planned for after 2025.",
     "facts": [
      [
       "Installed capacity",
@@ -1309,7 +1309,7 @@
     "structure": {
      "crosses": "Drava",
      "carries": null,
-     "typ": "Run-of-river hydroelectric plant on a diversion canal, 136 MW",
+     "typ": "Run-of-river hydroelectric plant on a diversion canal, 126 MW",
      "built": "First unit in test operation 19 October 1968, second unit April 1969, official opening 26 April 1969. Built from autumn 1964.",
      "spans": null,
      "length_m": null
@@ -14482,8 +14482,8 @@
     "built": null,
     "year_start": 2014,
     "year_end": 2014,
-    "municipality": "Ljubljana",
-    "locality": "Ljubljana",
+    "municipality": "Postojna",
+    "locality": "Postojna",
     "latitude": 45.77318,
     "longitude": 14.22167,
     "zag_involvement_type": "other",
@@ -14538,20 +14538,6 @@
      "https://mapcarta.com/N275403880"
     ],
     "address": null,
-    "line": [
-     [
-      14.36778,
-      45.92139
-     ],
-     [
-      13.96548,
-      45.68135
-     ]
-    ],
-    "line_labels": [
-     "Borovnica railway station (start of worst-hit section)",
-     "Divača railway station (end of worst-hit section)"
-    ],
     "zag_involvement_types": [
      "other"
     ]
@@ -14570,7 +14556,7 @@
     "id": "ss_kocevje",
     "category": "zag_project",
     "name": "Kočevje Secondary School",
-    "name_sl": "Gimnazija in srednja sola Kočevje",
+    "name_sl": "Gimnazija in srednja šola Kočevje",
     "name_en": "Kočevje Secondary School",
     "object_type": "building",
     "year": "2013",
@@ -14650,7 +14636,7 @@
     "id": "os_stara_cerkev",
     "category": "zag_project",
     "name": "Stara Cerkev Elementary School",
-    "name_sl": "Osnovna sola Stara Cerkev",
+    "name_sl": "Osnovna šola Stara Cerkev",
     "name_en": "Stara Cerkev Elementary School",
     "object_type": "building",
     "year": "2013",
@@ -16164,7 +16150,7 @@
     "zag_involvement_types": [
      "research"
     ],
-    "zag_role": "Partner in the project CABE, Circular Approaches in the Built Environment (Driving Urban Transitions, 2025-2028), with a demonstration case in Slovenia",
+    "zag_role": "Partner in the project CABE, Circular Approaches in the Built Environment (Driving Urban Transitions, January 2025 to December 2027), with a demonstration case in Slovenia",
     "description": "CABE develops and pilots urban resource-sharing infrastructures and circular solutions that reuse construction and demolition waste, with demonstration cases planned in Switzerland, Slovenia and Turkey. The former prison (KPD) on Pobreška cesta is the Maribor site presented at the ZAG Open Day.",
     "image": "img/ph/kpd.webp",
     "image_credit": null,

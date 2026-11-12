@@ -24,10 +24,11 @@ const srcLine=s=>`<div class="src"><span>${esc(s.title||s.key)}${s.type?`<br><sm
 /* digital twin sheet: verified geometry and specifications, every value with its source */
 function twinHTML(id){
   const t=ZA.twins[id]; if(!t) return '';
-  const val=s=>`${esc(s.value)}${s.unit?' '+esc(s.unit):''}`;
+  const tidy=s=>esc(String(s==null?'':s).replace(/\s*—\s*/g,', ').replace(/(\d)\s*–\s*(\d)/g,'$1 to $2').replace(/–/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+·\s+/g,', ').replace(/~(?=\d)/g,'about ').replace(/→/g,' to '));
+  const val=s=>`${tidy(s.value)}${s.unit?' '+esc(s.unit):''}`;
   const rows=(t.specs||[]).map(s=>`<div class="kv tw"><span>${esc(s.label)}</span><span>${val(s)}${s.source?` <a class="sref" href="${esc(s.source)}" target="_blank" rel="noopener" title="${esc(s.source)}">${esc(srcHost(s.source))}</a>`:''}</span></div>`).join('');
   const pts=(t.anchors||[]).map(a=>`<div class="kv tw"><span>${esc(a.label)}</span><span>${(+a.lat).toFixed(6)}, ${(+a.lon).toFixed(6)}${a.source?` <a class="sref" href="${esc(a.source)}" target="_blank" rel="noopener">${esc(srcHost(a.source))}</a>`:''}</span></div>`).join('');
-  return `<section class="twin"><h3>Digital twin</h3>${t.summary?`<p class="note">${esc(t.summary)}</p>`:''}${rows}${pts?`<h4>Verified reference points</h4>${pts}`:''}${(t.differences||[]).length?`<details class="twdiff"><summary class="note">Where the sources differ (${t.differences.length})</summary><ul>${t.differences.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>`:''}${t.open?`<p class="note twopen">Not yet verified: ${esc(t.open)}</p>`:''}</section>`;
+  return `<section class="twin"><h3>Digital twin</h3>${t.summary?`<p class="note">${tidy(t.summary)}</p>`:''}${rows}${pts?`<h4>Verified reference points</h4>${pts}`:''}${(t.differences||[]).length?`<details class="twdiff"><summary class="note">Where the sources differ (${t.differences.length})</summary><ul>${t.differences.map(x=>`<li>${tidy(x)}</li>`).join('')}</ul></details>`:''}${t.open?`<p class="note twopen">Not yet verified: ${tidy(t.open)}</p>`:''}</section>`;
 }
 function showTwinPoints(id){
   const t=id&&ZA.twins[id]; const fc={type:'FeatureCollection',features:t?(t.anchors||[]).map(a=>({type:'Feature',properties:{label:a.label},geometry:{type:'Point',coordinates:[+a.lon,+a.lat]}})):[]};

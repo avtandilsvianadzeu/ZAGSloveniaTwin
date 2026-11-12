@@ -2169,20 +2169,6 @@
       "https://mapcarta.com/N275403880"
     ],
     "note": "This is not a single structure, so kind stays 'area'. Per SŽ's 'Nova proga' special issue, the February 2014 ice storm hit the overhead line hardest on the Borovnica–Divača section of the Ljubljana–Sežana main line. At Postojna, Logatec and Verd stations, and on the Verd–Logatec and Borovnica–Verd sections, the damage was so severe that a new overhead line had to be built. Lesser damage occurred on the Ljubljana–Jesenice, Ljubljana–Dobova and Zidani Most–Maribor lines. Anchor: Postojna railway station (mapcarta), one of the named worst-hit stations, chosen as a representative point. The line gives the section's extent (Borovnica station from en.wikipedia, Divača station from mapcarta); it is not a structure. The old point (Ljubljana centre) was not on the damaged section. The ZAG source does not say which masts were analysed.",
-    "line": [
-      [
-        14.36778,
-        45.92139
-      ],
-      [
-        13.96548,
-        45.68135
-      ]
-    ],
-    "line_labels": [
-      "Borovnica railway station (start of worst-hit section)",
-      "Divača railway station (end of worst-hit section)"
-    ],
     "name_sl": "Drogovi voznega omrežja SŽ, odsek Borovnica–Divača (žled 2014)",
     "name_en": "Railway overhead-line masts, Borovnica–Divača section (2014 ice storm)",
     "precision": "site"
