@@ -274,3 +274,10 @@ Rule from the owner: if something is not known, do not assume it and do not draw
 - Novo mesto footbridge: segment joints removed. Their position is not sourced. The sag at mid-span is sourced, and the curve between is drawn and labelled as not surveyed.
 - InnoRenew: part heights are drawn in proportion to storey counts and labelled as not measured.
 - ZAG office building floors: cadastre 8 storeys below and above ground, dLib source 7, owner's count on photographs 6. Listed as a difference, not resolved.
+
+### Later on 12 November 2026
+
+- ZAG site: cadastre buildings 901 and 1079 removed. The owner states they are not part of ZAG. The site now holds 13 buildings, 7,616 m².
+- Map selection: map-tile buildings under the official outlines are hidden, so their grey walls no longer show through the blue selection.
+- Timeline bar moved to the bottom right of the map.
+- Inspection form: a saved record stays in the browser where it was typed. Nobody else sees it. Sharing needs a server with sign-in, which this static site does not have.
