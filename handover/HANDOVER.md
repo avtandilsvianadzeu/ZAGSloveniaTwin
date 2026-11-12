@@ -305,3 +305,5 @@ GURS Javni vpogled (https://ipi.eprostor.gov.si/jv/) is the public viewer of the
 - UL FGG: the faculty's ownership rows name building 2679/807, the building at the point is 2679/907. Listed as a difference on the page, not resolved.
 - No cadastre building at the point: P2B3 Šenčur (nearest 41 m, built 2013, not confirmed as the object) and Rakuschev mlin (demolished).
 - Details: `handover/research/recheck_2026_11/cadastre_other_records_2026_11_12.json`.
+- Fibran Sodražica: four buildings in community 1619 that the cadastre lists under the company as owner are drawn (5,929 m²). Before, only building 411 (419 m²) was shown. Stara Cerkev school: buildings 555 and 333 are drawn. Kočevje school: the building at the point (1577/105) is among those the cadastre lists under the school as manager.
+- InnoRenew: owner or manager not confirmed. The owner rows of Univerza na Primorskem exceed the 50 row limit of one request.
