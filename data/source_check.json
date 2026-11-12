@@ -1,0 +1,905 @@
+{
+ "meta": {
+  "date": "2026-11-12",
+  "note": "Result of opening every source address of the atlas in a browser on 12 November 2026. Addresses of the GURS services and of OpenStreetMap objects are not in this list, they are checked through their data services.",
+  "counts": {
+   "site did not answer (HTTP2 protocol error)": 21,
+   "read": 149,
+   "site not permitted in the browser session": 27,
+   "refused by the site (403)": 2,
+   "reading not permitted on this site in the browser": 1,
+   "not found (the site shows its 404 page)": 1,
+   "not read": 2,
+   "not found (404)": 8,
+   "certificate error, page not opened": 1,
+   "refused by the site (403 after a robot check)": 1,
+   "behind a robot check, not read": 2,
+   "only the teaser is public, article text not read": 2,
+   "address forwards to another site, not read": 1,
+   "file not read": 1,
+   "server error (525)": 1
+  }
+ },
+ "sources": [
+  {
+   "url": "https://lift-world.info/en/lifts/2772/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/2505/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/12495/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/place/kransjka_gora/index.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/530/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/5865/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/9406/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/12445/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/21766/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/494/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/91/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/4042/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/10925/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/2532/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/10975/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/14707/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/10974/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://lift-world.info/en/lifts/22350/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Podsitarjevec",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Slano_Blato_Landslide",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Ljubljana_Castle_funicular",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Cerkno_Ski_Resort",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Postojna_railway_station",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Urban_Municipality_of_Ljubljana",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/List_of_earthquakes_in_Slovenia",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Municipality_of_Idrija",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Slovenia",
+   "status": "read"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/National_and_University_Library_of_Slovenia",
+   "status": "read"
+  },
+  {
+   "url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/8807/8241/23854",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9179/8608/24586",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://ojs-gr.zrc-sazu.si/ujma/article/view/9175",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9062/8495/24359",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://openinframap.org/stats/area/Slovenia/plants/427961750",
+   "status": "read"
+  },
+  {
+   "url": "https://openinframap.org/stats/area/Slovenia/plants/422536532",
+   "status": "read"
+  },
+  {
+   "url": "https://openinframap.org/stats/area/Slovenia/plants/965129575",
+   "status": "read"
+  },
+  {
+   "url": "https://openinframap.org/stats/area/Slovenia/plants/325991561",
+   "status": "read"
+  },
+  {
+   "url": "https://remontees-mecaniques.net/bdd/reportage-tph80-nihalna-zicnica-poma-1879.html",
+   "status": "read"
+  },
+  {
+   "url": "https://remontees-mecaniques.net/bdd/reportage-tsd6-pocivalo-doppelmayr-2611.html",
+   "status": "read"
+  },
+  {
+   "url": "https://remontees-mecaniques.net/bdd/reportage-tcd4-kanin-poma-3416.html",
+   "status": "read"
+  },
+  {
+   "url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-straza-doppelmayr-2621.html",
+   "status": "read"
+  },
+  {
+   "url": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html",
+   "status": "read"
+  },
+  {
+   "url": "https://www.rtvslo.si/n/299013",
+   "status": "read"
+  },
+  {
+   "url": "https://www.rtvslo.si/znanost-in-tehnologija/v-logatcu-odprli-najvecji-pozarni-laboratorij-v-tem-delu-evrope/639153",
+   "status": "read"
+  },
+  {
+   "url": "https://www.rtvslo.si/gospodarstvo/avtocesta-prek-trojan-se-letos/17151",
+   "status": "read"
+  },
+  {
+   "url": "https://www.rtvslo.si/lokalne-novice/he-krsko-zacel-poskusno-obratovati/306007",
+   "status": "read"
+  },
+  {
+   "url": "https://www.rtvslo.si/zabava-in-slog/ture-avanture/gondola-na-veliko-planino-spet-obratuje/513476",
+   "status": "read"
+  },
+  {
+   "url": "https://www.rtvslo.si/zabava-in-slog/ture-avanture/najdaljsa-gondolska-zicnica-pri-nas-nihalka-na-golte-znova-obratuje/776348",
+   "status": "read"
+  },
+  {
+   "url": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.power-technology.com/marketdata/avce-slovenia/",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.gov.si/zbirke/projekti-in-programi/sanacija-1-cevi-obstojecega-avtocestnega-predora-karavanke/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/zbirke/projekti-in-programi/izgradnja-druge-cevi-avtocestnega-predora-karavanke-izvedbena-dela/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Kranj/Regijski-nacrti-zascite-in-resevanja/Regijski_nacrt_zascite_in_resevanja_ob_nesreci_v_predorih-Dopolnitve-2018.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/zbirke/projekti-in-programi/varnostno-tehnicna-nadgradnja-zelezniskega-predora-karavanke/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/novice/2020-05-19-pricela-se-je-obnova-predora-golovec/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijski-nacrt-zascite-in-resevanja/Regijski-nacrt-zascite-in-resevanja-ob-nesrecah-v-predorih.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Novo-mesto/Regijski-nacrti-Izp_Nm/Regijski-nacrt-ZiR-ob-mnozicni-nesreci-na-AC-na-obmocju-Dolenjske-regije.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-NG/Ocene-ogrozenosti/Ocena-ogrozenosti-ob-nesrecah-v-vkopih-in-predorih.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/assets/ministrstva/MNVP/Dokumenti/CPVO/Postopek_prevlade_javne_koristi/Mokrice/Zvezek-1.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/novice/2020-11-17-izvedena-dela-na-plazu-stovze-so-bistveno-prispevala-k-povecani-stopnji-varnosti-prebivalcev/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/assets/seznami/register-upravljavcev-in-izdanih-ied-okoljevarstvenih-dovoljenj/Livar_obrat_Crnomelj_sprememba_ovd_19jun2026.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/vaje-zir/Koncno_porocilo_Predor_Golo_rebro_2022.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl16-Motorway.aspx",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://tunnelbuilder.com/News/Sentvid-Tunnel-Nears-Completion-in-Slovenia.aspx",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://tunnelbuilder.com/Archive/Projects/Slovenia/sl13-Motorway.aspx",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://wikiwand.com/en/articles/Karawanks_Tunnel_(motorway)",
+   "status": "read"
+  },
+  {
+   "url": "https://wikiwand.com/hr/Tunel_Karavanke",
+   "status": "refused by the site (403)"
+  },
+  {
+   "url": "https://structurae.net/en/structures/golovec-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://structurae.net/structures/sentvid-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://structurae.net/structures/trojane-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://structurae.net/en/structures/podmilj-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://structurae.net/structures/kastelec-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://structurae.net/en/structures/dekani-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://structurae.net/structures/monte-san-marco-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://structurae.net/en/structures/cenkova-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://structurae.net/structures/podnanos-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://structurae.net/en/structures/golo-rebro-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://www.dlib.si/stream/URN:NBN:SI:DOC-GDFIK4VM/a36cf635-c3a7-41ae-a1b7-c2093ede577a/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.dlib.si/stream/URN:NBN:SI:DOC-VYGF4Z7A/15627dc1-a29c-4c79-a6c5-f0ced5657453/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.dlib.si/stream/URN:NBN:SI:DOC-95IJLL78/84bac1c0-b05a-440d-91e2-206d78dd128f/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.dlib.si/stream/URN:NBN:SI:DOC-CVEGXS86/e101c640-119d-4908-a7d2-5b93edbfd55a/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.dlib.si/stream/URN:NBN:SI:DOC-CZQLUYHP/0f735c63-44ad-40b1-a596-37deeaea6bfb/TEXT",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.portoroz.si/en/objects/strunjan-cliff/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.visitljubljana.com/en/poi/sitarjevec-mine",
+   "status": "read"
+  },
+  {
+   "url": "https://www.visitljubljana.com/sl/poi/tirna-vzpenjaca-na-ljubljanski-grad",
+   "status": "read"
+  },
+  {
+   "url": "https://ic-group.org/en/magazine/detail/karawanken-tunnel-new-tunnel-marks-a-milestone-in-european-north-south-transport",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://graz.elsevierpure.com/files/2761969/6637.pdf",
+   "status": "reading not permitted on this site in the browser"
+  },
+  {
+   "url": "https://tax-fin-lex.si/Dokument/Podrobnosti/c30411e0-18ac-4e58-b50a-5415d52001c1",
+   "status": "read"
+  },
+  {
+   "url": "https://tax-fin-lex.si/Dokument/Podrobnosti/36e90350-b86c-47ef-b436-01bbb2f499e8",
+   "status": "read"
+  },
+  {
+   "url": "https://tax-fin-lex.si/Dokument/Podrobnosti/20c0f076-86dc-4ebe-9714-63b81dfde7ca",
+   "status": "read"
+  },
+  {
+   "url": "https://tax-fin-lex.si/Dokument/Podrobnosti/aE_769c8e1c-1a7f-44fa-a75e-20477626b07a",
+   "status": "read"
+  },
+  {
+   "url": "https://en.golte.si/panoramska-nihalka",
+   "status": "not found (the site shows its 404 page)"
+  },
+  {
+   "url": "https://sij.si/en/news/sij-acronis-slag-in-sustainable-pavement-blocks",
+   "status": "read"
+  },
+  {
+   "url": "https://cordis.europa.eu/docs/results/31/31272/123652731-6_en.pdf",
+   "status": "not read"
+  },
+  {
+   "url": "https://cordis.europa.eu/project/id/101104283/reporting",
+   "status": "not read"
+  },
+  {
+   "url": "https://cordis.europa.eu/project/id/776751",
+   "status": "read"
+  },
+  {
+   "url": "https://hidroinstitut.si/files/2015/02/Objavljeni-clanek.pdf",
+   "status": "not found (404)"
+  },
+  {
+   "url": "https://www.uni-lj.si/en/news/2024-12-09-sunbathing-under-cliffs-is-dangerous",
+   "status": "read"
+  },
+  {
+   "url": "https://innorenew.eu/2020/01/innorenew-coe-begins-construction/",
+   "status": "read"
+  },
+  {
+   "url": "https://prizes.new-european-bauhaus.europa.eu/system/files/webform/champions/8252/pdf-1-8252.pdf",
+   "status": "not found (404)"
+  },
+  {
+   "url": "https://dlib.si/stream/URN:NBN:SI:DOC-OLABDKWX/6776d8db-acbd-4056-80b0-b928cd16de7b/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://dlib.si/stream/URN:NBN:SI:DOC-GVMSM8DK/5c3249b0-ea6f-4395-845b-2dba4999d94c/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://dlib.si/stream/URN:NBN:SI:doc-AVIYKHCA/1789c0a0-9797-4b58-b1b3-68ec0a455a9f/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://dlib.si/stream/URN:NBN:SI:DOC-05EN3VD8/23141649-7e7b-4c86-ada8-05e62eae89f0/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://dlib.si/stream/URN:NBN:SI:DOC-24TY2AFI/47c0f8ff-bb91-45d1-991b-cc6e7751892f/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://dlib.si/stream/URN:NBN:SI:DOC-RAXHNDPW/3e52dbce-7ff6-48d2-ae65-fc3fbb9d0926/TEXT",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://imsafe.wikixl.nl/index.php/Vransko_bridge_(case_study)",
+   "status": "read"
+  },
+  {
+   "url": "https://www.visit-crna.si/dogodek/1169328",
+   "status": "read"
+  },
+  {
+   "url": "https://www.circuitproject.eu/pilot-4/",
+   "status": "read"
+  },
+  {
+   "url": "https://core.ac.uk/download/67530235.pdf",
+   "status": "refused by the site (403)"
+  },
+  {
+   "url": "https://gem.wiki/Vuhred_hydroelectric_plant",
+   "status": "read"
+  },
+  {
+   "url": "https://gem.wiki/SIJ_Acroni_Jesenice_steel_plant",
+   "status": "read"
+  },
+  {
+   "url": "https://www.preprints.org/manuscript/202502.1654/v1",
+   "status": "read"
+  },
+  {
+   "url": "https://www.zag.si/wp-content/uploads/2022/03/Priloga-k-akreditacijski-listini-Preskusevalni-laboratoriji-min.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+   "status": "read"
+  },
+  {
+   "url": "https://www3.famnit.upr.si/?p=6918",
+   "status": "certificate error, page not opened"
+  },
+  {
+   "url": "https://odprtehiseslovenije.org/en/objekt/innorenew-coe-center-of-excellence-for-research-and-innovation-in-the-%ef%ac%81eld-of-renewable-materials-and-a-healthy-living-environment/",
+   "status": "read"
+  },
+  {
+   "url": "https://odprtehiseslovenije.org/en/objekt/predor-karavanke-druga-cev/",
+   "status": "read"
+  },
+  {
+   "url": "https://odprtehiseslovenije.org/en/objekt/the-tr3-high-rise-and-trg-republike-in-ljubljana/",
+   "status": "read"
+  },
+  {
+   "url": "https://svet24.si/novice/promet/zaceli-z-gradnjo-predora-lescevje-1428-1669685",
+   "status": "read"
+  },
+  {
+   "url": "https://balkangreenenergynews.com/dem-seeks-bids-for-rehabilitation-of-melje-hydro-facility/",
+   "status": "read"
+  },
+  {
+   "url": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://nhess.copernicus.org/articles/13/2543/2013/nhess-13-2543-2013.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://nhess.copernicus.org/articles/12/1659/2012/nhess-12-1659-2012.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.muzej-kamnik-on.net/?p=15313",
+   "status": "read"
+  },
+  {
+   "url": "https://www.lift-world.info/en/lifts/place/bohinj/index.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://www.lift-world.info/en/lifts/10924/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://www.lift-world.info/nl/lifts/721/datas.htm",
+   "status": "site did not answer (HTTP2 protocol error)"
+  },
+  {
+   "url": "https://wcee.nicee.org/wcee/article/0447.pdf",
+   "status": "refused by the site (403 after a robot check)"
+  },
+  {
+   "url": "https://giam.zrc-sazu.si/en/programi-in-projekti/cherplan",
+   "status": "read"
+  },
+  {
+   "url": "https://ec.europa.eu/regional_policy/en/projects/Slovenia/maribor-slovenia-develops-soil-for-cities-reducing-waste-for-a-circular-economy",
+   "status": "not found (404)"
+  },
+  {
+   "url": "https://press.um.si/index.php/ump/en/catalog/book/949/chapter/242",
+   "status": "read"
+  },
+  {
+   "url": "https://press.um.si/index.php/ump/catalog/view/232/192/553",
+   "status": "read"
+  },
+  {
+   "url": "https://www.is-wim.net/wp-content/uploads/2025/09/Doron-Hekic-Using-Bridge-WIM-for-Structural-Health-Monitoring-of-Bridges.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.waterpowermagazine.com/?p=13873",
+   "status": "read"
+  },
+  {
+   "url": "https://hydropower-dams.com/articles/refurbishment-of-slovenias-zlatoli%CB%98cje-plant",
+   "status": "read"
+  },
+  {
+   "url": "https://www.bizi.si/ZAG/poslovne-enote/",
+   "status": "read"
+  },
+  {
+   "url": "https://efi.int/news/innorenew-coe-completes-construction-slovenias-largest-wooden-building-2021-12-07",
+   "status": "not found (404)"
+  },
+  {
+   "url": "https://transport.danube-region.eu/?p=923",
+   "status": "read"
+  },
+  {
+   "url": "https://link.springer.com/doi/10.1007/s00254-007-0840-5",
+   "status": "read"
+  },
+  {
+   "url": "https://www.doka.com/uk/references/europe/Dekani_Tunnel",
+   "status": "not found (404)"
+  },
+  {
+   "url": "https://dri.si/en/fields-of-work/railways/expressway-koper-izola",
+   "status": "read"
+  },
+  {
+   "url": "https://openaccess.library.uitm.edu.my/Record/doaj-2002650d399a4be5bab3dbfbb1f59daa",
+   "status": "not found (404)"
+  },
+  {
+   "url": "https://www.sel.si/en/production-facilities/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.uradni-list.si/files/RS_-2004-121-05019-OB~P001-0000.PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+   "status": "site not permitted in the browser session"
+  },
+  {
+   "url": "https://www.gem.wiki/Av%C4%8De_hydroelectric_plant",
+   "status": "read"
+  },
+  {
+   "url": "https://iaps.zrc-sazu.si/sites/default/files/Ostir_Landslide_Log_pod_Mangartom.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://kraji.eu/slovenija/ljubljana_spodnja_postaja_vzpenjace/eng",
+   "status": "read"
+  },
+  {
+   "url": "https://www.lonelyplanet.com/points-of-interest/funicular-upper-station/1282811",
+   "status": "read"
+  },
+  {
+   "url": "https://www.remontees-mecaniques.net/bdd/reportage-2447.html",
+   "status": "read"
+  },
+  {
+   "url": "https://www.remontees-mecaniques.net/bdd/reportage-2705.html",
+   "status": "read"
+  },
+  {
+   "url": "https://www.remontees-mecaniques.net/bdd/reportage-tcd4-kanin-poma-3416.html",
+   "status": "read"
+  },
+  {
+   "url": "https://vogel.si/en/about/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.nc-planica.si/en/?p=3656",
+   "status": "read"
+  },
+  {
+   "url": "https://www.eles.si/kontakt-in-lokacije/lokacije",
+   "status": "read"
+  },
+  {
+   "url": "https://www.hiking-trail.net/hiking_trip/jersice_pecna_reber/26/1608/2822",
+   "status": "not found (404)"
+  },
+  {
+   "url": "https://www.qsl.net/s56wzm/repetitorji.htm",
+   "status": "read"
+  },
+  {
+   "url": "https://emidius.mi.ingv.it/ASMI/study/BERAL000",
+   "status": "read"
+  },
+  {
+   "url": "https://static2.emsc-csem.org/Special_reports/?id=85",
+   "status": "read"
+  },
+  {
+   "url": "https://cooperativecity.org/creating-soil-from-urban-waste-experience-of-maribor/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.skiresort.com/en/ski-resort/macesnovc-ratece/lift-operator/",
+   "status": "read"
+  },
+  {
+   "url": "https://arhiv.gorenjskiglas.si/article/20160312/C/160319932/spet-smuka-na-macesnovcu",
+   "status": "read"
+  },
+  {
+   "url": "https://www.mdpi.com/2076-3417/15/8/4514",
+   "status": "read"
+  },
+  {
+   "url": "https://www.mdpi.com/1424-8220/23/4/2067",
+   "status": "read"
+  },
+  {
+   "url": "https://www.mdpi.com/1424-8220/24/9/2788",
+   "status": "read"
+  },
+  {
+   "url": "https://www.mdpi.com/2412-3811/10/8/214",
+   "status": "read"
+  },
+  {
+   "url": "https://www.interreg-central.eu/wp-content/uploads/2025/09/2505281_Del_2.3.1_Report_BIM_Demonstrator1.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.dars.si/Zgodovina_gradnje/A1_sentilj_-_Srmin?zid=153",
+   "status": "read"
+  },
+  {
+   "url": "https://www.kolektor.com/en/about-us/media/news/completed-restoration-of-a-nearly-half-a-century-old-viaduct-2019-06-27",
+   "status": "read"
+  },
+  {
+   "url": "https://www.dpi-proceedings.com/index.php/shm2023/article/download/36760/35336",
+   "status": "read"
+  },
+  {
+   "url": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+   "status": "behind a robot check, not read"
+  },
+  {
+   "url": "https://researchrepository.ucd.ie/rest/bitstreams/4855/retrieve",
+   "status": "behind a robot check, not read"
+  },
+  {
+   "url": "https://bjrbe-journals.rtu.lv/bjrbe/article/download/bjrbe.2013.34/242/461",
+   "status": "read"
+  },
+  {
+   "url": "https://gv.zveza-dgits.si/pdf/GradbeniVestnik-2026_02-082.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.ponting.si/en/news/all-four-bearing-tendors-of-the-foot-and-cycle-bridge-in-irca-vas-installed-120.html",
+   "status": "read"
+  },
+  {
+   "url": "https://awards.share-architects.com/the-pedestrian-and-cycling-bridge-in-irca-vas-near-novo-mesto/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.mladina.si/43869/neznosen_hrup_pod_viaduktom_verd/",
+   "status": "read"
+  },
+  {
+   "url": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.seng.si/en/hydropower-plants/large-hydropower-plants/",
+   "status": "not found (404)"
+  },
+  {
+   "url": "https://media.fgg.uni-lj.si/brosure/FGG_brosura_SLO_2019.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.lotsberg.net/data/slovenia/list.html",
+   "status": "read"
+  },
+  {
+   "url": "https://www.dri.si/en/fields-of-work/railways/eastern-tunnel-tube-of-the-karavanke-motorway-tunnel",
+   "status": "read"
+  },
+  {
+   "url": "https://www.elea.si/en/?p=60636",
+   "status": "read"
+  },
+  {
+   "url": "https://www.elea.si/en/?p=58107",
+   "status": "read"
+  },
+  {
+   "url": "https://www.elea.si/en/?p=56979",
+   "status": "read"
+  },
+  {
+   "url": "https://www.elea.si/en/?p=58122",
+   "status": "read"
+  },
+  {
+   "url": "https://www.zobodat.at/pdf/GeolPalaeMitt_020_0371-0387.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://english.sta.si/226944/contract-for-construction-of-golovec-tunnel-signed",
+   "status": "only the teaser is public, article text not read"
+  },
+  {
+   "url": "https://sloveniatimes.com/24718/ljubljana-beltway-tunnel-fully-renovated",
+   "status": "only the teaser is public, article text not read"
+  },
+  {
+   "url": "https://www.mapei.com/us/en-us/projects/project-detail/tunnel-trojane-1769",
+   "status": "read"
+  },
+  {
+   "url": "https://tunnelsandtunnelling.com/?p=5052",
+   "status": "read"
+  },
+  {
+   "url": "https://tunneltalk.com/Alpine-July09-Alpine-wins-Slovenia-road-tunnels-contract.php",
+   "status": "address forwards to another site, not read"
+  },
+  {
+   "url": "https://journals.um.si/index.php/jet/article/download/5798/3543/17342",
+   "status": "read"
+  },
+  {
+   "url": "https://www.arso.gov.si/novice/datoteke/041629-Priloga%201%20-%20Primerjava%20bazenov%20HE%20na%20Savi.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.barrages-cfbr.eu/IMG/pdf/marseille_atelierct_g_8._smolar-zvanut_blanca.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.ice.it/it/sites/default/files/inline-files/Rajko%20Volk%20-%20presentation.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://library.e.abb.com/public/8dcc2cabb5e54184c12579200036a08d/26-31%203m124_ENG_72dpi.pdf",
+   "status": "file not read"
+  },
+  {
+   "url": "https://sloged.si/wp-content/uploads/zborniki%20sukljetovih%20dnevov/14/3.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.interpraevent.at/reference/media/1741/download/2004_4_IX-77.pdf?v=1",
+   "status": "read"
+  },
+  {
+   "url": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
+   "status": "read"
+  },
+  {
+   "url": "https://archiweb.cz/en/b/lanovka-na-lublansky-hrad-vzpenjaca-na-ljubljanski-grad",
+   "status": "read"
+  },
+  {
+   "url": "https://archiweb.cz/en/b/slovinska-narodni-a-univerzitni-knihovna-narodna-in-univerzitetna-knjiznica",
+   "status": "read"
+  },
+  {
+   "url": "https://www.sz.si/wp-content/uploads/2024/03/12.-Nova-Proga-POSEBNA-STEVILKA-predogled-.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://www.24ur.com/novice/slovenija/pogorela-sola-bo-docakala-prenovo.html",
+   "status": "read"
+  },
+  {
+   "url": "https://www.zurnal24.si/slovenija/pouk-tudi-v-gasilskem-domu-196295",
+   "status": "read"
+  },
+  {
+   "url": "https://www.archiweb.cz/en/b/namesti-republiky-trg-republike",
+   "status": "read"
+  },
+  {
+   "url": "https://www.total-slovenia-news.com/lifestyle/1975-republic-square-ljubljana-s-own-concrete-utopia",
+   "status": "server error (525)"
+  },
+  {
+   "url": "https://zaps.si/wp-content/uploads/2026/02/X_ST001_plakati.pdf",
+   "status": "read"
+  },
+  {
+   "url": "https://dutpartnership.eu/projects/cabe",
+   "status": "read"
+  },
+  {
+   "url": "https://culture.ljudmila.net/en/National_and_University_Library",
+   "status": "read"
+  },
+  {
+   "url": "https://www.prvagim.si/wp-content/uploads/2020/05/Rakuschev_mlin_mali_popravljen_pdf.pdf",
+   "status": "read"
+  }
+ ]
+}

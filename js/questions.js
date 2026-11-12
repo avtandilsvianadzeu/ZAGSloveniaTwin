@@ -1,19 +1,20 @@
 'use strict';
 /* Open questions: everything in the atlas that still needs a decision or a check, in one list.
-   Four kinds: sources that differ, notes marked as not verified, approximate positions, values without a stored quote.
+   Five kinds: sources that differ, notes marked as not verified, approximate positions, values without a stored quote, sources that did not open at the last check.
    A mark "decided" and a short note are kept in this browser (localStorage). Nothing is sent anywhere. */
 (async()=>{
   try{ await load(); }catch(e){ $('main').innerHTML=`<p class="loading">${esc(e.message)}</p>`; return; }
   const KEY='zag_questions_v1'; let ST={}; try{ ST=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(_){ ST={}; }
   const save=()=>{ try{ localStorage.setItem(KEY,JSON.stringify(ST)); }catch(_){} };
   const hash=s=>{ let h=5381; for(let i=0;i<s.length;i++) h=((h<<5)+h+s.charCodeAt(i))>>>0; return h.toString(36); };
-  const KIND={differ:'Sources differ',open:'Not verified',position:'Approximate position',quote:'No stored quote'};
+  const KIND={differ:'Sources differ',open:'Not verified',position:'Approximate position',quote:'No stored quote',source:'Source did not open'};
   const noSentence=u=>/ipi\.eprostor\.gov\.si|openstreetmap\.org/.test(u||'');
   const items=[];
   for(const p of D.features.map(f=>f.properties)){ if(p.category==='user_object') continue; const t=D.twins[p.id]||{}, add=(kind,text)=>items.push({id:p.id,name:p.name_en||p.name,type:GROUP_NAME[p.object_type]||cap(p.object_type||'other'),kind,text,key:p.id+'|'+kind+'|'+hash(text)});
     (t.differences||[]).forEach(x=>add('differ',x));
     if(t.open) add('open',String(t.open));
     if(!EXACT(p.position_precision)) add('position',(PREC[p.position_precision]||'Approximate position')+'. '+(p.position_note||'The exact object is not identified in the sources.'));
+    (t.source_check||[]).forEach(x=>add('source',`${x.url.replace(/^https?:\/\/(www\.)?/,'').slice(0,80)} did not give its text on 12 November 2026: ${x.status}. ${x.values} ${x.values===1?'value rests':'values rest'} on this source and could not be compared with it.`));
     const nq=(t.specs||[]).filter(s=>s.source&&!s.quote&&!noSentence(s.source)); if(nq.length) add('quote',`${nq.length} ${nq.length===1?'value has':'values have'} a source link but no stored quote: ${nq.slice(0,6).map(s=>s.label).join(', ')}${nq.length>6?' and '+(nq.length-6)+' more':''}.`); }
   const count=k=>items.filter(x=>!k||x.kind===k).length, done=()=>items.filter(x=>ST[x.key]&&ST[x.key].d).length;
   $('main').innerHTML=`<div class="wrap home"><h1>Open questions</h1><p class="lead">Everything in the atlas that still needs a decision or a check. Tick an item when it is decided, and add a short note if you like.</p>
@@ -25,7 +26,7 @@
   let kind='', q='', show='all';
   const draw=()=>{ const vis=items.filter(x=>(!kind||x.kind===kind)&&(!q||(x.name+' '+x.text+' '+x.type).toLowerCase().includes(q))&&(show==='all'||(show==='done')===!!(ST[x.key]&&ST[x.key].d)));
     const by={}; vis.forEach(x=>(by[x.id]=by[x.id]||[]).push(x));
-    $('qList').innerHTML=Object.values(by).map(l=>`<section class="panel qgrp"><h2><a href="twin.html?id=${encodeURIComponent(l[0].id)}">${T(l[0].name)}</a> <span class="tag">${esc(l[0].type)}</span></h2>${l.map(x=>{ const s=ST[x.key]||{}; return `<div class="qitem${s.d?' done':''}"><label class="qchk"><input type="checkbox" data-key="${esc(x.key)}"${s.d?' checked':''}><span>Decided</span></label><div class="qtxt"><span class="tag ${x.kind==='differ'?'warn':x.kind==='quote'?'':'bad'}">${KIND[x.kind]}</span><p>${T(x.text)}</p><input class="qnote" type="text" data-note="${esc(x.key)}" value="${esc(s.n||'')}" placeholder="Your decision or note" aria-label="Note"></div></div>`; }).join('')}</section>`).join('')||'<p class="note">Nothing matches.</p>';
+    $('qList').innerHTML=Object.values(by).map(l=>`<section class="panel qgrp"><h2><a href="twin.html?id=${encodeURIComponent(l[0].id)}">${T(l[0].name)}</a> <span class="tag">${esc(l[0].type)}</span></h2>${l.map(x=>{ const s=ST[x.key]||{}; return `<div class="qitem${s.d?' done':''}"><label class="qchk"><input type="checkbox" data-key="${esc(x.key)}"${s.d?' checked':''}><span>Decided</span></label><div class="qtxt"><span class="tag ${x.kind==='differ'||x.kind==='source'?'warn':x.kind==='quote'?'':'bad'}">${KIND[x.kind]}</span><p>${T(x.text)}</p><input class="qnote" type="text" data-note="${esc(x.key)}" value="${esc(s.n||'')}" placeholder="Your decision or note" aria-label="Note"></div></div>`; }).join('')}</section>`).join('')||'<p class="note">Nothing matches.</p>';
     $('qCount').textContent=`${vis.length} of ${items.length} points shown, in ${Object.keys(by).length} records`; $('qDone').textContent=done(); };
   $('qList').addEventListener('change',e=>{ const k=e.target.dataset.key, n=e.target.dataset.note; if(k){ ST[k]=Object.assign({},ST[k],{d:e.target.checked?1:0,t:new Date().toISOString().slice(0,10)}); save(); e.target.closest('.qitem').classList.toggle('done',e.target.checked); $('qDone').textContent=done(); } if(n){ ST[n]=Object.assign({},ST[n],{n:e.target.value.trim()}); save(); } });
   $('qFind').oninput=e=>{ q=e.target.value.trim().toLowerCase(); draw(); };
