@@ -270,3 +270,8 @@ dialog::backdrop{background:rgba(0,0,0,.28)}
 .qnote{width:100%;height:34px;padding:0 12px;border:0;border-radius:10px;background:var(--fill);font:400 13.5px var(--font);color:var(--ink)}
 .qnote:focus{background:#fff;outline:0;box-shadow:0 0 0 3px rgba(0,122,255,.35)}
 .obj .hit{display:block;margin-top:6px;font-size:12px;line-height:1.35;color:var(--muted)}.obj .hit b{color:var(--ink);font-weight:600}
+
+/* model level badge: says plainly how the 3D view was made */
+.pane-model .plabel.mlevel{font-weight:600;color:#fff;border:0;padding:6px 10px;border-radius:999px;letter-spacing:-.01em}
+.mlevel.lv-full{background:#248A3D}.mlevel.lv-plan{background:#007AFF}.mlevel.lv-cadastre{background:#5856D6}.mlevel.lv-schematic{background:#C93400}
+.pane-model .plabel.mlevel{white-space:nowrap;max-width:calc(100% - 120px);overflow:hidden;text-overflow:ellipsis}

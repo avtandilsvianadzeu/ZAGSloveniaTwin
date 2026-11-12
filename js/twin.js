@@ -164,7 +164,7 @@ function renderTwin(f){
   const blk=ids=>secs.filter(x=>ids.includes(x.sid)).sort((x,y)=>ids.indexOf(x.sid)-ids.indexOf(y.sid)).map(x=>x.html).join('')||'<p class="note pad">Nothing is recorded here for this asset.</p>';
   const modelPane=hasModel?`<div class="pane pane-model" id="paneModel"><canvas id="fem" tabindex="0" aria-label="Model of ${T(p.name_en||p.name)}. Drag to turn it any way, scroll to zoom, double click to reset."></canvas>
       <div class="ptools"><div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div><button class="tbtn" id="mScan" type="button" aria-pressed="true" hidden title="Show the roof surface measured by the national laser scanning, or the plain blocks">Laser scan</button><button class="tbtn" id="mMeasure" type="button" aria-pressed="false" title="Click two nodes to read the distance between them">Measure</button><button class="tbtn" id="mReset" type="button">Reset</button></div>
-      <div class="plabel" id="plabel">${t&&t.model?'Rebuilt from published dimensions':'Schematic model'}</div></div>`:'';
+      <div class="plabel mlevel lv-${model.level}" id="plabel" title="${T(model.note||'')}">${{full:'Built from published dimensions',plan:'Plan from published dimensions',cadastre:'Plan from the land cadastre',schematic:'Schematic, not the real structure'}[model.level]}</div></div>`:'';
   if(EMBED){ $('main').innerHTML=`<div class="embedbox">${modelPane}<div class="pickbox" id="pick" aria-live="polite"></div><p class="note stage-note">${T(model.note||'')}</p></div>`; }
   else $('main').innerHTML=`<div class="ws${hasModel?'':' nomodel'}">
     <aside class="tree" aria-label="Asset and its parts">
@@ -255,7 +255,7 @@ function buildModel(p,t,g,lines,labels){
   lines.forEach((l,i)=>{ const P=l.map(xy), cum=[0]; for(let k=1;k<P.length;k++) cum.push(cum[k-1]+Math.hypot(P[k][0]-P[k-1][0],P[k][1]-P[k-1][1]));
     const L=cum[cum.length-1]; if(!(L>0)) return; const part=M.parts.length, axis=[], left=[], right=[];
     /* a model block holds published dimensions: the true length replaces the mapped one, and stations fall on supports and segment joints */
-    const Lm=mdl&&mdl.length_m?mdl.length_m:L, sc=Lm/L, mx=(P[0][0]+P[P.length-1][0])/2, my=(P[0][1]+P[P.length-1][1])/2, sup=(mdl&&mdl.supports_at_m)||[];
+    const Lm=mdl&&mdl.lengths_m&&mdl.lengths_m[i]!=null?mdl.lengths_m[i]:mdl&&mdl.length_m?mdl.length_m:L, sc=Lm/L, mx=(P[0][0]+P[P.length-1][0])/2, my=(P[0][1]+P[P.length-1][1])/2, sup=(mdl&&mdl.supports_at_m)||[];
     let st=[];
     if(mdl&&mdl.segments){ const run=mdl.segments.count*mdl.segments.length_m, a=(Lm-run)/2; st.push(0); for(let k=0;k<=mdl.segments.count;k++) st.push(a+k*mdl.segments.length_m); st.push(Lm); }
     else if(sup.length){ const br=[0,...sup,Lm].sort((a,b)=>a-b); for(let k=1;k<br.length;k++){ const d=br[k]-br[k-1]; if(d<1e-6) continue; const m=Math.max(1,Math.min(24,Math.round(d/6))); for(let q=0;q<m;q++) st.push(br[k-1]+d*q/m); } st.push(Lm); }
@@ -286,7 +286,8 @@ function buildModel(p,t,g,lines,labels){
   if(ring0.length&&(g.height_m||g.parts)) bits.push('plain blocks with no roof shape, storeys or windows, because the sources do not give them');
   if(g&&g.site) M.site=(g.site.rings||[g.site.ring]).map(r=>r.map(c=>xy(c)));
   M.xy=xy; M.ll=ll;
-  if(mdl){ M.recon=true; M.note='Model rebuilt from published dimensions: '+(mdl.basis||[]).join(', ')+'. '+(mdl.assumed||'')+' It is not a structural analysis model.'; }
+  M.level=mdl?(mdl.level==='plan'?'plan':'full'):(ring0.length&&!lines.length&&g.parts&&g.parts[0]&&g.parts[0].kn!=null?'cadastre':'schematic');
+  if(mdl){ M.recon=true; M.note=(mdl.level==='plan'?'Plan rebuilt from published dimensions: ':'Model rebuilt from published dimensions: ')+(mdl.basis||[]).join(', ')+'. '+(mdl.assumed||'')+' It is not a structural analysis model.'; }
   else M.note='Schematic mesh generated from '+bits.join(' and ')+'. It is not a structural analysis model. Element size is a drawing choice'+(lines.length?', and heights along the alignment are not in the sources, so those parts are drawn flat':'')+'.'+(g&&g.scan?' The Laser scan view replaces the blocks with the surface heights measured by the national laser scanning inside the same outlines, in 1 m cells.':'');
   return M;
 }

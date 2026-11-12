@@ -434,3 +434,11 @@ Open after the checks:
 - New differences - Golo Rebro (Structurae now 757 m and 1 tube), Karavanke railway tunnel (tubes and boring method not on Wikipedia).
 - Still refused by the Chrome extension - dlib.si, uradni-list.si, ic-group.org, tunnelbuilder.com, power-technology.com, ojs-gr.zrc-sazu.si, graz.elsevierpure.com (JS), core.ac.uk and wcee.nicee.org (403 or bot check), lift-world.info (connection error). The owner can allow all sites in the extension settings.
 - Count now - 1,105 values, 917 with quote, 90 with "how obtained" note, 98 with neither.
+
+## 3D model honesty pass (12 November 2026, late)
+
+- Badge - every model view now shows how it was made: Built from published dimensions (green), Plan from published dimensions (blue), Plan from the land cadastre (purple), Schematic, not the real structure (orange). Set by model.level in buildModel.
+- Model block - lengths_m gives one published length per drawn line. level "plan" means only plan length and width are published.
+- New plan models - Kastelec, Dekani, Markovec, Tabor (tube lengths and road width), Pletovarje and Golo Rebro (road width only, tube lengths disagree). Which drawn tube is northern was read from the line positions.
+- Not done - HE Boštanj, HE Krško and ČHE Avče have only a point on the map. A dam or penstock model needs the mapped dam axis or penstock line (OSM or GURS KGI), which needs the browser. The bridge to the owner's computer and Chrome was lost during this pass.
+- Ravbarkomanda and Tomačevo - span lengths are not published (only "34 to 40 m"), deck lengths disagree between sources, so they stay schematic.
