@@ -207,3 +207,11 @@ The owner asked for the look and flow of professional digital twin platforms. Th
 - Visible text: middle dots, ellipsis marks and arrow marks removed from the map page, the search, the list and the side panel.
 - Site map on the asset page now fills its pane (it stayed 128 px high until the window was resized).
 - Positions looked at on Google Maps satellite view, centre of view on the stored point: Tomačevo, Vransko, Novo mesto footbridge, Čatež, Ravbarkomanda, Verd, Gameljne and RTP Gorica sit on the structure. Črna na Koroškem sits in the town centre, and its exact bridge is still an open item.
+
+### Later on 12 November 2026
+
+- All points looked at on Google Maps satellite view. Results per record are in `handover/research/recheck_2026_11/google_maps_view_2026_11_12.json`. Read by eye, so small offsets are not resolved. The four earthquake study areas were not viewed.
+- Rakuschev mlin moved about 660 m, from a placeholder in the old town of Celje to the Google Maps place pin in Gaberje. Kamra places the mill in Gaberje by the railway towards Velenje.
+- No structure at the point for: Črna bridge, Grosuplje bridge, Planica and Rateče lifts, P2B3 Šenčur. These need a source for the exact site.
+- Selection on the main map: a building picked from the map tiles is now drawn by the tile layer itself, so it is whole. Before, pieces cut at tile edges could show half a building. Glow removed, one accent colour with a white casing.
+- Models rebuilt from published dimensions (`model` block per object in `data/twins.json`): Novo mesto footbridge (span, width, sag, segments), Čatež bridge (span lengths, support axes), Vransko bridge (length, bearing span, width). Each states its drawing choices. Other structures stay schematic until span, section and pier data are published or supplied.

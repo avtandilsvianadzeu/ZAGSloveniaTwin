@@ -10372,5 +10372,17 @@
       "north-west deck",
       "south-east deck"
     ]
+  },
+  "rakuschev_mlin": {
+    "lat": 46.2350236,
+    "lon": 15.2685019,
+    "confidence": "medium",
+    "status": "improved",
+    "precision": "site",
+    "sources": [
+      "https://www.google.com/maps/place/Mestni+(Raku%C5%A1ev)+mlin/@46.2350236,15.2685019,17z",
+      "https://www.kamra.si/en/digitalne-zbirke/prvi-mestni-mlin-rakusev-mlin/"
+    ],
+    "note": "Point is the Google Maps place pin 'Mestni (Rakušev) mlin' (marked permanently closed), read on 12 November 2026. Kamra places the mill in Gaberje, directly by the railway towards Velenje. The old point was a placeholder in the old town centre, about 660 m to the south-west. The mill was demolished from April 2015, so no building can be matched on current imagery."
   }
 }

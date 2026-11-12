@@ -9,12 +9,13 @@ function addAtlasLayers(){
   const firstSym=(map.getStyle().layers.find(l=>l.type==='symbol')||{}).id, fonts=['Noto Sans Bold'];
   map.addLayer({id:'unc-f',type:'fill',source:'unc',paint:{'fill-color':'#2F5597','fill-opacity':.10}},firstSym);
   map.addLayer({id:'unc-l',type:'line',source:'unc',paint:{'line-color':'#2F5597','line-width':1.5,'line-dasharray':[3,3],'line-opacity':.8}},firstSym);
-  map.addLayer({id:'hl-ext',type:'fill-extrusion',source:'hl',paint:{'fill-extrusion-color':'#1E6FE8','fill-extrusion-height':['get','h'],'fill-extrusion-base':['get','b'],'fill-extrusion-opacity':.62,'fill-extrusion-vertical-gradient':true}},firstSym);
-  map.addLayer({id:'hl-glow',type:'line',source:'hl',paint:{'line-color':'#4CC2FF','line-width':9,'line-blur':8,'line-opacity':.7}},firstSym);
-  map.addLayer({id:'hl-line',type:'line',source:'hl',paint:{'line-color':'#8FDDFF','line-width':1.6}},firstSym);
-  map.addLayer({id:'sel-g',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#4CC2FF','line-width':14,'line-blur':10,'line-opacity':.55}});
-  map.addLayer({id:'sel-c',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#fff','line-width':6}});
-  map.addLayer({id:'sel-l',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#1E6FE8','line-width':3.5}});
+  /* selection: one calm accent, a solid body and a crisp outline, no glow */
+  const ACC='#0A66D8', ACCD='#083F8C';
+  try{ map.addLayer({id:'hl-tile',type:'fill-extrusion',source:'openmaptiles','source-layer':'building',filter:['==',['id'],-1],paint:{'fill-extrusion-color':ACC,'fill-extrusion-height':['+',['coalesce',['get','render_height'],8],0.4],'fill-extrusion-base':['coalesce',['get','render_min_height'],0],'fill-extrusion-opacity':.92,'fill-extrusion-vertical-gradient':true}},firstSym); }catch(_){}
+  map.addLayer({id:'hl-ext',type:'fill-extrusion',source:'hl',paint:{'fill-extrusion-color':ACC,'fill-extrusion-height':['get','h'],'fill-extrusion-base':['get','b'],'fill-extrusion-opacity':.92,'fill-extrusion-vertical-gradient':true}},firstSym);
+  map.addLayer({id:'hl-line',type:'line',source:'hl',layout:{'line-join':'round'},paint:{'line-color':ACCD,'line-width':1.5}},firstSym);
+  map.addLayer({id:'sel-c',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#fff','line-width':['interpolate',['linear'],['zoom'],10,6,16,10]}});
+  map.addLayer({id:'sel-l',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':ACC,'line-width':['interpolate',['linear'],['zoom'],10,3.5,16,6]}});
   map.addLayer({id:'clu',type:'circle',source:'sites',filter:['has','point_count'],paint:{'circle-color':'#2F5597','circle-radius':['step',['get','point_count'],15,5,18,12,22],'circle-stroke-color':'#fff','circle-stroke-width':2.5}});
   map.addLayer({id:'clu-n',type:'symbol',source:'sites',filter:['has','point_count'],layout:{'text-field':['to-string',['get','point_count']],'text-font':fonts,'text-size':12.5,'text-allow-overlap':true},paint:{'text-color':'#fff'}});
   map.addLayer({id:'pt-news',type:'circle',source:'sites',filter:['==',['get','id'],'__none__'],paint:{'circle-radius':['interpolate',['linear'],['zoom'],7,13,13,17],'circle-color':'rgba(230,57,70,0)','circle-stroke-color':'#E63946','circle-stroke-width':2.2,'circle-stroke-opacity':.85}});

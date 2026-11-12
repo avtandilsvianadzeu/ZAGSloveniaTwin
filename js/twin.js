@@ -148,7 +148,7 @@ function renderTwin(f){
   const blk=ids=>secs.filter(x=>ids.includes(x.sid)).sort((x,y)=>ids.indexOf(x.sid)-ids.indexOf(y.sid)).map(x=>x.html).join('')||'<p class="note pad">Nothing is recorded here for this asset.</p>';
   const modelPane=hasModel?`<div class="pane pane-model" id="paneModel"><canvas id="fem" tabindex="0" aria-label="Model of ${T(p.name_en||p.name)}. Drag to turn it any way, scroll to zoom, double click to reset."></canvas>
       <div class="ptools"><div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div><button class="tbtn" id="mMeasure" type="button" aria-pressed="false" title="Click two nodes to read the distance between them">Measure</button><button class="tbtn" id="mReset" type="button">Reset</button></div>
-      <div class="plabel">Schematic model</div></div>`:'';
+      <div class="plabel">${t&&t.model?'Rebuilt from published dimensions':'Schematic model'}</div></div>`:'';
   if(EMBED){ $('main').innerHTML=`<div class="embedbox">${modelPane}<div class="pickbox" id="pick" aria-live="polite"></div><p class="note stage-note">${T(model.note||'')}</p></div>`; }
   else $('main').innerHTML=`<div class="ws${hasModel?'':' nomodel'}">
     <aside class="tree" aria-label="Asset and its parts">
@@ -231,17 +231,27 @@ function buildModel(p,t,g,lines,labels){
   const xy=c=>[(c[0]-o[0])*kx,(c[1]-o[1])*ky], ll=(x,y)=>[o[0]+x/kx,o[1]+y/ky];
   const node=(x,y,z,part,extra)=>{ const l=ll(x,y); M.nodes.push(Object.assign({id:M.nodes.length+1,x,y,z,part,lon:l[0],lat:l[1]},extra||{})); return M.nodes.length-1; };
   const el=(a,b,part,kind)=>{ const A=M.nodes[a],B=M.nodes[b]; M.els.push({id:M.els.length+1,a,b,part,kind,len:Math.hypot(B.x-A.x,B.y-A.y,B.z-A.z)}); };
-  const wSpec=((t&&t.specs)||[]).find(s=>/^width$/i.test(s.label)&&/^m$/i.test(s.unit||'')&&isFinite(parseFloat(s.value))), W=wSpec?parseFloat(wSpec.value):null;
+  const mdl=(t&&t.model)||null;
+  const wSpec=((t&&t.specs)||[]).find(s=>/^width$/i.test(s.label)&&/^m$/i.test(s.unit||'')&&isFinite(parseFloat(s.value))), W=mdl&&mdl.deck_width_m?mdl.deck_width_m:wSpec?parseFloat(wSpec.value):null;
   lines.forEach((l,i)=>{ const P=l.map(xy), cum=[0]; for(let k=1;k<P.length;k++) cum.push(cum[k-1]+Math.hypot(P[k][0]-P[k-1][0],P[k][1]-P[k-1][1]));
-    const L=cum[cum.length-1]; if(!(L>0)) return; const n=Math.max(8,Math.min(48,Math.round(L/25))), part=M.parts.length, axis=[], left=[], right=[];
-    for(let k=0;k<=n;k++){ const d=L*k/n; let j=1; while(j<cum.length-1&&cum[j]<d) j++; const u=(d-cum[j-1])/((cum[j]-cum[j-1])||1), x=P[j-1][0]+(P[j][0]-P[j-1][0])*u, y=P[j-1][1]+(P[j][1]-P[j-1][1])*u;
-      const tx=P[j][0]-P[j-1][0], ty=P[j][1]-P[j-1][1], tl=Math.hypot(tx,ty)||1, nx=-ty/tl, ny=tx/tl;
-      axis.push(node(x,y,0,part,{ch:d,role:'axis'}));
-      if(W){ left.push(node(x+nx*W/2,y+ny*W/2,0,part,{ch:d,role:'edge'})); right.push(node(x-nx*W/2,y-ny*W/2,0,part,{ch:d,role:'edge'})); } }
+    const L=cum[cum.length-1]; if(!(L>0)) return; const part=M.parts.length, axis=[], left=[], right=[];
+    /* a model block holds published dimensions: the true length replaces the mapped one, and stations fall on supports and segment joints */
+    const Lm=mdl&&mdl.length_m?mdl.length_m:L, sc=Lm/L, mx=(P[0][0]+P[P.length-1][0])/2, my=(P[0][1]+P[P.length-1][1])/2, sup=(mdl&&mdl.supports_at_m)||[];
+    let st=[];
+    if(mdl&&mdl.segments){ const run=mdl.segments.count*mdl.segments.length_m, a=(Lm-run)/2; st.push(0); for(let k=0;k<=mdl.segments.count;k++) st.push(a+k*mdl.segments.length_m); st.push(Lm); }
+    else if(sup.length){ const br=[0,...sup,Lm].sort((a,b)=>a-b); for(let k=1;k<br.length;k++){ const d=br[k]-br[k-1]; if(d<1e-6) continue; const m=Math.max(1,Math.min(6,Math.round(d/10))); for(let q=0;q<m;q++) st.push(br[k-1]+d*q/m); } st.push(Lm); }
+    else { const n=Math.max(8,Math.min(48,Math.round(L/25))); for(let k=0;k<=n;k++) st.push(L*k/n); }
+    st=st.filter((v,k)=>k===0||v-st[k-1]>1e-6); const n=st.length-1, s0=sup.length?Math.min(...sup):0, s1=sup.length?Math.max(...sup):Lm;
+    const supAt=d=>{ const q=sup.findIndex(v=>Math.abs(v-d)<1e-6); return q<0?null:q+1; };
+    for(let k=0;k<=n;k++){ const d=st[k], dg=d/sc; let j=1; while(j<cum.length-1&&cum[j]<dg) j++; const u=(dg-cum[j-1])/((cum[j]-cum[j-1])||1); let x=P[j-1][0]+(P[j][0]-P[j-1][0])*u, y=P[j-1][1]+(P[j][1]-P[j-1][1])*u;
+      x=mx+(x-mx)*sc; y=my+(y-my)*sc;
+      const tx=P[j][0]-P[j-1][0], ty=P[j][1]-P[j-1][1], tl=Math.hypot(tx,ty)||1, nx=-ty/tl, ny=tx/tl, f=(d-s0)/((s1-s0)||1), z=mdl&&mdl.sag_m&&f>0&&f<1?-4*mdl.sag_m*f*(1-f):0, sp=supAt(d);
+      axis.push(node(x,y,z,part,{ch:d,role:'axis',sup:sp}));
+      if(W){ left.push(node(x+nx*W/2,y+ny*W/2,z,part,{ch:d,role:'edge',sup:sp})); right.push(node(x-nx*W/2,y-ny*W/2,z,part,{ch:d,role:'edge',sup:sp})); } }
     for(let k=0;k<n;k++){ el(axis[k],axis[k+1],part,'axis'); if(W){ el(left[k],left[k+1],part,'edge'); el(right[k],right[k+1],part,'edge'); } }
-    if(W) for(let k=0;k<=n;k++){ el(left[k],axis[k],part,'cross'); el(axis[k],right[k],part,'cross'); }
+    if(W) for(let k=0;k<=n;k++){ const kd=M.nodes[axis[k]].sup?'support':'cross'; el(left[k],axis[k],part,kd); el(axis[k],right[k],part,kd); }
     if(W) for(let k=0;k<n;k++) M.faces.push({v:[left[k],left[k+1],right[k+1],right[k]],part,kind:'deck'});
-    M.parts.push({name:labels[i]||(lines.length>1?'Part '+(i+1):p.name_en||p.name),len:L,track:axis,kind:'line',width:W}); });
+    M.parts.push({name:labels[i]||(lines.length>1?'Part '+(i+1):p.name_en||p.name),len:Lm,track:axis,kind:'line',width:W}); });
   ring0.forEach((r,i)=>{ const P=r.slice(0,-1).map(xy); if(P.length<3) return; const h=g.height_m||0, lv=h?1:0, part=M.parts.length, rings=[];
     for(let k=0;k<=lv;k++){ const z=lv?h*k/lv:0; rings.push(P.map(c=>node(c[0],c[1],z,part,{role:k===0?'ground':k===lv?'top':'level'}))); }
     rings.forEach(rg=>rg.forEach((a,q)=>el(a,rg[(q+1)%rg.length],part,'ring')));
@@ -251,7 +261,8 @@ function buildModel(p,t,g,lines,labels){
   ((t&&t.anchors)||[]).forEach((a,i)=>{ const c=xy([+a.lon,+a.lat]); M.refs.push({i,x:c[0],y:c[1],z:0,label:a.label,lat:+a.lat,lon:+a.lon,source:a.source}); });
   M.R=Math.max(1,...M.nodes.map(n=>Math.hypot(n.x,n.y,n.z)),...M.refs.map(n=>Math.hypot(n.x,n.y)));
   const bits=[]; if(lines.length) bits.push('the drawn alignment'+(W?' and the deck width of '+W+(p.category==='user_object'?' m entered by the user':' m given in the sources'):'')); if(ring0.length) bits.push((g.user?'the outline entered by the user':'the official GURS outline')+(g.height_m?(g.user?' raised to the entered height of ':' raised to its surveyed height of ')+g.height_m.toFixed(1)+' m':''));
-  M.note='Schematic mesh generated from '+bits.join(' and ')+'. It is not a structural analysis model. Element size is a drawing choice'+(lines.length?', and heights along the alignment are not in the sources, so those parts are drawn flat':'')+'.';
+  if(mdl){ M.recon=true; M.note='Model rebuilt from published dimensions: '+(mdl.basis||[]).join(', ')+'. '+(mdl.assumed||'')+' It is not a structural analysis model.'; }
+  else M.note='Schematic mesh generated from '+bits.join(' and ')+'. It is not a structural analysis model. Element size is a drawing choice'+(lines.length?', and heights along the alignment are not in the sources, so those parts are drawn flat':'')+'.';
   return M;
 }
 function initModel(M,p,opt){
@@ -271,14 +282,16 @@ function initModel(M,p,opt){
     if(M.faces.length){ const cy=Math.cos(yaw), sy=Math.sin(yaw), sp=Math.sin(pitch), cp=Math.cos(pitch), dep=n=>(n.x*sy+n.y*cy)*sp-n.z*cp, L=[-.45,-.55,.7];
       const fs=M.faces.map(f=>{ const A=M.nodes[f.v[0]],B=M.nodes[f.v[1]],C=M.nodes[f.v[2]], ux=B.x-A.x,uy=B.y-A.y,uz=B.z-A.z,vx=C.x-A.x,vy=C.y-A.y,vz=C.z-A.z; let nx=uy*vz-uz*vy,ny=uz*vx-ux*vz,nz=ux*vy-uy*vx; const nl=Math.hypot(nx,ny,nz)||1;
         return {f,d:f.v.reduce((a,i)=>a+dep(M.nodes[i]),0)/f.v.length,sh:f.kind==='wall'?.62+.38*Math.abs((nx*L[0]+ny*L[1])/nl):f.kind==='roof'?1:.94}; }).sort((a,b)=>b.d-a.d);
-      for(const {f,sh} of fs){ const on=selPart===f.part, base=on?[70,140,235]:f.kind==='roof'?[226,231,240]:f.kind==='deck'?[205,213,228]:[186,197,219];
+      for(const {f,sh} of fs){ const on=selPart===f.part, base=on?[158,196,246]:f.kind==='roof'?[226,231,240]:f.kind==='deck'?[205,213,228]:[186,197,219];
         ctx.beginPath(); f.v.forEach((i,k)=>k?ctx.lineTo(P[i][0],P[i][1]):ctx.moveTo(P[i][0],P[i][1])); ctx.closePath(); ctx.fillStyle=`rgba(${Math.round(base[0]*sh)},${Math.round(base[1]*sh)},${Math.round(base[2]*sh)},.93)`; ctx.fill(); } }
     for(const pass of [0,1]){ ctx.beginPath(); for(const e of M.els){ const main=e.kind==='axis'||e.kind==='ring'||e.kind==='edge'; if((pass===1)!==main) continue; ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); }
       ctx.strokeStyle=pass?'#203469':'rgba(32,52,105,.35)'; ctx.lineWidth=pass?2:1; ctx.stroke(); }
-    if(selPart!=null){ ctx.beginPath(); for(const e of M.els) if(e.part===selPart){ ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); } ctx.strokeStyle='#007AFF'; ctx.lineWidth=3; ctx.stroke(); }
+    ctx.beginPath(); for(const e of M.els) if(e.kind==='support'){ ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); } ctx.strokeStyle='#203469'; ctx.lineWidth=3.5; ctx.stroke();
+    if(selPart!=null){ ctx.beginPath(); for(const e of M.els) if(e.part===selPart&&e.kind!=='cross'){ ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); } ctx.strokeStyle='#0A66D8'; ctx.lineWidth=2.5; ctx.stroke(); }
     const mark=(o,col)=>{ if(o&&o.type==='el'){ const e=M.els[o.i]; ctx.beginPath(); ctx.moveTo(P[e.a][0],P[e.a][1]); ctx.lineTo(P[e.b][0],P[e.b][1]); ctx.strokeStyle=col; ctx.lineWidth=5; ctx.lineCap='round'; ctx.stroke(); ctx.lineCap='butt'; } };
     mark(hov,'rgba(0,122,255,.4)'); mark(sel,'#007AFF');
     ctx.fillStyle='#203469'; const ns=M.nodes.length>260?2:3; for(const q of P) ctx.fillRect(q[0]-ns/2,q[1]-ns/2,ns,ns);
+    M.nodes.forEach((nd,k)=>{ if(nd.sup&&nd.role==='axis'){ const q=P[k]; ctx.beginPath(); ctx.moveTo(q[0],q[1]+2); ctx.lineTo(q[0]-6,q[1]+12); ctx.lineTo(q[0]+6,q[1]+12); ctx.closePath(); ctx.fillStyle='#fff'; ctx.fill(); ctx.lineWidth=1.8; ctx.strokeStyle='#203469'; ctx.stroke(); } });
     const dot=(o,r,col)=>{ if(o&&o.type==='node'){ const q=P[o.i]; ctx.beginPath(); ctx.arc(q[0],q[1],r,0,7); ctx.fillStyle=col; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle='#fff'; ctx.stroke(); } };
     dot(hov,5,'rgba(0,122,255,.5)'); dot(sel,6,'#007AFF');
     PR.forEach((q,i)=>{ const on=sel&&sel.type==='ref'&&sel.i===i; ctx.beginPath(); ctx.moveTo(q[0],q[1]-6); ctx.lineTo(q[0]+6,q[1]); ctx.lineTo(q[0],q[1]+6); ctx.lineTo(q[0]-6,q[1]); ctx.closePath(); ctx.fillStyle=on?'#007AFF':'#fff'; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle=on?'#fff':'#5856D6'; ctx.stroke(); });
@@ -292,7 +305,7 @@ function initModel(M,p,opt){
     if(opt.onSelect) opt.onSelect(!sel?null:sel.type==='ref'?{kind:'ref',ref:M.refs[sel.i].i,part:null}:{kind:sel.type,part:sel.type==='part'?sel.i:sel.type==='node'?M.nodes[sel.i].part:M.els[sel.i].part});
     if(!info) return; if(!sel){ if(opt.home) opt.home(); else info.innerHTML='<b>Model</b><p>Click a node or an element for its data.</p>'; return; }
     if(sel.type==='node'){ const n=M.nodes[sel.i], pt=M.parts[n.part];
-      info.innerHTML=`<h3 class="blk-h">Selection</h3><b>Node ${n.id}</b>${row('Part',pt.name)}${row('Role',{axis:'on the centre line',edge:'deck edge',ground:'ground level',top:'top of the building',level:'mesh level'}[n.role])}${row('Distance along the part',n.ch!=null?num(Math.round(n.ch*10)/10)+' m':null)}${row('Height above ground',pt.kind==='building'?n.z.toFixed(1)+' m':null)}${row('Latitude',n.lat.toFixed(6))}${row('Longitude',n.lon.toFixed(6))}`; }
+      info.innerHTML=`<h3 class="blk-h">Selection</h3><b>Node ${n.id}</b>${row('Part',pt.name)}${row('Role',{axis:'on the centre line',edge:'deck edge',ground:'ground level',top:'top of the building',level:'mesh level'}[n.role])}${row('Distance along the part',n.ch!=null?num(Math.round(n.ch*10)/10)+' m':null)}${row('Support axis',n.sup?String(n.sup):null)}${row('Level relative to the supports',M.recon&&pt.kind==='line'&&n.z?n.z.toFixed(2)+' m':null)}${row('Height above ground',pt.kind==='building'?n.z.toFixed(1)+' m':null)}${row('Latitude',n.lat.toFixed(6))}${row('Longitude',n.lon.toFixed(6))}`; }
     else if(sel.type==='el'){ const e=M.els[sel.i], pt=M.parts[e.part];
       info.innerHTML=`<h3 class="blk-h">Selection</h3><b>Element ${e.id}</b>${row('Part',pt.name)}${row('Kind',{axis:'centre line',edge:'deck edge',cross:'across the deck',ring:'outline',vertical:'vertical'}[e.kind])}${row('Length',num(Math.round(e.len*10)/10)+' m')}${row('Nodes',M.nodes[e.a].id+' to '+M.nodes[e.b].id)}`; }
     else if(sel.type==='part'){ const pt=M.parts[sel.i], ne=M.els.filter(e=>e.part===sel.i).length, nn=M.nodes.filter(n=>n.part===sel.i).length;
@@ -357,7 +370,7 @@ function initView(p,t,g,lines,labels,opt){
   const unfreeze=()=>{ try{ if(map.terrain&&map._elevationFreeze===true){ map._elevationFreeze=false; map.triggerRepaint(); } }catch(_){} };
   map.on('moveend',unfreeze); map.on('sourcedata',e=>{ if(e.sourceId==='dem'&&e.isSourceLoaded) unfreeze(); });
   const hover=id=>{ map.on('mouseenter',id,()=>map.getCanvas().style.cursor='pointer'); map.on('mouseleave',id,()=>map.getCanvas().style.cursor=''); };
-  const highlight=i=>{ try{ if(map.getLayer('ln-sel')) map.setFilter('ln-sel',['==',['get','i'],i==null?-1:i]); if(map.getLayer('bld')) map.setPaintProperty('bld','fill-extrusion-color',i==null?'#203469':'#007AFF'); }catch(_){} };
+  const highlight=i=>{ try{ if(map.getLayer('ln-sel')){ const f=['==',['get','i'],i==null?-1:i]; map.setFilter('ln-sel',f); map.setFilter('ln-sel-c',f); map.setPaintProperty('ln','line-opacity',i==null?1:.45); } if(map.getLayer('bld')) map.setPaintProperty('bld','fill-extrusion-color',i==null?'#203469':'#0A66D8'); }catch(_){} };
   const pick=(type,i)=>{ if(type==='part') highlight(i); if(opt.select) opt.select(type,i); };
   map.on('load',()=>{
     try{ map.addSource('dem',{type:'raster-dem',tiles:[DEM_URL],tileSize:256,maxzoom:15,encoding:'terrarium',attribution:'Terrain: Mapzen, AWS Terrain Tiles'}); map.setTerrain({source:'dem',exaggeration:1}); }catch(_){}
@@ -372,7 +385,8 @@ function initView(p,t,g,lines,labels,opt){
       const lay={'line-cap':'round','line-join':'round'};
       map.addLayer({id:'ln-c',type:'line',source:'ln',layout:lay,paint:{'line-color':'#ffffff','line-width':9}});
       map.addLayer({id:'ln',type:'line',source:'ln',layout:lay,paint:{'line-color':'#203469','line-width':5}});
-      map.addLayer({id:'ln-sel',type:'line',source:'ln',layout:lay,filter:['==',['get','i'],-1],paint:{'line-color':'#007AFF','line-width':6}});
+      map.addLayer({id:'ln-sel-c',type:'line',source:'ln',layout:lay,filter:['==',['get','i'],-1],paint:{'line-color':'#ffffff','line-width':13}});
+      map.addLayer({id:'ln-sel',type:'line',source:'ln',layout:lay,filter:['==',['get','i'],-1],paint:{'line-color':'#0A66D8','line-width':7}});
       map.on('click','ln-c',e=>pick('part',e.features[0].properties.i)); hover('ln-c'); }
     if(anchors.length){ map.addSource('an',{type:'geojson',data:{type:'FeatureCollection',features:anchors.map((a,i)=>({type:'Feature',properties:{i},geometry:{type:'Point',coordinates:[+a.lon,+a.lat]}}))}});
       map.addLayer({id:'an',type:'circle',source:'an',paint:{'circle-radius':5.5,'circle-color':'#FFFFFF','circle-stroke-color':'#5856D6','circle-stroke-width':2.5}});

@@ -14727,8 +14727,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.2637,
-     46.23011
+     15.2685019,
+     46.2350236
     ]
    },
    "properties": {
@@ -14744,8 +14744,8 @@
     "year_end": 2014,
     "municipality": "Celje",
     "locality": "Gaberje, Celje",
-    "latitude": 46.23011,
-    "longitude": 15.2637,
+    "latitude": 46.2350236,
+    "longitude": 15.2685019,
     "zag_involvement_type": "structural assessment",
     "zag_role": "Report about the condition of the building known as Rakuschev mlin, after exposure to fire",
     "description": "Report about the condition of the building known as Rakuschev mlin, after exposure to fire.",
@@ -14820,8 +14820,11 @@
      }
     ],
     "evidence_level": "documented",
-    "position_precision": "municipality",
-    "position_sources": [],
+    "position_precision": "site",
+    "position_sources": [
+     "https://www.google.com/maps/place/Mestni+(Raku%C5%A1ev)+mlin/@46.2350236,15.2685019,17z",
+     "https://www.kamra.si/en/digitalne-zbirke/prvi-mestni-mlin-rakusev-mlin/"
+    ],
     "address": null,
     "zag_involvement_types": [
      "structural assessment"

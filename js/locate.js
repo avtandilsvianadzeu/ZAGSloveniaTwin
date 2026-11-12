@@ -55,10 +55,17 @@ function officialBuilding(o){
   const c=centroid(o.geometry); const osm=c?findBuilding(c,2):null;
   return {feature:f,parts:[f],g:o.geometry,dist:0,id:osm?osm.id:null,h:o.height_m,hknown:o.height_m!=null,b:0,c,official:o};
 }
+const BASEF={};
+function baseFilter(id){ if(!(id in BASEF)){ try{ BASEF[id]=map.getFilter(id)||null; }catch(_){ BASEF[id]=null; } } return BASEF[id]; }
+function hideBase(id,bid){ try{ if(!map.getLayer(id)) return; const f0=baseFilter(id); const not=['!=',['id'],bid]; map.setFilter(id, bid==null?f0:(f0?['all',f0,not]:not)); }catch(_){} }
+/* A building picked from the map tiles is drawn by the tile layer itself (filter by its id), so it is always whole.
+   Pieces read back from the tiles are cut at tile edges and would show half a building. */
 function showBuilding(b){
-  const fc={type:'FeatureCollection',features:b?b.parts.map(f=>({type:'Feature',properties:{h:+(f.properties.render_height||8)+(b.official?0:0.6),b:+(f.properties.render_min_height||0)},geometry:f.geometry})):[]};
+  const tile=!!(b&&!b.official&&b.id!=null&&map.getLayer('hl-tile'));
+  const fc={type:'FeatureCollection',features:(b&&!tile)?b.parts.map(f=>({type:'Feature',properties:{h:+(f.properties.render_height||8)+(b.official?0:0.6),b:+(f.properties.render_min_height||0)},geometry:f.geometry})):[]};
   map.getSource('hl').setData(fc);
-  try{ map.setFilter('building-3d', b&&b.id!=null?['!=',['id'],b.id]:null); map.setFilter('building', b&&b.id!=null?['!=',['id'],b.id]:null);}catch(_){}
+  try{ if(map.getLayer('hl-tile')) map.setFilter('hl-tile',['==',['id'],tile?b.id:-1]); }catch(_){}
+  const bid=b&&b.id!=null?b.id:null; hideBase('building-3d',bid); hideBase('building',bid);
 }
 function clearHL(){ hlToken++; if(!ready) return; showBuilding(null); map.getSource('unc').setData({type:'FeatureCollection',features:[]}); }
 

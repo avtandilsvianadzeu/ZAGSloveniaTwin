@@ -1,0 +1,589 @@
+{
+ "note": "Google Maps satellite view opened with the stored point at the centre of the view, 12 November 2026. Read by eye from the screen, so offsets under about 30 m are not resolved. Positions for the earthquake study areas were not viewed.",
+ "items": [
+  {
+   "id": "tomacevo",
+   "name": "Tomačevo Bridge",
+   "lat": 46.08743,
+   "lon": 14.532388,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "ravbarkomanda",
+   "name": "Ravbarkomanda Viaduct",
+   "lat": 45.790251,
+   "lon": 14.227194,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "vransko",
+   "name": "Vransko Bridge",
+   "lat": 46.248389,
+   "lon": 14.968806,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "nm_brv",
+   "name": "Novo Mesto Stress Ribbon Footbridge",
+   "lat": 45.801001,
+   "lon": 15.15108,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "crna",
+   "name": "Črna na Koroškem Bridge",
+   "lat": 46.4697417,
+   "lon": 14.8489639,
+   "result": "not confirmed",
+   "note": "Point is in the town centre. Which bridge it is remains open."
+  },
+  {
+   "id": "verd",
+   "name": "Verd Viaduct",
+   "lat": 45.955716,
+   "lon": 14.305218,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "he_solkan",
+   "name": "HE Solkan",
+   "lat": 45.984312,
+   "lon": 13.654821,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "he_zlatolicje",
+   "name": "HE Zlatoličje",
+   "lat": 46.44789,
+   "lon": 15.786944,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "he_vuhred",
+   "name": "HE Vuhred",
+   "lat": 46.587562,
+   "lon": 15.275391,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "strunjan",
+   "name": "Sveti Križ Bay Cliff",
+   "lat": 45.537026,
+   "lon": 13.608536,
+   "result": "near",
+   "note": "Point is on the cliff top about 100 to 150 m inland of the shore of Mesečev zaliv."
+  },
+  {
+   "id": "sitarjevec",
+   "name": "Sitarjevec Mine",
+   "lat": 46.04978,
+   "lon": 14.83038,
+   "result": "plausible",
+   "note": "Point is a cleared patch in the forest above Sitarjevška cesta. No label on the imagery."
+  },
+  {
+   "id": "zag",
+   "name": "ZAG",
+   "lat": 46.070442,
+   "lon": 14.513951,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "zag_logatec",
+   "name": "ZAG Fire Laboratory Logatec",
+   "lat": 45.91795,
+   "lon": 14.24163,
+   "result": "on site",
+   "note": "Google label 'ZAG Požarni laboratorij' is about 30 m from the point, same compound."
+  },
+  {
+   "id": "zag_gameljne",
+   "name": "ZAG Fire Laboratory Gameljne",
+   "lat": 46.1299082,
+   "lon": 14.4992037,
+   "result": "plausible",
+   "note": "Building group at Srednje Gameljne at the point. No label on the imagery."
+  },
+  {
+   "id": "zag_maribor",
+   "name": "ZAG Maribor Unit",
+   "lat": 46.48223,
+   "lon": 15.70206,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "cestel",
+   "name": "Cestel d.o.o.",
+   "lat": 46.11727,
+   "lon": 14.54599,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "innorenew",
+   "name": "InnoRenew CoE",
+   "lat": 45.530336,
+   "lon": 13.656828,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "ulfgg",
+   "name": "UL FGG",
+   "lat": 46.045752,
+   "lon": 14.494947,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "karavanke_c",
+   "name": "Karavanke Motorway Tunnel",
+   "lat": 46.453764,
+   "lon": 13.990241,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "karavanke_r",
+   "name": "Karavanke Railway Tunnel",
+   "lat": 46.449259,
+   "lon": 14.015491,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "golovec",
+   "name": "Golovec Tunnel",
+   "lat": 46.019797,
+   "lon": 14.561003,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "sentvid",
+   "name": "Šentvid Tunnel",
+   "lat": 46.094743,
+   "lon": 14.461525,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "trojane",
+   "name": "Trojane Tunnel",
+   "lat": 46.187514,
+   "lon": 14.877806,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "podmilj",
+   "name": "Podmilj Tunnel",
+   "lat": 46.182322,
+   "lon": 14.845365,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "vzideh",
+   "name": "V Zideh Tunnel",
+   "lat": 46.188631,
+   "lon": 14.897392,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "kastelec",
+   "name": "Kastelec Tunnel",
+   "lat": 45.58384,
+   "lon": 13.884767,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "dekani",
+   "name": "Dekani Tunnel",
+   "lat": 45.553379,
+   "lon": 13.81703,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "markovec",
+   "name": "Markovec Tunnel",
+   "lat": 45.541886,
+   "lon": 13.702504,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "lescevje",
+   "name": "Leščevje Tunnel",
+   "lat": 45.905394,
+   "lon": 14.97867,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "cenkova",
+   "name": "Cenkova Tunnel",
+   "lat": 46.577272,
+   "lon": 15.938634,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "pletovarje",
+   "name": "Pletovarje Tunnel",
+   "lat": 46.295081,
+   "lon": 15.440755,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "tabor_h4",
+   "name": "Tabor Tunnel",
+   "lat": 45.800167,
+   "lon": 13.980767,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "he_vrhovo",
+   "name": "HE Vrhovo",
+   "lat": 46.044564,
+   "lon": 15.224149,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "jez_melje",
+   "name": "Melje Dam and Small HPP",
+   "lat": 46.560151,
+   "lon": 15.673475,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "he_bostanj",
+   "name": "HE Boštanj",
+   "lat": 46.017682,
+   "lon": 15.281293,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "he_arto",
+   "name": "HE Arto Blanca",
+   "lat": 45.990577,
+   "lon": 15.381242,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "he_krsko",
+   "name": "HE Krško",
+   "lat": 45.974811,
+   "lon": 15.481494,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "che_avce",
+   "name": "CHE Avče",
+   "lat": 46.102596,
+   "lon": 13.670792,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "slano_blato",
+   "name": "Slano Blato Landslide",
+   "lat": 45.913056,
+   "lon": 13.865278,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "stoze",
+   "name": "Stože Landslide",
+   "lat": 46.431593,
+   "lon": 13.604744,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "krvavec",
+   "name": "Krvavec Cableway",
+   "lat": 46.28479,
+   "lon": 14.497922,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "velikaplanina",
+   "name": "Velika Planina Cableway",
+   "lat": 46.304895,
+   "lon": 14.608071,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "grad_vzpenjaca",
+   "name": "Ljubljana Castle Funicular",
+   "lat": 46.049299,
+   "lon": 14.509038,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "kranjskagora_z",
+   "name": "Kranjska Gora Cableways",
+   "lat": 46.4849,
+   "lon": 13.7794,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "vogel",
+   "name": "Vogel Cableway",
+   "lat": 46.275572,
+   "lon": 13.835293,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "cerkno_z",
+   "name": "Cerkno Cableways",
+   "lat": 46.1556,
+   "lon": 14.0491,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "golte",
+   "name": "Golte Cableway",
+   "lat": 46.356143,
+   "lon": 14.931602,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "kanin_z",
+   "name": "Kanin Cableway",
+   "lat": 46.332757,
+   "lon": 13.53826,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "straza_bled",
+   "name": "Straža Bled Cableway",
+   "lat": 46.362956,
+   "lon": 14.10514,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "planica_z",
+   "name": "Planica Cableway",
+   "lat": 46.4965,
+   "lon": 13.71314,
+   "result": "not confirmed",
+   "note": "Point is the village of Rateče, no lift at the point. Lift identity is open."
+  },
+  {
+   "id": "rtp_gorica",
+   "name": "RTP Gorica Substation",
+   "lat": 45.9589527,
+   "lon": 13.6604928,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "pecna_reber",
+   "name": "Pečna Reber Broadcasting Tower",
+   "lat": 45.778918,
+   "lon": 14.230264,
+   "result": "plausible",
+   "note": "Small structure in a forest clearing at the point. No label on the imagery."
+  },
+  {
+   "id": "livarna_crnomelj",
+   "name": "Livarna Črnomelj Chimney",
+   "lat": 45.571761,
+   "lon": 15.18388,
+   "result": "on site",
+   "note": "Point is inside the foundry compound. The chimney itself cannot be told apart at this scale."
+  },
+  {
+   "id": "sz_masts",
+   "name": "Railway Electrification Masts",
+   "lat": 45.77318,
+   "lon": 14.22167,
+   "result": "representative",
+   "note": "Line record. Point is Postojna railway station."
+  },
+  {
+   "id": "ss_kocevje",
+   "name": "Kočevje Secondary School",
+   "lat": 45.64107,
+   "lon": 14.85788,
+   "result": "on site",
+   "note": "Google place 'Gimnazija in srednja šola Kočevje' is at 45.6410736, 14.8578297, the same point."
+  },
+  {
+   "id": "os_stara_cerkev",
+   "name": "Stara Cerkev Elementary School",
+   "lat": 45.66936,
+   "lon": 14.84096,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "rakuschev_mlin",
+   "name": "Rakuschev Mlin",
+   "lat": 46.2350236,
+   "lon": 15.2685019,
+   "result": "moved",
+   "note": "Old point was a placeholder in the old town. Moved about 660 m to the Google Maps place pin 'Mestni (Rakušev) mlin' in Gaberje. The mill was demolished from April 2015, the site now holds a shop."
+  },
+  {
+   "id": "p2b3_sencur",
+   "name": "P2B3 Commercial Building",
+   "lat": 46.24378,
+   "lon": 14.42295,
+   "result": "not confirmed",
+   "note": "Point is in a field by Stružnikova pot in Šenčur, no building at the point on the imagery."
+  },
+  {
+   "id": "fibran_sodrazica",
+   "name": "Fibran Nord Sodražica",
+   "lat": 45.76607,
+   "lon": 14.62693,
+   "result": "on site",
+   "note": "Point is on the industrial compound at Cesta Notranjskega odreda. No Fibran label on the imagery."
+  },
+  {
+   "id": "bovec_quake",
+   "name": "Bovec Earthquake Response",
+   "lat": 46.3386,
+   "lon": 13.5524,
+   "result": "not viewed",
+   "note": "Study area, representative centre, nothing to match on imagery."
+  },
+  {
+   "id": "soca_quake",
+   "name": "Upper Soča Valley Earthquake Repairs",
+   "lat": 46.32,
+   "lon": 13.63,
+   "result": "not viewed",
+   "note": "Study area, representative centre, nothing to match on imagery."
+  },
+  {
+   "id": "lj_seismic",
+   "name": "Ljubljana Seismic Risk",
+   "lat": 46.05237,
+   "lon": 14.50504,
+   "result": "not viewed",
+   "note": "Study area, representative centre, nothing to match on imagery."
+  },
+  {
+   "id": "idrija_cherplan",
+   "name": "Idrija Seismic Risk, CHERPLAN",
+   "lat": 46.0024,
+   "lon": 14.0273,
+   "result": "not viewed",
+   "note": "Study area, representative centre, nothing to match on imagery."
+  },
+  {
+   "id": "grosuplje_most",
+   "name": "Grosuplje Bridge",
+   "lat": 45.95512,
+   "lon": 14.6562,
+   "result": "not confirmed",
+   "note": "Point is in a residential block of Grosuplje, no bridge at the point. The bridge is not named in the record."
+  },
+  {
+   "id": "catez_bridge",
+   "name": "Čatež Bridge over the Sava",
+   "lat": 45.894229,
+   "lon": 15.603299,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "maribor_pilots",
+   "name": "Maribor circular economy pilot sites",
+   "lat": 46.56247,
+   "lon": 15.64398,
+   "result": "representative",
+   "note": "Several pilot sites. Point is in the city of Maribor."
+  },
+  {
+   "id": "kamnik_bridges",
+   "name": "Kamnik Municipal Bridges",
+   "lat": 46.22608,
+   "lon": 14.61083,
+   "result": "representative",
+   "note": "Record covers several municipal bridges. Point is the old town centre."
+  },
+  {
+   "id": "sij_acroni_pavers",
+   "name": "Geopolymer Paving at SIJ Acroni",
+   "lat": 46.423994,
+   "lon": 14.094645,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "golo_rebro",
+   "name": "Golo Rebro Motorway Tunnel",
+   "lat": 46.313671,
+   "lon": 15.45799,
+   "result": "on route",
+   "note": "Point sits on the drawn road or rail line of the tunnel. The tube itself is not visible from above."
+  },
+  {
+   "id": "ratece_cable",
+   "name": "Rateče Cableway Installations",
+   "lat": 46.4965,
+   "lon": 13.71314,
+   "result": "not confirmed",
+   "note": "Same point as the Planica record, village of Rateče, no lift at the point."
+  },
+  {
+   "id": "tr3",
+   "name": "TR3 Tower",
+   "lat": 46.050209,
+   "lon": 14.499701,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "kpd",
+   "name": "Former Maribor Prison",
+   "lat": 46.5529,
+   "lon": 15.6514,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  },
+  {
+   "id": "nuk",
+   "name": "National and University Library",
+   "lat": 46.047482,
+   "lon": 14.503688,
+   "result": "on site",
+   "note": "Stored point sits on the structure or its labelled site"
+  }
+ ]
+}
