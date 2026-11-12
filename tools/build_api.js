@@ -4,6 +4,7 @@
 const fs=require('fs'), path=require('path'), ROOT=path.join(__dirname,'..'), OUT=path.join(ROOT,'api/v1');
 const J=f=>JSON.parse(fs.readFileSync(path.join(ROOT,f),'utf8'));
 const geo=J('data/zag_projects.geojson'), twins=J('data/twins.json').objects||{}, gurs=(J('data/gurs_buildings.json').buildings)||{}, rebuild=(J('data/rebuild_status.json').items)||{};
+const own=(J('data/ownership.json').items)||{};
 const clean=s=>typeof s==='string'?s.replace(/\s*—\s*/g,', ').replace(/(\d)\s*–\s*(\d)/g,'$1 to $2').replace(/–/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+/g,' ').trim():s;
 const deep=v=>Array.isArray(v)?v.map(deep):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,deep(x)])):clean(v);
 const EXACT=new Set(['surveyed','address','matched','site']);
@@ -20,7 +21,7 @@ W('objects.json',{count:rows.length,objects:rows});
 for(const f of geo.features){ const p=f.properties, t=twins[p.id]||{}, g=gurs[p.id]||null, row=rows.find(r=>r.id===p.id);
   W('objects/'+p.id+'.json',deep({...row,zag_role:p.zag_role||null,zag_involvement_types:p.zag_involvement_types||[],description:p.description||null,history:p.hist||null,facts:p.facts||[],people:p.people||[],partners:p.partners||[],
     position_sources:p.position_sources||[],record_sources:(p.sources||[]).map(s=>({title:s.title,url:s.url,type:s.type})),
-    specifications:(t.specs||[]).map(s=>({label:s.label,value:s.value,unit:s.unit||'',source:s.source||null,quote:s.quote||null})),source_differences:t.differences||[],open_question:t.open||null,reference_points:t.anchors||[],model_basis:t.model||null,rebuild_status:rebuild[p.id]||null,
+    specifications:(t.specs||[]).map(s=>({label:s.label,value:s.value,unit:s.unit||'',source:s.source||null,quote:s.quote||null})),source_differences:t.differences||[],open_question:t.open||null,reference_points:t.anchors||[],model_basis:t.model||null,rebuild_status:rebuild[p.id]||null,cadastre_owner_and_manager:own[p.id]||null,
     geometry:{point:[p.longitude,p.latitude],alignment:p.lines||(p.line?[p.line]:null),alignment_labels:p.line_labels||null,building:g?{height_m:g.height_m??null,area_m2:g.area_m2??null,outline:g.geometry}:null}})); }
 W('objects.geojson',{type:'FeatureCollection',features:geo.features.map(f=>{ const p=f.properties, r=rows.find(x=>x.id===p.id), ln=p.lines||(p.line?[p.line]:null);
   return {type:'Feature',id:p.id,geometry:ln?{type:'MultiLineString',coordinates:ln}:{type:'Point',coordinates:[p.longitude,p.latitude]},properties:r}; })});

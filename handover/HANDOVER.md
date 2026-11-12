@@ -307,3 +307,19 @@ GURS Javni vpogled (https://ipi.eprostor.gov.si/jv/) is the public viewer of the
 - Details: `handover/research/recheck_2026_11/cadastre_other_records_2026_11_12.json`.
 - Fibran Sodražica: four buildings in community 1619 that the cadastre lists under the company as owner are drawn (5,929 m²). Before, only building 411 (419 m²) was shown. Stara Cerkev school: buildings 555 and 333 are drawn. Kočevje school: the building at the point (1577/105) is among those the cadastre lists under the school as manager.
 - InnoRenew: owner or manager not confirmed. The owner rows of Univerza na Primorskem exceed the 50 row limit of one request.
+
+### Owner and manager from the cadastre, 12 November 2026
+
+- Source: GURS Javni vpogled, https://ipi.eprostor.gov.si/jv/. The requests it makes were read in the browser and repeated for the atlas records:
+  - parcel or building at a point: `wfs-si-gurs-kn/wfs?request=GetFeature&version=2.0.0&typeName=SI.GURS.KN:PARCELE&REFERER_APP_CODE=JV&outputFormat=application/json&bbox=lat,lon,lat,lon,urn:ogc:def:crs:EPSG::4326`
+  - building parts of a building: typeName `SI.GURS.KN:DELI_STAVB` with `cql_filter=EID_STAVBA=...`
+  - owners: `javni-service-api/v1/external/std-service/features?featureType=JAVNI_SERVIS_LASTNIKI_PARCELE.JSON&filter=EID` and `JAVNI_SERVIS_LASTNIKI_STAVBE.JSON&filter=EID of the building part`
+  - managers: typeName `SI.GURS.KN:PARCELE_UPRAVLJAVCI` and `SI.GURS.KN:DST_UPRAVLJAVCI`
+  This WFS route accepts numeric filters. The OGC API route refuses them.
+- Result: `data/ownership.json`, 37 records (bridges, dams, buildings, institutions, towers). Shown on each asset page under Data, Owner and manager, and in the API as `cadastre_owner_and_manager`. Tunnels, cableways, landslides and study areas were left out, because the parcel above a tunnel or at a representative point says nothing about the object.
+- Only legal persons are stored. Holders that the cadastre marks "Podatek ni javen" are counted, never named.
+- For bridges and dams the parcel at the point is often the river parcel. The page says so.
+- Findings that bear on positions: the parcel at the Grosuplje bridge point and at the P2B3 Šenčur point has a holder that is not public, and the Črna point too. This fits the open question that these points are not on the object.
+- ZAG at Dimičeva: office building 892 is owned by Republika Slovenija and managed by ZAG. Hall buildings 962 and 1079 are co-owned by Republika Slovenija, ZAG and KOMPAS KAPITAL d.o.o., with ZAG as manager.
+- UL FGG: the building at the point (2679/907) is owned by Univerza v Ljubljani. InnoRenew: building and parcel are owned by Občina Izola.
+- LiDAR: Javni vpogled lists the laser scanning files per 1 km sheet, for Dimičeva sheet 462_103 (for example `javne-datoteke/DALJINSKO_ZAZNAVANJE/CLSS/.../NDMP_462_103.tif`, the surface height above ground). Not used yet. It is the source for real roof heights.
