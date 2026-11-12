@@ -54,7 +54,8 @@ function look(L,T,B){
   }
   if(sat&&LAND_FILL.test(id)&&!(id==='building'&&bldOn())) vis='none';
   if(id==='building'&&!bldOn()) vis='none';
-  if(id==='building-3d'){ vis=(is3d&&bldOn())?'visible':'none'; if(sat) o['fill-extrusion-opacity']=.6; }
+  /* on imagery the neighbouring buildings stay in 3D as a light see-through volume, so a selected building never stands alone on a flat picture */
+  if(id==='building-3d'){ vis=(is3d&&(bldPref!==null?bldPref:true))?'visible':'none'; if(sat){ o['fill-extrusion-opacity']=.3; o['fill-extrusion-color']='#EEF3FA'; } }
   return {paint:o,vis};
 }
 

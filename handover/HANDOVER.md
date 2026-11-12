@@ -228,3 +228,10 @@ The owner asked for the look and flow of professional digital twin platforms. Th
 - 64 of the 485 quotes do not contain the value in the same form (a translation, a table row or a title). They are labelled "Evidence, check" and counted on the Quality tab. They need a person to open the source.
 - No screenshots of the source pages are stored. The sources could not be opened from the build environment, and zag.si could not be reached from the built-in browser on 12 November.
 - Data API: `node tools/build_api.js` writes `api/v1/` (index, objects list, one file per object, GeoJSON, CSV, OpenAPI description). `api.html` documents it and has a try-it box. Run the script after every data change.
+
+### Buildings on imagery, 12 November 2026
+
+- A record holds one official outline (GURS). A site such as ZAG at Dimičeva has several buildings, and the atlas has no source that says which neighbouring buildings belong to it, so only the documented building is highlighted.
+- On imagery the neighbouring buildings are now drawn in 3D as a light see-through volume, and the selected building is see-through with a clear footprint outline. Nothing is left flat beside the selection.
+- OpenStreetMap building at each stored point checked through the OSM API: `handover/research/recheck_2026_11/osm_building_at_point_2026_11_12.json`.
+- Open sources for detail: GURS publishes national LiDAR point clouds and surface models (clss.si). No open source with facade detail was found. Facades and bridge detail need BIM or IFC files, or a photo survey.
