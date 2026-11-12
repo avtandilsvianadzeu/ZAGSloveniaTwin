@@ -260,4 +260,17 @@ The owner asked for the look and flow of professional digital twin platforms. Th
 - The office building in the owner's photographs is cadastre building 892: built 1984, 8 storeys in all, 23.5 m above ground. The earlier model showed only hall building 962 (1953, 14.5 m).
 - Five cadastre buildings are cut by the boundary with less than half inside and are left out (8291, 768, 1281, 1250, 1354). The owner should confirm these and the boundary.
 - Parking areas and yards are not modelled. The cadastre holds buildings only.
-- Storeys above ground are derived: height above ground divided by (full height H2 minus H1 divided by the cadastre storey count). For building 892 this gives 7, which matches the source that states 7 floors.
+- Storeys above ground are not known. The cadastre counts all storeys below and above ground (8 for building 892). An earlier derived figure of 7 was removed.
+
+### Assumptions removed, 12 November 2026
+
+Rule from the owner: if something is not known, do not assume it and do not draw it.
+
+- Window patterns and storey lines removed from all building models. They were derived, not sourced.
+- Derived "storeys above ground" removed from the data. The cadastre gives only the total of storeys below and above ground (rules on cadastre data, article 15).
+- Meaning of the cadastre heights checked against the rules (article 13): lowest height is the floor of the first storey, highest height is the top of the roof or wall, characteristic height is the terrain at the main entrance. The rules name these three heights but do not print the field codes H1, H2, H3, so the mapping of the codes is by content and by agreement with the GURS topographic heights.
+- Former Maribor Prison: the 23.2 m height was surveyed on one wing only, so the whole outline is now drawn flat and the height stays as a value for that wing.
+- Vransko bridge: bearing axes removed. The bearing span is sourced, their position along the deck is not.
+- Novo mesto footbridge: segment joints removed. Their position is not sourced. The sag at mid-span is sourced, and the curve between is drawn and labelled as not surveyed.
+- InnoRenew: part heights are drawn in proportion to storey counts and labelled as not measured.
+- ZAG office building floors: cadastre 8 storeys below and above ground, dLib source 7, owner's count on photographs 6. Listed as a difference, not resolved.
