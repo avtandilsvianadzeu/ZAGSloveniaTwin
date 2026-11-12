@@ -144,3 +144,23 @@ body.embed .thdr,body.embed .tfoot{display:none}
 }
 
 .pane-model .plabel{top:auto;bottom:30px}
+
+/* register table, view switch, ground profile */
+.viewbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:14px 0 4px}
+.regwrap{border:1px solid var(--line,#E3E6EC);border-radius:10px;background:#fff;overflow:auto;max-height:70vh}
+.reg{width:100%;border-collapse:collapse;font-size:13.5px}
+.reg th{position:sticky;top:0;background:#F5F7FA;text-align:left;padding:0;border-bottom:1px solid #DDE1E8;z-index:1}
+.reg th button{all:unset;display:block;width:100%;box-sizing:border-box;padding:9px 12px;font-weight:600;font-size:12.5px;color:#203469;cursor:pointer;white-space:nowrap}
+.reg th button:focus-visible{outline:2px solid #0A66D8;outline-offset:-2px}
+.reg th button[aria-sort=ascending]::after{content:" \25B2";font-size:9px}
+.reg th button[aria-sort=descending]::after{content:" \25BC";font-size:9px}
+.reg td{padding:8px 12px;border-bottom:1px solid #EEF0F4;vertical-align:top}
+.reg tbody tr:hover{background:#F7F9FC}
+.reg td.l a{color:#0A4FB3;font-weight:600;text-decoration:none}
+.reg td.l a:hover{text-decoration:underline}
+.prof-h{margin:14px 18px 2px;font-size:12.5px;font-weight:600;color:#203469}
+.prof-f{margin:6px 18px 0}
+.prof-f figcaption{font-size:12px;color:#5A6172;margin-bottom:2px}
+.prof-f svg{display:block;width:100%;height:auto;background:#FAFBFD;border:1px solid #E3E6EC;border-radius:8px;touch-action:pan-y}
+.prof-f svg text{font:9px Inter,system-ui,sans-serif;fill:#5A6172}
+.prof-r{font-size:12px;color:#203469;margin:4px 0 0;min-height:16px}

@@ -215,3 +215,9 @@ The owner asked for the look and flow of professional digital twin platforms. Th
 - No structure at the point for: Črna bridge, Grosuplje bridge, Planica and Rateče lifts, P2B3 Šenčur. These need a source for the exact site.
 - Selection on the main map: a building picked from the map tiles is now drawn by the tile layer itself, so it is whole. Before, pieces cut at tile edges could show half a building. Glow removed, one accent colour with a white casing.
 - Models rebuilt from published dimensions (`model` block per object in `data/twins.json`): Novo mesto footbridge (span, width, sag, segments), Čatež bridge (span lengths, support axes), Vransko bridge (length, bearing span, width). Each states its drawing choices. Other structures stay schematic until span, section and pier data are published or supplied.
+
+### Tools added on 12 November 2026
+
+- Timeline on the map page (`js/timeline.js`): a year slider with Play and All years. It shows records whose ZAG work started in or before the chosen year. Records without a year in the sources stay visible at every position.
+- Table view on the Twins page: sortable columns, the same filters as the cards, and a CSV download with coordinates and ids.
+- Ground profile on each asset page with a drawn alignment (Data tab, Geometry): terrain heights read from the Mapzen terrain tiles along the line, with a readout on hover. It is the ground surface, not the deck level or the tunnel floor.

@@ -7,7 +7,7 @@
 <meta name="description" content="GIS atlas of buildings, bridges and infrastructure where ZAG has documented involvement.">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
-<link rel="stylesheet" href="css/atlas.css?v=9">
+<link rel="stylesheet" href="css/atlas.css?v=10">
 </head>
 <body>
 <a class="skip" href="#map">Skip to map</a>
@@ -90,6 +90,7 @@
     <button id="zhome" aria-label="Show all of Slovenia" title="All of Slovenia"><i data-ic="home"></i></button>
   </div>
 
+  <div class="tl" id="tl" hidden role="group" aria-label="Timeline of ZAG work"><button type="button" id="tlPlay" aria-pressed="false">Play</button><input type="range" step="1" aria-label="Show ZAG work up to this year"><output></output><button type="button" id="tlAll" aria-pressed="true">All years</button></div>
   <div class="status" id="status"><span id="stCoord"></span><span id="stScale"></span><span id="stZoom"></span><span>WGS 84, EPSG:4326</span><span id="srcnote"></span></div>
   <div class="toast" id="toast" role="status"></div>
 </main>
@@ -110,17 +111,18 @@
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="data.js"></script>
-<script src="js/icons.js?v=9"></script>
-<script src="js/config.js?v=9"></script>
-<script src="js/basemap.js?v=9"></script>
-<script src="js/locate.js?v=9"></script>
-<script src="js/atlas-data.js"></script>
-<script src="js/layers.js?v=9"></script>
-<script src="js/panel.js?v=9"></script>
-<script src="js/list.js?v=9"></script>
-<script src="js/search.js?v=9"></script>
-<script src="js/controls.js?v=9"></script>
-<script src="js/main.js?v=9"></script>
-<script src="js/userobjects.js?v=9"></script>
+<script src="js/icons.js?v=10"></script>
+<script src="js/config.js?v=10"></script>
+<script src="js/basemap.js?v=10"></script>
+<script src="js/locate.js?v=10"></script>
+<script src="js/atlas-data.js?v=10"></script>
+<script src="js/layers.js?v=10"></script>
+<script src="js/panel.js?v=10"></script>
+<script src="js/list.js?v=10"></script>
+<script src="js/search.js?v=10"></script>
+<script src="js/controls.js?v=10"></script>
+<script src="js/main.js?v=10"></script>
+<script src="js/userobjects.js?v=10"></script>
+<script src="js/timeline.js?v=10"></script>
 </body>
 </html>

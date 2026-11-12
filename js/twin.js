@@ -127,6 +127,7 @@ function renderTwin(f){
   if(g){ const M=D.gursMeta, rows=[['Height above ground',g.height_m!=null?g.height_m.toFixed(1)+' m':null],['Footprint area',g.area_m2?num(g.area_m2)+' m²':null],['Ground level',g.ground_m!=null?g.ground_m.toFixed(1)+' m above sea level':null],
       ['Eave level',g.eave_m!=null?g.eave_m.toFixed(1)+' m above sea level':null],['Ridge level',g.ridge_m!=null?g.ridge_m.toFixed(1)+' m above sea level':null],['Use',g.use],['Surveyed',g.captured],['GURS building ID',g.dtm_id]].filter(a=>a[1]!=null);
     geo.push(`<div class="tscroll"><table><thead><tr><th>${g.user?'Outline entered by the user':'Official building (GURS)'}</th><th>Value</th></tr></thead><tbody>${rows.map(([a,b])=>`<tr><td class="l">${esc(a)}</td><td class="v">${T(b)}</td></tr>`).join('')}</tbody></table></div>${M&&!g.user?`<p class="note" style="padding:8px 18px 0">${T(M.source)}. ${T(M.licence)}.</p>`:''}`); }
+  if(lines.length){ geo.push('<div class="prof" id="prof"><p class="note" style="padding:8px 18px 0">Reading the ground profile</p></div>'); setTimeout(()=>drawProfiles(lines,labels),0); }
   sec('geometry','Geometry',geo.join(''));
   sec('record','Record data',(sRows.length||(p.facts||[]).length)?`<div class="tscroll"><table><tbody>${sRows.map(([a,b])=>`<tr><td class="l">${esc(a)}</td><td class="v">${T(b)}</td></tr>`).join('')}${(p.facts||[]).map(([a,b])=>`<tr><td class="l">${T(a)}</td><td class="v">${T(b)}</td></tr>`).join('')}</tbody></table></div>`:'');
   sec('history','History and engineering',p.hist?`<div class="in"><p>${T(p.hist)}</p></div>`:'');
@@ -403,6 +404,33 @@ function initView(p,t,g,lines,labels,opt){
 }
 
 /* ---------- platform home: all objects with counts, a type filter and a text filter ---------- */
+
+/* ---------- ground profile along the drawn alignment ----------
+   Heights are read from the same public terrain tiles the map uses (terrarium encoding), one tile zoom for the whole line. */
+const PROF_Z=13, TILE_CACHE={};
+function demTile(x,y){ const k=x+'/'+y; if(!TILE_CACHE[k]) TILE_CACHE[k]=new Promise(res=>{ const im=new Image(); im.crossOrigin='anonymous';
+    im.onload=()=>{ try{ const c=document.createElement('canvas'); c.width=c.height=256; const cx=c.getContext('2d',{willReadFrequently:true}); cx.drawImage(im,0,0,256,256); res(cx.getImageData(0,0,256,256).data); }catch(_){ res(null); } };
+    im.onerror=()=>res(null); im.src=DEM_URL.replace('{z}',PROF_Z).replace('{x}',x).replace('{y}',y); }); return TILE_CACHE[k]; }
+async function groundAt(lon,lat){ const n=Math.pow(2,PROF_Z), fx=(lon+180)/360*n, sl=Math.sin(lat*RAD), fy=(.5-Math.log((1+sl)/(1-sl))/(4*Math.PI))*n, tx=Math.floor(fx), ty=Math.floor(fy);
+  const d=await demTile(tx,ty); if(!d) return null; const px=Math.min(255,Math.floor((fx-tx)*256)), py=Math.min(255,Math.floor((fy-ty)*256)), i=(py*256+px)*4; return d[i]*256+d[i+1]+d[i+2]/256-32768; }
+async function drawProfiles(lines,labels){ const box=$('prof'); if(!box) return; const out=[];
+  for(let li=0;li<lines.length;li++){ const l=lines[li], cum=[0]; for(let k=1;k<l.length;k++) cum.push(cum[k-1]+meters(l[k-1],l[k])); const L=cum[cum.length-1]; if(!(L>0)) continue;
+    const n=Math.max(30,Math.min(160,Math.round(L/15))), pts=[];
+    for(let k=0;k<=n;k++){ const d=L*k/n; let j=1; while(j<cum.length-1&&cum[j]<d) j++; const u=(d-cum[j-1])/((cum[j]-cum[j-1])||1), lon=l[j-1][0]+(l[j][0]-l[j-1][0])*u, lat=l[j-1][1]+(l[j][1]-l[j-1][1])*u, h=await groundAt(lon,lat); if(h==null){ pts.length=0; break; } pts.push([d,h]); }
+    if(pts.length) out.push({name:labels[li]||(lines.length>1?'Part '+(li+1):'Alignment'),L,pts}); }
+  if(!out.length){ box.innerHTML='<p class="note" style="padding:8px 18px 0">The ground profile could not be read from the terrain tiles.</p>'; return; }
+  const W=360,H=110,pl=40,pr=8,pt=8,pb=20;
+  box.innerHTML='<h4 class="prof-h">Ground profile along the alignment</h4>'+out.map((o,qi)=>{ const hs=o.pts.map(q=>q[1]), lo=Math.min(...hs), hi=Math.max(...hs), sp=Math.max(1,hi-lo), X=d=>pl+(W-pl-pr)*d/o.L, Y=h=>pt+(H-pt-pb)*(1-(h-lo)/sp);
+    const path=o.pts.map((q,k)=>(k?'L':'M')+X(q[0]).toFixed(1)+' '+Y(q[1]).toFixed(1)).join(' ');
+    return `<figure class="prof-f" data-q="${qi}"><figcaption>${T(o.name)}${/\d\s*m\b/.test(o.name)?'':', '+num(Math.round(o.L))+' m'}, ground from ${num(Math.round(lo))} to ${num(Math.round(hi))} m above sea level</figcaption>
+      <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Ground profile of ${esc(o.name)}"><path d="${path} L${X(o.L).toFixed(1)} ${H-pb} L${pl} ${H-pb} Z" fill="rgba(10,102,216,.10)"/><path d="${path}" fill="none" stroke="#0A66D8" stroke-width="1.6"/>
+      <line x1="${pl}" y1="${H-pb}" x2="${W-pr}" y2="${H-pb}" stroke="#C7CCD6"/><text x="${pl-4}" y="${pt+4}" text-anchor="end">${Math.round(hi)} m</text><text x="${pl-4}" y="${H-pb}" text-anchor="end">${Math.round(lo)} m</text><text x="${pl}" y="${H-5}">0</text><text x="${W-pr}" y="${H-5}" text-anchor="end">${num(Math.round(o.L))} m</text>
+      <line class="cur" x1="0" y1="${pt}" x2="0" y2="${H-pb}" stroke="#203469" stroke-dasharray="3 3" visibility="hidden"/></svg><p class="prof-r" aria-live="polite">Move over the chart for the level at a point.</p></figure>`; }).join('')
+    +`<p class="note" style="padding:6px 18px 0">Terrain surface from the Mapzen terrain tiles, read about every ${Math.round(156543*Math.cos(lines[0][0][1]*RAD)/Math.pow(2,PROF_Z))} m. It is the ground, not the deck level or the tunnel floor.</p>`;
+  box.querySelectorAll('.prof-f').forEach(f=>{ const o=out[+f.dataset.q], svg=f.querySelector('svg'), cur=f.querySelector('.cur'), r=f.querySelector('.prof-r');
+    const mv=e=>{ const b=svg.getBoundingClientRect(), x=((e.touches?e.touches[0].clientX:e.clientX)-b.left)/b.width*W, d=Math.max(0,Math.min(o.L,(x-pl)/(W-pl-pr)*o.L)), k=Math.round(d/o.L*(o.pts.length-1)), q=o.pts[k]; const cx=pl+(W-pl-pr)*q[0]/o.L; cur.setAttribute('x1',cx); cur.setAttribute('x2',cx); cur.setAttribute('visibility','visible'); r.textContent=`At ${num(Math.round(q[0]))} m along the part the ground is at ${num(Math.round(q[1]))} m above sea level.`; };
+    svg.addEventListener('mousemove',mv); svg.addEventListener('touchmove',mv,{passive:true}); });
+}
 function renderIndex(){
   document.title='Digital twins, ZAG Digital Atlas';
   const groups={}; for(const f of D.features){const k=f.properties.object_type||'other';(groups[k]=groups[k]||[]).push(f.properties);}
@@ -413,6 +441,7 @@ function renderIndex(){
   const card=p=>{const t=D.twins[p.id],n=t?(t.specs||[]).length:0;
     return `<a class="obj" href="twin.html?id=${encodeURIComponent(p.id)}" data-g="${esc(p.object_type||'other')}" data-q="${esc((p.name_en+' '+(p.name_sl||'')+' '+(p.locality||'')).toLowerCase())}"><b>${T(p.name_en||p.name)}</b><span>${T(p.locality||p.municipality||'')}</span>
       <div class="tags">${n?`<span class="tag">${n} ${n===1?'specification':'specifications'}</span>`:''}${hasGeo(p)?'<span class="tag ok">3D geometry</span>':''}${EXACT(p.position_precision)?'':'<span class="tag warn">approximate position</span>'}</div></a>`;};
+  const COLS=[['Name',p=>p.name_en||p.name],['Type',p=>GROUP_NAME[p.object_type]||cap(p.object_type||'other')],['Place',p=>p.locality||p.municipality||''],['ZAG work',p=>String(p.year||'').replace(/^(\d{4})-(\d{4})$/,'$1 to $2').replace(/^(\d{4})-$/,'since $1')],['Built',p=>p.built||''],['Position',p=>EXACT(p.position_precision)?'exact':'approximate'],['Sourced values',p=>{const t=D.twins[p.id];return t?(t.specs||[]).filter(x=>x.source).length:0;}]];
   $('main').innerHTML=`<div class="wrap home"><h1>Digital twins</h1><p class="lead">Structures and sites where ZAG has documented work. Each opens its own sheet with a 3D view, key figures and specifications with sources.</p>
     <section class="dims" aria-label="Platform figures">
       <div class="dim"><div class="v">${D.features.length}</div><div class="k">objects</div></div>
@@ -423,13 +452,22 @@ function renderIndex(){
     </section>
     <div class="filters"><input class="find" id="find" type="search" placeholder="Filter by name or place" aria-label="Filter by name or place">
       <div class="pills" role="group" aria-label="Type"><button class="pill" type="button" data-g="" aria-pressed="true">All</button>${order.map(k=>`<button class="pill" type="button" data-g="${esc(k)}" aria-pressed="false">${esc(GROUP_NAME[k]||cap(k))} <i>${groups[k].length}</i></button>`).join('')}</div></div>
+    <div class="viewbar"><div class="seg" role="group" aria-label="View"><button type="button" id="vwCards" aria-pressed="true">Cards</button><button type="button" id="vwTable" aria-pressed="false">Table</button></div><button type="button" class="tbtn" id="csvAll">Download table as CSV</button></div>
     <p class="note" id="count" aria-live="polite"></p>
+    <div class="tscroll regwrap" id="regwrap" hidden><table class="reg" id="reg"><thead><tr>${COLS.map((c,i)=>`<th><button type="button" data-col="${i}">${c[0]}</button></th>`).join('')}</tr></thead><tbody></tbody></table></div>
     ${order.map(k=>`<section class="grp" data-g="${esc(k)}"><h3>${esc(GROUP_NAME[k]||cap(k))}</h3><div class="grid">${groups[k].map(card).join('')}</div></section>`).join('')}</div>`;
-  let grp='', q='';
+  let grp='', q='', sortC=0, sortD=1, view='cards';
+  const rowsNow=()=>D.features.map(f=>f.properties).filter(p=>(!grp||(p.object_type||'other')===grp)&&(!q||(p.name_en+' '+(p.name_sl||'')+' '+(p.locality||'')).toLowerCase().includes(q))).sort((a,b)=>{ const x=COLS[sortC][1](a), y=COLS[sortC][1](b); return (typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y),'sl',{numeric:true}))*sortD; });
+  const drawTable=()=>{ $('reg').querySelector('tbody').innerHTML=rowsNow().map(p=>`<tr>${COLS.map((c,i)=>i?`<td>${T(String(c[1](p)))}</td>`:`<td class="l"><a href="twin.html?id=${encodeURIComponent(p.id)}">${T(c[1](p))}</a></td>`).join('')}</tr>`).join(''); $('reg').querySelectorAll('th button').forEach(b=>b.setAttribute('aria-sort',+b.dataset.col===sortC?(sortD>0?'ascending':'descending'):'none')); };
+  const setView=v=>{ view=v; $('vwCards').setAttribute('aria-pressed',v==='cards'?'true':'false'); $('vwTable').setAttribute('aria-pressed',v==='table'?'true':'false'); $('regwrap').hidden=v!=='table'; document.querySelectorAll('.grp').forEach(s=>s.style.display=v==='table'?'none':''); if(v==='table') drawTable(); };
   const apply=()=>{ let n=0; document.querySelectorAll('.obj').forEach(a=>{ const ok=(!grp||a.dataset.g===grp)&&(!q||a.dataset.q.includes(q)); a.hidden=!ok; if(ok) n++; });
     document.querySelectorAll('.grp').forEach(s=>s.hidden=!s.querySelector('.obj:not([hidden])')); $('count').textContent=(grp||q)?`${n} of ${D.features.length} objects shown`:''; };
-  $('find').oninput=e=>{ q=e.target.value.trim().toLowerCase(); apply(); };
-  document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{ grp=b.dataset.g; document.querySelectorAll('.pill').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false')); apply(); });
+  $('find').oninput=e=>{ q=e.target.value.trim().toLowerCase(); apply(); if(view==='table') drawTable(); };
+  $('vwCards').onclick=()=>setView('cards'); $('vwTable').onclick=()=>setView('table');
+  $('reg').querySelectorAll('th button').forEach(b=>b.onclick=()=>{ const c=+b.dataset.col; if(c===sortC) sortD=-sortD; else { sortC=c; sortD=1; } drawTable(); });
+  $('csvAll').onclick=()=>{ const cell=v=>'"'+String(v).replace(/"/g,'""')+'"', txt=[COLS.map(c=>cell(c[0])).concat(['"Latitude"','"Longitude"','"ID"']).join(',')].concat(rowsNow().map(p=>COLS.map(c=>cell(c[1](p))).concat([p.latitude,p.longitude,cell(p.id)]).join(','))).join('\r\n');
+    const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob(['\ufeff'+txt],{type:'text/csv'})); a.download='zag_atlas_objects.csv'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000); };
+  document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{ grp=b.dataset.g; document.querySelectorAll('.pill').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false')); apply(); if(view==='table') drawTable(); });
 }
 
 if(new URLSearchParams(location.search).has('embed')) document.body.classList.add('embed');
