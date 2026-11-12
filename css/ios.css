@@ -148,3 +148,4 @@ dialog::backdrop{background:rgba(0,0,0,.28)}
 .hdr .hright{gap:6px}
 .hdr .hsearch{min-width:120px;flex:1 1 140px}
 @media (max-width:1480px){.hdr #nav button{padding:0 6px;font-size:13px}.hdr .tgl,.hdr .seg button{padding:0 8px;font-size:12.5px}.hdr .hsearch{min-width:90px;flex-basis:90px}.hdr .brand b{display:none}}
+.tag{display:inline-flex;align-items:center;line-height:1}

@@ -91,6 +91,7 @@ $('imp').onchange=async e=>{ const f=e.target.files[0]; if(!f) return; try{ cons
 (function initMap(){ const box=$('amap'); if(typeof maplibregl==='undefined'){ box.innerHTML='<div class="vfail">The map could not load. Paste coordinates or load a file instead.</div>'; return; }
   let m; try{ m=new maplibregl.Map({container:box,style:STYLE_URL,center:[14.82,46.12],zoom:7.2,attributionControl:{compact:true}}); }catch(_){ box.innerHTML='<div class="vfail">The map is not available in this browser. Paste coordinates or load a file instead.</div>'; return; }
   m.addControl(new maplibregl.NavigationControl(),'top-right'); m.getCanvas().style.cursor='crosshair';
+  { const paint=()=>{ try{ if(window.iosMap) iosMap(m); }catch(_){} }; m.on('style.load',paint); m.once('load',paint); }
   m.on('load',()=>{ m.addSource('shape',{type:'geojson',data:{type:'FeatureCollection',features:[]}});
     m.addLayer({id:'shape-l',type:'line',source:'shape',filter:['==',['geometry-type'],'LineString'],paint:{'line-color':'#007AFF','line-width':4}});
     m.addLayer({id:'shape-p',type:'circle',source:'shape',filter:['==',['geometry-type'],'Point'],paint:{'circle-radius':5,'circle-color':'#fff','circle-stroke-color':'#203469','circle-stroke-width':2.5}});

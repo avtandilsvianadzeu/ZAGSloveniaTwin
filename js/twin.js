@@ -423,8 +423,8 @@ function initView(p,t,g,lines,labels,opt){
   if(typeof maplibregl==='undefined') return fail('The map could not load. The data sheet is complete without it.');
   const ll=[p.longitude,p.latitude], exact=EXACT(p.position_precision), unc=UNC[p.position_precision];
   const zoom=g?17:p.position_precision==='address'?16.8:p.position_precision==='municipality'?11.8:exact?15.5:13.2;
-  let map; try{ map=new maplibregl.Map({container:box,style:STYLE_URL,center:ll,zoom,pitch:55,bearing:-20,maxPitch:85,attributionControl:{compact:true},fadeDuration:0,maxTileCacheSize:600,pixelRatio:Math.min(window.devicePixelRatio||1,1.5)}); }catch(_){ return fail('The map is not available in this browser. The data sheet is complete without it.'); }
-  map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'top-right'); window.__map=map;
+  let map; try{ map=new maplibregl.Map({container:box,style:STYLE_URL,center:ll,zoom,pitch:55,bearing:-20,maxPitch:85,attributionControl:{compact:true},fadeDuration:0,maxTileCacheSize:600,pixelRatio:Math.min(window.devicePixelRatio||1,2)}); }catch(_){ return fail('The map is not available in this browser. The data sheet is complete without it.'); }
+  map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'top-right'); window.__map=map; { const paint=()=>{ try{ if(window.iosMap) iosMap(map); }catch(_){} }; map.on('style.load',paint); map.once('load',paint); }
   if('ResizeObserver' in window) new ResizeObserver(()=>{ try{ map.resize(); }catch(e){} }).observe(map.getContainer());
   const anchors=(t&&t.anchors)||[], mid=l=>l[Math.floor(l.length/2)];
   let is3d=true; const B=()=>is3d?-20:0, Pch=()=>is3d?55:0;
