@@ -43,7 +43,7 @@ function look(L,T,B){
   else if(id==='building-3d'){o['fill-extrusion-color']=p.bld3;o['fill-extrusion-opacity']=T==='dark'?.92:.88;o['fill-extrusion-vertical-gradient']=true;}
   else if(id==='boundary_2'){o['line-color']=sat?'rgba(255,255,255,.75)':p.border;}
   else if(id==='boundary_3'){o['line-color']=sat?'rgba(255,255,255,.4)':p.border2;}
-  else if(id==='hillshade'){o['hillshade-exaggeration']=.5;o['hillshade-shadow-color']=p.hsS;o['hillshade-highlight-color']=p.hsH;o['hillshade-accent-color']=p.hsA;if(sat)vis='none';}
+  else if(id==='hillshade'){o['hillshade-exaggeration']=.32;o['hillshade-shadow-color']=p.hsS;o['hillshade-highlight-color']=p.hsH;o['hillshade-accent-color']=p.hsA;if(sat)vis='none';}
   else if(id==='sat'){vis=B==='sat'?'visible':'none';}
   else if(id==='dof'){vis=B==='dof'?'visible':'none';}
   if(L.type==='symbol'&&L.layout&&L.layout['text-field']&&!/shield/.test(id)){

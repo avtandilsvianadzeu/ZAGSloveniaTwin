@@ -2,7 +2,7 @@
 /* Layers: overlay sources and layers (uncertainty area, selected footprint, selected alignment, ZAG records)
    and the runtime match of a record to the real structure in the OpenStreetMap vector tiles. */
 function addAtlasLayers(){
-  for(const t of Object.keys(MARK)) for(const k of ['doc','fac','ref']) map.addImage(`m-${t}-${k}`,markerImage(t,k),{pixelRatio:2});
+  for(const t of Object.keys(MARK)) for(const k of ['doc','fac','ref']) map.addImage(`m-${t}-${k}`,markerImage(t,k),{pixelRatio:3});
   const E0={type:'FeatureCollection',features:[]};
   ['unc','hl','sel'].forEach(s=>map.addSource(s,{type:'geojson',data:E0}));
   map.addSource('sites',{type:'geojson',data:E0,cluster:true,clusterRadius:44,clusterMaxZoom:11});
@@ -17,8 +17,9 @@ function addAtlasLayers(){
   map.addLayer({id:'hl-line',type:'line',source:'hl',layout:{'line-join':'round'},paint:{'line-color':ACCD,'line-width':1.5}},firstSym);
   map.addLayer({id:'sel-c',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#fff','line-width':['interpolate',['linear'],['zoom'],10,6,16,10]}});
   map.addLayer({id:'sel-l',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':ACC,'line-width':['interpolate',['linear'],['zoom'],10,3.5,16,6]}});
-  map.addLayer({id:'clu',type:'circle',source:'sites',filter:['has','point_count'],paint:{'circle-color':'#2F5597','circle-radius':['step',['get','point_count'],15,5,18,12,22],'circle-stroke-color':'#fff','circle-stroke-width':2.5}});
-  map.addLayer({id:'clu-n',type:'symbol',source:'sites',filter:['has','point_count'],layout:{'text-field':['to-string',['get','point_count']],'text-font':fonts,'text-size':12.5,'text-allow-overlap':true},paint:{'text-color':'#fff'}});
+  map.addLayer({id:'clu-s',type:'circle',source:'sites',filter:['has','point_count'],paint:{'circle-color':'rgba(0,0,0,.22)','circle-blur':.7,'circle-radius':['step',['get','point_count'],21,5,24,12,28],'circle-translate':[0,2.5]}});
+  map.addLayer({id:'clu',type:'circle',source:'sites',filter:['has','point_count'],paint:{'circle-color':'#007AFF','circle-radius':['step',['get','point_count'],15,5,18,12,22],'circle-stroke-color':'#fff','circle-stroke-width':3}});
+  map.addLayer({id:'clu-n',type:'symbol',source:'sites',filter:['has','point_count'],layout:{'text-field':['to-string',['get','point_count']],'text-font':fonts,'text-size':13.5,'text-allow-overlap':true},paint:{'text-color':'#fff'}});
   map.addLayer({id:'pt-news',type:'circle',source:'sites',filter:['==',['get','id'],'__none__'],paint:{'circle-radius':['interpolate',['linear'],['zoom'],7,13,13,17],'circle-color':'rgba(230,57,70,0)','circle-stroke-color':'#E63946','circle-stroke-width':2.2,'circle-stroke-opacity':.85}});
   map.addLayer({id:'pt',type:'symbol',source:'sites',filter:['!',['has','point_count']],layout:{'icon-image':['get','ic'],'icon-allow-overlap':true,'icon-size':['interpolate',['linear'],['zoom'],7,.75,13,.95,17,1.1]}});
   map.addLayer({id:'pt-l',type:'symbol',source:'sites',filter:['!',['has','point_count']],minzoom:9,layout:{'text-field':['get','n'],'text-font':fonts,'text-size':12,'text-offset':[1.3,0],'text-anchor':'left','text-optional':true,'text-max-width':14},paint:{'text-color':'#1C1C1E','text-halo-color':'rgba(255,255,255,.95)','text-halo-width':1.6}});

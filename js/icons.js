@@ -25,10 +25,11 @@ const MARK={
   'tower / mast':'M12 3v18M7 21l5-18 5 18M9 14h6', building:'M5 20V9l7-5 7 5v11M10 20v-6h4v6M5 20h14', company:'M5 20V9l7-5 7 5v11M10 20v-6h4v6M5 20h14', institution:'M4 10h16M6 10v8M10 10v8M14 10v8M18 10v8M4 20h16M4 10l8-5 8 5',
   'study area (earthquake)':'M3 12h4l2-5 3 10 3-8 2 3h4', 'geotechnical site':'M3 18l6-10 4 6 3-3 5 7z', landslide:'M4 6l8 8-4 6M12 14l8 4', other:'M12 4v16M4 12h16'};
 function markerImage(type,kind){
-  const S=56,c=document.createElement('canvas');c.width=c.height=S;const g=c.getContext('2d');
-  const col=kind==='fac'?'#1F3A6B':kind==='ref'?'#7A8696':'#2F5597';
-  const r=12; g.beginPath(); g.roundRect(4,4,S-8,S-8,r); g.fillStyle=col; g.fill(); g.lineWidth=3; g.strokeStyle='#fff'; g.stroke();
-  g.save(); g.translate(10,10); g.scale(1.5,1.5); g.strokeStyle='#fff'; g.lineWidth=1.9; g.lineCap='round'; g.lineJoin='round';
+  const S=96,c=document.createElement('canvas');c.width=c.height=S;const g=c.getContext('2d');
+  const col=kind==='fac'?'#5856D6':kind==='ref'?'#8E8E93':'#007AFF';
+  g.save(); g.shadowColor='rgba(0,0,0,.30)'; g.shadowBlur=9; g.shadowOffsetY=3; g.beginPath(); g.arc(S/2,S/2-2,33,0,Math.PI*2); g.fillStyle='#fff'; g.fill(); g.restore();
+  g.beginPath(); g.arc(S/2,S/2-2,28.5,0,Math.PI*2); g.fillStyle=col; g.fill();
+  g.save(); g.translate(S/2-27,S/2-29); g.scale(2.25,2.25); g.strokeStyle='#fff'; g.lineWidth=1.8; g.lineCap='round'; g.lineJoin='round';
   g.stroke(new Path2D(MARK[type]||MARK.other)); g.restore();
   return g.getImageData(0,0,S,S);
 }

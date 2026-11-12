@@ -13,7 +13,7 @@ async function boot(){
   map=new maplibregl.Map({container:'map',style,center:[14.99,46.15],zoom:7.1,pitch:0,maxPitch:80,hash:false,maxTileCacheSize:600,pixelRatio:Math.min(window.devicePixelRatio||1,2),
     attributionControl:{compact:true,customAttribution:'Geocoding <a href="https://photon.komoot.io" target="_blank" rel="noopener">Photon</a>'},
     maxBounds:[[11.5,44.6],[18.5,47.7]],fadeDuration:200,canvasContextAttributes:{antialias:true}});
-  window.zagMap=map; { const paint=()=>{ try{ if(window.iosMap) iosMap(map); }catch(_){} }; map.on('style.load',paint); map.once('load',paint); }
+  window.zagMap=map;
   map.on('load',async()=>{
     addAtlasLayers(); ready=true;
     if(is3d) map.setTerrain({source:'dem-terrain',exaggeration:1});

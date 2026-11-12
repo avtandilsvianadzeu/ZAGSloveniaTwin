@@ -26,12 +26,12 @@ const SI_BOUNDS=[[13.375,45.421],[16.610,46.876]];
 const DCOL={bridge:'#0A84FF',ai:'#7D5BE6',build:'#D98A13',mat:'#22A55C',fire:'#F0483B',geo:'#A0703C',energy:'#13A4BA',herit:'#D63F9B',inst:'#6E7687',tunnel:'#5E5CE6',cable:'#14A3A3',quake:'#C9602F'};
 const DOMC=k=>`var(--d-${k||'inst'})`;
 const PAL={
- light:{land:'#F6F4EF',park:'#CDE6BD',wood:'rgba(150,200,130,.42)',grass:'rgba(180,215,150,.38)',ice:'#F2F7FA',sand:'#F3EAC8',resid:'rgba(233,228,219,.75)',misc:'#E3ECD3',
+ light:{land:'#F6F4EF',park:'#CDE6BD',wood:'rgba(165,208,146,.30)',grass:'rgba(190,220,165,.26)',ice:'#F2F7FA',sand:'#F3EAC8',resid:'rgba(233,228,219,.75)',misc:'#E3ECD3',
   water:'#A5D0F3',aero:'#E6E3DD',runway:'#D3D0CA',
-  mw:'#FFCB57',mwC:'#E3A53C',tr:'#FFE9A6',trC:'#E2C37E',sec:'#FFFFFF',secC:'#D5CEC1',min:'#FFFFFF',minC:'#DDD8CF',path:'#FFFFFF',rail:'#B5B0A9',
+  mw:'#FFDD85',mwC:'#EFC56C',tr:'#FFF0BF',trC:'#E8D29A',sec:'#FFFFFF',secC:'#D5CEC1',min:'#FFFFFF',minC:'#DDD8CF',path:'#FFFFFF',rail:'#B5B0A9',
   bld:'#E4DFD7',bldE:'#D5CFC5',bld3:'#EAE6DF',border:'#9C8FB8',border2:'#C3BCCB',
   txt:'#3A3A3C',place:'#1C1C1E',halo:'rgba(255,255,255,.92)',wtxt:'#3D78B5',rtxt:'#6E6A64',
-  hsS:'rgba(95,80,60,.42)',hsH:'rgba(255,255,255,.35)',hsA:'rgba(120,100,80,.25)',
+  hsS:'rgba(95,80,60,.20)',hsH:'rgba(255,255,255,.30)',hsA:'rgba(120,100,80,.10)',
   sky:'#A9CBF2',hor:'#E9EFF5',fog:'#F6F4EF'},
  dark:{land:'#1E1F22',park:'#1D3123',wood:'rgba(45,85,55,.45)',grass:'rgba(50,85,55,.35)',ice:'#2B3036',sand:'#3A3627',resid:'rgba(44,45,49,.75)',misc:'#24302A',
   water:'#17293D',aero:'#2A2B2F',runway:'#3A3B40',

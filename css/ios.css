@@ -149,3 +149,76 @@ dialog::backdrop{background:rgba(0,0,0,.28)}
 .hdr .hsearch{min-width:120px;flex:1 1 140px}
 @media (max-width:1480px){.hdr #nav button{padding:0 6px;font-size:13px}.hdr .tgl,.hdr .seg button{padding:0 8px;font-size:12.5px}.hdr .hsearch{min-width:90px;flex-basis:90px}.hdr .brand b{display:none}}
 .tag{display:inline-flex;align-items:center;line-height:1}
+
+/* ---------- second pass: inset grouped lists, as in iOS Settings ---------- */
+/* side columns: a soft grey ground with white rounded cards */
+.tree,.insp{background:#F2F2F7;border:0}
+.tree{padding:12px 12px 20px}
+.asset,.tree .tsec{background:#fff;border:0;border-radius:16px;padding:16px;margin:0 0 12px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.asset h1{font-size:30px;font-weight:700;letter-spacing:-.028em;color:var(--ink)}
+.asset .sl{font-size:15px;color:var(--muted)}
+.asset .kind{font-size:13px;color:var(--blue)}
+.asset .tags{gap:6px;margin-top:12px}
+.meta div,.kf{font-size:13.5px;padding:9px 0;border-top:1px solid var(--sep)}
+.meta div:first-child,.kf:first-of-type{border-top:0}
+.kf a,.kf small{font-size:11.5px;color:var(--tert);text-decoration:none}
+.tsec h2,.blk-h{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
+.asset .btnrow{gap:8px;margin-top:14px}
+.asset .btnrow .tbtn,.btncol .tbtn{height:44px;border-radius:12px;font-size:15px}
+/* right column: segmented tabs and cards */
+.tabs{margin:12px 12px 4px;padding:2px;border:0;border-radius:10px;background:var(--fill);position:sticky;top:8px;z-index:3;gap:0}
+.tabs button{height:32px;border:0;border-radius:8px;font-size:12.5px;font-weight:500;color:var(--ink);padding:0 2px;white-space:nowrap}
+.tabs button[aria-selected="true"]{background:#fff;color:var(--ink);font-weight:600;border:0;box-shadow:0 1px 3px rgba(0,0,0,.12),0 0 0 .5px rgba(0,0,0,.04)}
+.tabpan{padding:8px 12px 24px}
+.tabpan .pickbox,.alldata,.blk{background:#fff;border:0;border-radius:16px;padding:16px;margin:0 0 12px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.blk .open{margin:10px 0 0;border-radius:12px}
+.pickbox b{font-size:20px;font-weight:700;letter-spacing:-.022em}
+.pickbox p{font-size:13.5px;line-height:1.4}
+/* value rows: label left, value right, source as one quiet line under the value */
+.pickbox .row,.alldata .row{align-items:flex-start;gap:14px;padding:10px 0;font-size:13.5px;line-height:1.35}
+.pickbox .row:first-of-type{border-top:0}
+.alldata .row span:first-child{flex:1 1 55%}
+.alldata .row span:last-child{flex:0 1 45%;font-weight:600;color:var(--ink)}
+.alldata .row span:last-child a{display:block;margin:2px 0 0;font-size:11.5px;font-weight:400;color:var(--tert);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.alldata .row span:last-child a:hover{color:var(--blue)}
+.alldata .ev{margin:-2px 0 8px}
+/* top bar: plain blue text for navigation, one filled main action */
+.thdr .tbtn:not(.solid){background:transparent;padding:0 10px}
+.thdr .tbtn:not(.solid):hover{background:var(--fill)}
+.thdr .tbtn.solid{border-radius:999px;padding:0 18px}
+.thdr .jump{border-radius:10px;height:36px}
+/* view bar and model tools: compact, on one line */
+.vtools{padding:10px 12px;gap:10px;border-bottom:0;background:#F2F2F7}
+.view{background:#F2F2F7}
+.panes{margin:0 0 0 0}
+.pane{border-radius:16px;margin:0 6px 8px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.panes[data-layout="split"] .pane:first-child,.panes .pane:first-child{margin-left:12px}.panes .pane:last-child{margin-right:12px}
+.ptools{gap:6px}
+.ptools .tbtn{height:30px;padding:0 11px;font-size:12.5px;border-radius:8px;background:rgba(255,255,255,.92);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.ptools .tbtn[aria-pressed="true"]{background:var(--blue);color:#fff}
+.ptools .seg{background:rgba(255,255,255,.92);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.ptools .seg button{height:26px;padding:0 10px;font-size:12.5px}
+.ptools .seg button[aria-pressed="true"]{background:var(--fill2);box-shadow:none}
+.plabel{font-size:11.5px;max-width:calc(100% - 20px)}
+.vstatus{background:#F2F2F7;border-top:0;font-size:11.5px;color:var(--tert);padding:4px 16px 8px}
+@media (max-width:900px){.tree{padding:8px}.pane{margin:0 8px 8px}}
+
+/* ---------- third pass: buttons that look pressable ---------- */
+/* raised white keys with a light edge and a soft shadow. Pressed keys sink. The main action is a blue key. */
+.tbtn,.btn,.tgl,.tl button{background:linear-gradient(#FFFFFF,#F1F2F5);color:var(--blue);border:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 0 0 .5px rgba(0,0,0,.14),0 1px 2px rgba(0,0,0,.12),0 2px 6px rgba(0,0,0,.05);cursor:pointer}
+.tbtn:hover,.btn:hover,.tgl:hover:not([aria-pressed="true"]),.tl button:hover{background:linear-gradient(#FFFFFF,#E9EBF0);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 0 0 .5px rgba(0,0,0,.18),0 2px 4px rgba(0,0,0,.14),0 4px 10px rgba(0,0,0,.07)}
+.tbtn:active,.btn:active,.tgl:active,.tl button:active{background:linear-gradient(#E7E9EE,#F1F2F5);box-shadow:inset 0 1px 3px rgba(0,0,0,.22),0 0 0 .5px rgba(0,0,0,.16);transform:translateY(.5px)}
+.tgl{color:var(--ink)}
+.tbtn.solid,.tbtn[aria-pressed="true"],.btn.twinlink,.tgl[aria-pressed="true"],.tl button[aria-pressed=true]{background:linear-gradient(#2A93FF,#0070F0);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 .5px rgba(0,60,140,.55),0 1px 2px rgba(0,80,200,.35),0 3px 8px rgba(0,122,255,.28)}
+.tbtn.solid:hover,.tbtn[aria-pressed="true"]:hover,.btn.twinlink:hover{background:linear-gradient(#1F8BFA,#0066DD)}
+.tbtn.solid:active,.tbtn[aria-pressed="true"]:active,.btn.twinlink:active{background:linear-gradient(#0066DD,#0A78F5);box-shadow:inset 0 1px 3px rgba(0,30,90,.45),0 0 0 .5px rgba(0,60,140,.6)}
+.thdr .tbtn:not(.solid){background:linear-gradient(#FFFFFF,#F1F2F5);padding:0 12px}
+/* model tools: view switch on the left, actions on the right, one line */
+.ptools{flex-wrap:nowrap}
+.ptools .seg{margin-right:auto;background:linear-gradient(#FFFFFF,#F1F2F5);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 0 0 .5px rgba(0,0,0,.14),0 1px 2px rgba(0,0,0,.12)}
+.ptools .seg button[aria-pressed="true"]{background:linear-gradient(#2A93FF,#0070F0);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.ptools .tbtn{height:32px;padding:0 12px;font-size:13px;background:linear-gradient(#FFFFFF,#F1F2F5)}
+.ptools .tbtn[aria-pressed="true"]{background:linear-gradient(#2A93FF,#0070F0);color:#fff}
+#mMeasure[aria-pressed="true"]{background:linear-gradient(#FF8A3D,#E8590C);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 .5px rgba(150,60,0,.55),0 2px 6px rgba(232,89,12,.3)}
+#fem.measuring{cursor:crosshair}
+@media (max-width:520px){.ptools{flex-wrap:wrap}}
