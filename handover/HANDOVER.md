@@ -424,3 +424,13 @@ Open after the checks:
 - Structurae now shows one length, 757 m, for Golo Rebro. The stored 750 m and 786 m were not on the page. Listed as a difference.
 - Positions: the Planica and Rateče cableway records moved from the settlement centre onto the chairlifts mapped in OpenStreetMap (ways 373928812 and 292050650), with the line drawn and precision "site". Both links are inferences and are written as such on the pages. Črna, Šenčur, Grosuplje and Kamnik stay approximate: no source that was opened names the exact object.
 - Asset page: Print report and Data file buttons. The site map opens on the whole site. No animation.
+
+## Source pages, full reread (12 November 2026, evening)
+
+- Reader - handover/dev_tools/qf2.js now follows a host that moved to or from www. (run(k) takes the list key by hand).
+- Pages read - 150 pages or files from about 90 hosts, list with text sizes in research/recheck_2026_11/source_pages_read_2026_11_12.json.
+- Quote check - 564 values have source text in hand. 436 quotes match the page literally, 124 more match once accents, tables or line breaks are allowed for (already noted on each value). Golovec cost and lighting quotes now checked word for word. Golovec contractor quote stays unverified (STA article for subscribers only).
+- New quotes - 15 values (Stože areas, Straža and Čaplja chairlifts, Počivalo chairlift, Strunjan instruments, Karavanke road tunnel operation, HE Vrhovo owner, funicular valley station, Golte from RTV SLO because the Golte page no longer exists). Field quote_source holds the page a quote came from when it is not the cited source.
+- New differences - Golo Rebro (Structurae now 757 m and 1 tube), Karavanke railway tunnel (tubes and boring method not on Wikipedia).
+- Still refused by the Chrome extension - dlib.si, uradni-list.si, ic-group.org, tunnelbuilder.com, power-technology.com, ojs-gr.zrc-sazu.si, graz.elsevierpure.com (JS), core.ac.uk and wcee.nicee.org (403 or bot check), lift-world.info (connection error). The owner can allow all sites in the extension settings.
+- Count now - 1,105 values, 917 with quote, 90 with "how obtained" note, 98 with neither.
