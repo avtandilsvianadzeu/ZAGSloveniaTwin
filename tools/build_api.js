@@ -5,6 +5,7 @@ const fs=require('fs'), path=require('path'), ROOT=path.join(__dirname,'..'), OU
 const J=f=>JSON.parse(fs.readFileSync(path.join(ROOT,f),'utf8'));
 const geo=J('data/zag_projects.geojson'), twins=J('data/twins.json').objects||{}, gurs=(J('data/gurs_buildings.json').buildings)||{}, rebuild=(J('data/rebuild_status.json').items)||{};
 const own=(J('data/ownership.json').items)||{};
+const off=(J('data/official_check.json').items)||{};
 const clean=s=>typeof s==='string'?s.replace(/\s*—\s*/g,', ').replace(/(\d)\s*–\s*(\d)/g,'$1 to $2').replace(/–/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+/g,' ').trim():s;
 /* quotes are verbatim source text and stay as printed */
 const deep=v=>Array.isArray(v)?v.map(deep):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,k==='quote'?x:deep(x)])):clean(v);
@@ -24,6 +25,7 @@ for(const f of geo.features){ const p=f.properties, t=twins[p.id]||{}, g=gurs[p.
     position_sources:p.position_sources||[],record_sources:(p.sources||[]).map(s=>({title:s.title,url:s.url,type:s.type})),
     specifications:(t.specs||[]).map(s=>({label:s.label,value:s.value,unit:s.unit||'',source:s.source||null,quote:s.quote||null})),source_differences:t.differences||[],open_question:t.open||null,reference_points:t.anchors||[],model_basis:t.model||null,rebuild_status:rebuild[p.id]||null,cadastre_owner_and_manager:own[p.id]||null,
     geometry:{point:[p.longitude,p.latitude],alignment:p.lines||(p.line?[p.line]:null),alignment_labels:p.line_labels||null,building:g?{height_m:g.height_m??null,area_m2:g.area_m2??null,outline:g.geometry}:null},
+    official_place_and_line_check:off[p.id]||null,
     laser_scan:g&&g.scan?{source:'GURS, laser scanning of Slovenia (CLSS), file series NDMP, 0.5 m pixels. The values are read as heights above the ground. This reading rests on the agreement with the cadastre heights, since no official description of the series was found',files:g.scan.files.map(x=>'https://ipi.eprostor.gov.si/javne-datoteke/DALJINSKO_ZAZNAVANJE/CLSS/ndmp/'+x),read:g.scan.read,height_cells:BASE+g.scan.grid,whole_outline:g.scan.stats||g.scan.group||null,buildings:(g.parts||[]).filter(q=>q.scan).map((q,i)=>({building:q.kn!=null?q.kn:'part '+(i+1),cadastre_highest_point_m:q.h??null,...q.scan}))}:null})); }
 W('objects.geojson',{type:'FeatureCollection',features:geo.features.map(f=>{ const p=f.properties, r=rows.find(x=>x.id===p.id), ln=p.lines||(p.line?[p.line]:null);
   return {type:'Feature',id:p.id,geometry:ln?{type:'MultiLineString',coordinates:ln}:{type:'Point',coordinates:[p.longitude,p.latitude]},properties:r}; })});

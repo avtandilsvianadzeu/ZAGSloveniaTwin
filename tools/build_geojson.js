@@ -25,9 +25,13 @@ const involvement = e => { if (e.cls === 'inst') return null; for (const [re, v]
 // text corrections backed by the research pass (operator / registry pages); each must match or the build fails loudly
 const TEXT_FIX = [
  ['tomacevo', 'carries', 'H3 northern ring road', 'Road no. 104 (Ljubljana ring road)'],
- ['he_vuhred', 'loc', 'Radlje ob Dravi', 'Podvelka'],
- ['he_arto', 'loc', 'Sevnica', 'Krško'],
- ['pletovarje', 'loc', 'Slovenske Konjice', 'Šentjur'],
+ /* places follow the GURS register of spatial units at the stored point and at the line ends, read 12 November 2026 */
+ ['pletovarje', 'loc', 'Pletovarje, Slovenske Konjice', 'Pletovarje, Slovenske Konjice and Šentjur'],
+ ['soca_quake', 'loc', 'Kobarid', 'Lepena, Bovec'],
+ ['ravbarkomanda', 'loc', 'A1 between Planina and Postojna', 'A1 between Planina and Postojna, Postojna'],
+ ['karavanke_c', 'loc', 'Hrušica, Jesenice', 'Hrušica, Jesenice and Kranjska Gora'],
+ ['kastelec', 'loc', 'Kastelec, Koper', 'Kastelec, Koper and Hrpelje-Kozina'],
+ ['markovec', 'loc', 'Koper', 'Koper and Izola'],
  ['pecna_reber', 'sl', 'Pecna', 'Pečna'],
  ['rtp_gorica', 'detail', 'RTP 110/20/10 kV', 'RTP 110/20 kV'],
  /* 12 November 2026, after the independent source check */
