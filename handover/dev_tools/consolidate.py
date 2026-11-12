@@ -1,5 +1,5 @@
 import json, math, osmq
-R='recheck/'; P='/home/claude/ZAGMapLive/'
+R='recheck/'; P='./'
 corr=json.load(open(P+'tools/position_corrections.json',encoding='utf-8'))
 recs={}
 for g in ('tunnels','cableways','dams','other_sites','buildings_bridges'):

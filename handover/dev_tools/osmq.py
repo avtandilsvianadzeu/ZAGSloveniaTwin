@@ -1,5 +1,5 @@
 import json, math, os, sys, time, urllib.request, urllib.error, hashlib
-C='/tmp/claude-0/-home-claude/0c288e72-a8b4-5e29-bc24-07a5b34113c3/scratchpad/osm/'
+C='./osm/'
 def m(a,b):
     x=(b[0]-a[0])*math.radians(1)*math.cos(math.radians((a[1]+b[1])/2)); y=(b[1]-a[1])*math.radians(1); return math.hypot(x,y)*6371008.8
 def fetch(lon,lat,half_m=700):
