@@ -281,3 +281,15 @@ Rule from the owner: if something is not known, do not assume it and do not draw
 - Map selection: map-tile buildings under the official outlines are hidden, so their grey walls no longer show through the blue selection.
 - Timeline bar moved to the bottom right of the map.
 - Inspection form: a saved record stays in the browser where it was typed. Nobody else sees it. Sharing needs a server with sign-in, which this static site does not have.
+
+### ZAG sites from the cadastre manager records, 12 November 2026
+
+The GURS cadastre names the manager (upravljavec) of state property. Its public service lists the buildings and parcels where the manager is Zavod za gradbeništvo Slovenije (registration number 5866324000). This replaces the boundary drawn by eye and the choice of buildings by position.
+
+- How it was read: OGC API Features service of the cadastre, collections `SI.GURS.KN:DST_UPRAVLJAVCI` (building parts) and `SI.GURS.KN:PARCELE_UPRAVLJAVCI` (parcels), filter `NAZIV ILIKE '%gradbeništvo slovenije%'`. Outlines from `STAVBE` and `PARCELE` by bounding box. The service accepts at most 50 items per request and rejects long decimals and several requests at once.
+- Dimičeva, Ljubljana (community 2636 Bežigrad): 14 buildings, 8,402 m², 23 parcels. Against the list of the morning: buildings 1079, 1321 and 1365 added, buildings 889 and 784 removed (not under ZAG in the cadastre). Building 901 stays out. Most entries there carry the status "Začasen" (provisional).
+- Gameljne (community 1749): 14 buildings, 4,467 m², 14 parcels. Before, the record showed one house outline. Two buildings (1095, 1096) have no heights and are drawn flat.
+- Maribor unit (community 708 Skoke): building 1809, 2 parcels. Logatec (community 2017): building 2382, 3 parcels.
+- Source files: `handover/research/recheck_2026_11/zag_managed_buildings_cadastre_2026_11_12.json` and `zag_managed_parcels_cadastre_2026_11_12.json`.
+- Not looked into: the ownership collection (`LASTNISTVO_PRAVNIH_OSEB`) also names parcels 534/128 and 553/115 and building 224 in community 1297 Mostec, and a part of building 343 in community 2680 Nove Jarše. These may be further ZAG locations.
+- The same lookup works for any legal person, so it can confirm sites of other institutions in the atlas.
