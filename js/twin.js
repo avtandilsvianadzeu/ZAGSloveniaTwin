@@ -345,6 +345,7 @@ function initView(p,t,g,lines,labels,opt){
   const zoom=g?17:p.position_precision==='address'?16.8:p.position_precision==='municipality'?11.8:exact?15.5:13.2;
   let map; try{ map=new maplibregl.Map({container:box,style:STYLE_URL,center:ll,zoom,pitch:55,bearing:-20,maxPitch:85,attributionControl:{compact:true}}); }catch(_){ return fail('The map is not available in this browser. The data sheet is complete without it.'); }
   map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'top-right'); window.__map=map;
+  if('ResizeObserver' in window) new ResizeObserver(()=>{ try{ map.resize(); }catch(e){} }).observe(map.getContainer());
   const anchors=(t&&t.anchors)||[], mid=l=>l[Math.floor(l.length/2)];
   let is3d=true; const B=()=>is3d?-20:0, Pch=()=>is3d?55:0;
   function fit(animate){ const pts=[...lines.flat(),...anchors.map(a=>[+a.lon,+a.lat])];
