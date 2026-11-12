@@ -98,7 +98,7 @@ function keyFigures(p,t,g,lines){
   for(const s of (t&&t.specs)||[]){ const v=clean(s.value); if(!v||v.length>20||!s.source) continue;
     for(const [cls,re] of FIG_RULES) if(re.test(s.label)){ add(cls,s.label,v,s.unit,s.source); break; } }
   if(g){ if(g.height_m!=null) add('height','Height above ground',g.height_m.toFixed(1),'m',g.user?'#specs':'https://ipi.eprostor.gov.si/jgp/data',g.user?'entered by the user':'GURS');
-         if(g.area_m2) add('area','Footprint area',num(g.area_m2),'m²',g.user?'#specs':'https://ipi.eprostor.gov.si/jgp/data',g.user?'entered by the user':'GURS'); }
+         if(g.area_m2) add('area','Footprint area',num(g.area_m2),'m²',g.user?'#specs':g.outline?g.outline.url:'https://ipi.eprostor.gov.si/jgp/data',g.user?'entered by the user':g.outline?'OpenStreetMap':'GURS'); }
   const S=p.structure||{};
   if(S.length_m) add('length','Length',num(S.length_m),'m','#sources','record sources');
   if(S.spans) add('span','Spans',S.spans,'','#sources','record sources');
@@ -134,8 +134,8 @@ function renderTwin(f){
   if(lines.length) geo.push(`<div class="tscroll"><table><thead><tr><th>Drawn part</th><th>Length on the map</th><th>Points</th></tr></thead><tbody>${lines.map((l,i)=>`<tr class="pick" data-line="${i}" tabindex="0" title="Show on the 3D view"><td class="l">${T(labels[i]||(lines.length>1?'Part '+(i+1):'Alignment'))}</td><td class="v">${num(Math.round(lineLen(l)))} m</td><td class="n">${l.length}</td></tr>`).join('')}</tbody></table></div><p class="note" style="padding:8px 18px 0">Lengths are measured along the drawn line and can differ from surveyed lengths.</p>`);
   if(t&&(t.anchors||[]).length) geo.push(`<div class="tscroll"><table><thead><tr><th>Reference point</th><th>Latitude, longitude</th><th>Source</th></tr></thead><tbody>${t.anchors.map((a,i)=>`<tr class="pick" data-anchor="${i}" tabindex="0" title="Show on the 3D view"><td class="l">${T(a.label)}</td><td class="n">${(+a.lat).toFixed(6)}, ${(+a.lon).toFixed(6)}</td><td class="s">${a.source?link(a.source):''}</td></tr>`).join('')}</tbody></table></div>`);
   if(g){ const M=D.gursMeta, rows=[['Height above ground',g.height_m!=null?g.height_m.toFixed(1)+' m':null],['Footprint area',g.area_m2?num(g.area_m2)+' m²':null],['Ground level',g.ground_m!=null?g.ground_m.toFixed(1)+' m above sea level':null],
-      ['Eave level',g.eave_m!=null?g.eave_m.toFixed(1)+' m above sea level':null],['Ridge level',g.ridge_m!=null?g.ridge_m.toFixed(1)+' m above sea level':null],['Use',g.use],['Surveyed',g.captured],['GURS building ID',g.dtm_id]].filter(a=>a[1]!=null);
-    geo.push(`<div class="tscroll"><table><thead><tr><th>${g.user?'Outline entered by the user':'Official building (GURS)'}</th><th>Value</th></tr></thead><tbody>${rows.map(([a,b])=>`<tr><td class="l">${esc(a)}</td><td class="v">${T(b)}</td></tr>`).join('')}</tbody></table></div>${M&&!g.user?`<p class="note" style="padding:8px 18px 0">${T(M.source)}. ${T(M.licence)}.</p>`:''}`); }
+      ['Eave level',g.eave_m!=null?g.eave_m.toFixed(1)+' m above sea level':null],['Ridge level',g.ridge_m!=null?g.ridge_m.toFixed(1)+' m above sea level':null],['Use',g.use],[g.outline?'Height surveyed (GURS)':'Surveyed',g.captured],['GURS building ID',g.dtm_id],['Outline',g.outline?`OpenStreetMap way ${g.outline.way}, last edit ${g.outline.edited}`:null],['Outline before',g.outline_before?`${g.outline_before.source}, ${g.outline_before.captured||'no date'}, ${num(g.outline_before.area_m2)} m²`:null],['Height note',g.height_note],['Parts',g.parts?`${g.parts.length} parts with storey counts`:null]].filter(a=>a[1]!=null);
+    geo.push(`<div class="tscroll"><table><thead><tr><th>${g.user?'Outline entered by the user':g.outline?'Building (outline OpenStreetMap, height GURS)':'Official building (GURS)'}</th><th>Value</th></tr></thead><tbody>${rows.map(([a,b])=>`<tr><td class="l">${esc(a)}</td><td class="v">${T(b)}</td></tr>`).join('')}</tbody></table></div>${M&&!g.user?`<p class="note" style="padding:8px 18px 0">${g.outline?'Outline from OpenStreetMap contributors (ODbL). ':''}${g.height_m!=null||!g.outline?T(M.source)+'. '+T(M.licence)+'.':''}${g.parts_note?' '+T(g.parts_note):''}</p>`:''}<div id="kn"></div>`); }
   if(lines.length){ geo.push('<div class="prof" id="prof"><p class="note" style="padding:8px 18px 0">Reading the ground profile</p></div>'); setTimeout(()=>drawProfiles(lines,labels),0); }
   sec('geometry','Geometry',geo.join(''));
   sec('record','Record data',(sRows.length||(p.facts||[]).length)?`<div class="tscroll"><table><tbody>${sRows.map(([a,b])=>`<tr><td class="l">${esc(a)}</td><td class="v">${T(b)}</td></tr>`).join('')}${(p.facts||[]).map(([a,b])=>`<tr><td class="l">${T(a)}</td><td class="v">${T(b)}</td></tr>`).join('')}</tbody></table></div>`:'');
@@ -262,15 +262,17 @@ function buildModel(p,t,g,lines,labels){
     if(W) for(let k=0;k<=n;k++){ const kd=M.nodes[axis[k]].sup?'support':'cross'; el(left[k],axis[k],part,kd); el(axis[k],right[k],part,kd); }
     if(W) for(let k=0;k<n;k++) M.faces.push({v:[left[k],left[k+1],right[k+1],right[k]],part,kind:'deck'});
     M.parts.push({name:labels[i]||(lines.length>1?'Part '+(i+1):p.name_en||p.name),len:Lm,track:axis,kind:'line',width:W}); });
-  ring0.forEach((r,i)=>{ const P=r.slice(0,-1).map(xy); if(P.length<3) return; const h=g.height_m||0, lv=h?1:0, part=M.parts.length, rings=[];
+  /* building volumes: the parts with storey counts where the source has them, else the single outline at its surveyed height */
+  const STOREY=3, vols=g&&g.parts?g.parts.map((q,i)=>({ring:q.ring,h:q.levels*STOREY,name:`Part ${i+1}, ${q.levels} ${q.levels===1?'storey':'storeys'}`})):ring0.map((r,i)=>({ring:r,h:g.height_m||0,name:ring0.length>1?'Outline '+(i+1):'Building outline'}));
+  vols.forEach(v=>{ const P=v.ring.slice(0,-1).map(xy); if(P.length<3) return; const h=v.h, lv=h?1:0, part=M.parts.length, rings=[];
     for(let k=0;k<=lv;k++){ const z=lv?h*k/lv:0; rings.push(P.map(c=>node(c[0],c[1],z,part,{role:k===0?'ground':k===lv?'top':'level'}))); }
     rings.forEach(rg=>rg.forEach((a,q)=>el(a,rg[(q+1)%rg.length],part,'ring')));
     for(let k=0;k<lv;k++) rings[k].forEach((a,q)=>el(a,rings[k+1][q],part,'vertical'));
     if(lv){ const r0=rings[0], rT=rings[lv]; r0.forEach((a,q)=>M.faces.push({v:[a,r0[(q+1)%r0.length],rT[(q+1)%r0.length],rT[q]],part,kind:'wall'})); M.faces.push({v:rT.slice(),part,kind:'roof'}); }
-    const top=rings[rings.length-1]; M.parts.push({name:ring0.length>1?'Outline '+(i+1):'Building outline',len:P.reduce((a,c,q)=>a+Math.hypot(P[(q+1)%P.length][0]-c[0],P[(q+1)%P.length][1]-c[1]),0),track:[...top,top[0]],kind:'building',height:h||null}); });
+    const top=rings[rings.length-1]; M.parts.push({name:v.name,len:P.reduce((a,c,q)=>a+Math.hypot(P[(q+1)%P.length][0]-c[0],P[(q+1)%P.length][1]-c[1]),0),track:[...top,top[0]],kind:'building',height:h||null}); });
   ((t&&t.anchors)||[]).forEach((a,i)=>{ const c=xy([+a.lon,+a.lat]); M.refs.push({i,x:c[0],y:c[1],z:0,label:a.label,lat:+a.lat,lon:+a.lon,source:a.source}); });
   M.R=Math.max(1,...M.nodes.map(n=>Math.hypot(n.x,n.y,n.z)),...M.refs.map(n=>Math.hypot(n.x,n.y)));
-  const bits=[]; if(lines.length) bits.push('the drawn alignment'+(W?' and the deck width of '+W+(p.category==='user_object'?' m entered by the user':' m given in the sources'):'')); if(ring0.length) bits.push((g.user?'the outline entered by the user':'the official GURS outline')+(g.height_m?(g.user?' raised to the entered height of ':' raised to its surveyed height of ')+g.height_m.toFixed(1)+' m':''));
+  const bits=[]; if(lines.length) bits.push('the drawn alignment'+(W?' and the deck width of '+W+(p.category==='user_object'?' m entered by the user':' m given in the sources'):'')); if(ring0.length) bits.push(g.parts?`${g.parts.length} building parts from OpenStreetMap, each raised by its storey count at 3 m per storey, which is a drawing choice`:(g.user?'the outline entered by the user':g.outline?`the OpenStreetMap outline (edit of ${g.outline.edited})`:'the official GURS outline')+(g.height_m?(g.user?' raised to the entered height of ':' raised to the height surveyed by GURS, ')+g.height_m.toFixed(1)+' m':''));
   if(mdl){ M.recon=true; M.note='Model rebuilt from published dimensions: '+(mdl.basis||[]).join(', ')+'. '+(mdl.assumed||'')+' It is not a structural analysis model.'; }
   else M.note='Schematic mesh generated from '+bits.join(' and ')+'. It is not a structural analysis model. Element size is a drawing choice'+(lines.length?', and heights along the alignment are not in the sources, so those parts are drawn flat':'')+'.';
   return M;
@@ -388,9 +390,10 @@ function initView(p,t,g,lines,labels,opt){
     try{ map.addSource('sat',{type:'raster',tiles:[SAT_URL],tileSize:256,maxzoom:19,attribution:'Imagery: Esri, Maxar, Earthstar Geographics'}); map.addLayer({id:'sat',type:'raster',source:'sat',layout:{visibility:'none'}},firstSym); }catch(_){}
     if(unc&&!lines.length){ map.addSource('unc',{type:'geojson',data:{type:'Feature',properties:{},geometry:circle(ll,unc)}});
       map.addLayer({id:'unc-f',type:'fill',source:'unc',paint:{'fill-color':'#FF9500','fill-opacity':.12}}); map.addLayer({id:'unc-l',type:'line',source:'unc',paint:{'line-color':'#C76A00','line-width':1.5,'line-dasharray':[3,3]}}); }
-    if(g&&g.geometry){ map.addSource('bld',{type:'geojson',data:{type:'Feature',properties:{h:g.height_m||8},geometry:g.geometry}});
+    if(g&&g.geometry){ map.addSource('bld',{type:'geojson',data:g.parts?{type:'FeatureCollection',features:g.parts.map(q=>({type:'Feature',properties:{h:q.levels*3},geometry:{type:'Polygon',coordinates:[q.ring]}}))}:{type:'Feature',properties:{h:g.height_m||0.5},geometry:g.geometry}});
       map.addLayer({id:'bld',type:'fill-extrusion',source:'bld',paint:{'fill-extrusion-color':'#203469','fill-extrusion-height':['get','h'],'fill-extrusion-opacity':.88,'fill-extrusion-vertical-gradient':true}});
       const nLine=lines.length; map.on('click','bld',()=>pick('part',nLine)); hover('bld'); }
+    if(g&&!g.user) liveCadastre(p,ctx=>{ try{ const fc={type:'FeatureCollection',features:ctx.flatMap(f=>f.rings.map(rg=>({type:'Feature',properties:{h:f.h!=null?f.h:0.5},geometry:{type:'Polygon',coordinates:[rg]}})))}; if(map.getSource('ctx')) map.getSource('ctx').setData(fc); else { map.addSource('ctx',{type:'geojson',data:fc}); map.addLayer({id:'ctx',type:'fill-extrusion',source:'ctx',paint:{'fill-extrusion-color':'#C9D2E3','fill-extrusion-height':['get','h'],'fill-extrusion-opacity':.55}},map.getLayer('bld')?'bld':undefined); } }catch(_){} });
     if(lines.length){ map.addSource('ln',{type:'geojson',data:{type:'FeatureCollection',features:lines.map((l,i)=>({type:'Feature',properties:{i},geometry:{type:'LineString',coordinates:l}}))}});
       const lay={'line-cap':'round','line-join':'round'};
       map.addLayer({id:'ln-c',type:'line',source:'ln',layout:lay,paint:{'line-color':'#ffffff','line-width':9}});
@@ -413,6 +416,18 @@ function initView(p,t,g,lines,labels,opt){
 }
 
 /* ---------- platform home: all objects with counts, a type filter and a text filter ---------- */
+
+/* ---------- live cadastre: the official building record at the point, read from the GURS service when the page opens ---------- */
+const KN_URL='https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items';
+const ptIn=(pt,r)=>{ let c=false; for(let i=0,j=r.length-1;i<r.length;j=i++){ const [x1,y1]=r[i],[x2,y2]=r[j]; if((y1>pt[1])!==(y2>pt[1])&&pt[0]<(x2-x1)*(pt[1]-y1)/(y2-y1)+x1) c=!c; } return c; };
+async function liveCadastre(p,onSite){ const box=$('kn'); if(!box) return; const lo=p.longitude, la=p.latitude; box.innerHTML='<p class="note" style="padding:8px 18px 0">Asking the GURS cadastre for the current record</p>';
+  try{ const ctl=new AbortController(), tm=setTimeout(()=>ctl.abort(),12000); const r=await fetch(`${KN_URL}?f=json&limit=60&bbox=${lo-0.0011},${la-0.0008},${lo+0.0011},${la+0.0008}`,{signal:ctl.signal}); clearTimeout(tm); if(!r.ok) throw new Error('status '+r.status);
+    const j=await r.json(), fs=(j.features||[]).map(f=>{ const g=f.properties.TLORIS_GEOM||f.geometry, rings=g?(g.type==='Polygon'?[g.coordinates[0]]:g.type==='MultiPolygon'?g.coordinates.map(q=>q[0]):[]):[]; const q=f.properties, h=q.VISINA_H1!=null&&q.VISINA_H2!=null&&q.VISINA_H2>q.VISINA_H1?q.VISINA_H2-q.VISINA_H1:null; return {q,rings,h}; }).filter(f=>f.rings.length);
+    const at=fs.find(f=>f.rings.some(rg=>ptIn([lo,la],rg))), today=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    const rows=at?[['Cadastral community',at.q.NAZIV],['Building number',at.q.ST_STAVBE],['Storeys',at.q.STEVILO_ETAZ],['Year built',at.q.LETO_IZGRADNJE],['Ground level (H1)',at.q.VISINA_H1!=null?at.q.VISINA_H1+' m above sea level':null],['Highest point (H2)',at.q.VISINA_H2!=null?at.q.VISINA_H2+' m above sea level':null],['Highest point above ground',at.h!=null?at.h.toFixed(1)+' m':null],['Type',at.q.TIPI_STAVB_NAZIV_SL],['Structure',at.q.NOSILNE_KONSTRUKCIJE_NAZIV_SL],['Position accuracy',at.q.POLOZAJNE_NATANCNOSTI_STAVBE_NAZIV_SL]].filter(a=>a[1]!=null&&a[1]!==''):[];
+    box.innerHTML=`<div class="tscroll" style="margin-top:10px"><table><thead><tr><th>Cadastre record at the point, read live</th><th>Value</th></tr></thead><tbody>${rows.length?rows.map(([a,b])=>`<tr><td class="l">${esc(a)}</td><td class="v">${T(String(b))}</td></tr>`).join(''):'<tr><td class="l" colspan="2">No cadastre building contains the stored point.</td></tr>'}</tbody></table></div><p class="note" style="padding:8px 18px 0">GURS Kataster nepremičnin, read on ${today}. ${fs.length} cadastre buildings lie around the point and are drawn on the site map at their recorded heights. Licence CC BY 4.0.</p>`;
+    if(onSite) onSite(fs.filter(f=>f!==at));
+  }catch(e){ box.innerHTML='<p class="note" style="padding:8px 18px 0">The GURS cadastre service did not answer, so no live record is shown.</p>'; } }
 
 /* ---------- ground profile along the drawn alignment ----------
    Heights are read from the same public terrain tiles the map uses (terrarium encoding), one tile zoom for the whole line. */

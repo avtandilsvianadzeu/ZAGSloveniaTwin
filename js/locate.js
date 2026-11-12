@@ -51,9 +51,11 @@ function buildingFromFeature(f){
 }
 /* official building from the GURS topographic building layer (footprint, height), stored per record in data/gurs_buildings.json */
 function officialBuilding(o){
-  const f={type:'Feature',id:null,properties:{render_height:o.height_m,render_min_height:0},geometry:o.geometry};
+  /* no surveyed height: the outline is shown almost flat instead of an invented height */
+  const f={type:'Feature',id:null,properties:{render_height:o.height_m!=null?o.height_m:0.6,render_min_height:0},geometry:o.geometry};
+  const fs=o.parts?o.parts.map(q=>({type:'Feature',id:null,properties:{render_height:q.levels*3,render_min_height:0},geometry:{type:'Polygon',coordinates:[q.ring]}})):[f];
   const c=centroid(o.geometry); const osm=c?findBuilding(c,2):null;
-  return {feature:f,parts:[f],g:o.geometry,dist:0,id:osm?osm.id:null,h:o.height_m,hknown:o.height_m!=null,b:0,c,official:o};
+  return {feature:f,parts:fs,g:o.geometry,dist:0,id:osm?osm.id:null,h:o.height_m,hknown:o.height_m!=null,b:0,c,official:o};
 }
 const BASEF={};
 function baseFilter(id){ if(!(id in BASEF)){ try{ BASEF[id]=map.getFilter(id)||null; }catch(_){ BASEF[id]=null; } } return BASEF[id]; }
@@ -174,14 +176,14 @@ async function locate(x,onPos){
 }
 function posChip(info,x){
   if(!info||info.state==='busy') return `<span class="chip busy"><span class="spin"></span>${esc(info?info.text:'Locating')}</span>`;
-  if(info.kind==='building') return `<span class="chip ok">${info.how==='gurs'?'Official building (GURS)':'Building highlighted'+(info.how==='address'?' from the street address':'')}</span>`;
+  if(info.kind==='building') return `<span class="chip ok">${info.how==='gurs'?(info.b.official.outline?'Building outline (OpenStreetMap)':'Official building (GURS)'):'Building highlighted'+(info.how==='address'?' from the street address':'')}</span>`;
   if(info.kind==='area') return `<span class="chip warn">${esc(PREC[x.prec]||'Approximate')} · shaded area</span>`;
   return `<span class="chip ${PRECOK(x.prec)?'ok':'warn'}">${esc(PREC[x.prec]||x.prec)}</span>`;
 }
 function posNote(info,x){
   if(!info||info.state==='busy') return '';
   if(info.kind==='building'){
-    if(info.how==='gurs'){ const o=info.b.official; return `Footprint and height are the official GURS building record${o.height_m?`, ${o.height_m.toFixed(1)} m above ground`:''}${o.captured?`, surveyed ${o.captured.slice(0,7)}`:''}.`; }
+    if(info.how==='gurs'){ const o=info.b.official; return o.outline?`Outline from OpenStreetMap, last edit ${o.outline.edited}.${o.height_m?` Height ${o.height_m.toFixed(1)} m from the GURS survey${o.captured?' of '+o.captured.slice(0,7):''}.`:' No surveyed height is held.'}`:`Footprint and height are the official GURS building record${o.height_m?`, ${o.height_m.toFixed(1)} m above ground`:''}${o.captured?`, surveyed ${o.captured.slice(0,7)}`:''}.`; }
     const h=info.b&&info.b.h?` The footprint is about ${Math.round(info.b.h)} m tall in the map data.`:'';
     return info.how==='address'
       ? `The building is matched from the street address in OpenStreetMap${info.dist!=null?`, ${info.dist} m from the coordinate in the dataset`:''}.${h}`

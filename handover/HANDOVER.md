@@ -235,3 +235,12 @@ The owner asked for the look and flow of professional digital twin platforms. Th
 - On imagery the neighbouring buildings are now drawn in 3D as a light see-through volume, and the selected building is see-through with a clear footprint outline. Nothing is left flat beside the selection.
 - OpenStreetMap building at each stored point checked through the OSM API: `handover/research/recheck_2026_11/osm_building_at_point_2026_11_12.json`.
 - Open sources for detail: GURS publishes national LiDAR point clouds and surface models (clss.si). No open source with facade detail was found. Facades and bridge detail need BIM or IFC files, or a photo survey.
+
+### Newer building outlines and the live cadastre, 12 November 2026
+
+- Outlines compared: the stored GURS topographic outlines (mostly surveyed 2001 to 2004) against the OpenStreetMap outline at each point, read from the OSM API. Raw data: `handover/research/recheck_2026_11/osm_buildings_raw_2026_11_12.json`.
+- Largest differences: Former Maribor Prison (the GURS outline held one wing of 1,401 m², the OpenStreetMap outline holds the whole building of 5,487 m²), ZAG at Dimičeva (2,781 against 3,135 m²), TR3 (GURS outline included the low part, OpenStreetMap part is the tower), Kočevje school, Stara Cerkev school, Cestel.
+- `data/gurs_buildings.json` now uses the OpenStreetMap outline for 10 records and names it per building (`outline`), with the earlier outline noted (`outline_before`). Heights stay from the GURS survey. Three records gained an outline for the first time: Gameljne, ZAG Maribor (no surveyed height, so drawn flat) and InnoRenew.
+- InnoRenew is drawn from six OpenStreetMap building parts with storey counts. Storey height is not in the sources, so 3 m per storey is used and stated as a drawing choice.
+- Live cadastre: each asset page with a building asks the GURS Kataster nepremičnin service for the current record at the point (storeys, year built, H1 and H2 levels) and draws the neighbouring cadastre buildings on the site map at their recorded heights. The service refuses several requests at once, so the page sends one. If it does not answer, the page says so.
+- Shapes from Google Maps are not used. They are not open data.

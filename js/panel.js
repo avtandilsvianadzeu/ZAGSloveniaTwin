@@ -2,7 +2,7 @@
 /* Info panel: one selected object (ZAG record, address or building) with provenance. */
 const info=$('info');
 const srcHost=u=>{try{return new URL(u).hostname.replace(/^www\./,'');}catch(_){return u;}};
-const posText=(i,x)=>i.kind==='building'?(i.how==='gurs'?'Official building outline from the GURS building register':i.how==='address'?'Building footprint matched from the street address':'Building footprint at the recorded coordinate'):i.kind==='area'?`${PREC[x.prec]||'Approximate'} (shaded area)`:(PREC[x.prec]||x.prec);
+const posText=(i,x)=>i.kind==='building'?(i.how==='gurs'?(i.b&&i.b.official&&i.b.official.outline?'Building outline from OpenStreetMap, height from GURS':'Official building outline from the GURS building register'):i.how==='address'?'Building footprint matched from the street address':'Building footprint at the recorded coordinate'):i.kind==='area'?`${PREC[x.prec]||'Approximate'} (shaded area)`:(PREC[x.prec]||x.prec);
 const SRC_KIND={journal:'Journal article',conference:'Conference paper',report:'Report',web:'Web page',inst:'Institutional page',enc:'Encyclopedia',
   zag_publication:'ZAG publication',db:'Database',data:'Open data',reg:'Regulation',news:'News article'};
 let curId=null;
@@ -139,7 +139,7 @@ async function buildingData(b,p){
   const m=$('bim'); if(!m||!b) return;
   const area=b.g?polys(b.g).reduce((a,poly)=>a+ringArea(poly[0]),0):0;
   if(b.official){ const o=b.official, M=ZA.gursMeta;
-    m.innerHTML=`<h3>Building data (GURS, official)</h3>${kv('Height above ground',o.height_m!=null?o.height_m.toFixed(1)+' m':null)}${kv('Footprint area',o.area_m2?o.area_m2.toLocaleString('en-GB')+' m²':null)}${kv('Ground level',o.ground_m!=null?o.ground_m.toFixed(1)+' m a.s.l.':null)}${kv('Eave level',o.eave_m!=null?o.eave_m.toFixed(1)+' m a.s.l.':null)}${kv('Ridge level',o.ridge_m!=null?o.ridge_m.toFixed(1)+' m a.s.l.':null)}${kv('Use',o.use)}${kv('Surveyed',o.captured)}${kv('GURS building ID (DTM)',o.dtm_id)}${M?`<p class="note">${esc(M.source)}. ${esc(M.licence)}.</p>`:''}`;
+    m.innerHTML=`<h3>${o.outline?'Building data (outline OpenStreetMap, height GURS)':'Building data (GURS, official)'}</h3>${kv('Outline',o.outline?'OpenStreetMap way '+o.outline.way+', last edit '+o.outline.edited:null)}${kv('Height above ground',o.height_m!=null?o.height_m.toFixed(1)+' m':null)}${kv('Footprint area',o.area_m2?o.area_m2.toLocaleString('en-GB')+' m²':null)}${kv('Ground level',o.ground_m!=null?o.ground_m.toFixed(1)+' m a.s.l.':null)}${kv('Eave level',o.eave_m!=null?o.eave_m.toFixed(1)+' m a.s.l.':null)}${kv('Ridge level',o.ridge_m!=null?o.ridge_m.toFixed(1)+' m a.s.l.':null)}${kv('Use',o.use)}${kv('Surveyed',o.captured)}${kv('GURS building ID (DTM)',o.dtm_id)}${M?`<p class="note">${esc(M.source)}. ${esc(M.licence)}.</p>`:''}`;
   } else
   m.innerHTML=`<h3>Building data (OpenStreetMap footprint)</h3>${kv('Footprint area',area?Math.round(area)+' m²':null)}${kv('Height in map data',b.hknown&&b.h?Math.round(b.h)+' m':null)}${kv('Gross floor area, estimate',area&&b.hknown&&b.h?Math.round(area*Math.max(1,Math.round(b.h/3)))+' m² ('+Math.max(1,Math.round(b.h/3))+' storeys at 3 m)':null)}`;
   if(!b.c) return;
