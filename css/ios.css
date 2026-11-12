@@ -245,3 +245,17 @@ dialog::backdrop{background:rgba(0,0,0,.28)}
 .lgnum{flex:none;width:24px;height:24px;margin:0 1px;border-radius:50%;background:#007AFF;color:#fff;font:700 12px/24px var(--font);text-align:center;font-style:normal;box-shadow:0 0 0 2px #fff,0 1px 3px rgba(0,0,0,.3)}
 @media (max-width:700px){.lgd{width:calc(100% - 24px);max-height:46vh}.tl{right:12px;bottom:316px;width:calc(100% - 24px)}.tlshow{right:12px;bottom:316px}}
 .vstatus{padding:4px 12px 8px}.vstatus .mono{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ---------- fixes seen on the live site at a 1385 px wide screen ---------- */
+/* model tools wrap onto a second line in a narrow pane, so the view switch is never cut off */
+.ptools{flex-wrap:wrap;row-gap:6px}
+/* legend: compact, so it leaves the map free */
+.lgd{width:236px;padding:10px 12px 12px;max-height:min(54vh,430px)}
+.lgr{gap:8px;padding:2px 0;font-size:12.5px}.lgr img{width:22px;height:22px}.lgd h4{margin:8px 0 2px}
+.lgdot{width:12px;height:12px;margin:0 5px}.lgnum{width:20px;height:20px;line-height:20px;font-size:11px}
+/* map credits sit above the timeline, not under it */
+.maplibregl-ctrl-bottom-right{bottom:50px}
+/* export row under the two main buttons */
+.asset .btnrow.two{margin-top:8px}.asset .btnrow.two .tbtn{flex:1 1 0;height:36px;font-size:13px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+/* print: the report is the record, not the controls */
+@media print{.tree,.insp{background:#fff}.asset,.tree .tsec,.tabpan .pickbox,.alldata,.blk{box-shadow:none;border:1px solid #D9D9DE;break-inside:avoid}.lgd,.chipbtn,.tl,.vctl{display:none!important}}
