@@ -322,4 +322,22 @@ GURS Javni vpogled (https://ipi.eprostor.gov.si/jv/) is the public viewer of the
 - Findings that bear on positions: the parcel at the Grosuplje bridge point and at the P2B3 Šenčur point has a holder that is not public, and the Črna point too. This fits the open question that these points are not on the object.
 - ZAG at Dimičeva: office building 892 is owned by Republika Slovenija and managed by ZAG. Hall buildings 962 and 1079 are co-owned by Republika Slovenija, ZAG and KOMPAS KAPITAL d.o.o., with ZAG as manager.
 - UL FGG: the building at the point (2679/907) is owned by Univerza v Ljubljani. InnoRenew: building and parcel are owned by Občina Izola.
-- LiDAR: Javni vpogled lists the laser scanning files per 1 km sheet, for Dimičeva sheet 462_103 (for example `javne-datoteke/DALJINSKO_ZAZNAVANJE/CLSS/.../NDMP_462_103.tif`, the surface height above ground). Not used yet. It is the source for real roof heights.
+- LiDAR: Javni vpogled lists the laser scanning files per 1 km sheet. They are used since 12 November 2026, see Laser scanning below.
+
+### Laser scanning, 12 November 2026
+
+- Source: GURS laser scanning of Slovenia (CLSS), file series NDMP, one GeoTIFF per square kilometre, 0.5 m pixels, 2000 by 2000, 32 bit float. Address: `https://ipi.eprostor.gov.si/javne-datoteke/DALJINSKO_ZAZNAVANJE/CLSS/ndmp/NDMP_<E km>_<N km>.tif` in D96/TM (EPSG:3794). The server allows range requests and cross origin reads.
+- Reading of the values: height above the ground in metres. No official description of the series was found (gov.si news of 27 March 2025 and the Geodetski vestnik note on CLSS list other products). The reading rests on the agreement with the cadastre: footprint areas agree within 1 %, and the cadastre highest point lies close to the 99 % level of the scan for most buildings. Say so wherever the data is shown.
+- How it was read: in Chrome on the Javni vpogled page, geotiff.js 2.1.3 read the window of each building from the sheets, a transverse Mercator projection (GRS80, central meridian 15°, scale 0.9999, false easting 500000, false northing -5000000) placed the outlines, and the result was saved to Downloads as one JSON file. Copy in `handover/research/recheck_2026_11/lidar_ndmp_2026_11_12.json`. The cloud workspace cannot reach ipi.eprostor.gov.si, so this step runs in the browser.
+- Import: `node tools/import_lidar.js handover/research/recheck_2026_11/lidar_ndmp_2026_11_12.json` writes `data/lidar/<id>.json` (1 m cells, each the mean of the 0.5 m pixels inside the building outlines, decimetres, 65535 outside) and the statistics per building into `data/gurs_buildings.json` (`scan` on each part or on the record: pixels, min, median, 90 % level, 99 % level, max, mean).
+- 13 records have a scan: zag, zag_gameljne, zag_logatec, zag_maribor, cestel, ulfgg, ss_kocevje, os_stara_cerkev, fibran_sodrazica, tr3, kpd, nuk, innorenew. Sheets: 462_103, 461_110, 441_86, 553_149, 464_108, 460_100, 488_55, 487_58, 470_69 and 471_69, 461_101, 549_157 and 550_157, 461_100 and 461_101, 395_44.
+- On the asset page the model opens in the Laser scan view: every cell is a column to its measured height, drawn far to near (`drawScan` in `js/twin.js`). The Laser scan button switches back to the plain cadastre blocks. A click on a cell gives its height, position and the source file. The Geometry section shows the middle and the 99 % level per building next to the cadastre height.
+- InnoRenew: the six OpenStreetMap parts are now drawn at the middle height measured by the scan, not at storeys times an assumed storey height.
+- Differences recorded on the pages (cadastre against scan): ZAG 892 (23.5 m against 26.3 m at the 99 % level), ZAG 8300 (10.0 against 13.2), ZAG 1365 (scan shows almost no raised surface), NUK (21.9 against 25.5), TR3 (69.2 against 72.1, highest pixel 77.2), Gameljne 38 and 71.
+- API: `laser_scan` in `api/v1/objects/<id>.json`.
+- `js/vendor/geotiff.js` (2.1.3, MIT) is kept for a later live reader. No page loads it yet.
+
+### ZAG property outside the four sites, 12 November 2026
+
+- The cadastre lists ZAG as owner of two dwellings: one in Čatež ob Savi (community 1297 Mostec, building 224, 37.1 m²) and one flat in Ljubljana (community 2680 Nove Jarše, building 343, part 184, 46.9 m²). They are not research facilities and are not on the map. Details in `handover/research/recheck_2026_11/zag_managed_buildings_cadastre_2026_11_12.json`.
+- A second, separate read of the manager records in Chrome gave the same 30 buildings and 42 parcels as the first read.
