@@ -382,3 +382,15 @@ Open after the checks:
 - Roads and railways: for 20 bridge and tunnel records the drawn line lies within 22 m of the official road centre line near the point, mostly within 2 m. Tunnel points sit 12 to 25 m from a centre line because they lie between two tubes. The Karavanke railway tunnel and the railway masts point are 2 and 3 m from the official railway line.
 - Limits: the infrastructure cadastre carries no names and no object type. It cannot say which bridge stands at Grosuplje, Kamnik or Črna, so those three points stay settlement points. Its cableway layer holds lines near only four of the eleven cableway records, and those lines are other lifts of the same resorts, so it confirms none of the drawn cableways.
 - DRSI keeps the bridge and road register (Banka cestnih podatkov). No open download of it was found on gov.si in this pass.
+
+### Quotes, second round, 12 November 2026
+
+- Before: 486 of 1,105 values had a stored quote. After: 717.
+- How: the source pages were opened again and the sentence or table row that states each value was taken. Two routes:
+  - Government files read in Chrome and saved (gov.si pages and PDFs): the quote was copied from the text of the file itself. These carry the note "Copied from the text of the file itself". 14 values.
+  - Other sources (Lotsberg tunnel list, the IBE papers and the ZAG book on dLib, SENG publications, NHESS papers, lift-world data sheets, SEL, Slovenian Railways magazine, Elea, UCD, power-technology, CFBR): read through a page reader. These carry the note "Text as returned by a page reader". The reader can alter a word, so the wording is not guaranteed. 203 values.
+  - Uradni list 103/2006 (official list of cableways): the reader would not copy the long rows and restated them. These carry the note "restated", and they are not verbatim.
+- `quote_note` is stored with each of these values, shown in the evidence box and in the API.
+- `handover/dev_tools/qf.js` is the reader used in Chrome: on a page of the source site it fetches the listed pages of that site and saves them as one file. Chrome refused to open dlib.si and uradni-list.si ("Navigation to this domain is not allowed"), so only gov.si was read this way.
+- Still without a quote, 388 values: 86 cadastre values (the evidence is the attribute record, kept in `handover/research`), 51 values computed from OpenStreetMap geometry (no sentence exists), and about 250 from other pages: Structurae (31), lift-world (23, two pages refused), Wikipedia (20), remontees-mecaniques (15), Ujma (10) and many single pages.
+- What the fresh reads showed: lift-world gives 170 kW for Velika planina and 986 kW for Krvavec against 180 and 980 kW in the official list of 2006, already listed as differences. The railway magazine says all concrete masts between Logatec and Verd had to be removed, which is not the same as "fell over about 1 km".
