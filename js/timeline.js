@@ -11,7 +11,12 @@
   const set=y=>{ ZA.upTo=y; if(y!=null) range.value=y; refreshProjects(); paint(); };
   const stop=()=>{ if(timer){ clearInterval(timer); timer=null; } play.textContent='Play'; play.setAttribute('aria-pressed','false'); };
   function start(){ const ys=ZA.features.map(f=>f.properties.year_start).filter(v=>v!=null); if(!ys.length){ bar.hidden=true; return; }
-    lo=Math.min(...ys); hi=Math.max(...ys); undated=ZA.features.length-ys.length; range.min=lo; range.max=hi; range.value=hi; bar.hidden=false; paint(); }
+    lo=Math.min(...ys); hi=Math.max(...ys); undated=ZA.features.length-ys.length; range.min=lo; range.max=hi; range.value=hi; showBar(!hiddenPref()); paint(); }
+  const sh=document.getElementById('tlShow'), hd=document.getElementById('tlHide');
+  const hiddenPref=()=>{ try{ return localStorage.getItem('zag_tl_hidden')==='1'; }catch(_){ return false; } };
+  function showBar(on){ bar.hidden=!on; if(sh) sh.hidden=on; try{ localStorage.setItem('zag_tl_hidden',on?'0':'1'); }catch(_){} }
+  if(hd) hd.addEventListener('click',()=>{ stop(); range.value=hi; set(null); showBar(false); });
+  if(sh) sh.addEventListener('click',()=>showBar(true));
   range.addEventListener('input',()=>{ stop(); set(+range.value); });
   all.addEventListener('click',()=>{ stop(); range.value=hi; set(null); });
   play.addEventListener('click',()=>{ if(timer){ stop(); return; } if(+range.value>=hi) range.value=lo; set(+range.value); play.textContent='Pause'; play.setAttribute('aria-pressed','true');

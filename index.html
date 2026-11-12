@@ -7,8 +7,8 @@
 <meta name="description" content="GIS atlas of buildings, bridges and infrastructure where ZAG has documented involvement.">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
-<link rel="stylesheet" href="css/atlas.css?v=38">
-<link rel="stylesheet" href="css/ios.css?v=38">
+<link rel="stylesheet" href="css/atlas.css?v=39">
+<link rel="stylesheet" href="css/ios.css?v=39">
 </head>
 <body>
 <a class="skip" href="#map">Skip to map</a>
@@ -92,7 +92,10 @@
     <button id="zhome" aria-label="Show all of Slovenia" title="All of Slovenia"><i data-ic="home"></i></button>
   </div>
 
-  <div class="tl" id="tl" hidden role="group" aria-label="Timeline of ZAG work"><button type="button" id="tlPlay" aria-pressed="false">Play</button><input type="range" step="1" aria-label="Show ZAG work up to this year"><output></output><button type="button" id="tlAll" aria-pressed="true">All years</button></div>
+  <div class="tl" id="tl" hidden role="group" aria-label="Timeline of ZAG work"><button type="button" id="tlPlay" aria-pressed="false">Play</button><input type="range" step="1" aria-label="Show ZAG work up to this year"><output></output><button type="button" id="tlAll" aria-pressed="true">All years</button><button type="button" id="tlHide" class="tlx" aria-label="Hide the timeline" title="Hide the timeline">Hide</button></div>
+  <button type="button" class="chipbtn tlshow" id="tlShow" hidden title="Show the timeline of ZAG work">Timeline</button>
+  <section class="lgd" id="lgd" hidden aria-label="Legend"><header><b>Legend</b><button type="button" id="lgdHide" class="tlx" aria-label="Hide the legend" title="Hide the legend">Hide</button></header><div id="lgdBody"></div></section>
+  <button type="button" class="chipbtn lgdshow" id="lgdShow" hidden title="Show what the map symbols mean">Legend</button>
   <div class="status" id="status"><span id="stCoord"></span><span id="stScale"></span><span id="stZoom"></span><span>WGS 84, EPSG:4326</span><span id="srcnote"></span></div>
   <div class="toast" id="toast" role="status"></div>
 </main>
@@ -113,19 +116,20 @@
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="data.js"></script>
-<script src="js/icons.js?v=38"></script>
-<script src="js/config.js?v=38"></script>
-<script src="js/mapstyle.js?v=38"></script>
-<script src="js/basemap.js?v=38"></script>
-<script src="js/locate.js?v=38"></script>
-<script src="js/atlas-data.js?v=38"></script>
-<script src="js/layers.js?v=38"></script>
-<script src="js/panel.js?v=38"></script>
-<script src="js/list.js?v=38"></script>
-<script src="js/search.js?v=38"></script>
-<script src="js/controls.js?v=38"></script>
-<script src="js/main.js?v=38"></script>
-<script src="js/userobjects.js?v=38"></script>
-<script src="js/timeline.js?v=38"></script>
+<script src="js/icons.js?v=39"></script>
+<script src="js/config.js?v=39"></script>
+<script src="js/mapstyle.js?v=39"></script>
+<script src="js/basemap.js?v=39"></script>
+<script src="js/locate.js?v=39"></script>
+<script src="js/atlas-data.js?v=39"></script>
+<script src="js/layers.js?v=39"></script>
+<script src="js/panel.js?v=39"></script>
+<script src="js/list.js?v=39"></script>
+<script src="js/search.js?v=39"></script>
+<script src="js/controls.js?v=39"></script>
+<script src="js/main.js?v=39"></script>
+<script src="js/userobjects.js?v=39"></script>
+<script src="js/timeline.js?v=39"></script>
+<script src="js/legend.js?v=39"></script>
 </body>
 </html>

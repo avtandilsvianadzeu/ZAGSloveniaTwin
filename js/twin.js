@@ -426,7 +426,7 @@ function initView(p,t,g,lines,labels,opt){
   const ll=[p.longitude,p.latitude], exact=EXACT(p.position_precision), unc=UNC[p.position_precision];
   const zoom=g?17:p.position_precision==='address'?16.8:p.position_precision==='municipality'?11.8:exact?15.5:13.2;
   let map; try{ map=new maplibregl.Map({container:box,style:STYLE_URL,center:ll,zoom,pitch:55,bearing:-20,maxPitch:85,attributionControl:{compact:true},fadeDuration:0,maxTileCacheSize:600,pixelRatio:Math.min(window.devicePixelRatio||1,2)}); }catch(_){ return fail('The map is not available in this browser. The data sheet is complete without it.'); }
-  map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'top-right'); window.__map=map; { const paint=()=>{ try{ if(window.iosMap) iosMap(map); }catch(_){} }; map.on('style.load',paint); map.once('load',paint); }
+  map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'bottom-right'); window.__map=map; { const paint=()=>{ try{ if(window.iosMap) iosMap(map); }catch(_){} }; map.on('style.load',paint); map.once('load',paint); }
   if('ResizeObserver' in window) new ResizeObserver(()=>{ try{ map.resize(); }catch(e){} }).observe(map.getContainer());
   const anchors=(t&&t.anchors)||[], mid=l=>l[Math.floor(l.length/2)];
   let is3d=true; const B=()=>is3d?-20:0, Pch=()=>is3d?55:0;
@@ -537,7 +537,7 @@ function renderIndex(){
       <div class="dim"><div class="v">${D.features.length}</div><div class="k">objects</div></div>
       <div class="dim"><div class="v">${nGeo}</div><div class="k">with 3D geometry</div></div>
       <div class="dim"><div class="v">${nExact}</div><div class="k">placed exactly</div></div>
-      <div class="dim"><div class="v">${num(nSpec)}</div><div class="k">sourced specifications</div></div>
+      <div class="dim"><div class="v">${num(nSpec)}</div><div class="k">facts and figures, each with its source</div></div>
       <div class="dim"><div class="v">${nNews}</div><div class="k">with recent news</div></div>
     </section>
     <div class="filters"><input class="find" id="find" type="search" placeholder="Filter by name or place" aria-label="Filter by name or place">
