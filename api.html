@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Data API, ZAG Digital Atlas</title>
+<meta name="description" content="Read only data API of the ZAG Digital Atlas: objects, specifications with sources and quoted sentences, geometry, as JSON, GeoJSON and CSV.">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/twin.css?v=11">
+<link rel="stylesheet" href="css/platform.css?v=11">
+<style>
+.api{max-width:980px;margin:0 auto;padding:28px 16px 60px}
+.api h1{margin:0 0 6px}.api h2{margin:30px 0 8px;font-size:18px;color:#203469}
+.api p{line-height:1.55;color:#2B3245;max-width:72ch}
+.ep{border:1px solid #E3E6EC;border-radius:10px;background:#fff;margin:10px 0;padding:12px 14px}
+.ep code.u{display:block;font:13px ui-monospace,Menlo,Consolas,monospace;color:#0A4FB3;word-break:break-all;margin:4px 0}
+.ep .row2{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.api pre{background:#0F1A33;color:#E8EDF7;border-radius:10px;padding:12px 14px;overflow:auto;font:12.5px/1.5 ui-monospace,Menlo,Consolas,monospace}
+.api table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #E3E6EC;border-radius:10px;font-size:13.5px}
+.api td,.api th{padding:8px 12px;border-bottom:1px solid #EEF0F4;text-align:left;vertical-align:top}
+.api th{background:#F5F7FA;color:#203469;font-size:12.5px}
+.try{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.try select{font:14px Inter,system-ui,sans-serif;padding:8px 10px;border:1px solid #CFD5E0;border-radius:8px;min-width:240px;max-width:100%}
+#out{max-height:420px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="thdr">
+  <a class="brand" href="index.html" title="Back to the map"><img src="img/logo.webp" alt="ZAG"><b>ZAG DIGITAL ATLAS</b></a>
+  <span class="crumb">Data API</span>
+  <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn" href="dashboard.html">Dashboard</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
+</header>
+<main id="main" class="api">
+  <h1>Data API</h1>
+  <p>All atlas data can be read by address, with no key and no sign in. Use it in QGIS, Python, Excel or your own viewer. It is read only and it is rebuilt from the atlas files each time the data changes.</p>
+  <p id="meta" class="note"></p>
+
+  <h2>Addresses</h2>
+  <div id="eps"></div>
+
+  <h2>Try it</h2>
+  <div class="try"><label for="pick">Object</label> <select id="pick"></select> <button class="tbtn solid" id="go" type="button">Load record</button> <a class="tbtn" id="open" href="#" target="_blank" rel="noopener">Open address</a></div>
+  <pre id="out" tabindex="0" aria-live="polite">Choose an object and load its record.</pre>
+
+  <h2>Examples</h2>
+  <p>Python, all objects into a table:</p>
+  <pre id="exPy"></pre>
+  <p>JavaScript, one object with its sourced values:</p>
+  <pre id="exJs"></pre>
+  <p>QGIS: Layer, Add Layer, Add Vector Layer, choose Protocol HTTP and paste the GeoJSON address.</p>
+
+  <h2>Fields of an object record</h2>
+  <table><thead><tr><th>Field</th><th>Meaning</th></tr></thead><tbody>
+    <tr><td>id, name, name_sl, type, place</td><td>Identity of the object</td></tr>
+    <tr><td>latitude, longitude, position_basis, position_exact</td><td>Stored point in WGS 84 and how it was placed</td></tr>
+    <tr><td>zag_work_from, zag_work_to, zag_role</td><td>Documented ZAG involvement</td></tr>
+    <tr><td>specifications</td><td>Each value with label, unit, source link and, where held, the quoted sentence it was read from</td></tr>
+    <tr><td>source_differences</td><td>Cases where sources give different values. None is chosen</td></tr>
+    <tr><td>open_question</td><td>What is not yet verified</td></tr>
+    <tr><td>geometry</td><td>Point, drawn alignment if any, official building outline and height if any</td></tr>
+    <tr><td>model_basis</td><td>Published dimensions a rebuilt model uses, with its drawing choices</td></tr>
+    <tr><td>rebuild_status</td><td>Whether a true model can be built from published data and what is missing</td></tr>
+  </tbody></table>
+  <p class="note" style="margin-top:14px">Each source keeps its own licence. The atlas holds no sensor readings, so nothing in the API is measured live.</p>
+</main>
+<script>
+(async()=>{ const B=new URL('api/v1/',location.href).href, $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const EP=[['Service description and counts','index.json'],['All objects, one row each','objects.json'],['One object in full','objects/{id}.json'],['All objects as GeoJSON','objects.geojson'],['All objects as a CSV table','objects.csv'],['OpenAPI description','openapi.json']];
+  $('eps').innerHTML=EP.map(([t,p])=>`<div class="ep"><b>${t}</b><code class="u">${esc(B+p)}</code><div class="row2">${p.includes('{')?'':`<a class="tbtn" href="${esc(B+p)}" target="_blank" rel="noopener">Open</a>`}<button class="tbtn" type="button" data-copy="${esc(B+p)}">Copy address</button></div></div>`).join('');
+  document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{ try{ await navigator.clipboard.writeText(b.dataset.copy); b.textContent='Copied'; setTimeout(()=>b.textContent='Copy address',1500); }catch(_){ b.textContent='Copy failed'; } });
+  $('exPy').textContent=`import pandas as pd\nobjects = pd.read_csv("${B}objects.csv")\nprint(objects[["name", "type", "latitude", "longitude"]].head())`;
+  $('exJs').textContent=`const r = await fetch("${B}objects/nm_brv.json").then(x => x.json());\nfor (const s of r.specifications) console.log(s.label, s.value, s.unit, s.source);`;
+  try{ const [ix,list]=await Promise.all([fetch(B+'index.json').then(r=>r.json()),fetch(B+'objects.json').then(r=>r.json())]);
+    $('meta').textContent=`Version ${ix.version}, built ${ix.generated}. ${ix.objects} objects, ${ix.values} values, ${ix.values_with_source} with a source link.`;
+    $('pick').innerHTML=list.objects.slice().sort((a,b)=>a.name.localeCompare(b.name,'sl')).map(o=>`<option value="${esc(o.id)}">${esc(o.name)}</option>`).join('');
+    const sync=()=>{ $('open').href=B+'objects/'+$('pick').value+'.json'; }; $('pick').onchange=sync; sync();
+    $('go').onclick=async()=>{ $('out').textContent='Loading'; try{ const r=await fetch(B+'objects/'+$('pick').value+'.json').then(x=>x.json()); $('out').textContent=JSON.stringify(r,null,2); }catch(e){ $('out').textContent='The record could not be loaded. '+e.message; } };
+  }catch(e){ $('meta').textContent='The API files could not be read. '+e.message; }
+})();
+</script>
+</body>
+</html>

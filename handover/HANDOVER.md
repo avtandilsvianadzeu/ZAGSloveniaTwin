@@ -221,3 +221,10 @@ The owner asked for the look and flow of professional digital twin platforms. Th
 - Timeline on the map page (`js/timeline.js`): a year slider with Play and All years. It shows records whose ZAG work started in or before the chosen year. Records without a year in the sources stay visible at every position.
 - Table view on the Twins page: sortable columns, the same filters as the cards, and a CSV download with coordinates and ids.
 - Ground profile on each asset page with a drawn alignment (Data tab, Geometry): terrain heights read from the Mapzen terrain tiles along the line, with a readout on hover. It is the ground surface, not the deck level or the tunnel floor.
+
+### Evidence and data API, 12 November 2026
+
+- Evidence: 485 values now carry the sentence they were read from (`quote` in `data/twins.json`). On the asset page each such value has an Evidence button that shows the sentence with the value marked and a link to the source. For web pages the link opens the source at that sentence, for PDF files it opens the document.
+- 64 of the 485 quotes do not contain the value in the same form (a translation, a table row or a title). They are labelled "Evidence, check" and counted on the Quality tab. They need a person to open the source.
+- No screenshots of the source pages are stored. The sources could not be opened from the build environment, and zag.si could not be reached from the built-in browser on 12 November.
+- Data API: `node tools/build_api.js` writes `api/v1/` (index, objects list, one file per object, GeoJSON, CSV, OpenAPI description). `api.html` documents it and has a try-it box. Run the script after every data change.

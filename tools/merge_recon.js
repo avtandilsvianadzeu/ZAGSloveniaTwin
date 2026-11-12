@@ -8,13 +8,15 @@ const TP=path.join(ROOT,'data/twins.json'), TW=JSON.parse(fs.readFileSync(TP,'ut
 const G=JSON.parse(fs.readFileSync(path.join(ROOT,'data/zag_projects.geojson'),'utf8')), IDS=new Set(G.features.map(f=>f.properties.id));
 const clean=s=>String(s==null?'':s).replace(/[–—]/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+/g,' ').trim();
 const host=u=>{ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(_){ return null; } }, key=s=>clean(s).toLowerCase();
-let add=0, diff=0, skip=0, recs=0; const status={};
+let add=0, diff=0, skip=0, recs=0, quoted=0; const status={};
 for(const f of fs.readdirSync(DIR).filter(f=>f.endsWith('.json'))) for(const r of JSON.parse(fs.readFileSync(path.join(DIR,f),'utf8'))){
   if(!r||!IDS.has(r.id)) continue; recs++; status[r.id]={rebuildable:clean(r.rebuildable||''),missing:(r.missing||[]).map(clean).slice(0,8)};
   const t=T[r.id]=T[r.id]||{summary:null,specs:[],anchors:[],differences:[],open:null,kind:'Site'}; t.specs=t.specs||[]; t.differences=t.differences||[];
   for(const s of r.specs||[]){ const label=clean(s.label), value=clean(s.value), unit=clean(s.unit||''); if(!label||!value||!host(s.source)||value.length>160){ skip++; continue; }
     const have=t.specs.filter(x=>key(x.label)===key(label));
-    if(!have.length){ t.specs.push({label,value,unit,source:s.source}); add++; }
+    const quote=s.quote?String(s.quote).replace(/\s+/g,' ').trim().slice(0,600):'';
+    const same=have.find(x=>key(x.value)===key(value)&&x.source===s.source); if(same&&quote&&!same.quote){ same.quote=quote; quoted++; }
+    if(!have.length){ const o={label,value,unit,source:s.source}; if(quote){ o.quote=quote; quoted++; } t.specs.push(o); add++; }
     else if(!have.some(x=>key(x.value)===key(value))){ const line=`${label}: ${have[0].value}${have[0].unit?' '+have[0].unit:''} (${host(have[0].source)||'record'}) against ${value}${unit?' '+unit:''} (${host(s.source)})`; if(!t.differences.includes(line)){ t.differences.push(line); diff++; } }
     else skip++; } }
 TW.meta.reconstruction='November 2026: dimensions collected by three research passes, each with a source link. Values were read through a page reader, so check a value against its source before relying on it.';

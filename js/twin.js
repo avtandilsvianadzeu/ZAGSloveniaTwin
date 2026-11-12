@@ -23,6 +23,15 @@ const clean=s=>String(s==null?'':s).replace(/\s*—\s*/g,', ').replace(/(\d)\s*�
 const T=s=>esc(clean(s));
 const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):'';
 const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'');}catch(_){return u;}};
+/* evidence: the sentence a value was read from, with the value marked, and a link that opens the source at that sentence */
+const evNums=v=>(String(v).match(/\d+(?:[.,]\d+)?/g)||[]).map(x=>x.replace(',','.'));
+function evShows(s){ const q=String(s.quote||''), v=String(s.value), n1=x=>x.replace(/(\d),(\d)/g,'$1.$2'), n2=x=>x.replace(/(\d)[\s.,](?=\d{3}(?!\d))/g,'$1').replace(/(\d),(\d)/g,'$1.$2');
+  const hit=(N)=>{ const qn=N(q), nums=(N(v).match(/\d+(?:\.\d+)?/g)||[]); return nums.length?nums.some(n=>new RegExp('(^|[^\\d.])'+n.replace('.','\\.')+'(?![\\d])').test(qn)||(/\.0+$/.test(n)&&new RegExp('(^|[^\\d.])'+n.replace(/\.0+$/,'')+'(?![\\d.])').test(qn))):null; };
+  const a=hit(n1); if(a) return true; const b=hit(n2); if(b) return true; if(a===null){ const ws=v.toLowerCase().match(/[a-zà-ž]{5,}/g)||[]; return ws.some(w=>q.toLowerCase().includes(w)); } return false; }
+function evMark(s){ let h=esc(clean(s.quote)); for(const n of new Set(evNums(s.value))){ const alt=n.includes('.')?n.replace('.','[.,]'):n; h=h.replace(new RegExp('(^|[^\\d.,>])('+alt+')(?![\\d])','g'),'$1<mark>$2</mark>'); } return h; }
+const evDeep=s=>{ const u=s.source||''; if(/\.pdf(\?|#|$)|\/PDF$|\/retrieve$|download/i.test(u)) return null; const w=String(s.quote).replace(/\s+/g,' ').trim().split(' ').slice(0,7).join(' '); return w?u.split('#')[0]+'#:~:text='+encodeURIComponent(w):null; };
+function evid(s){ if(!s||!s.quote) return ''; const ok=evShows(s), deep=evDeep(s);
+  return `<details class="ev"><summary>${ok?'Evidence':'Evidence, check'}</summary><blockquote>${evMark(s)}</blockquote><p>${ok?'Sentence as read from the source in November 2026.':'The value is not in this sentence in the same form. It may be a translation or a table row. Check it in the source.'} ${deep?`<a href="${esc(deep)}" target="_blank" rel="noopener">Open the source at this sentence</a>`:`<a href="${esc(s.source)}" target="_blank" rel="noopener">Open the source document</a>`}</p></details>`; }
 const link=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t||host(u))}</a>`:'';
 const fmtDate=d=>{try{return new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}catch(_){return String(d).slice(0,10);}};
 const num=n=>Number(n).toLocaleString('en-GB');
@@ -120,7 +129,7 @@ function renderTwin(f){
   sec('zag','ZAG involvement',!(p.zag_role||inv.length||p.year||(p.people||[]).length||(p.partners||[]).length)?'':`<div class="in">${p.zag_role?`<p>${T(p.zag_role)}</p>`:''}${inv.length?`<div class="tags">${inv.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`:''}
     ${p.year?`<h3>Years</h3><p>${T(p.year)}</p>`:''}${(p.people||[]).length?`<h3>Named in the sources</h3><ul>${p.people.map(x=>`<li>${T(x)}</li>`).join('')}</ul>`:''}
     ${(p.partners||[]).length?`<h3>Partners and clients</h3><ul>${p.partners.map(x=>`<li>${T(x)}</li>`).join('')}</ul>`:''}</div>`);
-  sec('specs','Specifications',(t&&(t.specs||[]).length)?`<div class="tscroll"><table><thead><tr><th>Property</th><th>Value</th><th>Source</th></tr></thead><tbody>${t.specs.map(s=>`<tr><td class="l">${T(s.label)}</td><td class="v">${T(s.value)}${s.unit?' '+esc(s.unit):''}</td><td class="s">${s.source?link(s.source):(p.category==='user_object'?'<span class="muted">entered by the user</span>':'<span class="muted">from the record</span>')}</td></tr>`).join('')}</tbody></table></div>`:'');
+  sec('specs','Specifications',(t&&(t.specs||[]).length)?`<div class="tscroll"><table><thead><tr><th>Property</th><th>Value</th><th>Source</th></tr></thead><tbody>${t.specs.map(s=>`<tr><td class="l">${T(s.label)}</td><td class="v">${T(s.value)}${s.unit?' '+esc(s.unit):''}</td><td class="s">${s.source?link(s.source)+evid(s):(p.category==='user_object'?'<span class="muted">entered by the user</span>':'<span class="muted">from the record</span>')}</td></tr>`).join('')}</tbody></table></div>`:'');
   const geo=[];
   if(lines.length) geo.push(`<div class="tscroll"><table><thead><tr><th>Drawn part</th><th>Length on the map</th><th>Points</th></tr></thead><tbody>${lines.map((l,i)=>`<tr class="pick" data-line="${i}" tabindex="0" title="Show on the 3D view"><td class="l">${T(labels[i]||(lines.length>1?'Part '+(i+1):'Alignment'))}</td><td class="v">${num(Math.round(lineLen(l)))} m</td><td class="n">${l.length}</td></tr>`).join('')}</tbody></table></div><p class="note" style="padding:8px 18px 0">Lengths are measured along the drawn line and can differ from surveyed lengths.</p>`);
   if(t&&(t.anchors||[]).length) geo.push(`<div class="tscroll"><table><thead><tr><th>Reference point</th><th>Latitude, longitude</th><th>Source</th></tr></thead><tbody>${t.anchors.map((a,i)=>`<tr class="pick" data-anchor="${i}" tabindex="0" title="Show on the 3D view"><td class="l">${T(a.label)}</td><td class="n">${(+a.lat).toFixed(6)}, ${(+a.lon).toFixed(6)}</td><td class="s">${a.source?link(a.source):''}</td></tr>`).join('')}</tbody></table></div>`);
@@ -144,7 +153,7 @@ function renderTwin(f){
   $('crumb').textContent=`Digital twins, ${GROUP_NAME[p.object_type]||cap(p.object_type)}`;
   const order=D.features.map(x=>x.properties.id), sheet=order.indexOf(id)+1;
   const model=buildModel(p,t,g,lines,labels), hasModel=model.els.length>0, EMBED=document.body.classList.contains('embed');
-  const dataRows=[...((t&&t.specs)||[]).map(x=>[x.label,clean(x.value)+(x.unit?' '+x.unit:''),x.source]),...sRows.map(x=>[x[0],x[1],null]),...((p.facts||[]).map(x=>[x[0],x[1],null]))];
+  const dataRows=[...((t&&t.specs)||[]).map(x=>[x.label,clean(x.value)+(x.unit?' '+x.unit:''),x.source,x]),...sRows.map(x=>[x[0],x[1],null]),...((p.facts||[]).map(x=>[x[0],x[1],null]))];
   const anchors=(t&&t.anchors)||[], nd0=t?(t.differences||[]).length:0, nSrc=dataRows.filter(r=>r[2]).length;
   const blk=ids=>secs.filter(x=>ids.includes(x.sid)).sort((x,y)=>ids.indexOf(x.sid)-ids.indexOf(y.sid)).map(x=>x.html).join('')||'<p class="note pad">Nothing is recorded here for this asset.</p>';
   const modelPane=hasModel?`<div class="pane pane-model" id="paneModel"><canvas id="fem" tabindex="0" aria-label="Model of ${T(p.name_en||p.name)}. Drag to turn it any way, scroll to zoom, double click to reset."></canvas>
@@ -181,11 +190,11 @@ function renderTwin(f){
     <aside class="insp" aria-label="Inspector">
       <div class="tabs" role="tablist">${[['props','Properties'],['data','Data'],['quality','Quality'+(nd0?' '+nd0:'')],['insp','Inspections'],['src','Sources']].map((x,i)=>`<button role="tab" id="tab-${x[0]}" aria-controls="pan-${x[0]}" aria-selected="${i===0}" type="button">${x[1]}</button>`).join('')}</div>
       <div class="tabpan" id="pan-props" role="tabpanel"><div class="pickbox" id="pick" aria-live="polite"></div>
-        <div class="alldata"><h3 class="blk-h">All data on this asset <small>${dataRows.length} values, ${nSrc} with a source link</small></h3>${dataRows.length?dataRows.map(r=>`<div class="row"><span>${T(r[0])}</span><span>${T(r[1])}${r[2]?` ${link(r[2])}`:''}</span></div>`).join(''):'<p class="note">No specifications are recorded for this asset yet.</p>'}</div>
+        <div class="alldata"><h3 class="blk-h">All data on this asset <small>${dataRows.length} values, ${nSrc} with a source link</small></h3>${dataRows.length?dataRows.map(r=>`<div class="row"><span>${T(r[0])}</span><span>${T(r[1])}${r[2]?` ${link(r[2])}`:''}</span></div>${r[3]?evid(r[3]):''}`).join(''):'<p class="note">No specifications are recorded for this asset yet.</p>'}</div>
         ${hero?`<figure class="photo"><img alt="" src="${esc(hero.src)}">${hero.credit?`<figcaption>${T(hero.credit)}</figcaption>`:''}</figure>`:''}</div>
       <div class="tabpan" id="pan-data" role="tabpanel" hidden>${blk(['about','zag','specs','geometry','record','history'])}</div>
       <div class="tabpan" id="pan-quality" role="tabpanel" hidden>
-        <section class="blk"><h3 class="blk-h">Data quality</h3><div class="qgrid"><div><b>${dataRows.length}</b><span>values</span></div><div><b>${nSrc}</b><span>with source</span></div><div><b>${nd0}</b><span>source conflicts</span></div><div><b>${t&&t.open?1:0}</b><span>open question</span></div></div></section>${blk(['check','position'])}</div>
+        <section class="blk"><h3 class="blk-h">Data quality</h3><div class="qgrid"><div><b>${dataRows.length}</b><span>values</span></div><div><b>${nSrc}</b><span>with source</span></div><div><b>${nd0}</b><span>source conflicts</span></div><div><b>${t&&t.open?1:0}</b><span>open question</span></div><div><b>${((t&&t.specs)||[]).filter(x=>x.quote).length}</b><span>with quoted sentence</span></div><div><b>${((t&&t.specs)||[]).filter(x=>x.quote&&!evShows(x)).length}</b><span>quotes to check</span></div></div></section>${blk(['check','position'])}</div>
       <div class="tabpan" id="pan-insp" role="tabpanel" hidden>${blk(['inspect'])}</div>
       <div class="tabpan" id="pan-src" role="tabpanel" hidden>${blk(['sources','news'])}</div>
     </aside></div>`;
