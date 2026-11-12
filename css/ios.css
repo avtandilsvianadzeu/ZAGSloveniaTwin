@@ -274,4 +274,5 @@ dialog::backdrop{background:rgba(0,0,0,.28)}
 /* model level badge: says plainly how the 3D view was made */
 .pane-model .plabel.mlevel{font-weight:600;color:#fff;border:0;padding:6px 10px;border-radius:999px;letter-spacing:-.01em}
 .mlevel.lv-full{background:#248A3D}.mlevel.lv-plan{background:#007AFF}.mlevel.lv-cadastre{background:#5856D6}.mlevel.lv-schematic{background:#C93400}
-.pane-model .plabel.mlevel{white-space:nowrap;max-width:calc(100% - 120px);overflow:hidden;text-overflow:ellipsis}
+.pane-model .plabel.mlevel{white-space:normal;line-height:1.25;max-width:calc(100% - 70px)}
+.mlevel.lv-outline{background:#0A7E8C}

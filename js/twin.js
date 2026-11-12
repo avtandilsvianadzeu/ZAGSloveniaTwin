@@ -164,7 +164,7 @@ function renderTwin(f){
   const blk=ids=>secs.filter(x=>ids.includes(x.sid)).sort((x,y)=>ids.indexOf(x.sid)-ids.indexOf(y.sid)).map(x=>x.html).join('')||'<p class="note pad">Nothing is recorded here for this asset.</p>';
   const modelPane=hasModel?`<div class="pane pane-model" id="paneModel"><canvas id="fem" tabindex="0" aria-label="Model of ${T(p.name_en||p.name)}. Drag to turn it any way, scroll to zoom, double click to reset."></canvas>
       <div class="ptools"><div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div><button class="tbtn" id="mScan" type="button" aria-pressed="true" hidden title="Show the roof surface measured by the national laser scanning, or the plain blocks">Laser scan</button><button class="tbtn" id="mMeasure" type="button" aria-pressed="false" title="Click two nodes to read the distance between them">Measure</button><button class="tbtn" id="mReset" type="button">Reset</button></div>
-      <div class="plabel mlevel lv-${model.level}" id="plabel" title="${T(model.note||'')}">${{full:'Built from published dimensions',plan:'Plan from published dimensions',cadastre:'Plan from the land cadastre',schematic:'Schematic, not the real structure'}[model.level]}</div></div>`:'';
+      <div class="plabel mlevel lv-${model.level}" id="plabel" title="${T(model.note||'')}">${{full:'Built from published dimensions',plan:'Plan from published dimensions',outline:'Mapped outline, published height',cadastre:'Plan from the land cadastre',schematic:'Schematic, not the real structure'}[model.level]}</div></div>`:'';
   if(EMBED){ $('main').innerHTML=`<div class="embedbox">${modelPane}<div class="pickbox" id="pick" aria-live="polite"></div><p class="note stage-note">${T(model.note||'')}</p></div>`; }
   else $('main').innerHTML=`<div class="ws${hasModel?'':' nomodel'}">
     <aside class="tree" aria-label="Asset and its parts">
@@ -244,7 +244,7 @@ function renderTwin(f){
    Element size is a drawing choice. Nothing here is a structural analysis model, and no pier, span or cross section is assumed. */
 function buildModel(p,t,g,lines,labels){
   const all=[...lines.flat()], ring0=g&&g.geometry?(g.geometry.type==='Polygon'?[g.geometry.coordinates]:g.geometry.type==='MultiPolygon'?g.geometry.coordinates:[]).map(x=>x[0]):[];
-  ring0.forEach(r=>all.push(...r)); const M={nodes:[],els:[],parts:[],refs:[],faces:[],note:'',R:1};
+  ring0.forEach(r=>all.push(...r)); const BLK=(t&&t.model&&t.model.blocks)||[]; BLK.forEach(b=>all.push(...b.ring)); const M={nodes:[],els:[],parts:[],refs:[],faces:[],note:'',R:1};
   if(!all.length) return M;
   const o=[all.reduce((a,c)=>a+c[0],0)/all.length,all.reduce((a,c)=>a+c[1],0)/all.length], kx=RAD*Math.cos(o[1]*RAD)*R, ky=RAD*R;
   const xy=c=>[(c[0]-o[0])*kx,(c[1]-o[1])*ky], ll=(x,y)=>[o[0]+x/kx,o[1]+y/ky];
@@ -273,9 +273,9 @@ function buildModel(p,t,g,lines,labels){
     M.parts.push({name:labels[i]||(lines.length>1?'Part '+(i+1):p.name_en||p.name),len:Lm,track:axis,kind:'line',width:W}); });
   /* building volumes: the parts with storey counts where the source has them, else the single outline at its surveyed height */
   const STOREY=(g&&g.storey_m)||3;
-  const vols=g&&g.parts?g.parts.map((q,i)=>q.kn!=null?{ring:q.ring,h:q.h!=null?q.h:q.scan?q.scan.median_m:0,name:`Building ${q.kn}, ${q.year||'year not recorded'}`,info:[['Cadastre building',String(q.kn)],['Year built',q.year?String(q.year):null],['Storeys, below and above ground',q.storeys_all?String(q.storeys_all):null],['Highest point above terrain (cadastre)',q.h!=null?q.h.toFixed(1)+' m':'not recorded']]}:q.scan?{ring:q.ring,h:q.scan.median_m,name:`Part ${i+1}, ${q.levels} ${q.levels===1?'storey':'storeys'}`}:{ring:q.ring,h:q.levels*STOREY,derived:true,name:`Part ${i+1}, ${q.levels} ${q.levels===1?'storey':'storeys'}`}):ring0.map((r,i)=>({ring:r,h:g.height_m||0,name:ring0.length>1?'Outline '+(i+1):'Building outline'}));
+  const vols=g&&g.parts?g.parts.map((q,i)=>q.kn!=null?{ring:q.ring,h:q.h!=null?q.h:q.scan?q.scan.median_m:0,name:`Building ${q.kn}, ${q.year||'year not recorded'}`,info:[['Cadastre building',String(q.kn)],['Year built',q.year?String(q.year):null],['Storeys, below and above ground',q.storeys_all?String(q.storeys_all):null],['Highest point above terrain (cadastre)',q.h!=null?q.h.toFixed(1)+' m':'not recorded']]}:q.scan?{ring:q.ring,h:q.scan.median_m,name:`Part ${i+1}, ${q.levels} ${q.levels===1?'storey':'storeys'}`}:{ring:q.ring,h:q.levels*STOREY,derived:true,name:`Part ${i+1}, ${q.levels} ${q.levels===1?'storey':'storeys'}`}):ring0.map((r,i)=>({ring:r,h:g.height_m||0,name:ring0.length>1?'Outline '+(i+1):'Building outline'})); BLK.forEach(b=>vols.push({ring:b.ring,h:b.h||0,z0:b.z0||0,name:b.name,info:b.info||null}));
   vols.forEach(v=>{ const P=v.ring.slice(0,-1).map(xy); if(P.length<3) return; const h=v.h, lv=h?1:0, part=M.parts.length, rings=[];
-    for(let k=0;k<=lv;k++){ const z=lv?h*k/lv:0; rings.push(P.map(c=>node(c[0],c[1],z,part,{role:k===0?'ground':k===lv?'top':'level'}))); }
+    for(let k=0;k<=lv;k++){ const z=(v.z0||0)+(lv?h*k/lv:0); rings.push(P.map(c=>node(c[0],c[1],z,part,{role:k===0?'ground':k===lv?'top':'level'}))); }
     rings.forEach(rg=>rg.forEach((a,q)=>el(a,rg[(q+1)%rg.length],part,'ring')));
     for(let k=0;k<lv;k++) rings[k].forEach((a,q)=>el(a,rings[k+1][q],part,'vertical'));
     if(lv){ const r0=rings[0], rT=rings[lv]; const sa=P.reduce((a,c,q)=>a+c[0]*P[(q+1)%P.length][1]-P[(q+1)%P.length][0]*c[1],0)>0?1:-1; r0.forEach((a,q)=>{ const c=P[q], d=P[(q+1)%P.length], ex=d[0]-c[0], ey=d[1]-c[1], el2=Math.hypot(ex,ey)||1; M.faces.push({v:[a,r0[(q+1)%r0.length],rT[(q+1)%r0.length],rT[q]],part,kind:'wall',h,n:[sa*ey/el2,-sa*ex/el2]}); }); M.faces.push({v:rT.slice(),part,kind:'roof'}); }
@@ -286,8 +286,8 @@ function buildModel(p,t,g,lines,labels){
   if(ring0.length&&(g.height_m||g.parts)) bits.push('plain blocks with no roof shape, storeys or windows, because the sources do not give them');
   if(g&&g.site) M.site=(g.site.rings||[g.site.ring]).map(r=>r.map(c=>xy(c)));
   M.xy=xy; M.ll=ll;
-  M.level=mdl?(mdl.level==='plan'?'plan':'full'):(ring0.length&&!lines.length&&g.parts&&g.parts[0]&&g.parts[0].kn!=null?'cadastre':'schematic');
-  if(mdl){ M.recon=true; M.note=(mdl.level==='plan'?'Plan rebuilt from published dimensions: ':'Model rebuilt from published dimensions: ')+(mdl.basis||[]).join(', ')+'. '+(mdl.assumed||'')+' It is not a structural analysis model.'; }
+  M.level=mdl?(mdl.level==='plan'||mdl.level==='outline'?mdl.level:'full'):(ring0.length&&!lines.length&&g.parts&&g.parts[0]&&g.parts[0].kn!=null?'cadastre':'schematic');
+  if(mdl){ M.recon=true; M.note=(mdl.level==='outline'?'Outline from OpenStreetMap with published heights: ':mdl.level==='plan'?'Plan rebuilt from published dimensions: ':'Model rebuilt from published dimensions: ')+(mdl.basis||[]).join(', ')+'. '+(mdl.assumed||'')+' It is not a structural analysis model.'; }
   else M.note='Schematic mesh generated from '+bits.join(' and ')+'. It is not a structural analysis model. Element size is a drawing choice'+(lines.length?', and heights along the alignment are not in the sources, so those parts are drawn flat':'')+'.'+(g&&g.scan?' The Laser scan view replaces the blocks with the surface heights measured by the national laser scanning inside the same outlines, in 1 m cells.':'');
   return M;
 }
