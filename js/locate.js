@@ -49,27 +49,14 @@ function buildingFromFeature(f){
   const parts=f.id!=null?feats.filter(x=>x.id===f.id):[f]; const best=parts[0]||f;
   return {feature:best,parts:parts.length?parts:[f],g:best.geometry,dist:0,id:best.id,h:+(best.properties.render_height||best.properties.height||8),hknown:best.properties.render_height!=null||best.properties.height!=null,b:+(best.properties.render_min_height||0),c:centroid(best.geometry)};
 }
-/* Map-tile buildings that lie under the official outlines. They are hidden while the selection shows, otherwise their grey walls
-   stand outside the blue volume. A tile building counts when at least half of its outline points are inside an official outline
-   or within 2.5 m of one, so a neighbour that only touches the site stays as it is. */
 let HL_NOW=null;
-function underIds(fs){ const ids=[]; try{
-  const rings=fs.map(x=>x.geometry.type==='Polygon'?x.geometry.coordinates[0]:x.geometry.coordinates[0][0]);
-  const pin=(pt,r)=>{ let k=false; for(let i=0,j=r.length-1;i<r.length;j=i++){ if((r[i][1]>pt[1])!==(r[j][1]>pt[1])&&pt[0]<(r[j][0]-r[i][0])*(pt[1]-r[i][1])/(r[j][1]-r[i][1])+r[i][0]) k=!k; } return k; };
-  const nearRing=(pt,r)=>{ const kx=111320*Math.cos(pt[1]*Math.PI/180), ky=110540; for(let i=0;i<r.length-1;i++){ const ax=(r[i][0]-pt[0])*kx, ay=(r[i][1]-pt[1])*ky, bx=(r[i+1][0]-pt[0])*kx, by=(r[i+1][1]-pt[1])*ky, dx=bx-ax, dy=by-ay, l2=dx*dx+dy*dy||1, t=Math.max(0,Math.min(1,-(ax*dx+ay*dy)/l2)); if(Math.hypot(ax+dx*t,ay+dy*t)<2.5) return true; } return false; };
-  const share={};
-  for(const t of map.querySourceFeatures('openmaptiles',{sourceLayer:'building'})){ if(t.id==null) continue; const g=t.geometry, pts=(g.type==='Polygon'?[g.coordinates[0]]:g.type==='MultiPolygon'?g.coordinates.map(q=>q[0]):[]).flat(); if(!pts.length) continue;
-    const hit=pts.filter(c=>rings.some(r=>pin(c,r)||nearRing(c,r))).length; const o=share[t.id]=share[t.id]||[0,0]; o[0]+=hit; o[1]+=pts.length; }
-  for(const k in share) if(share[k][0]/share[k][1]>=.5) ids.push(isNaN(+k)?k:+k);
- }catch(_){} return ids; }
 /* official building from the GURS topographic building layer (footprint, height), stored per record in data/gurs_buildings.json */
 function officialBuilding(o){
   /* no surveyed height: the outline is shown almost flat instead of an invented height */
   const f={type:'Feature',id:null,properties:{render_height:o.height_m!=null?o.height_m:0.6,render_min_height:0},geometry:o.geometry};
   const fs=o.parts?o.parts.map(q=>({type:'Feature',id:null,properties:{render_height:q.h!=null?q.h:q.levels*(o.storey_m||3),render_min_height:0},geometry:{type:'Polygon',coordinates:[q.ring]}})):[f];
   const c=centroid(o.geometry); const osm=c?findBuilding(c,2):null;
-  const under=underIds(fs); if(osm&&osm.id!=null&&!under.includes(osm.id)) under.push(osm.id);
-  return {feature:f,parts:fs,under,g:o.geometry,dist:0,id:osm?osm.id:null,h:o.height_m,hknown:o.height_m!=null,b:0,c,official:o};
+  return {feature:f,parts:fs,g:o.geometry,dist:0,id:osm?osm.id:null,h:o.height_m,hknown:o.height_m!=null,b:0,c,official:o};
 }
 const BASEF={};
 function baseFilter(id){ if(!(id in BASEF)){ try{ BASEF[id]=map.getFilter(id)||null; }catch(_){ BASEF[id]=null; } } return BASEF[id]; }
@@ -81,9 +68,10 @@ function showBuilding(b){
   const fc={type:'FeatureCollection',features:(b&&!tile)?b.parts.map(f=>({type:'Feature',properties:{h:+(f.properties.render_height||8)+(b.official?0.3:0.6),b:+(f.properties.render_min_height||0)},geometry:f.geometry})):[]};
   map.getSource('hl').setData(fc);
   try{ if(map.getLayer('hl-tile')) map.setFilter('hl-tile',['==',['id'],tile?b.id:-1]); }catch(_){}
-  const bid=b&&b.under&&b.under.length?b.under:(b&&b.id!=null?b.id:null); hideBase('building-3d',bid); hideBase('building',bid);
-  /* the tiles under the selection may still be loading when it is first drawn, so the list is taken again when the map has settled */
-  HL_NOW=b; if(b&&b.official){ const again=()=>{ if(HL_NOW!==b) return; const u=underIds(b.parts); if(b.id!=null&&!u.includes(b.id)) u.push(b.id); if(u.length){ b.under=u; hideBase('building-3d',u); hideBase('building',u); } }; map.once('idle',again); setTimeout(again,2500); setTimeout(again,6000); }
+  const bid=b&&b.id!=null?b.id:null; hideBase('building-3d',bid); hideBase('building',bid);
+  /* An official outline rarely matches the map-tile building under it, and the tile buildings cannot be picked out reliably while terrain is on.
+     So while an official selection shows, all map buildings turn into faint see-through volumes and the selection stands out whole. */
+  HL_NOW=b; try{ applyLook(); }catch(_){}
 }
 function clearHL(){ hlToken++; if(!ready) return; showBuilding(null); map.getSource('unc').setData({type:'FeatureCollection',features:[]}); }
 
