@@ -198,3 +198,12 @@ The owner asked for the look and flow of professional digital twin platforms. Th
 - In the map panel of the main map the model is embedded through `twin.html?id=...&embed=1`, which renders only the model and the selection.
 - Tested headless: all 73 asset pages at desktop and phone width, breakdown clicks, measure, tabs, in-page links, layouts, CSV, asset search, embed, home, add and dashboard pages.
 
+
+## 16. Changes of 12 November 2026
+
+- Site builds of 11 November evening failed at start on the GitHub side (two runs, "startup_failure"). The next push built normally, so the live site now carries the asset workspace.
+- Researched values merged with `node tools/merge_recon.js`: 485 values with a source link each, across 59 records. The research files with the quoted source sentences are in `handover/research/reconstruction_2026_11/`. `data/rebuild_status.json` lists per asset what is still missing for a true model.
+- These values were read from the sources by the research passes. The source pages have not been opened a second time to confirm each quote, so treat them as read once.
+- Visible text: middle dots, ellipsis marks and arrow marks removed from the map page, the search, the list and the side panel.
+- Site map on the asset page now fills its pane (it stayed 128 px high until the window was resized).
+- Positions looked at on Google Maps satellite view, centre of view on the stored point: Tomačevo, Vransko, Novo mesto footbridge, Čatež, Ravbarkomanda, Verd, Gameljne and RTP Gorica sit on the structure. Črna na Koroškem sits in the town centre, and its exact bridge is still an open item.
