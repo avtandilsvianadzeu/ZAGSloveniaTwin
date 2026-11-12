@@ -1,0 +1,317 @@
+{
+ "note": "Cadastre buildings read from SI.GURS.KN:STAVBE on 12 November 2026 for records whose point lay in no cadastre footprint when only the TLORIS outline was read. With the above-ground outline (NADZEMNI_GEOM) the building is found.",
+ "buildings": {
+  "kpd": {
+   "st": 416,
+   "ko": "659 TABOR",
+   "et": 4,
+   "yr": 1885,
+   "h1": null,
+   "h2": 293.1,
+   "h3": 270,
+   "r": [
+    [
+     15.651391,
+     46.553305
+    ],
+    [
+     15.651385,
+     46.553271
+    ],
+    [
+     15.651347,
+     46.553274
+    ],
+    [
+     15.651336,
+     46.553219
+    ],
+    [
+     15.651408,
+     46.553213
+    ],
+    [
+     15.651399,
+     46.553172
+    ],
+    [
+     15.651365,
+     46.553175
+    ],
+    [
+     15.651322,
+     46.552942
+    ],
+    [
+     15.651335,
+     46.552941
+    ],
+    [
+     15.651299,
+     46.552761
+    ],
+    [
+     15.651322,
+     46.552715
+    ],
+    [
+     15.651377,
+     46.552686
+    ],
+    [
+     15.651433,
+     46.552678
+    ],
+    [
+     15.651499,
+     46.552697
+    ],
+    [
+     15.651538,
+     46.552736
+    ],
+    [
+     15.651545,
+     46.552772
+    ],
+    [
+     15.65158,
+     46.552769
+    ],
+    [
+     15.651589,
+     46.552819
+    ],
+    [
+     15.651553,
+     46.552823
+    ],
+    [
+     15.651572,
+     46.552918
+    ],
+    [
+     15.651583,
+     46.552917
+    ],
+    [
+     15.651632,
+     46.553149
+    ],
+    [
+     15.651597,
+     46.553153
+    ],
+    [
+     15.651617,
+     46.553249
+    ],
+    [
+     15.651651,
+     46.553245
+    ],
+    [
+     15.651671,
+     46.553341
+    ],
+    [
+     15.651404,
+     46.553367
+    ],
+    [
+     15.651391,
+     46.553305
+    ]
+   ]
+  },
+  "nuk": {
+   "st": 174,
+   "ko": "1728 LJUBLJANA MESTO",
+   "et": 9,
+   "yr": 1941,
+   "h1": null,
+   "h2": 320.4,
+   "h3": 298.5,
+   "r": [
+    [
+     14.503483,
+     46.04772
+    ],
+    [
+     14.503312,
+     46.047326
+    ],
+    [
+     14.503622,
+     46.04728
+    ],
+    [
+     14.503624,
+     46.047285
+    ],
+    [
+     14.503742,
+     46.04727
+    ],
+    [
+     14.50374,
+     46.047264
+    ],
+    [
+     14.503766,
+     46.047261
+    ],
+    [
+     14.503768,
+     46.047266
+    ],
+    [
+     14.503958,
+     46.047241
+    ],
+    [
+     14.503985,
+     46.047339
+    ],
+    [
+     14.503995,
+     46.047342
+    ],
+    [
+     14.504,
+     46.047366
+    ],
+    [
+     14.503996,
+     46.047374
+    ],
+    [
+     14.504066,
+     46.047639
+    ],
+    [
+     14.503846,
+     46.04767
+    ],
+    [
+     14.503812,
+     46.04769
+    ],
+    [
+     14.503746,
+     46.0477
+    ],
+    [
+     14.503717,
+     46.047691
+    ],
+    [
+     14.503483,
+     46.04772
+    ]
+   ]
+  },
+  "cestel_1362": {
+   "st": 1362,
+   "ko": "1961 TRZIN",
+   "et": 2,
+   "yr": 1990,
+   "h1": null,
+   "h2": 314,
+   "h3": 303.5,
+   "r": [
+    [
+     14.546055,
+     46.117282
+    ],
+    [
+     14.546261,
+     46.117324
+    ],
+    [
+     14.546213,
+     46.117437
+    ],
+    [
+     14.546012,
+     46.117396
+    ],
+    [
+     14.546022,
+     46.117372
+    ],
+    [
+     14.545959,
+     46.11736
+    ],
+    [
+     14.545991,
+     46.117286
+    ],
+    [
+     14.546048,
+     46.117298
+    ],
+    [
+     14.546055,
+     46.117282
+    ]
+   ]
+  },
+  "cestel_1365": {
+   "st": 1365,
+   "ko": "1961 TRZIN",
+   "et": 4,
+   "yr": 1992,
+   "h1": null,
+   "h2": 315.9,
+   "h3": 303.7,
+   "r": [
+    [
+     14.545884,
+     46.117005
+    ],
+    [
+     14.546113,
+     46.117061
+    ],
+    [
+     14.546125,
+     46.117037
+    ],
+    [
+     14.546354,
+     46.117093
+    ],
+    [
+     14.546284,
+     46.11723
+    ],
+    [
+     14.545826,
+     46.117117
+    ],
+    [
+     14.545884,
+     46.117005
+    ]
+   ]
+  }
+ },
+ "organisation_lookups": {
+  "note": "Name search in OSEBE_PRAVNE_OS, DST_UPRAVLJAVCI (manager) and LASTNISTVO_PRAVNIH_OSEB (owner), at most 50 rows each, 12 November 2026.",
+  "CESTEL cestni inženiring d.o.o. (5608244000)": "owner rows name buildings 1961/1362 and 1961/1365 in Trzin",
+  "NARODNA IN UNIVERZITETNA KNJIŽNICA (5056730000)": "manager rows name buildings 1728/174 and 1730/2110",
+  "OSNOVNA ŠOLA STARA CERKEV": "manager rows name buildings 1575/333, 1575/555 and 1578/100",
+  "FIBRAN proizvodnja izolacijskih materialov d.o.o. (1909746000)": "owner rows name buildings 1619/66, 1619/407, 1619/411, 1619/787 and 1456/10069",
+  "UNIVERZA V LJUBLJANI, FAKULTETA ZA GRADBENIŠTVO IN GEODEZIJO (1626981000)": "owner rows name building 2679/807. The building at the stored point is 2679/907. Not explained",
+  "InnoRenew": "no legal person found under this name",
+  "Gimnazija in srednja šola Kočevje": "the service did not answer"
+ },
+ "other_points": {
+  "rtp_gorica": "point lies in building 2302 KROMBERK 1386, 3 storeys, built 1967, no heights recorded",
+  "livarna_crnomelj": "point lies in building 1535 ČRNOMELJ 857, 4 storeys, built 1982, 9.7 m (H2 minus H3)",
+  "p2b3_sencur": "no building at the point, nearest is 2119 ŠENČUR 1514 (built 2013), 41 m away, not confirmed as the object",
+  "rakuschev_mlin": "no building at the point, nearest is 1077 CELJE 973 (built 2007), 43 m away, consistent with the mill having been demolished"
+ }
+}

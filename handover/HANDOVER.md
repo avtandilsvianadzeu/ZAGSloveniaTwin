@@ -293,3 +293,15 @@ The GURS cadastre names the manager (upravljavec) of state property. Its public 
 - Source files: `handover/research/recheck_2026_11/zag_managed_buildings_cadastre_2026_11_12.json` and `zag_managed_parcels_cadastre_2026_11_12.json`.
 - Not looked into: the ownership collection (`LASTNISTVO_PRAVNIH_OSEB`) also names parcels 534/128 and 553/115 and building 224 in community 1297 Mostec, and a part of building 343 in community 2680 Nove Jarše. These may be further ZAG locations.
 - The same lookup works for any legal person, so it can confirm sites of other institutions in the atlas.
+
+### Other records against the cadastre, 12 November 2026
+
+GURS Javni vpogled (https://ipi.eprostor.gov.si/jv/) is the public viewer of the same cadastre that the atlas reads through the OGC API Features service.
+
+- With the above-ground outline of the cadastre the stored point lies in a cadastre building for: Former Maribor Prison (659 Tabor 416), NUK (1728 Ljubljana mesto 174), RTP Gorica (2302 Kromberk 1386), Livarna Črnomelj (1535 Črnomelj 857). Cestel sits 2 m from building 1961 Trzin 1362.
+- Former Maribor Prison: building 416 is one building of the group, 1,457 m², 23.1 m. It is drawn at that height. The outline of the whole group from OpenStreetMap is the light site area.
+- Cestel: the cadastre lists two buildings in Trzin under the company as owner. Both are drawn.
+- NUK and Stara Cerkev school: the building at the point is among those the cadastre lists under the institution as manager.
+- UL FGG: the faculty's ownership rows name building 2679/807, the building at the point is 2679/907. Listed as a difference on the page, not resolved.
+- No cadastre building at the point: P2B3 Šenčur (nearest 41 m, built 2013, not confirmed as the object) and Rakuschev mlin (demolished).
+- Details: `handover/research/recheck_2026_11/cadastre_other_records_2026_11_12.json`.
