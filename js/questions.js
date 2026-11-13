@@ -15,7 +15,7 @@
     if(t.open) add('open',String(t.open),'open');
     if(!EXACT(p.position_precision)) add('position',(PREC[p.position_precision]||'Approximate position')+'. '+(p.position_note||'The exact object is not identified in the sources.'),'position');
     (t.source_check||[]).forEach((x,j)=>add('source',`${x.url.replace(/^https?:\/\/(www\.)?/,'').slice(0,80)} did not give its text on 12 November 2026: ${x.status}. ${x.values} ${x.values===1?'value rests':'values rest'} on this source and could not be compared with it.`,'source'+j));
-    const nq=(t.specs||[]).filter(s=>s.source&&!s.quote&&!noSentence(s.source)); if(nq.length) add('quote',`${nq.length} ${nq.length===1?'value has':'values have'} a source link but no stored quote: ${nq.slice(0,6).map(s=>s.label).join(', ')}${nq.length>6?' and '+(nq.length-6)+' more':''}.`,'quote'); }
+    const nq=(t.specs||[]).filter(s=>s.source&&!s.quote&&!s.basis&&!noSentence(s.source)); if(nq.length) add('quote',`${nq.length} ${nq.length===1?'value has':'values have'} a source link but no stored quote: ${nq.slice(0,6).map(s=>s.label).join(', ')}${nq.length>6?' and '+(nq.length-6)+' more':''}.`,'quote'); }
   const settled=x=>x.r&&x.r.status==='resolved', isDone=x=>settled(x)||!!(ST[x.key]&&ST[x.key].d);
   const count=k=>items.filter(x=>!k||x.kind===k).length, done=()=>items.filter(isDone).length, nSet=items.filter(settled).length, nPart=items.filter(x=>x.r&&x.r.status==='partly').length;
   const RANK={ZAG:'ZAG source',owner:'Owner or operator',government:'Official register',paper:'Peer reviewed',other:'Other source'};
