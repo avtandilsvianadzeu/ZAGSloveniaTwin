@@ -153,3 +153,5 @@ html{scroll-behavior:smooth}
 .tabs [role=tab]{padding:0 8px!important;font-size:12.5px!important}
 @media (max-width:1560px){.thdr .crumb{display:none}}
 @media (max-width:1320px){.thdr .livebadge{display:none}.thdr .jump{flex-basis:180px;min-width:120px}}
+@media (max-width:1650px){.hdr .livebadge span{display:none}.hdr .hsearch{flex:1 1 220px;min-width:170px;max-width:340px}}
+@media (max-width:1360px){.hdr .livebadge{display:none}.hdr .hright .seg button,.hdr .hright .tgl{padding:0 9px!important}}

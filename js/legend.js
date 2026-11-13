@@ -9,7 +9,7 @@
   const set=on=>{ box.hidden=!on; show.hidden=on; try{ localStorage.setItem('zag_lgd_hidden',on?'0':'1'); }catch(_){} };
   function build(){ const have=new Set(ZA.features.map(f=>f.properties.object_type));
     const rows=CAP.filter(([ts])=>ts.some(t=>have.has(t))).map(([ts,cap])=>'<div class="lgr">'+img(ts.find(t=>have.has(t)),'doc')+'<span>'+cap+'</span></div>').join('');
-    body.innerHTML='<h4>Symbols</h4>'+rows+'<h4>Colours</h4><div class="lgr"><i class="lgdot" style="background:#007AFF"></i><span>Blue - project with ZAG work</span></div><div class="lgr"><i class="lgdot" style="background:#5856D6"></i><span>Violet - ZAG\'s own site</span></div><div class="lgr"><i class="lgdot" style="background:#8E8E93"></i><span>Grey - partner, named in the sources</span></div><h4>Numbers</h4><div class="lgr"><i class="lgnum">5</i><span>Several records close together. Click to zoom in</span></div>';
+    body.innerHTML='<h4>Symbols</h4>'+rows+'<h4>Colours</h4><div class="lgr"><i class="lgdot" style="background:#007AFF"></i><span>Blue: project with ZAG work</span></div><div class="lgr"><i class="lgdot" style="background:#5856D6"></i><span>Violet - ZAG\'s own site</span></div><div class="lgr"><i class="lgdot" style="background:#8E8E93"></i><span>Grey: partner, named in the sources</span></div><h4>Numbers</h4><div class="lgr"><i class="lgnum">5</i><span>Several records close together. Click to zoom in</span></div>';
     set(!pref()); }
   hide.addEventListener('click',()=>set(false)); show.addEventListener('click',()=>set(true));
   const wait=setInterval(()=>{ if(typeof ZA!=='undefined'&&ZA.features&&ZA.features.length&&typeof markerImage==='function'){ clearInterval(wait); build(); } },300);
