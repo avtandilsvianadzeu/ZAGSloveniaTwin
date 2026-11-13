@@ -24,11 +24,13 @@ const MARK={
   tunnel:'M4 19V11a8 8 0 0 1 16 0v8M9 19v-5h6v5', 'dam / hydropower':'M3 8q3-3 6 0t6 0 6 0M3 14q3-3 6 0t6 0 6 0M4 19h16', cableway:'M3 6h18M12 6v4M8 10h8v6H8z',
   'tower / mast':'M12 3v18M7 21l5-18 5 18M9 14h6', building:'M5 20V9l7-5 7 5v11M10 20v-6h4v6M5 20h14', company:'M5 20V9l7-5 7 5v11M10 20v-6h4v6M5 20h14', institution:'M4 10h16M6 10v8M10 10v8M14 10v8M18 10v8M4 20h16M4 10l8-5 8 5',
   'study area (earthquake)':'M3 12h4l2-5 3 10 3-8 2 3h4', 'geotechnical site':'M3 18l6-10 4 6 3-3 5 7z', landslide:'M4 6l8 8-4 6M12 14l8 4', other:'M12 4v16M4 12h16'};
-function markerImage(type,kind){
+/* approx: the point is an area centre (settlement, site, epicentre), drawn lighter with a dashed ring so it does not read as the object itself */
+function markerImage(type,kind,approx){
   const S=96,c=document.createElement('canvas');c.width=c.height=S;const g=c.getContext('2d');
   const col=kind==='fac'?'#5856D6':kind==='ref'?'#8E8E93':'#007AFF';
   g.save(); g.shadowColor='rgba(0,0,0,.30)'; g.shadowBlur=9; g.shadowOffsetY=3; g.beginPath(); g.arc(S/2,S/2-2,33,0,Math.PI*2); g.fillStyle='#fff'; g.fill(); g.restore();
-  g.beginPath(); g.arc(S/2,S/2-2,28.5,0,Math.PI*2); g.fillStyle=col; g.fill();
+  g.beginPath(); g.arc(S/2,S/2-2,28.5,0,Math.PI*2); g.fillStyle=col; g.globalAlpha=approx?.5:1; g.fill(); g.globalAlpha=1;
+  if(approx){ g.save(); g.setLineDash([7,5]); g.lineWidth=4; g.strokeStyle=col; g.beginPath(); g.arc(S/2,S/2-2,31,0,Math.PI*2); g.stroke(); g.restore(); }
   g.save(); g.translate(S/2-27,S/2-29); g.scale(2.25,2.25); g.strokeStyle='#fff'; g.lineWidth=1.8; g.lineCap='round'; g.lineJoin='round';
   g.stroke(new Path2D(MARK[type]||MARK.other)); g.restore();
   return g.getImageData(0,0,S,S);

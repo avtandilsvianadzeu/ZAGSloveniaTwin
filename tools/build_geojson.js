@@ -16,7 +16,7 @@ const PARTNER = new Set(['cestel', 'innorenew', 'ulfgg']);              // named
 // zag_involvement_type is derived from the record's own `role` text (which cites sources); review before publishing.
 const INV = [[/weigh-in-motion|health monitoring|monitoring/i, 'monitoring'], [/load test/i, 'structural assessment'],
  [/fire resistance|fire testing|reaction to fire/i, 'fire testing'], [/periodical|inspection of|special inspections|technical inspection/i, 'inspection'],
- [/external control|quality of construction|third party quality control|quality control/i, 'inspection'],
+ [/external control|quality of construction|third party quality control|quality control/i, 'external quality control'],
  [/grout|cement|pigment|reuse|secondary raw|paving|material/i, 'materials testing'],
  [/vulnerability|safety analysis|assessment of damage|condition of|analysis of the condition|effect of .* earthquake|seismic risk/i, 'structural assessment'],
  [/geolog|geotech|rockfall|slope|shear|numerical modelling|investigation|cherplan|research/i, 'research']];
@@ -24,7 +24,7 @@ const involvement = e => { if (e.cls === 'inst') return null; for (const [re, v]
 
 // text corrections backed by the research pass (operator / registry pages); each must match or the build fails loudly
 const TEXT_FIX = [
- ['tomacevo', 'carries', 'H3 northern ring road', 'Road no. 104 (Ljubljana ring road)'],
+ ['tomacevo', 'carries', 'H3 northern ring road', 'Road traffic on two parallel decks, the instrumented deck carries traffic towards Ljubljana'],
  /* places follow the GURS register of spatial units at the stored point and at the line ends, read 12 November 2026 */
  ['pletovarje', 'loc', 'Pletovarje, Slovenske Konjice', 'Pletovarje, Slovenske Konjice and Šentjur'],
  ['soca_quake', 'loc', 'Kobarid', 'Čezsoča, Bovec'],
@@ -119,6 +119,8 @@ rav.sources.unshift(BULLETIN); rav.source_title = BULLETIN.title; rav.source_url
 const str = feats.find(f => f.properties.id === 'strunjan').properties;
 str.image_credit = 'Mihael Simonič, CC BY-SA 3.0 (Wikimedia Commons)';
 for (const f of feats) if (!f.properties.zag_involvement_types) f.properties.zag_involvement_types = f.properties.zag_involvement_type ? [f.properties.zag_involvement_type] : [];
+/* a role that names both quality control and monitoring (ZAG dams reference list) carries both services */
+for (const f of feats) { const r = f.properties.zag_role || ''; if (/quality control/i.test(r) && /monitoring/i.test(r)) f.properties.zag_involvement_types = ['external quality control', 'monitoring']; }
 // plain typography: no en/em dashes or arrows in anything shown to users
 const plain = v => typeof v === 'string' ? v.replace(/\u2014/g, ', ').replace(/(\w)\u2013(\w)/g, '$1-$2').replace(/ \u2013 /g, ', ').replace(/\u2013/g, '-').replace(/\u2192/g, ' to ').replace(/~(?=\d)/g, 'about ')
   : Array.isArray(v) ? v.map(plain) : (v && typeof v === 'object') ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, plain(x)])) : v;

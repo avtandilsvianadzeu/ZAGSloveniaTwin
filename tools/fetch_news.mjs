@@ -50,6 +50,8 @@ function cluster(items) {
 
 const items = {}, errors = [];
 const cutoff = Date.now() - MAX_AGE_DAYS * 864e5;
+/* words that mark accident, crime or complaint headlines, left out for every record (key _not in news_keywords.json) */
+const SHARED_NOT = Array.isArray(KW._not) ? KW._not : [];
 for (const [id, k] of Object.entries(KW)) {
   if (id.startsWith('_') || !k.q) continue;
   try {
@@ -58,7 +60,7 @@ for (const [id, k] of Object.entries(KW)) {
       .filter(it => it.title && it.url && !ignore.has(it.url) && Date.parse(it.date) > cutoff)
       .filter(it => !must.length || must.some(m => norm(it.title).includes(m)))
       .filter(it => (k.all || []).every(m => norm(it.title).includes(norm(m))))
-      .filter(it => !(k.not || []).some(m => norm(it.title).includes(norm(m))))
+      .filter(it => !(k.not || []).concat(SHARED_NOT).some(m => norm(it.title).includes(norm(m))))
       .sort((a, b) => b.date.localeCompare(a.date));
     const list = cluster(found).slice(0, PER_RECORD);
     if (list.length) items[id] = list;

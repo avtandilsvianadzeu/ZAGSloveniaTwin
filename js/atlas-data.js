@@ -4,7 +4,7 @@ const ZA={features:[],byId:{},images:{},gurs:{},gursMeta:null,twins:{},news:{},n
 const GROUPS={building:'buildings',institution:'buildings',company:'buildings',bridge:'bridges',footbridge:'bridges','road structure':'bridges',
   tunnel:'infrastructure','dam / hydropower':'infrastructure',cableway:'infrastructure','tower / mast':'infrastructure'};
 const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):'';
-const INV_LABEL={research:'Research','inspection':'Inspection','structural assessment':'Structural assessment',monitoring:'Monitoring',
+const INV_LABEL={research:'Research','inspection':'Inspection','external quality control':'External quality control (construction)','structural assessment':'Structural assessment',monitoring:'Monitoring',
   'materials testing':'Materials testing',rehabilitation:'Rehabilitation',BIM:'BIM',digitalisation:'Digitalisation',LiDAR:'LiDAR survey',UAV:'UAV survey',
   'energy assessment':'Energy assessment','fire testing':'Fire testing',other:'Other'};
 const kindOf=p=>p.category==='zag_facility'?'fac':p.evidence_level==='documented'?'doc':'ref';

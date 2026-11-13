@@ -32,8 +32,8 @@
     "longitude": 14.532388,
     "zag_involvement_type": "monitoring",
     "zag_role": "Bridge weigh-in-motion and structural health monitoring",
-    "description": "Elastomeric bearings at the piers and guided unidirectional pot bearings at the abutments. ZAG, Cestel and Dewesoft Monitoring instrumented the bridge for combined bridge weigh-in-motion and structural health monitoring. A controlled load test in May 2024 ran two pre-weighed calibration trucks over 72 passages across two nights, recording strain, acceleration, temperature and displacement at 500 Hz. During normal operation in March 2023 the system captured a 13-axle vehicle weighing over 200 tonnes.",
-    "hist": "The bridge carries over the Sava north of Ljubljana and is one of the most used routes between the city and its northern suburbs. It is a seven span continuous post tensioned concrete structure of 204 m built in 1982, in two parallel independent decks carrying opposite directions of traffic. The instrumentation combines a Cestel SiWIM bridge weigh in motion system with fourteen triaxial MEMS accelerometers, two strain transducers at main girder mid spans, temperature sensors, displacement transducers and a laser deflection meter, sampling at 500 Hz during controlled testing. For autonomous operation the system can run on two 300 Ah LiFe batteries and four 150 W solar panels.",
+    "description": "Tomačevo Bridge Living Laboratory. ZAG, Cestel and Dewesoft Monitoring instrumented the deck carrying traffic towards Ljubljana for combined bridge weigh-in-motion (B-WIM) and structural health monitoring (SHM). In a controlled load test in May 2024, two statically pre-weighed calibration vehicles made 72 passages over two nights, with strain, acceleration, temperature and displacement recorded at 500 Hz. In March 2023 the system recorded a 13-axle vehicle of more than 200 t. The deck rests on elastomeric bearings at the piers and guided unidirectional pot bearings at the abutments.",
+    "hist": "The bridge crosses the Sava north of Ljubljana and is one of the most used routes between the city and its northern suburbs. It is a seven span continuous post tensioned concrete structure of 204 m built in 1982, in two parallel independent decks carrying opposite directions of traffic. The instrumentation combines a Cestel SiWIM bridge weigh in motion system with fourteen triaxial MEMS accelerometers, two strain transducers at main girder mid spans, temperature sensors, displacement transducers and a laser deflection meter, sampling at 500 Hz during controlled testing. For autonomous operation the system can run on two 300 Ah LiFe batteries and four 150 W solar panels.",
     "facts": [
      [
       "Structure",
@@ -56,8 +56,8 @@
       "2 x 300 Ah LiFe batteries and 4 x 150 W solar panels (autonomous option)"
      ],
      [
-      "Heaviest recorded vehicle",
-      "a 13 axle vehicle over 200 tonnes (March 2023)"
+      "Extreme event recorded (example)",
+      "a 13-axle vehicle of more than 200 t, March 2023"
      ]
     ],
     "people": [
@@ -74,7 +74,7 @@
     ],
     "structure": {
      "crosses": "Sava",
-     "carries": "Road no. 104 (Ljubljana ring road)",
+     "carries": "Road traffic on two parallel decks, the instrumented deck carries traffic towards Ljubljana",
      "typ": "Seven-span continuous post-tensioned double-T deck, cast in place with sliding formwork, on circular piers with deep foundations",
      "built": 1982,
      "spans": 7,
@@ -194,9 +194,9 @@
     "name_sl": "Viadukt Ravbarkomanda",
     "name_en": "Ravbarkomanda Viaduct",
     "object_type": "bridge",
-    "year": "2023-2024",
+    "year": "2017-2024",
     "built": 1972,
-    "year_start": 2023,
+    "year_start": 2017,
     "year_end": 2024,
     "municipality": "Postojna",
     "locality": "A1 between Planina and Postojna, Postojna",
@@ -204,8 +204,8 @@
     "longitude": 14.227194,
     "zag_involvement_type": "monitoring",
     "zag_role": "Long-term structural health monitoring and bridge weigh-in-motion",
-    "description": "Two parallel structures carrying one direction each, built in 1972 on what is now the Venice to Lviv corridor. ZAG instrumented span P14D of the right-hand viaduct with strain gauges on the bottom flange of four main girders at mid-span, and triaxial accelerometers across several spans for ambient and traffic-induced modal testing. A bridge weigh-in-motion system supplies the traffic loading, and the measured response is used to update a finite element model of the structure. Both viaducts were fully rehabilitated between May 2017 and June 2019, including carbon fibre strengthening of the cantilevers, bearing replacement and a one metre deck widening.",
-    "hist": "Ravbarkomanda is a twin multi span precast I girder viaduct on the fifth Trans European corridor, which runs from Venice to Lviv. The right viaduct is about 595 m long with seventeen spans and the left viaduct about 556 m long with fifteen spans, and each carries two lanes and a hard shoulder. The monitoring system installed during the rehabilitation comprises 216 sensors measuring longitudinal strain on main girders, pier caps and deck extensions, temperature sensors across several spans, accelerometers on external prestressing tendons at 24 locations across both viaducts, 40 fibre Bragg grating sensors on carbon fibre rods, and long gauge deformation sensors at six pier cap locations per viaduct. Strain gauges record at 500 samples per second with a 35 Hz low pass filter. The structure crosses a double track railway line and a state road twice.",
+    "description": "Two parallel structures carrying one direction each, built in 1972 on Pan-European Corridor V. Span P14D of the right-hand viaduct is the most heavily instrumented span, with strain gauges on the bottom flange of the four main girders at mid-span and triaxial accelerometers on several spans for ambient and traffic-induced modal testing. The permanent monitoring system was installed during the reconstruction and has operated since the end of 2017. A bridge weigh-in-motion system supplies the traffic loading, and ZAG uses the measured response to update a finite element model of the structure. Both viaducts were fully rehabilitated between May 2017 and June 2019, including carbon fibre strengthening of the cantilevers, bearing replacement and a one metre deck widening.",
+    "hist": "Ravbarkomanda is a twin multi span precast I girder viaduct on Pan-European Corridor V, which runs from Venice through Trieste and Koper, Ljubljana and Budapest to Lviv. The right viaduct is about 595 m long with seventeen spans and the left viaduct about 556 m long with fifteen spans, and each carries two lanes and a hard shoulder. The monitoring system installed during the rehabilitation comprises 216 sensors measuring longitudinal strain on main girders, pier caps and deck extensions, temperature sensors across several spans, accelerometers on external prestressing tendons at 24 locations across both viaducts, 40 fibre Bragg grating sensors on carbon fibre rods, and long gauge deformation sensors at six pier cap locations per viaduct. Strain gauges record at 500 samples per second with a 35 Hz low pass filter. The structure crosses a double track railway line and a state road twice.",
     "facts": [
      [
       "Lengths",
@@ -235,6 +235,7 @@
     "people": [
      "Doron Hekič (ZAG)",
      "Andrej Anžlin (ZAG)",
+     "Maja Kreslin (ZAG)",
      "Aleš Žnidarič (ZAG)",
      "Peter Češarek (UL FGG)",
      "Diogo Ribeiro (Polytechnic of Porto)"
@@ -631,9 +632,9 @@
     "latitude": 45.801001,
     "longitude": 15.15108,
     "zag_involvement_type": "structural assessment",
-    "zag_role": "Static and dynamic load testing in March 2023, in cooperation with dr Andrej Štrukelj (University of Maribor)",
-    "description": "The first bridge in Slovenia built with stress ribbon technology. ZAG took part in the load test in March 2023, carried out by dr Andrej Štrukelj of the University of Maribor: static loading in three stages, dynamic testing with a light truck driven over artificial obstacles, and ambient vibration measurement. Vertical displacements, natural frequencies and mode shapes were compared against a finite element model and agreed well. Under 18 vehicles with a total mass of 70.4 t the calculated maximum deflection was 145 mm, and the measured values were up to 10 % smaller. Client was the City Municipality of Novo mesto, built by CGP Novo mesto with Freyssinet Adria, designed by Ponting Bridges and Pipenbaher Consulting Engineers.",
-    "hist": "The footbridge at Irca vas is the first stress ribbon bridge in Slovenia and crosses the Krka between Lastovce and Groblje. Ponting gives a span of 130 m, a width of 4 m and a deck thickness of 42 cm, assembled from 46 precast segments installed on fully tensioned bearing cables between anchored concrete block abutments. Freyssinet describes the same structure with a main span of 120.5 m and six tendons, and states that the grouted tendons are thought to be a first of their kind on this bridge type. The client was the City Municipality of Novo mesto and the contractor was a joint venture of Freyssinet Adria and CGP Novo mesto. The bridge received the Golden Pencil award in 2023 and the Plečnik Medal in 2024, and the City Municipality of Novo mesto refers to it as Štukljeva brv, after the Olympic gymnast Leon Štukelj.",
+    "zag_role": "Static and dynamic load testing in March 2023, in cooperation with Dr Andrej Štrukelj (University of Maribor)",
+    "description": "The first bridge in Slovenia built with stress ribbon technology. ZAG took part in the load test in March 2023, carried out by Dr Andrej Štrukelj of the University of Maribor: static loading in three stages, dynamic testing with a light truck driven over artificial obstacles, and ambient vibration measurement. Vertical displacements, natural frequencies and mode shapes were compared against a finite element model and agreed well. Under 18 vehicles with a total mass of 70.4 t the calculated maximum deflection was 145 mm, and the measured values were up to 10 % smaller. Client was the City Municipality of Novo mesto, built by CGP Novo mesto with Freyssinet Adria, designed by Ponting Bridges and Pipenbaher Consulting Engineers.",
+    "hist": "The footbridge at Irca vas is the first stress ribbon bridge in Slovenia and crosses the Krka between Lastovce and Groblje. Ponting gives a rounded span of 130 m, a width of 4 m and a deck thickness of 42 cm, assembled from 46 precast segments installed on fully tensioned bearing cables between anchored concrete block abutments. Freyssinet describes the same structure with a main span of 120.5 m and six tendons, and states that the grouted tendons are thought to be a first of their kind on this bridge type. The client was the City Municipality of Novo mesto and the contractor was a joint venture of Freyssinet Adria and CGP Novo mesto. The bridge received the Golden Pencil award in 2023 and the Plečnik Medal in 2024, and the City Municipality of Novo mesto refers to it as Štukljeva brv, after the Olympic gymnast Leon Štukelj.",
     "facts": [
      [
       "Span",
@@ -898,13 +899,13 @@
     "latitude": 45.955716,
     "longitude": 14.305218,
     "zag_involvement_type": "materials testing",
-    "zag_role": "First Slovenian application of an expansive grout additive",
-    "description": "The first structure on which the Ikaton expansive additive was used for grouting prestressing cable ducts. The additive compensates for the shrinkage of cement grout so that the duct fills completely and the tendon is protected from corrosion. Built by Beograjska Mostogradnja. The additive line was developed at ZAG.",
+    "zag_role": "Ikaton expansive grout additive, developed by ZRMK (the predecessor of ZAG), first applied on this viaduct for grouting prestressing ducts",
+    "description": "The first structure on which the Ikaton expansive additive was used for grouting prestressing cable ducts. The additive compensates for the shrinkage of cement grout so that the duct fills completely and the tendon is protected from corrosion. Built by Mostogradnja Beograd. The additive was developed at ZRMK, the predecessor of ZAG.",
     "hist": "The viaduct carries the A1 motorway across the plain at the headwaters of the Ljubljanica near Vrhnika and was built by Beograjska Mostogradnja. It was the first structure on which the Ikaton expansive additive was used for grouting prestressing cable ducts. The additive compensates for the shrinkage of cement grout so that the duct fills completely and the tendon is protected from corrosion, which is one of the principal durability problems in post tensioned concrete bridges.",
     "facts": [
      [
       "First application",
-      "Ikaton expansive grout additive, first use in Slovenia"
+      "first structure on which the Ikaton additive was applied (ZAG book, 2024)"
      ],
      [
       "Purpose",
@@ -912,7 +913,7 @@
      ],
      [
       "Contractor",
-      "Beograjska Mostogradnja"
+      "Mostogradnja Beograd"
      ],
      [
       "Owner",
@@ -1144,10 +1145,10 @@
     "locality": "Solkan, Nova Gorica",
     "latitude": 45.984312,
     "longitude": 13.654821,
-    "zag_involvement_type": "materials testing",
-    "zag_role": "Expansive and non-shrink cements for grout concrete (introduced by ZRMK), technical observation of the dam",
-    "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced its non-shrink and expansive cements for grout concrete when HE Solkan was built. The same book lists the Solkan dam among the dams under ZAG technical observation.",
-    "hist": "HE Solkan is the lowest of the large plants on the Soča, standing roughly 700 m upstream of the Solkan railway bridge. It is a run of river plant with three Kaplan units, a combined swallowing capacity of 180 cubic metres per second and a gross head of 20.55 m at a flow of 60 cubic metres per second. The reservoir holds about 1.15 million cubic metres of useful storage, the permitted water level fluctuation is 1.5 m, and the catchment is 1,632 square kilometres. Average annual generation is about 105 GWh. In July 2022 the plant stopped generating entirely because of the low flow of the Soča. The operator brochure records that a reconstruction is planned for after 2025.",
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Expansive and non-shrink cements for grout concrete (introduced by ZRMK), technical monitoring of the dam",
+    "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced its non-shrink and expansive cements for grout concrete when HE Solkan was built. The same book lists the Solkan dam among the dams under ZAG technical monitoring.",
+    "hist": "HE Solkan is the lowest of the large plants on the Soča, standing roughly 700 m upstream of the Solkan railway bridge. It is a run of river plant with three Kaplan units, a combined design discharge of 180 m³/s and a gross head of 20.55 m at a flow of 60 cubic metres per second. The reservoir holds about 1.15 million cubic metres of useful storage, the permitted water level fluctuation is 1.5 m, and the catchment is 1,632 square kilometres. Average annual generation is about 105 GWh. The operator brochure records that a reconstruction is planned for after 2025.",
     "facts": [
      [
       "Installed capacity",
@@ -1228,7 +1229,7 @@
     ],
     "address": null,
     "zag_involvement_types": [
-     "materials testing"
+     "monitoring"
     ]
    }
   },
@@ -1256,9 +1257,9 @@
     "locality": "Zlatoličje, Starše",
     "latitude": 46.44789,
     "longitude": 15.786944,
-    "zag_involvement_type": "materials testing",
-    "zag_role": "Non-shrink cements in the construction (introduced by ZRMK), technical observation of the dam",
-    "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced non-shrink cements in the construction of HE Zlatoličje, and lists Zlatoličje and Melje among the Drava dams under ZAG technical observation. The plant works from a diversion canal rather than directly on the Drava channel. ZAG also lists third party quality control of the materials used in the upgrading of the Zlatoličje HPP, for Dravske elektrarne Maribor, 2006 to 2009.",
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Non-shrink cements in the construction (introduced by ZRMK), technical monitoring of the dam",
+    "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced non-shrink cements in the construction of HE Zlatoličje, and lists Zlatoličje and Melje among the Drava dams under ZAG technical monitoring. The plant works from a diversion canal rather than directly on the Drava channel. ZAG also lists third party quality control of the materials used in the upgrading of the Zlatoličje HPP, for Dravske elektrarne Maribor, 2006 to 2009.",
     "hist": "HE Zlatoličje was the first canal type plant built in the former state. Water is taken from the Drava at the Melje weir in Maribor and carried 17.2 km along a trapezoidal intake canal, largely on embankment, to the powerhouse near Zlatoličje, then returned to the Drava through a 6.2 km outflow canal cut deep into the ground. Between 2007 and 2013 both turbines and both generators were replaced along with the primary and secondary electrical equipment and the control systems, all six gates of the Melje weir were raised, and the dam and spillway wall were structurally reinforced. The replacement runner fitted to unit 2 has a diameter of 5,894 mm and a mass of 96 tonnes. Installed flow rose from 450 to 530 cubic metres per second and installed capacity rose by 12 MW. The small plant MHE Melje, running on the ecological minimum flow, entered service in January 2009.",
     "facts": [
      [
@@ -1367,7 +1368,7 @@
     ],
     "address": null,
     "zag_involvement_types": [
-     "materials testing"
+     "monitoring"
     ]
    }
   },
@@ -1395,9 +1396,9 @@
     "locality": "Vuhred, Radlje ob Dravi",
     "latitude": 46.587562,
     "longitude": 15.275391,
-    "zag_involvement_type": "materials testing",
-    "zag_role": "Non-shrink cements in the construction (introduced by ZRMK), technical observation of the dam",
-    "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced non-shrink cements in the construction of HE Vuhred, and lists Vuhred among the Drava dams under ZAG technical observation.",
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Non-shrink cements in the construction (introduced by ZRMK), technical monitoring of the dam",
+    "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced non-shrink cements in the construction of HE Vuhred, and lists Vuhred among the Drava dams under ZAG technical monitoring.",
     "hist": "HE Vuhred is a run of river plant on the Drava in the municipality of Radlje ob Dravi, the third in the chain from the Austrian border. Two units entered service in 1956 and a third followed in 1958, giving three Kaplan turbines of 24.1 MW each. The design flow is 550 cubic metres per second and the head is 17.41 m. The weir has four spillway fields, each 17 m wide, with a maximum discharge capacity of 5,800 cubic metres per second. The reservoir extends 13.1 km at full supply level and holds 10.3 million cubic metres, of which 2.2 million are usable for generation. During the refurbishment the supplier replaced the entire stator winding of generator 3 because the original bars, made to a different technology, overheated. The plant now runs without permanent staff on site.",
     "facts": [
      [
@@ -1486,7 +1487,7 @@
     ],
     "address": null,
     "zag_involvement_types": [
-     "materials testing"
+     "monitoring"
     ]
    }
   },
@@ -2126,7 +2127,7 @@
     "longitude": 14.513951,
     "zag_involvement_type": null,
     "zag_role": "Slovenian National Building and Civil Engineering Institute",
-    "description": "Origins in 1949, operating in its present form since 1 April 1995. 254 staff at the end of 2023, five departments, the Laboratory for Metrology and three notified-body services under the Construction Products Regulation. Home of SiWIM bridge weigh-in-motion and of the BrAId project applying machine learning to B-WIM data quality.",
+    "description": "Origins in 1949, operating in its present form since 1 April 1995. 254 staff at the end of 2023, five departments, the Laboratory for Metrology and three notified-body services under the Construction Products Regulation. ZAG developed the bridge weigh-in-motion prototype that Cestel has commercialised as SiWIM since 1999, and runs BrAId, improving B-WIM performance with big data and artificial intelligence.",
     "hist": "The institute traces its origin to 18 July 1949, when the first building and civil engineering institute in Slovenia was set up with twelve staff. It was renamed the Institute for Testing and Research in Materials and Structures, ZRMK Ljubljana, in 1952, by which time it had grown to 150 employees and had its own building on Dimičeva. After independence the government reorganised ZRMK in 1994 and 1995 and split it into two bodies. ZAG was registered on 17 March 1995 and began operating on 1 April 1995 as a governmental non profit research institute, a status that lets it act as an independent third party in testing and certification. It is organised into five departments, Materials, Building Physics, Fire Safe Sustainable Built Environment, Structures, and Geotechnics and Infrastructure, together with the Laboratory for Metrology, the Certification Service and the Service for Technical Assessment and Approvals.",
     "facts": [
      [
@@ -2907,7 +2908,7 @@
     "locality": "Hrušica, Jesenice and Kranjska Gora",
     "latitude": 46.453764,
     "longitude": 13.990241,
-    "zag_involvement_type": "inspection",
+    "zag_involvement_type": "external quality control",
     "zag_role": "External control of the repair works, and geological-geotechnical investigations for the design",
     "description": "External control of the repair works and repair of several sections, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
     "hist": null,
@@ -3190,7 +3191,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -3218,7 +3219,7 @@
     "locality": "Jesenice",
     "latitude": 46.449259,
     "longitude": 14.015491,
-    "zag_involvement_type": "inspection",
+    "zag_involvement_type": "external quality control",
     "zag_role": "External control of the repair works",
     "description": "External control of the repair works.",
     "hist": null,
@@ -3458,7 +3459,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -3486,9 +3487,9 @@
     "locality": "Ljubljana",
     "latitude": 46.019797,
     "longitude": 14.561003,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction, and geological-geotechnical investigations for the design",
-    "description": "External control of the quality of construction, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014), and geological-geotechnical investigations for the design, DARS 1990 to 2013",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel. ZAG also lists this tunnel under geological-geotechnical investigations for the design of motorway tunnels, DARS 1990 to 2013.",
     "hist": null,
     "facts": [
      [
@@ -3662,7 +3663,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -3690,9 +3691,9 @@
     "locality": "Ljubljana",
     "latitude": 46.094743,
     "longitude": 14.461525,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction, and geological-geotechnical investigations for the design",
-    "description": "External control of the quality of construction, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014), and geological-geotechnical investigations for the design, DARS 1990 to 2013",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel. ZAG also lists this tunnel under geological-geotechnical investigations for the design of motorway tunnels, DARS 1990 to 2013.",
     "hist": null,
     "facts": [
      [
@@ -3963,7 +3964,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -3991,9 +3992,9 @@
     "locality": "Trojane, Lukovica",
     "latitude": 46.187514,
     "longitude": 14.877806,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction, and geological-geotechnical investigations for the design",
-    "description": "External control of the quality of construction, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014), and geological-geotechnical investigations for the design, DARS 1990 to 2013",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel. ZAG also lists this tunnel under geological-geotechnical investigations for the design of motorway tunnels, DARS 1990 to 2013.",
     "hist": null,
     "facts": [
      [
@@ -4250,7 +4251,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -4278,9 +4279,9 @@
     "locality": "Podmilj, Lukovica",
     "latitude": 46.182322,
     "longitude": 14.845365,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction",
-    "description": "External control of the quality of construction.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014)",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel.",
     "hist": null,
     "facts": [
      [
@@ -4461,7 +4462,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -4489,9 +4490,9 @@
     "locality": "V Zideh, Lukovica",
     "latitude": 46.188631,
     "longitude": 14.897392,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction",
-    "description": "External control of the quality of construction.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014)",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel.",
     "hist": null,
     "facts": [
      [
@@ -4650,7 +4651,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -4678,9 +4679,9 @@
     "locality": "Kastelec, Koper and Hrpelje-Kozina",
     "latitude": 45.58384,
     "longitude": 13.884767,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction",
-    "description": "External control of the quality of construction.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014)",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel.",
     "hist": null,
     "facts": [
      [
@@ -4933,7 +4934,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -4961,9 +4962,9 @@
     "locality": "Dekani, Koper",
     "latitude": 45.553379,
     "longitude": 13.81703,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction",
-    "description": "External control of the quality of construction.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014)",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel.",
     "hist": null,
     "facts": [
      [
@@ -5132,7 +5133,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -5160,9 +5161,9 @@
     "locality": "Koper and Izola",
     "latitude": 45.541886,
     "longitude": 13.702504,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction",
-    "description": "External control of the quality of construction.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014)",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel.",
     "hist": null,
     "facts": [
      [
@@ -5407,7 +5408,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -5435,9 +5436,9 @@
     "locality": "Štefan cadastral municipality, Trebnje",
     "latitude": 45.905394,
     "longitude": 14.97867,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction",
-    "description": "External control of the quality of construction.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014)",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel.",
     "hist": null,
     "facts": [
      [
@@ -5570,7 +5571,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -5598,9 +5599,9 @@
     "locality": "Cenkova, Cerkvenjak",
     "latitude": 46.577272,
     "longitude": 15.938634,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction",
-    "description": "External control of the quality of construction.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014)",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel.",
     "hist": null,
     "facts": [
      [
@@ -5771,7 +5772,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -6004,9 +6005,9 @@
     "locality": "Podnanos, Vipava",
     "latitude": 45.800167,
     "longitude": 13.980767,
-    "zag_involvement_type": "inspection",
-    "zag_role": "External control of the quality of construction, and geological-geotechnical investigations for the design",
-    "description": "External control of the quality of construction, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
+    "zag_involvement_type": "external quality control",
+    "zag_role": "External quality control of construction, DARS (listed 1998 to 2014), and geological-geotechnical investigations for the design, DARS 1990 to 2013",
+    "description": "External control of the quality of construction, listed by ZAG under its external control work for DARS (1998 to 2014). The list covers thirteen motorway tunnels and the repair works in the Karavanke motorway and railway tunnels. ZAG does not give dates for each tunnel. ZAG also lists this tunnel under geological-geotechnical investigations for the design of motorway tunnels, DARS 1990 to 2013.",
     "hist": null,
     "facts": [
      [
@@ -6209,7 +6210,7 @@
      ]
     ],
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -6322,7 +6323,7 @@
     "locality": "Melje, Maribor",
     "latitude": 46.560151,
     "longitude": 15.673475,
-    "zag_involvement_type": "inspection",
+    "zag_involvement_type": "external quality control",
     "zag_role": "Third party quality control of the materials used in the upgrading of the Zlatoličje HPP, the Melje Dam and the Melje Small HPP",
     "description": "Third party quality control of the materials used in the upgrading of the Zlatoličje HPP, the Melje Dam and the Melje Small HPP.",
     "hist": null,
@@ -6385,7 +6386,7 @@
     ],
     "address": null,
     "zag_involvement_types": [
-     "inspection"
+     "external quality control"
     ]
    }
   },
@@ -6414,8 +6415,8 @@
     "latitude": 46.017682,
     "longitude": 15.281293,
     "zag_involvement_type": "monitoring",
-    "zag_role": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction",
-    "description": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction.",
+    "zag_role": "Third-party quality control of the construction materials, and monitoring of the dam and associated structures during and after construction (ZAG reference for the Boštanj, Arto-Blanca and Krško HPPs, client HESS and INFRA, 2007 to 2013)",
+    "description": "Third-party quality control of the construction materials, and monitoring of the dam and associated structures during and after construction (ZAG reference for the Boštanj, Arto-Blanca and Krško HPPs, client HESS and INFRA, 2007 to 2013).",
     "hist": null,
     "facts": [
      [
@@ -6476,6 +6477,7 @@
     ],
     "address": null,
     "zag_involvement_types": [
+     "external quality control",
      "monitoring"
     ]
    }
@@ -6505,8 +6507,8 @@
     "latitude": 45.990577,
     "longitude": 15.381242,
     "zag_involvement_type": "monitoring",
-    "zag_role": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction",
-    "description": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction.",
+    "zag_role": "Third-party quality control of the construction materials, and monitoring of the dam and associated structures during and after construction (ZAG reference for the Boštanj, Arto-Blanca and Krško HPPs, client HESS and INFRA, 2007 to 2013)",
+    "description": "Third-party quality control of the construction materials, and monitoring of the dam and associated structures during and after construction (ZAG reference for the Boštanj, Arto-Blanca and Krško HPPs, client HESS and INFRA, 2007 to 2013).",
     "hist": null,
     "facts": [
      [
@@ -6561,6 +6563,7 @@
     ],
     "address": null,
     "zag_involvement_types": [
+     "external quality control",
      "monitoring"
     ]
    }
@@ -6590,8 +6593,8 @@
     "latitude": 45.974811,
     "longitude": 15.481494,
     "zag_involvement_type": "monitoring",
-    "zag_role": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction",
-    "description": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction.",
+    "zag_role": "Third-party quality control of the construction materials, and monitoring of the dam and associated structures during and after construction (ZAG reference for the Boštanj, Arto-Blanca and Krško HPPs, client HESS and INFRA, 2007 to 2013)",
+    "description": "Third-party quality control of the construction materials, and monitoring of the dam and associated structures during and after construction (ZAG reference for the Boštanj, Arto-Blanca and Krško HPPs, client HESS and INFRA, 2007 to 2013).",
     "hist": null,
     "facts": [
      [
@@ -6645,6 +6648,7 @@
     ],
     "address": null,
     "zag_involvement_types": [
+     "external quality control",
      "monitoring"
     ]
    }
@@ -6729,6 +6733,7 @@
     ],
     "address": null,
     "zag_involvement_types": [
+     "external quality control",
      "monitoring"
     ]
    }
@@ -15971,7 +15976,7 @@
     "latitude": 46.28479,
     "longitude": 14.497922,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure)",
     "description": "Periodical technical inspections of cableway installations.",
     "hist": null,
     "facts": [
@@ -16198,7 +16203,7 @@
     "latitude": 46.304895,
     "longitude": 14.608071,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure)",
     "description": "Periodical technical inspections of cableway installations.",
     "hist": null,
     "facts": [
@@ -16297,7 +16302,7 @@
     "latitude": 46.049299,
     "longitude": 14.509038,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure)",
     "description": "Periodical technical inspections of cableway installations.",
     "hist": null,
     "facts": [
@@ -16406,7 +16411,7 @@
     "latitude": 46.4849,
     "longitude": 13.7794,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure), and special inspections of sub-systems and safety devices",
     "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2013.",
     "hist": null,
     "facts": [
@@ -16490,7 +16495,7 @@
     "latitude": 46.275572,
     "longitude": 13.835293,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure), and special inspections of sub-systems and safety devices",
     "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2012.",
     "hist": null,
     "facts": [
@@ -16607,7 +16612,7 @@
     "latitude": 46.1556,
     "longitude": 14.0491,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure), and special inspections of sub-systems and safety devices",
     "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2013.",
     "hist": null,
     "facts": [
@@ -16685,7 +16690,7 @@
     "latitude": 46.356143,
     "longitude": 14.931602,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure), and special inspections of sub-systems and safety devices",
     "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2012 to 2014.",
     "hist": null,
     "facts": [
@@ -16820,7 +16825,7 @@
     "latitude": 46.332757,
     "longitude": 13.53826,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure), and special inspections of sub-systems and safety devices",
     "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2012. Inspection of the support columns of the Kanin aerial ropeway, ATC Kanin d.o.o., 2012 (transmission and other towers page).",
     "hist": null,
     "facts": [
@@ -17352,7 +17357,7 @@
     "latitude": 46.362956,
     "longitude": 14.10514,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure), and special inspections of sub-systems and safety devices",
     "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2012.",
     "hist": null,
     "facts": [
@@ -17487,7 +17492,7 @@
     "latitude": 46.478136,
     "longitude": 13.722168,
     "zag_involvement_type": "inspection",
-    "zag_role": "Periodical technical inspections of cableway installations",
+    "zag_role": "Periodic technical inspections as the inspection body for cableway installations (SIST EN ISO/IEC 17020, authorised by the Ministry of Infrastructure)",
     "description": "Periodical technical inspections of cableway installations.",
     "hist": null,
     "facts": [
@@ -18726,9 +18731,9 @@
    "properties": {
     "id": "grosuplje_most",
     "category": "zag_project",
-    "name": "Grosuplje Bridge",
+    "name": "Bridge in the Municipality of Grosuplje",
     "name_sl": "Most v Grosupljem",
-    "name_en": "Grosuplje Bridge",
+    "name_en": "Bridge in the Municipality of Grosuplje",
     "object_type": "bridge",
     "year": "2012",
     "built": null,
@@ -18821,7 +18826,7 @@
     "zag_involvement_type": "structural assessment",
     "zag_role": "Combined earthquake and flood vulnerability assessment",
     "description": "Within the CROSScade project the bridge was selected as the most critical of seven bridges studied, two of them in Slovenia near the Brežice hydropower plant and the others near Zagreb. Reasons given were its role on a key regional route, the lack of adequate scour protection and a design that predates modern performance-based seismic provisions. The first half of the bridge was modelled in Midas Civil and OpenSeesPy with soil-structure interaction, and fragility curves were derived for sequential ground shaking, flood loading and local pier scour.",
-    "hist": "The Čatež bridge carries a regional road across the Sava close to the Slovenia to Croatia border. It is a 12 span prestressed reinforced concrete girder bridge, 359.8 m long, designed in the mid 1970s. It is divided into four brake units by expansion joints. The intermediate piers are pairs of 1.2 m circular columns on bored piles, while piers 5 and 9 are transverse reinforced concrete walls on a pile cap with six inclined piles.",
+    "hist": "The Čatež bridge carries a regional road across the Sava close to the Slovenia to Croatia border. It is a 12 span prestressed concrete girder bridge, 359.8 m long, designed in the mid 1970s. It is divided into four expansion units by expansion joints. The intermediate piers are pairs of 1.2 m circular columns on bored piles, while piers 5 and 9 are transverse reinforced concrete walls on a pile cap with six inclined piles.",
     "facts": [
      [
       "Length",

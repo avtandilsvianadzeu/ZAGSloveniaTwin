@@ -2,7 +2,7 @@
 /* Layers: overlay sources and layers (uncertainty area, selected footprint, selected alignment, ZAG records)
    and the runtime match of a record to the real structure in the OpenStreetMap vector tiles. */
 function addAtlasLayers(){
-  for(const t of Object.keys(MARK)) for(const k of ['doc','fac','ref']) map.addImage(`m-${t}-${k}`,markerImage(t,k),{pixelRatio:3});
+  for(const t of Object.keys(MARK)) for(const k of ['doc','fac','ref']){ map.addImage(`m-${t}-${k}`,markerImage(t,k),{pixelRatio:3}); map.addImage(`m-${t}-${k}-a`,markerImage(t,k,true),{pixelRatio:3}); }
   const E0={type:'FeatureCollection',features:[]};
   ['unc','hl','sel'].forEach(s=>map.addSource(s,{type:'geojson',data:E0}));
   map.addSource('sites',{type:'geojson',data:E0,cluster:true,clusterRadius:28,clusterMaxZoom:10});
@@ -24,7 +24,7 @@ function addAtlasLayers(){
   map.addLayer({id:'pt',type:'symbol',source:'sites',filter:['!',['has','point_count']],layout:{'icon-image':['get','ic'],'icon-allow-overlap':true,'icon-size':['interpolate',['linear'],['zoom'],7,.75,13,.95,17,1.1]}});
   map.addLayer({id:'pt-l',type:'symbol',source:'sites',filter:['!',['has','point_count']],minzoom:9,layout:{'text-field':['get','n'],'text-font':fonts,'text-size':12,'text-variable-anchor':['left','right','top','bottom'],'text-radial-offset':1.2,'text-justify':'auto','text-optional':true,'text-max-width':14},paint:{'text-color':'#1C1C1E','text-halo-color':'rgba(255,255,255,.95)','text-halo-width':1.6}});
 }
-const markerFor=p=>`m-${MARK[p.object_type]?p.object_type:'other'}-${kindOf(p)}`;
+const markerFor=p=>`m-${MARK[p.object_type]?p.object_type:'other'}-${kindOf(p)}${PRECOK(p.position_precision)?'':'-a'}`;
 function refreshProjects(){
   const feats=visibleFeatures();
   if(ready) map.getSource('sites').setData({type:'FeatureCollection',features:feats.map(f=>({type:'Feature',geometry:f.geometry,properties:{id:f.properties.id,n:f.properties.name_en||f.properties.name,ic:markerFor(f.properties)}}))});

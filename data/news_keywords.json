@@ -466,5 +466,22 @@
    "NUK 2",
    "NUK II"
   ]
- }
+ },
+ "_not": [
+  "nesreč",
+  "trčen",
+  "trčil",
+  "poškodovan",
+  "umrl",
+  "smrt",
+  "drama",
+  "pijan",
+  "policij",
+  "zastoj",
+  "molka",
+  "dim iz",
+  "požar v predoru",
+  "ukraden",
+  "tatv"
+ ]
 }

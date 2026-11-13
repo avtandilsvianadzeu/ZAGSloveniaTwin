@@ -16,7 +16,7 @@ async function boot(){
   window.zagMap=map;
   map.on('load',async()=>{
     addAtlasLayers(); ready=true;
-    if(is3d) map.setTerrain({source:'dem-terrain',exaggeration:1});
+    terrainFor(); map.on('zoomend',terrainFor);
     applyLook(); syncView(); await dataP; refreshProjects(); try{applyNewsRing();}catch(_){}
     const hand=l=>{map.on('mouseenter',l,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',l,()=>map.getCanvas().style.cursor='');};
     ['pt','clu'].forEach(hand);

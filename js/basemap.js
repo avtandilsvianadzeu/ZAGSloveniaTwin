@@ -114,9 +114,10 @@ function setBase(b){ base=b; applyLook(); emit('view'); }
 function set3d(on){
   is3d=on; emit('view');
   if(!ready) return;
-  map.setTerrain(on?{source:'dem-terrain',exaggeration:1}:null);
+  terrainFor();
   applyLook();
   if(!on) map.easeTo({pitch:0,bearing:0,duration:700});
   else if(map.getPitch()<20) map.easeTo({pitch:55,duration:900});
 }
-
+/* terrain is loaded only from zoom 9, where the relief can be seen; the national overview keeps the tilt without downloading terrain tiles */
+function terrainFor(){ if(!ready||!map) return; const want=is3d&&map.getZoom()>=9, has=!!map.getTerrain(); if(want&&!has) map.setTerrain({source:'dem-terrain',exaggeration:1}); else if(!want&&has) map.setTerrain(null); }

@@ -1141,7 +1141,7 @@
     },
     {
      "label": "Load test carried out by",
-     "value": "early March 2023, by dr Andrej Štrukelj (University of Maribor) in cooperation with ZAG",
+     "value": "early March 2023, by Dr Andrej Štrukelj (University of Maribor) in cooperation with ZAG",
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-05EN3VD8/23141649-7e7b-4c86-ada8-05e62eae89f0/PDF",
      "quote": "V začetku marca 2023 je bila izvedena obremenilna preizkušnja, ki jo je izvedel dr. Andrej Štrukelj",
@@ -1650,9 +1650,9 @@
    "summary": "HE Solkan, run-of-river hydropower plant with a dam on the Soča (river km 91.5 from the source), about 700 m upstream of the Solkan bridge. Owner and operator Soške elektrarne Nova Gorica (SENG).",
    "specs": [
     {
-     "label": "Min upper water level",
+     "label": "Minimum headwater level",
      "value": "75.5",
-     "unit": "m",
+     "unit": "m a.s.l.",
      "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
      "quote": "Minimalna kota zgornje vode 75,5 m",
      "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
@@ -10318,8 +10318,8 @@
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Monitoring",
-     "value": "fish-pass monitoring 2009-2012 (680 m fish pass); no structural monitoring described",
+     "label": "Fish pass monitoring (CFBR paper)",
+     "value": "2009 to 2012, 680 m fish pass",
      "unit": "",
      "source": "https://www.barrages-cfbr.eu/IMG/pdf/marseille_atelierct_g_8._smolar-zvanut_blanca.pdf",
      "quote": "680 m long … Monitoring 2009-2012: electrofishing, fish traps, telemetry",
@@ -14281,7 +14281,7 @@
    "specs": [
     {
      "label": "Lift type",
-     "value": "80-AT pendulum aerial tramway",
+     "value": "reversible aerial ropeway (aerial tramway), two cabins of 80 persons",
      "unit": "",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Type: 80-AT",
@@ -15199,8 +15199,8 @@
      "quote_note": "Copied from the source on 13 November 2026."
     },
     {
-     "label": "Closed",
-     "value": "2023 (out of service since autumn 2023, no operating permit)",
+     "label": "Status",
+     "value": "not operating since autumn 2023",
      "unit": "",
      "source": "https://snowbrains.com/kanin-ski-resort-investor-2026/",
      "quote": "Before its closure in autumn 2023, Kanin occupied a unique niche in the Alps.",
