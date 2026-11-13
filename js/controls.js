@@ -2,7 +2,7 @@
 /* Controls: header sections, background and 3D switches, layers panel, rotate/tilt tool, zoom, north. */
 const layersEl=$('layers');
 function syncView(){
-  document.querySelectorAll('#bgSeg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.bg===base));
+  document.querySelectorAll('#bgSeg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.bg===(base==='map'&&theme==='dark'?'night':base)));
   $('b3d').setAttribute('aria-pressed',is3d);
   document.querySelectorAll('input[name=lyBg]').forEach(r=>r.checked=r.value===base);
   document.querySelectorAll('input[name=lyViz]').forEach(r=>r.checked=(r.value==='3d')===is3d);
@@ -13,8 +13,8 @@ function syncView(){
 }
 document.addEventListener('atlas:view',syncView);
 document.addEventListener('atlas:selected',e=>{ if(e.detail&&phone()&&!layersEl.hidden){layersEl.hidden=true;$('bLayers').setAttribute('aria-expanded',false);} });
-document.querySelectorAll('#bgSeg button').forEach(b=>b.onclick=()=>setBase(b.dataset.bg));
-document.querySelectorAll('input[name=lyBg]').forEach(r=>r.onchange=()=>setBase(r.value));
+document.querySelectorAll('#bgSeg button').forEach(b=>b.onclick=()=>{ const v=b.dataset.bg; theme=v==='night'?'dark':'light'; setBase(v==='night'?'map':v); });
+document.querySelectorAll('input[name=lyBg]').forEach(r=>r.onchange=()=>{ if(r.value==='map') theme='light'; setBase(r.value); });
 document.querySelectorAll('input[name=lyViz]').forEach(r=>r.onchange=()=>set3d(r.value==='3d'));
 $('b3d').onclick=()=>set3d(!is3d);
 $('lyBld').onchange=e=>setBuildings(e.target.checked);

@@ -33,13 +33,13 @@ const PAL={
   txt:'#3A3A3C',place:'#1C1C1E',halo:'rgba(255,255,255,.92)',wtxt:'#3D78B5',rtxt:'#6E6A64',
   hsS:'rgba(95,80,60,.20)',hsH:'rgba(255,255,255,.30)',hsA:'rgba(120,100,80,.10)',
   sky:'#A9CBF2',hor:'#E9EFF5',fog:'#F6F4EF'},
- dark:{land:'#1E1F22',park:'#1D3123',wood:'rgba(45,85,55,.45)',grass:'rgba(50,85,55,.35)',ice:'#2B3036',sand:'#3A3627',resid:'rgba(44,45,49,.75)',misc:'#24302A',
-  water:'#17293D',aero:'#2A2B2F',runway:'#3A3B40',
-  mw:'#8C6B26',mwC:'#5E481A',tr:'#5E5134',trC:'#40372A',sec:'#4A4B50',secC:'#2E2F33',min:'#3B3C41',minC:'#2A2B2F',path:'#4A4B50',rail:'#5C5C60',
-  bld:'#2C2D31',bldE:'#3A3B40',bld3:'#38393E',border:'#8F86A8',border2:'#55505E',
-  txt:'#D1D1D6',place:'#F2F2F7',halo:'rgba(20,20,22,.92)',wtxt:'#7FB0E6',rtxt:'#A1A1A6',
-  hsS:'rgba(0,0,0,.55)',hsH:'rgba(255,255,255,.07)',hsA:'rgba(0,0,0,.3)',
-  sky:'#0B1626',hor:'#1F2835',fog:'#1E1F22'}
+ dark:{land:'#1A2233',park:'#1B3A33',wood:'rgba(34,92,74,.42)',grass:'rgba(40,96,80,.30)',ice:'#26324A',sand:'#2B3245',resid:'rgba(34,44,66,.75)',misc:'#1E2E38',
+  water:'#0B1D3A',aero:'#222C42',runway:'#34405C',
+  mw:'#5C6CFF',mwC:'#2E3A99',tr:'#6E7DF0',trC:'#2C3780',sec:'#3F4DA0',secC:'#222C5E',min:'#2E3870',minC:'#1D2445',path:'#2B3461',rail:'#5A6690',
+  bld:'#26304A',bldE:'#33405F',bld3:'#2E3956',border:'#8C7BFF',border2:'#4B4580',
+  txt:'#C9D3EA',place:'#FFFFFF',halo:'rgba(10,16,32,.9)',wtxt:'#7FA8FF',rtxt:'#AAB4D6',
+  hsS:'rgba(0,0,20,.55)',hsH:'rgba(120,150,255,.06)',hsA:'rgba(0,0,30,.3)',
+  sky:'#0A1430',hor:'#1B2547',fog:'#1A2233'}
 };
 const SATSKY={sky:'#8FB6E3',hor:'#D9E4EE',fog:'#B9C3C9'};
 
