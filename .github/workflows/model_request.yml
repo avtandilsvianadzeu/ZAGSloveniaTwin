@@ -1,0 +1,90 @@
+name: Build model from request
+
+# Builds a 3D model when the repository owner opens or edits a "Model request" issue,
+# commits it, starts the site update and answers on the issue.
+on:
+  issues:
+    types: [opened, edited, reopened]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: Issue number to build again
+        required: true
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+
+concurrency:
+  group: model-request
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      ((contains(github.event.issue.labels.*.name, 'model-request') || startsWith(github.event.issue.title, 'Model:')) &&
+       github.event.issue.user.login == github.repository_owner)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read the request
+        id: req
+        env:
+          EVENT_ISSUE: ${{ github.event.issue.number }}
+          INPUT_ISSUE: ${{ github.event.inputs.issue }}
+        run: |
+          N="${EVENT_ISSUE:-$INPUT_ISSUE}"
+          gh issue view "$N" --repo "$REPO" --json body,author,url > issue.json
+          python -c "import json;d=json.load(open('issue.json'));open('request.md','w',encoding='utf-8').write(d['body'] or '')"
+          echo "number=$N" >> "$GITHUB_OUTPUT"
+          echo "ISSUE_URL=$(python -c "import json;print(json.load(open('issue.json'))['url'])")" >> "$GITHUB_ENV"
+          echo "ISSUE_AUTHOR=$(python -c "import json;print(json.load(open('issue.json'))['author']['login'])")" >> "$GITHUB_ENV"
+      - name: Build the model
+        id: build
+        run: |
+          set +e
+          python tools/build_model_from_request.py request.md
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+      - name: Rebuild the data API
+        if: steps.build.outputs.code == '0'
+        run: node tools/build_api.js
+      - name: Save and publish
+        if: steps.build.outputs.code == '0'
+        run: |
+          rm -f issue.json request.md
+          git config user.name "model-builder"
+          git config user.email "model-builder@users.noreply.github.com"
+          git add data/twins.json data/images.json api img/requests 2>/dev/null || true
+          if git diff --cached --quiet; then echo "Nothing changed."; else
+            git commit -m "Model from request #${{ steps.req.outputs.number }}"
+            git pull --rebase -q || true
+            git push
+            gh api -X POST "repos/$REPO/pages/builds" >/dev/null 2>&1 || echo "Pages build is started by the push."
+          fi
+      - name: Answer on the issue
+        if: always() && steps.req.outputs.number != ''
+        run: |
+          N="${{ steps.req.outputs.number }}"
+          [ -f model_request_result.md ] || echo "The build stopped before it finished. See the Actions log." > model_request_result.md
+          gh issue comment "$N" --repo "$REPO" --body-file model_request_result.md
+          if [ "${{ steps.build.outputs.code }}" = "0" ]; then
+            gh label create model-built --repo "$REPO" --color 0e8a16 2>/dev/null || true
+            gh issue edit "$N" --repo "$REPO" --add-label model-built --remove-label needs-info 2>/dev/null || true
+            gh issue close "$N" --repo "$REPO" || true
+          else
+            gh label create needs-info --repo "$REPO" --color d93f0b 2>/dev/null || true
+            gh issue edit "$N" --repo "$REPO" --add-label needs-info || true
+          fi

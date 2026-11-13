@@ -116,7 +116,7 @@ function renderTwin(f){
   const kind=p.category==='zag_facility'?'ZAG facility':p.category==='partner'?(p.object_type==='company'?'Partner company':'Partner institution'):p.category==='user_object'?'Object added by a user':'ZAG project';
   const where=[p.locality&&p.locality!==p.name_en?p.locality:p.municipality].filter(Boolean).join(', ');
   const exact=EXACT(p.position_precision);
-  const im=D.images[id], hero=p.image?{src:p.image,credit:p.image_credit?'Photo: '+p.image_credit:null}:im?{src:im.url,credit:`Photo: ${im.author||'unknown author'}, ${im.licence}, via Wikimedia Commons`}:null;
+  const im=D.images[id], hero=p.image?{src:p.image,credit:p.image_credit?'Photo: '+p.image_credit:null}:im?{src:im.url,credit:`Photo: ${im.author||'unknown author'}, ${im.licence}, ${im.commons===false?'':', via Wikimedia Commons'}`}:null;
   const figs=keyFigures(p,t,g,lines);
   const inv=(p.zag_involvement_types||[]).map(x=>INV_LABEL[x]||cap(x));
   const S=p.structure||{}, sRows=[['Crosses',S.crosses],['Carries',S.carries],['Structure',S.typ],['Built',S.built],['Spans',S.spans],['Length',S.length_m&&num(S.length_m)+' m']].filter(a=>a[1]);
@@ -155,6 +155,7 @@ function renderTwin(f){
     <div class="in">${exact?'':'<p class="note">The position is approximate. The shaded circle on the view marks the area, not the object.</p>'}<div class="btnrow"><a class="tbtn" href="https://www.google.com/maps/search/?api=1&query=${p.latitude},${p.longitude}" target="_blank" rel="noopener">Open in Google Maps</a><button class="tbtn" id="copy" type="button">Copy coordinates</button></div></div>`);
   sec('sources','Sources',(p.sources||[]).length?p.sources.map(s=>`<div class="src"><span>${T(s.title||s.key)}${s.type?`<br><span class="note">${esc(SRC_KIND[s.type]||cap(s.type))}</span>`:''}</span>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">Open source</a>`:''}</div>`).join(''):'');
 
+  { const mp=t&&t.model&&t.model.photos||[]; sec('photos','Reference photos',mp.length?`<div class="refph">${mp.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="Reference photo of ${esc(p.name_en||p.name)}" loading="lazy"></a>`).join('')}</div><p class="note" style="padding:6px 18px 12px">Added with a model request${t.model.request?`, <a href="${esc(t.model.request)}" target="_blank" rel="noopener">see the request</a>`:''}. Kept for comparison only, the model geometry comes from the mapped outline and the published height.</p>`:''); }
   document.title=`${clean(p.name_en||p.name)}, asset record, ZAG Digital Atlas`;
   $('crumb').textContent=`Assets, ${GROUP_NAME[p.object_type]||cap(p.object_type)}`;
   const order=D.features.map(x=>x.properties.id), sheet=order.indexOf(id)+1;
@@ -171,7 +172,7 @@ function renderTwin(f){
       <div class="asset"><p class="kind">${esc(kind)}</p><h1>${T(p.name_en||p.name)}</h1>${p.name_sl&&p.name_sl!==p.name_en?`<p class="sl" lang="sl">${T(p.name_sl)}</p>`:''}
         <div class="tags"><span class="tag">${esc(cap(p.object_type))}</span>${where?`<span class="tag">${T(where)}</span>`:''}<span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only',user:'Added by a user, not verified'}[p.evidence_level]||p.evidence_level)}</span></div>
         <dl class="meta"><div><dt>Asset ID</dt><dd class="mono">${esc(id)}</dd></div><div><dt>Position basis</dt><dd class="${exact?'okc':'warnc'}">${esc(PREC[p.position_precision]||p.position_precision)}</dd></div><div><dt>WGS 84</dt><dd class="mono">${coord}</dd></div><div><dt>Register</dt><dd>${sheet} of ${order.length}</dd></div></dl>
-        <div class="btnrow"><a class="tbtn solid" id="req" href="#">Request latest information</a><a class="tbtn" id="toinsp" href="#inspect">Add inspection</a></div><div class="btnrow two"><button class="tbtn" type="button" id="prt" title="Print this record with all its data, or save it as a PDF">Print report</button><a class="tbtn" href="api/v1/objects/${encodeURIComponent(p.id)}.json" target="_blank" rel="noopener" title="All data of this record as one file">Data file</a></div></div>
+        <div class="btnrow"><a class="tbtn solid" id="req" href="#">Request latest information</a><a class="tbtn" id="toinsp" href="#inspect">Add inspection</a></div><div class="btnrow two"><button class="tbtn" type="button" id="prt" title="Print this record with all its data, or save it as a PDF">Print report</button><a class="tbtn" href="api/v1/objects/${encodeURIComponent(p.id)}.json" target="_blank" rel="noopener" title="All data of this record as one file">Data file</a></div>${!hasModel&&isArea(p)?'':`<div class="btnrow"><a class="tbtn" href="${reqURL(p)}" target="_blank" rel="noopener" title="Opens a short form on GitHub. The model is built automatically and the page updates in about two minutes">${hasModel?'Update the 3D model':'Request a 3D model'}</a></div>`}</div>
       ${figs.length?`<div class="tsec"><h2>Key figures</h2>${figs.map(x=>`<div class="kf"><span>${T(x.k)}</span><b>${T(x.v)}${x.unit?` <small>${esc(x.unit)}</small>`:''}</b>${x.src?(x.src[0]==='#'?`<a href="${x.src}">${esc(x.srcText)}</a>`:link(x.src,x.srcText)):''}</div>`).join('')}</div>`:''}
       <div class="tsec"><h2>Structure breakdown</h2>
         ${hasModel?`<ul class="nodes">${model.parts.map((pt,i)=>`<li><button type="button" class="trow" data-part="${i}"><span class="tic ${pt.kind==='building'?'b':'l'}"></span><span class="tn">${T(pt.name)}</span><span class="tv">${pt.kind==='building'&&pt.height?pt.height.toFixed(1)+' m high':num(Math.round(pt.len))+' m'}</span></button></li>`).join('')}
@@ -202,7 +203,7 @@ function renderTwin(f){
       <div class="tabpan" id="pan-quality" role="tabpanel" hidden>
         <section class="blk"><h3 class="blk-h">Data quality</h3><div class="qgrid"><div><b>${dataRows.length}</b><span>values</span></div><div><b>${nSrc}</b><span>with source</span></div><div><b>${nd0}</b><span>source conflicts</span></div><div><b>${t&&t.open?1:0}</b><span>open question</span></div><div><b>${((t&&t.specs)||[]).filter(x=>x.quote).length}</b><span>with quoted sentence</span></div><div><b>${((t&&t.specs)||[]).filter(x=>x.quote&&!evShows(x)).length}</b><span>quotes to check</span></div></div></section>${blk(['check','position'])}</div>
       <div class="tabpan" id="pan-insp" role="tabpanel" hidden>${blk(['inspect'])}</div>
-      <div class="tabpan" id="pan-src" role="tabpanel" hidden>${blk(['sources','news'])}</div>
+      <div class="tabpan" id="pan-src" role="tabpanel" hidden>${blk(['sources','photos','news'])}</div>
     </aside></div>`;
   document.title=`${clean(p.name_en||p.name)}, ZAG Digital Atlas`;
   const cr=$('crumb'); if(cr) cr.innerHTML=`<a href="twin.html">Assets</a> / ${esc(GROUP_NAME[p.object_type]||cap(p.object_type))} / <b>${T(p.name_en||p.name)}</b>`;
@@ -250,14 +251,17 @@ function renderTwin(f){
    Element size is a drawing choice. Nothing here is a structural analysis model, and no pier, span or cross section is assumed. */
 /* the model pane when there is no geometry to build a model from: say why, instead of leaving the space out */
 function noModelPane(p){
-  const area=/study area|other/.test(p.object_type)&&/settlement|municipality|epicentre/.test(p.position_precision||'');
+  const area=isArea(p);
   const rough=/settlement|locality|municipality|site|approximate/.test(p.position_precision||'');
   const why=area?'This record is a study area or a group of sites, not one structure, so there is no single structure to model. The site view shows where it lies.'
     :rough?`The sources place this record only at ${esc({settlement:'settlement',locality:'locality',municipality:'municipality',site:'site area',approximate:'approximate'}[p.position_precision]||'approximate')} level. A model is built only from surveyed or mapped geometry, so none is drawn until the exact structure is confirmed.`
     :'The position is exact, but no outline or dimensions of the structure are published or mapped, so there is nothing to build a model from yet.';
   const next=area?'':rough?'What would allow a model: the exact structure named in a source, then its mapped outline or alignment.':'What would allow a model: a published plan, outline or main dimensions of the structure.';
-  return `<div class="pane pane-model pane-none" id="paneModel"><div class="nomsg"><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M24 5 41 14v20L24 43 7 34V14z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M7 14l17 9 17-9M24 23v20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="3 3"/></svg><h3>No 3D model for this record</h3><p>${why}</p>${next?`<p class="note">${next}</p>`:''}</div></div>`;
+  return `<div class="pane pane-model pane-none" id="paneModel"><div class="nomsg"><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M24 5 41 14v20L24 43 7 34V14z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M7 14l17 9 17-9M24 23v20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="3 3"/></svg><h3>No 3D model for this record</h3><p>${why}</p>${next?`<p class="note">${next}</p>`:''}${area?'':`<p><a class="tbtn" href="${reqURL(p)}" target="_blank" rel="noopener">Request a model</a></p>`}</div></div>`;
 }
+/* opens the Model request form on GitHub. The build runs by itself, see .github/workflows/model_request.yml */
+const isArea=p=>/study area|other/.test(p.object_type)&&/settlement|municipality|epicentre/.test(p.position_precision||'');
+function reqURL(p){ return 'https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin/issues/new?template=model_request.yml&title='+encodeURIComponent('Model: '+(p.name_en||p.name||p.id)+' ('+p.id+')'); }
 function buildModel(p,t,g,lines,labels){
   const all=[...lines.flat()], ring0=g&&g.geometry?(g.geometry.type==='Polygon'?[g.geometry.coordinates]:g.geometry.type==='MultiPolygon'?g.geometry.coordinates:[]).map(x=>x[0]):[];
   ring0.forEach(r=>all.push(...r)); const BLK=(t&&t.model&&t.model.blocks)||[]; BLK.forEach(b=>all.push(...b.ring)); const M={nodes:[],els:[],parts:[],refs:[],faces:[],note:'',R:1};

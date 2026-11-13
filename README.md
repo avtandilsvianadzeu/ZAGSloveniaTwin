@@ -53,3 +53,14 @@ Each record shows recent Slovenian news about it, and records with news from the
 
 One-time setup on GitHub: Settings, Actions, General, Workflow permissions, choose "Read and write permissions". Then Actions, "Refresh news", "Run workflow" to test it.
 
+
+## Automatic model builder
+
+Every asset page has a button "Request a 3D model" (or "Update the 3D model"). It opens a short form on GitHub (Issues, template "Model request"). When the repository owner submits it, the workflow `.github/workflows/model_request.yml` runs `tools/build_model_from_request.py`, which:
+
+1. takes the outline from OpenStreetMap, either the way numbers given in the form or the mapped structure that holds the record position,
+2. raises it to the height given in the form, which must come with a source link (empty height: the OpenStreetMap height tag if there is one, otherwise flat),
+3. stores dragged photos in `img/requests/<record>/` and shows them under Sources as reference photos (photos never change the geometry),
+4. writes the model into `data/twins.json`, rebuilds `api/v1/`, commits, and answers on the issue with the result.
+
+It refuses, with an explanation on the issue, when a height has no source link, when no outline is found within 60 m, or when the record already has a more detailed model or the official GURS building (tick "Replace" to override). Editing the issue builds the model again. The workflow needs "Read and write permissions" under Settings, Actions, General, Workflow permissions.

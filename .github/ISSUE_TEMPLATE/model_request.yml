@@ -1,0 +1,128 @@
+name: Model request
+description: Build or rebuild the 3D model of one record. The model is built automatically and the page updates.
+title: "Model: "
+labels: ["model-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in what you know and submit. A GitHub Action builds the model in about a minute, commits it and answers here with the result.
+        The outline comes from OpenStreetMap. The height must come with a source link. Photos are kept as reference pictures on the page, they are not turned into geometry.
+        Only issues opened by the repository owner are built.
+  - type: dropdown
+    id: record
+    attributes:
+      label: Record
+      description: The record that gets the model.
+      options:
+        - "bovec_quake: Bovec Earthquake Response"
+        - "cenkova: Cenkova Tunnel"
+        - "cerkno_z: Cerkno Cableways"
+        - "cestel: Cestel d.o.o."
+        - "che_avce: CHE Avče"
+        - "dekani: Dekani Tunnel"
+        - "fibran_sodrazica: Fibran Nord Sodražica"
+        - "kpd: Former Maribor Prison"
+        - "sij_acroni_pavers: Geopolymer Paving at SIJ Acroni"
+        - "golo_rebro: Golo Rebro Motorway Tunnel"
+        - "golovec: Golovec Tunnel"
+        - "golte: Golte Cableway"
+        - "grosuplje_most: Grosuplje Bridge"
+        - "he_arto: HE Arto Blanca"
+        - "he_bostanj: HE Boštanj"
+        - "he_krsko: HE Krško"
+        - "he_solkan: HE Solkan"
+        - "he_vrhovo: HE Vrhovo"
+        - "he_vuhred: HE Vuhred"
+        - "he_zlatolicje: HE Zlatoličje"
+        - "idrija_cherplan: Idrija Seismic Risk, CHERPLAN"
+        - "innorenew: InnoRenew CoE"
+        - "kamnik_bridges: Kamnik Municipal Bridges"
+        - "kanin_z: Kanin Cableway"
+        - "karavanke_c: Karavanke Motorway Tunnel"
+        - "karavanke_r: Karavanke Railway Tunnel"
+        - "kastelec: Kastelec Tunnel"
+        - "ss_kocevje: Kočevje Secondary School"
+        - "kranjskagora_z: Kranjska Gora Cableways"
+        - "krvavec: Krvavec Cableway"
+        - "lescevje: Leščevje Tunnel"
+        - "livarna_crnomelj: Livarna Črnomelj Chimney"
+        - "grad_vzpenjaca: Ljubljana Castle Funicular"
+        - "lj_seismic: Ljubljana Seismic Risk"
+        - "maribor_pilots: Maribor circular economy pilot sites"
+        - "markovec: Markovec Tunnel"
+        - "jez_melje: Melje Dam and Small HPP"
+        - "nuk: National and University Library"
+        - "nm_brv: Novo Mesto Stress Ribbon Footbridge"
+        - "p2b3_sencur: P2B3 Commercial Building"
+        - "pecna_reber: Pečna Reber Broadcasting Tower"
+        - "planica_z: Planica Cableway"
+        - "pletovarje: Pletovarje Tunnel"
+        - "podmilj: Podmilj Tunnel"
+        - "sz_masts: Railway Electrification Masts"
+        - "rakuschev_mlin: Rakuschev Mlin"
+        - "ratece_cable: Rateče Cableway Installations"
+        - "ravbarkomanda: Ravbarkomanda Viaduct"
+        - "rtp_gorica: RTP Gorica Substation"
+        - "sitarjevec: Sitarjevec Mine"
+        - "slano_blato: Slano Blato Landslide"
+        - "os_stara_cerkev: Stara Cerkev Elementary School"
+        - "stoze: Stože Landslide"
+        - "straza_bled: Straža Bled Cableway"
+        - "strunjan: Sveti Križ Bay Cliff"
+        - "tabor_h4: Tabor Tunnel"
+        - "tomacevo: Tomačevo Bridge"
+        - "tr3: TR3 Tower"
+        - "trojane: Trojane Tunnel"
+        - "ulfgg: UL FGG"
+        - "soca_quake: Upper Soča Valley Earthquake Repairs"
+        - "vzideh: V Zideh Tunnel"
+        - "velikaplanina: Velika Planina Cableway"
+        - "verd: Verd Viaduct"
+        - "vogel: Vogel Cableway"
+        - "vransko: Vransko Bridge"
+        - "zag: ZAG"
+        - "zag_gameljne: ZAG Fire Laboratory Gameljne"
+        - "zag_logatec: ZAG Fire Laboratory Logatec"
+        - "zag_maribor: ZAG Maribor Unit"
+        - "catez_bridge: Čatež Bridge over the Sava"
+        - "crna: Črna na Koroškem Bridge"
+        - "sentvid: Šentvid Tunnel"
+    validations:
+      required: true
+  - type: input
+    id: ways
+    attributes:
+      label: OpenStreetMap ways
+      description: Way numbers or links of the outline, for example 325991567 or https://www.openstreetmap.org/way/325991567. Several are allowed, separated by commas. Leave empty to use the mapped area that holds the record position.
+  - type: input
+    id: height
+    attributes:
+      label: Height in metres
+      description: Height of the structure above its base, for example 31.35. Leave empty to use the OpenStreetMap height tag if there is one, otherwise the outline is drawn flat.
+  - type: input
+    id: source
+    attributes:
+      label: Height source link
+      description: One web address where the height is published. Required when a height is given.
+  - type: textarea
+    id: quote
+    attributes:
+      label: Quote from the source
+      description: Optional. The sentence that gives the height, copied as printed.
+  - type: input
+    id: base
+    attributes:
+      label: Base level in metres
+      description: Optional. Height of the bottom of the model above the ground at the record, for example 2.5 for a deck on supports. Default 0.
+  - type: textarea
+    id: photos
+    attributes:
+      label: Photos
+      description: Optional. Drag photos here. They are stored with the site as reference pictures.
+  - type: checkboxes
+    id: replace
+    attributes:
+      label: Replace
+      options:
+        - label: Replace the existing model even if it is more detailed
