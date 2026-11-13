@@ -259,3 +259,5 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border-radius:5px;backgr
 }
 @media (max-width:1100px){.thdr{flex-wrap:wrap;row-gap:8px}.thdr .sitenav{order:11;flex:1 0 100%;overflow-x:auto;scrollbar-width:none}.thdr .sitenav::-webkit-scrollbar{display:none}}
 @media (max-width:700px){.mapfilter{bottom:108px}.lgd,.lgdshow{bottom:160px!important;max-height:min(40vh,300px)!important}.zb-onmap .vctl{bottom:160px!important}.tips{bottom:160px}}
+@media (max-width:1100px){.hdr .sitenav,.thdr .sitenav{min-width:0;max-width:100%;width:100%}}
+html,body{max-width:100%;overflow-x:hidden}
