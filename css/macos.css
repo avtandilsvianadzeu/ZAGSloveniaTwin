@@ -150,3 +150,13 @@ html{scroll-behavior:smooth}
 .tbtn,.seg button,.sitenav a{transition:background .12s,box-shadow .12s}
 @media (max-width:1180px){.livebadge span{display:none}}
 @media (prefers-reduced-motion:reduce){.livebadge i,.sierra .panel,.sierra .blk,.sierra .asset,.sierra .tsec,.sierra .dims,.sierra .card{animation:none}}
+
+/* map: when a record is open the legend steps aside, so nothing shows through or under the record panel */
+.has-panel .lgd,.has-panel .lgdshow{display:none!important}
+.info{z-index:20}
+.info .body{padding:14px 18px 20px}
+.info .body>h1{margin:4px 0 2px}
+.info .where{display:inline-flex;align-items:center;margin:10px 12px 0 0;vertical-align:middle;font-size:13px;color:#3A3A3A}
+.info .where+p{display:inline-flex;margin:10px 0 0;vertical-align:middle}
+.info .btn.twinlink{height:26px!important;padding:0 14px!important;display:inline-flex;align-items:center;background:linear-gradient(var(--s-blue-top),var(--s-blue-bot))!important;border-color:#2A86F5 #2A86F5 #0060DF!important;color:#fff!important;border-radius:4px!important;box-shadow:0 1px 0 rgba(0,0,0,.08)!important;font-size:13px!important}
+.info .body>*+h3{margin-top:16px}
