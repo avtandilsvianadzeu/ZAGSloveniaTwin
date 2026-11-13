@@ -261,3 +261,22 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border-radius:5px;backgr
 @media (max-width:700px){.mapfilter{bottom:108px}.lgd,.lgdshow{bottom:160px!important;max-height:min(40vh,300px)!important}.zb-onmap .vctl{bottom:160px!important}.tips{bottom:160px}}
 @media (max-width:1100px){.hdr .sitenav,.thdr .sitenav{min-width:0;max-width:100%;width:100%}}
 html,body{max-width:100%;overflow-x:hidden}
+
+/* ---------- readable contrast (WCAG AA, 4.5 to 1 for text) ---------- */
+:root{--g-blue:#0064D2;--blue:#0064D2}
+a,.kind{color:#0060C9}
+.tbtn.solid,.tbtn[aria-pressed="true"],.tgl[aria-pressed="true"],.tl button[aria-pressed=true],.info .btn.twinlink,.pill[aria-pressed="true"],.zb-chip.solid,.zb-in button,#plabel,.pane-model .plabel.mlevel{background:linear-gradient(180deg,#1A73D9,#005EC4)!important}
+.tbtn.solid,.tbtn[aria-pressed="true"],.pill[aria-pressed="true"]{color:#fff!important}
+details>summary{color:#0058B3}
+.tag{color:#55555A}
+.tag.ok{color:#14652D!important}.tag.warn{color:#8A4A00!important}.tag.bad{color:#B0261C!important}
+.livebadge b{color:#17702F}
+.qres.ok .qres-h b{color:#17702F}.qres.part .qres-h b{color:#8A4A00}
+.qres a{color:#0058B3}
+.qv,.qrank.r-owner,.qrank.r-government{color:#145A25}
+.qrank{color:#0052AD}
+.ev summary,.evid summary{color:#0058B3}
+.src .note,.blk .note,.note{color:#5F5F64}
+[class*="host"],.srclink,.vsrc{color:#5F5F64}
+:root{--tert:#6A6A70}.kf a,.kf span a{color:#5F5F64}
+:root{--muted:#5F5F64;--g-mut:#5F5F64}
