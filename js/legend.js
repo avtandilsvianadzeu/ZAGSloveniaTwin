@@ -13,7 +13,7 @@
     ['model','With a 3D model',p=>!!(p.lines||p.line||(ZA.gurs&&ZA.gurs[p.id])||(ZA.twins&&ZA.twins[p.id]&&ZA.twins[p.id].model))],
     ['exact','Exact position',p=>EXACT.has(p.position_precision)]];
   const img=(t,k)=>{ try{ const d=markerImage(t,k), c=document.createElement('canvas'); c.width=d.width; c.height=d.height; c.getContext('2d').putImageData(d,0,0); return '<img alt="" width="26" height="26" src="'+c.toDataURL()+'">'; }catch(_){ return ''; } };
-  const pref=()=>{ try{ return localStorage.getItem('zag_lgd_hidden')==='1'; }catch(_){ return false; } };
+  const pref=()=>{ try{ const v=localStorage.getItem('zag_lgd_hidden'); if(v===null) return innerWidth<1100; return v==='1'; }catch(_){ return innerWidth<1100; } };
   const set=on=>{ box.hidden=!on; show.hidden=on; try{ localStorage.setItem('zag_lgd_hidden',on?'0':'1'); }catch(_){} };
   const sel={types:new Set(),kinds:new Set(),quick:new Set()};
   const kindOfP=p=>p.category==='zag_facility'?'fac':p.evidence_level==='documented'?'doc':'ref';

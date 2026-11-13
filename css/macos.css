@@ -237,3 +237,24 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border-radius:5px;backgr
 .qitem.done .qres p{color:#1D1D1F}.qitem.done .qres .note{color:var(--g-mut)}
 .qv{display:inline-flex;align-items:center;height:20px;padding:0 9px;border-radius:999px;font-size:11px;font-weight:600;background:rgba(52,199,89,.16);color:#1F7A33}
 .qv.c{background:rgba(255,149,0,.16);color:#9A5200}
+
+/* ---------- narrow windows and phones: nothing overlaps ---------- */
+.sitenav a{white-space:nowrap}
+@media (max-width:1100px){
+  .hdr{height:auto!important;flex-wrap:wrap;row-gap:8px}
+  .hdr .hsearch{display:block!important;order:10;flex:1 0 100%;max-width:none;margin:0}
+  .hdr .sitenav{order:11;flex:1 0 100%;overflow-x:auto;scrollbar-width:none}
+  .hdr .sitenav::-webkit-scrollbar{display:none}
+  .hdr .livebadge{display:none}
+  .mapfilter{top:auto!important;bottom:64px;left:12px;right:84px;transform:none;max-width:none;overflow-x:auto;scrollbar-width:none;justify-content:flex-start}
+  .mapfilter::-webkit-scrollbar{display:none}
+  .tl{left:12px!important;right:84px!important;bottom:12px!important;width:auto!important}
+  .zb-onmap .tl,.zb-onmap .tlshow{right:84px}
+  .tlshow{bottom:12px!important}
+  .lgd{bottom:116px!important;max-height:min(46vh,360px)!important}
+  .lgdshow{bottom:116px!important}
+  .zb-onmap .zb-launch{bottom:12px}
+  .zb-onmap .vctl{bottom:84px!important}
+  .tips{top:auto;bottom:116px;left:12px;right:12px;width:auto}
+}
+@media (max-width:1100px){.thdr{flex-wrap:wrap;row-gap:8px}.thdr .sitenav{order:11;flex:1 0 100%;overflow-x:auto;scrollbar-width:none}.thdr .sitenav::-webkit-scrollbar{display:none}}
