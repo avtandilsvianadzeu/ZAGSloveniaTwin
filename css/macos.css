@@ -265,7 +265,7 @@ html,body{max-width:100%;overflow-x:hidden}
 /* ---------- readable contrast (WCAG AA, 4.5 to 1 for text) ---------- */
 :root{--g-blue:#0064D2;--blue:#0064D2}
 a,.kind{color:#0060C9}
-.tbtn.solid,.tbtn[aria-pressed="true"],.tgl[aria-pressed="true"],.tl button[aria-pressed=true],.info .btn.twinlink,.pill[aria-pressed="true"],.zb-chip.solid,.zb-in button,#plabel,.pane-model .plabel.mlevel{background:linear-gradient(180deg,#1A73D9,#005EC4)!important}
+.tbtn.solid,.tbtn[aria-pressed="true"],.tgl[aria-pressed="true"],.tl button[aria-pressed=true],.info .btn.twinlink,.pill[aria-pressed="true"],.zb-chip.solid,.zb-in button{background:linear-gradient(180deg,#1A73D9,#005EC4)!important}
 .tbtn.solid,.tbtn[aria-pressed="true"],.pill[aria-pressed="true"]{color:#fff!important}
 details>summary{color:#0058B3}
 .tag{color:#55555A}
@@ -280,3 +280,73 @@ details>summary{color:#0058B3}
 [class*="host"],.srclink,.vsrc{color:#5F5F64}
 :root{--tert:#6A6A70}.kf a,.kf span a{color:#5F5F64}
 :root{--muted:#5F5F64;--g-mut:#5F5F64}
+
+/* model label: small glass chip that folds to a dot, hover shows it again */
+.pane-model .plabel.mlevel,#plabel{background:rgba(22,26,36,.58)!important;-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);color:#fff!important;font:600 11px/1.2 var(--font)!important;padding:5px 10px!important;border-radius:999px!important;box-shadow:0 0 0 .5px rgba(255,255,255,.18) inset,0 4px 14px rgba(0,0,0,.14)!important;max-width:min(260px,calc(100% - 24px))!important;white-space:nowrap!important;overflow:hidden;text-overflow:ellipsis;transition:max-width .35s ease,padding .35s ease,color .2s,opacity .3s}
+#plabel.mini{max-width:22px!important;padding:5px 0!important;color:transparent!important;text-overflow:clip;position:absolute}
+#plabel.mini::before{content:"i";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font:700 11px/1 Georgia,serif;font-style:italic}
+.pane-model:hover #plabel.mini{max-width:min(260px,calc(100% - 24px))!important;padding:5px 10px!important;color:#fff!important}
+.pane-model:hover #plabel.mini::before{content:none}
+/* rotate hint: a short glass bar */
+.rothint{padding:6px 12px 6px 9px!important;gap:7px!important;border-radius:999px!important;font:500 11.5px/1.25 var(--font)!important;background:rgba(22,26,36,.66)!important;box-shadow:0 0 0 .5px rgba(255,255,255,.18) inset,0 6px 18px rgba(0,0,0,.18)!important;bottom:14px!important}
+.rothint svg{width:16px;height:16px}
+.rothint span{flex-direction:row!important;gap:6px;flex-wrap:wrap}
+/* model inside the map panel: fits its frame, no inner scrolling */
+html:has(body.embed),body.embed{height:100%;overflow:hidden}
+body.embed .embedbox{display:flex;flex-direction:column;height:100vh}
+body.embed .embedbox .pane-model{flex:1 1 auto;height:auto!important;min-height:0}
+body.embed .embedbox .pickbox{flex:none;max-height:38vh;overflow:auto;padding:6px 12px!important;scrollbar-width:none}
+body.embed .embedbox .pickbox::-webkit-scrollbar{display:none}
+body.embed .embedbox .pickbox .blk-h{display:none}
+body.embed .embedbox .stage-note{display:none}
+body.embed .mtools,body.embed .seg{transform-origin:left top}
+body.embed .ptools,.pane-model .ptools{gap:6px!important;flex-wrap:wrap!important;top:8px!important;left:8px!important;right:8px!important}
+body.embed .ptools .seg button,body.embed .ptools .tbtn,.pane-model .ptools .seg button,.pane-model .ptools .tbtn{font-size:12px!important;padding:5px 10px!important;min-height:28px!important;height:28px!important}
+body.embed .ptools .tbtn{white-space:nowrap}
+body.embed .rothint{left:auto!important;right:10px!important;transform:none!important}
+body.embed .embedbox .pickbox{max-height:30vh}
+@media (max-width:340px){body.embed #mReset{display:none}}
+/* scrolling only where it is needed */
+@media (min-width:761px) and (max-width:1100px){.hdr .sitenav,.thdr .sitenav{overflow:visible!important;width:auto!important;flex:0 1 auto!important;margin:0 auto}}
+@media (max-width:760px){
+  .sitenav,.pills,.mapfilter,#nav{scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+  .sitenav::-webkit-scrollbar,.pills::-webkit-scrollbar,.mapfilter::-webkit-scrollbar,#nav::-webkit-scrollbar{display:none}
+  .sitenav.end,.pills.end,.mapfilter.end,#nav.end{-webkit-mask-image:none;mask-image:none}
+  .panel table{width:100%;table-layout:auto}
+  .panel table th,.panel table td{padding-left:6px!important;padding-right:6px!important;font-size:12.5px}
+  .panel table th{white-space:normal;hyphens:auto}
+}
+/* map page on phones: one row each for the timeline and the filter, nothing overlapping */
+@media (max-width:700px){
+  .tl{display:flex!important;flex-wrap:nowrap!important;align-items:center;gap:6px!important;left:10px!important;right:78px!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;height:48px;padding:6px!important;box-sizing:border-box}
+  .tl output{display:none!important}
+  .tl input[type=range]{flex:1 1 auto;min-width:0;width:auto!important;margin:0 4px}
+  .tl button{height:34px!important;padding:0 12px!important;font-size:13px!important;flex:none}
+  .tl #tlHide{width:34px;padding:0!important;font-size:0!important}
+  .tl #tlHide::before{content:"×";font-size:19px;line-height:1}
+  .tlshow{bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;left:10px!important}
+  .mapfilter{bottom:calc(68px + env(safe-area-inset-bottom,0px))!important;left:10px!important;right:78px!important;height:40px}
+  .lgdshow{bottom:calc(118px + env(safe-area-inset-bottom,0px))!important;left:10px!important}
+  .lgd{bottom:calc(118px + env(safe-area-inset-bottom,0px))!important;left:10px!important}
+  .zb-onmap .vctl{bottom:calc(118px + env(safe-area-inset-bottom,0px))!important;right:10px!important}
+  .vctl #rotL,.vctl #rotR,.vctl #tiltU,.vctl #tiltD,.vctl [id^=rot],.vctl [id^=tilt],.vctl [id^=pitch]{display:none!important}
+  .maplibregl-ctrl-bottom-right,.maplibregl-ctrl-bottom-left{bottom:calc(160px + env(safe-area-inset-bottom,0px))!important;right:52px!important}
+  .maplibregl-ctrl-attrib{font-size:10px}
+  .status{display:none!important}
+}
+@media (max-width:480px){
+  #bgSeg button{padding:0 9px!important;gap:4px}
+  #bgSeg button i,#b3d i{display:none}
+  #b3d,#bLayers{padding:0 11px!important}
+  #bLayers{font-size:0!important;width:36px;padding:0!important}
+  #bLayers i{display:inline-flex!important}
+}
+/* legend shows in full where there is room, so it needs no inner scrolling */
+@media (min-width:701px){.lgd{max-height:min(620px,calc(100vh - 230px))!important}.lgd .lgnote{display:none}.lgd h4:last-of-type{display:none}}
+
+.rothint{white-space:nowrap;max-width:calc(100% - 24px)!important;overflow:hidden}
+.rothint span{flex-wrap:nowrap!important;overflow:hidden;text-overflow:ellipsis}
+.rothint span b{font-weight:600}
+.tabs[role=tablist] [role=tab]{padding:0 7px!important;font-size:12px!important;letter-spacing:-.01em;flex:1 1 auto;min-width:0;justify-content:center}.tabs[role=tablist]{display:flex!important;width:100%;box-sizing:border-box;overflow:hidden}
+.pane-map .rothint{top:52px!important;bottom:auto!important}.pane-model .rothint{top:auto!important;bottom:56px!important}
+body.embed .pane-model .rothint{top:auto!important;bottom:12px!important}

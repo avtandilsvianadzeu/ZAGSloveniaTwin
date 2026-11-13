@@ -214,14 +214,15 @@ function renderTwin(f){
   const markTree=sel=>{ document.querySelectorAll('.trow').forEach(b=>b.classList.toggle('on',!!sel&&((sel.part!=null&&b.dataset.part==sel.part&&sel.kind!=='ref')||(sel.kind==='ref'&&b.dataset.ref==sel.ref)))); };
   /* short how-to-rotate hint on both views, shown for 10 seconds */
   const ROT='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 4v4.5h-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-  const addHint=(el,txt)=>{ if(!el||EMBED) return; const d=document.createElement('div'); d.className='rothint'; d.setAttribute('role','note'); d.innerHTML=ROT+'<span>'+txt+'</span>'; el.appendChild(d);
-    const bye=()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),600); }; const t=setTimeout(bye,10000); el.addEventListener('pointerdown',()=>{ clearTimeout(t); bye(); },{once:true}); };
-  if(hasModel) addHint($('paneModel'),'<b>Drag to rotate the model</b> Scroll to zoom, double click to reset');
-  addHint(document.querySelector('.pane-map'),'<b>Right-drag or Ctrl+drag to rotate the map</b> Scroll to zoom');
+  const addHint=(el,txt,ms)=>{ if(!el) return; const d=document.createElement('div'); d.className='rothint'; d.setAttribute('role','note'); d.innerHTML=ROT+'<span>'+txt+'</span>'; el.appendChild(d);
+    const bye=()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),600); }; const t=setTimeout(bye,ms||10000); el.addEventListener('pointerdown',()=>{ clearTimeout(t); bye(); },{once:true}); };
+  if(hasModel) addHint($('paneModel'),'<b>Drag to turn</b>'+(EMBED?'':' Scroll to zoom'),EMBED?7000:0);
+  if(!EMBED) addHint(document.querySelector('.pane-map'),'<b>Right-drag to turn</b> Scroll to zoom');
   if(hasModel) ctl.fem=initModel(model,p,{home,onView:(y,pt)=>{ if(ctl.map&&ctl.map.setCamera) ctl.map.setCamera(y/RAD,pt/RAD); },onSelect:sel=>{ if(ctl.map&&ctl.map.highlight) ctl.map.highlight(sel&&sel.part!=null?sel.part:null); markTree(sel); if(sel&&!EMBED) tab('props'); }});
   if($('prt')) $('prt').onclick=()=>window.print();
-  if(ctl.fem&&g&&g.scan&&g.scan.grid) getJSON(g.scan.grid).then(S=>{ if(!S||!ctl.fem.setScan(S)) return; const b=$('mScan'), lab=$('plabel'), base=lab?lab.textContent:'', show=on=>{ if(b) b.setAttribute('aria-pressed',on?'true':'false'); if(lab) lab.textContent=on?'Surface from laser scanning (GURS), read as height above ground':base; };
+  if(ctl.fem&&g&&g.scan&&g.scan.grid) getJSON(g.scan.grid).then(S=>{ if(!S||!ctl.fem.setScan(S)) return; const b=$('mScan'), lab=$('plabel'), base=lab?lab.textContent:'', show=on=>{ if(b) b.setAttribute('aria-pressed',on?'true':'false'); if(lab) lab.textContent=on?'Laser scan surface (GURS)':base; };
     if(b){ b.hidden=false; b.onclick=()=>show(ctl.fem.scan(b.getAttribute('aria-pressed')!=='true')); } show(true); });
+  { const pl=$('plabel'); if(pl){ pl.setAttribute('aria-label',pl.textContent); setTimeout(()=>pl.classList.add('mini'),6000); } }
   if(EMBED){ const mb=$('mMeasure'); if(mb&&ctl.fem) mb.onclick=()=>{ const on=mb.getAttribute('aria-pressed')!=='true'; mb.setAttribute('aria-pressed',on?'true':'false'); ctl.fem.measure(on); }; return; }
   ctl.map=initView(p,t,g,lines,labels,{camera:(b,pt)=>{ if(ctl.fem) ctl.fem.setView(b*RAD,pt*RAD); },select:(type,i)=>{ if(!ctl.fem) return; if(type==='part') ctl.fem.pickPart(i); else ctl.fem.pickRef(i); }})||{};
   /* inspector tabs, in-page links, tree, layout, tools */
@@ -424,6 +425,12 @@ function initModel(M,p,opt){
   on('m3d',()=>view(HOME.yaw,HOME.pitch,'m3d')); on('mTop',()=>view(0,0,'mTop')); on('mSide',()=>view(0,Math.PI/2,'mSide')); on('mReset',()=>{ sel=null; describe(); view(HOME.yaw,HOME.pitch,'m3d'); });
   if('ResizeObserver' in window) new ResizeObserver(()=>{ if(cv.hidden) return; size(); redraw(); }).observe(cv);
   size(); draw();
+  /* a slow turn until the first touch, so it is clear that the model can be moved */
+  let spin=!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches), last=0, t0=0;
+  const stopSpin=()=>{ spin=false; }; ['pointerdown','wheel','keydown'].forEach(ev=>cv.addEventListener(ev,stopSpin,{passive:true}));
+  ['m3d','mTop','mSide','mReset','mMeasure','mScan'].forEach(k=>{ const b=$(k); if(b) b.addEventListener('click',stopSpin); });
+  const tick=ts=>{ if(!spin) return; if(!t0) t0=ts; if(ts-t0>14000){ spin=false; return; } if(last&&!cv.hidden&&!document.hidden){ yaw+=Math.min(50,ts-last)*.00022; redraw(); } last=ts; requestAnimationFrame(tick); };
+  setTimeout(()=>requestAnimationFrame(tick),900);
   const pip=(x,y,R)=>{ let c=false; for(let i=0,j=R.length-1;i<R.length;j=i++){ const a=R[i], b=R[j]; if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0]) c=!c; } return c; };
   const api={ wake(){ awake=true; size(); redraw(); }, sleep(){ awake=false; },
     /* S is a file of data/lidar: 1 m cells of measured height inside the outlines, georeferenced by three corners */

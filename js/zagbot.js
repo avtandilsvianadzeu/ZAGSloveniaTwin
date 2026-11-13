@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=6'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=7'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
@@ -33,7 +33,7 @@
   const norm=s=>String(s||'').normalize('NFKD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9.]+/g,' ').trim();
   const tidy=s=>String(s==null?'':s).replace(/\s*[—–]\s*/g,', ').replace(/\s*;\s*/g,', ').replace(/\s*·\s*/g,', ').replace(/\s+/g,' ').trim();
   const lev=(a,b)=>{ if(Math.abs(a.length-b.length)>2) return 9; const d=[...Array(b.length+1).keys()]; for(let i=1;i<=a.length;i++){ let p=d[0]; d[0]=i; for(let j=1;j<=b.length;j++){ const t=d[j]; d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]===b[j-1]?0:1)); p=t; } } return d[b.length]; };
-  const STOP=new Set('the a an of in on at to is are was were what how which who when where me show find tell about for and or with please can you i my do does did there this that it its kaj je so na v za in ali kje kdaj kako koliko mi pokazi prosim of'.split(' '));
+  const STOP=new Set('the a an of in on at to is are was were what how which who when where me show find tell about for and or with please can you i my do does did there this that it its kaj je so na v za in ali kje kdaj kako koliko mi pokazi prosim of pri pod nad ob se smo ste sem ki ta to tam tu naredil naredila naredili delal delala delali bil bila bilo'.split(' '));
 
   /* ---------- vocabulary ---------- */
   const TYPES=[
@@ -69,10 +69,19 @@
         const words=new Set(norm([p.name_en,p.name,p.name_sl,p.id.replace(/_/g,' ')].join(' ')).split(' ').filter(w=>w.length>2&&!STOP.has(w)));
         const place=new Set(norm([p.locality,p.municipality].join(' ')).split(' ').filter(w=>w.length>2));
         return {id:p.id,name,type:p.object_type||'other',place:tidy(p.locality||p.municipality||''),role:tidy(p.zag_role||''),year:p.year||'',words,placeWords:place,p}; });
-      DB.recs.forEach(r=>DB.byId[r.id]=r); });
+      DB.recs.forEach(r=>DB.byId[r.id]=r);
+      /* words that many records share (zag, bridge, laboratory) do not identify one record */
+      const df={}; DB.recs.forEach(r=>r.words.forEach(w=>{ df[w]=(df[w]||0)+1; })); DB.common=new Set(Object.keys(df).filter(w=>df[w]>3)); });
+    /* extra knowledge, loaded in the background: ZAG projects and sources (data.js), news and inspections */
+    DB.more=Promise.all([
+      (window.ZAG&&window.ZAG.projects?Promise.resolve(window.ZAG):fetch('data.js').then(r=>r.text()).then(t=>JSON.parse(t.slice(t.indexOf('{')).trim().replace(/;\s*$/,'')))).catch(()=>null),
+      fetch('data/news.json').then(r=>r.json()).catch(()=>null),
+      fetch('data/inspections.json').then(r=>r.json()).catch(()=>null)]).then(([z,n,i])=>{
+        DB.projects={}; DB.projAll=(z&&z.projects)||[]; DB.src=(z&&z.src)||{}; ((z&&z.projects)||[]).forEach(pr=>(pr.sites||[]).forEach(id=>{ if(id!=='zag') (DB.projects[id]=DB.projects[id]||[]).push(pr); }));
+        DB.news=(n&&n.items)||{}; DB.insp=(i&&i.items)||{}; });
     return DB.ready; }
 
-  function wordHit(q,w){ if(q===w) return 3; if(q.length>=4&&(w.startsWith(q)||q.startsWith(w))&&Math.min(q.length,w.length)>=4) return 2; if(q.length>=5&&lev(q,w)<=1) return 1.5; if(q.length>=7&&lev(q,w)<=2) return 1; return 0; }
+  function wordHit(q,w){ if(q===w) return 3; if(q.length>=4&&(w.startsWith(q)||q.startsWith(w))&&Math.min(q.length,w.length)>=4) return 2; if(q.length>=5&&lev(q,w)<=1) return 1.5; if(q.length>=7&&lev(q,w)<=2) return 1; if(q.length>=5&&q[0]===w[0]){ const k=x=>x.replace(/[aeiou]/g,''); const a=k(q), b=k(w); if(a.length>=4&&b.startsWith(a)&&Math.abs(q.length-w.length)<=3) return 1.5; } return 0; }
   function findRecords(tokens){ const out=[];
     for(const r of DB.recs){ let s=0, hits=0; for(const q of tokens){ let best=0; for(const w of r.words) best=Math.max(best,wordHit(q,w)); if(best){ s+=best; hits++; } }
       if(hits){ s+=hits/Math.max(2,r.words.size); out.push({r,s}); } }
@@ -128,7 +137,57 @@
     if(!sp.length){ say('No verified values are recorded for <b>'+esc(r.name)+'</b> yet.'); offer([['Report a missing value',()=>startUpdate(r,'value')],...recChips(r).slice(0,2)]); return; }
     say(`<b>${esc(r.name)}</b>, verified values:<ul class="zb-spec">${sp.slice(0,8).map(specLine).join('')}</ul>${sp.length>8?`<p class="zb-note">${sp.length-8} more on its page.</p>`:''}`);
     offer(recChips(r).filter(c=>c[0]!=='Key figures')); }
-  function role(r){ ctx.rec=r; say(r.role?`<b>ZAG at ${esc(r.name)}</b><p>${esc(r.role)}</p>`:'The sources do not describe ZAG’s role at '+esc(r.name)+' in detail. Its page lists the sources.'.replace('’',"'")); offer(recChips(r).filter(c=>c[0]!=='What did ZAG do?')); }
+  /* ---------- reasoning over the record: everything said here is read from the atlas data and its sources ---------- */
+  const arr=v=>Array.isArray(v)?v:[];
+  const yrs=y=>String(y||'').replace(/-$/,' onwards').replace(/-/g,' to ');
+  const ownName=r=>/^zag\b/i.test(r.name);
+  const headOf=r=>ownName(r)?esc(r.name):'ZAG at '+esc(r.name);
+  const projOf=r=>(DB.projects&&DB.projects[r.id])||[];
+  const srcList=(r,n)=>{ const S=arr(r.p.sources).filter(x=>x&&x.url); if(!S.length) return ''; return `<p class="zb-src">Sources: ${S.slice(0,n||4).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(tidy(x.title||x.key||'source'))}</a>`).join(', ')}${S.length>(n||4)?`, and ${S.length-(n||4)} more on its page`:''}</p>`; };
+  const projLines=(r,n)=>{ const P=projOf(r); if(!P.length) return ''; return `<p><b>Projects linked to it</b></p><ul class="zb-list">${P.slice(0,n||4).map(x=>`<li>${x.ru?`<a href="${esc(x.ru)}" target="_blank" rel="noopener">${esc(tidy(x.ac||x.t))}</a>`:esc(tidy(x.ac||x.t))}${x.y?', '+esc(yrs(x.y)):''}${x.role&&!/not stated/i.test(x.role)?', ZAG as '+esc(x.role.toLowerCase()):''}</li>`).join('')}</ul>`; };
+  /* a short pause with what is being read, so an answer is visibly worked out and not guessed */
+  function analyse(steps,fn){ const d=say('<span class="zb-ana"><i class="zb-spin"></i><span></span></span>'); const t=d.querySelector('.zb-ana span'); let i=0; t.textContent=steps[0];
+    const iv=setInterval(()=>{ i++; if(i<steps.length) t.textContent=steps[i]; },420); setTimeout(()=>{ clearInterval(iv); d.remove(); fn(); },Math.min(1900,450+steps.length*420)); }
+  const readSteps=rs=>{ const S=rs.reduce((a,r)=>a+arr(r.p.sources).length+((DB.twins[r.id]||{}).specs||[]).length,0), P=rs.reduce((a,r)=>a+projOf(r).length,0);
+    return [`Reading ${rs.length>1?rs.length+' records':'the record of '+rs[0].name}`,`Checking ${S} sourced entries${P?' and '+P+' ZAG projects':''}`,'Writing the answer from what the sources say']; };
+  function role(r,quiet){ ctx.rec=r; const p=r.p, P=projOf(r);
+    const body=[p.zag_role?`<p>${esc(tidy(p.zag_role).replace(/\.$/,''))}.</p>`:'',p.description&&tidy(p.description).replace(/\.$/,'')!==tidy(p.zag_role).replace(/\.$/,'')?`<p>${esc(tidy(p.description))}</p>`:'',
+      r.year?`<p><b>Years of ZAG work:</b> ${esc(yrs(r.year))}</p>`:'',arr(p.people).length?`<p><b>Named in the sources:</b> ${esc(arr(p.people).join(', '))}</p>`:'',arr(p.partners).length?`<p><b>Partners:</b> ${esc(arr(p.partners).join(', '))}</p>`:'',projLines(r,3)].join('');
+    say(`<div class="zb-card"><b>${headOf(r)}</b>${body||'<p>The sources do not describe the work here in more detail.</p>'}${srcList(r,3)}</div>`);
+    if(!quiet) offer([['The full story',()=>story(r)],['Key figures',()=>figures(r)],P.length>3?['All linked projects',()=>projects(r)]:null,['Open its page',recUrl(r),'link'],['Something is wrong',()=>startUpdate(r)]]); }
+  function story(r){ ctx.rec=r; const p=r.p, t=DB.twins[r.id]||{}, F=arr(p.facts).filter(f=>Array.isArray(f)&&f[1]).slice(0,5), n=arr(DB.news&&DB.news[r.id]);
+    say(`<div class="zb-card"><b>${esc(r.name)}</b><span>${esc(cap(r.type))}${r.place?', '+esc(r.place):''}</span>
+      ${p.hist?`<p>${esc(tidy(p.hist))}</p>`:t.summary?`<p>${esc(tidy(t.summary))}</p>`:''}
+      ${p.zag_role?`<p><b>${ownName(r)?'What it does':'What ZAG did'}:</b> ${esc(tidy(p.zag_role))}${r.year?' ('+esc(yrs(r.year))+')':''}.</p>`:''}
+      ${F.length?`<ul class="zb-spec">${F.map(f=>`<li><span>${esc(tidy(f[0]))}</span><b>${esc(tidy(f[1]))}</b></li>`).join('')}</ul>`:''}
+      ${projLines(r,3)}
+      ${n.length?`<p><b>In the news:</b> ${esc(tidy(n[0].title))} (${esc(n[0].source||'')}, ${esc(String(n[0].date||'').slice(0,10))})${n.length>1?`, and ${n.length-1} more on its page`:''}.</p>`:''}
+      ${srcList(r,4)}</div>`);
+    offer([['Key figures',()=>figures(r)],['Show on the map',()=>showOnMap(r)],['Open its page',recUrl(r),'link'],['Something is wrong',()=>startUpdate(r)]]); }
+  function projects(r){ ctx.rec=r; const P=projOf(r); if(!P.length){ say(`No ZAG research project in the atlas is linked to <b>${esc(r.name)}</b>. The work recorded there is: ${esc(tidy(r.p.zag_role||'not described'))}.`); offer(recChips(r)); return; }
+    say(`<b>${esc(r.name)}</b>, ${P.length} linked ZAG project${P.length>1?'s':''}:${projLines(r,12)}`); offer(recChips(r)); }
+  function inspections(r){ ctx.rec=r; const I=arr(DB.insp&&DB.insp[r.id]);
+    if(I.length){ say(`<b>${esc(r.name)}</b>, published inspections:<ul class="zb-spec">${I.slice(-6).reverse().map(x=>`<li><span>${esc(x.date||'')}</span><b>${esc(tidy(x.kind||'inspection'))}${x.condition&&x.condition!=='none'?', '+esc(x.condition):''}</b>${x.report?`<a href="${esc(x.report)}" target="_blank" rel="noopener">report</a>`:''}</li>`).join('')}</ul>`); offer(recChips(r)); return; }
+    const kw=/inspect|pregled|monitor|test|control|kontrol/i.test(r.p.zag_role||'');
+    say(`<div class="zb-card"><b>${esc(r.name)}</b><p>No dated inspection report is published for it, so I cannot give an inspection date.</p>${r.p.zag_role?`<p>What the sources do record${kw?' about ZAG\'s checks':''}: ${esc(tidy(r.p.zag_role))}${r.year?', '+esc(yrs(r.year)):''}.</p>`:''}${srcList(r,3)}</div>`);
+    offer([['What did ZAG do?',()=>role(r)],['The full story',()=>story(r)],['I have an inspection report',()=>startUpdate(r,'source')]]); }
+  function people(r){ ctx.rec=r; const ppl=arr(r.p.people), P=projOf(r).filter(x=>x.lead&&!/not stated/i.test(x.lead));
+    if(!ppl.length&&!P.length){ say(`The sources for <b>${esc(r.name)}</b> name no people. I only give names that the sources publish.`); offer(recChips(r)); return; }
+    say(`<b>${esc(r.name)}</b>, people named in the published sources:<ul class="zb-list">${ppl.map(x=>`<li>${esc(x)}</li>`).join('')}${P.slice(0,5).map(x=>`<li>${esc(tidy(x.lead))}, ${esc(tidy(x.ac||x.t))}</li>`).join('')}</ul>`); offer(recChips(r)); }
+  function sources(r){ ctx.rec=r; const S=arr(r.p.sources).filter(x=>x&&x.url); say(S.length?`<b>${esc(r.name)}</b>, ${S.length} sources:<ul class="zb-list">${S.slice(0,10).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(tidy(x.title||x.key))}</a></li>`).join('')}</ul>`:'No source links are stored for this record.'); offer(recChips(r)); }
+  function compare(rs,a){ const rows=rs.map(r=>{ const sp=((DB.twins[r.id]||{}).specs||[]).find(s=>a.label.test(s.label)); return [r,sp]; });
+    say(`<b>${esc(cap(a.name))}</b> compared:<ul class="zb-spec">${rows.map(([r,sp])=>sp?specLine(Object.assign({},sp,{label:r.name})):`<li><span>${esc(r.name)}</span><b>not published</b><em>no value in the sources</em></li>`).join('')}</ul>`);
+    offer(rs.map(r=>['Open '+r.name,recUrl(r),'link'])); }
+  function projectOf(free){ if(!DB.projAll) return null; const acr=x=>String(x.ac||'').split(/[\s,]+/).filter(w=>w.length>=4&&/[A-Z].*[A-Z0-9]|\d/.test(w)).map(norm);
+    for(const q of free){ if(q.length<4) continue; const hit=DB.projAll.find(x=>acr(x).some(w=>w===q||(q.length>=6&&lev(q,w)<=1))); if(hit) return hit; } return null; }
+  function projectCard(x){ const S=(x.sites||[]).filter(id=>id!=='zag'&&DB.byId[id]).map(id=>DB.byId[id]);
+    say(`<div class="zb-card"><b>${esc(tidy(x.ac||x.t))}</b><span>ZAG project${x.y?', '+esc(yrs(x.y)):''}</span>${x.t&&x.t!==x.ac?`<p>${esc(tidy(x.t))}</p>`:''}${x.d?`<p>${esc(tidy(x.d))}</p>`:''}<ul class="zb-spec">${[['ZAG role',x.role],['Led by',x.lead],['Funding',x.fund]].filter(([,v])=>v&&!/not stated/i.test(v)).map(([k,v])=>`<li><span>${k}</span><b>${esc(tidy(v))}</b></li>`).join('')}</ul>${x.ru?`<p class="zb-src">Source: <a href="${esc(x.ru)}" target="_blank" rel="noopener">ZAG project page</a></p>`:''}</div>`);
+    offer(S.slice(0,4).map(r=>[r.name,()=>story(r)]).concat([['Find a structure',()=>{ say('Type its name or place.'); offer(typeChips()); }]])); }
+  /* which records does the text name? one record per distinct word, ignoring words many records share */
+  function mentioned(free){ const out=[]; for(const q of free){ if(q.length<4||(DB.common&&DB.common.has(q))||placeRecords([q]).length>=3) continue; let best=[],bs=0;
+      for(const r of DB.recs){ let sc=0; for(const w of r.words){ if(DB.common&&DB.common.has(w)) continue; sc=Math.max(sc,wordHit(q,w)); } if(sc>bs){ bs=sc; best=[r]; } else if(sc&&sc===bs) best.push(r); }
+      if(bs>=1.5&&best.length<=2) best.forEach(r=>{ if(!out.includes(r)) out.push(r); }); }
+    return out; }
   function attrAnswer(r,a){ ctx.rec=r; const sp=((DB.twins[r.id]||{}).specs||[]).filter(s=>a.label.test(s.label));
     if(!sp.length){ say(`No ${esc(a.name)} is published in the sources for <b>${esc(r.name)}</b>, so I will not guess one.`); offer([['Key figures',()=>figures(r)],['I have a source for it',()=>startUpdate(r,'value',a.name)],['Open its page',recUrl(r),'link']]); return; }
     say(`<b>${esc(r.name)}</b>, ${esc(a.name)}:<ul class="zb-spec">${sp.slice(0,4).map(specLine).join('')}</ul>`); offer(recChips(r)); }
@@ -225,22 +284,43 @@
     const wantModel=/\b(3d|model\w*)\b/.test(n);
     const attr=ATTRS.find(a=>tokens.some(w=>a.re.test(w)));
     const type=TYPES.find(t=>tokens.some(w=>t.re.test(w)));
-    const free=tokens.filter(w=>!(attr&&attr.re.test(w))&&!(type&&type.re.test(w))&&!/^(wrong|incorrect|error|fix|update|change|model|3d|how|many|much|koliko|zag|role|vloga|news|novice|figures|values|podatki)$/.test(w));
+    const free=tokens.filter(w=>!(attr&&attr.re.test(w))&&!(type&&type.re.test(w))&&!/^(wrong|incorrect|error|fix|update|change|model|3d|how|many|much|koliko|zag|role|vloga|news|novice|figures|values|podatki|inspect\w*|pregled\w*|story|history|tell|we|our|us|did|done|doing|work\w*|who|people|team|sources?|references?|projects?|compare|versus|vs|give|know|explain|describe|background|happened|was|been|also|both|all|any|some|more|info\w*|details?|ever|last|recent\w*|kaj|smo|naredili|delali)$/.test(w));
     const hits=findRecords(free), strong=hits.filter(h=>h.s>=2), place=placeRecords(free);
+    const I={inspect:/\b(inspect\w*|pregled\w*|monitored|checked)\b/.test(n),story:/\b(story|history|histor\w*|tell me|about|background|happened|happen|zgodilo|zgodb\w*|zgodovin\w*|explain|describe|opisi)\b/.test(n),
+      role:/\b(we|our|zag)\b.*\b(did|do|does|done|work\w*|role)\b|\b(what did|role|vloga|involv\w*|contribut\w*|naredil\w*|delal\w*)\b/.test(n),
+      who:/\b(who|kdo|people|team|researchers?|led|lead)\b/.test(n),src:/\b(sources?|references?|viri|evidence|proof)\b/.test(n),proj:/\b(projects?|projekt\w*)\b/.test(n),cmp:/\b(compare|vs|versus|longer|taller|higher|bigger|primerjaj)\b/.test(n)};
+    const prj=strong.length?null:projectOf(free); if(prj&&!wantFix&&!wantModel) return analyse(['Looking up '+tidy(prj.ac||prj.t),'Reading the ZAG project page entry','Writing the answer'],()=>projectCard(prj));
+    const many=mentioned(free);
+    if(many.length>=2&&!type&&!wantFix&&!wantModel){ const rs=many.slice(0,4);
+      if(attr) return analyse(readSteps(rs),()=>compare(rs,attr));
+      return analyse(readSteps(rs),()=>{ say(`You asked about <b>${rs.length}</b> records, so here is each one in turn.`); if(I.inspect&&I.role&&!rs.some(x=>arr(DB.insp&&DB.insp[x.id]).length)) say('No dated inspection reports are published for these, so I cannot give inspection dates. Here is the work the sources record.'); rs.forEach(x=>I.inspect&&!I.role?inspections(x):I.story?story(x):role(x,true));
+        offer(rs.map(x=>['More on '+x.name,()=>story(x)]).concat([['Key figures of each',()=>rs.forEach(figures)]])); }); }
+    const answer=(x,f)=>analyse(readSteps([x]),f);
     let r=strong.length&&(strong.length===1||strong[0].s>=strong[1].s*1.4)?strong[0].r:null;
     if(!r&&!type&&!free.length&&ctx.rec&&(attr||wantFix||wantModel||/\b(zag|role|news)\b/.test(n))) r=ctx.rec;
     if(!r&&!type&&!strong.length&&PAGE_ID&&DB.byId[PAGE_ID]&&(attr||wantFix||wantModel)) r=DB.byId[PAGE_ID];
     if(/\bhow many|koliko\b/.test(n)&&type&&!r){ const c=DB.recs.filter(x=>type.match(x.type)).length; say(`The atlas has <b>${c}</b> ${esc(type.name)}.`); offer([['List them',()=>listType(type)],...menu().slice(0,2)]); return; }
     if(wantFix&&!wantModel) return startUpdate(r,attr?'value':whatOf(n),attr?attr.name:null);
     if(wantModel) return wantFix?startUpdate(r,'model'):startModel(r);
+    if(!r&&many.length===1&&(I.inspect||I.story||I.role||I.who||I.src||I.proj||attr)) r=many[0];
+    if(!r&&ctx.rec&&!type&&!free.length&&(I.inspect||I.story||I.role||I.who||I.src||I.proj)) r=ctx.rec;
+    if(r&&I.inspect) return answer(r,()=>{ inspections(r); if(I.role) role(r); });
     if(r&&attr) return attrAnswer(r,attr);
-    if(r&&/\b(zag|role|vloga|did)\b/.test(n)) return role(r);
+    if(r&&I.who) return answer(r,()=>people(r));
+    if(r&&I.src) return answer(r,()=>sources(r));
+    if(r&&I.proj) return answer(r,()=>projects(r));
+    if(r&&I.story) return answer(r,()=>story(r));
+    if(r&&(I.role||/\b(zag|role|vloga|did)\b/.test(n))) return answer(r,()=>role(r));
     if(r&&/\bnews|novice\b/.test(n)){ say('Recent news for <b>'+esc(r.name)+'</b> is on its page under Sources.'); offer([['Open its page',recUrl(r)+'#news','link'],...recChips(r).slice(1)]); return; }
     if(r) return card(r);
     if(type) return listType(type,place.length?place:null);
     if(place.length){ say(`Recorded in that place:`); offer(place.slice(0,12).map(x=>[x.name,()=>card(x)])); return; }
     if(strong.length||hits.length){ const h=(strong.length?strong:hits).slice(0,6); say('Did you mean one of these?'); offer(h.map(x=>[x.r.name,()=>card(x.r)]).concat([['None of them',()=>{ say('Try another word, or choose a type.'); offer(typeChips()); }]])); return; }
     if(attr&&!r){ say(`Which structure do you mean for the ${esc(attr.name)}?`); ctx.flow={pick:x=>attrAnswer(x,attr)}; offer(ctx.rec?[[ctx.rec.name,()=>{ ctx.flow=null; attrAnswer(ctx.rec,attr); }]]:typeChips().map(c=>[c[0],()=>listPick(c[1],x=>attrAnswer(x,attr))])); return; }
+    if(I.inspect||I.story||I.role||I.who||I.proj){ const what=I.inspect?'inspections':I.story?'the story':I.who?'the people':I.proj?'the projects':'ZAG\'s work';
+      say(`Which structure do you mean for ${what}? Type its name, or choose a type.`); const go=x=>I.inspect?inspections(x):I.story?story(x):I.who?people(x):I.proj?projects(x):role(x);
+      ctx.flow={pick:go}; offer((ctx.rec?[[ctx.rec.name,()=>{ ctx.flow=null; go(ctx.rec); }]]:[]).concat(typeChips().map(c=>[c[0],()=>listPick(c[1],go)]))); return; }
+    if(/\b(weather|vreme|joke|politic\w*|bitcoin|stock|recipe|football)\b/.test(n)){ say('I only answer about ZAG and the structures in this atlas, from published sources. For that, please use another service.'); home(); return; }
     say('I did not understand that. I answer only from the atlas data, so here is what I can do:'); home(); }
 
   /* ---------- open and close ---------- */
@@ -251,8 +331,21 @@
         offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); }
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
     if(on) setTimeout(()=>input.focus(),50); }
+  /* greeting next to the launcher: types out what ZAGBot can do, stays 10 seconds, can be closed */
+  (function teaser(){ let off=false; try{ off=sessionStorage.getItem('zb_teaser_off')==='1'; }catch(_){} if(off) return;
+    const T=['Hi, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also take a correction to the atlas team.'];
+    const el=document.createElement('div'); el.className='zb-tease'; el.setAttribute('role','status');
+    el.innerHTML='<button type="button" class="zb-tx" aria-label="Close the greeting">×</button><p class="zb-tt"></p><span class="zb-tbar"><i></i></span>'; root.appendChild(el);
+    const tt=el.querySelector('.zb-tt'); let timer=null, done=false;
+    const bye=()=>{ if(done) return; done=true; clearTimeout(timer); el.classList.remove('in'); setTimeout(()=>el.remove(),400); };
+    el.querySelector('.zb-tx').onclick=e=>{ e.stopPropagation(); try{ sessionStorage.setItem('zb_teaser_off','1'); }catch(_){} bye(); };
+    el.onclick=()=>{ bye(); toggle(true); };
+    setTimeout(()=>{ if(!panel.hidden||done) return; el.classList.add('in'); const full=T.join(' '), still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches; let i=0;
+      if(still) tt.textContent=full; else { const step=()=>{ if(done) return; i=Math.min(full.length,i+2); tt.innerHTML=esc(full.slice(0,i)).replace(/^Hi, I am ZAGBot\./,'<b>Hi, I am ZAGBot.</b>')+(i<full.length?'<i class="zb-caret"></i>':''); if(i<full.length) setTimeout(step,22); }; step(); }
+      timer=setTimeout(bye,10000); },1600);
+    launch.addEventListener('click',bye); })();
   launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });
-  $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(ctx.flow&&ctx.flow.kind==='code'){ handle(t); return; } user(t); think(); setTimeout(()=>{ (DB.recs.length?Promise.resolve():load()).then(()=>handle(t,null,true)); },450); };
+  $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(ctx.flow&&ctx.flow.kind==='code'){ handle(t); return; } user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },350); };
   window.ZAGBot={open:()=>toggle(true),ask:t=>{ toggle(true).then(()=>handle(t)); }};
 })();

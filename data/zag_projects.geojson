@@ -33,19 +33,15 @@
     "zag_involvement_type": "monitoring",
     "zag_role": "Bridge weigh-in-motion and structural health monitoring",
     "description": "Elastomeric bearings at the piers and guided unidirectional pot bearings at the abutments. ZAG, Cestel and Dewesoft Monitoring instrumented the bridge for combined bridge weigh-in-motion and structural health monitoring. A controlled load test in May 2024 ran two pre-weighed calibration trucks over 72 passages across two nights, recording strain, acceleration, temperature and displacement at 500 Hz. During normal operation in March 2023 the system captured a 13-axle vehicle weighing over 200 tonnes.",
-    "hist": "The bridge carries road number 104 over the Sava north of Ljubljana and is one of the most used routes between the city and its northern suburbs. It is a seven span continuous post tensioned concrete structure of 204 m built in 1982, in two parallel independent decks carrying opposite directions of traffic. The instrumentation combines a Cestel SiWIM MkIV bridge weigh in motion system with fourteen triaxial MEMS accelerometers, two strain transducers at main girder mid spans, temperature sensors, displacement transducers and a laser deflection meter, sampling at 500 Hz during controlled testing. The site runs on a 600 Ah battery bank with 600 W of solar.",
+    "hist": "The bridge carries over the Sava north of Ljubljana and is one of the most used routes between the city and its northern suburbs. It is a seven span continuous post tensioned concrete structure of 204 m built in 1982, in two parallel independent decks carrying opposite directions of traffic. The instrumentation combines a Cestel SiWIM bridge weigh in motion system with fourteen triaxial MEMS accelerometers, two strain transducers at main girder mid spans, temperature sensors, displacement transducers and a laser deflection meter, sampling at 500 Hz during controlled testing. For autonomous operation the system can run on two 300 Ah LiFe batteries and four 150 W solar panels.",
     "facts": [
      [
       "Structure",
       "seven span continuous post tensioned concrete, 204 m, built 1982"
      ],
      [
-      "Road carried",
-      "road number 104 over the Sava"
-     ],
-     [
       "B-WIM system",
-      "Cestel SiWIM MkIV"
+      "Cestel SiWIM"
      ],
      [
       "Accelerometers",
@@ -57,11 +53,11 @@
      ],
      [
       "Power",
-      "600 Ah battery bank, 600 W solar"
+      "2 x 300 Ah LiFe batteries and 4 x 150 W solar panels (autonomous option)"
      ],
      [
       "Heaviest recorded vehicle",
-      "a 13 axle truck over 200 tonnes, about 3.6 mm deflection"
+      "a 13 axle vehicle over 200 tonnes (March 2023)"
      ]
     ],
     "people": [
@@ -449,7 +445,7 @@
     "name": "Vransko Bridge",
     "name_sl": "Most pri Vranskem",
     "name_en": "Vransko Bridge",
-    "object_type": "road structure",
+    "object_type": "bridge",
     "year": "2006-2009",
     "built": null,
     "year_start": 2006,
@@ -622,9 +618,9 @@
    "properties": {
     "id": "nm_brv",
     "category": "zag_project",
-    "name": "Novo Mesto Stress Ribbon Footbridge",
+    "name": "Novo mesto Stress Ribbon Footbridge",
     "name_sl": "Brv čez Krko, Novo mesto",
-    "name_en": "Novo Mesto Stress Ribbon Footbridge",
+    "name_en": "Novo mesto Stress Ribbon Footbridge",
     "object_type": "footbridge",
     "year": "2023",
     "built": 2023,
@@ -894,7 +890,7 @@
     "name_en": "Verd Viaduct",
     "object_type": "bridge",
     "year": null,
-    "built": null,
+    "built": 1972,
     "year_start": null,
     "year_end": null,
     "municipality": "Vrhnika",
@@ -931,7 +927,7 @@
      "crosses": "Ljubljanica headwaters plain",
      "carries": "A1 motorway",
      "typ": "Prestressed concrete viaduct",
-     "built": null,
+     "built": 1972,
      "spans": null,
      "length_m": null
     },
@@ -1402,7 +1398,7 @@
     "zag_involvement_type": "materials testing",
     "zag_role": "Non-shrink cements in the construction (introduced by ZRMK), technical observation of the dam",
     "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced non-shrink cements in the construction of HE Vuhred, and lists Vuhred among the Drava dams under ZAG technical observation.",
-    "hist": "HE Vuhred is a run of river plant on the Drava in the municipality of Radlje ob Dravi, the fourth in the chain from the Austrian border. Two units entered service in 1956 and a third followed in 1958, giving three Kaplan turbines of 24.1 MW each. The design flow is 550 cubic metres per second and the head is 17.41 m. The weir has four spillway fields, each 17 m wide, with a maximum discharge capacity of 5,800 cubic metres per second. The reservoir extends 13.1 km at full supply level and holds 10.3 million cubic metres, of which 2.2 million are usable for generation. During the refurbishment the supplier replaced the entire stator winding of generator 3 because the original bars, made to a different technology, overheated. The plant now runs without permanent staff on site.",
+    "hist": "HE Vuhred is a run of river plant on the Drava in the municipality of Radlje ob Dravi, the third in the chain from the Austrian border. Two units entered service in 1956 and a third followed in 1958, giving three Kaplan turbines of 24.1 MW each. The design flow is 550 cubic metres per second and the head is 17.41 m. The weir has four spillway fields, each 17 m wide, with a maximum discharge capacity of 5,800 cubic metres per second. The reservoir extends 13.1 km at full supply level and holds 10.3 million cubic metres, of which 2.2 million are usable for generation. During the refurbishment the supplier replaced the entire stator winding of generator 3 because the original bars, made to a different technology, overheated. The plant now runs without permanent staff on site.",
     "facts": [
      [
       "Installed capacity",
@@ -2345,7 +2341,7 @@
      {
       "key": "zag_fireres",
       "title": "Preskušanja požarne odpornosti",
-      "url": "https://www.zag.si/organizacijske-enote/oddelek-za-gradbeno-fiziko/pozarni-laboratorij-in-pozarno-inzenirstvo/preskusanja-pozarne-odpornosti/",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
       "type": "web"
      },
      {
@@ -2684,7 +2680,7 @@
     "name_sl": "InnoRenew CoE, Izola",
     "name_en": "InnoRenew CoE",
     "object_type": "institution",
-    "year": "2017 to 2022",
+    "year": "2017-2022",
     "built": 2017,
     "year_start": 2017,
     "year_end": 2022,
@@ -2694,7 +2690,7 @@
     "longitude": 13.656828,
     "zag_involvement_type": null,
     "zag_role": "Partner institute, ZAG is a founding partner",
-    "description": "Set up under the Horizon 2020 teaming action with ZAG among the partners. It works on renewable building materials and healthy indoor environments. Friderik Knez led ZAG's side of the project from 2017 to 2022.",
+    "description": "Set up under the Horizon 2020 teaming action with ZAG among the partners. It works on renewable building materials and healthy indoor environments. Friderik Knez led ZAG's side of the project from 2017-2022.",
     "hist": "InnoRenew CoE is at Livade 6a in Izola and works on renewable materials and sustainable building. Its two distinguishing fields are wood modification and restorative environmental and ergonomic design. A consortium of ten partners led by the University of Primorska submitted the proposal to Horizon 2020 in 2016, and ZAG was one of the core partners. The Horizon 2020 Teaming operation was valued at 14,996,025.00 euros including tax, with national co financing of about 39 million euros, giving a total of about 54 million euros. Since a court decision of 29 July 2025, InnoRenew CoE has been an independent department of the UP Andrej Marušič Institute at the University of Primorska. Over eight and a half years it had run 96 publicly funded projects worth 15.78 million euros together with industry projects worth 2.81 million euros.",
     "facts": [
      [
@@ -2849,13 +2845,13 @@
     "image": null,
     "image_credit": null,
     "source_title": "UL FGG",
-    "source_url": "https://www.fgg.uni-lj.si/en/",
+    "source_url": "https://www.en.fgg.uni-lj.si/",
     "source_type": "web",
     "sources": [
      {
       "key": "ulfgg_s0",
       "title": "UL FGG",
-      "url": "https://www.fgg.uni-lj.si/en/",
+      "url": "https://www.en.fgg.uni-lj.si/",
       "type": "web"
      },
      {
@@ -3211,7 +3207,7 @@
     "id": "karavanke_r",
     "category": "zag_project",
     "name": "Karavanke Railway Tunnel",
-    "name_sl": "Predor Karavanke, zeleznica",
+    "name_sl": "Predor Karavanke, železnica",
     "name_en": "Karavanke Railway Tunnel",
     "object_type": "tunnel",
     "year": "1998-2014",
@@ -3712,7 +3708,7 @@
     "partners": [],
     "structure": {
      "crosses": null,
-     "carries": "A2 north western Ljubljana ring, with the underground Celovska interchange",
+     "carries": "A2 north western Ljubljana ring, with the underground Celovška interchange",
      "typ": null,
      "built": null,
      "spans": null,
@@ -6234,7 +6230,7 @@
     "name_en": "HE Vrhovo",
     "object_type": "dam / hydropower",
     "year": "2012",
-    "built": null,
+    "built": 1993,
     "year_start": 2012,
     "year_end": 2012,
     "municipality": "Radeče",
@@ -6261,7 +6257,7 @@
      "crosses": "Sava",
      "carries": null,
      "typ": null,
-     "built": null,
+     "built": 1993,
      "spans": null,
      "length_m": null
     },
@@ -6319,7 +6315,7 @@
     "name_en": "Melje Dam and Small HPP",
     "object_type": "dam / hydropower",
     "year": "2006-2009",
-    "built": null,
+    "built": 1965,
     "year_start": 2006,
     "year_end": 2009,
     "municipality": "Maribor",
@@ -6346,7 +6342,7 @@
      "crosses": "Drava",
      "carries": null,
      "typ": null,
-     "built": null,
+     "built": 1965,
      "spans": null,
      "length_m": null
     },
@@ -6764,7 +6760,7 @@
     "zag_involvement_type": "research",
     "zag_role": "Geological-geomechanical investigations for the Slano blato landslide",
     "description": "Geological-geomechanical investigations for the Slano blato landslide.",
-    "hist": "A viscous earthflow above Lokavec below Caven, more than 1,290 m long and up to 200 m wide, repeatedly reactivated.",
+    "hist": "A viscous earthflow above Lokavec below Čaven, more than 1,290 m long and up to 200 m wide, repeatedly reactivated.",
     "facts": [
      [
       "Client",
@@ -10183,8 +10179,8 @@
     "latitude": 46.431593,
     "longitude": 13.604744,
     "zag_involvement_type": "research",
-    "zag_role": "Investigations of the shear properties of the Stože pod Mangrtom landslide mass",
-    "description": "Investigations of the shear properties of the Stože pod Mangrtom landslide mass.",
+    "zag_role": "Investigations of the shear properties of the Stože pod Mangartom landslide mass",
+    "description": "Investigations of the shear properties of the Stože pod Mangartom landslide mass.",
     "hist": "About one million cubic metres failed on 17 November 2000 with the crown at 1,525 m, becoming the debris flow that reached Log pod Mangartom.",
     "facts": [
      [
@@ -16293,7 +16289,7 @@
     "name_en": "Ljubljana Castle Funicular",
     "object_type": "cableway",
     "year": "2006",
-    "built": null,
+    "built": 2006,
     "year_start": 2006,
     "year_end": 2006,
     "municipality": "Ljubljana",
@@ -16316,7 +16312,7 @@
      "crosses": null,
      "carries": null,
      "typ": null,
-     "built": null,
+     "built": 2006,
      "spans": null,
      "length_m": null
     },
@@ -16416,7 +16412,7 @@
     "facts": [
      [
       "Client",
-      "RTC žičnice Kranjska gora, d.d."
+      "RTC Žičnice Kranjska Gora, d.d."
      ],
      [
       "Years",
@@ -17631,7 +17627,7 @@
     "name": "RTP Gorica Substation",
     "name_sl": "RTP 110/20/10 kV Gorica",
     "name_en": "RTP Gorica Substation",
-    "object_type": "tower / mast",
+    "object_type": "other",
     "year": "2006, 2012",
     "built": null,
     "year_start": 2006,
@@ -17862,7 +17858,7 @@
     "position_sources": [
      "https://ipi.eprostor.gov.si/jgp/data"
     ],
-    "address": "Ulica heroja Stariha 17, Črnomelj",
+    "address": "Ulica heroja Starihe 17, Črnomelj",
     "zag_involvement_types": [
      "inspection"
     ]
@@ -17881,7 +17877,7 @@
     "id": "sz_masts",
     "category": "zag_project",
     "name": "Railway Electrification Masts",
-    "name_sl": "Drogovi elektrifikacije SZ",
+    "name_sl": "Drogovi elektrifikacije SŽ",
     "name_en": "Railway Electrification Masts",
     "object_type": "tower / mast",
     "year": "2014",
@@ -18054,8 +18050,8 @@
     "latitude": 45.66936,
     "longitude": 14.84096,
     "zag_involvement_type": "structural assessment",
-    "zag_role": "Report about the condition of the part of the building of the Stara cerkev Elementary School in Kočevje which was exposed to fire",
-    "description": "Report about the condition of the part of the building of the Stara cerkev Elementary School in Kočevje which was exposed to fire.",
+    "zag_role": "Report about the condition of the part of the building of the Stara Cerkev Elementary School in Kočevje which was exposed to fire",
+    "description": "Report about the condition of the part of the building of the Stara Cerkev Elementary School in Kočevje which was exposed to fire.",
     "hist": null,
     "facts": [
      [
@@ -18486,7 +18482,7 @@
     "id": "soca_quake",
     "category": "zag_project",
     "name": "Upper Soča Valley Earthquake Repairs",
-    "name_sl": "Obnova po potresu v Zgornjem Posocju",
+    "name_sl": "Obnova po potresu v Zgornjem Posočju",
     "name_en": "Upper Soča Valley Earthquake Repairs",
     "object_type": "study area (earthquake)",
     "year": "2004-",
@@ -18508,7 +18504,7 @@
      ],
      [
       "Years",
-      "2004 to "
+      "from 2004, ongoing according to the ZAG page"
      ],
      [
       "Position",
@@ -19219,7 +19215,7 @@
     "zag_involvement_type": "research",
     "zag_role": "Geological-geotechnical investigations for the design",
     "description": "Geological-geotechnical investigations for the design.",
-    "hist": "The first tube opened in July 1976 and the second tube in October 1996. Structurae gives a length of 788 m for the 1996 tube.",
+    "hist": "The first tube opened in July 1976 and the second tube in October 1996. The URSZR Celje plan gives 786 m for each tube.",
     "facts": [
      [
       "Client",

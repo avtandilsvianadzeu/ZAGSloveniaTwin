@@ -54,4 +54,8 @@
     const t0=performance.now(), d=900, fmt=n=>txt.includes(',')?n.toLocaleString('en-GB'):String(n); const step=t=>{ const k=Math.min(1,(t-t0)/d), e=1-Math.pow(1-k,3); el.textContent=fmt(Math.round(end*e)); if(k<1) requestAnimationFrame(step); }; requestAnimationFrame(step); };
   const scan=()=>document.querySelectorAll('.dim .v, .stats b, .kf .v').forEach(count);
   new MutationObserver(scan).observe(document.body,{childList:true,subtree:true}); scan();
+  /* sideways strips on phones fade at the edge while more is hidden, and stop fading at the end */
+  const edge=el=>{ const end=el.scrollLeft+el.clientWidth>=el.scrollWidth-4; el.classList.toggle('end',end); };
+  const strips=()=>document.querySelectorAll('.sitenav,.pills,.mapfilter,#nav').forEach(el=>{ if(el.dataset.edge) return edge(el); el.dataset.edge='1'; el.addEventListener('scroll',()=>edge(el),{passive:true}); edge(el); });
+  window.addEventListener('resize',strips); setTimeout(strips,300); setTimeout(strips,2500);
 })();

@@ -168,12 +168,19 @@
   "q": "\"predor Kastelec\" OR \"predoru Kastelec\" OR \"predora Kastelec\"",
   "must": [
    "kastelec"
+  ],
+  "not": [
+   "Pirc Musar",
+   "predsednice"
   ]
  },
  "dekani": {
   "q": "\"predor Dekani\" OR \"predoru Dekani\" OR \"predora Dekani\"",
   "must": [
    "dekan"
+  ],
+  "not": [
+   "izven predora"
   ]
  },
  "markovec": {
@@ -272,12 +279,18 @@
   "q": "\"nihalka\" \"Velika planina\" OR \"žičnica Velika planina\"",
   "must": [
    "velik"
+  ],
+  "not": [
+   "snežna odeja"
   ]
  },
  "grad_vzpenjaca": {
   "q": "\"vzpenjača na Ljubljanski grad\" OR \"vzpenjača\" Ljubljanski grad",
   "must": [
    "vzpenjac"
+  ],
+  "not": [
+   "cenik"
   ]
  },
  "kranjskagora_z": {
@@ -332,6 +345,10 @@
   "q": "\"Livar\" Črnomelj OR \"livarna Črnomelj\"",
   "must": [
    "livar"
+  ],
+  "not": [
+   "padec prodaje",
+   "poslovno leto"
   ]
  },
  "sz_masts": {
@@ -374,6 +391,10 @@
   "q": "potres Posočje",
   "must": [
    "potres"
+  ],
+  "not": [
+   "Furlanij",
+   "radiestezist"
   ]
  },
  "lj_seismic": {
@@ -421,6 +442,9 @@
   "q": "\"stolpnica TR3\" OR \"TR3\" Ljubljana",
   "must": [
    "tr3"
+  ],
+  "not": [
+   "prvi april"
   ]
  },
  "kpd": {
@@ -436,6 +460,11 @@
    "nuk",
    "univerzitetna knjiznica",
    "univerzitetne knjiznice"
+  ],
+  "not": [
+   "Maximarket",
+   "NUK 2",
+   "NUK II"
   ]
  }
 }

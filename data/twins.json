@@ -30,14 +30,6 @@
      "basis": "Computed from the geometry of the OpenStreetMap object behind the link. No sentence states this value."
     },
     {
-     "label": "Design documentation author",
-     "value": "Industrijski projektni zavod Zagreb, 1980",
-     "unit": "",
-     "source": "https://www.mdpi.com/2076-3417/15/8/4514",
-     "quote": "Technical Report About the General Project of the Tomačevo Bridge",
-     "quote_note": "Checked by reading: the quote is only a report title and names no author or year"
-    },
-    {
      "label": "Lanes",
      "value": "2 lanes per deck, deck towards Ljubljana is the instrumented one",
      "unit": "",
@@ -87,7 +79,7 @@
     },
     {
      "label": "Bearing stiffness, elastomeric type 1 (piers P1, P6)",
-     "value": "horizontal 3.18e3 kN/m, vertical 1.77e6 kN/m, rotational 3.41e4 kNm",
+     "value": "horizontal 3.18e3 kN/m, vertical 1.77e6 kN/m, rotational 3.41e4 kNm/rad",
      "unit": "",
      "source": "https://www.mdpi.com/2076-3417/15/8/4514",
      "quote": "Elastomeric bearing type 1 P1, P6 3.18 × 103",
@@ -95,7 +87,7 @@
     },
     {
      "label": "Bearing stiffness, elastomeric type 2 (piers P2, P3)",
-     "value": "horizontal 3.61e3 kN/m, vertical 2.01e6 kN/m, rotational 3.90e4 kNm",
+     "value": "horizontal 3.61e3 kN/m, vertical 2.01e6 kN/m, rotational 3.90e4 kNm/rad",
      "unit": "",
      "source": "https://www.mdpi.com/2076-3417/15/8/4514",
      "quote": "Elastomeric bearing type 2 P2, P3 3.61 × 103",
@@ -103,7 +95,7 @@
     },
     {
      "label": "Bearing stiffness, elastomeric type 3 (piers P4, P5)",
-     "value": "horizontal 4.19e3 kN/m, vertical 2.33e6 kN/m, rotational 4.55e4 kNm",
+     "value": "horizontal 4.19e3 kN/m, vertical 2.33e6 kN/m, rotational 4.55e4 kNm/rad",
      "unit": "",
      "source": "https://www.mdpi.com/2076-3417/15/8/4514",
      "quote": "Elastomeric bearing type 3 P4, P5 4.19 × 103",
@@ -344,7 +336,7 @@
     },
     {
      "label": "Bearing stiffness BEAR_A to BEAR_D (horizontal, vertical, rotational)",
-     "value": "A 3.10e3, 1.08e6 kN/m, 3.09e3 kNm. B 2.43e3, 8.43e5, 2.32e3. C 3.72e3, 1.56e6, 7.32e3. D 2.92e3, 1.22e6, 5.49e3",
+     "value": "A 3.10e3, 1.08e6 kN/m, 3.09e3 kNm/rad. B 2.43e3, 8.43e5, 2.32e3. C 3.72e3, 1.56e6, 7.32e3. D 2.92e3, 1.22e6, 5.49e3",
      "unit": "",
      "source": "https://www.mdpi.com/1424-8220/24/9/2788",
      "quote": "[3.10 × 103 kN/m, 1.08 × 106 kN/m, 3.09 × 103 kNm] (BEAR_A)",
@@ -939,7 +931,7 @@
    }
   },
   "nm_brv": {
-   "summary": "Novo Mesto Stress Ribbon Footbridge (Brv čez Krko, Novo mesto), Novo mesto",
+   "summary": "Novo mesto Stress Ribbon Footbridge (Brv čez Krko, Novo mesto), Novo mesto",
    "specs": [
     {
      "label": "Mapped geometry",
@@ -1124,7 +1116,7 @@
      "quote_note": "Copied from the text of the file itself, read on 12 November 2026."
     },
     {
-     "label": "Natural frequencies, measured range",
+     "label": "First two natural frequencies, measured",
      "value": "0.6592 to 0.9766",
      "unit": "Hz",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-05EN3VD8/23141649-7e7b-4c86-ada8-05e62eae89f0/PDF",
@@ -1747,7 +1739,7 @@
     },
     {
      "label": "Spillway",
-     "value": "gate types shown: flap (tablet), segment and floating tablet gates; number of fields not stated",
+     "value": "gate types shown: flap (tablet), segment and floating tablet gates",
      "unit": "",
      "source": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
      "quote": "tablasta zapornica … segmentna zapornica … plavajoča tablasta zapornica",
@@ -1787,7 +1779,7 @@
      "label": "Reservoir volume, effective (SENG web page)",
      "value": "1000000",
      "unit": "m³",
-     "source": "https://www.seng.si/en/hydropower-plants/large-hydropower-plants/",
+     "source": "https://www.seng.si/hidroelektrarne/",
      "quote": "Effective storage capacity (m3): 1000000"
     },
     {
@@ -1820,7 +1812,7 @@
      "values": 4
     },
     {
-     "url": "https://www.seng.si/en/hydropower-plants/large-hydropower-plants/",
+     "url": "https://www.seng.si/hidroelektrarne/",
      "status": "the page could not be read online",
      "values": 1
     }
@@ -2160,7 +2152,7 @@
      "quote_note": "Copied from the source on 13 November 2026."
     },
     {
-     "label": "Canal flow up to",
+     "label": "Canal capacity (contractor news)",
      "value": "550",
      "unit": "m³/s",
      "source": "https://www.waterpowermagazine.com/?p=13873",
@@ -2187,12 +2179,12 @@
      "label": "Refurbishment scope",
      "value": "electromechanical upgrade, dam refurbishment, mini HPP on ecological flow, downstream landscaping",
      "unit": "",
-     "source": "https://hydropower-dams.com/articles/refurbishment-of-slovenias-zlatoli˘cje-plant",
+     "source": "https://hydropower-dams.com/articles/refurbishment-of-slovenias-zlatolicje-plant",
      "quote": "to install a mini hydro plant to make use of the ecological flow",
      "quote_note": "Copied from the source on 13 November 2026."
     },
     {
-     "label": "Gross head",
+     "label": "Gross head (power-technology, not confirmed by the operator)",
      "value": "33",
      "unit": "m",
      "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-VYGF4Z7A/15627dc1-a29c-4c79-a6c5-f0ced5657453/PDF",
@@ -2206,7 +2198,7 @@
      "quote": "a 4.5 million m³ reservoir"
     },
     {
-     "label": "Turbine unit nameplate capacity",
+     "label": "Turbine unit capacity (power-technology, conflicts with the operator total of 126 MW)",
      "value": "79",
      "unit": "MW",
      "source": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
@@ -2819,7 +2811,7 @@
     },
     {
      "label": "Turbines",
-     "value": "3 Kaplan (Litostroj Power), 24.55 MW nameplate each; Koncar generators 3 x 30 MVA",
+     "value": "3 Kaplan (Litostroj Power), turbine nameplate 24.55 MW each (power-technology), Koncar generators 3 x 30 MVA",
      "unit": "",
      "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
      "quote": "The company provided 3 units of kaplan turbines, each with 24.55MW nameplate capacity. … Koncar Generators and Motors supplied 3 electric generators for the project.",
@@ -3296,7 +3288,7 @@
     },
     {
      "label": "Rockfall 2023",
-     "value": "August 2023, Bay of St. Cross",
+     "value": "August 2023, Sveti Križ bay",
      "unit": "",
      "source": "https://www.uni-lj.si/en/news/2024-12-09-sunbathing-under-cliffs-is-dangerous",
      "quote": "The most recent, in August 2023, occurred in the Bay of St. Cross near Strunjan, where a rockfall with rocks of one to six tons cut through the walking path and fell into the sea at the base of the cliff.",
@@ -3495,28 +3487,28 @@
      "label": "Buildings with ZAG as manager in the cadastre (12 of them drawn)",
      "value": "14",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Footprint of the 12 drawn buildings (cadastre outlines)",
      "value": "8432",
      "unit": "m²",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Parcels with ZAG as manager in the cadastre (17 of them drawn)",
      "value": "23",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:PARCELE_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:PARCELE_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Office building 892, highest point above the terrain at the entrance (cadastre)",
      "value": "23.5",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 892, STEVILO_ETAZ 8, LETO_IZGRADNJE 1984, VISINA_H2 323.8, VISINA_H3 300.3",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -3524,7 +3516,7 @@
      "label": "Office building 892, storeys, below and above ground (cadastre)",
      "value": "8",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 892, STEVILO_ETAZ 8, LETO_IZGRADNJE 1984, VISINA_H2 323.8, VISINA_H3 300.3",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -3532,7 +3524,7 @@
      "label": "Office building 892, year built (cadastre)",
      "value": "1984",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 892, STEVILO_ETAZ 8, LETO_IZGRADNJE 1984, VISINA_H2 323.8, VISINA_H3 300.3",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -3578,7 +3570,7 @@
      "label": "Height of hall building 962 (cadastre)",
      "value": "14.5",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 962, STEVILO_ETAZ 6, LETO_IZGRADNJE 1953, VISINA_H2 314.8, VISINA_H3 300.3",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -3586,7 +3578,7 @@
      "label": "Storeys of hall building 962, below and above ground (cadastre)",
      "value": "6",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 962, STEVILO_ETAZ 6, LETO_IZGRADNJE 1953, VISINA_H2 314.8, VISINA_H3 300.3",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -3594,7 +3586,7 @@
      "label": "Year built, hall building 962 (cadastre)",
      "value": "1953",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 962, STEVILO_ETAZ 6, LETO_IZGRADNJE 1953, VISINA_H2 314.8, VISINA_H3 300.3",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -3602,7 +3594,7 @@
      "label": "Cadastre community",
      "value": "2636 BEŽIGRAD",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -3745,21 +3737,21 @@
      "label": "Buildings managed by ZAG on the site (cadastre)",
      "value": "1",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Footprint of these buildings (cadastre)",
      "value": "1709",
      "unit": "m²",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Site parcels managed by ZAG (cadastre)",
      "value": "3",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:PARCELE_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:PARCELE_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -3781,7 +3773,7 @@
      "label": "Highest point above the terrain at the entrance (cadastre)",
      "value": "18.0",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 2382, STEVILO_ETAZ 5, LETO_IZGRADNJE 2021, VISINA_H2 495.2, VISINA_H3 477.2",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -3789,7 +3781,7 @@
      "label": "Storeys, below and above ground (cadastre)",
      "value": "5",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 2382, STEVILO_ETAZ 5, LETO_IZGRADNJE 2021, VISINA_H2 495.2, VISINA_H3 477.2",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -3797,7 +3789,7 @@
      "label": "Year built (cadastre)",
      "value": "2021",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 2382, STEVILO_ETAZ 5, LETO_IZGRADNJE 2021, VISINA_H2 495.2, VISINA_H3 477.2",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -3805,7 +3797,7 @@
      "label": "Cadastre building",
      "value": "2017 DOLENJI LOGATEC, building 2382",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -3848,21 +3840,21 @@
      "label": "Buildings managed by ZAG on the site (cadastre)",
      "value": "14",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Footprint of these buildings (cadastre)",
      "value": "4500",
      "unit": "m²",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Site parcels managed by ZAG (cadastre)",
      "value": "14",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:PARCELE_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:PARCELE_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -3988,21 +3980,21 @@
      "label": "Buildings managed by ZAG on the site (cadastre)",
      "value": "1",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Footprint of these buildings (cadastre)",
      "value": "252",
      "unit": "m²",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Site parcels managed by ZAG (cadastre)",
      "value": "2",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:PARCELE_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:PARCELE_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -4048,7 +4040,7 @@
      "label": "Highest point above the terrain at the entrance (cadastre)",
      "value": "8.4",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 1809, STEVILO_ETAZ 3, LETO_IZGRADNJE 2000, VISINA_H2 266.6, VISINA_H3 258.2",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4056,7 +4048,7 @@
      "label": "Storeys, below and above ground (cadastre)",
      "value": "3",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 1809, STEVILO_ETAZ 3, LETO_IZGRADNJE 2000, VISINA_H2 266.6, VISINA_H3 258.2",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4064,7 +4056,7 @@
      "label": "Year built (cadastre)",
      "value": "2000",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 1809, STEVILO_ETAZ 3, LETO_IZGRADNJE 2000, VISINA_H2 266.6, VISINA_H3 258.2",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4072,7 +4064,7 @@
      "label": "Cadastre building",
      "value": "708 SKOKE, building 1809",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -4168,7 +4160,7 @@
      "label": "Highest point above the terrain, building 1362 (cadastre)",
      "value": "10.5",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 1362, STEVILO_ETAZ 2, LETO_IZGRADNJE 1990, VISINA_H2 314, VISINA_H3 303.5",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4176,7 +4168,7 @@
      "label": "Highest point above the terrain, building 1365 (cadastre)",
      "value": "12.2",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 1365, STEVILO_ETAZ 4, LETO_IZGRADNJE 1992, VISINA_H2 315.9, VISINA_H3 303.7",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4184,7 +4176,7 @@
      "label": "Buildings owned by Cestel in Trzin (cadastre)",
      "value": "2: buildings 1362 and 1365",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:LASTNISTVO_PRAVNIH_OSEB",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:LASTNISTVO_PRAVNIH_OSEB/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -4284,7 +4276,7 @@
      "label": "Structure",
      "value": "hybrid timber, concrete and steel; CLT in the timber part",
      "unit": "",
-     "source": "https://www3.famnit.upr.si/?p=6918",
+     "source": "https://www.famnit.upr.si/en/news/innorenew-coe-celebrates-grand-opening-of-its-new-building-in-izola/",
      "check": "The source could not be opened on 12 November 2026, so this value is not yet checked against it."
     },
     {
@@ -4321,7 +4313,7 @@
      "label": "Opened",
      "value": "15 February 2022",
      "unit": "",
-     "source": "https://www3.famnit.upr.si/?p=6918",
+     "source": "https://www.famnit.upr.si/en/news/innorenew-coe-celebrates-grand-opening-of-its-new-building-in-izola/",
      "check": "The source could not be opened on 12 November 2026, so this value is not yet checked against it."
     },
     {
@@ -4359,7 +4351,7 @@
      "label": "Highest point above the terrain at the entrance (cadastre)",
      "value": "18.1",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 5813, STEVILO_ETAZ 5, LETO_IZGRADNJE 2021, VISINA_H2 36.9, VISINA_H3 18.8",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4367,7 +4359,7 @@
      "label": "Storeys, below and above ground (cadastre)",
      "value": "5",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 5813, STEVILO_ETAZ 5, LETO_IZGRADNJE 2021, VISINA_H2 36.9, VISINA_H3 18.8",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4375,7 +4367,7 @@
      "label": "Year built (cadastre)",
      "value": "2021",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 5813, STEVILO_ETAZ 5, LETO_IZGRADNJE 2021, VISINA_H2 36.9, VISINA_H3 18.8",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4383,7 +4375,7 @@
      "label": "Cadastre building",
      "value": "2626 IZOLA, building 5813",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     }
    ],
@@ -4403,7 +4395,7 @@
      "values": 3
     },
     {
-     "url": "https://www3.famnit.upr.si/?p=6918",
+     "url": "https://www.famnit.upr.si/en/news/innorenew-coe-celebrates-grand-opening-of-its-new-building-in-izola/",
      "status": "the page could not be read online",
      "values": 2
     },
@@ -4600,7 +4592,7 @@
      "label": "Highest point above the terrain at the entrance (cadastre)",
      "value": "23.7",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 907, STEVILO_ETAZ 11, LETO_IZGRADNJE 1968, VISINA_H2 320.8, VISINA_H3 297.1",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4608,7 +4600,7 @@
      "label": "Storeys, below and above ground (cadastre)",
      "value": "11",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 907, STEVILO_ETAZ 11, LETO_IZGRADNJE 1968, VISINA_H2 320.8, VISINA_H3 297.1",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4616,7 +4608,7 @@
      "label": "Year built (cadastre)",
      "value": "1968",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 907, STEVILO_ETAZ 11, LETO_IZGRADNJE 1968, VISINA_H2 320.8, VISINA_H3 297.1",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -4624,7 +4616,7 @@
      "label": "Cadastre building",
      "value": "2679 GRADIŠČE II, building 907",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     }
    ],
@@ -4706,17 +4698,17 @@
      "quote_note": "Settled on 13 November 2026 from the source that ranks highest (ZAG, owner or official, then the latest). Shown before: 7,864 (tunnel), 8,019 enclosure between portals."
     },
     {
-     "label": "Length original tube (Lotsberg)",
+     "label": "Length, original tube (Lotsberg)",
      "value": "8019",
-     "unit": "",
+     "unit": "m",
      "source": "https://www.lotsberg.net/data/slovenia/list.html",
      "quote": "SLO-A | Karavanke | 8 019 | 01.06.1991 | KR | In Slovenija: 3450 m. Portals altitude: 620 - 655 m.",
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026. Only line breaks and spacing differ."
     },
     {
-     "label": "Length slovenian part original",
+     "label": "Length, Slovenian part, original tube",
      "value": "3450",
-     "unit": "",
+     "unit": "m",
      "source": "https://www.lotsberg.net/data/slovenia/list.html",
      "quote": "SLO-A | Karavanke | 8 019 | 01.06.1991 | KR | In Slovenija: 3450 m. Portals altitude: 620 - 655 m.",
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026. Only line breaks and spacing differ."
@@ -4738,9 +4730,9 @@
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Length new east tube austrian part",
+     "label": "Length, new east tube, Austrian part",
      "value": "4402",
-     "unit": "",
+     "unit": "m",
      "source": "https://ic-group.org/en/magazine/detail/karawanken-tunnel-new-tunnel-marks-a-milestone-in-european-north-south-transport",
      "check": "The source could not be opened on 12 November 2026, so this value is not yet checked against it."
     },
@@ -5231,13 +5223,6 @@
      "quote_note": "Settled on 13 November 2026 from the source that ranks highest (ZAG, owner or official, then the latest). Shown before: 8176 m."
     },
     {
-     "label": "Length (alternative)",
-     "value": "7976",
-     "unit": "",
-     "source": "https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.4everland.io/wiki/Karawanks_Tunnel_(railway).html",
-     "check": "The source could not be opened on 12 November 2026, so this value is not yet checked against it."
-    },
-    {
      "label": "Tubes",
      "value": "1",
      "unit": "",
@@ -5434,7 +5419,7 @@
      "unit": "",
      "source": "https://www.gov.si/novice/2020-05-19-pricela-se-je-obnova-predora-golovec/",
      "quote": "Družba DARS je v teh dneh pričela z obnovitvenimi deli predora Golovec na vzhodni ljubljanski obvoznici.",
-     "quote_note": "Trimmed to what the quoted source states. Removed as not shown in the quote: dARS is shown carrying out the renovation but its role as owner or operator is not stated",
+     "quote_note": "Trimmed to what the quoted source states. Removed as not shown in the quote: DARS is shown carrying out the renovation but its role as owner or operator is not stated",
      "quote_checked": true
     },
     {
@@ -5470,7 +5455,7 @@
     },
     {
      "label": "Renovation contract value, both tubes",
-     "value": "8.56 million, excluding VAT, both tubes (west 2020, east 2021)",
+     "value": "8.56 million, excluding VAT (west tube 2020, east tube 2021)",
      "unit": "EUR",
      "source": "https://svet24.si/lokalno/osrednja/novice/promet/obnova-predora-golovec-uspesno-koncana-875308",
      "quote": "Skupna vrednost pogodbenih del v obeh letih znaša 8,56 milijona evrov brez DDV",
@@ -6388,9 +6373,9 @@
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026. Only line breaks and spacing differ."
     },
     {
-     "label": "Length design",
+     "label": "Length (design)",
      "value": "260",
-     "unit": "",
+     "unit": "m",
      "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/c30411e0-18ac-4e58-b50a-5415d52001c1",
      "quote": "Deviacija poteka od skupnega križišča magistralne ceste in priključka Trojane z dvopasovnim predorom, dolžine 260 m, pod grebenom",
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
@@ -7177,9 +7162,9 @@
      "quote_note": "Settled on 13 November 2026 from the source that ranks highest (ZAG, owner or official, then the latest). Shown before: northern tube 2,145, southern tube 2,175 m."
     },
     {
-     "label": "Length dri",
+     "label": "Length (DRI)",
      "value": "right tube 2,144; left tube 2,174",
-     "unit": "",
+     "unit": "m",
      "source": "https://dri.si/en/fields-of-work/railways/expressway-koper-izola",
      "quote": "Part of the highway section is also the two-tube tunnel Markovec (the right tunnel tube measuring 2,144 meters and the left 2,174 meters).",
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
@@ -8079,7 +8064,7 @@
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Length urszr",
+     "label": "Length (URSZR)",
      "value": "right tube 614 (Tabor I, km 7.360 to 7.974), left tube 589 (Tabor II, km 7.389 to 7.978)",
      "unit": "m",
      "source": "https://tax-fin-lex.si/Dokument/Podrobnosti/baf3f38e-8889-46cd-9b6a-51289ef5c161",
@@ -8375,7 +8360,7 @@
     },
     {
      "label": "Installed power",
-     "value": "34 (3 x 14.3 MVA)",
+     "value": "34 (generators 3 x 14.3 MVA)",
      "unit": "MW",
      "source": "https://www.sel.si/en/production-facilities/",
      "quote": "3 x 14.3 MVA installed capacity … 34 MW rated power",
@@ -8904,9 +8889,9 @@
      "quote_note": "Copied from the source on 13 November 2026."
     },
     {
-     "label": "Small hpp power",
+     "label": "Small HPP power",
      "value": "2.26 (two units, minimum-flow plant)",
-     "unit": "",
+     "unit": "MW",
      "source": "https://balkangreenenergynews.com/dem-seeks-bids-for-rehabilitation-of-melje-hydro-facility/",
      "quote": "Hydropower plant operator Dravske elektrarne Maribor d. o. o. (DEM) published an invitation for bids to supply a transformer and other equipment for rehabilitation of the 2.26 MW Melje hydroelectric project on Slovenia’s Drava river, HydroWorld portal said.",
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
@@ -10241,7 +10226,7 @@
    }
   },
   "he_arto": {
-   "summary": "HE Arto-Blanca (HE Blanca in OpenStreetMap and IBE), run-of-river hydropower plant with a dam on the Sava between Blanca and Arto, the third plant of the lower Sava chain. Owner and operator HESS.",
+   "summary": "HE Arto Blanca (HE Blanca in OpenStreetMap and IBE), run-of-river hydropower plant with a dam on the Sava between Blanca and Arto, the third plant of the lower Sava chain. Owner and operator HESS.",
    "specs": [
     {
      "label": "Height",
@@ -11713,12 +11698,20 @@
      "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
     },
     {
-     "label": "Reservoir volume",
-     "value": "2,200,000 effective (upper); area ~15 ha",
+     "label": "Upper reservoir effective volume",
+     "value": "2,200,000",
      "unit": "m³",
      "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
      "quote": "Koristni volumen vode: Vk = 2.200.000 m³",
      "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
+    },
+    {
+     "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
+     "quote": "Koristni volumen vode: Vk = 2.200.000 m³",
+     "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026.",
+     "label": "Upper reservoir area",
+     "value": "about 15",
+     "unit": "ha"
     },
     {
      "label": "Installed power",
@@ -12808,7 +12801,7 @@
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Zag author",
+     "label": "ZAG author",
      "value": "Borut Petkovšek (ZAG), Ujma 14-15 (2001)",
      "unit": "",
      "source": "https://ojs-gr.zrc-sazu.si/ujma/article/view/9175",
@@ -13277,7 +13270,7 @@
      "source_title": "Bottom station of cableway on Krvavec to Dom na Gospincu (Hotel Rozka), hiking-trail.net",
      "rank": "other",
      "quote": "Dom na Gospincu is located in the immediate vicinity of this station.",
-     "source_url": "https://hiking-trail.net/hiking_trip/bottom_station_of_cableway_on_krvavec_dom_na_gospincu_hotel_rozka/3/1063/2631",
+     "source_url": "https://www.hike.uno/hiking_tour/spodnja_postaja_zicnice_na_krvavec_dom_na_gospincu_hotel_rozka/3/1063/2631",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
@@ -13745,7 +13738,7 @@
     {
      "label": "Travel time",
      "value": "60",
-     "unit": "",
+     "unit": "s",
      "source": "https://en.wikipedia.org/wiki/Ljubljana_Castle_funicular",
      "quote": "It runs between the hours of 10:00 and 21:00 in wintertime, and the hours of 10:00 and 22:00 in summertime, and the full trip lasts 60 seconds.",
      "quote_note": "Copied from the text of the Wikipedia page, read on 12 November 2026."
@@ -13956,7 +13949,7 @@
      "label": "Resort top elev",
      "value": "1623",
      "unit": "m",
-     "source": "https://www.chise.org/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Kranjska_Gora_Ski_Resort.html",
+     "source": "https://en.wikipedia.org/wiki/Kranjska_Gora_Ski_Resort",
      "quote": "Summit - 1623 m (5,324 ft)",
      "quote_note": "Copied from the source on 13 November 2026."
     },
@@ -14096,7 +14089,7 @@
     },
     {
      "label": "Vitranc 2 chairlift",
-     "value": "4-CLF Leitner 2021/25, 1021 to 1569 m, 1021 m long, 459 m rise",
+     "value": "4-CLF Leitner 2021/25, 1021 m long, 459 m rise",
      "unit": "",
      "source": "https://lift-world.info/en/lifts/21766/datas.htm",
      "quote": "Route distance: 1021 m"
@@ -14628,7 +14621,7 @@
      "quote_note": "Copied from the source on 13 November 2026."
     },
     {
-     "label": "Lift brdo",
+     "label": "Brdo chairlift",
      "value": "4-CLD/B Girak 1995, 1678 m, 326 m rise, 874-1200 m, 14 towers, 2400 p/h, 5 m/s",
      "unit": "",
      "source": "https://www.lift-world.info/en/lifts/10924/datas.htm",
@@ -14636,7 +14629,7 @@
      "quote_note": "Copied from the source on 13 November 2026."
     },
     {
-     "label": "Lift pocivalo",
+     "label": "Počivalo chairlift",
      "value": "TSD6 Doppelmayr 2004, 1087 m, 330 m rise, ~870-1200 m, 12 towers, 40 chairs, 1800 p/h, 5 m/s, rope Austria Draht",
      "unit": "",
      "source": "https://remontees-mecaniques.net/bdd/reportage-tsd6-pocivalo-doppelmayr-2611.html",
@@ -15873,7 +15866,7 @@
     },
     {
      "label": "Operator",
-     "value": "Nordijski Center Planica",
+     "value": "Nordijski center Planica",
      "unit": "",
      "source": "https://remontees-mecaniques.net/bdd/reportage-tsf2-caplja-leitner-8286.html",
      "quote": "Exploitant : Nordijski Center Planica",
@@ -15983,7 +15976,7 @@
      "label": "Cadastre building at the point",
      "value": "2302 KROMBERK, building 1386, built 1967, 3 storeys below and above ground",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -16092,7 +16085,7 @@
      "label": "Site type",
      "value": "transmitters on hill summit (not accessible)",
      "unit": "",
-     "source": "https://www.hiking-trail.net/hiking_trip/jersice_pecna_reber/26/1608/2822",
+     "source": "https://www.hike.uno/hiking_tour/jersice_pecna_reber/26/1608/2822",
      "check": "The source page no longer exists (checked 12 November 2026), so this value is not yet checked against it."
     },
     {
@@ -16133,7 +16126,7 @@
    "kind": "Site",
    "source_check": [
     {
-     "url": "https://www.hiking-trail.net/hiking_trip/jersice_pecna_reber/26/1608/2822",
+     "url": "https://www.hike.uno/hiking_tour/jersice_pecna_reber/26/1608/2822",
      "status": "the page could not be read online",
      "values": 1
     }
@@ -16231,7 +16224,7 @@
      "label": "Cadastre building at the point",
      "value": "1535 ČRNOMELJ, building 857, built 1982, 4 storeys below and above ground",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -16384,13 +16377,13 @@
    }
   },
   "ss_kocevje": {
-   "summary": "Kočevje Secondary School (Gimnazija in srednja sola Kočevje), Kočevje",
+   "summary": "Kočevje Secondary School (Gimnazija in srednja šola Kočevje), Kočevje",
    "specs": [
     {
      "label": "Buildings managed by the school (cadastre)",
      "value": "2: 1577/105 and 1577/1094",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -16443,7 +16436,7 @@
      "label": "Highest point above the terrain at the entrance (cadastre)",
      "value": "18.4",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 105, STEVILO_ETAZ 2, LETO_IZGRADNJE 1872, VISINA_H2 484.9, VISINA_H3 466.5",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16451,7 +16444,7 @@
      "label": "Storeys, below and above ground (cadastre)",
      "value": "2",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 105, STEVILO_ETAZ 2, LETO_IZGRADNJE 1872, VISINA_H2 484.9, VISINA_H3 466.5",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16459,7 +16452,7 @@
      "label": "Year built (cadastre)",
      "value": "1872",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 105, STEVILO_ETAZ 2, LETO_IZGRADNJE 1872, VISINA_H2 484.9, VISINA_H3 466.5",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16467,7 +16460,7 @@
      "label": "Cadastre building",
      "value": "1577 KOČEVJE, building 105",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     }
    ],
@@ -16477,20 +16470,20 @@
    "kind": "Building"
   },
   "os_stara_cerkev": {
-   "summary": "Stara Cerkev Elementary School (Osnovna sola Stara Cerkev), Stara Cerkev, Kočevje",
+   "summary": "Stara Cerkev Elementary School (Osnovna šola Stara Cerkev), Stara Cerkev, Kočevje",
    "specs": [
     {
      "label": "Buildings managed by the school (cadastre)",
      "value": "3: 1575/333, 1575/555 and 1578/100",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Highest point above the terrain, building 333, built 1843 (cadastre)",
      "value": "11.8",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 333, STEVILO_ETAZ 2, LETO_IZGRADNJE 1843, VISINA_H2 491.5, VISINA_H3 479.7",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16528,7 +16521,7 @@
      "label": "Highest point above the terrain, building 555 (cadastre)",
      "value": "11.6",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 555, STEVILO_ETAZ 4, LETO_IZGRADNJE 1990, VISINA_H2 491.5, VISINA_H3 479.9",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16536,7 +16529,7 @@
      "label": "Storeys below and above ground, building 555 (cadastre)",
      "value": "4",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 555, STEVILO_ETAZ 4, LETO_IZGRADNJE 1990, VISINA_H2 491.5, VISINA_H3 479.9",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16544,7 +16537,7 @@
      "label": "Year built, building 555 (cadastre)",
      "value": "1990",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 555, STEVILO_ETAZ 4, LETO_IZGRADNJE 1990, VISINA_H2 491.5, VISINA_H3 479.9",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16552,7 +16545,7 @@
      "label": "Cadastre building",
      "value": "1575 STARA CERKEV, building 555",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     }
    ],
@@ -16562,20 +16555,20 @@
    "kind": "Building"
   },
   "fibran_sodrazica": {
-   "summary": "Fibran Nord Sodražica (Fibran Nord Sodražica), Sodražica",
+   "summary": "Fibran Nord factory, Sodražica",
    "specs": [
     {
      "label": "Buildings owned by Fibran (cadastre)",
      "value": "5: 1619/66, 1619/407, 1619/411, 1619/787 and 1456/10069",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:LASTNISTVO_PRAVNIH_OSEB",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:LASTNISTVO_PRAVNIH_OSEB/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
      "label": "Highest point above the terrain, building 66 (cadastre)",
      "value": "7.4",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 66, STEVILO_ETAZ 3, LETO_IZGRADNJE 1980, VISINA_H2 552.3, VISINA_H3 544.9",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16583,7 +16576,7 @@
      "label": "Highest point above the terrain, building 411 (cadastre)",
      "value": "8.6",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 411, STEVILO_ETAZ 2, LETO_IZGRADNJE 1980, VISINA_H2 549.8, VISINA_H3 541.2",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16591,7 +16584,7 @@
      "label": "Highest point above the terrain, building 407 (cadastre)",
      "value": "10.0",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 407, STEVILO_ETAZ 1, LETO_IZGRADNJE 1980, VISINA_H2 555.1, VISINA_H3 545.1",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16621,7 +16614,7 @@
      "label": "Storeys below and above ground, building 411 (cadastre)",
      "value": "2",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 411, STEVILO_ETAZ 2, LETO_IZGRADNJE 1980, VISINA_H2 549.8, VISINA_H3 541.2",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16629,7 +16622,7 @@
      "label": "Year built, building 411 (cadastre)",
      "value": "1980",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 411, STEVILO_ETAZ 2, LETO_IZGRADNJE 1980, VISINA_H2 549.8, VISINA_H3 541.2",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -16637,7 +16630,7 @@
      "label": "Cadastre building",
      "value": "1619 SODRAŽICA, building 411",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     }
    ],
@@ -17191,7 +17184,7 @@
    "specs": [
     {
      "label": "Mapped geometry",
-     "value": "road deck 371 m",
+     "value": "road deck 369 m",
      "unit": "",
      "source": "https://www.openstreetmap.org/way/1124102920",
      "basis": "Computed from the geometry of the OpenStreetMap object behind the link. No sentence states this value."
@@ -17401,7 +17394,7 @@
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Us4f budget",
+     "label": "Urban Soil 4 Food budget",
      "value": "EUR 3,747,650 total; ERDF EUR 2,998,120",
      "unit": "",
      "source": "https://ec.europa.eu/regional_policy/en/projects/Slovenia/maribor-slovenia-develops-soil-for-cities-reducing-waste-for-a-circular-economy",
@@ -17409,15 +17402,15 @@
     },
     {
      "label": "Urban gardens (Urban Soil 4 Food)",
-     "value": "7,398 new gardens on a site of about 12,500 under Pekrska gorca",
-     "unit": "m²",
+     "value": "7,398 m² of new urban gardens on a site of about 12,500 m² under Pekrska gorca",
+     "unit": "",
      "source": "https://uia.urban-initiative.eu/en/uia-cities/maribor",
      "check": "The source page no longer exists (checked 12 November 2026), so this value is not yet checked against it.",
      "quote": "establishment of 7.398 m2 of new urban gardens for public use",
      "quote_note": "Settled on 13 November 2026 from the source that ranks highest (ZAG, owner or official, then the latest). Shown before: 12400 m²."
     },
     {
-     "label": "Us4f partners",
+     "label": "Urban Soil 4 Food partners",
      "value": "City of Maribor, ZAG, IPI, Aktiviraj se, WCYCLE, Deltaplan, Snaga",
      "unit": "",
      "source": "https://cooperativecity.org/creating-soil-from-urban-waste-experience-of-maribor/",
@@ -17601,9 +17594,9 @@
     },
     {
      "label": "Pavers produced",
-     "value": "more than 20 m2 manufactured and cured in a mobile unit",
+     "value": "more than 20, manufactured and cured in a mobile unit",
      "unit": "m²",
-     "source": "https://press.um.si/index.php/ump/en/catalog/book/949/chapter/242",
+     "source": "https://press.um.si/index.php/ump/catalog/book/949/chapter/242",
      "quote": "The innovative approach in this project was the pilot production process itself, where more than 20 m² of pavers were manufactured and cured in a mobile unit.",
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
     },
@@ -17624,10 +17617,10 @@
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Zag authors",
+     "label": "ZAG authors",
      "value": "Anže Tesovnik, Vilma Ducman",
      "unit": "",
-     "source": "https://press.um.si/index.php/ump/en/catalog/book/949/chapter/242",
+     "source": "https://press.um.si/index.php/ump/catalog/book/949/chapter/242",
      "quote": "Anže Tesovnik, Slovenian National Building and Civil Engineering Institute Ljubljana, Slovenia. E-mail: anze.tesovnik@zag.si Vilma Ducman, Slovenian National Building and Civil Engineering Institute",
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
     },
@@ -17651,7 +17644,7 @@
      "label": "Event",
      "value": "project partners presented paver production at SIJ Acroni on 24 April 2024, pavers made in a KU Leuven mobile unit",
      "unit": "",
-     "source": "https://press.um.si/index.php/ump/en/catalog/book/949/chapter/242",
+     "source": "https://press.um.si/index.php/ump/catalog/book/949/chapter/242",
      "quote": "More than 20 m2 of GEORIS pavers (dimensions: 40x40x4 cm3) were produced in one of KU Leuven’s mobile units (Figure 1).",
      "quote_note": "Added on 13 November 2026 from the source that ranks highest (ZAG, owner or official, then the latest)."
     }
@@ -17709,7 +17702,7 @@
      "source_date": "2025",
      "rank": "paper",
      "quote": "More than 20 m2 of GEORIS pavers (dimensions: 40x40x4 cm3) were produced in one of KU Leuven’s mobile units (Figure 1).",
-     "source_url": "https://press.um.si/index.php/ump/en/catalog/book/949/chapter/242",
+     "source_url": "https://press.um.si/index.php/ump/catalog/book/949/chapter/242",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
@@ -17720,7 +17713,7 @@
      "source_date": "2025",
      "rank": "paper",
      "quote": "The GEORIS pavers demonstration site is located in the courtyard of SIJ Acroni in Slovenia",
-     "source_url": "https://press.um.si/index.php/ump/en/catalog/book/949/chapter/242",
+     "source_url": "https://press.um.si/index.php/ump/catalog/book/949/chapter/242",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     }
@@ -17750,7 +17743,7 @@
      "label": "Tubes",
      "value": "2",
      "unit": "",
-     "source": "https://structurae.net/en/structures/golo-rebro-tunnel",
+     "source": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
      "check": "The source page was read on 12 November 2026 and now gives one tube, while its chronology lists a second tube opened in 1996. See source differences."
     },
     {
@@ -18377,7 +18370,7 @@
      "label": "Highest point above the terrain at the entrance (cadastre)",
      "value": "68.5",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 1, STEVILO_ETAZ 23, LETO_IZGRADNJE 1974, VISINA_H2 368.1, VISINA_H3 299.6",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -18385,7 +18378,7 @@
      "label": "Storeys, below and above ground (cadastre)",
      "value": "23",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 1, STEVILO_ETAZ 23, LETO_IZGRADNJE 1974, VISINA_H2 368.1, VISINA_H3 299.6",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -18393,7 +18386,7 @@
      "label": "Year built (cadastre)",
      "value": "1974",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 1, STEVILO_ETAZ 23, LETO_IZGRADNJE 1974, VISINA_H2 368.1, VISINA_H3 299.6",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -18401,7 +18394,7 @@
      "label": "Cadastre building",
      "value": "1721 GRADIŠČE I, building 1",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     }
    ],
@@ -18494,7 +18487,7 @@
      "label": "Storeys below and above ground, building 416 (cadastre)",
      "value": "4",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 416, STEVILO_ETAZ 4, LETO_IZGRADNJE 1885, VISINA_H2 293.1, VISINA_H3 270",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -18502,7 +18495,7 @@
      "label": "Highest point above the terrain at the entrance, building 416 (cadastre)",
      "value": "23.1",
      "unit": "m",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "quote": "ST_STAVBE 416, STEVILO_ETAZ 4, LETO_IZGRADNJE 1885, VISINA_H2 293.1, VISINA_H3 270",
      "quote_note": "Attribute values of the GURS cadastre record (collection SI.GURS.KN:STAVBE), read on 12 November 2026. This is a database record, not a sentence. Height above the terrain is VISINA_H2 minus VISINA_H3."
     },
@@ -18510,7 +18503,7 @@
      "label": "Cadastre building at the point",
      "value": "659 TABOR, building 416, built 1885",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -18646,7 +18639,7 @@
      "label": "Buildings managed by the library (cadastre)",
      "value": "2: 1728/174 and 1730/2110",
      "unit": "",
-     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI",
+     "source": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:DST_UPRAVLJAVCI/items",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
     },
     {
@@ -18758,7 +18751,7 @@
    }
   },
   "rakuschev_mlin": {
-   "summary": null,
+   "summary": "Rakuschev mlin (Prvi mestni mlin Celje), Gaberje, Celje, demolished from 4 April 2015",
    "specs": [
     {
      "label": "Plan dimensions",
