@@ -375,3 +375,52 @@ body.embed .pane-model .rothint{top:auto!important;bottom:12px!important}
 .pager:not(:has(> :not([hidden]))){display:none!important}
 /* the Layers panel uses the same colours as the legend and the markers */
 .sw{background:#007AFF!important}.sw.ref{background:#8E8E93!important}.sw.fac{background:#5856D6!important}
+/* ---------- printed asset record ---------- */
+.printhead,.printrefs{display:none}
+@page{size:A4;margin:14mm 12mm 16mm;@bottom-left{content:"ZAG Digital Atlas, asset record";font:8pt Inter,Arial,sans-serif;color:#6A6A70}@bottom-right{content:"Page " counter(page) " of " counter(pages);font:8pt Inter,Arial,sans-serif;color:#6A6A70}}
+@media print{
+  html,body{background:#fff!important;font-size:9.5pt}
+  .printhead{display:block;margin:0 0 6mm;color:#1D1D1F}
+  .ph-top{display:flex;align-items:center;gap:10px;padding-bottom:3mm;border-bottom:1.5pt solid #203469}
+  .ph-top img{height:28px}.ph-top b{display:block;font-size:11pt;color:#203469}.ph-top span{font-size:8.5pt;color:#5F5F64}
+  .printhead h1{font-size:18pt;margin:4mm 0 0;color:#1D1D1F;letter-spacing:-.01em}
+  .ph-sl{margin:1mm 0 0;color:#5F5F64}
+  .ph-tb{width:100%;border-collapse:collapse;margin-top:4mm;font-size:8.5pt}
+  .ph-tb th,.ph-tb td{border:.6pt solid #C7C7CC;padding:1.6mm 2mm;text-align:left;vertical-align:top}
+  .ph-tb th{background:#F2F4F8;color:#203469;font-weight:600;white-space:nowrap;width:1%}
+  .printrefs{display:block;break-before:page;margin-top:6mm}
+  .printrefs h2{font-size:12pt;color:#203469;border-bottom:1pt solid #203469;padding-bottom:2mm}
+  .printrefs ol{font-size:7.5pt;line-height:1.45;padding-left:7mm;word-break:break-all}
+  .printrefs p{font-size:8pt;color:#5F5F64;margin-top:4mm}
+  #main a[data-ref]::after{content:" [" attr(data-ref) "]";font-size:7pt;color:#5F5F64;vertical-align:super}
+  .asset,#pick,.pane-map,.stage-note,.stagefoot,.mstat,.vstatus,.tabs[role=tablist],
+  .thdr,.sitenav,.zb,.rothint,.plabel,.ptools,.vtools,.stagebar,.tabs,.btnrow,.iform,details.ev,.maplibregl-ctrl,.maplibregl-control-container,.vctl,.pager,.livebadge,#pick p,.tfoot,.zb-tease{display:none!important}
+  .asset,.tree .tsec,.alldata,.blk,.tabpan .pickbox,.side>*{box-shadow:none!important;border:.6pt solid #D9D9DE!important;border-radius:6px!important;background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+  .asset .kind,.asset h1,.asset .sl,.asset .tags{display:none!important}
+  .alldata .row{break-inside:avoid;padding:1.4mm 0!important}
+  .alldata .row a{color:#5F5F64!important;text-decoration:none}
+  .pane{break-inside:avoid}
+  .panes{display:block!important}.pane-model{width:100%!important;height:110mm!important}
+  a{color:#0A4FB3}
+}
+/* site footer */
+.sitefoot{margin-top:28px;border-top:1px solid rgba(15,23,42,.08);background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.sf-in{max-width:1180px;margin:0 auto;padding:26px 20px 34px;display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:22px 28px;font-size:12.5px;line-height:1.5;color:var(--g-mut,#5F5F64)}
+.sf-in b{color:#1D1D1F}.sf-about b{font-size:14px;color:#203469}.sf-about p{margin:6px 0 0;max-width:36ch}
+.sf-in h3{margin:0 0 6px;font-size:12px;font-weight:600;color:#1D1D1F;letter-spacing:0}
+.sf-in nav,.sf-in>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.sf-in a{color:#0064D2;text-decoration:none;overflow-wrap:anywhere}.sf-in a:hover{text-decoration:underline}
+@media (max-width:900px){.sf-in{grid-template-columns:1fr 1fr}.sf-about{grid-column:1/-1}}
+@media (max-width:480px){.sf-in{grid-template-columns:1fr}}
+@media print{.sitefoot{display:none}}
+/* dashboard: coverage meters and inline bars */
+.meters{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px 22px;margin-top:12px}
+.meter .m-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline;font-size:13px}
+.meter .m-top>b{font-weight:600;color:#1D1D1F}.meter .m-top span{color:#5F5F64;font-variant-numeric:tabular-nums;white-space:nowrap}.meter .m-top span b{color:#1D1D1F}
+.m-bar{height:8px;border-radius:99px;background:rgba(118,118,128,.16);overflow:hidden;margin:6px 0 4px}
+.m-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#1A73D9,#5E5CE6)}
+.meter small{display:block;color:#6A6A70;font-size:11.5px;line-height:1.35}
+.ibar{display:inline-block;width:64px;height:6px;border-radius:99px;background:rgba(118,118,128,.14);margin-right:8px;vertical-align:middle;overflow:hidden}
+.ibar i{display:block;height:100%;background:#0064D2;border-radius:99px}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+body.wsbody .sitefoot,body.embed .sitefoot{display:none}

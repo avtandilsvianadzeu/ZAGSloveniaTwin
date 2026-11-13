@@ -110,7 +110,7 @@ function keyFigures(p,t,g,lines){
 }
 
 /* ---------- one object ---------- */
-function renderTwin(f){
+function renderTwin(f){ window.__rec=f.properties;
   const p=f.properties, id=p.id, t=D.twins[id]||null, g=D.gurs[id]||null;
   const lines=p.lines||(p.line?[p.line]:[]), labels=p.line_labels||[];
   const kind=p.category==='zag_facility'?'ZAG facility':p.category==='partner'?(p.object_type==='company'?'Partner company':'Partner institution'):p.category==='user_object'?'Object added by a user':'ZAG project';
@@ -606,4 +606,28 @@ if(!window.TWIN_NO_BOOT) (async()=>{
   const jl=$('jumplist'), ji=$('jump'); if(jl&&ji){ const names=D.features.map(x=>[x.properties.name_en||x.properties.name,x.properties.id]); jl.innerHTML=names.map(n=>`<option value="${esc(n[0])}">`).join('');
     ji.onchange=()=>{ const q=ji.value.trim().toLowerCase(), hit=names.find(n=>n[0].toLowerCase()===q)||names.find(n=>n[0].toLowerCase().includes(q)); if(q&&hit) location.href='twin.html?id='+encodeURIComponent(hit[1]); }; }
   if(f){ if(!document.body.classList.contains('embed')) document.body.classList.add('wsbody'); renderTwin(f); } else renderIndex();
+})();
+
+/* ---------- printed report: a title block at the top, numbered sources at the end ---------- */
+(function(){
+  const fmt=d=>d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  let dataDate=''; fetch('api/v1/index.json').then(r=>r.json()).then(j=>{ if(j&&j.generated) dataDate=fmt(new Date(j.generated)); }).catch(()=>{});
+  const PREC={surveyed:'Surveyed point',address:'Published address',matched:'Matched to the mapped structure',derived:'Derived from the sources',approximate:'Approximate',locality:'Locality only',settlement:'Settlement centre',municipality:'Municipality centre'};
+  function build(){ const p=window.__rec; if(!p||!document.querySelector('.ws,.stage,.alldata')) return;
+    document.querySelectorAll('.printhead,.printrefs').forEach(x=>x.remove());
+    const reg=document.querySelector('.asset')?((document.querySelector('.asset').textContent.match(/Register\s*(\d+ of \d+)/)||[])[1]||''):'';
+    const head=document.createElement('header'); head.className='printhead';
+    head.innerHTML=`<div class="ph-top"><img src="img/logo.webp" alt="ZAG"><div><b>ZAG Digital Atlas</b><span>Asset record</span></div></div>
+      <h1>${esc(p.name_en||p.name)}</h1>${p.name_sl&&p.name_sl!==p.name_en?`<p class="ph-sl">${esc(p.name_sl)}</p>`:''}
+      <table class="ph-tb"><tr><th>Asset ID</th><td>${esc(p.id)}</td><th>Type</th><td>${esc(cap(p.object_type||''))}</td><th>Sheet</th><td>${esc(reg)}</td></tr>
+      <tr><th>Place</th><td>${esc([p.locality,p.municipality].filter((x,i,a)=>x&&a.indexOf(x)===i).join(', '))}</td><th>Position</th><td>${esc(PREC[p.position_precision]||p.position_precision||'')}</td><th>WGS 84</th><td>${(+p.latitude).toFixed(6)}, ${(+p.longitude).toFixed(6)}</td></tr>
+      <tr><th>ZAG work</th><td colspan="3">${esc(p.zag_role||'')}${p.year?', '+esc(String(p.year).replace(/-$/,' onwards').replace(/-/g,' to ')):''}</td><th>Printed</th><td>${fmt(new Date())}</td></tr></table>`;
+    const main=document.getElementById('main'); main.insertBefore(head,main.firstChild);
+    /* number every external link once and list them at the end */
+    const refs=[]; document.querySelectorAll('#main a[href^="http"]').forEach(a=>{ if(a.closest('.printhead')) return; const u=a.href; let i=refs.indexOf(u); if(i<0){ refs.push(u); i=refs.length-1; } a.dataset.ref=i+1; });
+    const foot=document.createElement('section'); foot.className='printrefs';
+    foot.innerHTML=`<h2>Sources</h2><ol>${refs.map(u=>`<li>${esc(u)}</li>`).join('')}</ol><p>Every value in this record is read from the source shown next to it. Where sources differ, the record lists each value with its source. Data version ${esc(dataDate||'current')}. Online record: ${esc(location.href.split('#')[0])}</p>`;
+    main.appendChild(foot); }
+  window.addEventListener('beforeprint',build);
+  if(window.matchMedia) matchMedia('print').addEventListener&&matchMedia('print').addEventListener('change',e=>{ if(e.matches) build(); });
 })();
