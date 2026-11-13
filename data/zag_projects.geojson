@@ -637,11 +637,11 @@
     "zag_involvement_type": "structural assessment",
     "zag_role": "Static and dynamic load testing in March 2023, in cooperation with dr Andrej Štrukelj (University of Maribor)",
     "description": "The first bridge in Slovenia built with stress ribbon technology. ZAG took part in the load test in March 2023, carried out by dr Andrej Štrukelj of the University of Maribor: static loading in three stages, dynamic testing with a light truck driven over artificial obstacles, and ambient vibration measurement. Vertical displacements, natural frequencies and mode shapes were compared against a finite element model and agreed well. Under 18 vehicles with a total mass of 70.4 t the calculated maximum deflection was 145 mm, and the measured values were up to 10 % smaller. Client was the City Municipality of Novo mesto, built by CGP Novo mesto with Freyssinet Adria, designed by Ponting Bridges and Pipenbaher Consulting Engineers.",
-    "hist": "The footbridge at Irca vas is the first stress ribbon bridge in Slovenia and crosses the Krka between Lastovce and Groblje. Ponting gives a span of 130 m, a width of 4 m and a deck thickness of 42 cm, assembled from 46 precast segments installed on fully tensioned bearing cables between anchored concrete block abutments. Freyssinet describes the same structure with a main span of 120.5 m and six tendons, and states that the grouted tendons are thought to be a first of their kind on this bridge type. The client was the City Municipality of Novo mesto and the contractor was a joint venture of Freyssinet Adria and CGP Novo mesto. The bridge received the Golden Pencil award in 2023 and the Plečnik Medal in 2024, and it was officially named Stukljeva brv after the Olympic gymnast Leon Stukelj.",
+    "hist": "The footbridge at Irca vas is the first stress ribbon bridge in Slovenia and crosses the Krka between Lastovce and Groblje. Ponting gives a span of 130 m, a width of 4 m and a deck thickness of 42 cm, assembled from 46 precast segments installed on fully tensioned bearing cables between anchored concrete block abutments. Freyssinet describes the same structure with a main span of 120.5 m and six tendons, and states that the grouted tendons are thought to be a first of their kind on this bridge type. The client was the City Municipality of Novo mesto and the contractor was a joint venture of Freyssinet Adria and CGP Novo mesto. The bridge received the Golden Pencil award in 2023 and the Plečnik Medal in 2024, and the City Municipality of Novo mesto refers to it as Štukljeva brv, after the Olympic gymnast Leon Štukelj.",
     "facts": [
      [
       "Span",
-      "130 m per Ponting, 120.5 m main span per Freyssinet"
+      "131 m between abutment axes per the designers, clear span 120.6 m"
      ],
      [
       "Width",
@@ -660,8 +660,8 @@
       "Golden Pencil 2023, Plečnik Medal 2024"
      ],
      [
-      "Official name",
-      "Stukljeva brv, after Leon Stukelj"
+      "Name",
+      "Štukljeva brv, after Leon Štukelj"
      ]
     ],
     "people": [
@@ -783,7 +783,7 @@
     "longitude": 14.8489639,
     "zag_involvement_type": "materials testing",
     "zag_role": "Structural reuse of salvaged girders",
-    "description": "Demonstration pilot of the CIRCUIT project, planned by the Municipality of Črna na Koroškem with ZAG. A new bridge over the Meža is to reuse the girders of the bridge damaged in the August 2023 floods, with abutments of reinforced soil made from flood deposits, a modular superstructure designed for dismantling and a digitally fabricated safety railing. On 1 October 2025 the bridge was still announced as a future structure.",
+    "description": "Demonstration pilot of the CIRCUIT project, planned by the Municipality of Črna na Koroškem with ZAG. A new bridge over the Meža is to reuse the girders of the bridge damaged in the August 2023 floods, with abutments of reinforced soil made from flood deposits, a modular superstructure designed for dismantling and a digitally fabricated safety railing. On 1 October 2025 the bridge was still announced as a future structure, and in June 2026 CIRCUIT reported that the design was still being finalised.",
     "hist": "ZAG reported on 26 April 2024 that the bridge will be built in cooperation between the Municipality of Črna na Koroškem and ZAG, after the CIRCUIT consortium visited the site. The local tourist office wrote on 1 October 2025 that the municipality will set up the bridge to link the buildings Center 2 to 4 with the regional road, and presented the project on the Meža bridge at Center 4 on 7 October 2025. The bridge over the Meža opened on 7 September 2025 is a different structure, since the CIRCUIT bridge was still planned after that date.",
     "facts": [
      [
@@ -792,7 +792,7 @@
      ],
      [
       "Status",
-      "planned, as reported on 1 October 2025"
+      "not yet built, design still being finalised as reported by CIRCUIT in June 2026"
      ],
      [
       "Programme",
@@ -2695,7 +2695,7 @@
     "zag_involvement_type": null,
     "zag_role": "Partner institute, ZAG is a founding partner",
     "description": "Set up under the Horizon 2020 teaming action with ZAG among the partners. It works on renewable building materials and healthy indoor environments. Friderik Knez led ZAG's side of the project from 2017 to 2022.",
-    "hist": "InnoRenew CoE is at Livade 6a in Izola and works on renewable materials and sustainable building. Its two distinguishing fields are wood modification and restorative environmental and ergonomic design. A consortium of ten partners led by the University of Primorska submitted the proposal to Horizon 2020 in 2016, and ZAG was one of the core partners. The Horizon 2020 Teaming operation was valued at 14,996,025.00 euros including tax, with national co financing of about 39 million euros, giving a total of about 54 million euros. By court decision of 29 July 2025 the institute became an independent research department within the Andrej Marusic Institute of the University of Primorska. Over eight and a half years it had run 96 publicly funded projects worth 15.78 million euros together with industry projects worth 2.81 million euros.",
+    "hist": "InnoRenew CoE is at Livade 6a in Izola and works on renewable materials and sustainable building. Its two distinguishing fields are wood modification and restorative environmental and ergonomic design. A consortium of ten partners led by the University of Primorska submitted the proposal to Horizon 2020 in 2016, and ZAG was one of the core partners. The Horizon 2020 Teaming operation was valued at 14,996,025.00 euros including tax, with national co financing of about 39 million euros, giving a total of about 54 million euros. Since a court decision of 29 July 2025, InnoRenew CoE has been an independent department of the UP Andrej Marušič Institute at the University of Primorska. Over eight and a half years it had run 96 publicly funded projects worth 15.78 million euros together with industry projects worth 2.81 million euros.",
     "facts": [
      [
       "Address",
@@ -3229,7 +3229,7 @@
     "facts": [
      [
       "Client",
-      "DARS"
+      "DARS, as given for the grouped ZAG reference line"
      ],
      [
       "Years",
@@ -19730,7 +19730,7 @@
      "materials testing"
     ],
     "zag_role": "Condition assessment of Plečnik’s façade before renovation",
-    "description": "Interdisciplinary survey of the façade (concrete, brick, stone and steel reinforcement) commissioned by NUK with the Institute for the Protection of Cultural Heritage of Slovenia. Methods reported: ultrasonic tomography, ground-penetrating radar, 3D micro-tomography, analyses of brick and joint mortars, and testing of conservation materials. Technical report due June 2026; full façade renovation planned for 2027.",
+    "description": "Interdisciplinary survey of the façade (concrete, brick, stone and steel reinforcement) commissioned by NUK with the Institute for the Protection of Cultural Heritage of Slovenia. Methods reported: ultrasonic tomography, ground-penetrating radar, 3D micro-tomography, analyses of brick and joint mortars, and testing of conservation materials. ZAG reported in December 2025 that the research was in progress to provide the expert basis for a full renovation of the façade.",
     "image": "img/ph/nuk.webp",
     "image_credit": null,
     "source_title": "Raziskava stanja fasade Plečnikovega NUK-a",

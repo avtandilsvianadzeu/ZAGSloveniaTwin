@@ -75,7 +75,7 @@ for (const e of ENTRIES) {
 const STORY_SRC = {
  nuk: { ev: 'documented', inv: ['structural assessment', 'materials testing'],
   role: 'Condition assessment of Plečnik’s façade before renovation',
-  about: 'Interdisciplinary survey of the façade (concrete, brick, stone and steel reinforcement) commissioned by NUK with the Institute for the Protection of Cultural Heritage of Slovenia. Methods reported: ultrasonic tomography, ground-penetrating radar, 3D micro-tomography, analyses of brick and joint mortars, and testing of conservation materials. Technical report due June 2026; full façade renovation planned for 2027.',
+  about: 'Interdisciplinary survey of the façade (concrete, brick, stone and steel reinforcement) commissioned by NUK with the Institute for the Protection of Cultural Heritage of Slovenia. Methods reported: ultrasonic tomography, ground-penetrating radar, 3D micro-tomography, analyses of brick and joint mortars, and testing of conservation materials. ZAG reported in December 2025 that the research was in progress to provide the expert basis for a full renovation of the façade.',
   sources: [
    { key: 'zag_nuk_2025', title: 'Raziskava stanja fasade Plečnikovega NUK-a', url: 'https://www.zag.si/raziskava-stanja-fasade-plecnikovega-nuk-a/', type: 'zag_publication' },
    { key: 'rtv_nuk_2025', title: 'Raziskava stanja fasade Plečnikovega NUK-a pred celovito sanacijo, predvideno za leto 2027 (RTV SLO, 19 Dec 2025)', url: 'https://www.rtvslo.si/kultura/dediscina/raziskava-stanja-fasade-plecnikovega-nuk-a-pred-celovito-sanacijo-predvideno-za-leto-2027/767780', type: 'web' },
