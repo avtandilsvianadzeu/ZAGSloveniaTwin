@@ -80,7 +80,7 @@ const STORY_SRC = {
    { key: 'zag_nuk_2025', title: 'Raziskava stanja fasade Plečnikovega NUK-a', url: 'https://www.zag.si/raziskava-stanja-fasade-plecnikovega-nuk-a/', type: 'zag_publication' },
    { key: 'rtv_nuk_2025', title: 'Raziskava stanja fasade Plečnikovega NUK-a pred celovito sanacijo, predvideno za leto 2027 (RTV SLO, 19 Dec 2025)', url: 'https://www.rtvslo.si/kultura/dediscina/raziskava-stanja-fasade-plecnikovega-nuk-a-pred-celovito-sanacijo-predvideno-za-leto-2027/767780', type: 'web' },
    { key: 'sta_nuk_2025', title: 'Pred načrtovano obnovo v teku poglobljena raziskava fasade NUK (STA)', url: 'https://www.sta.si/3501494/pred-nacrtovano-obnovo-v-teku-poglobljena-raziskava-fasade-nuk', type: 'web' }] },
- tr3: { ev: 'documented', inv: ['structural assessment', 'BIM'],
+ tr3: { ev: 'documented', inv: ['BIM', 'digitalisation'],
   role: 'Partner of the Institute for the Protection of Cultural Heritage of Slovenia in the exhibition KONS-TR³: Konstrukcija nove ere (Galerija TR3, 11 October to 2 December 2023) on the structure of Ravnikar’s Trg republike towers',
   about: 'Exhibition on the structural design of the Trg republike complex by Edvard Ravnikar and Ervin Prelog, prepared by ZVKDS with ZAG as partner.',
   sources: [

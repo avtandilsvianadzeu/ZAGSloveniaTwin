@@ -635,7 +635,7 @@
     "latitude": 45.801001,
     "longitude": 15.15108,
     "zag_involvement_type": "structural assessment",
-    "zag_role": "Static and dynamic load testing, and validation of the finite element model",
+    "zag_role": "Static and dynamic load testing in March 2023, in cooperation with dr Andrej Štrukelj (University of Maribor)",
     "description": "The first bridge in Slovenia built with stress ribbon technology. ZAG carried out the load test in March 2023: static loading in three stages, dynamic testing with a light truck driven over artificial obstacles, and ambient vibration measurement. Vertical displacements, natural frequencies and mode shapes were compared against a finite element model and agreed well. The reported deflection was 130 mm under a 70 tonne load. Client was the City Municipality of Novo mesto, built by CGP Novo mesto with Freyssinet Adria, designed by Ponting Bridges and Pipenbaher Consulting Engineers.",
     "hist": "The footbridge at Irca vas is the first stress ribbon bridge in Slovenia and crosses the Krka between Lastovce and Groblje. Ponting gives a span of 130 m, a width of 4 m and a deck thickness of 42 cm, assembled from 46 precast segments installed on fully tensioned bearing cables between anchored concrete block abutments. Freyssinet describes the same structure with a main span of 120.5 m and six tendons, and states that the grouted tendons are thought to be a first of their kind on this bridge type. The client was the City Municipality of Novo mesto and the contractor was a joint venture of Freyssinet Adria and CGP Novo mesto. The bridge received the Golden Pencil award in 2023 and the Plecnik Medal in 2024, and it was officially named Stukljeva brv after the Olympic gymnast Leon Stukelj.",
     "facts": [
@@ -1510,10 +1510,10 @@
     "name_sl": "Zaliv Sv. Križa v Strunjanu",
     "name_en": "Sveti Križ Bay Cliff",
     "object_type": "geotechnical site",
-    "year": "2019-2021",
+    "year": "2020-2023",
     "built": null,
-    "year_start": 2019,
-    "year_end": 2021,
+    "year_start": 2020,
+    "year_end": 2023,
     "municipality": "Piran",
     "locality": "Strunjan, Piran",
     "latitude": 45.537026,
@@ -19596,10 +19596,10 @@
     "locality": "Trg republike 3, Ljubljana",
     "latitude": 46.050209,
     "longitude": 14.499701,
-    "zag_involvement_type": "structural assessment",
+    "zag_involvement_type": "BIM",
     "zag_involvement_types": [
-     "structural assessment",
-     "BIM"
+     "BIM",
+     "digitalisation"
     ],
     "zag_role": "Partner of the Institute for the Protection of Cultural Heritage of Slovenia in the exhibition KONS-TR³: Konstrukcija nove ere (Galerija TR3, 11 October to 2 December 2023) on the structure of Ravnikar’s Trg republike towers",
     "description": "Exhibition on the structural design of the Trg republike complex by Edvard Ravnikar and Ervin Prelog, prepared by ZVKDS with ZAG as partner.",

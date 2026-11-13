@@ -235,3 +235,5 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border-radius:5px;backgr
 .qitem.done .qtxt>p{color:var(--g-mut)}
 .qres{text-align:left}
 .qitem.done .qres p{color:#1D1D1F}.qitem.done .qres .note{color:var(--g-mut)}
+.qv{display:inline-flex;align-items:center;height:20px;padding:0 9px;border-radius:999px;font-size:11px;font-weight:600;background:rgba(52,199,89,.16);color:#1F7A33}
+.qv.c{background:rgba(255,149,0,.16);color:#9A5200}

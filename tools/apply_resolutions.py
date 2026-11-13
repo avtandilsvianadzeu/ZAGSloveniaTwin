@@ -57,10 +57,12 @@ def main(files):
             specs = o.get('specs', [])
             keep = r.get('keep') or {}
             if r['status'] == 'resolved' and kind.startswith('differ') and keep.get('label') and keep.get('value') and url:
+                norm = lambda x: re.sub(r'\s*\(.*?\)', '', str(x)).strip().lower()
                 lab = keep['label'].strip().lower()
-                for s in specs:
-                    if s.get('label', '').strip().lower() == lab:
-                        old = f"{s.get('value')} {s.get('unit') or ''}".strip()
+                exact = [s for s in specs if s.get('label', '').strip().lower() == lab]
+                loose = [s for s in specs if norm(s.get('label', '')) == norm(lab)]
+                for s in (exact or (loose if len(loose) == 1 else [])):
+                        old = tidy(f"{s.get('value')} {s.get('unit') or ''}".strip())
                         new = str(keep['value']).strip()
                         if str(s.get('value')).strip() != new or (keep.get('unit') and keep.get('unit') != s.get('unit')):
                             s['value'] = new
