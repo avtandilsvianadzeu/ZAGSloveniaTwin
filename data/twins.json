@@ -1655,7 +1655,7 @@
    }
   },
   "he_solkan": {
-   "summary": "HE Solkan, run-of-river hydropower plant with dam on the Soča (river km 91.5 from source), about 700 m upstream of the Solkan bridge; owner/operator Soške elektrarne Nova Gorica (SENG).",
+   "summary": "HE Solkan, run-of-river hydropower plant with a dam on the Soča (river km 91.5 from the source), about 700 m upstream of the Solkan bridge. Owner and operator Soške elektrarne Nova Gorica (SENG).",
    "specs": [
     {
      "label": "Min upper water level",
@@ -2118,7 +2118,7 @@
    }
   },
   "he_zlatolicje": {
-   "summary": "HE Zlatoličje, diversion (canal) hydropower plant on the Drava system, fed from the Melje weir in Maribor; powerhouse near Zlatoličje, Municipality of Starše; owner Dravske elektrarne Maribor (DEM, HSE Group).",
+   "summary": "HE Zlatoličje, diversion (canal) hydropower plant on the Drava system, fed from the Melje weir in Maribor, with the powerhouse near Zlatoličje, Municipality of Starše. Owner Dravske elektrarne Maribor (DEM, HSE Group).",
    "specs": [
     {
      "label": "Dam type",
@@ -2783,7 +2783,7 @@
    }
   },
   "he_vuhred": {
-   "summary": "HE Vuhred, run-of-river dam-type hydropower plant on the Drava at Vuhred; owner/operator Dravske elektrarne Maribor (DEM).",
+   "summary": "HE Vuhred, run-of-river dam-type hydropower plant on the Drava at Vuhred. Owner and operator Dravske elektrarne Maribor (DEM).",
    "specs": [
     {
      "label": "Dam type",
@@ -3260,7 +3260,7 @@
    }
   },
   "strunjan": {
-   "summary": "Flysch sea cliff of the Strunjan cliff (Strunjanski klif) at Mesečev zaliv / Bay of Sv. Križ (St. Cross / Moon Bay), Strunjan Landscape Park. Late-2019 collapse of ~2,000 m3 'nearby' the Aug 2023 rockfall in the Bay of St. Cross (UL).",
+   "summary": "Strunjan flysch sea cliff (Strunjanski klif) at the bay of Sveti Križ (Mesečev zaliv, Moon Bay), Strunjan Landscape Park. About 2,000 m3 of flysch collapsed in the bay at the end of December 2019, and a further rockfall followed in the bay in August 2023.",
    "specs": [
     {
      "label": "Height",
@@ -3414,7 +3414,7 @@
    }
   },
   "sitarjevec": {
-   "summary": "Sitarjevec mine, Litija: former polymetallic (Pb, Hg, Zn, Cu, Fe, barite) mine, now a show mine; tours go through the export tunnel (Izvozni rov). Address Sitarjevška cesta 46.",
+   "summary": "Sitarjevec mine, Litija, a former polymetallic mine (Pb, Hg, Zn, Cu, Fe, barite), now a show mine. Tours go through the export tunnel (Izvozni rov). Address Sitarjevška cesta 46.",
    "specs": [
     {
      "label": "Ores",
@@ -3842,7 +3842,7 @@
    }
   },
   "zag_gameljne": {
-   "summary": "Former ZAG fire laboratory in Gameljne pri Ljubljani, operating from 1986; ZAG also had a production plant (obrat) in Gameljne.",
+   "summary": "Former ZAG fire laboratory in Gameljne pri Ljubljani, operating from 1986. ZAG also had a production plant (obrat) in Gameljne.",
    "specs": [
     {
      "label": "Buildings managed by ZAG on the site (cadastre)",
@@ -3982,7 +3982,7 @@
    }
   },
   "zag_maribor": {
-   "summary": "ZAG business unit Maribor (Poslovna enota Maribor), Kidričeva cesta 47, Dobrovce; opened 2021.",
+   "summary": "ZAG business unit Maribor (Poslovna enota Maribor), Kidričeva cesta 47, Dobrovce, opened 2021.",
    "specs": [
     {
      "label": "Buildings managed by ZAG on the site (cadastre)",
@@ -4533,7 +4533,7 @@
    "summary": "UL FGG (Fakulteta za gradbeništvo in geodezijo), Jamova cesta 2, Ljubljana",
    "specs": [
     {
-     "label": "Height above ground (GURS)",
+     "label": "Height (GURS topographic survey of 2003)",
      "value": "28.0",
      "unit": "m",
      "source": "https://ipi.eprostor.gov.si/jgp/data",
@@ -4695,7 +4695,7 @@
    }
   },
   "karavanke_c": {
-   "summary": "Karavanke (Karawanken) motorway tunnel, A2 (SI) / A11 (AT), Slovenian portal at Hrušica; two tubes now: original 1991 west tube (under reconstruction) and new east tube opened March 2026",
+   "summary": "Karavanke (Karawanken) motorway tunnel, A2 in Slovenia and A11 in Austria, with the Slovenian portal at Hrušica. Two tubes: the original 1991 west tube, under reconstruction until about April 2029, and the new east tube, officially opened on 18 March 2026.",
    "specs": [
     {
      "label": "Length original tube",
@@ -5220,7 +5220,7 @@
    }
   },
   "karavanke_r": {
-   "summary": "Karavanke (Karawanken) railway tunnel, Jesenice to Rosenbach (Karawanken railway), south portal at Hrušica/Jesenice; double-track bore converted to single track in 2020-2021",
+   "summary": "Karavanke (Karawanken) railway tunnel, Jesenice to Rosenbach (Karawanken railway), with the south portal at Hrušica, Jesenice. The double-track bore was converted to single track in 2020 and 2021.",
    "specs": [
     {
      "label": "Length",
@@ -5384,7 +5384,7 @@
    }
   },
   "golovec": {
-   "summary": "Golovec tunnel, A1 eastern Ljubljana ring between Bizovik (Litijska cesta) and Malence junction; twin tube, three lanes per tube",
+   "summary": "Golovec tunnel, A1 eastern Ljubljana ring between Bizovik (Litijska cesta) and the Malence junction. Twin tube, three lanes per tube.",
    "specs": [
     {
      "label": "Length",
@@ -5612,7 +5612,7 @@
     },
     {
      "label": "Opened",
-     "value": "1 July 2008 (work start October 2004)",
+     "value": "1 July 2008 (construction start December 2004)",
      "unit": "",
      "source": "https://www.lotsberg.net/data/slovenia/list.html",
      "quote": "SLO | Šentvid | 1 486 | 01.07.2008 | LJ | Second tube: 1 461 m. Šentvid - Koseze. Work start: 10.2004. 414 m built in C&C",
@@ -6755,12 +6755,12 @@
    "model": {
     "level": "plan",
     "lengths_m": [
-     2292,
-     2240
+     2237,
+     2278
     ],
     "deck_width_m": 9.56,
     "basis": [
-     "tube lengths northern 2,292 m (tube 1) and southern 2,240 m (tube 2)",
+     "tube lengths right (northern) 2,237 m (tube 1) and left (southern) 2,278 m (tube 2), URSZR Koper 2021",
      "carriageway 7.70 m plus walkways 0.93 m on both sides, 9.56 m at road level"
     ],
     "assumed": "Tube 1 on the map is the northern tube, read from the drawn lines. Other sources give other tube lengths (see source differences). Only the road surface is drawn. The tube vault, lining and height are not in the sources and are not drawn.",
@@ -7166,7 +7166,7 @@
    }
   },
   "markovec": {
-   "summary": "Markovec (Monte San Marco) tunnel, Koper to Izola expressway (H6), twin tube",
+   "summary": "Markovec (Monte San Marco) tunnel, twin tube on main road G2-111 Koper to Izola (expressway H6 until end of 2025).",
    "specs": [
     {
      "label": "Length",
@@ -7380,11 +7380,11 @@
     "level": "plan",
     "lengths_m": [
      2145,
-     2175
+     2174
     ],
     "deck_width_m": 9.54,
     "basis": [
-     "tube lengths northern 2,145 m (tube 1) and southern 2,175 m (tube 2)",
+     "tube lengths right (northern) 2,145 m (tube 1) and left (southern) 2,174 m (tube 2)",
      "carriageway 7.70 m plus walkways 0.92 m on both sides, 9.54 m at road level"
     ],
     "assumed": "Tube 1 on the map is the northern tube, read from the drawn lines. Only the road surface is drawn. The tube vault, lining and height are not drawn.",
@@ -7829,7 +7829,7 @@
    "specs": [
     {
      "label": "Length",
-     "value": "745 (1996 tube) + 708 (1976 tube)",
+     "value": "left tube (towards Celje) 743, right tube (towards Ljubljana) 728",
      "unit": "m",
      "source": "https://www.lotsberg.net/data/slovenia/list.html",
      "quote": "SLO | Pletovarje | 745 | 25.10.1996 | CE | Second tube: 708 m (21.07.1976). Zice - Dramlje. Štajerska motorway | A1",
@@ -8068,7 +8068,7 @@
    }
   },
   "tabor_h4": {
-   "summary": "Podnanos tunnel on H4 Razdrto to Vipava (planned as 'predor Tabor I/II' in the 1999 location plan), twin tube; as-built name is Podnanos",
+   "summary": "Podnanos tunnel, twin tube on H4 Razdrto to Vipava, named Tabor I and Tabor II in the location plan.",
    "specs": [
     {
      "label": "Length",
@@ -8338,7 +8338,7 @@
    }
   },
   "he_vrhovo": {
-   "summary": "HE Vrhovo, run-of-river hydropower plant with concrete gravity dam on the Sava near Vrhovo (Municipality of Radeče), head plant of the lower Sava chain; owner/operator Savske elektrarne Ljubljana (SEL).",
+   "summary": "HE Vrhovo, run-of-river hydropower plant with a concrete gravity dam on the Sava near Vrhovo (Municipality of Radeče), the head plant of the lower Sava chain. Owner and operator Savske elektrarne Ljubljana (SEL).",
    "specs": [
     {
      "label": "Dam type",
@@ -8462,7 +8462,7 @@
      "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
     },
     {
-     "label": "Gross head (JET 2024 paper)",
+     "label": "Gross head at rated unit power (JET paper, December 2025)",
      "value": "7.5",
      "unit": "m",
      "source": "https://journals.um.si/index.php/jet/article/download/5798/3543/17342",
@@ -8744,7 +8744,7 @@
      "dam outline from OpenStreetMap way 288155563",
      "height 27 m from the sources"
     ],
-    "assumed": "The outline is drawn by OpenStreetMap mappers, not surveyed by the operator. It is raised as one block to the published height, starting at an assumed level 0, because the foundation and river bed elevations are not published. Gates, piers and the powerhouse interior are not drawn. Sources differ on the height: 27 m (SEL) and 25.65 m (IBE 2010), the larger figure is drawn.",
+    "assumed": "The outline is drawn by OpenStreetMap mappers, not surveyed by the operator. It is raised as one block to the published height, starting at an assumed level 0, because the foundation and river bed elevations are not published. Gates, piers and the powerhouse interior are not drawn. The height of 27 m is the structural height given by SEL, the owner. IBE 2010 gives 25.65 m as an alternative design figure.",
     "sources": [
      "https://www.openstreetmap.org/way/288155563",
      "https://www.sel.si/en/production-facilities/"
@@ -8877,7 +8877,7 @@
    }
   },
   "jez_melje": {
-   "summary": "Jez Melje: gated weir on the Drava at Melje, Maribor, the intake structure of the HE Zlatoličje derivation canal, with the small plant MHE Melje on the ecological flow; owner/operator DEM.",
+   "summary": "Jez Melje, a gated weir on the Drava at Melje, Maribor, and the intake structure of the HE Zlatoličje derivation canal, with the small plant MHE Melje on the ecological flow. Owner and operator DEM.",
    "specs": [
     {
      "label": "Dam type",
@@ -9512,7 +9512,7 @@
    }
   },
   "he_bostanj": {
-   "summary": "HE Boštanj, run-of-river hydropower plant with dam on the Sava at Boštanj (Sevnica), second plant of the lower Sava chain; owner/operator HESS (Hidroelektrarne na Spodnji Savi).",
+   "summary": "HE Boštanj, run-of-river hydropower plant with a dam on the Sava at Boštanj (Sevnica), the second plant of the lower Sava chain. Owner and operator HESS (Hidroelektrarne na Spodnji Savi).",
    "specs": [
     {
      "label": "Height",
@@ -10241,7 +10241,7 @@
    }
   },
   "he_arto": {
-   "summary": "HE Arto-Blanca (OSM/IBE: 'HE Blanca'), run-of-river hydropower plant with dam on the Sava between Blanca and Arto; third plant of the lower Sava chain; owner/operator HESS.",
+   "summary": "HE Arto-Blanca (HE Blanca in OpenStreetMap and IBE), run-of-river hydropower plant with a dam on the Sava between Blanca and Arto, the third plant of the lower Sava chain. Owner and operator HESS.",
    "specs": [
     {
      "label": "Height",
@@ -11285,7 +11285,7 @@
    }
   },
   "he_krsko": {
-   "summary": "HE Krško, run-of-river hydropower plant with dam on the Sava at Krško, fourth plant of the lower Sava chain; owner/operator HESS. Distinct from Krško NPP.",
+   "summary": "HE Krško, run-of-river hydropower plant with a dam on the Sava at Krško, the fourth plant of the lower Sava chain. Owner and operator HESS. Not to be confused with the Krško nuclear power plant.",
    "specs": [
     {
      "label": "Height",
@@ -11676,7 +11676,7 @@
    }
   },
   "che_avce": {
-   "summary": "ČHE Avče, pumped-storage plant: underground powerhouse on the left bank of the Soča at the mouth of the Avšček brook, lower reservoir = existing Ajba reservoir (HE Plave), upper reservoir in a natural basin near Kanalski Vrh; owner/operator SENG.",
+   "summary": "ČHE Avče, pumped-storage plant with an underground powerhouse on the left bank of the Soča at the mouth of the Avšček brook. The lower reservoir is the existing Ajba reservoir (HE Plave), the upper reservoir lies in a natural basin near Kanalski Vrh. Owner and operator SENG.",
    "specs": [
     {
      "label": "Dam type",
@@ -12343,7 +12343,7 @@
    }
   },
   "slano_blato": {
-   "summary": "Slano blato landslide/earthflow on the Grajšček stream below Čaven, above Lokavec (Ajdovščina); Triassic limestone over Eocene flysch (Trnovo overthrust).",
+   "summary": "Slano blato landslide and earthflow on the Grajšček stream below Čaven, above Lokavec (Ajdovščina), in Triassic limestone over Eocene flysch (Trnovo overthrust).",
    "specs": [
     {
      "label": "Length",
@@ -12699,7 +12699,7 @@
    }
   },
   "stoze": {
-   "summary": "Stože (also 'Stovže') landslide on the slope above Mangartski potok, W of Mangart; failed 17 Nov 2000 (night 16-17 Nov), turned into a debris flow ~4 km to Log pod Mangartom, 7 deaths.",
+   "summary": "Stože (also Stovže) landslide on the slope above Mangartski potok, west of Mangart. The main slide on 17 November 2000, after a first slide on 15 November, turned into a debris flow that ran about 4 km to Log pod Mangartom, with 7 deaths.",
    "specs": [
     {
      "label": "Crown elevation",
@@ -13024,7 +13024,7 @@
    }
   },
   "krvavec": {
-   "summary": "Krvavec 6-seat detachable gondola (krožnokabinska žičnica, KKŽ) from the valley (Grad, Cerklje na Gorenjskem) to Gospinca, Krvavec ski resort; operator RTC Krvavec d.d.",
+   "summary": "Krvavec 6-seat detachable gondola (krožnokabinska žičnica, KKŽ) from the valley (Grad, Cerklje na Gorenjskem) to Gospinca, Krvavec ski resort. Operator RTC Krvavec d.d.",
    "specs": [
     {
      "label": "Lift type",
@@ -13337,7 +13337,7 @@
    }
   },
   "velikaplanina": {
-   "summary": "Velika planina pendulum aerial tramway (nihalka), Kamniška Bistrica valley station to the upper station at Šimnovec on Velika planina; 2 cabins x 32 persons; operator Velika planina d.o.o.",
+   "summary": "Velika planina pendulum aerial tramway (nihalka), from the Kamniška Bistrica valley station to the upper station at Šimnovec on Velika planina, with 2 cabins of 32 persons. Operator Velika planina d.o.o.",
    "specs": [
     {
      "label": "Lift type",
@@ -13421,11 +13421,10 @@
     },
     {
      "label": "Speed",
-     "value": "8",
+     "value": "7.00",
      "unit": "m/s",
-     "source": "https://lift-world.info/en/lifts/2505/datas.htm",
-     "quote": "Driving speed line: 8 m/s",
-     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
+     "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
+     "quote_note": "Settled on 13 November 2026 from the official list of cableways (Uradni list RS 103/2006), which ranks above lift-world. Shown before: 8 m/s."
     },
     {
      "label": "Rope notes",
@@ -13653,7 +13652,7 @@
    }
   },
   "grad_vzpenjaca": {
-   "summary": "Ljubljana Castle funicular (Tirna vzpenjača na Ljubljanski grad), Krekov trg to Ljubljana Castle; Doppelmayr, opened 28 Dec 2006",
+   "summary": "Ljubljana Castle funicular (Tirna vzpenjača na Ljubljanski grad), Krekov trg to Ljubljana Castle. Doppelmayr, opened 28 December 2006.",
    "specs": [
     {
      "label": "Lift type",
@@ -13799,12 +13798,12 @@
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Length (Wikipedia)",
+     "label": "Height difference (Wikipedia)",
      "value": "70",
      "unit": "m",
      "source": "https://en.wikipedia.org/wiki/Ljubljana_Castle_funicular",
      "quote": "70 metres (230 ft)",
-     "quote_note": "Checked word for word against the text of the Wikipedia page, read on 12 November 2026."
+     "quote_note": "Wikipedia gives 70 m. The city ordinance gives a height difference of 70.05 m and a track length of 118.21 m, so 70 m is the rise."
     },
     {
      "label": "Architect",
@@ -13927,7 +13926,7 @@
    }
   },
   "kranjskagora_z": {
-   "summary": "Kranjska Gora ski resort lift system (RTC Žičnice Kranjska Gora d.d.), multiple chairlifts and surface lifts on Vitranc/Podkoren; not a single installation",
+   "summary": "Kranjska Gora ski resort lift system (RTC Žičnice Kranjska Gora d.d.), with several chairlifts and surface lifts on Vitranc and Podkoren, not a single installation.",
    "specs": [
     {
      "label": "Lifts",
@@ -14285,7 +14284,7 @@
    }
   },
   "vogel": {
-   "summary": "Vogel aerial tramway (nihalka) Ukanc (Bohinj) to Vogel ski centre; Poma 2001, 2 x 80-person cabins; replaced the 1964 Waagner-Biro tramway; operator Žičnice Vogel Bohinj",
+   "summary": "Vogel aerial tramway (nihalka) from Ukanc (Bohinj) to the Vogel ski centre. Poma 2001, 2 cabins of 80 persons, replacing the 1964 Waagner-Biro tramway. Operator Žičnice Vogel Bohinj, d.o.o.",
    "specs": [
     {
      "label": "Lift type",
@@ -14618,7 +14617,7 @@
    }
   },
   "cerkno_z": {
-   "summary": "Cerkno ski resort lift system (Smučarski center Cerkno, Cerkno Hills/Davča), several chairlifts; not a single installation",
+   "summary": "Cerkno ski resort lift system (Smučarski center Cerkno, Cerkno Hills and Davča), with several chairlifts, not a single installation.",
    "specs": [
     {
      "label": "Lifts",
@@ -14850,7 +14849,7 @@
    }
   },
   "golte": {
-   "summary": "Golte (Žekovec) pendulum aerial tramway (nihalka), Žekovec (Radegunda, Mozirje) to Golte at Hotel Montis; Ceretti Tanfani 1969, new cabins 2002; operator Golte d.o.o.",
+   "summary": "Golte (Žekovec) pendulum aerial tramway (nihalka), from Žekovec (Radegunda, Mozirje) to Golte at Hotel Montis. Ceretti Tanfani 1969, new cabins 2002. Operator Golte d.o.o.",
    "specs": [
     {
      "label": "Lift type",
@@ -15180,7 +15179,7 @@
    }
   },
   "kanin_z": {
-   "summary": "Bovec-Kanin 4-seat detachable gondola (krožnokabinska žičnica) in three sections A (Dvor, Bovec) - B (Čelo) - C (Skripi) - D (Podi); Poma 1973; operator ATC Kanin Bovec d.o.o.; out of service since end of 2023",
+   "summary": "Bovec-Kanin 4-seat detachable gondola (krožnokabinska žičnica) in three sections, A (Dvor, Bovec) to B (Čelo) to C (Skripi) to D (Podi). Poma, 1973. Operator ATC Kanin Bovec d.o.o. Out of service since autumn 2023, without an operating permit.",
    "specs": [
     {
      "label": "Lift type",
@@ -15536,7 +15535,7 @@
    }
   },
   "straza_bled": {
-   "summary": "Straža (Bled) 2-seat fixed-grip chairlift, Doppelmayr 1989 (replaced a 1953 single chair); operator Infrastruktura Bled d.o.o.",
+   "summary": "Straža (Bled) 2-seat fixed-grip chairlift, Doppelmayr 1989, which replaced a 1953 single chair. Operator Infrastruktura Bled d.o.o.",
    "specs": [
     {
      "label": "Lift type",
@@ -15765,7 +15764,7 @@
    }
   },
   "planica_z": {
-   "summary": "Probably the Čaplja 2-seat chairlift at the Planica Nordic Centre (Leitner 2009, valley station by Bloudek's hill, top by the in-run of the Gorišek brothers' flying hill); operator Nordic Centre Planica / ZŠRS Planica. The ZAG record does not name the lift; Planica also has a zipline and an inclined",
+   "summary": "The ZAG reference list does not name the installation. The record is placed on the Čaplja 2-seat chairlift at the Planica Nordic Centre (Leitner 2009), whose lower station is next to Bloudek's ski jump and whose top station is beside the in-run of the Gorišek brothers' flying hill. Operator Zavod za šport RS Planica, which runs the Nordijski center Planica.",
    "specs": [
     {
      "label": "Lift type",
@@ -15978,7 +15977,7 @@
    }
   },
   "rtp_gorica": {
-   "summary": "RTP 110/20(/10) kV Gorica power distribution substation of Elektro Primorska; ZAG inspected the steel structures of transformer bay TR-1. Not a tower/mast.",
+   "summary": "RTP Gorica power distribution substation, rated 110/20 kV now (ELES) and 110/20/10 kV at the time of the ZAG inspections. ELES is the site owner and Elektro Primorska ordered the ZAG inspections of the steel structures of transformer bay TR-1. A substation, not a tower or mast.",
    "specs": [
     {
      "label": "Cadastre building at the point",
@@ -16087,7 +16086,7 @@
    }
   },
   "pecna_reber": {
-   "summary": "Transmitter site on the summit of Pečna reber hill east of Postojna (hut Koča Mladika na Pečni rebri nearby); a hiking guide notes 'transmitters' at the summit, which cannot be climbed. An amateur repeater S55UPO 'PECNA REBER (POSTOJNA)' is at 660 m, locator JN75CS.",
+   "summary": "Transmitter site on the summit of Pečna reber hill east of Postojna, near the hut Koča Mladika na Pečni rebri. A hiking guide notes 'transmitters' at the summit, which cannot be climbed. An amateur repeater S55UPO 'PECNA REBER (POSTOJNA)' is at 660 m, locator JN75CS.",
    "specs": [
     {
      "label": "Site type",
@@ -16226,7 +16225,7 @@
    }
   },
   "livarna_crnomelj": {
-   "summary": "Foundry plant LIVAR d.d., obrat Črnomelj (Livarna Črnomelj), Ulica heroja Starihe 17, 8340 Črnomelj; ZAG inspected its steel chimney in 2009 (client Apeling).",
+   "summary": "Foundry plant LIVAR d.d., obrat Črnomelj (Livarna Črnomelj), Ulica heroja Starihe 17, 8340 Črnomelj. ZAG inspected its steel chimney in 2009 (client Apeling).",
    "specs": [
     {
      "label": "Cadastre building at the point",
@@ -16266,7 +16265,7 @@
    "kind": "Site"
   },
   "sz_masts": {
-   "summary": "Railway electrification (overhead contact line) masts damaged in the February 2014 ice storm; worst damage on Borovnica-Divača section of Ljubljana-Sežana line. Not a single structure.",
+   "summary": "Railway electrification (overhead contact line) masts damaged in the February 2014 ice storm, with the worst damage on the Borovnica to Divača section of the Ljubljana to Sežana line. Not a single structure.",
    "specs": [
     {
      "label": "Traffic stopped",
@@ -16685,7 +16684,7 @@
    }
   },
   "bovec_quake": {
-   "summary": "12 April 1998 Krn Mountains (Bovec) earthquake, Mw 5.6 / ML 5.6-5.8, max intensity VII-VIII EMS-98, epicentre ~8 km SE of Bovec on the Ravne fault. ZAG studied effects on buildings in the upper Soča valley (Bovec, Kobarid, Tolmin areas).",
+   "summary": "12 April 1998 Krn Mountains (Bovec) earthquake, Mw 5.6 (MLV 5.6, Ms 5.7), maximum intensity VII to VIII EMS-98, relocated hypocentre at 46.309 N, 13.632 E and 7.6 km depth on the Ravne fault. ZAG studied effects on buildings in the upper Soča valley (Bovec, Kobarid and Tolmin areas).",
    "specs": [
     {
      "label": "Date time",
@@ -16877,7 +16876,7 @@
    }
   },
   "soca_quake": {
-   "summary": "12 July 2004 earthquake in the upper Soča valley (Golobar / Bovec area), ML 4.9 (Mw 5.2), intensity VI-VII EMS; ZAG analysed damaged buildings (2004) and then reviewed designs and supervised repair/strengthening (2005-).",
+   "summary": "12 July 2004 earthquake in the upper Soča valley, Mw 5.2 (early local magnitude 4.9), intensity VI to VII EMS, with the worst damage in Čezsoča and Bovec. ZAG analysed damaged buildings in 2004 and from 2005 reviewed designs and supervised the repair and strengthening of damaged buildings.",
    "specs": [
     {
      "label": "Date time",
@@ -17100,7 +17099,7 @@
    }
   },
   "idrija_cherplan": {
-   "summary": "CHERPLAN (Enhancement of Cultural Heritage through Environmental Planning and Management), 1 Jan 2011 - 31 Dec 2013, lead partner Regione Friuli Venezia Giulia, Municipality of Idrija a partner; ZAG assessed seismic risk to buildings in the Municipality of Idrija (293.7 km2).",
+   "summary": "CHERPLAN (Enhancement of Cultural Heritage through Environmental Planning and Management), 1 January 2011 to 31 December 2013, lead partner Regione Friuli Venezia Giulia, with the Municipality of Idrija as a partner. In 2013 ZAG assessed the seismic risk to buildings in the Municipality of Idrija (293.7 km2).",
    "specs": [
     {
      "label": "Area",
@@ -17582,7 +17581,7 @@
    }
   },
   "sij_acroni_pavers": {
-   "summary": "Cement-free alkali-activated (geopolymer) pavers with 62% SIJ Acroni steel slag (78% secondary raw materials) laid at a bicycle parking area in front of / in the courtyard of the SIJ Acroni plant, Jesenice; GEORIS (EIT RawMaterials, lead Enalos); demo event 24 Apr 2024 with KU Leuven mobile unit.",
+   "summary": "Cement-free alkali-activated (geopolymer) pavers with 62% SIJ Acroni steel slag (78% secondary raw materials), laid at the bicycle parking in front of the steel plant building in the SIJ Acroni courtyard, Jesenice. GEORIS project (EIT RawMaterials, lead Enalos). The project partners presented paver production on 24 April 2024, with pavers made in a KU Leuven mobile unit.",
    "specs": [
     {
      "label": "Composition",
@@ -18257,7 +18256,7 @@
    "summary": "TR3 Tower (Stolpnica TR3), Trg republike 3, Ljubljana",
    "specs": [
     {
-     "label": "Height above ground (GURS)",
+     "label": "Height (GURS topographic survey of 2003)",
      "value": "69.2",
      "unit": "m",
      "source": "https://ipi.eprostor.gov.si/jgp/data",

@@ -208,12 +208,12 @@
     "longitude": 14.227194,
     "zag_involvement_type": "monitoring",
     "zag_role": "Long-term structural health monitoring and bridge weigh-in-motion",
-    "description": "Two parallel structures carrying one direction each, built in 1972 on what is now the Venice to Lviv corridor. ZAG instrumented span P14D of the right-hand viaduct with strain gauges on the bottom flange of four main girders at mid-span, and triaxial accelerometers across several spans for ambient and traffic-induced modal testing. A bridge weigh-in-motion system supplies the traffic loading, and the measured response is used to update a finite element model of the structure. Both viaducts were fully rehabilitated between May 2017 and July 2019, including carbon fibre strengthening of the cantilevers, bearing replacement and a one metre deck widening.",
-    "hist": "Ravbarkomanda is a twin multi span precast I girder viaduct on the fifth Trans European corridor, which runs from Venice to Lviv. The two parallel structures are 588 m and 544 m long, with fifteen spans on the left viaduct and seventeen on the right, and each carries two lanes and a hard shoulder. The monitoring system installed during the rehabilitation comprises 216 sensors measuring longitudinal strain on main girders, pier caps and deck extensions, temperature sensors across several spans, accelerometers on external prestressing tendons at 24 locations across both viaducts, 40 fibre Bragg grating sensors on carbon fibre rods, and long gauge deformation sensors at six pier cap locations per viaduct. Strain gauges record at 500 samples per second with a 35 Hz low pass filter. The structure crosses a double track railway line and a state road twice.",
+    "description": "Two parallel structures carrying one direction each, built in 1972 on what is now the Venice to Lviv corridor. ZAG instrumented span P14D of the right-hand viaduct with strain gauges on the bottom flange of four main girders at mid-span, and triaxial accelerometers across several spans for ambient and traffic-induced modal testing. A bridge weigh-in-motion system supplies the traffic loading, and the measured response is used to update a finite element model of the structure. Both viaducts were fully rehabilitated between May 2017 and June 2019, including carbon fibre strengthening of the cantilevers, bearing replacement and a one metre deck widening.",
+    "hist": "Ravbarkomanda is a twin multi span precast I girder viaduct on the fifth Trans European corridor, which runs from Venice to Lviv. The right viaduct is about 595 m long with seventeen spans and the left viaduct about 556 m long with fifteen spans, and each carries two lanes and a hard shoulder. The monitoring system installed during the rehabilitation comprises 216 sensors measuring longitudinal strain on main girders, pier caps and deck extensions, temperature sensors across several spans, accelerometers on external prestressing tendons at 24 locations across both viaducts, 40 fibre Bragg grating sensors on carbon fibre rods, and long gauge deformation sensors at six pier cap locations per viaduct. Strain gauges record at 500 samples per second with a 35 Hz low pass filter. The structure crosses a double track railway line and a state road twice.",
     "facts": [
      [
       "Lengths",
-      "588 m left viaduct, 544 m right viaduct"
+      "about 595 m right viaduct, about 556 m left viaduct"
      ],
      [
       "Spans",
@@ -253,8 +253,8 @@
      "carries": "A1 motorway (Ljubljana-Koper)",
      "typ": "Twin precast prestressed I-girder viaducts on elastomeric bearings, each divided into four units by expansion joints",
      "built": "1972",
-     "spans": 15,
-     "length_m": 588
+     "spans": 17,
+     "length_m": 595
     },
     "image": "img/ph/rav.webp",
     "image_credit": null,
@@ -636,8 +636,8 @@
     "longitude": 15.15108,
     "zag_involvement_type": "structural assessment",
     "zag_role": "Static and dynamic load testing in March 2023, in cooperation with dr Andrej Štrukelj (University of Maribor)",
-    "description": "The first bridge in Slovenia built with stress ribbon technology. ZAG carried out the load test in March 2023: static loading in three stages, dynamic testing with a light truck driven over artificial obstacles, and ambient vibration measurement. Vertical displacements, natural frequencies and mode shapes were compared against a finite element model and agreed well. The reported deflection was 130 mm under a 70 tonne load. Client was the City Municipality of Novo mesto, built by CGP Novo mesto with Freyssinet Adria, designed by Ponting Bridges and Pipenbaher Consulting Engineers.",
-    "hist": "The footbridge at Irca vas is the first stress ribbon bridge in Slovenia and crosses the Krka between Lastovce and Groblje. Ponting gives a span of 130 m, a width of 4 m and a deck thickness of 42 cm, assembled from 46 precast segments installed on fully tensioned bearing cables between anchored concrete block abutments. Freyssinet describes the same structure with a main span of 120.5 m and six tendons, and states that the grouted tendons are thought to be a first of their kind on this bridge type. The client was the City Municipality of Novo mesto and the contractor was a joint venture of Freyssinet Adria and CGP Novo mesto. The bridge received the Golden Pencil award in 2023 and the Plecnik Medal in 2024, and it was officially named Stukljeva brv after the Olympic gymnast Leon Stukelj.",
+    "description": "The first bridge in Slovenia built with stress ribbon technology. ZAG took part in the load test in March 2023, carried out by dr Andrej Štrukelj of the University of Maribor: static loading in three stages, dynamic testing with a light truck driven over artificial obstacles, and ambient vibration measurement. Vertical displacements, natural frequencies and mode shapes were compared against a finite element model and agreed well. Under 18 vehicles with a total mass of 70.4 t the calculated maximum deflection was 145 mm, and the measured values were up to 10 % smaller. Client was the City Municipality of Novo mesto, built by CGP Novo mesto with Freyssinet Adria, designed by Ponting Bridges and Pipenbaher Consulting Engineers.",
+    "hist": "The footbridge at Irca vas is the first stress ribbon bridge in Slovenia and crosses the Krka between Lastovce and Groblje. Ponting gives a span of 130 m, a width of 4 m and a deck thickness of 42 cm, assembled from 46 precast segments installed on fully tensioned bearing cables between anchored concrete block abutments. Freyssinet describes the same structure with a main span of 120.5 m and six tendons, and states that the grouted tendons are thought to be a first of their kind on this bridge type. The client was the City Municipality of Novo mesto and the contractor was a joint venture of Freyssinet Adria and CGP Novo mesto. The bridge received the Golden Pencil award in 2023 and the Plečnik Medal in 2024, and it was officially named Stukljeva brv after the Olympic gymnast Leon Stukelj.",
     "facts": [
      [
       "Span",
@@ -649,7 +649,7 @@
      ],
      [
       "Deck",
-      "46 precast segments on six tensioned bearing cables"
+      "46 precast segments (44 typical and 2 end elements) on four bearing tendons, with two further prestressing tendons"
      ],
      [
       "Completed",
@@ -657,7 +657,7 @@
      ],
      [
       "Awards",
-      "Golden Pencil 2023, Plecnik Medal 2024"
+      "Golden Pencil 2023, Plečnik Medal 2024"
      ],
      [
       "Official name",
@@ -1149,8 +1149,8 @@
     "latitude": 45.984312,
     "longitude": 13.654821,
     "zag_involvement_type": "materials testing",
-    "zag_role": "Expansive and non-shrink cement grouts",
-    "description": "One of the hydroelectric plants where ZAG grout formulations were used for cable duct grouting and non-shrink structural grouting.",
+    "zag_role": "Expansive and non-shrink cements for grout concrete (introduced by ZRMK), technical observation of the dam",
+    "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced its non-shrink and expansive cements for grout concrete when HE Solkan was built. The same book lists the Solkan dam among the dams under ZAG technical observation.",
     "hist": "HE Solkan is the lowest of the large plants on the Soča, standing roughly 700 m upstream of the Solkan railway bridge. It is a run of river plant with three Kaplan units, a combined swallowing capacity of 180 cubic metres per second and a gross head of 20.55 m at a flow of 60 cubic metres per second. The reservoir holds about 1.15 million cubic metres of useful storage, the permitted water level fluctuation is 1.5 m, and the catchment is 1,632 square kilometres. Average annual generation is about 105 GWh. In July 2022 the plant stopped generating entirely because of the low flow of the Soča. The operator brochure records that a reconstruction is planned for after 2025.",
     "facts": [
      [
@@ -1261,9 +1261,9 @@
     "latitude": 46.44789,
     "longitude": 15.786944,
     "zag_involvement_type": "materials testing",
-    "zag_role": "Expansive and non-shrink cement grouts",
-    "description": "Named in ZAG material as one of the hydroelectric plants where ZAG expansive and non-shrink grouts were applied. The plant works from a diversion canal rather than directly on the Drava channel. ZAG also lists third party quality control of the materials used in the upgrading of the Zlatoličje HPP, for Dravske elektrarne Maribor, 2006 to 2009.",
-    "hist": "HE Zlatoličje is the most powerful hydroelectric plant in Slovenia and was the first canal type plant built in the former state. Water is taken from the Drava at the Melje weir in Maribor and carried 17.2 km along a trapezoidal intake canal, largely on embankment, to the powerhouse near Zlatoličje, then returned to the Drava through a 6.2 km outflow canal cut deep into the ground. Between 2006 and 2013 both turbines and both generators were replaced along with the primary and secondary electrical equipment and the control systems, all six gates of the Melje weir were raised, and the dam and spillway wall were structurally reinforced. The replacement runner fitted to unit 2 has a diameter of 5,894 mm and a mass of 96 tonnes. Installed flow rose from 450 to 530 cubic metres per second and installed capacity rose by 12 MW. The small plant MHE Melje, running on the ecological minimum flow, entered service in January 2009.",
+    "zag_role": "Non-shrink cements in the construction (introduced by ZRMK), technical observation of the dam",
+    "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced non-shrink cements in the construction of HE Zlatoličje, and lists Zlatoličje and Melje among the Drava dams under ZAG technical observation. The plant works from a diversion canal rather than directly on the Drava channel. ZAG also lists third party quality control of the materials used in the upgrading of the Zlatoličje HPP, for Dravske elektrarne Maribor, 2006 to 2009.",
+    "hist": "HE Zlatoličje was the first canal type plant built in the former state. Water is taken from the Drava at the Melje weir in Maribor and carried 17.2 km along a trapezoidal intake canal, largely on embankment, to the powerhouse near Zlatoličje, then returned to the Drava through a 6.2 km outflow canal cut deep into the ground. Between 2007 and 2013 both turbines and both generators were replaced along with the primary and secondary electrical equipment and the control systems, all six gates of the Melje weir were raised, and the dam and spillway wall were structurally reinforced. The replacement runner fitted to unit 2 has a diameter of 5,894 mm and a mass of 96 tonnes. Installed flow rose from 450 to 530 cubic metres per second and installed capacity rose by 12 MW. The small plant MHE Melje, running on the ecological minimum flow, entered service in January 2009.",
     "facts": [
      [
       "Installed capacity",
@@ -1287,7 +1287,7 @@
      ],
      [
       "Refurbishment",
-      "2006 to 2013, about 62 million euros"
+      "2007 to 2013, about 62 million euros"
      ],
      [
       "Unit 2 runner",
@@ -1307,7 +1307,7 @@
      "Dravske elektrarne Maribor"
     ],
     "structure": {
-     "crosses": "Drava",
+     "crosses": null,
      "carries": null,
      "typ": "Run-of-river hydroelectric plant on a diversion canal, 126 MW",
      "built": "First unit in test operation 19 October 1968, second unit April 1969, official opening 26 April 1969. Built from autumn 1964.",
@@ -1400,8 +1400,8 @@
     "latitude": 46.587562,
     "longitude": 15.275391,
     "zag_involvement_type": "materials testing",
-    "zag_role": "Expansive and non-shrink cement grouts",
-    "description": "Named in ZAG material alongside Zlatoličje and Solkan as a site where ZAG grout formulations were used.",
+    "zag_role": "Non-shrink cements in the construction (introduced by ZRMK), technical observation of the dam",
+    "description": "ZAG's 2024 book states that ZRMK, the predecessor of ZAG, introduced non-shrink cements in the construction of HE Vuhred, and lists Vuhred among the Drava dams under ZAG technical observation.",
     "hist": "HE Vuhred is a run of river plant on the Drava in the municipality of Radlje ob Dravi, the fourth in the chain from the Austrian border. Two units entered service in 1956 and a third followed in 1958, giving three Kaplan turbines of 24.1 MW each. The design flow is 550 cubic metres per second and the head is 17.41 m. The weir has four spillway fields, each 17 m wide, with a maximum discharge capacity of 5,800 cubic metres per second. The reservoir extends 13.1 km at full supply level and holds 10.3 million cubic metres, of which 2.2 million are usable for generation. During the refurbishment the supplier replaced the entire stator winding of generator 3 because the original bars, made to a different technology, overheated. The plant now runs without permanent staff on site.",
     "facts": [
      [
@@ -1520,8 +1520,8 @@
     "longitude": 13.608536,
     "zag_involvement_type": "research",
     "zag_role": "Rockfall investigation and slope characterisation",
-    "description": "ZAG investigated a coastal rockfall of roughly 2,000 cubic metres between 2019 and 2021, combining geological mapping, geodetic remote sensing and geomechanical laboratory testing of samples taken from the cliff. The University of Ljubljana reports this work as part of the project on erosion of the coastal flysch cliffs with risk assessment.",
-    "hist": "The Strunjan cliff is the highest and the longest flysch sea cliff on the Adriatic, rising to about 80 m at Cape Ronek and running roughly 4 km between Capes Kane and Ronek. It is the longest stretch of undeveloped natural shoreline on the 130 km of coast between Grado in Italy and Savudrija in Croatia. The rock is middle Eocene flysch, a rhythmic alternation of conglomerate, sandstone, mudstone, marlstone and occasional limestone megabeds laid down in deep water about 40 million years ago and later folded and uplifted. Waves cut notches at the base until the overlying sandstone and limestone beds break away, while rain, sun and wind break up the upper face, and the park authority states that the cliff retreats inland at roughly one centimetre a year. Rockfall is frequent and documented: about 2,000 cubic metres of flysch collapsed in late 2019 and blocks of one to six tonnes fell in the bay of Sveti Križ in August 2023. The cliff, its vegetated crest and a 200 m belt of sea below it are protected as a nature reserve inside the Strunjan Landscape Park.",
+    "description": "ZAG investigated a coastal rockfall of roughly 2,000 cubic metres from 2020 to 2023, within research project J1-2477, combining geological mapping, geodetic remote sensing and geomechanical laboratory testing of samples taken from the cliff. The University of Ljubljana reports this work as part of the project on erosion of the coastal flysch cliffs with risk assessment.",
+    "hist": "The Strunjan cliff is the highest and the longest flysch sea cliff on the Adriatic, rising to about 80 m at Cape Ronek and running roughly 4 km between Capes Kane and Ronek. It is the longest stretch of undeveloped natural shoreline on the 130 km of coast between Grado in Italy and Savudrija in Croatia. The rock is middle Eocene flysch, a rhythmic alternation of conglomerate, sandstone, mudstone, marlstone and occasional limestone megabeds laid down in deep water about 40 million years ago and later folded and uplifted. Waves cut notches at the base until the overlying sandstone and limestone beds break away, while rain, sun and wind break up the upper face, and the park authority states that the cliff retreats inland at roughly one centimetre a year. Rockfall is frequent and documented: about 2,000 cubic metres of flysch collapsed in the bay of Sveti Križ at the end of December 2019 and blocks of one to six tonnes fell in the bay of Sveti Križ in August 2023. The cliff, its vegetated crest and a 200 m belt of sea below it are protected as a nature reserve inside the Strunjan Landscape Park.",
     "facts": [
      [
       "Height",
@@ -1541,7 +1541,7 @@
      ],
      [
       "2019 collapse",
-      "about 2,000 cubic metres"
+      "about 2,000 cubic metres, end of December 2019, bay of Sveti Križ"
      ],
      [
       "2023 rockfall",
@@ -2130,7 +2130,7 @@
     "longitude": 14.513951,
     "zag_involvement_type": null,
     "zag_role": "Slovenian National Building and Civil Engineering Institute",
-    "description": "Founded 1994. 255 staff, six research and testing departments, a metrology department and three notified-body services under the Construction Products Regulation. Home of SiWIM bridge weigh-in-motion and of the BrAId project applying machine learning to B-WIM data quality.",
+    "description": "Origins in 1949, operating in its present form since 1 April 1995. 254 staff at the end of 2023, five departments, the Laboratory for Metrology and three notified-body services under the Construction Products Regulation. Home of SiWIM bridge weigh-in-motion and of the BrAId project applying machine learning to B-WIM data quality.",
     "hist": "The institute traces its origin to 18 July 1949, when the first building and civil engineering institute in Slovenia was set up with twelve staff. It was renamed the Institute for Testing and Research in Materials and Structures, ZRMK Ljubljana, in 1952, by which time it had grown to 150 employees and had its own building on Dimičeva. After independence the government reorganised ZRMK in 1994 and 1995 and split it into two bodies. ZAG was registered on 17 March 1995 and began operating on 1 April 1995 as a governmental non profit research institute, a status that lets it act as an independent third party in testing and certification. It is organised into five departments, Materials, Building Physics, Fire Safe Sustainable Built Environment, Structures, and Geotechnics and Infrastructure, together with the Laboratory for Metrology, the Certification Service and the Service for Technical Assessment and Approvals.",
     "facts": [
      [
@@ -2486,7 +2486,7 @@
     "longitude": 15.70206,
     "zag_involvement_type": null,
     "zag_role": "ZAG regional unit for north-east Slovenia",
-    "description": "Opened in 2021, replacing the 1972 Maribor premises. It serves construction testing and site work across Podravska and Pomurska.",
+    "description": "Opened in 2021, replacing its earlier premises at Gorkega ulica 1 in Maribor. It serves construction testing and site work across Podravska and Pomurska.",
     "hist": "The Maribor business unit is at Kidričeva cesta 47, Dobrovce, 2204 Miklavž na Dravskem polju. It moved there from Gorkega ulica 1 in Maribor and the new premises opened on 19 October 2021. The unit occupies a renovated three storey building of 480 square metres, with offices and laboratories taking the whole of the ground floor, and the investment was about 300,000 euros. It has ten employees. The then director Aleš Žnidarič explained the move as driven by the formation of the cohesion regions and by the wish to bring together research laboratories that had been dispersed across several locations. The work of the unit spans materials, building physics, structures, geotechnics, transport infrastructure and metrology.",
     "facts": [
      [
@@ -2812,7 +2812,7 @@
     "longitude": 14.494947,
     "zag_involvement_type": null,
     "zag_role": "Faculty of Civil and Geodetic Engineering, University of Ljubljana",
-    "description": "ZAG's nearest academic partner, five kilometres away. Co-supervises BRIDGITISE doctoral candidates and co-authors the Tomačevo influence-line work.",
+    "description": "ZAG's nearest academic partner, about three kilometres away. Co-supervises BRIDGITISE doctoral candidates and co-authors the Tomačevo influence-line work.",
     "hist": "UL FGG is at Jamova cesta 2 in Ljubljana. Civil engineering teaching in Slovenia began in 1919, when the Department of Civil Engineering started courses at the Technical Faculty. The faculty passed through several reorganisations, becoming a department within the Technical Faculty in 1954 and part of the Faculty of Architecture, Civil and Geodetic Engineering in 1957, before becoming an independent member of the University of Ljubljana on 1 January 1995. It has three departments, Civil Engineering with twelve units including the chairs of structural and earthquake engineering, of mechanics and of geotechnical engineering, Geodetic Engineering with five chairs, and Environmental Civil Engineering. It also runs the Institute of Structural Engineering, Earthquake Engineering and Construction IT, the Water Management Institute, and hydraulic and structural testing laboratories.",
     "facts": [
      [
@@ -5182,7 +5182,7 @@
     "partners": [],
     "structure": {
      "crosses": null,
-     "carries": "H6 Koper to Izola",
+     "carries": "G2-111 Koper to Izola (expressway H6 until end of 2025)",
      "typ": null,
      "built": null,
      "spans": null,
@@ -5436,7 +5436,7 @@
     "year_start": 1998,
     "year_end": 2014,
     "municipality": "Trebnje",
-    "locality": "Leščevje, Trebnje",
+    "locality": "Štefan cadastral municipality, Trebnje",
     "latitude": 45.905394,
     "longitude": 14.97867,
     "zag_involvement_type": "inspection",
@@ -5996,9 +5996,9 @@
    "properties": {
     "id": "tabor_h4",
     "category": "zag_project",
-    "name": "Tabor Tunnel",
-    "name_sl": "Predor Tabor",
-    "name_en": "Tabor Tunnel",
+    "name": "Podnanos Tunnel (Tabor I and II in the location plan)",
+    "name_sl": "Predor Podnanos (Tabor I in II)",
+    "name_en": "Podnanos Tunnel (Tabor I and II in the location plan)",
     "object_type": "tunnel",
     "year": "1990-2014",
     "built": null,
@@ -6694,7 +6694,7 @@
     "people": [],
     "partners": [],
     "structure": {
-     "crosses": "Soča",
+     "crosses": null,
      "carries": null,
      "typ": null,
      "built": null,
@@ -16500,7 +16500,7 @@
     "facts": [
      [
       "Client",
-      "Žičnice Vogel Bohinj, d.d."
+      "Žičnice Vogel Bohinj, d.o.o."
      ],
      [
       "Years",
@@ -17501,7 +17501,7 @@
      ],
      [
       "Position",
-      "the settlement centre"
+      "lower station of the Čaplja chairlift at the Planica Nordic Centre"
      ]
     ],
     "people": [],
@@ -17642,7 +17642,7 @@
     "longitude": 13.6604928,
     "zag_involvement_type": "inspection",
     "zag_role": "Inspection of the quality of steel structures belonging to the RTP 110/20/10 kV Gorica TR-1 power distribution sub-station",
-    "description": "Inspection of the quality of steel structures belonging to the RTP 110/20 kV Gorica TR-1 power distribution sub-station.",
+    "description": "Inspection of the quality of steel structures belonging to the RTP 110/20/10 kV (now 110/20 kV) Gorica TR-1 power distribution sub-station.",
     "hist": null,
     "facts": [
      [
@@ -18494,7 +18494,7 @@
     "year_start": 2004,
     "year_end": null,
     "municipality": "Bovec",
-    "locality": "Lepena, Bovec",
+    "locality": "Čezsoča, Bovec",
     "latitude": 46.32,
     "longitude": 13.63,
     "zag_involvement_type": "structural assessment",
@@ -18814,10 +18814,10 @@
     "name_sl": "Most čez Savo pri Čatežu",
     "name_en": "Čatež Bridge over the Sava",
     "object_type": "bridge",
-    "year": "2022-2025",
+    "year": "2022-2024",
     "built": null,
     "year_start": 2022,
-    "year_end": 2025,
+    "year_end": 2024,
     "municipality": "Brežice",
     "locality": "Čatež ob Savi, Brežice",
     "latitude": 45.894229,
@@ -19132,7 +19132,7 @@
     "longitude": 14.094645,
     "zag_involvement_type": "materials testing",
     "zag_role": "Demonstration of alkali activated paving blocks",
-    "description": "On 24 April 2024 ZAG presented geopolymerisation technology within the GEORIS project. KU Leuven brought a mobile unit and demonstrated production of paving blocks by the geopolymer process, and participants then viewed paving blocks already laid at the SIJ Acroni headquarters. SIJ Acroni reported on 25 April 2024 that the bicycle area in front of the steelworks building was paved with these blocks.",
+    "description": "On 24 April 2024 the GEORIS project partners presented paver production at SIJ Acroni. The pavers were made by the geopolymer process in a KU Leuven mobile unit to a KU Leuven recipe, and participants then viewed paving blocks already laid in the SIJ Acroni courtyard. SIJ Acroni reported on 25 April 2024 that the bicycle area in front of the steelworks building was paved with these blocks.",
     "hist": null,
     "facts": [
      [
@@ -19242,7 +19242,7 @@
      "typ": "Road tunnel, two tubes",
      "built": null,
      "spans": null,
-     "length_m": 788
+     "length_m": 786
     },
     "image": null,
     "image_credit": null,
@@ -19425,12 +19425,8 @@
       "2012"
      ],
      [
-      "Year",
-      "2012"
-     ],
-     [
       "Position",
-      "the settlement centre"
+      "Macesnovec chairlift at Rateče"
      ]
     ],
     "people": [],

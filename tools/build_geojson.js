@@ -27,13 +27,13 @@ const TEXT_FIX = [
  ['tomacevo', 'carries', 'H3 northern ring road', 'Road no. 104 (Ljubljana ring road)'],
  /* places follow the GURS register of spatial units at the stored point and at the line ends, read 12 November 2026 */
  ['pletovarje', 'loc', 'Pletovarje, Slovenske Konjice', 'Pletovarje, Slovenske Konjice and Šentjur'],
- ['soca_quake', 'loc', 'Kobarid', 'Lepena, Bovec'],
+ ['soca_quake', 'loc', 'Kobarid', 'Čezsoča, Bovec'],
  ['ravbarkomanda', 'loc', 'A1 between Planina and Postojna', 'A1 between Planina and Postojna, Postojna'],
  ['karavanke_c', 'loc', 'Hrušica, Jesenice', 'Hrušica, Jesenice and Kranjska Gora'],
  ['kastelec', 'loc', 'Kastelec, Koper', 'Kastelec, Koper and Hrpelje-Kozina'],
  ['markovec', 'loc', 'Koper', 'Koper and Izola'],
  ['pecna_reber', 'sl', 'Pecna', 'Pečna'],
- ['rtp_gorica', 'detail', 'RTP 110/20/10 kV', 'RTP 110/20 kV'],
+ ['rtp_gorica', 'detail', 'RTP 110/20/10 kV', 'RTP 110/20/10 kV (now 110/20 kV)'],
  /* 12 November 2026, after the independent source check */
  ['he_solkan', 'hist', 'a gross head of 20.55 m at that flow', 'a gross head of 20.55 m at a flow of 60 cubic metres per second'],
  ['he_solkan', 'hist', 'is the lowest and the youngest of the large plants', 'is the lowest of the large plants'],
