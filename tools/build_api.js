@@ -42,3 +42,8 @@ W('openapi.json',{openapi:'3.1.0',info:{title:'ZAG Digital Atlas data API',versi
     '/objects.geojson':{get:{summary:'All objects as GeoJSON, alignments as lines and the rest as points',responses:{200:{description:'OK'}}}},'/objects.csv':{get:{summary:'All objects as a CSV table',responses:{200:{description:'OK'}}}}},
   components:{schemas:{Summary:{type:'object',properties:{id:str,name:str,name_sl:nstr,type:str,category:str,place:nstr,municipality:nstr,latitude:num,longitude:num,position_basis:nstr,position_exact:{type:'boolean'},zag_work_from:{type:['integer','null']},zag_work_to:{type:['integer','null']},built:{type:['integer','string','null']},values:{type:'integer'},values_with_source:{type:'integer'},has_alignment:{type:'boolean'},has_building_outline:{type:'boolean'},model:str,url:str,detail:str}}}}});
 console.log('api/v1 written:',rows.length,'objects');
+
+/* sitemap for search engines: every page and every asset record */
+{ const pages=['index.html','twin.html','dashboard.html','questions.html','api.html','add.html'].map(u=>BASE+u).concat(rows.map(r=>r.url));
+  const day=new Date().toISOString().slice(0,10);
+  fs.writeFileSync(path.join(ROOT,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+pages.map(u=>'  <url><loc>'+u.replace(/&/g,'&amp;')+'</loc><lastmod>'+day+'</lastmod></url>').join('\n')+'\n</urlset>\n'); }
