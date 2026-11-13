@@ -70,8 +70,8 @@ function infoHTML(f){
     ${typeof zagAreaHTML==='function'?zagAreaHTML(p):''}
     <p><a class="btn twinlink" href="twin.html?id=${encodeURIComponent(p.id)}">Open the asset page</a></p>
     ${(p.lines||p.line||ZA.gurs[p.id]||(ZA.twins&&ZA.twins[p.id]&&ZA.twins[p.id].model&&(ZA.twins[p.id].model.blocks||[]).length))?`<iframe class="twinframe" title="Model of ${esc(p.name_en||p.name)}" src="twin.html?id=${encodeURIComponent(p.id)}&embed=1"></iframe>`:''}
-    <h3>Project type</h3>
-    <p><span class="tag">${esc(cap(p.object_type))}</span><span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only'}[p.evidence_level])}</span></p>
+    <h3>Type and evidence</h3>
+    <p><span class="tag">${esc(typeof typeLabel==='function'?typeLabel(p.object_type):cap(p.object_type))}</span><span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only'}[p.evidence_level])}</span></p>
     ${bullets?`<h3>ZAG involvement</h3><ul>${bullets}</ul>`:''}
     ${about?`<h3>About</h3><p>${esc(about)}</p>`:''}
     ${twinHTML(p.id,['building','institution','company'].includes(p.object_type))}

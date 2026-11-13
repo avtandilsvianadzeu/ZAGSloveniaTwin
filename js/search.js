@@ -23,7 +23,7 @@ function parseCoord(q){ const m=q.replace(/[°'"NSEW]/gi,' ').replace(/,/g,' ').
 function draw(local){
   const sec=(t,items)=>items.length?`<h4>${t}</h4>${items.join('')}`:'';
   const loc=f=>f.map((x,i)=>`<button role="option" data-loc="${i}"><b>${esc(x.title)}</b><small>${esc(x.sub)}</small></button>`);
-  const rec=fs=>fs.slice(0,6).map(f=>`<button role="option" data-id="${esc(f.properties.id)}"><b>${esc(f.properties.name_en)}</b><small>${esc([cap(f.properties.object_type),f.properties.municipality,f.properties.year].filter(Boolean).join(', '))}</small></button>`);
+  const rec=fs=>fs.slice(0,6).map(f=>`<button role="option" data-id="${esc(f.properties.id)}"><b>${esc(f.properties.name_en)}</b><small>${esc([typeof typeLabel==='function'?typeLabel(f.properties.object_type):cap(f.properties.object_type),f.properties.municipality,f.properties.year].filter(Boolean).join(', '))}</small></button>`);
   const cq=parseCoord(qIn.value.trim()), coordHTML=cq?`<h4>Coordinates</h4><button role="option" data-coord="1"><b>Go to ${esc(cq.label)}</b><small>${esc(cq.ll[1].toFixed(6)+', '+cq.ll[0].toFixed(6)+' WGS 84')}</small></button>`:'';
   const html=coordHTML+sec('Bridges',rec(local.bridges))+sec('Buildings',rec(local.buildings))+sec('Infrastructure and other sites',rec(local.projects))+sec('Locations',loc(locItems));
   resEl.innerHTML=html||'<div class="none">No matches</div>'; resEl.hidden=false;

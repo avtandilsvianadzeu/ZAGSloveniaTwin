@@ -130,7 +130,7 @@
 
   /* ---------- answers ---------- */
   function card(r){ ctx.rec=r; const t=DB.twins[r.id]||{};
-    say(`<div class="zb-card"><b>${esc(r.name)}</b><span>${esc(cap(r.type))}${r.place?', '+esc(r.place):''}${r.year?', ZAG work '+esc(String(r.year).replace(/-/g,' to ')):''}</span>${t.summary?`<p>${esc(tidy(t.summary)).slice(0,260)}</p>`:''}</div>`);
+    say(`<div class="zb-card"><b>${esc(r.name)}</b><span>${esc(typeof typeLabel==='function'?typeLabel(r.type):cap(r.type))}${r.place?', '+esc(r.place):''}${r.year?', ZAG work '+esc(String(r.year).replace(/-/g,' to ')):''}</span>${t.summary?`<p>${esc(tidy(t.summary)).slice(0,260)}</p>`:''}</div>`);
     offer(recChips(r)); }
   const cap=s=>String(s||'').charAt(0).toUpperCase()+String(s||'').slice(1);
   function specLine(s){ const v=tidy(s.value)+(s.unit?' '+esc(s.unit):''); const host=s.source?(()=>{ try{ return new URL(s.source).hostname.replace(/^www\./,''); }catch(_){ return 'source'; } })():null;
@@ -158,7 +158,7 @@
     say(`<div class="zb-card"><b>${headOf(r)}</b>${body||'<p>The sources do not describe the work here in more detail.</p>'}${srcList(r,3)}</div>`);
     if(!quiet) offer([['The full story',()=>story(r)],['Key figures',()=>figures(r)],P.length>3?['All linked projects',()=>projects(r)]:null,['Open its page',recUrl(r),'link'],['Something is wrong',()=>startUpdate(r)]]); }
   function story(r){ ctx.rec=r; const p=r.p, t=DB.twins[r.id]||{}, F=arr(p.facts).filter(f=>Array.isArray(f)&&f[1]).slice(0,5), n=arr(DB.news&&DB.news[r.id]);
-    say(`<div class="zb-card"><b>${esc(r.name)}</b><span>${esc(cap(r.type))}${r.place?', '+esc(r.place):''}</span>
+    say(`<div class="zb-card"><b>${esc(r.name)}</b><span>${esc(typeof typeLabel==='function'?typeLabel(r.type):cap(r.type))}${r.place?', '+esc(r.place):''}</span>
       ${p.hist?`<p>${esc(tidy(p.hist))}</p>`:t.summary?`<p>${esc(tidy(t.summary))}</p>`:''}
       ${p.zag_role?`<p><b>${ownName(r)?'What it does':'What ZAG did'}:</b> ${esc(tidy(p.zag_role))}${r.year?' ('+esc(yrs(r.year))+')':''}.</p>`:''}
       ${F.length?`<ul class="zb-spec">${F.map(f=>`<li><span>${esc(tidy(f[0]))}</span><b>${esc(tidy(f[1]))}</b></li>`).join('')}</ul>`:''}

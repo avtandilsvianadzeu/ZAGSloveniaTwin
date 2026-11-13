@@ -17,6 +17,8 @@ async function boot(){
   map.on('load',async()=>{
     addAtlasLayers(); ready=true;
     terrainFor(); map.on('zoomend',terrainFor);
+    /* on phones the credits fold into the (i) button after a few seconds, as MapLibre does after the first drag */
+    if(innerWidth<700) setTimeout(()=>{ const a=document.querySelector('.maplibregl-ctrl-attrib.maplibregl-compact-show'); if(a) a.classList.remove('maplibregl-compact-show'); },5000);
     applyLook(); syncView(); await dataP; refreshProjects(); try{applyNewsRing();}catch(_){}
     const hand=l=>{map.on('mouseenter',l,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',l,()=>map.getCanvas().style.cursor='');};
     ['pt','clu'].forEach(hand);

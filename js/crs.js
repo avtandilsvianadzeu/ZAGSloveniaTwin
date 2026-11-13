@@ -41,3 +41,8 @@
   root.zagArea=p=>{ const k=BY_ID[p.id]||BY_TYPE[p.object_type]; if(!k) return null; const a=AREA[k]; return {name:a[0],url:U+a[1]}; };
   root.zagAreaHTML=p=>{ const a=root.zagArea(p); return a?`<p class="zag-area">ZAG area of expertise: <a href="${a.url}" target="_blank" rel="noopener">${a.name}</a></p>`:''; };
 })(typeof window!=='undefined'?window:globalThis);
+
+/* plain names for the object types stored in the data */
+(function(root){ const L={bridge:'Bridge',footbridge:'Footbridge','road structure':'Road structure',tunnel:'Tunnel','dam / hydropower':'Dam or hydropower plant',cableway:'Cableway installation','tower / mast':'Transmission or other tower',
+  building:'Building',institution:'Institution',company:'Company',landslide:'Landslide','geotechnical site':'Geotechnical site','study area (earthquake)':'Earthquake study area',other:'Other site'};
+  root.typeLabel=t=>L[t]||(t?t.charAt(0).toUpperCase()+t.slice(1):''); })(typeof window!=='undefined'?window:globalThis);

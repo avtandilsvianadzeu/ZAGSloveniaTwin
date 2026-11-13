@@ -61,7 +61,7 @@
   /* on phones the navigation strip scrolls so the current page is in view */
   setTimeout(()=>{ const cur=document.querySelector('.sitenav a[aria-current="page"]'), nv=cur&&cur.closest('.sitenav'); if(nv&&nv.scrollWidth>nv.clientWidth){ const ar=cur.getBoundingClientRect(), nr=nv.getBoundingClientRect(); nv.scrollLeft=Math.max(0,nv.scrollLeft+(ar.left-nr.left)-nv.clientWidth/2+ar.width/2); edge(nv); } },200);
   /* site footer on the reading pages: what the atlas is, where the data comes from, licences and contact */
-  const footer=function(){ if(document.getElementById('map')||document.body.classList.contains('embed')||document.body.classList.contains('wsbody')||document.querySelector('.sitefoot')) return;
+  const footer=function(){ if(/[?&]id=/.test(location.search)||document.getElementById('map')||document.body.classList.contains('embed')||document.body.classList.contains('wsbody')||document.querySelector('.sitefoot')) return;
     const f=document.createElement('footer'); f.className='sitefoot';
     f.innerHTML=`<div class="sf-in"><div class="sf-about"><b>ZAG Digital Atlas</b><p>Structures and sites in Slovenia where the work of ZAG, the Slovenian National Building and Civil Engineering Institute, is documented in published sources.</p></div>
       <nav aria-label="Pages"><h3>Pages</h3><a href="index.html">Map</a><a href="twin.html">Assets</a><a href="dashboard.html">Dashboard</a><a href="questions.html">Open questions</a><a href="add.html">Add object</a></nav>
