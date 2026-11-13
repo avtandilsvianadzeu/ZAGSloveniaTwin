@@ -102,12 +102,13 @@
     <a href="#try">Try it</a>
     <a href="#examples">Examples</a>
     <a href="#fields">Record fields</a>
+    <a href="#metadata">Metadata</a>
   </nav>
 
   <div class="doc">
     <section id="endpoints">
       <h2>Endpoints</h2>
-      <p class="sub">Six addresses under one base. All answer to a plain GET request and can be called from another website.</p>
+      <p class="sub">Nine addresses under one base. All answer to a plain GET request and can be called from another website.</p>
       <div class="card"><div class="base">Base address <code id="base"></code></div><table class="eptab"><tbody id="eps"></tbody></table></div>
     </section>
 
@@ -146,11 +147,25 @@
       </tbody></table></div>
       <p class="terms">Each source keeps its own licence. The atlas holds no sensor readings, so nothing in the API is measured live.</p>
     </section>
+
+    <section id="metadata">
+      <h2>Metadata</h2>
+      <p class="sub">What the dataset is and where it comes from. The same information is in <a href="api/v1/metadata.json">metadata.json</a>.</p>
+      <div class="card"><table class="ftab"><tbody>
+        <tr><td>Content</td><td>Structures and sites in Slovenia where the work of ZAG is documented in published sources, with every value linked to its source</td></tr>
+        <tr><td>Lineage</td><td>ZAG publications and reference lists, owner, operator and research sources; alignments and many positions matched to OpenStreetMap; building outlines and heights from the GURS real estate cadastre; roof surfaces from GURS laser scanning</td></tr>
+        <tr><td>Reference systems</td><td>GeoJSON in WGS 84 longitude and latitude (EPSG:4326, RFC 7946). Slovenian national coordinates D96/TM (EPSG:3794) in the fields e_d96tm and n_d96tm, in metres</td></tr>
+        <tr><td>Positional accuracy</td><td>Given per record in position_basis: surveyed or address (published position of the object), matched (matched to the mapped structure), site, settlement, locality or epicentre (centre of an area, not the object)</td></tr>
+        <tr><td>Extent</td><td>Slovenia; the Karavanke tunnels continue into Austria</td></tr>
+        <tr><td>Attribution</td><td>Contains information from OpenStreetMap, made available under the Open Database License (ODbL) 1.0. Cadastre and laser scanning values: Geodetska uprava Republike Slovenije (GURS), CC BY 4.0</td></tr>
+        <tr><td>Contact</td><td><a href="mailto:avtandil.svianadze@zag.si">avtandil.svianadze@zag.si</a></td></tr>
+      </tbody></table></div>
+    </section>
   </div>
 </main>
 <script>
 (async()=>{ const B=new URL('api/v1/',location.href).href, $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const EP=[['index.json','Service description and counts','JSON'],['objects.json','All objects, one row each','JSON'],['objects/{id}.json','One object in full','JSON'],['objects.geojson','All objects with geometry','GeoJSON'],['objects.csv','All objects as a table','CSV'],['openapi.json','Machine readable description','OpenAPI 3.1']];
+  const EP=[['index.json','Service description and counts','JSON'],['objects.json','All objects, one row each','JSON'],['objects/{id}.json','One object in full','JSON'],['points.geojson','Every object as a point, for GIS','GeoJSON'],['alignments.geojson','Drawn alignments of bridges, tunnels and cableways as lines','GeoJSON'],['objects.geojson','All objects, alignments as lines and the rest as points','GeoJSON'],['metadata.json','About the dataset: sources, extent, reference systems, accuracy','JSON'],['objects.csv','All objects as a table','CSV'],['openapi.json','Machine readable description','OpenAPI 3.1']];
   $('base').textContent=B;
   $('eps').innerHTML=EP.map(([p,t,f])=>`<tr><td><span class="get">GET</span></td><td class="path">/${esc(p).replace('{id}','<i>{id}</i>')}</td><td class="d">${t}</td><td class="f"><span class="fmt">${f}</span></td><td class="act">${p.includes('{')?'':`<a href="${esc(B+p)}" target="_blank" rel="noopener">Open</a>`}<button type="button" data-copy="${esc(B+p)}">Copy</button></td></tr>`).join('');
   document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{ try{ await navigator.clipboard.writeText(b.dataset.copy); b.textContent='Copied'; }catch(_){ b.textContent='Not copied'; } setTimeout(()=>b.textContent='Copy',1500); });

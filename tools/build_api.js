@@ -37,8 +37,20 @@ W('objects.geojson',{type:'FeatureCollection',attribution:ATTRIBUTION,features:g
 const cols=Object.keys(rows[0]), cell=v=>v==null?'':/[",\n]/.test(String(v))?'"'+String(v).replace(/"/g,'""')+'"':String(v);
 fs.writeFileSync(path.join(OUT,'objects.csv'),'﻿'+[cols.join(',')].concat(rows.map(r=>cols.map(c=>cell(r[c])).join(','))).join('\r\n'));
 const byType={}; rows.forEach(r=>byType[r.type]=(byType[r.type]||0)+1);
+/* one geometry type per layer, as GIS tools expect: every record as a point, and the drawn alignments as lines */
+const bbox=(()=>{ let x0=180,y0=90,x1=-180,y1=-90; const add=c=>{ x0=Math.min(x0,c[0]); y0=Math.min(y0,c[1]); x1=Math.max(x1,c[0]); y1=Math.max(y1,c[1]); };
+  for(const f of geo.features){ const p=f.properties; add([p.longitude,p.latitude]); (p.lines||(p.line?[p.line]:[])).forEach(l=>l.forEach(add)); } return [x0,y0,x1,y1].map(v=>Math.round(v*1e5)/1e5); })();
+W('points.geojson',{type:'FeatureCollection',attribution:ATTRIBUTION,bbox,features:rows.map(r=>({type:'Feature',id:r.id,geometry:{type:'Point',coordinates:[r.longitude,r.latitude]},properties:r}))});
+W('alignments.geojson',{type:'FeatureCollection',attribution:ATTRIBUTION,bbox,features:geo.features.filter(f=>f.properties.lines||f.properties.line).map(f=>{ const p=f.properties; return {type:'Feature',id:p.id,geometry:{type:'MultiLineString',coordinates:p.lines||[p.line]},properties:{id:p.id,name:p.name_en||p.name,type:p.object_type,geometry_source:'OpenStreetMap, matched to the record',url:BASE+'twin.html?id='+encodeURIComponent(p.id)}}; })});
+/* dataset metadata in the spirit of ISO 19115: what it is, who to ask, where it comes from, its extent, reference system and accuracy */
+W('metadata.json',{title:'ZAG Digital Atlas',abstract:'Structures and sites in Slovenia where the work of ZAG, the Slovenian National Building and Civil Engineering Institute, is documented in published sources. Each value carries the link of the source it was read from.',
+  pointOfContact:{email:'avtandil.svianadze@zag.si'},dates:{revision:new Date().toISOString().slice(0,10)},
+  lineage:['Records compiled from ZAG publications, reference lists and owner, operator and research sources, each linked per value.','Alignments and many positions matched to OpenStreetMap ways.','Building outlines and heights from the GURS real estate cadastre.','Roof surfaces from the GURS laser scanning.'],
+  extent:{bbox,note:'The Karavanke tunnels run into Austria.'},referenceSystem:{geojson:'WGS 84 longitude and latitude, EPSG:4326 (RFC 7946)',national:'D96/TM, EPSG:3794, fields e_d96tm and n_d96tm in metres'},
+  positionalAccuracy:{surveyed:'published coordinate of the object',address:'published address of the object',matched:'matched to the mapped structure in OpenStreetMap',site:'centre of the site, not the object',settlement:'centre of the settlement',locality:'centre of the locality',epicentre:'provisional epicentre published by ARSO'},
+  attribution:ATTRIBUTION,maintenance:'Updated when sources change; news refreshed several times an hour.'});
 W('index.json',{name:'ZAG Digital Atlas data API',version:'v1',generated:new Date().toISOString().slice(0,10),objects:rows.length,values:rows.reduce((a,r)=>a+r.values,0),values_with_source:rows.reduce((a,r)=>a+r.values_with_source,0),by_type:byType,
-  endpoints:{list:BASE+'api/v1/objects.json',detail:BASE+'api/v1/objects/{id}.json',geojson:BASE+'api/v1/objects.geojson',csv:BASE+'api/v1/objects.csv',openapi:BASE+'api/v1/openapi.json'},
+  endpoints:{points:BASE+'api/v1/points.geojson',alignments:BASE+'api/v1/alignments.geojson',metadata:BASE+'api/v1/metadata.json',list:BASE+'api/v1/objects.json',detail:BASE+'api/v1/objects/{id}.json',geojson:BASE+'api/v1/objects.geojson',csv:BASE+'api/v1/objects.csv',openapi:BASE+'api/v1/openapi.json'},
   attribution:ATTRIBUTION,coordinates:'WGS 84 longitude and latitude (EPSG:4326). e_d96tm and n_d96tm give the Slovenian national coordinates D96/TM (EPSG:3794) in metres.',
   note:'Read only. Specifications carry the link they were read from, and values_with_source counts them. Where sources differ, the values are listed under source_differences and none is chosen. Each source keeps its own licence.'});
 const str={type:'string'}, num={type:'number'}, nstr={type:['string','null']};
