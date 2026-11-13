@@ -218,3 +218,20 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border-radius:5px;backgr
 .lyx:hover{background:rgba(118,118,128,.24)}
 .layers{max-height:calc(100vh - 150px);overflow:auto}
 .lgd{width:208px!important}.lgd:hover{width:268px!important}
+
+/* open questions: what research settled */
+.qres{margin:8px 0 8px;padding:10px 12px;border-radius:14px;border:1px solid rgba(15,23,42,.08);background:#F6F8FB;font-size:13px}
+.qres.ok{background:#EEF9F1;border-color:rgba(52,199,89,.28)}.qres.part{background:#FFF8EC;border-color:rgba(255,149,0,.28)}.qres.none{background:#F5F5F7}
+.qres-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:4px}
+.qres-h b{font-size:12.5px}.qres.ok .qres-h b{color:#1F8F3A}.qres.part .qres-h b{color:#B25E00}
+.qrank{display:inline-flex;align-items:center;height:20px;padding:0 9px;border-radius:999px;font-size:11px;font-weight:600;background:rgba(10,124,255,.1);color:#0A5AD0}
+.qrank.r-ZAG{background:#203469;color:#fff}.qrank.r-owner,.qrank.r-government{background:rgba(52,199,89,.16);color:#1F7A33}
+.qdate{font-size:11px;color:var(--g-mut)}
+.qres p{margin:4px 0}.qkeep b{font-weight:600}
+.qres blockquote{margin:6px 0;padding:4px 10px;border-left:3px solid rgba(10,124,255,.35);color:#3A3A3C;font-style:italic}
+.qres a{font-size:12px;font-weight:600;text-decoration:none}
+.qitem .qtxt{text-align:left}
+.qitem.done .qres,.qitem.done .qres *{text-decoration:none!important;opacity:1}
+.qitem.done .qtxt>p{color:var(--g-mut)}
+.qres{text-align:left}
+.qitem.done .qres p{color:#1D1D1F}.qitem.done .qres .note{color:var(--g-mut)}
