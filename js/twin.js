@@ -19,7 +19,7 @@ const GROUP_NAME={bridge:'Bridges and viaducts',footbridge:'Footbridges','road s
 const $=id=>document.getElementById(id);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 /* house style for visible text: no en or em dashes, no semicolons, no middle dots */
-const clean=s=>String(s==null?'':s).replace(/\s*—\s*/g,', ').replace(/(\d)\s*–\s*(\d)/g,'$1 to $2').replace(/–/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+·\s+/g,', ').replace(/~(?=\d)/g,'about ').replace(/→/g,' to ');
+const clean=s=>String(s==null?'':s).replace(/\s*\u2026\s*/g,' ... ').replace(/\s*\u2022\s*/g,', ').replace(/^,\s*/,'').replace(/:\s*,\s*/g,': ').replace(/\s*—\s*/g,', ').replace(/(\d)\s*–\s*(\d)/g,'$1 to $2').replace(/–/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+·\s+/g,', ').replace(/~(?=\d)/g,'about ').replace(/→/g,' to ');
 const T=s=>esc(clean(s));
 const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):'';
 const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'');}catch(_){return u;}};
@@ -30,8 +30,8 @@ function evShows(s){ const q=String(s.quote||''), v=String(s.value), n1=x=>x.rep
   const a=hit(n1); if(a) return true; const b=hit(n2); if(b) return true; if(a===null){ const ws=v.toLowerCase().match(/[a-zà-ž]{5,}/g)||[]; return ws.some(w=>q.toLowerCase().includes(w)); } return false; }
 function evMark(s){ let h=esc(clean(s.quote)); for(const n of new Set(evNums(s.value))){ const alt=n.includes('.')?n.replace('.','[.,]'):n; h=h.replace(new RegExp('(^|[^\\d.,>])('+alt+')(?![\\d])','g'),'$1<mark>$2</mark>'); } return h; }
 const evDeep=s=>{ const u=s.quote_source||s.source||''; if(/\.pdf(\?|#|$)|\/PDF$|\/retrieve$|download/i.test(u)) return null; const w=String(s.quote).replace(/\s+/g,' ').trim().split(' ').slice(0,7).join(' '); return w?u.split('#')[0]+'#:~:text='+encodeURIComponent(w):null; };
-function evid(s){ if(s&&!s.quote&&s.basis) return '<details class="ev"><summary>How it was obtained</summary><p>'+esc(s.basis)+'</p></details>'; if(!s||!s.quote) return ''; const ok=evShows(s)||/^(Attribute values|Values of the GURS)/.test(s.quote_note||''), deep=s.quote.includes(' … ')||/restated/.test(s.quote_note||'')?null:evDeep(s);
-  return `<details class="ev"><summary>${ok?'Evidence':'Evidence, check'}</summary><blockquote>${evMark(s)}</blockquote><p>${ok?'Sentence as read from the source in November 2026.':'The value is not in this sentence in the same form. It may be a translation or a table row. Check it in the source.'}${s.quote_note?' '+esc(s.quote_note):''} ${deep?`<a href="${esc(deep)}" target="_blank" rel="noopener">Open the source at this sentence</a>`:`<a href="${esc(s.quote_source||s.source)}" target="_blank" rel="noopener">Open the source document</a>`}</p></details>`; }
+function evid(s){ if(s&&!s.quote&&s.basis) return '<details class="ev"><summary>How it was obtained</summary><p>'+esc(s.basis)+'</p></details>'; if(!s||!s.quote) return ''; const ok=evShows(s)||s.quote_checked===true||/^(Attribute values|Values of the GURS)/.test(s.quote_note||''), deep=s.quote.includes(' … ')||/restated/.test(s.quote_note||'')?null:evDeep(s);
+  return `<details class="ev"><summary>${ok?'Evidence':'Evidence, check'}</summary><blockquote>${evMark(s)}</blockquote><p>${ok?(s.quote_checked&&!evShows(s)?'Sentence as read from the source in November 2026. The value is written differently in the source and was checked by reading.':'Sentence as read from the source in November 2026.'):'The value is not in this sentence in the same form. It may be a translation or a table row. Check it in the source.'}${s.quote_note?' '+esc(s.quote_note):''} ${deep?`<a href="${esc(deep)}" target="_blank" rel="noopener">Open the source at this sentence</a>`:`<a href="${esc(s.quote_source||s.source)}" target="_blank" rel="noopener">Open the source document</a>`}</p></details>`; }
 const link=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t||host(u))}</a>`:'';
 const fmtDate=d=>{try{return new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}catch(_){return String(d).slice(0,10);}};
 const num=n=>Number(n).toLocaleString('en-GB');
@@ -164,7 +164,7 @@ function renderTwin(f){
   const blk=ids=>secs.filter(x=>ids.includes(x.sid)).sort((x,y)=>ids.indexOf(x.sid)-ids.indexOf(y.sid)).map(x=>x.html).join('')||'<p class="note pad">Nothing is recorded here for this asset.</p>';
   const modelPane=hasModel?`<div class="pane pane-model" id="paneModel"><canvas id="fem" tabindex="0" aria-label="Model of ${T(p.name_en||p.name)}. Drag to turn it any way, scroll to zoom, double click to reset."></canvas>
       <div class="ptools"><div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div><button class="tbtn" id="mScan" type="button" aria-pressed="true" hidden title="Show the roof surface measured by the national laser scanning, or the plain blocks">Laser scan</button><button class="tbtn" id="mMeasure" type="button" aria-pressed="false" title="Click two nodes to read the distance between them">Measure</button><button class="tbtn" id="mReset" type="button">Reset</button></div>
-      <div class="plabel mlevel lv-${model.level}" id="plabel" title="${T(model.note||'')}">${{full:'Built from published dimensions',plan:'Plan from published dimensions',outline:'Mapped outline, published height',cadastre:'Plan from the land cadastre',schematic:'Schematic, not the real structure'}[model.level]}</div></div>`:'';
+      <div class="plabel mlevel lv-${model.level}" id="plabel" title="${T(model.note||'')}">${{full:'Built from published dimensions',plan:'Plan from published dimensions',outline:'Mapped outline, published height',cadastre:'Plan from the land cadastre',schematic:'Schematic, not the real structure'}[model.level]}</div></div>`:noModelPane(p);
   if(EMBED){ $('main').innerHTML=`<div class="embedbox">${modelPane}<div class="pickbox" id="pick" aria-live="polite"></div><p class="note stage-note">${T(model.note||'')}</p></div>`; }
   else $('main').innerHTML=`<div class="ws${hasModel?'':' nomodel'}">
     <aside class="tree" aria-label="Asset and its parts">
@@ -211,6 +211,12 @@ function renderTwin(f){
   const home=()=>{ const el=$('pick'); if(el) el.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(p.name_en||p.name)}</b><div class="row"><span>Type</span><span>${esc(cap(p.object_type))}</span></div><div class="row"><span>Position</span><span>${esc(PREC[p.position_precision]||p.position_precision)}</span></div>${hasModel?'<p>Nothing selected. Click a part on the site map, in the model or in the structure breakdown.</p>':''}`; };
   const ctl={fem:null,map:null}; home();
   const markTree=sel=>{ document.querySelectorAll('.trow').forEach(b=>b.classList.toggle('on',!!sel&&((sel.part!=null&&b.dataset.part==sel.part&&sel.kind!=='ref')||(sel.kind==='ref'&&b.dataset.ref==sel.ref)))); };
+  /* short how-to-rotate hint on both views, shown for 10 seconds */
+  const ROT='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 4v4.5h-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const addHint=(el,txt)=>{ if(!el||EMBED) return; const d=document.createElement('div'); d.className='rothint'; d.setAttribute('role','note'); d.innerHTML=ROT+'<span>'+txt+'</span>'; el.appendChild(d);
+    const bye=()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),600); }; const t=setTimeout(bye,10000); el.addEventListener('pointerdown',()=>{ clearTimeout(t); bye(); },{once:true}); };
+  if(hasModel) addHint($('paneModel'),'<b>Drag to rotate the model</b> Scroll to zoom, double click to reset');
+  addHint(document.querySelector('.pane-map'),'<b>Right-drag or Ctrl+drag to rotate the map</b> Scroll to zoom');
   if(hasModel) ctl.fem=initModel(model,p,{home,onView:(y,pt)=>{ if(ctl.map&&ctl.map.setCamera) ctl.map.setCamera(y/RAD,pt/RAD); },onSelect:sel=>{ if(ctl.map&&ctl.map.highlight) ctl.map.highlight(sel&&sel.part!=null?sel.part:null); markTree(sel); if(sel&&!EMBED) tab('props'); }});
   if($('prt')) $('prt').onclick=()=>window.print();
   if(ctl.fem&&g&&g.scan&&g.scan.grid) getJSON(g.scan.grid).then(S=>{ if(!S||!ctl.fem.setScan(S)) return; const b=$('mScan'), lab=$('plabel'), base=lab?lab.textContent:'', show=on=>{ if(b) b.setAttribute('aria-pressed',on?'true':'false'); if(lab) lab.textContent=on?'Surface from laser scanning (GURS), read as height above ground':base; };
@@ -242,6 +248,16 @@ function renderTwin(f){
    A mesh in the manner of a finite element model, generated only from geometry the atlas already holds:
    the drawn alignment of each part (OpenStreetMap), a deck width where a source states one, and the official building outline and height (GURS).
    Element size is a drawing choice. Nothing here is a structural analysis model, and no pier, span or cross section is assumed. */
+/* the model pane when there is no geometry to build a model from: say why, instead of leaving the space out */
+function noModelPane(p){
+  const area=/study area|other/.test(p.object_type)&&/settlement|municipality|epicentre/.test(p.position_precision||'');
+  const rough=/settlement|locality|municipality|site|approximate/.test(p.position_precision||'');
+  const why=area?'This record is a study area or a group of sites, not one structure, so there is no single structure to model. The site view shows where it lies.'
+    :rough?`The sources place this record only at ${esc({settlement:'settlement',locality:'locality',municipality:'municipality',site:'site area',approximate:'approximate'}[p.position_precision]||'approximate')} level. A model is built only from surveyed or mapped geometry, so none is drawn until the exact structure is confirmed.`
+    :'The position is exact, but no outline or dimensions of the structure are published or mapped, so there is nothing to build a model from yet.';
+  const next=area?'':rough?'What would allow a model: the exact structure named in a source, then its mapped outline or alignment.':'What would allow a model: a published plan, outline or main dimensions of the structure.';
+  return `<div class="pane pane-model pane-none" id="paneModel"><div class="nomsg"><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M24 5 41 14v20L24 43 7 34V14z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M7 14l17 9 17-9M24 23v20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="3 3"/></svg><h3>No 3D model for this record</h3><p>${why}</p>${next?`<p class="note">${next}</p>`:''}</div></div>`;
+}
 function buildModel(p,t,g,lines,labels){
   const all=[...lines.flat()], ring0=g&&g.geometry?(g.geometry.type==='Polygon'?[g.geometry.coordinates]:g.geometry.type==='MultiPolygon'?g.geometry.coordinates:[]).map(x=>x[0]):[];
   ring0.forEach(r=>all.push(...r)); const BLK=(t&&t.model&&t.model.blocks)||[]; BLK.forEach(b=>all.push(...b.ring)); const M={nodes:[],els:[],parts:[],refs:[],faces:[],note:'',R:1};

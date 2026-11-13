@@ -25,7 +25,7 @@ const srcLine=s=>`<div class="src"><span>${esc(s.title||s.key)}${s.type?`<br><sm
 /* for buildings the map panel leaves out the list of values (sizes, counts, heights). They stay on the asset page. */
 function twinHTML(id,noRows){
   const t=ZA.twins[id]; if(!t) return '';
-  const tidy=s=>esc(String(s==null?'':s).replace(/\s*—\s*/g,', ').replace(/(\d)\s*–\s*(\d)/g,'$1 to $2').replace(/–/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+·\s+/g,', ').replace(/~(?=\d)/g,'about ').replace(/→/g,' to '));
+  const tidy=s=>esc(String(s==null?'':s).replace(/\s*\u2026\s*/g,' ... ').replace(/\s*\u2022\s*/g,', ').replace(/^,\s*/,'').replace(/\s*—\s*/g,', ').replace(/(\d)\s*–\s*(\d)/g,'$1 to $2').replace(/–/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+·\s+/g,', ').replace(/~(?=\d)/g,'about ').replace(/→/g,' to '));
   const val=s=>`${tidy(s.value)}${s.unit?' '+esc(s.unit):''}`;
   const rows=noRows?'':(t.specs||[]).map(s=>`<div class="kv tw"><span>${esc(s.label)}</span><span>${val(s)}${s.source?` <a class="sref" href="${esc(s.source)}" target="_blank" rel="noopener" title="${esc(s.source)}">${esc(srcHost(s.source))}</a>`:''}</span></div>`).join('');
   const pts=(t.anchors||[]).map(a=>`<div class="kv tw"><span>${esc(a.label)}</span><span>${(+a.lat).toFixed(6)}, ${(+a.lon).toFixed(6)}${a.source?` <a class="sref" href="${esc(a.source)}" target="_blank" rel="noopener">${esc(srcHost(a.source))}</a>`:''}</span></div>`).join('');
