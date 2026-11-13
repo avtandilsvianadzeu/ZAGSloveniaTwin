@@ -183,7 +183,7 @@ function showStructurePick(f,ll){
   openShell(`<div class="body"><div class="kicker ref">${q.brunnel?cap(q.brunnel):'Aerialway'}</div><h1>${esc(name)}</h1>
     <p class="where">${esc([q.ref?'Ref '+q.ref:'',q.class?cap(q.class):''].filter(Boolean).join(', '))}</p>
     <div id="bim" class="bim"></div><h3>Position</h3>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}
-    <p class="note">Structure from OpenStreetMap. Not a ZAG record.</p></div>`);
+    <p class="note">Mapped structure from OpenStreetMap, shown for orientation.</p></div>`);
   structureData({props:q,lines:all},{});
 }
 function showBuildingPick(ll,feat){
@@ -191,7 +191,7 @@ function showBuildingPick(ll,feat){
   map.getSource('unc').setData({type:'FeatureCollection',features:[]}); showLine(null); setSel(null); curId=null;
   openShell(`<div class="body"><div class="kicker ref">Building</div><h1 id="bt">Looking up the nearest address</h1><p class="where" id="bs"></p>
     <div id="bim" class="bim"></div><h3>Position</h3>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}
-    <p class="note">${b?'Footprint from OpenStreetMap building data.':'No footprint found at this point.'} Not a ZAG record.</p></div>`);
+    <p class="note">${b?'Building outline from OpenStreetMap, shown for orientation.':'No building outline is mapped at this point.'}</p></div>`);
   if(b) buildingData(b,{id:null});
   fetch(`${PHOTON}/reverse?lon=${ll[0]}&lat=${ll[1]}&limit=1`).then(r=>r.ok?r.json():null).then(j=>{
     if(tok!==hlToken) return; const f=j&&j.features&&j.features[0], t=$('bt'); if(!t) return;

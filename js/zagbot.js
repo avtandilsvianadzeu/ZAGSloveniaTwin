@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=5'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=6'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
@@ -84,7 +84,7 @@
     <button class="zb-launch" type="button" aria-expanded="false" aria-controls="zbPanel" title="Ask ZAGBot">${ROBOT(44,true)}<span class="zb-lbl"><b>ZAGBot</b><i>Ask me</i></span></button>
     <section class="zb-panel" id="zbPanel" role="dialog" aria-label="ZAGBot chat" hidden>
       <header class="zb-head"><div class="zb-lights"><button class="zb-x zb-red" type="button" aria-label="Close the chat" title="Close"></button><button class="zb-min zb-yel" type="button" aria-label="Minimise the chat" title="Minimise"></button><button class="zb-big zb-grn" type="button" aria-label="Larger chat window" title="Larger window"></button></div>
-        ${ROBOT(34,true)}<div class="zb-title"><b>ZAGBot</b><span>Assistant of the ZAG Digital Atlas</span></div></header>
+        ${ROBOT(34,true)}<div class="zb-title"><b>ZAGBot</b><span>Online, knows all 73 records</span></div></header>
       <div class="zb-log" id="zbLog" aria-live="polite"></div>
       <div class="zb-chips" id="zbChips"></div>
       <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure, or tell me what to change" aria-label="Message to ZAGBot"><button type="submit">Send</button></form>
@@ -101,13 +101,16 @@
   function think(){ if(typing) return; typing=document.createElement('div'); typing.className='zb-msg bot'; typing.innerHTML='<span class="zb-typing"><i></i><i></i><i></i></span>'; log.appendChild(typing); scroll(); }
   function user(t){ say(esc(t),'me'); }
   /* chips: [label, action] where action is a function or a string the user "types" */
-  function offer(list){ chips.innerHTML=''; for(const c of list){ if(!c) continue; const [label,act,kind]=c;
+  const QI={find:'M7 2a5 5 0 1 0 3.1 8.9l3.5 3.5 1-1-3.5-3.5A5 5 0 0 0 7 2zm0 1.4a3.6 3.6 0 1 1 0 7.2 3.6 3.6 0 0 1 0-7.2z',help:'M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zm-.7 9.7h1.4v1.4H7.3zM8 4a2.4 2.4 0 0 1 1.2 4.5c-.5.3-.5.6-.5 1.2H7.3c0-1 .2-1.6 1.1-2.2A1 1 0 1 0 6.9 6.4H5.6A2.4 2.4 0 0 1 8 4z',fix:'M11.5 1.8 14.2 4.5 6 12.7l-3.4.7.7-3.4zM3 14h10v1.2H3z',cube:'M8 1 2 4.2v7.6L8 15l6-3.2V4.2zm0 1.6 4.3 2.3L8 7.2 3.7 4.9zM3.2 6l4.2 2.3v4.9L3.2 11zm5.4 7.2V8.3L12.8 6v5z',time:'M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zm.7 6.3 2.6 1.6-.7 1.1-3.3-2V4h1.4z',map:'M1.5 3.5 5.5 2l5 1.6 4-1.5v10.4l-4 1.5-5-1.6-4 1.5zm4.6.1v8.7l3.8 1.2V4.8z'};
+  function offer(list,cards){ chips.innerHTML=''; chips.classList.toggle('cards',!!cards); for(const c of list){ if(!c) continue; const [label,act,kind,sub,icon]=c;
       const el=kind==='link'?Object.assign(document.createElement('a'),{href:act,target:act.startsWith('http')?'_blank':'',rel:'noopener'}):document.createElement('button');
-      if(kind!=='link') el.type='button'; el.className='zb-chip'+(kind==='primary'||kind==='link'?' solid':''); el.textContent=label;
+      if(kind!=='link') el.type='button'; el.className='zb-chip'+(kind==='primary'||kind==='link'?' solid':''); if(cards&&sub){ el.className='zb-card2'; el.innerHTML=`<i class="q-${icon}"><svg viewBox="0 0 16 16"><path d="${QI[icon]||QI.help}" fill="currentColor"/></svg></i><b>${esc(label)}</b><span>${esc(sub)}</span>`; } else el.textContent=label;
       if(kind!=='link') el.onclick=()=>{ if(typeof act==='function'){ user(label); act(); } else handle(act,label); };
       chips.appendChild(el); } }
-  const menu=()=>[['Find a structure',()=>{ say('Type its name or place, for example <i>Kastelec</i>, <i>Arto Blanca</i> or <i>bridges in Ljubljana</i>.'); offer(typeChips()); input.focus(); }],
-    ['What can you do?','help'],['Report something wrong',()=>startUpdate(ctx.rec)],['Request a 3D model',()=>startModel(ctx.rec)],ON_MAP?['Show or hide the timeline','timeline']:['Open the map','index.html','link']];
+  const menu=()=>[['Find a structure',()=>{ say('Type its name or place, for example <i>Kastelec</i>, <i>Arto Blanca</i> or <i>bridges in Ljubljana</i>.'); offer(typeChips()); input.focus(); },null,'Name, place or type','find'],
+    ['Report a correction',()=>startUpdate(ctx.rec),null,'A value, position or model','fix'],['Request a 3D model',()=>startModel(ctx.rec),null,'Built by itself in minutes','cube'],
+    ON_MAP?['Timeline','timeline',null,'Show or hide ZAG work by year','time']:['What can you do?','help',null,'Everything ZAGBot knows','help']];
+  const home=()=>offer(menu(),true);
   const typeChips=()=>TYPES.slice(0,6).map(t=>[t.name[0].toUpperCase()+t.name.slice(1),t.key]);
   const recUrl=r=>'twin.html?id='+encodeURIComponent(r.id);
   const recChips=r=>[['Open its page',recUrl(r),'link'],['Show on the map',()=>showOnMap(r)],['Key figures',()=>figures(r)],['What did ZAG do?',()=>role(r)],['Something is wrong',()=>startUpdate(r)]];
@@ -214,7 +217,7 @@
       say('I found no structure with that name. Try another word or choose a type.'); return; }
     try{ if(ON_MAP&&typeof curId!=='undefined'&&curId&&DB.byId[curId]) ctx.rec=DB.byId[curId]; }catch(_){}
     const n=norm(text), tokens=n.split(' ').filter(w=>w&&!STOP.has(w));
-    if(/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)&&tokens.length<=2){ say('Hello! What would you like to know?'); offer(menu()); return; }
+    if(/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)&&tokens.length<=2){ say('Hello! What would you like to know?'); home(); return; }
     if(/\b(help|pomoc|what can you)\b/.test(n)){ help(); return; }
     if(/\btimeline|casovn\w*\b/.test(n)){ const b=document.getElementById('tlShow'); if(b){ b.click(); say('Done, the timeline is '+(document.getElementById('tl').hidden?'hidden':'shown')+'.'); } else say('The timeline is on the map page.'); offer(menu()); return; }
     if(/\b(add|new|dodaj)\b.*\b(object|structure|objekt)\b/.test(n)){ say('You can draw a new structure on the Add object page, or tell me what is missing and I write a request.'); offer([['Open Add object','add.html','link'],['Write a request',()=>startUpdate(null,'other')]]); return; }
@@ -238,14 +241,14 @@
     if(place.length){ say(`Recorded in that place:`); offer(place.slice(0,12).map(x=>[x.name,()=>card(x)])); return; }
     if(strong.length||hits.length){ const h=(strong.length?strong:hits).slice(0,6); say('Did you mean one of these?'); offer(h.map(x=>[x.r.name,()=>card(x.r)]).concat([['None of them',()=>{ say('Try another word, or choose a type.'); offer(typeChips()); }]])); return; }
     if(attr&&!r){ say(`Which structure do you mean for the ${esc(attr.name)}?`); ctx.flow={pick:x=>attrAnswer(x,attr)}; offer(ctx.rec?[[ctx.rec.name,()=>{ ctx.flow=null; attrAnswer(ctx.rec,attr); }]]:typeChips().map(c=>[c[0],()=>listPick(c[1],x=>attrAnswer(x,attr))])); return; }
-    say('I did not understand that. I answer only from the atlas data, so here is what I can do:'); offer(menu()); }
+    say('I did not understand that. I answer only from the atlas data, so here is what I can do:'); home(); }
 
   /* ---------- open and close ---------- */
   async function toggle(open){ const on=open==null?panel.hidden:open; panel.hidden=!on; launch.setAttribute('aria-expanded',String(on)); root.classList.toggle('open',on);
     if(on&&!started){ started=true; say('Loading the atlas data...');
       try{ await load(); log.innerHTML=''; const here=PAGE_ID&&DB.byId[PAGE_ID]; if(here) ctx.rec=here;
         say(`Hello, I am <b>ZAGBot</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
-        offer(here?[['Key figures',()=>figures(here)],['What did ZAG do?',()=>role(here)],['Something is wrong',()=>startUpdate(here)],['Update the 3D model',()=>startModel(here)],['Find another structure',()=>{ say('Type its name or place.'); offer(typeChips()); input.focus(); }]]:menu()); }
+        offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); }
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
     if(on) setTimeout(()=>input.focus(),50); }
   launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
