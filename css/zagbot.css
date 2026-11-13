@@ -1,0 +1,50 @@
+/* ZAGBOT chat: launcher in the lower right corner and a frosted chat panel */
+.zb{--zb-ink:#1C1C1E;--zb-mut:#6E6E73;--zb-blue:#007AFF;--zb-navy:#203469;--zb-bg:rgba(255,255,255,.92);--zb-me:#007AFF;--zb-bot:#F1F2F6;--zb-rule:rgba(60,60,67,.14);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,"Segoe UI",system-ui,Arial,sans-serif;letter-spacing:-.01em}
+.zb-launch{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:8px;height:60px;padding:4px 18px 4px 6px;border:0;border-radius:999px;background:rgba(255,255,255,.82);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);color:var(--zb-navy);cursor:pointer;box-shadow:inset 0 1px 0 #fff,0 0 0 .5px rgba(0,0,0,.14),0 6px 18px rgba(20,30,60,.22);transition:transform .15s}
+.zb-launch:hover{transform:translateY(-1px)}.zb-launch:active{transform:translateY(1px)}
+.zb-launch .zb-robot{margin-top:6px}
+.zb-lbl{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1}.zb-lbl b{font-size:14px;font-weight:800;letter-spacing:.02em}.zb-lbl i{font-style:normal;font-size:12px;color:var(--zb-mut)}
+.zb.open .zb-launch{opacity:0;pointer-events:none}
+.zb-panel{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:61;width:min(390px,calc(100vw - 32px));height:min(620px,calc(100vh - 110px));display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:#FFFFFF;transition:width .25s,height .25s;-webkit-backdrop-filter:saturate(180%) blur(22px);backdrop-filter:saturate(180%) blur(22px);box-shadow:0 0 0 .5px rgba(0,0,0,.12),0 18px 50px rgba(20,30,60,.28);animation:zbIn .22s ease-out}
+.zb-panel[hidden]{display:none}
+@keyframes zbIn{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+.zb-head{display:flex;align-items:center;gap:10px;padding:12px 16px 10px;background:rgba(255,255,255,.9);color:var(--zb-ink);border-bottom:.5px solid rgba(0,0,0,.08)}
+.zb-lights{display:flex;gap:8px;margin-right:4px;align-self:flex-start;padding-top:4px}
+.zb-lights button{width:12px;height:12px;padding:0;border:0;border-radius:50%;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.18);cursor:pointer}
+.zb-red{background:#FF5F57}.zb-yel{background:#FEBC2E}.zb-grn{background:#28C840}
+.zb-lights:hover button{background-image:radial-gradient(circle,rgba(0,0,0,.45) 0 1.6px,transparent 2px)}
+.zb.big .zb-panel{width:min(620px,calc(100vw - 32px));height:calc(100vh - 40px)}
+.zb-head .zb-robot{flex:none}
+.zb-title{flex:1;display:flex;flex-direction:column}.zb-title b{font-size:15px;font-weight:700;letter-spacing:.02em;color:var(--zb-navy)}.zb-title span{font-size:12px;color:var(--zb-mut)}
+
+.zb-log{flex:1;overflow-y:auto;padding:14px 12px 6px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth}
+.zb-msg{max-width:88%;padding:9px 12px;border-radius:18px;font-size:14px;line-height:1.4;color:var(--zb-ink);overflow-wrap:anywhere}
+.zb-msg.bot{align-self:flex-start;background:#F2F2F7;border-bottom-left-radius:6px}
+.zb-msg.me{align-self:flex-end;background:var(--zb-me);color:#fff;border-bottom-right-radius:6px}
+.zb-msg p{margin:6px 0 0}.zb-msg i{color:var(--zb-navy);font-style:normal;font-weight:600}
+.zb-card b{display:block;font-size:15px}.zb-card span{display:block;font-size:12.5px;color:var(--zb-mut);margin-top:2px}
+.zb-spec,.zb-list{margin:6px 0 0;padding:0;list-style:none}.zb-list li{padding:2px 0 2px 14px;position:relative}.zb-list li:before{content:"";position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--zb-blue)}
+.zb-spec li{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 10px;padding:6px 0;border-top:1px solid var(--zb-rule);font-size:13px}.zb-spec li span{flex:1 0 auto}.zb-spec li b{flex:0 1 auto;margin-left:auto}
+.zb-spec li:first-child{border-top:0}.zb-spec span{color:var(--zb-mut)}.zb-spec b{text-align:right;font-variant-numeric:tabular-nums}
+.zb-spec a,.zb-spec em{flex-basis:100%;font-size:11.5px;color:var(--zb-blue);text-decoration:none}.zb-spec em{color:var(--zb-mut)}
+.zb-note{font-size:12px;color:var(--zb-mut)}
+.zb-chips{display:flex;flex-wrap:wrap;gap:6px;padding:6px 12px 8px;max-height:132px;overflow-y:auto}
+.zb-chip{height:32px;padding:0 14px;border:0;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.14),0 1px 2px rgba(0,0,0,.08);color:var(--zb-blue);font:600 13px inherit;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;text-decoration:none;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.zb-chip:hover{background:rgba(0,122,255,.08)}.zb-chip.solid{background:linear-gradient(#2A8CFF,#007AFF);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 2px 6px rgba(0,122,255,.3)}
+.zb-in{display:flex;gap:8px;padding:8px 12px;border-top:1px solid var(--zb-rule)}
+.zb-in input{flex:1;min-width:0;height:40px;padding:0 16px;border:0;border-radius:20px;background:#F2F2F7!important;box-shadow:none!important;font-size:14px;color:var(--zb-ink);outline:none}
+.zb-in input:focus{box-shadow:0 0 0 3px rgba(0,122,255,.25)}
+.zb-in button{flex:none;width:40px;height:40px;border:0;border-radius:50%;background:var(--zb-blue);color:#fff;font-size:16px;cursor:pointer}
+.zb-foot{margin:0;padding:0 14px 10px;font-size:11px;color:var(--zb-mut);text-align:center}
+.zb-eye{animation:zbBlink 5s infinite;transform-origin:center;transform-box:fill-box}
+@keyframes zbBlink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.zb-wave{transform-origin:104px 92px;animation:zbWave 2.4s ease-in-out infinite}
+@keyframes zbWave{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-18deg)}80%{transform:rotate(8deg)}90%{transform:rotate(-12deg)}}
+@media (prefers-reduced-motion:reduce){.zb-eye,.zb-wave,.zb-panel{animation:none}}
+/* on the map page the launcher becomes a round button so it does not cover the timeline */
+.zb-onmap .zb-launch{width:60px;padding:0;justify-content:center;bottom:36px;right:12px}
+.zb-onmap .zb-lbl{display:none}
+.zb-onmap .vctl{bottom:108px!important}
+.zb-onmap .tl,.zb-onmap .tlshow{right:84px}
+@media (max-width:700px){.zb-panel{right:0;left:0;bottom:0;width:100%;height:min(80vh,620px);border-radius:22px 22px 0 0}.zb-launch{height:52px}.zb-lbl{display:none}.zb-launch{width:52px;padding:0;justify-content:center}}
+@media print{.zb{display:none}}

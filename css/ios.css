@@ -276,3 +276,6 @@ dialog::backdrop{background:rgba(0,0,0,.28)}
 .mlevel.lv-full{background:#248A3D}.mlevel.lv-plan{background:#007AFF}.mlevel.lv-cadastre{background:#5856D6}.mlevel.lv-schematic{background:#C93400}
 .pane-model .plabel.mlevel{white-space:normal;line-height:1.25;max-width:calc(100% - 70px)}
 .mlevel.lv-outline{background:#0A7E8C}
+/* the timeline bar is a flex box, so the hidden attribute needs its own rule */
+.tl[hidden]{display:none!important}
+.aip[hidden]{display:none!important}

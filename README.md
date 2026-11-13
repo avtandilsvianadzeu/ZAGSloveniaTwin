@@ -64,3 +64,11 @@ Every asset page has a button "Request a 3D model" (or "Update the 3D model"). I
 4. writes the model into `data/twins.json`, rebuilds `api/v1/`, commits, and answers on the issue with the result.
 
 It refuses, with an explanation on the issue, when a height has no source link, when no outline is found within 60 m, or when the record already has a more detailed model or the official GURS building (tick "Replace" to override). Editing the issue builds the model again. The workflow needs "Read and write permissions" under Settings, Actions, General, Workflow permissions.
+
+## ZAGBOT
+
+**Chat on the site.** Every page has ZAGBOT in the lower right corner (`js/zagbot.js`, `css/zagbot.css`). It runs in the browser with no server and no AI. It reads `data/zag_projects.geojson` and `data/twins.json`, understands short questions in English and Slovenian (names, places, types such as *predor* or *most*, values such as height, length, year, power), and answers only from that data with the source link. Every step offers clickable replies, so a report of an error ends as an exact request: record, value, current value, new value, source link. "Send to ZAGBOT on GitHub" opens that request as an issue.
+
+**ZAGBOT on GitHub.** `.github/workflows/zagbot.yml` carries out such a request. It runs when the repository owner opens an issue titled `ZAGBOT: ...` (or labelled `zagbot`), or comments `/zagbot` on any issue. An AI agent reads `.github/zagbot/RULES.md` (evidence rules, file layout, house style), checks the sources, edits the data, and the workflow then rebuilds the data, rejects the change if the files are broken or the typography is wrong, commits as `zagbot` and answers on the issue.
+
+To switch it on, add the repository secret `ANTHROPIC_API_KEY` (Settings, Secrets and variables, Actions) with a key from the Claude Console, and set a monthly spending limit there. The model can be changed with the repository variable `ZAGBOT_MODEL`. Without the key the workflow only replies how to switch it on.

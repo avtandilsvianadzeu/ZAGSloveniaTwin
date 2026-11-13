@@ -10,9 +10,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/twin.css?v=48">
-<link rel="stylesheet" href="css/platform.css?v=48">
-<link rel="stylesheet" href="css/ios.css?v=48">
+<link rel="stylesheet" href="css/twin.css?v=49">
+<link rel="stylesheet" href="css/platform.css?v=49">
+<link rel="stylesheet" href="css/ios.css?v=49">
+<link rel="stylesheet" href="css/macos.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -23,8 +24,9 @@
 </header>
 <main id="main"><div class="wrap home">
   <h1>Add an object</h1>
-  <p class="lead">Draw a structure on the map, paste its coordinates or load a file. The model appears at once and the object is placed on the map. Everything added here is marked as not verified.</p>
-  <section class="panel aip" style="margin-top:20px;text-align:left" aria-label="AI reader">
+  <p class="lead">Give it a name, then click its points on the map. The model appears at once. Everything added here is marked as not verified.</p>
+  <p class="note" style="text-align:center">Easier: open <b>ZAGBOT</b> in the lower right corner and tell it what you want to add or change.</p>
+  <section class="panel aip" id="aip" hidden style="margin-top:20px;text-align:left" aria-label="AI reader">
     <h2>Read a description, a drawing or a photo</h2>
     <p class="note">Optional. An AI reads your text or picture and fills the form below as a draft. It reports only what the input states or shows, and it never invents dimensions or coordinates. Check every value before saving. The draft stays marked as not verified.</p>
     <p class="msg" id="aiState" role="status">Checking the AI reader</p>
@@ -52,8 +54,8 @@
       <h2>Where is it</h2>
       <div class="seg" role="group" aria-label="Shape" style="margin-bottom:10px"><button type="button" id="gLine" aria-pressed="true">Line</button><button type="button" id="gPoly" aria-pressed="false">Outline</button><button type="button" id="gPoint" aria-pressed="false">Point</button></div>
       <p class="note" id="gHelp"></p>
-      <label class="fld"><span>Coordinates, one point per row as latitude, longitude</span><textarea id="fPts" placeholder="46.0569, 14.5058&#10;46.0575, 14.5071"></textarea></label>
-      <label class="fld"><span>Or load a file: GeoJSON, KML, GPX, CSV or a text file with fields</span><input id="fFile" type="file" accept=".geojson,.json,.kml,.gpx,.csv,.txt,application/json,text/plain,text/csv"></label>
+      <details class="more"><summary>Other ways: paste coordinates or load a file</summary><label class="fld"><span>Coordinates, one point per row as latitude, longitude</span><textarea id="fPts" placeholder="46.0569, 14.5058&#10;46.0575, 14.5071"></textarea></label>
+      <label class="fld"><span>Or load a file: GeoJSON, KML, GPX, CSV or a text file with fields</span><input id="fFile" type="file" accept=".geojson,.json,.kml,.gpx,.csv,.txt,application/json,text/plain,text/csv"></label></details>
       <p class="msg" id="msg" role="status">Click the map to add points, or paste coordinates.</p>
       <div class="btnrow"><button class="tbtn solid" type="submit">Save object</button><button class="tbtn" type="button" id="undo">Undo last point</button><button class="tbtn" type="button" id="clear">Clear shape</button></div>
     </form>
@@ -78,8 +80,9 @@
 <footer class="tfoot"><p>The form reads coordinates and dimensions without any AI. The optional AI reader works only when the owner has connected the service. Objects added here are shown as not verified until a source confirms them.</p></footer>
 <script>window.TWIN_NO_BOOT=true;</script>
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
-<script src="js/mapstyle.js?v=48"></script>
-<script src="js/twin.js?v=48"></script>
-<script src="js/add.js?v=48"></script>
+<script src="js/mapstyle.js?v=49"></script>
+<script src="js/twin.js?v=49"></script>
+<script src="js/add.js?v=49"></script>
+<script src="js/zagbot.js?v=2"></script>
 </body>
 </html>

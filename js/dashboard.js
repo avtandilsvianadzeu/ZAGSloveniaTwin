@@ -3,7 +3,7 @@
 (async()=>{
   try{ await load(); }catch(e){ $('main').innerHTML=`<p class="loading">${esc(e.message)}</p>`; return; }
   const F=D.features.map(f=>f.properties), zag=F.filter(p=>p.category!=='user_object'), user=F.filter(p=>p.category==='user_object');
-  const hasGeo=p=>!!(p.lines||p.line||D.gurs[p.id]), tw=p=>D.twins[p.id]||{}, nSpec=p=>(tw(p).specs||[]).length;
+  const hasGeo=p=>!!(p.lines||p.line||D.gurs[p.id]||((D.twins[p.id]||{}).model&&((D.twins[p.id].model.blocks||[]).length))), tw=p=>D.twins[p.id]||{}, nSpec=p=>(tw(p).specs||[]).length;
   const last=p=>inspFor(p.id)[0]||null, rated=zag.map(p=>({p,e:last(p)})), withInsp=rated.filter(x=>x.e);
   const cnt={good:0,fair:0,poor:0,critical:0,none:0}; withInsp.forEach(x=>cnt[COND[x.e.condition]?x.e.condition:'none']++);
   const col={good:'#34C759',fair:'#FF9500',poor:'#FF3B30',critical:'#A1140C',none:'#8E8E93'}, noRec=zag.length-withInsp.length;

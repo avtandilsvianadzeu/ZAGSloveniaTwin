@@ -104,7 +104,7 @@ const aiSay=(t,k)=>{ const m=$('aiState'); m.textContent=t; m.className='msg'+(k
 const b64=file=>new Promise((res,rej)=>{ const r=new FileReader(); r.onload=()=>res(String(r.result).split(',')[1]||''); r.onerror=rej; r.readAsDataURL(file); });
 async function aiInit(){ let url=''; try{ const j=await getJSON('data/ai_service.json'); if(j&&/^https:\/\//.test(j.url||'')) url=j.url; }catch(_){}
   const fixed=!!url; if(!url){ try{ url=localStorage.getItem('zag_ai_url')||''; }catch(_){} }
-  AI.url=url.replace(/\/+$/,''); $('aiUrl').value=AI.url; $('aiUrlRow').hidden=fixed; try{ $('aiCode').value=sessionStorage.getItem('zag_ai_code')||''; }catch(_){}
+  AI.url=url.replace(/\/+$/,''); $('aiUrl').value=AI.url; $('aiUrlRow').hidden=true; const box=document.getElementById('aip'); if(box) box.hidden=!AI.url; try{ $('aiCode').value=sessionStorage.getItem('zag_ai_code')||''; }catch(_){}
   aiSay(AI.url?'The AI reader is connected. Enter the access code, add a text or a picture, and press Read with AI.':'The AI reader is not connected yet. The owner sets its address in data/ai_service.json, or you can paste a service address here to try it.'); }
 function aiShow(d){ const lab={name:'Name',object_type:'Type',description:'Description',length_m:'Length',width_m:'Width',height_m:'Height',coordinates:'Coordinates',shape:'Shape',place_name:'Place',source_url:'Source link'};
   $('aiOut').innerHTML=`<div class="aiout"><p class="msg bad" style="margin:0 0 4px">Draft read by AI. Check every value against your source before saving. It is not verified.</p>
