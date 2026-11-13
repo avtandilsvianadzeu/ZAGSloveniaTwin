@@ -53,7 +53,7 @@ export default {
       if (!owner) { const lim = limited(req.headers.get('cf-connecting-ip') || 'x', env); if (lim) return json({ error: lim }, 429, c.h); }
       const subject = clean(b.subject, 120), body = clean(b.body, 6000);
       if (subject.length < 3 || body.length < 10) return json({ error: 'The request is empty.' }, 400, c.h);
-      const r = await gh(env, `/repos/${repo}/issues`, 'POST', { title: (owner ? 'ZAGBOT: ' : 'Request: ') + subject, body: body + '\n\n' + (owner ? 'Sent by the atlas owner from the site.' : 'Sent by a visitor from the site. It runs after the owner approves it.'), labels: ['from-site'] });
+      const r = await gh(env, `/repos/${repo}/issues`, 'POST', { title: (owner ? 'ZAGBot: ' : 'Request: ') + subject, body: body + '\n\n' + (owner ? 'Sent by the atlas owner from the site.' : 'Sent by a visitor from the site. It runs after the owner approves it.'), labels: ['from-site'] });
       if (!r.ok) return json({ error: 'GitHub did not accept the request (' + r.status + ').' }, 502, c.h);
       return json({ ok: true, number: r.j.number, url: r.j.html_url, runs: owner }, 200, c.h);
     }

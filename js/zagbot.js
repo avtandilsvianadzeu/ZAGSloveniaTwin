@@ -1,22 +1,22 @@
 'use strict';
-/* ZAGBOT: the chat assistant of the ZAG Digital Atlas.
+/* ZAGBot: the chat assistant of the ZAG Digital Atlas.
    Runs fully in the browser. It reads the published data (records and verified values), understands short questions in English
    or Slovenian, answers only from that data with the source link, and offers clickable replies so the input is always exact.
-   Changes to the site are never made here: ZAGBOT writes a precise request and opens it on GitHub, where the ZAGBOT workflow
+   Changes to the site are never made here: ZAGBot writes a precise request and opens it on GitHub, where the ZAGBot workflow
    (.github/workflows/zagbot.yml) carries it out after the owner submits it. */
 (function(){
   if(window.__zagbot) return; window.__zagbot=true;
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=2'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=3'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
-    <line x1="60" y1="6" x2="60" y2="20" stroke="#203469" stroke-width="3" stroke-linecap="round"/><circle cx="60" cy="6" r="5" fill="#ED1C24"/>
+    <line x1="60" y1="6" x2="60" y2="20" stroke="#203469" stroke-width="3" stroke-linecap="round"/><circle class="zb-ant" cx="60" cy="6" r="5" fill="#ED1C24"/>
     <rect x="22" y="18" width="76" height="54" rx="20" fill="#F4F6FA" stroke="#203469" stroke-width="3"/>
     <rect x="32" y="30" width="56" height="30" rx="13" fill="#203469"/>
-    <circle class="zb-eye" cx="48" cy="44" r="6" fill="#7FD4FF"/><circle class="zb-eye" cx="72" cy="44" r="6" fill="#7FD4FF"/>
+    <g class="zb-pupils"><circle class="zb-eye" cx="48" cy="44" r="6" fill="#7FD4FF"/><circle class="zb-eye" cx="72" cy="44" r="6" fill="#7FD4FF"/></g>
     <path d="M51 53q9 6 18 0" fill="none" stroke="#7FD4FF" stroke-width="3" stroke-linecap="round"/>
     <rect x="14" y="36" width="8" height="18" rx="4" fill="#203469"/><rect x="98" y="36" width="8" height="18" rx="4" fill="#203469"/>
     <rect x="52" y="72" width="16" height="6" fill="#203469"/>
@@ -81,13 +81,13 @@
 
   /* ---------- UI ---------- */
   const root=document.createElement('div'); root.className='zb'; root.innerHTML=`
-    <button class="zb-launch" type="button" aria-expanded="false" aria-controls="zbPanel" title="Ask ZAGBOT">${ROBOT(46,false)}<span class="zb-lbl"><b>ZAGBOT</b><i>Ask me</i></span></button>
-    <section class="zb-panel" id="zbPanel" role="dialog" aria-label="ZAGBOT chat" hidden>
+    <button class="zb-launch" type="button" aria-expanded="false" aria-controls="zbPanel" title="Ask ZAGBot">${ROBOT(44,true)}<span class="zb-lbl"><b>ZAGBot</b><i>Ask me</i></span></button>
+    <section class="zb-panel" id="zbPanel" role="dialog" aria-label="ZAGBot chat" hidden>
       <header class="zb-head"><div class="zb-lights"><button class="zb-x zb-red" type="button" aria-label="Close the chat" title="Close"></button><button class="zb-min zb-yel" type="button" aria-label="Minimise the chat" title="Minimise"></button><button class="zb-big zb-grn" type="button" aria-label="Larger chat window" title="Larger window"></button></div>
-        ${ROBOT(34,true)}<div class="zb-title"><b>ZAGBOT</b><span>Assistant of the ZAG Digital Atlas</span></div></header>
+        ${ROBOT(34,true)}<div class="zb-title"><b>ZAGBot</b><span>Assistant of the ZAG Digital Atlas</span></div></header>
       <div class="zb-log" id="zbLog" aria-live="polite"></div>
       <div class="zb-chips" id="zbChips"></div>
-      <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure, or tell me what to change" aria-label="Message to ZAGBOT"><button type="submit" aria-label="Send">➤</button></form>
+      <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure, or tell me what to change" aria-label="Message to ZAGBot"><button type="submit">Send</button></form>
       <p class="zb-foot">Answers come only from the atlas data, with the source. Changes go to the owner as a request on GitHub.</p>
     </section>`;
   document.body.appendChild(root);
@@ -156,12 +156,12 @@
   function summary(){ const f=ctx.flow; f.step=null; const W=Object.fromEntries(WHAT);
     const lines=[['Record',`${f.r.name} (${f.r.id})`],['What',W[f.what]],f.label?['Value',f.label]:null,f.old?['Now shown',f.old]:null,f.value?['Should be',f.value]:null,f.desc?['Details',f.desc]:null,['Source',f.src||'none given, please find and check one']].filter(Boolean);
     say(`Here is the request:<ul class="zb-spec">${lines.map(([a,b])=>`<li><span>${esc(a)}</span><b>${esc(b)}</b></li>`).join('')}</ul>${f.src?'':'<p class="zb-note">Without a source the change is only made if a published source confirms it.</p>'}`);
-    const title=`ZAGBOT: ${f.r.name}, ${f.label||{position:'position',model:'3D model',text:'description',source:'sources',other:'request',value:'value'}[f.what]}`;
-    const body=['Request written with ZAGBOT on the atlas.','',...lines.map(([a,b])=>`### ${a}\n\n${b}\n`),'### Page',`\nhttps://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/twin.html?id=${f.r.id}\n`,'Photos can be dragged in here before submitting.'].join('\n');
-    if(INBOX.url){ offer([['Send the request',()=>sendInbox(title.replace(/^ZAGBOT: /,''),body.replace('Photos can be dragged in here before submitting.','')),'primary'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
-      say('<span class="zb-note">'+(isOwner()?'You are signed in as the atlas owner, so ZAGBOT starts on it at once.':'No account needed. The atlas team checks it, then ZAGBOT makes the change.')+'</span>'); return; }
-    offer([['Send to ZAGBOT on GitHub',`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`,'link'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
-    say('<span class="zb-note">GitHub opens with the request filled in. Press <b>Create</b>. When the atlas owner sends it, ZAGBOT on GitHub checks the source, makes the change and replies there.</span>'); }
+    const title=`ZAGBot: ${f.r.name}, ${f.label||{position:'position',model:'3D model',text:'description',source:'sources',other:'request',value:'value'}[f.what]}`;
+    const body=['Request written with ZAGBot on the atlas.','',...lines.map(([a,b])=>`### ${a}\n\n${b}\n`),'### Page',`\nhttps://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/twin.html?id=${f.r.id}\n`,'Photos can be dragged in here before submitting.'].join('\n');
+    if(INBOX.url){ offer([['Send the request',()=>sendInbox(title.replace(/^ZAGBot: /,''),body.replace('Photos can be dragged in here before submitting.','')),'primary'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
+      say('<span class="zb-note">'+(isOwner()?'You are signed in as the atlas owner, so ZAGBot starts on it at once.':'No account needed. The atlas team checks it, then ZAGBot makes the change.')+'</span>'); return; }
+    offer([['Send to ZAGBot on GitHub',`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`,'link'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
+    say('<span class="zb-note">GitHub opens with the request filled in. Press <b>Create</b>. When the atlas owner sends it, ZAGBot on GitHub checks the source, makes the change and replies there.</span>'); }
   /* ---------- request inbox: no GitHub account needed (server/inbox.js) ---------- */
   const INBOX={url:''}; fetch('data/inbox.json').then(r=>r.ok?r.json():{}).then(j=>{ if(j&&/^https:\/\//.test(j.url||'')) INBOX.url=j.url.replace(/\/+$/,''); }).catch(()=>{});
   const code=()=>{ try{ return localStorage.getItem('zag_owner_code')||''; }catch(_){ return ''; } };
@@ -169,7 +169,7 @@
   async function call(path,method,body){ const r=await fetch(INBOX.url+path,{method:method||'GET',headers:Object.assign({'content-type':'application/json'},code()?{'x-owner-code':code()}:{}),body:body?JSON.stringify(body):undefined}); let j={}; try{ j=await r.json(); }catch(_){} if(!r.ok) throw new Error(j.error||('error '+r.status)); return j; }
   async function sendInbox(subject,body){ const wait=say('Sending...');
     try{ const j=await call('/request','POST',{subject,body,website:''}); wait.remove(); ctx.flow=null;
-      say(j.runs?`Sent as request <b>#${j.number}</b>. ZAGBOT is starting on it now and will answer there in a few minutes.`:`Thank you, your request is in as <b>#${j.number}</b>. The atlas team checks it, then ZAGBOT makes the change.`);
+      say(j.runs?`Sent as request <b>#${j.number}</b>. ZAGBot is starting on it now and will answer there in a few minutes.`:`Thank you, your request is in as <b>#${j.number}</b>. The atlas team checks it, then ZAGBot makes the change.`);
       offer([['Follow it (no sign in needed)',j.url,'link'],['Something else',()=>{ say('What else?'); offer(menu()); }]]); }
     catch(e){ wait.remove(); say('It could not be sent: '+esc(e.message)); offer([['Try again',()=>sendInbox(subject,body)],['Cancel',cancel]]); } }
   function ownerLogin(){ if(!INBOX.url){ say('The request inbox is not switched on yet, so there is nothing to sign in to.'); offer(menu()); return; }
@@ -181,7 +181,7 @@
   async function pending(){ try{ const j=await call('/pending'); if(!j.items.length){ say('No requests are waiting.'); ownerMenu(); return; }
       say(`${j.items.length} waiting. Choose one to run or decline:`); offer(j.items.slice(0,10).map(i=>['#'+i.number+' '+i.title,()=>decide(i)]).concat([['Back',ownerMenu]])); }
     catch(e){ say('The list could not be read: '+esc(e.message)); ownerMenu(); } }
-  function decide(i){ say(`<b>#${i.number}</b> ${esc(i.title)}`); offer([['Run it',async()=>{ try{ await call('/approve','POST',{number:i.number,action:'run'}); say('Started. ZAGBOT answers on the request in a few minutes.'); }catch(e){ say('Failed: '+esc(e.message)); } ownerMenu(); },'primary'],['Read it',i.url,'link'],['Decline',async()=>{ try{ await call('/approve','POST',{number:i.number,action:'reject'}); say('Declined and closed.'); }catch(e){ say('Failed: '+esc(e.message)); } ownerMenu(); }],['Back',pending]]); }
+  function decide(i){ say(`<b>#${i.number}</b> ${esc(i.title)}`); offer([['Run it',async()=>{ try{ await call('/approve','POST',{number:i.number,action:'run'}); say('Started. ZAGBot answers on the request in a few minutes.'); }catch(e){ say('Failed: '+esc(e.message)); } ownerMenu(); },'primary'],['Read it',i.url,'link'],['Decline',async()=>{ try{ await call('/approve','POST',{number:i.number,action:'reject'}); say('Declined and closed.'); }catch(e){ say('Failed: '+esc(e.message)); } ownerMenu(); }],['Back',pending]]); }
   function cancel(){ ctx.flow=null; say('Cancelled. Anything else?'); offer(menu()); }
 
   /* ---------- understanding typed text ---------- */
@@ -227,12 +227,12 @@
   async function toggle(open){ const on=open==null?panel.hidden:open; panel.hidden=!on; launch.setAttribute('aria-expanded',String(on)); root.classList.toggle('open',on);
     if(on&&!started){ started=true; say('Loading the atlas data...');
       try{ await load(); log.innerHTML=''; const here=PAGE_ID&&DB.byId[PAGE_ID]; if(here) ctx.rec=here;
-        say(`Hello, I am <b>ZAGBOT</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
+        say(`Hello, I am <b>ZAGBot</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
         offer(here?[['Key figures',()=>figures(here)],['What did ZAG do?',()=>role(here)],['Something is wrong',()=>startUpdate(here)],['Update the 3D model',()=>startModel(here)],['Find another structure',()=>{ say('Type its name or place.'); offer(typeChips()); input.focus(); }]]:menu()); }
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
     if(on) setTimeout(()=>input.focus(),50); }
   launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });
   $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(!DB.recs.length){ load().then(()=>handle(t)); return; } handle(t); };
-  window.ZAGBOT={open:()=>toggle(true),ask:t=>{ toggle(true).then(()=>handle(t)); }};
+  window.ZAGBot={open:()=>toggle(true),ask:t=>{ toggle(true).then(()=>handle(t)); }};
 })();

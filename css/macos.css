@@ -1,72 +1,94 @@
-/* ZAG Digital Atlas, current macOS look (white windows, glass controls, capsule buttons, overlay scroll bars, pop-up menus).
-   Loaded after ios.css on every page. It changes surfaces and controls only, never the layout. */
+/* ZAG Digital Atlas, macOS Sierra look. Loaded after ios.css on every page and replaces its shapes and controls.
+   Sierra rules: grey toolbar with a soft gradient, white content, 1 px hairlines, 4 to 5 px corners, push buttons with a white
+   gradient and black text, one blue default button, joined segmented controls, pop-up buttons with the blue arrow end,
+   square text fields with a blue focus glow, thin overlay scroll bars. Layout is never changed here. */
 :root{
-  --mac-bg:#FFFFFF; --mac-win:#FFFFFF; --mac-side:#F7F7F9; --mac-hair:rgba(0,0,0,.09); --mac-hair2:rgba(0,0,0,.06);
-  --mac-glass:rgba(255,255,255,.72); --mac-shadow:0 0 0 .5px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.04),0 10px 30px rgba(0,0,0,.07);
-  --mac-ctl:rgba(255,255,255,.86); --mac-ctl-edge:inset 0 0 0 .5px rgba(0,0,0,.12),inset 0 1px 0 rgba(255,255,255,.9),0 1px 2px rgba(0,0,0,.08);
-  --mac-ring:0 0 0 3.5px rgba(0,122,255,.38);
+  --s-blue:#0F7EF3; --s-blue-top:#69B1FA; --s-blue-bot:#0D81FF; --s-sel:#0062CC;
+  --s-ink:#262626; --s-mut:#7F7F7F; --s-hair:#D1D1D1; --s-hair2:#E3E3E3; --s-btn-b:#C3C3C3; --s-btn-bb:#A9A9A9;
+  --s-win:#ECECEC; --s-side:#F6F6F6; --s-tool-a:#E8E6E8; --s-tool-b:#D3D1D3;
+  --s-ring:0 0 0 3px rgba(59,153,252,.55);
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Inter","Segoe UI",system-ui,Arial,sans-serif;
+  --blue:#0F7EF3; --ink:#262626; --muted:#7F7F7F; --r:5px; --r2:4px;
 }
-/* white windows */
-body:not(.embed){background:var(--mac-bg)}
-.panel,.glass,.asset,.tree .tsec,.blk,.alldata,.lgd{background:var(--mac-win);border:0;border-radius:20px;box-shadow:var(--mac-shadow)}
-.thdr,.hdr{background:rgba(255,255,255,.78);-webkit-backdrop-filter:saturate(190%) blur(24px);backdrop-filter:saturate(190%) blur(24px);border-bottom:.5px solid var(--mac-hair)}
+body{font-family:var(--font);color:var(--s-ink);letter-spacing:0;-webkit-font-smoothing:antialiased}
+body:not(.embed){background:var(--s-win)}
+a{color:var(--s-blue)}
+::selection{background:#B3D7FF}
 
-/* capsule buttons with a glass face */
-.tbtn,.chipbtn,.tgl,.pill,.btn{border-radius:999px!important;background:var(--mac-ctl);color:var(--blue);box-shadow:var(--mac-ctl-edge);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);font-weight:600}
-.tbtn:hover,.chipbtn:hover,.tgl:hover,.pill:hover,.btn:hover{background:#fff;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.16),inset 0 1px 0 #fff,0 2px 6px rgba(0,0,0,.10)}
-.tbtn.solid,.tbtn[aria-pressed="true"],.tgl[aria-pressed="true"]{background:linear-gradient(#2A8CFF,#007AFF);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 0 0 .5px rgba(0,80,200,.5),0 2px 8px rgba(0,122,255,.30)}
-.tbtn.solid:hover,.tbtn[aria-pressed="true"]:hover{background:linear-gradient(#3A95FF,#0A80FF)}
-.tbtn:active,.chipbtn:active,.btn:active{transform:scale(.97)}
+/* toolbar: the unified Sierra title bar */
+.thdr,.hdr{background:linear-gradient(var(--s-tool-a),var(--s-tool-b));-webkit-backdrop-filter:none;backdrop-filter:none;border:0;border-bottom:1px solid #B1AFB1;box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+.brand b{color:#203469;letter-spacing:.01em}
+.crumb{color:#4D4D4D}
 
-/* segmented controls: capsule track, white thumb */
-.seg{border-radius:999px;background:rgba(118,118,128,.12);padding:3px;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.04)}
-.seg button{border-radius:999px;height:28px;padding:0 14px}
-.seg button[aria-pressed="true"]{background:#fff;box-shadow:0 0 0 .5px rgba(0,0,0,.06),0 2px 6px rgba(0,0,0,.12)}
-.tabs{border-radius:999px;background:rgba(118,118,128,.12);padding:3px}
-.tabs [role=tab]{border-radius:999px}
-.tabs [role=tab][aria-selected="true"]{background:#fff;box-shadow:0 0 0 .5px rgba(0,0,0,.06),0 2px 6px rgba(0,0,0,.12)}
+/* content boxes: white, hairline border, small corner, almost no shadow */
+.panel,.glass,.asset,.tree .tsec,.blk,.alldata,.lgd,.dims,.home .card{background:#fff;border:1px solid var(--s-hair);border-radius:5px;box-shadow:0 1px 1px rgba(0,0,0,.04)}
+.tree,.insp{background:var(--s-side)}
+h1,h2,h3{letter-spacing:-.01em}
 
-/* fields */
-input[type=text],input[type=search],input[type=url],input[type=password],input[type=number],input:not([type]),textarea,.fld input,.fld textarea{background:#fff;border:0;border-radius:12px;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.16),inset 0 1px 2px rgba(0,0,0,.04);color:var(--ink);transition:box-shadow .15s}
-input:focus,textarea:focus,select:focus{outline:none;box-shadow:inset 0 0 0 .5px rgba(0,122,255,.6),var(--mac-ring)}
-.hsearch input,.tsearch input,#q{border-radius:999px!important;background:rgba(118,118,128,.10)!important;box-shadow:none}
-.hsearch input:focus,.tsearch input:focus,#q:focus{background:#fff!important;box-shadow:var(--mac-ring)!important}
+/* push buttons */
+.tbtn,.chipbtn,.tgl,.pill,.btn,.tl button,.zb-chip{height:26px;padding:0 12px;border:1px solid var(--s-btn-b)!important;border-bottom-color:var(--s-btn-bb)!important;border-radius:4px!important;background:linear-gradient(#FFFFFF,#F3F3F3)!important;color:#1A1A1A!important;font:400 13px var(--font)!important;box-shadow:0 1px 0 rgba(0,0,0,.05)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;text-decoration:none;transition:none}
+.tbtn:hover,.chipbtn:hover,.tgl:hover,.pill:hover,.btn:hover,.zb-chip:hover{background:linear-gradient(#FFFFFF,#ECECEC)!important}
+.tbtn:active,.chipbtn:active,.tgl:active,.pill:active,.btn:active,.tl button:active,.zb-chip:active{background:linear-gradient(#E3E3E3,#D9D9D9)!important;transform:none}
+/* the default (blue) button */
+.tbtn.solid,.tbtn[aria-pressed="true"],.tgl[aria-pressed="true"],.tl button[aria-pressed=true],.zb-chip.solid{background:linear-gradient(var(--s-blue-top),var(--s-blue-bot))!important;border-color:#2A86F5 #2A86F5 #0060DF!important;color:#fff!important;box-shadow:0 1px 0 rgba(0,0,0,.08)!important}
+.tbtn.solid:active,.zb-chip.solid:active{background:linear-gradient(#3C97F4,#0068D9)!important}
+.asset .tbtn,.asset .btnrow .tbtn{height:28px}
 
-/* pop-up menus (drop downs): white capsule with the macOS up and down chevron */
-select{-webkit-appearance:none;appearance:none;height:32px;padding:0 34px 0 14px;border:0;border-radius:999px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Crect width='20' height='20' rx='10' fill='%23007AFF'/%3E%3Cpath d='M7 8.2l3-2.7 3 2.7M7 11.8l3 2.7 3-2.7' fill='none' stroke='%23fff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 6px center/20px 20px;box-shadow:var(--mac-ctl-edge);color:var(--ink);font:500 13.5px var(--font);cursor:pointer}
-select:hover{box-shadow:inset 0 0 0 .5px rgba(0,0,0,.18),0 2px 6px rgba(0,0,0,.10)}
-.fld select{width:100%;height:40px;border-radius:12px}
-option{font:14px var(--font)}
+/* segmented controls and tab views: joined segments, blue selected segment */
+.seg{display:inline-flex}.tabs{display:flex}.tabs [role=tab]{flex:1 1 0}
+.seg,.tabs{gap:0;padding:0;border:1px solid var(--s-btn-b);border-bottom-color:var(--s-btn-bb);border-radius:4px;background:linear-gradient(#FFFFFF,#F3F3F3);box-shadow:0 1px 0 rgba(0,0,0,.05);overflow:hidden}
+.seg button,.tabs [role=tab]{height:24px;padding:0 12px;border:0;border-radius:0!important;background:transparent;color:#1A1A1A;font:400 13px var(--font);box-shadow:none!important}
+.seg button+button,.tabs [role=tab]+[role=tab]{border-left:1px solid var(--s-btn-b)!important}
+.seg button[aria-pressed="true"],.tabs [role=tab][aria-selected="true"]{background:linear-gradient(var(--s-blue-top),var(--s-blue-bot));color:#fff;font-weight:400;box-shadow:none}
 
-/* sliders: thin track, white knob */
-input[type=range]{-webkit-appearance:none;appearance:none;height:22px;background:transparent;accent-color:#007AFF}
-input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:4px;background:rgba(118,118,128,.24)}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;margin-top:-8px;border-radius:50%;background:#fff;box-shadow:0 0 0 .5px rgba(0,0,0,.18),0 2px 5px rgba(0,0,0,.22)}
-input[type=range]::-moz-range-track{height:4px;border-radius:4px;background:rgba(118,118,128,.24)}
-input[type=range]::-moz-range-progress{height:4px;border-radius:4px;background:#007AFF}
-input[type=range]::-moz-range-thumb{width:20px;height:20px;border:0;border-radius:50%;background:#fff;box-shadow:0 0 0 .5px rgba(0,0,0,.18),0 2px 5px rgba(0,0,0,.22)}
-input[type=checkbox],input[type=radio]{accent-color:#007AFF;width:16px;height:16px}
+/* text fields: square, inner top shadow, blue focus glow */
+input[type=text],input[type=search],input[type=url],input[type=password],input[type=number],input:not([type]),textarea{background:#fff!important;border:1px solid #BDBDBD!important;border-top-color:#A8A8A8!important;border-radius:2px!important;box-shadow:inset 0 1px 0 rgba(0,0,0,.05)!important;color:var(--s-ink);font-size:13px}
+input:focus,textarea:focus,select:focus{outline:none!important;box-shadow:var(--s-ring)!important;border-color:#7EB4EA!important}
+.hsearch input,.tsearch input,#q,input[type=search]{border-radius:5px!important}
 
-/* disclosure rows */
-details>summary{list-style:none;cursor:pointer}
+/* pop-up buttons (drop downs) with the blue arrow end */
+select{-webkit-appearance:none;appearance:none;height:24px;padding:0 30px 0 9px;border:1px solid var(--s-btn-b);border-bottom-color:var(--s-btn-bb);border-radius:4px;color:#1A1A1A;font:400 13px var(--font);cursor:default;box-shadow:0 1px 0 rgba(0,0,0,.05);
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='22' viewBox='0 0 17 22'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2369B1FA'/%3E%3Cstop offset='1' stop-color='%230D81FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 0h13a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H0z' fill='url(%23g)'/%3E%3Cpath d='M5.5 9 8.5 6l3 3M5.5 13l3 3 3-3' fill='none' stroke='%23fff' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right -1px center/17px calc(100% + 2px),linear-gradient(#FFFFFF,#F3F3F3)}
+.fld select{width:100%;height:26px}
+
+/* sliders and check boxes */
+input[type=range]{-webkit-appearance:none;appearance:none;height:20px;background:transparent}
+input[type=range]::-webkit-slider-runnable-track{height:3px;border-radius:2px;background:#B5B5B5}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7.5px;border-radius:50%;background:linear-gradient(#FFFFFF,#F0F0F0);border:.5px solid #A0A0A0;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+input[type=range]::-moz-range-track{height:3px;border-radius:2px;background:#B5B5B5}
+input[type=range]::-moz-range-progress{height:3px;background:var(--s-blue)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:linear-gradient(#FFFFFF,#F0F0F0);border:.5px solid #A0A0A0;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+input[type=checkbox],input[type=radio]{accent-color:var(--s-blue);width:14px;height:14px}
+
+/* disclosure triangles */
+details>summary{list-style:none;cursor:default}
 details>summary::-webkit-details-marker{display:none}
-details>summary::before{content:"";display:inline-block;width:7px;height:7px;margin:0 9px 1px 2px;border-right:1.8px solid currentColor;border-bottom:1.8px solid currentColor;transform:rotate(-45deg);transition:transform .18s;opacity:.6}
-details[open]>summary::before{transform:rotate(45deg)}
+details>summary::before{content:"";display:inline-block;margin:0 7px 1px 2px;border-style:solid;border-width:4.5px 0 4.5px 7px;border-color:transparent transparent transparent #7A7A7A;transition:transform .15s}
+details[open]>summary::before{transform:rotate(90deg)}
 
-/* overlay scroll bars: thin, rounded, grow on hover, same in every scroll area */
+/* overlay scroll bars: thin dark knob, no track */
+*{scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.38) transparent}
+*::-webkit-scrollbar{width:11px;height:11px;background:transparent}
+*::-webkit-scrollbar-track,*::-webkit-scrollbar-corner{background:transparent}
+*::-webkit-scrollbar-thumb{background:rgba(0,0,0,.30);border-radius:8px;border:3px solid transparent;background-clip:content-box;min-height:36px}
+*::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.50);border-width:2px;background-clip:content-box}
 html{scroll-behavior:smooth}
-*{scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.24) transparent}
-*::-webkit-scrollbar{width:12px;height:12px;background:transparent}
-*::-webkit-scrollbar-track{background:transparent}
-*::-webkit-scrollbar-thumb{background:rgba(0,0,0,.22);border-radius:12px;border:4px solid transparent;background-clip:content-box;min-height:40px}
-*::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.40);border-width:3px;background-clip:content-box}
-*::-webkit-scrollbar-corner{background:transparent}
 
-/* map overlays on the white theme */
-.tl{border:0;border-radius:999px;background:rgba(255,255,255,.86);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);box-shadow:var(--mac-shadow);padding:6px 8px 6px 6px}
-.tl button{border:0;border-radius:999px;background:var(--mac-ctl);box-shadow:var(--mac-ctl-edge);color:var(--blue)}
-.tl button[aria-pressed=true]{background:linear-gradient(#2A8CFF,#007AFF);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 0 0 .5px rgba(0,80,200,.5)}
-.tl .tlx{background:transparent;box-shadow:none;color:var(--muted)}
-.vctl{border-radius:16px;overflow:hidden;box-shadow:var(--mac-shadow)}
-.maplibregl-ctrl-group{border-radius:14px!important;box-shadow:var(--mac-shadow)!important;overflow:hidden}
+/* asset page: split view panes are square and divided by one hairline, so no grey corners show */
+.panes{gap:1px;background:var(--s-hair)}
+.pane{border-radius:0!important;margin:0!important;box-shadow:none!important;background:#fff}
+.stage{border-radius:0}
+.vstatus{background:linear-gradient(#F4F4F4,#E9E9E9);border-top:1px solid var(--s-hair);color:#5E5E5E;font-size:11px}
+.view{background:#fff}
+.ptools{gap:6px}
+.plabel{border-radius:4px}
+.pane-model .plabel.mlevel{border-radius:4px}
+
+/* map page overlays */
+.tl{border:1px solid var(--s-hair);border-radius:5px;background:rgba(246,246,246,.96);box-shadow:0 2px 8px rgba(0,0,0,.15);padding:6px 8px;-webkit-backdrop-filter:none;backdrop-filter:none}
+.tl .tlx{border:0!important;background:transparent!important;box-shadow:none!important;color:#5E5E5E!important}
+.vctl,.maplibregl-ctrl-group{border-radius:5px!important;border:1px solid var(--s-hair)!important;box-shadow:0 1px 3px rgba(0,0,0,.12)!important}
+.lgd{border-radius:5px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.tabs [role=tab]{padding:0 4px;font-size:12.5px;white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.rothint{border-radius:5px!important;background:rgba(40,40,40,.82)!important;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
