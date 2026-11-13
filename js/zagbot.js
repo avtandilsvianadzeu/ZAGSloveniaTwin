@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=7'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=8'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
@@ -96,7 +96,7 @@
         ${ROBOT(34,true)}<div class="zb-title"><b>ZAGBot</b><span>Online, knows all 73 records</span></div></header>
       <div class="zb-log" id="zbLog" aria-live="polite"></div>
       <div class="zb-chips" id="zbChips"></div>
-      <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure, or tell me what to change" aria-label="Message to ZAGBot"><button type="submit">Send</button></form>
+      <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure, or tell me what to change" aria-label="Message to ZAGBot"><button type="submit" aria-label="Send" title="Send"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V3.5M3.8 7.6 8 3.4l4.2 4.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
       <p class="zb-foot">Answers come from the atlas data, with sources. Corrections are reviewed by the ZAG atlas team.</p>
     </section>`;
   document.body.appendChild(root);
@@ -106,7 +106,9 @@
 
   const scroll=()=>{ log.scrollTop=log.scrollHeight; };
   let typing=null;
-  function say(html,who){ const d=document.createElement('div'); d.className='zb-msg '+(who||'bot'); d.innerHTML=html; if(typing){ typing.remove(); typing=null; } log.appendChild(d); scroll(); return d; }
+  function say(html,who){ const d=document.createElement('div'); d.className='zb-msg '+(who||'bot'); d.innerHTML=html; if(typing){ typing.remove(); typing=null; } log.appendChild(d);
+    /* a long answer is shown from its start, a short one keeps the chat at the bottom */
+    if(who==='me') scroll(); else { const q=[...log.querySelectorAll('.zb-msg.me')].pop(); if(q&&log.scrollHeight-q.offsetTop>log.clientHeight) log.scrollTop=Math.max(0,q.offsetTop-8); else scroll(); } return d; }
   function think(){ if(typing) return; typing=document.createElement('div'); typing.className='zb-msg bot'; typing.innerHTML='<span class="zb-typing"><i></i><i></i><i></i></span>'; log.appendChild(typing); scroll(); }
   function user(t){ say(esc(t),'me'); }
   /* chips: [label, action] where action is a function or a string the user "types" */
@@ -146,7 +148,7 @@
   const srcList=(r,n)=>{ const S=arr(r.p.sources).filter(x=>x&&x.url); if(!S.length) return ''; return `<p class="zb-src">Sources: ${S.slice(0,n||4).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(tidy(x.title||x.key||'source'))}</a>`).join(', ')}${S.length>(n||4)?`, and ${S.length-(n||4)} more on its page`:''}</p>`; };
   const projLines=(r,n)=>{ const P=projOf(r); if(!P.length) return ''; return `<p><b>Projects linked to it</b></p><ul class="zb-list">${P.slice(0,n||4).map(x=>`<li>${x.ru?`<a href="${esc(x.ru)}" target="_blank" rel="noopener">${esc(tidy(x.ac||x.t))}</a>`:esc(tidy(x.ac||x.t))}${x.y?', '+esc(yrs(x.y)):''}${x.role&&!/not stated/i.test(x.role)?', ZAG as '+esc(x.role.toLowerCase()):''}</li>`).join('')}</ul>`; };
   /* a short pause with what is being read, so an answer is visibly worked out and not guessed */
-  function analyse(steps,fn){ const d=say('<span class="zb-ana"><i class="zb-spin"></i><span></span></span>'); const t=d.querySelector('.zb-ana span'); let i=0; t.textContent=steps[0];
+  function analyse(steps,fn){ chips.innerHTML=''; const d=say('<span class="zb-ana"><i class="zb-spin"></i><span></span></span>'); const t=d.querySelector('.zb-ana span'); let i=0; t.textContent=steps[0];
     const iv=setInterval(()=>{ i++; if(i<steps.length) t.textContent=steps[i]; },420); setTimeout(()=>{ clearInterval(iv); d.remove(); fn(); },Math.min(1900,450+steps.length*420)); }
   const readSteps=rs=>{ const S=rs.reduce((a,r)=>a+arr(r.p.sources).length+((DB.twins[r.id]||{}).specs||[]).length,0), P=rs.reduce((a,r)=>a+projOf(r).length,0);
     return [`Reading ${rs.length>1?rs.length+' records':'the record of '+rs[0].name}`,`Checking ${S} sourced entries${P?' and '+P+' ZAG projects':''}`,'Writing the answer from what the sources say']; };

@@ -554,7 +554,7 @@ function renderIndex(){
   document.title='Assets, ZAG Digital Atlas';
   const groups={}; for(const f of D.features){const k=f.properties.object_type||'other';(groups[k]=groups[k]||[]).push(f.properties);}
   const order=[...GROUP_ORDER.filter(k=>groups[k]),...Object.keys(groups).filter(k=>!GROUP_ORDER.includes(k))];
-  const hasGeo=p=>!!(p.lines||p.line||D.gurs[p.id]);
+  const hasGeo=p=>!!(p.lines||p.line||D.gurs[p.id]||(((D.twins[p.id]||{}).model||{}).blocks||[]).length);
   const nGeo=D.features.filter(f=>hasGeo(f.properties)).length, nExact=D.features.filter(f=>EXACT(f.properties.position_precision)).length;
   const nSpec=Object.values(D.twins).reduce((a,t)=>a+((t.specs||[]).length),0), nNews=Object.keys(D.news).filter(k=>(D.news[k]||[]).length).length;
   const host=u=>{ try{ return new URL(u).host.replace(/^www\./,''); }catch(_){ return ''; } };
@@ -564,12 +564,12 @@ function renderIndex(){
   const matches=(p,qq)=>!qq||qq.split(/\s+/).filter(Boolean).every(x=>nameOf(p).includes(x))||!!factHit(p,qq);
   const card=p=>{const t=D.twins[p.id],n=t?(t.specs||[]).length:0;
     return `<a class="obj" href="twin.html?id=${encodeURIComponent(p.id)}" data-g="${esc(p.object_type||'other')}" data-id="${esc(p.id)}"><b>${T(p.name_en||p.name)}</b><span>${T(p.locality||p.municipality||'')}</span><small class="hit" hidden></small>
-      <div class="tags">${n?`<span class="tag">${n} ${n===1?'specification':'specifications'}</span>`:''}${hasGeo(p)?'<span class="tag ok">3D geometry</span>':''}${EXACT(p.position_precision)?'':'<span class="tag warn">approximate position</span>'}</div></a>`;};
+      <div class="tags">${n?`<span class="tag">${n} ${n===1?'specification':'specifications'}</span>`:''}${hasGeo(p)?'<span class="tag ok">3D model</span>':''}${EXACT(p.position_precision)?'':'<span class="tag warn">approximate position</span>'}</div></a>`;};
   const COLS=[['Name',p=>p.name_en||p.name],['Type',p=>GROUP_NAME[p.object_type]||cap(p.object_type||'other')],['Place',p=>p.locality||p.municipality||''],['ZAG work',p=>String(p.year||'').replace(/^(\d{4})-(\d{4})$/,'$1 to $2').replace(/^(\d{4})-$/,'since $1')],['Built',p=>p.built||''],['Position',p=>EXACT(p.position_precision)?'exact':'approximate'],['Sourced values',p=>{const t=D.twins[p.id];return t?(t.specs||[]).filter(x=>x.source).length:0;}]];
   $('main').innerHTML=`<div class="wrap home"><h1>Assets</h1><p class="lead">Structures and sites where ZAG has documented work. Each opens its own sheet with a 3D view, key figures and specifications with sources.</p>
     <section class="dims" aria-label="Platform figures">
       <div class="dim"><div class="v">${D.features.length}</div><div class="k">objects</div></div>
-      <div class="dim"><div class="v">${nGeo}</div><div class="k">with 3D geometry</div></div>
+      <div class="dim"><div class="v">${nGeo}</div><div class="k">with a 3D model</div></div>
       <div class="dim"><div class="v">${nExact}</div><div class="k">placed exactly</div></div>
       <div class="dim"><div class="v">${num(nSpec)}</div><div class="k">facts and figures, each with its source</div></div>
       <div class="dim"><div class="v">${nNews}</div><div class="k">with recent news</div></div>

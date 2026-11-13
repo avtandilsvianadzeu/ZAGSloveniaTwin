@@ -99,3 +99,6 @@
 .zb-card .zb-list{margin:4px 0 0;padding-left:18px}
 @media (prefers-reduced-motion:reduce){.zb-tease,.zb-tease.in .zb-tbar i,.zb-caret,.zb-spin{animation:none;transition:none}}
 @media (max-width:700px){.zb-tease{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+.zb-in button{display:grid;place-items:center}.zb-in button svg{display:block}
+.zb-log{position:relative}
+.zb-card p b,.zb-card .zb-list li b{display:inline;font-size:inherit;margin:0}.zb-card p{margin:6px 0 0}

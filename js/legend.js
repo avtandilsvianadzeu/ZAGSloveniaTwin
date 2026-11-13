@@ -10,7 +10,7 @@
   const KINDS=[['doc','#007AFF','Blue: project with ZAG work'],['fac','#5856D6',"Violet: ZAG's own site"],['ref','#8E8E93','Grey: partner, named in the sources']];
   const EXACT=new Set(['surveyed','address','matched']);
   const QUICK=[['news','With news this week',p=>{ try{ return recentNewsIds(7).includes(p.id); }catch(_){ return false; } }],
-    ['model','With a 3D model',p=>!!(p.lines||p.line||(ZA.gurs&&ZA.gurs[p.id])||(ZA.twins&&ZA.twins[p.id]&&ZA.twins[p.id].model))],
+    ['model','With a 3D model',p=>!!(p.lines||p.line||(ZA.gurs&&ZA.gurs[p.id])||(ZA.twins&&ZA.twins[p.id]&&ZA.twins[p.id].model&&(ZA.twins[p.id].model.blocks||[]).length))],
     ['exact','Exact position',p=>EXACT.has(p.position_precision)]];
   const img=(t,k)=>{ try{ const d=markerImage(t,k), c=document.createElement('canvas'); c.width=d.width; c.height=d.height; c.getContext('2d').putImageData(d,0,0); return '<img alt="" width="26" height="26" src="'+c.toDataURL()+'">'; }catch(_){ return ''; } };
   const pref=()=>{ try{ const v=localStorage.getItem('zag_lgd_hidden'); if(v===null) return innerWidth<1100; return v==='1'; }catch(_){ return innerWidth<1100; } };
