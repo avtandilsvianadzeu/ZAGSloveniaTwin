@@ -6,7 +6,7 @@
   const range=bar.querySelector('input'), out=bar.querySelector('output'), play=document.getElementById('tlPlay'), all=document.getElementById('tlAll');
   let timer=null, lo=0, hi=0, undated=0;
   const paint=()=>{ const y=+range.value, on=ZA.upTo!=null; const n=ZA.features.filter(f=>{ const s=f.properties.year_start; return s!=null&&s<=y; }).length;
-    out.innerHTML=on?`Work up to <b>${y}</b>, ${n} dated records`:`All years, ${lo} to ${hi}`; all.setAttribute('aria-pressed',on?'false':'true');
+    out.innerHTML=on?`Work up to <b>${y}</b>, ${n} dated record${n===1?'':'s'}`:`All years, ${lo} to ${hi}`; all.setAttribute('aria-pressed',on?'false':'true');
     bar.title=undated?`${undated} records have no year in the sources and are always shown`:''; };
   const set=y=>{ ZA.upTo=y; if(y!=null) range.value=y; refreshProjects(); paint(); };
   const stop=()=>{ if(timer){ clearInterval(timer); timer=null; } play.textContent='Play'; play.setAttribute('aria-pressed','false'); };

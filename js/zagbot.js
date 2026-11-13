@@ -203,7 +203,7 @@
     const near=ctx.rec?[[ctx.rec.name,()=>{ ctx.flow=null; then(ctx.rec); }]]:[]; offer(near.concat(typeChips().map(c=>[c[0],()=>listPick(c[1],then)])) ); input.focus(); }
   function listPick(key,then){ const t=TYPES.find(x=>x.key===key); const rs=DB.recs.filter(r=>t.match(r.type)); say('Choose one:'); offer(rs.slice(0,24).map(r=>[r.name,()=>{ ctx.flow=null; then(r); }])); }
   function startModel(r){ if(!r) return pickRecord(startModel,'Which structure is it about?'); ctx.rec=r;
-    const has=!!((DB.twins[r.id]||{}).model); say(`${has?'Suggest an improvement to':'Suggest'} the 3D model of <b>${esc(r.name)}</b>. Tell me what should change and where it is published. The atlas team builds the model from the mapped outline and the published dimensions.`);
+    const has=!!((DB.twins[r.id]||{}).model||r.p.lines||r.p.line); say(`${has?'Suggest an improvement to the 3D model of':'Suggest a 3D model for'} <b>${esc(r.name)}</b>. Tell me what should change and where it is published. The atlas team builds the model from the mapped outline and the published dimensions.`);
     offer([['Describe the change',()=>startUpdate(r,'model'),'primary'],isOwner()?['Open the model form',`${REPO}/issues/new?template=model_request.yml&title=${encodeURIComponent('Model: '+r.name+' ('+r.id+')')}`,'link']:null,['Back',()=>card(r)]]); }
   const WHAT=[['position','The position on the map'],['value','A value (height, length, year)'],['model','The 3D model'],['text','The description or ZAG role'],['source','A source or link'],['other','Something else']];
   function startUpdate(r,what,attr){ if(!r) return pickRecord(x=>startUpdate(x,what,attr),'Which structure is it about?'); ctx.rec=r; ctx.flow={kind:'update',r,what:null,label:attr||null,value:null,src:null};
@@ -349,5 +349,5 @@
   launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });
   $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(ctx.flow&&ctx.flow.kind==='code'){ handle(t); return; } user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },350); };
-  window.ZAGBot={open:()=>toggle(true),ask:t=>{ toggle(true).then(()=>handle(t)); }};
+  window.ZAGBot=window.ZAGBOT={open:()=>toggle(true),ask:t=>{ toggle(true).then(()=>handle(t)); }};
 })();

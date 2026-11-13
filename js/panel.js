@@ -9,6 +9,7 @@ let curId=null;
 
 function closeInfo(){
   curId=null; info.hidden=true; if(listEl.hidden) document.body.classList.remove('has-panel'); else renderList();
+  if(location.hash) try{ history.replaceState(null,'',location.pathname+location.search); }catch(_){}
   clearHL(); setSel(null); showLine(null); try{showTwinPoints(null);}catch(_){} emit('selected',null);
 }
 function openShell(html){

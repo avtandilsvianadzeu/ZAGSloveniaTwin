@@ -26,11 +26,18 @@
     if(zoom&&typeof map!=='undefined'){ const vis=visibleFeatures(); if(vis.length){ const xs=vis.map(f=>f.geometry.coordinates[0]), ys=vis.map(f=>f.geometry.coordinates[1]);
       try{ if(vis.length===1) map.easeTo({center:[xs[0],ys[0]],zoom:Math.max(map.getZoom(),11),duration:700});
         else map.fitBounds([[Math.min(...xs),Math.min(...ys)],[Math.max(...xs),Math.max(...ys)]],{padding:{top:120,bottom:120,left:260,right:120},maxZoom:11,duration:700}); }catch(_){} } } }
+  /* filters set elsewhere: section, timeline, layers */
+  const others=()=>{ const o=[]; if(ZA.nav&&ZA.nav!=='projects') o.push(({buildings:'Buildings',bridges:'Bridges',infrastructure:'Infrastructure'})[ZA.nav]||ZA.nav); if(ZA.upTo!=null) o.push('up to '+ZA.upTo); if(ZA.showProj===false) o.push('projects hidden'); if(ZA.showFac===false) o.push('ZAG sites hidden'); return o; };
+  function clearAll(){ sel.types.clear(); sel.kinds.clear(); sel.quick.clear();
+    if(ZA.nav&&ZA.nav!=='projects'){ ZA.nav='projects'; try{ syncNav(); closeList(); }catch(_){} }
+    if(ZA.upTo!=null){ const a=document.getElementById('tlAll'); if(a) a.click(); }
+    ['lyProj','lyFac'].forEach(id=>{ const c=document.getElementById(id); if(c&&!c.checked){ c.checked=true; c.dispatchEvent(new Event('change')); } });
+    apply(true); }
   function paint(){
-    const any=sel.types.size||sel.kinds.size||sel.quick.size, n=visibleFeatures().length, all=ZA.features.length;
+    const own=sel.types.size||sel.kinds.size||sel.quick.size, oth=others(), any=own||oth.length, n=visibleFeatures().length, all=ZA.features.length;
     box.classList.toggle('filtering',!!any);
     body.querySelectorAll('.lgr[data-g]').forEach(r=>{ const g=r.dataset.g, v=r.dataset.v, on=g==='t'?sel.types.has(+v):g==='k'?sel.kinds.has(v):sel.quick.has(v); r.classList.toggle('on',on); r.setAttribute('aria-pressed',String(on)); });
-    const st=box.querySelector('.lgstat'); if(st) st.innerHTML=any?`Showing <b>${n}</b> of ${all} <button type="button" class="lgall">Show all</button>`:`All <b>${all}</b> records. Click a line to show only those`;
+    const st=box.querySelector('.lgstat'); if(st) st.innerHTML=any?`Showing <b>${n}</b> of ${all}${oth.length?`<span class="lgoth">Also filtered: ${oth.join(', ')}</span>`:''} <button type="button" class="lgall">Show all</button>`:`All <b>${all}</b> records. Click a line to show only those`;
   }
   function toggle(group,key,add){
     const S=group==='t'?sel.types:group==='k'?sel.kinds:sel.quick, k=group==='t'?+key:key;
@@ -45,7 +52,7 @@
     const kinds=KINDS.map(([k,col,cap])=>`<button type="button" class="lgr" data-g="k" data-v="${k}" aria-pressed="false"><i class="lgdot" style="background:${col}"></i><span>${cap}</span><em>${cnt(p=>kindOfP(p)===k)}</em></button>`).join('');
     const quick=QUICK.map(([k,cap,f])=>`<button type="button" class="lgr" data-g="q" data-v="${k}" aria-pressed="false"><i class="lgq lgq-${k}"></i><span>${cap}</span><em>${cnt(f)}</em></button>`).join('');
     body.innerHTML='<p class="lgstat" aria-live="polite"></p><h4>Symbols</h4>'+rows+'<h4>Colours</h4>'+kinds+'<h4>Quick filters</h4>'+quick+'<h4>Numbers</h4><div class="lgr lgnote"><i class="lgnum">5</i><span>Several records close together. Click to zoom in</span></div>';
-    body.addEventListener('click',e=>{ if(e.target.closest('.lgall')){ sel.types.clear(); sel.kinds.clear(); sel.quick.clear(); apply(true); return; }
+    body.addEventListener('click',e=>{ if(e.target.closest('.lgall')){ clearAll(); return; }
       const r=e.target.closest('.lgr[data-g]'); if(r) toggle(r.dataset.g,r.dataset.v,e.ctrlKey||e.metaKey||e.shiftKey); });
     box.title='Click to show only these. Ctrl or Shift click to add more.';
     set(!pref()); paint();
@@ -53,4 +60,6 @@
   hide.addEventListener('click',()=>set(false)); show.addEventListener('click',()=>set(true));
   const wait=setInterval(()=>{ if(typeof ZA!=='undefined'&&ZA.features&&ZA.features.length&&typeof markerImage==='function'){ clearInterval(wait); build(); } },300);
   window.addEventListener('zag:news',()=>{ try{ paint(); }catch(_){} });
+  /* repaint whenever any filter changes the map */
+  document.addEventListener('atlas:filtered',()=>{ try{ if(body.querySelector('.lgstat')) paint(); }catch(_){} });
 })();

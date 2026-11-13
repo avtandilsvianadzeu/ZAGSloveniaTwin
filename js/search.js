@@ -4,12 +4,14 @@ const qIn=$('q'), resEl=$('results');
 const norm=t=>String(t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
 let qTimer=0, qSeq=0, locItems=[];
 function matchLocal(q){
-  const n=norm(q), out={projects:[],buildings:[],bridges:[]};
-  for(const f of ZA.features){ const p=f.properties;
-    const hay=norm([p.name_en,p.name_sl,p.municipality,p.locality,p.address,p.structure&&p.structure.crosses,p.structure&&p.structure.carries].join(' '));
-    if(!hay.includes(n)) continue;
-    const g=GROUPS[p.object_type]; (g==='buildings'?out.buildings:g==='bridges'?out.bridges:out.projects).push(f);
-  }
+  /* every word typed must appear somewhere in the record (name, place, address, what it carries or crosses, ZAG work); names rank first */
+  const words=norm(q).replace(/[^a-z0-9 ]+/g,' ').split(' ').filter(Boolean), out={projects:[],buildings:[],bridges:[]}, hits=[];
+  for(const f of ZA.features){ const p=f.properties, tw=(ZA.twins&&ZA.twins[p.id])||{};
+    const name=norm([p.name_en,p.name_sl,p.id].join(' ')).replace(/[^a-z0-9 ]+/g,' ');
+    const hay=name+' '+norm([p.municipality,p.locality,p.address,p.structure&&p.structure.crosses,p.structure&&p.structure.carries,p.zag_role,tw.summary].join(' ')).replace(/[^a-z0-9 ]+/g,' ');
+    if(!words.length||!words.every(w=>hay.includes(w))) continue;
+    hits.push([f,words.every(w=>name.includes(w))?0:1]); }
+  hits.sort((a,b)=>a[1]-b[1]).forEach(([f])=>{ const g=GROUPS[f.properties.object_type]; (g==='buildings'?out.buildings:g==='bridges'?out.bridges:out.projects).push(f); });
   return out;
 }
 function draw(local){

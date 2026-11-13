@@ -226,8 +226,12 @@ function renderTwin(f){
   if(EMBED){ const mb=$('mMeasure'); if(mb&&ctl.fem) mb.onclick=()=>{ const on=mb.getAttribute('aria-pressed')!=='true'; mb.setAttribute('aria-pressed',on?'true':'false'); ctl.fem.measure(on); }; return; }
   ctl.map=initView(p,t,g,lines,labels,{camera:(b,pt)=>{ if(ctl.fem) ctl.fem.setView(b*RAD,pt*RAD); },select:(type,i)=>{ if(!ctl.fem) return; if(type==='part') ctl.fem.pickPart(i); else ctl.fem.pickRef(i); }})||{};
   /* inspector tabs, in-page links, tree, layout, tools */
-  function tab(k){ document.querySelectorAll('.tabs [role=tab]').forEach(b=>b.setAttribute('aria-selected',b.id==='tab-'+k?'true':'false')); document.querySelectorAll('.tabpan').forEach(x=>x.hidden=x.id!=='pan-'+k); }
+  function tab(k){ document.querySelectorAll('.tabs [role=tab]').forEach(b=>{ b.setAttribute('aria-selected',b.id==='tab-'+k?'true':'false'); b.tabIndex=b.id==='tab-'+k?0:-1; }); document.querySelectorAll('.tabpan').forEach(x=>x.hidden=x.id!=='pan-'+k); }
   document.querySelectorAll('.tabs [role=tab]').forEach(b=>b.onclick=()=>tab(b.id.slice(4)));
+  /* arrow keys, Home and End move between the tabs */
+  document.querySelectorAll('.tabs[role=tablist]').forEach(tl=>tl.addEventListener('keydown',e=>{ const T=[...tl.querySelectorAll('[role=tab]')], i=T.indexOf(document.activeElement); if(i<0) return;
+    const j=e.key==='ArrowRight'?(i+1)%T.length:e.key==='ArrowLeft'?(i-1+T.length)%T.length:e.key==='Home'?0:e.key==='End'?T.length-1:-1; if(j<0) return; e.preventDefault(); T[j].focus(); T[j].click(); }));
+  document.querySelectorAll('.tabs [role=tab]').forEach(b=>b.tabIndex=b.getAttribute('aria-selected')==='true'?0:-1);
   const goto=h=>{ const el=document.getElementById(String(h).replace('#','')); if(!el) return false; const pan=el.closest('.tabpan'); if(pan) tab(pan.id.slice(4)); el.scrollIntoView({block:'start',behavior:'smooth'}); return true; };
   document.querySelector('.ws').addEventListener('click',e=>{ const a=e.target.closest('a[href^="#"]'); if(a&&a.getAttribute('href').length>1&&goto(a.getAttribute('href'))) e.preventDefault(); });
   document.querySelectorAll('.trow').forEach(b=>b.onclick=()=>{ if(b.dataset.part!=null){ const i=+b.dataset.part; if(ctl.fem) ctl.fem.pickPart(i); if(ctl.map&&ctl.map.focusLine&&i<lines.length) ctl.map.focusLine(i); } else { const i=+b.dataset.ref; if(ctl.fem) ctl.fem.pickRef(i); if(ctl.map&&ctl.map.focusAnchor) ctl.map.focusAnchor(i); markTree({kind:'ref',ref:i}); } });

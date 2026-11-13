@@ -41,7 +41,9 @@ $('tiltU').onclick=()=>{ if(!is3d) set3d(true); nudge({p:12}); }; $('tiltD').onc
 $('north').onclick=()=>map&&map.easeTo({bearing:0,duration:500});
 $('zin').onclick=()=>map&&map.zoomIn(); $('zout').onclick=()=>map&&map.zoomOut();
 $('zhome').onclick=()=>{ closeInfo(); closeList(); if(map) home(); };
-document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!info.hidden&&document.activeElement===document.body) closeInfo(); });
+/* Esc closes the top-most panel, unless the cursor is in a text field or the chat */
+document.addEventListener('keydown',e=>{ if(e.key!=='Escape') return; const t=e.target; if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable||t.closest('.zb,dialog,.tips'))) return;
+  if(!info.hidden){ closeInfo(); return; } if(!listEl.hidden){ $('listX').click(); } });
 const fitHeader=()=>document.documentElement.style.setProperty('--hdr',document.querySelector('.hdr').offsetHeight+'px');
 fitHeader();
 let rz; addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{fitHeader();if(map)map.resize();},150);});

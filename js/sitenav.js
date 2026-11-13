@@ -58,4 +58,6 @@
   const edge=el=>{ const end=el.scrollLeft+el.clientWidth>=el.scrollWidth-4; el.classList.toggle('end',end); };
   const strips=()=>document.querySelectorAll('.sitenav,.pills,.mapfilter,#nav').forEach(el=>{ if(el.dataset.edge) return edge(el); el.dataset.edge='1'; el.addEventListener('scroll',()=>edge(el),{passive:true}); edge(el); });
   window.addEventListener('resize',strips); setTimeout(strips,300); setTimeout(strips,2500);
+  /* on phones the navigation strip scrolls so the current page is in view */
+  setTimeout(()=>{ const cur=document.querySelector('.sitenav a[aria-current="page"]'), nv=cur&&cur.closest('.sitenav'); if(nv&&nv.scrollWidth>nv.clientWidth){ const ar=cur.getBoundingClientRect(), nr=nv.getBoundingClientRect(); nv.scrollLeft=Math.max(0,nv.scrollLeft+(ar.left-nr.left)-nv.clientWidth/2+ar.width/2); edge(nv); } },200);
 })();

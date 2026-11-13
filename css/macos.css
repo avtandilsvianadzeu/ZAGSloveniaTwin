@@ -350,3 +350,28 @@ body.embed .embedbox .pickbox{max-height:30vh}
 .tabs[role=tablist] [role=tab]{padding:0 7px!important;font-size:12px!important;letter-spacing:-.01em;flex:1 1 auto;min-width:0;justify-content:center}.tabs[role=tablist]{display:flex!important;width:100%;box-sizing:border-box;overflow:hidden}
 .pane-map .rothint{top:52px!important;bottom:auto!important}.pane-model .rothint{top:auto!important;bottom:56px!important}
 body.embed .pane-model .rothint{top:auto!important;bottom:12px!important}
+/* 701 to 1100 px: keep the status line free and stack the bottom controls above it */
+@media (min-width:701px) and (max-width:1100px){
+  .tl,.tlshow{bottom:34px!important}
+  .zb-onmap .zb-launch{bottom:32px!important}
+  .mapfilter{bottom:88px!important}
+  .lgd,.lgdshow{bottom:136px!important}
+  .zb-onmap .vctl{bottom:136px!important}
+  .maplibregl-ctrl-bottom-right,.maplibregl-ctrl-bottom-left{bottom:130px!important;right:60px!important}
+  .info,.list{bottom:132px!important}
+  .tips{bottom:136px}
+}
+.lgoth{display:block;margin-top:3px;font-size:11px;color:var(--g-mut,#6A6A70)}
+.qitem.leaving{opacity:0;transform:translateX(12px);transition:opacity .4s,transform .4s}
+/* record card: long place names wrap instead of running out of the card */
+.asset .tags,.side .tags{max-width:100%}
+.asset .tag,.side .tag{white-space:normal;max-width:100%;overflow-wrap:anywhere;line-height:1.3}
+.asset h1,.side h1{overflow-wrap:anywhere;hyphens:auto}
+/* dropdowns keep room for their text and chevron */
+.fld select{padding:0 36px 0 12px!important;height:40px;line-height:40px}
+/* search boxes with a real search icon */
+.find,#find,#qFind,.thdr .jump{padding-left:40px!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M7 2a5 5 0 1 0 3.1 8.9l3.5 3.5 1-1-3.5-3.5A5 5 0 0 0 7 2zm0 1.4a3.6 3.6 0 1 1 0 7.2 3.6 3.6 0 0 1 0-7.2z' fill='%238E8E93'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:15px 50%!important;background-size:16px 16px!important}
+/* the Previous and Next pill is only shown when it has something in it */
+.pager:not(:has(> :not([hidden]))){display:none!important}
+/* the Layers panel uses the same colours as the legend and the markers */
+.sw{background:#007AFF!important}.sw.ref{background:#8E8E93!important}.sw.fac{background:#5856D6!important}

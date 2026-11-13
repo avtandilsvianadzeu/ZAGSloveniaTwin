@@ -73,7 +73,7 @@ $('gLine').onclick=()=>setMode('line'); $('gPoly').onclick=()=>setMode('poly'); 
 $('fType').onchange=()=>setMode($('fType').value==='building'?'poly':/tower|other/.test($('fType').value)?'point':'line');
 for(const id of ['fLen','fWid','fHei','fName']) $(id).addEventListener('input',preview);
 $('fPts').addEventListener('change',()=>{ const r=fromText($('fPts').value); const pts=r.pts.filter(okPt); A.pts=A.mode==='point'?pts.slice(0,1):pts; preview(); if(A.map&&A.pts.length) setPts(A.pts,true); say(pts.length?pts.length+' points read from the text.':'No coordinates found in the text.',pts.length?'':'bad'); });
-$('undo').onclick=()=>{ A.pts.pop(); syncText(); preview(); }; $('clear').onclick=()=>{ A.pts=[]; syncText(); preview(); say('Shape cleared.'); };
+$('undo').onclick=()=>{ A.pts.pop(); syncText(); preview(); say(A.pts.length?A.pts.length+(A.pts.length===1?' point':' points')+' on the map.':'No points yet. Click the map to add one.'); try{ if(A.map) setPts(A.pts,false); }catch(_){} }; $('clear').onclick=()=>{ A.pts=[]; syncText(); preview(); say('Shape cleared.'); };
 $('fFile').onchange=async e=>{ const f=e.target.files[0]; if(!f) return; if(f.size>2e6){ say('The file is larger than 2 MB. Use a smaller file.','bad'); return; }
   const r=readAny(f.name,await f.text()); if(!r||!r.pts.length){ say('No coordinates were found in this file.','bad'); return; }
   if(r.name&&!$('fName').value) $('fName').value=r.name; const F=r.fields||{};
@@ -134,3 +134,4 @@ $('aiGo').onclick=async()=>{ const url=($('aiUrl').value.trim()||AI.url).replace
 aiInit();
 
 window.__add={state:A,readAny,feature};
+if($('impBtn')) $('impBtn').onclick=()=>$('imp').click();
