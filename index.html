@@ -14,10 +14,13 @@
 <meta property="og:image" content="https://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/img/logo.webp">
 <meta name="theme-color" content="#F3F5F9">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Condensed:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
-<link rel="stylesheet" href="css/atlas.css?v=62">
-<link rel="stylesheet" href="css/ios.css?v=62">
-<link rel="stylesheet" href="css/macos.css?v=23">
+<link rel="stylesheet" href="css/atlas.css?v=63">
+<link rel="stylesheet" href="css/ios.css?v=63">
+<link rel="stylesheet" href="css/macos.css?v=24">
 </head>
 <body>
 <a class="skip" href="#map">Skip to map</a>
@@ -28,14 +31,14 @@
     <div><b>ZAG DIGITAL ATLAS</b></div>
   </div>
   <nav id="nav" aria-label="Atlas sections">
-    <button data-nav="projects" aria-pressed="false" title="All records"><i data-ic="projects"></i>Projects</button>
+    <button data-nav="projects" aria-pressed="false" title="All 73 records as a list"><i data-ic="projects"></i>All records</button>
     <button data-nav="buildings" aria-pressed="false" title="Buildings and institutions"><i data-ic="buildings"></i>Buildings</button>
     <button data-nav="bridges" aria-pressed="false" title="Bridges and viaducts"><i data-ic="bridges"></i>Bridges</button>
-    <button data-nav="infrastructure" aria-pressed="false" title="Tunnels, dams, cableways, towers"><i data-ic="infrastructure"></i>Infrastructure</button>
+    <button data-nav="infrastructure" aria-pressed="false" title="Tunnels, dams, cableway installations, towers and other sites"><i data-ic="infrastructure"></i>Infrastructure</button>
     <button data-nav="about" aria-pressed="false" title="About this atlas and its sources"><i data-ic="about"></i>About</button>
   </nav>
   <div class="hsearch"><i data-ic="search"></i>
-    <input id="q" type="search" placeholder="Search projects, buildings, bridges, locations" autocomplete="off" aria-label="Search projects, buildings, bridges, locations" aria-controls="results">
+    <input id="q" type="search" placeholder="Search structures, places, addresses or coordinates" autocomplete="off" aria-label="Search structures, places, addresses or coordinates" aria-controls="results">
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
   <div class="hright">
@@ -51,7 +54,7 @@
     <button class="tgl" id="bLayers" aria-expanded="false" aria-controls="layers" title="Data layers and backgrounds"><i data-ic="layers"></i>Layers</button>
   </div>
 </header>
-<script src="js/sitenav.js?v=19"></script>
+<script src="js/sitenav.js?v=20"></script>
 
 <main id="app">
   <div id="map" role="application" aria-label="Map of Slovenia"></div>
@@ -106,7 +109,7 @@
   <button type="button" class="chipbtn tlshow" id="tlShow" hidden title="Show the timeline of ZAG work">Timeline</button>
   <section class="lgd" id="lgd" hidden aria-label="Legend"><header><b>Legend</b><button type="button" id="lgdHide" class="tlx" aria-label="Hide the legend" title="Hide the legend">Hide</button></header><div id="lgdBody"></div></section>
   <button type="button" class="chipbtn lgdshow" id="lgdShow" hidden title="Show what the map symbols mean">Legend</button>
-  <div class="status" id="status"><span id="stCoord"></span><span id="stScale"></span><span id="stZoom"></span><span>WGS 84, EPSG:4326</span><span id="srcnote"></span></div>
+  <div class="status" id="status"><span id="stCoord"></span><span id="stScale"></span><span id="stZoom"></span><span>Coordinates WGS 84 (EPSG:4326), display Web Mercator</span><span id="srcnote"></span></div>
   <div class="toast" id="toast" role="status"></div>
 </main>
 
@@ -126,22 +129,23 @@
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="data.js"></script>
-<script src="js/icons.js?v=62"></script>
-<script src="js/config.js?v=62"></script>
-<script src="js/mapstyle.js?v=62"></script>
-<script src="js/basemap.js?v=62"></script>
-<script src="js/locate.js?v=62"></script>
-<script src="js/atlas-data.js?v=62"></script>
-<script src="js/layers.js?v=62"></script>
-<script src="js/panel.js?v=62"></script>
-<script src="js/list.js?v=62"></script>
-<script src="js/search.js?v=62"></script>
-<script src="js/controls.js?v=62"></script>
-<script src="js/main.js?v=62"></script>
-<script src="js/userobjects.js?v=62"></script>
-<script src="js/timeline.js?v=62"></script>
-<script src="js/legend.js?v=62"></script>
+<script src="js/icons.js?v=63"></script>
+<script src="js/config.js?v=63"></script>
+<script src="js/crs.js?v=1"></script>
+<script src="js/mapstyle.js?v=63"></script>
+<script src="js/basemap.js?v=63"></script>
+<script src="js/locate.js?v=63"></script>
+<script src="js/atlas-data.js?v=63"></script>
+<script src="js/layers.js?v=63"></script>
+<script src="js/panel.js?v=63"></script>
+<script src="js/list.js?v=63"></script>
+<script src="js/search.js?v=63"></script>
+<script src="js/controls.js?v=63"></script>
+<script src="js/main.js?v=63"></script>
+<script src="js/userobjects.js?v=63"></script>
+<script src="js/timeline.js?v=63"></script>
+<script src="js/legend.js?v=63"></script>
 <script src="js/tips.js?v=1"></script>
-<script src="js/zagbot.js?v=19"></script>
+<script src="js/zagbot.js?v=20"></script>
 </body>
 </html>

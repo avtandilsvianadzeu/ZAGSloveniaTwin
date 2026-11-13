@@ -11,7 +11,7 @@ async function boot(){
   }
   style.sky=skyFor();
   map=new maplibregl.Map({container:'map',style,center:[14.99,46.15],zoom:7.1,pitch:0,maxPitch:80,hash:false,maxTileCacheSize:600,pixelRatio:Math.min(window.devicePixelRatio||1,2),
-    attributionControl:{compact:true,customAttribution:'Geocoding <a href="https://photon.komoot.io" target="_blank" rel="noopener">Photon</a>'},
+    attributionControl:{compact:innerWidth<700,customAttribution:'Geocoding <a href="https://photon.komoot.io" target="_blank" rel="noopener">Photon</a>'},
     maxBounds:[[11.5,44.6],[18.5,47.7]],fadeDuration:200,canvasContextAttributes:{antialias:true}});
   window.zagMap=map;
   map.on('load',async()=>{
@@ -31,9 +31,9 @@ async function boot(){
       else if(pick.kind==='structure') showStructurePick(pick.f,ll);
       else if(pick.kind==='building'&&map.getZoom()>=14.5) showBuildingPick(ll,pick.f);
     });
-    map.on('mousemove',ev=>{ const c=$('stCoord'); if(c) c.textContent=`${ev.lngLat.lat.toFixed(5)}° N, ${ev.lngLat.lng.toFixed(5)}° E`; });
-    const stZoom=()=>{ const z=$('stZoom'); if(z) z.textContent=`Zoom ${map.getZoom().toFixed(1)}`; const lat=map.getCenter().lat, mpp=156543.03*Math.cos(lat*Math.PI/180)/Math.pow(2,map.getZoom()); const s=$('stScale'); if(s) s.textContent=`1 : ${Math.round(mpp*96/0.0254).toLocaleString('en')}`; };
-    map.on('move',stZoom); stZoom();
+    map.on('mousemove',ev=>{ const c=$('stCoord'); if(c) c.textContent=`${ev.lngLat.lat.toFixed(5)}° N, ${ev.lngLat.lng.toFixed(5)}° E`+(typeof toD96==='function'?(()=>{ const d=toD96([ev.lngLat.lng,ev.lngLat.lat]); return `   D96/TM e ${Math.round(d[0])}, n ${Math.round(d[1])}`; })():''); });
+    const stZoom=()=>{ const z=$('stZoom'); if(z) z.textContent=`Zoom ${map.getZoom().toFixed(1)}`; const lat=map.getCenter().lat, mpp=156543.03*Math.cos(lat*Math.PI/180)/Math.pow(2,map.getZoom()); const s=$('stScale'); if(s){ if(map.getPitch()>15){ s.textContent='Scale varies in 3D'; } else { const f=mpp*96/0.0254, k=Math.pow(10,Math.floor(Math.log10(f))-1); s.textContent=`About 1 : ${(Math.round(f/k)*k).toLocaleString('en-GB')}`; } } };
+    map.on('move',stZoom); map.on('pitch',stZoom); stZoom();
     map.addControl(new maplibregl.ScaleControl({maxWidth:140,unit:'metric'}),'bottom-right');
     ['dragstart','wheel','touchstart','mousedown'].forEach(t=>map.on(t,ev=>{if(ev.originalEvent){userMoved=true;orbitOn=false;}}));
     // MapLibre 5.x leaves the terrain elevation frozen after a programmatic flyTo/easeTo, so terrain tiles that arrive

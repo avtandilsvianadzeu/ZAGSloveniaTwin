@@ -48,3 +48,6 @@ let theme=(()=>{const a=document.documentElement.getAttribute('data-theme');retu
 const emit=(n,d)=>document.dispatchEvent(new CustomEvent('atlas:'+n,{detail:d}));
 let base='map', is3d=true, selId=null, bldPref=null;
 let map=null, ready=false, ORIG={}, TOUCHED={}, selMarker=null, hlToken=0, orbitOn=false, userMoved=false;
+/* credits required by the providers (Esri World Imagery item credits; Mapzen terrain attribution list) */
+const TERRAIN_CREDIT='<a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md" target="_blank" rel="noopener">Terrain: Mapzen, AWS Terrain Tiles (EU-DEM produced using Copernicus data, DGM Österreich, USGS)</a>';
+const IMAGERY_CREDIT='Imagery: <a href="https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9" target="_blank" rel="noopener">Esri, Vantor, Earthstar Geographics, and the GIS User Community</a>';

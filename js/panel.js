@@ -67,6 +67,7 @@ function infoHTML(f){
     <h1>${esc(p.name_en||p.name)}</h1>
     ${p.name_sl&&p.name_sl!==p.name_en?`<p class="sl">${esc(p.name_sl)}</p>`:''}
     ${where?`<p class="where">${esc(where)}</p>`:''}
+    ${typeof zagAreaHTML==='function'?zagAreaHTML(p):''}
     <p><a class="btn twinlink" href="twin.html?id=${encodeURIComponent(p.id)}">Open the asset page</a></p>
     ${(p.lines||p.line||ZA.gurs[p.id]||(ZA.twins&&ZA.twins[p.id]&&ZA.twins[p.id].model&&(ZA.twins[p.id].model.blocks||[]).length))?`<iframe class="twinframe" title="Model of ${esc(p.name_en||p.name)}" src="twin.html?id=${encodeURIComponent(p.id)}&embed=1"></iframe>`:''}
     <h3>Project type</h3>
@@ -79,7 +80,8 @@ function infoHTML(f){
     <div id="bim" class="bim"></div>
     <h3>Position</h3>
     <div class="kv"><span>Basis</span><span id="epos">${esc(PREC[p.position_precision]||p.position_precision)}</span></div>
-    ${kv('WGS84',coord)}
+    ${kv('WGS 84',coord)}
+    ${typeof fmtD96==='function'?kv('D96/TM (EPSG:3794)',fmtD96([p.longitude,p.latitude])):''}
     <p class="note" id="enote"></p>
     ${(p.position_sources||[]).length?`<p class="note">Position source: ${p.position_sources.slice(0,3).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(srcHost(u))}</a>`).join(', ')}</p>`:''}
     <div class="btnrow"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=${p.latitude},${p.longitude}" target="_blank" rel="noopener">Google Maps</a>

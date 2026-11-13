@@ -64,11 +64,11 @@ function prep(s){
   s.layers=s.layers.filter(l=>l.id!=='natural_earth');
   delete s.sources.ne2_shaded;
   s.sources['dem-terrain']={type:'raster-dem',tiles:[DEM_URL],tileSize:256,maxzoom:15,encoding:'terrarium',
-    attribution:'<a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md" target="_blank" rel="noopener">Terrain: Mapzen / AWS Terrain Tiles</a>'};
-  s.sources['dem-hill']={type:'raster-dem',tiles:[DEM_URL],tileSize:256,maxzoom:15,encoding:'terrarium'};
+    attribution:TERRAIN_CREDIT};
+  s.sources['dem-hill']={type:'raster-dem',tiles:[DEM_URL],tileSize:256,maxzoom:15,encoding:'terrarium',attribution:TERRAIN_CREDIT};
   s.sources.dof={type:'raster',scheme:'tms',tiles:[DOF_URL],tileSize:256,minzoom:8,maxzoom:20,attribution:'Orthophoto © GURS (CC BY 4.0), DOF025, via Level2.si'};
   s.sources.sat={type:'raster',tiles:[SAT_URL],tileSize:256,maxzoom:19,
-    attribution:'Imagery © <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a>, Maxar, Earthstar Geographics'};
+    attribution:IMAGERY_CREDIT};
   const local=['coalesce',['get','name:latin'],['get','name']];
   s.layers.forEach(l=>{ if(l.layout&&l.layout['text-field']&&JSON.stringify(l.layout['text-field']).includes('name_en')) l.layout['text-field']=local; });
   const bi=s.layers.findIndex(l=>l.type==='background');

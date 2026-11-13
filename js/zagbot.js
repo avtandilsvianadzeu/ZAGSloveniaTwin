@@ -13,19 +13,19 @@
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
-    <line x1="60" y1="6" x2="60" y2="20" stroke="#203469" stroke-width="3" stroke-linecap="round"/><circle class="zb-ant" cx="60" cy="6" r="5" fill="#ED1C24"/>
-    <rect x="22" y="18" width="76" height="54" rx="20" fill="#F4F6FA" stroke="#203469" stroke-width="3"/>
-    <rect x="32" y="30" width="56" height="30" rx="13" fill="#203469"/>
+    <line x1="60" y1="6" x2="60" y2="20" stroke="#213469" stroke-width="3" stroke-linecap="round"/><circle class="zb-ant" cx="60" cy="6" r="5" fill="#ED1C24"/>
+    <rect x="22" y="18" width="76" height="54" rx="20" fill="#F4F6FA" stroke="#213469" stroke-width="3"/>
+    <rect x="32" y="30" width="56" height="30" rx="13" fill="#213469"/>
     <g class="zb-pupils"><circle class="zb-eye" cx="48" cy="44" r="6" fill="#7FD4FF"/><circle class="zb-eye" cx="72" cy="44" r="6" fill="#7FD4FF"/></g>
     <path d="M51 53q9 6 18 0" fill="none" stroke="#7FD4FF" stroke-width="3" stroke-linecap="round"/>
-    <rect x="14" y="36" width="8" height="18" rx="4" fill="#203469"/><rect x="98" y="36" width="8" height="18" rx="4" fill="#203469"/>
-    <rect x="52" y="72" width="16" height="6" fill="#203469"/>
+    <rect x="14" y="36" width="8" height="18" rx="4" fill="#213469"/><rect x="98" y="36" width="8" height="18" rx="4" fill="#213469"/>
+    <rect x="52" y="72" width="16" height="6" fill="#213469"/>
     <clipPath id="zbShirt"><path d="M30 78h60l20 14-9 15-11-6v29H30v-29l-11 6-9-15z"/></clipPath>
     <g clip-path="url(#zbShirt)"><rect x="0" y="76" width="120" height="20" fill="#FFFFFF"/><rect x="0" y="96" width="120" height="18" fill="#0057B8"/><rect x="0" y="114" width="120" height="20" fill="#ED1C24"/>
       <path d="M44 106l5-7 4 5 4-8 4 8 4-5 5 7" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round"/></g>
-    <path d="M30 78h60l20 14-9 15-11-6v29H30v-29l-11 6-9-15z" fill="none" stroke="#203469" stroke-width="3" stroke-linejoin="round"/>
-    <text x="60" y="91" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="800" fill="#203469">ZAG</text>
-    ${wave?'<g class="zb-wave"><path d="M104 92l10-14" stroke="#203469" stroke-width="7" stroke-linecap="round"/><circle cx="115" cy="76" r="5" fill="#F4F6FA" stroke="#203469" stroke-width="2.5"/></g>':''}
+    <path d="M30 78h60l20 14-9 15-11-6v29H30v-29l-11 6-9-15z" fill="none" stroke="#213469" stroke-width="3" stroke-linejoin="round"/>
+    <text x="60" y="91" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="800" fill="#213469">ZAG</text>
+    ${wave?'<g class="zb-wave"><path d="M104 92l10-14" stroke="#213469" stroke-width="7" stroke-linecap="round"/><circle cx="115" cy="76" r="5" fill="#F4F6FA" stroke="#213469" stroke-width="2.5"/></g>':''}
   </svg>`;
 
   /* ---------- text helpers ---------- */

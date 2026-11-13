@@ -5,7 +5,7 @@ function addAtlasLayers(){
   for(const t of Object.keys(MARK)) for(const k of ['doc','fac','ref']) map.addImage(`m-${t}-${k}`,markerImage(t,k),{pixelRatio:3});
   const E0={type:'FeatureCollection',features:[]};
   ['unc','hl','sel'].forEach(s=>map.addSource(s,{type:'geojson',data:E0}));
-  map.addSource('sites',{type:'geojson',data:E0,cluster:true,clusterRadius:44,clusterMaxZoom:11});
+  map.addSource('sites',{type:'geojson',data:E0,cluster:true,clusterRadius:28,clusterMaxZoom:10});
   const firstSym=(map.getStyle().layers.find(l=>l.type==='symbol')||{}).id, fonts=['Noto Sans Bold'];
   map.addLayer({id:'unc-f',type:'fill',source:'unc',paint:{'fill-color':'#2F5597','fill-opacity':.10}},firstSym);
   map.addLayer({id:'unc-l',type:'line',source:'unc',paint:{'line-color':'#2F5597','line-width':1.5,'line-dasharray':[3,3],'line-opacity':.8}},firstSym);
@@ -22,7 +22,7 @@ function addAtlasLayers(){
   map.addLayer({id:'clu-n',type:'symbol',source:'sites',filter:['has','point_count'],layout:{'text-field':['to-string',['get','point_count']],'text-font':fonts,'text-size':13.5,'text-allow-overlap':true},paint:{'text-color':'#fff'}});
   map.addLayer({id:'pt-news',type:'circle',source:'sites',filter:['==',['get','id'],'__none__'],paint:{'circle-radius':['interpolate',['linear'],['zoom'],7,13,13,17],'circle-color':'rgba(230,57,70,0)','circle-stroke-color':'#E63946','circle-stroke-width':2.2,'circle-stroke-opacity':.85}});
   map.addLayer({id:'pt',type:'symbol',source:'sites',filter:['!',['has','point_count']],layout:{'icon-image':['get','ic'],'icon-allow-overlap':true,'icon-size':['interpolate',['linear'],['zoom'],7,.75,13,.95,17,1.1]}});
-  map.addLayer({id:'pt-l',type:'symbol',source:'sites',filter:['!',['has','point_count']],minzoom:9,layout:{'text-field':['get','n'],'text-font':fonts,'text-size':12,'text-offset':[1.3,0],'text-anchor':'left','text-optional':true,'text-max-width':14},paint:{'text-color':'#1C1C1E','text-halo-color':'rgba(255,255,255,.95)','text-halo-width':1.6}});
+  map.addLayer({id:'pt-l',type:'symbol',source:'sites',filter:['!',['has','point_count']],minzoom:9,layout:{'text-field':['get','n'],'text-font':fonts,'text-size':12,'text-variable-anchor':['left','right','top','bottom'],'text-radial-offset':1.2,'text-justify':'auto','text-optional':true,'text-max-width':14},paint:{'text-color':'#1C1C1E','text-halo-color':'rgba(255,255,255,.95)','text-halo-width':1.6}});
 }
 const markerFor=p=>`m-${MARK[p.object_type]?p.object_type:'other'}-${kindOf(p)}`;
 function refreshProjects(){

@@ -14,13 +14,21 @@ function matchLocal(q){
   hits.sort((a,b)=>a[1]-b[1]).forEach(([f])=>{ const g=GROUPS[f.properties.object_type]; (g==='buildings'?out.buildings:g==='bridges'?out.bridges:out.projects).push(f); });
   return out;
 }
+/* coordinates typed in the box: decimal degrees (either order) or Slovenian D96/TM easting and northing */
+function parseCoord(q){ const m=q.replace(/[°'"NSEW]/gi,' ').replace(/,/g,' ').trim().split(/\s+/).map(Number); if(m.length!==2||m.some(isNaN)) return null;
+  let [a,b]=m; if(typeof isD96==='function'&&isD96(a,b)) return {ll:fromD96([a,b]),label:`D96/TM e ${Math.round(a)}, n ${Math.round(b)}`};
+  if(typeof isD96==='function'&&isD96(b,a)) return {ll:fromD96([b,a]),label:`D96/TM e ${Math.round(b)}, n ${Math.round(a)}`};
+  if(Math.abs(a)<=90&&Math.abs(b)<=180){ let lat=a, lon=b; if(lat<30&&lon>30){ lat=b; lon=a; } if(Math.abs(lat)<=90) return {ll:[lon,lat],label:`${lat.toFixed(6)}, ${lon.toFixed(6)}`}; }
+  return null; }
 function draw(local){
   const sec=(t,items)=>items.length?`<h4>${t}</h4>${items.join('')}`:'';
   const loc=f=>f.map((x,i)=>`<button role="option" data-loc="${i}"><b>${esc(x.title)}</b><small>${esc(x.sub)}</small></button>`);
   const rec=fs=>fs.slice(0,6).map(f=>`<button role="option" data-id="${esc(f.properties.id)}"><b>${esc(f.properties.name_en)}</b><small>${esc([cap(f.properties.object_type),f.properties.municipality,f.properties.year].filter(Boolean).join(', '))}</small></button>`);
-  const html=sec('Projects',rec(local.projects))+sec('Buildings',rec(local.buildings))+sec('Bridges',rec(local.bridges))+sec('Locations',loc(locItems));
+  const cq=parseCoord(qIn.value.trim()), coordHTML=cq?`<h4>Coordinates</h4><button role="option" data-coord="1"><b>Go to ${esc(cq.label)}</b><small>${esc(cq.ll[1].toFixed(6)+', '+cq.ll[0].toFixed(6)+' WGS 84')}</small></button>`:'';
+  const html=coordHTML+sec('Bridges',rec(local.bridges))+sec('Buildings',rec(local.buildings))+sec('Infrastructure and other sites',rec(local.projects))+sec('Locations',loc(locItems));
   resEl.innerHTML=html||'<div class="none">No matches</div>'; resEl.hidden=false;
   resEl.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>{pick();showInfo(b.dataset.id);});
+  resEl.querySelectorAll('[data-coord]').forEach(b=>b.onclick=()=>{ pick(); showAddress({type:'Feature',geometry:{type:'Point',coordinates:cq.ll},properties:{name:cq.label,osm_value:'coordinate'}}); });
   resEl.querySelectorAll('[data-loc]').forEach(b=>b.onclick=()=>{const x=locItems[+b.dataset.loc];pick();showAddress(x.f);});
 }
 function pick(){resEl.hidden=true;qIn.blur();}

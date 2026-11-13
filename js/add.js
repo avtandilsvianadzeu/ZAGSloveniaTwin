@@ -94,7 +94,7 @@ $('imp').onchange=async e=>{ const f=e.target.files[0]; if(!f) return; try{ cons
   { const paint=()=>{ try{ if(window.iosMap) iosMap(m); }catch(_){} }; m.on('style.load',paint); m.once('load',paint); }
   m.on('load',()=>{ m.addSource('shape',{type:'geojson',data:{type:'FeatureCollection',features:[]}});
     m.addLayer({id:'shape-l',type:'line',source:'shape',filter:['==',['geometry-type'],'LineString'],paint:{'line-color':'#007AFF','line-width':4}});
-    m.addLayer({id:'shape-p',type:'circle',source:'shape',filter:['==',['geometry-type'],'Point'],paint:{'circle-radius':5,'circle-color':'#fff','circle-stroke-color':'#203469','circle-stroke-width':2.5}});
+    m.addLayer({id:'shape-p',type:'circle',source:'shape',filter:['==',['geometry-type'],'Point'],paint:{'circle-radius':5,'circle-color':'#fff','circle-stroke-color':'#213469','circle-stroke-width':2.5}});
     A.map=m; drawShape(); });
   m.on('click',e=>{ const c=[+e.lngLat.lng.toFixed(6),+e.lngLat.lat.toFixed(6)]; if(A.mode==='point') A.pts=[c]; else A.pts.push(c); syncText(); preview(); say(A.pts.length+(A.pts.length===1?' point':' points')+' on the map.'); }); })();
 setMode('line'); listMine();

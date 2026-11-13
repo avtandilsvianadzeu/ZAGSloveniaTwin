@@ -1,7 +1,7 @@
 /* ZAG Digital Atlas: restrained institutional UI. Flat surfaces, 1px rules, one accent (ZAG blue), amber only for the selection. */
 :root{
   --teal:#1E7F86;
-  --zag:#2F5597; --zag-d:#1F3A6B; --sel:#FFB000;
+  --zag:#2F5597; --zag-d:#213469; --sel:#FFB000;
   --ink:#1B2430; --muted:#586374; --rule:#D3D9E1; --rule2:#E6EAF0; --bg:#FFFFFF; --bg2:#F4F6F9;
   --ok:#1F7A4D; --warn:#8A5A00;
   --font:"Inter","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
@@ -204,7 +204,7 @@ dialog p,dialog li{font-weight:400}
 /* recent news */
 .news .nitem{padding:7px 0;border-bottom:1px solid var(--rule2)}.news .nitem a{font-weight:600;font-size:13px;line-height:1.35;color:inherit;text-decoration:none}.news .nitem a:hover{text-decoration:underline}
 .news .nmeta{font-size:11.5px;color:var(--muted);margin-top:2px}.news .nitem.fresh{border-left:3px solid #E63946;padding-left:8px}.tag.new{background:#E63946;color:#fff;border-color:#E63946}
-.btn.twinlink{display:inline-block;background:#203469;border-color:#203469;color:#fff;padding:7px 12px}
+.btn.twinlink{display:inline-block;background:#213469;border-color:#213469;color:#fff;padding:7px 12px}
 .btn.twinlink:hover{background:#182850}
 .twinframe{display:block;width:100%;height:330px;border:1px solid var(--rule);border-radius:var(--r);margin:8px 0 4px;background:#fff}
 .tgl.linkbtn{display:inline-flex;align-items:center;text-decoration:none}

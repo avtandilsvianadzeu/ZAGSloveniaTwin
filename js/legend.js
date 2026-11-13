@@ -5,9 +5,9 @@
    The map zooms to what is left, and the line at the bottom says how many are shown. */
 (function(){
   const box=document.getElementById('lgd'), body=document.getElementById('lgdBody'), show=document.getElementById('lgdShow'), hide=document.getElementById('lgdHide'); if(!box||!body) return;
-  const CAP=[[['bridge','footbridge','road structure'],'Bridge, viaduct, footbridge or road structure'],[['tunnel'],'Tunnel'],[['dam / hydropower'],'Dam or hydropower plant'],[['cableway'],'Cableway'],[['tower / mast'],'Tower or mast'],
-    [['building','company'],'Building or company'],[['institution'],'Institution'],[['landslide'],'Landslide'],[['geotechnical site'],'Geotechnical site'],[['study area (earthquake)'],'Earthquake study area'],[['other'],'Other site']];
-  const KINDS=[['doc','#007AFF','Blue: project with ZAG work'],['fac','#5856D6',"Violet: ZAG's own site"],['ref','#8E8E93','Grey: partner, named in the sources']];
+  const CAP=[[['bridge','footbridge','road structure'],'Bridges, viaducts and footbridges'],[['tunnel'],'Tunnels and underground structures'],[['dam / hydropower'],'Dams and hydropower plants'],[['cableway'],'Cableway installations'],[['tower / mast'],'Transmission and other towers'],
+    [['building','company'],'Buildings and companies'],[['institution'],'Institutions'],[['landslide'],'Landslides'],[['geotechnical site'],'Geotechnical sites'],[['study area (earthquake)'],'Earthquake study areas'],[['other'],'Other sites']];
+  const KINDS=[['doc','#007AFF','Blue: project with ZAG work'],['fac','#5856D6',"Violet: ZAG's own site"],['ref','#8E8E93','Grey: partner or referenced only']];
   const EXACT=new Set(['surveyed','address','matched']);
   const QUICK=[['news','With news this week',p=>{ try{ return recentNewsIds(7).includes(p.id); }catch(_){ return false; } }],
     ['model','With a 3D model',p=>!!(p.lines||p.line||(ZA.gurs&&ZA.gurs[p.id])||(ZA.twins&&ZA.twins[p.id]&&ZA.twins[p.id].model&&(ZA.twins[p.id].model.blocks||[]).length))],
