@@ -56,3 +56,31 @@
 .zb-onmap .tl,.zb-onmap .tlshow{right:84px}
 @media (max-width:700px){.zb-panel{right:0;left:0;bottom:0;width:100%;height:min(80vh,600px);border-radius:8px 8px 0 0}.zb-lbl{display:none}.zb-launch{width:54px;height:54px;padding:0;justify-content:center}}
 @media print{.zb{display:none}}
+
+/* ---------- iOS 6 Messages look, modernised: blue-grey glossy bar, glossy bubbles, Helvetica Neue, inset input bar ---------- */
+.zb{font-family:"Helvetica Neue",Helvetica,-apple-system,"Segoe UI",Arial,sans-serif}
+.zb-panel{border-radius:10px;background:#DBE2ED;border:1px solid rgba(0,0,0,.35)}
+.zb-head{height:48px;background:linear-gradient(#B4C0D0 0%,#8C9EB8 50%,#7C8FAD 51%,#6D84A2 100%);border-bottom:1px solid #2D3642;box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
+.zb-title b{color:#fff;font-size:15px;font-weight:700;text-shadow:0 -1px 0 rgba(0,0,0,.45)}
+.zb-title span{color:#E8EEF7;font-size:10.5px;text-shadow:0 -1px 0 rgba(0,0,0,.35)}
+.zb-head .zb-robot{filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
+.zb-log{background:#DBE2ED repeating-linear-gradient(90deg,rgba(255,255,255,.18) 0 3px,transparent 3px 7px);padding:14px 12px 8px;gap:8px}
+.zb-msg{position:relative;border-radius:16px;font-size:13.5px;line-height:1.36;padding:7px 13px;box-shadow:0 1px 1.5px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.6)}
+.zb-msg.bot{background:linear-gradient(#FDFDFD 0%,#E7E7E7 100%);color:#111;border:1px solid rgba(0,0,0,.18);border-bottom-left-radius:4px}
+.zb-msg.me{background:linear-gradient(#8FCBFD 0%,#3A9BF5 45%,#1A84EE 55%,#1878DF 100%);color:#fff;border:1px solid rgba(0,60,140,.45);border-bottom-right-radius:4px;text-shadow:0 -1px 0 rgba(0,0,0,.25);box-shadow:0 1px 1.5px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.45)}
+.zb-msg.me::after{content:"";position:absolute;left:8px;right:8px;top:1px;height:42%;border-radius:12px 12px 8px 8px;background:linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,0));pointer-events:none}
+.zb-msg.bot i{color:#1F4E96}
+.zb-spec li{border-top-color:rgba(0,0,0,.1)}
+.zb-chips{background:linear-gradient(#E9EDF3,#D6DCE6);border-top:1px solid #AEB7C4}
+.zb-chip{border-radius:14px!important;height:28px!important;border:1px solid #9FAABB!important;background:linear-gradient(#FFFFFF,#E4E8EE)!important;color:#1F4E96!important;font:600 12.5px "Helvetica Neue",Helvetica,Arial,sans-serif!important;text-shadow:0 1px 0 #fff;box-shadow:0 1px 1px rgba(0,0,0,.15),inset 0 1px 0 #fff!important}
+.zb-chip.solid{background:linear-gradient(#6FB1F7,#2C7BE5 50%,#1B6BD6 51%,#1A5FC2)!important;border-color:#164E9C!important;color:#fff!important;text-shadow:0 -1px 0 rgba(0,0,0,.3)}
+.zb-in{background:linear-gradient(#E6E8EB,#C9CDD3);border-top:1px solid #8D949E;padding:7px 8px}
+.zb-in input{background:#fff!important;border:1px solid #9AA2AD!important;border-radius:15px!important;box-shadow:inset 0 1px 3px rgba(0,0,0,.25)!important;height:30px!important}
+.zb-in button{height:30px;padding:0 14px;border-radius:15px;border:1px solid #1D5FB8;background:linear-gradient(#7AB8F9 0%,#3B8FF0 50%,#2477E2 51%,#1D6AD2 100%);color:#fff;font:700 13px "Helvetica Neue",Helvetica,Arial,sans-serif;text-shadow:0 -1px 0 rgba(0,0,0,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 1px 0 rgba(255,255,255,.5)}
+.zb-foot{background:#C9CDD3;color:#5B6370;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.zb-msg{animation:zbPop .28s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes zbPop{from{opacity:0;transform:scale(.85) translateY(6px)}to{opacity:1;transform:none}}
+.zb-msg.me{transform-origin:bottom right}.zb-msg.bot{transform-origin:bottom left}
+.zb-typing{display:inline-flex;gap:4px;padding:2px 0}.zb-typing i{width:7px;height:7px;border-radius:50%;background:#8A93A0;animation:zbDot 1s infinite}.zb-typing i:nth-child(2){animation-delay:.15s}.zb-typing i:nth-child(3){animation-delay:.3s}
+@keyframes zbDot{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.zb-msg,.zb-typing i{animation:none}}

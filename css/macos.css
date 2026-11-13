@@ -92,3 +92,61 @@ html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .tabs [role=tab]{padding:0 4px;font-size:12.5px;white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
 .rothint{border-radius:5px!important;background:rgba(40,40,40,.82)!important;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+
+/* ---------- one site navigation, same order on every page (js/sitenav.js) ---------- */
+.thdr,.hdr{gap:12px!important;min-height:46px;height:auto!important;padding:6px 14px!important;flex-wrap:nowrap}
+.hdr{height:52px!important}
+.sitenav{display:inline-flex;flex:none;border:1px solid #A9A7A9;border-bottom-color:#8E8C8E;border-radius:4px;overflow:hidden;background:linear-gradient(#FDFDFD,#F1F1F1);box-shadow:0 1px 0 rgba(255,255,255,.55)}
+.sitenav a{display:inline-flex;align-items:center;height:24px;padding:0 11px;color:#2B2B2B;font:400 13px var(--font);text-decoration:none;white-space:nowrap}
+.sitenav a+a{border-left:1px solid #B9B7B9}
+.sitenav a:hover{background:linear-gradient(#FFFFFF,#E9E9E9);text-decoration:none}
+.sitenav a[aria-current="page"]{background:linear-gradient(#787878,#636363);color:#fff;box-shadow:inset 0 1px 2px rgba(0,0,0,.25)}
+.thdr .crumb{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12.5px}
+.thdr .tnav{margin-left:auto;gap:8px;align-items:center}
+.thdr .jump{flex:0 1 220px;min-width:120px;height:24px;border-radius:5px!important;padding:0 8px}
+.pager{display:inline-flex;border:1px solid var(--s-btn-b);border-bottom-color:var(--s-btn-bb);border-radius:4px;overflow:hidden}
+.pager .tbtn{border:0!important;border-radius:0!important;box-shadow:none!important;height:24px}
+.pager .tbtn+.tbtn:not([hidden]){border-left:1px solid var(--s-btn-b)!important}
+.brand img{height:24px!important;border-radius:3px!important}
+.brand b{font:600 12.5px/1 var(--font)!important;letter-spacing:.06em!important;color:#203469!important}
+
+/* ---------- map page in the Sierra Maps layout ---------- */
+.hdr .hsearch{order:9;flex:0 1 300px;max-width:300px;margin-left:8px}
+.hdr .hsearch input{height:24px!important;padding-left:26px!important;font-size:13px}
+.hdr .hsearch i{width:14px;height:14px;opacity:.55}
+.hdr .hright{margin-left:auto;gap:8px}
+.hdr .hright .seg button,.hdr .hright .tgl{height:24px!important;display:inline-flex;align-items:center;gap:5px}
+.hdr .hright i svg,.hdr .hright i{width:14px;height:14px}
+.mapfilter{position:fixed;top:62px;left:50%;transform:translateX(-50%);z-index:25;display:flex;border:1px solid var(--s-btn-b);border-bottom-color:var(--s-btn-bb);border-radius:4px;overflow:hidden;background:linear-gradient(#FFFFFF,#F3F3F3);box-shadow:0 2px 8px rgba(0,0,0,.16)}
+.mapfilter #nav{display:flex;gap:0}
+.mapfilter #nav button{height:26px!important;padding:0 12px!important;border:0!important;border-bottom:0!important;border-radius:0;background:transparent;color:#1A1A1A!important;font:400 13px var(--font)!important;display:inline-flex;align-items:center;gap:6px}
+.mapfilter #nav button+button{border-left:1px solid var(--s-btn-b)!important}
+.mapfilter #nav button[aria-pressed="true"]{background:linear-gradient(var(--s-blue-top),var(--s-blue-bot))!important;color:#fff!important}
+.mapfilter #nav button i{width:14px;height:14px}
+.info,.list,.layers,.results{border:1px solid var(--s-hair)!important;border-radius:5px!important;box-shadow:0 8px 28px rgba(0,0,0,.20)!important;background:#fff!important}
+.info .x,.list header .x{border-radius:50%!important;background:linear-gradient(#FFFFFF,#ECECEC)!important;border:1px solid var(--s-btn-b)!important}
+.info h3,.layers h2,legend{color:#6E6E6E;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.layers fieldset{border:0;border-top:1px solid var(--s-hair2);padding:8px 0 4px;margin:0}
+.toast{border-radius:5px!important;background:rgba(40,40,40,.88)!important}
+.has-mapfilter .info,.has-mapfilter .list{top:52px}
+.chipbtn.tlshow,.chipbtn.lgdshow{height:24px}
+@media (max-width:1280px){.sitenav a{padding:0 8px;font-size:12.5px}.hdr .hright .seg button,.hdr .hright .tgl{padding:0 8px}.hdr .hsearch{flex-basis:200px}}
+@media (max-width:1050px){.hdr .hsearch{display:none}.thdr .crumb{display:none}}
+@media (max-width:760px){.thdr,.hdr{flex-wrap:wrap;height:auto!important}.sitenav{order:5;flex:1 0 100%;overflow-x:auto}.mapfilter{top:auto;bottom:96px;max-width:calc(100% - 24px);overflow-x:auto}}
+.hdr .hright a[hidden],.thdr .tnav a[hidden]{display:none!important}
+.mapfilter #nav{border:0!important;background:transparent!important}
+
+/* ---------- live feeling: status light, gentle entrance, soft refresh ---------- */
+.livebadge{display:inline-flex;align-items:center;gap:6px;flex:none;height:22px;padding:0 9px;border:1px solid #B9B7B9;border-radius:11px;background:linear-gradient(#FFFFFF,#F0F0F0);font:500 11.5px var(--font);color:#3A3A3A;white-space:nowrap;cursor:default}
+.livebadge i{width:8px;height:8px;border-radius:50%;background:#34C759;box-shadow:0 0 0 0 rgba(52,199,89,.6);animation:livePulse 2s infinite}
+.livebadge b{font-weight:700;color:#1F8F3A;letter-spacing:.04em}
+.livebadge span{color:#6E6E6E}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(52,199,89,.55)}70%{box-shadow:0 0 0 7px rgba(52,199,89,0)}100%{box-shadow:0 0 0 0 rgba(52,199,89,0)}}
+.livebadge.flash{animation:liveFlash 1.2s}
+@keyframes liveFlash{0%{background:#DFF6E5}100%{background:linear-gradient(#FFFFFF,#F0F0F0)}}
+.sierra .panel,.sierra .blk,.sierra .asset,.sierra .tsec,.sierra .dims,.sierra .card{animation:riseIn .45s cubic-bezier(.2,.8,.2,1) both}
+.sierra .panel:nth-child(2),.sierra .blk:nth-child(2){animation-delay:.05s}.sierra .panel:nth-child(3),.sierra .blk:nth-child(3){animation-delay:.1s}.sierra .panel:nth-child(4),.sierra .blk:nth-child(4){animation-delay:.15s}
+@keyframes riseIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tbtn,.seg button,.sitenav a{transition:background .12s,box-shadow .12s}
+@media (max-width:1180px){.livebadge span{display:none}}
+@media (prefers-reduced-motion:reduce){.livebadge i,.sierra .panel,.sierra .blk,.sierra .asset,.sierra .tsec,.sierra .dims,.sierra .card{animation:none}}

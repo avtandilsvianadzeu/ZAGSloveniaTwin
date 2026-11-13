@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=3'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=4'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
@@ -96,7 +96,9 @@
   let ctx={rec:null,flow:null}, started=false;
 
   const scroll=()=>{ log.scrollTop=log.scrollHeight; };
-  function say(html,who){ const d=document.createElement('div'); d.className='zb-msg '+(who||'bot'); d.innerHTML=html; log.appendChild(d); scroll(); return d; }
+  let typing=null;
+  function say(html,who){ const d=document.createElement('div'); d.className='zb-msg '+(who||'bot'); d.innerHTML=html; if(typing){ typing.remove(); typing=null; } log.appendChild(d); scroll(); return d; }
+  function think(){ if(typing) return; typing=document.createElement('div'); typing.className='zb-msg bot'; typing.innerHTML='<span class="zb-typing"><i></i><i></i><i></i></span>'; log.appendChild(typing); scroll(); }
   function user(t){ say(esc(t),'me'); }
   /* chips: [label, action] where action is a function or a string the user "types" */
   function offer(list){ chips.innerHTML=''; for(const c of list){ if(!c) continue; const [label,act,kind]=c;
@@ -185,7 +187,7 @@
   function cancel(){ ctx.flow=null; say('Cancelled. Anything else?'); offer(menu()); }
 
   /* ---------- understanding typed text ---------- */
-  function handle(raw,shown){ if(ctx.flow&&ctx.flow.kind==='code'){ user('******'); return ownerCheck(String(raw||'').trim()); } user(shown||raw); const text=String(raw||'').trim(); if(!text) return;
+  function handle(raw,shown,said){ if(ctx.flow&&ctx.flow.kind==='code'){ user('******'); return ownerCheck(String(raw||'').trim()); } if(!said) user(shown||raw); const text=String(raw||'').trim(); if(!text) return;
     if(/^\/?(owner|admin|lastnik)$/i.test(text)){ if(isOwner()){ say('You are signed in as the atlas owner.'); ownerMenu(); } else ownerLogin(); return; }
     const f=ctx.flow;
     if(f&&f.kind==='update'&&f.step){ const st=f.step;
@@ -233,6 +235,6 @@
     if(on) setTimeout(()=>input.focus(),50); }
   launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });
-  $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(!DB.recs.length){ load().then(()=>handle(t)); return; } handle(t); };
+  $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(ctx.flow&&ctx.flow.kind==='code'){ handle(t); return; } user(t); think(); setTimeout(()=>{ (DB.recs.length?Promise.resolve():load()).then(()=>handle(t,null,true)); },450); };
   window.ZAGBot={open:()=>toggle(true),ask:t=>{ toggle(true).then(()=>handle(t)); }};
 })();
