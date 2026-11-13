@@ -424,3 +424,10 @@ body.embed .pane-model .rothint{top:auto!important;bottom:12px!important}
 .ibar i{display:block;height:100%;background:#0064D2;border-radius:99px}
 td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
 body.wsbody .sitefoot,body.embed .sitefoot{display:none}
+@media (max-width:700px){.lgd{z-index:30!important}}
+/* phones: an open record is a bottom sheet, the filter strip and timeline step aside until it is closed */
+@media (max-width:700px){
+  body.has-panel .mapfilter,body.has-panel .tl,body.has-panel .tlshow,body.has-panel .lgdshow,body.has-panel .lgd{display:none!important}
+  body.has-panel .info,body.has-panel .list{left:0!important;right:0!important;top:auto!important;bottom:0!important;width:auto!important;height:min(72vh,600px)!important;border-radius:22px 22px 0 0!important;padding-bottom:env(safe-area-inset-bottom,0px)}
+  body.has-panel .zb-onmap .zb-launch,body.has-panel.zb-onmap .zb-launch{display:none}
+}
