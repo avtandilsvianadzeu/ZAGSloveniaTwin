@@ -150,7 +150,7 @@
     if(k==='position'){ say('Where should it be? Paste coordinates (latitude, longitude), a Google Maps link, or describe the place.'); f.step='desc'; offer([['Cancel',cancel]]); input.focus(); return; }
     if(k==='value') return askValue();
     say(k==='source'?'Paste the link of the source.':'Describe the change in one or two sentences.'); f.step=k==='source'?'src':'desc'; offer([['Cancel',cancel]]); input.focus(); }
-  function askValue(){ const f=ctx.flow; say(`New value for <b>${esc(f.label)}</b>${f.old?` (now ${esc(f.old)})`:''}? Type it with its unit, for example <i>31.35 m</i>.`); f.step='value'; offer([['Cancel',cancel]]); input.focus(); }
+  function askValue(){ const f=ctx.flow; say(`New value for <b>${esc(f.label)}</b>${f.old?` (now ${esc(f.old)})`:''}? Type it with its unit, for example <i>31.35 m</i>.`); f.step='value'; offer([['I do not know the value',()=>{ f.value='not known, please find the published value'; askSource(); }],['Cancel',cancel]]); input.focus(); }
   function askSource(){ const f=ctx.flow; say('Where is it published? Paste the source link. Every value in the atlas needs one.'); f.step='src';
     offer([['I have no link yet',()=>{ f.src=null; summary(); }],['Cancel',cancel]]); input.focus(); }
   function summary(){ const f=ctx.flow; f.step=null; const W=Object.fromEntries(WHAT);
@@ -167,7 +167,7 @@
     const f=ctx.flow;
     if(f&&f.kind==='update'&&f.step){ const st=f.step;
       if(st==='label'){ f.label=tidy(text); return askValue(); }
-      if(st==='value'){ if(!/\d/.test(text)&&!/^(yes|no|none)$/i.test(text)){ say('A value usually has a number. Type it again, for example <i>126 m</i>.'); return; } f.value=tidy(text); return askSource(); }
+      if(st==='value'){ if(/^(none|not known|unknown|don.?t know|ne vem|\?)$/i.test(text.trim())){ f.value='not known, please find the published value'; return askSource(); } if(!/\d/.test(text)&&!/^(yes|no)$/i.test(text)){ say('A value usually has a number. Type it again, for example <i>126 m</i>.'); return; } f.value=tidy(text); return askSource(); }
       if(st==='desc'){ f.desc=tidy(text); return askSource(); }
       if(st==='src'){ const u=(text.match(/https?:\/\/\S+/)||[])[0]; if(!u){ say('That is not a link. It should start with <i>https://</i>.'); offer([['I have no link yet',()=>{ f.src=null; summary(); }],['Cancel',cancel]]); return; } f.src=u; return summary(); } }
     if(ctx.flow&&ctx.flow.pick){ const hits=findRecords(norm(text).split(' ').filter(w=>w.length>1&&!STOP.has(w))); const then=ctx.flow.pick;
