@@ -176,3 +176,45 @@ button.lgr.on em{background:#0A7CFF;color:#fff}
 button.lgr:hover .lgq{transform:scale(1.5)}
 .lgq{transition:transform .15s}
 .lgnote{padding:2px 6px!important}
+
+/* ---------- speed: no live blur over the moving map, no fixed background repaint, compositor-only animation ---------- */
+body:not(.embed){background-attachment:scroll}
+.hdr,.mapfilter,.info,.list,.layers,.results,.tl,.lgd,.vctl,.maplibregl-ctrl-group,.zb-onmap .zb-launch,.zb-onmap .zb-panel{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.hdr{background:rgba(250,251,253,.97)!important}
+.mapfilter,.tl,.vctl,.maplibregl-ctrl-group{background:rgba(255,255,255,.96)!important}
+.info,.list,.layers,.results,.lgd{background:rgba(255,255,255,.98)!important}
+.zb-onmap .zb-panel{background:#F8F9FC}
+
+.info,.list,.lgd,.layers{contain:layout paint}
+.livebadge i{position:relative;animation:none!important;box-shadow:none!important}
+.livebadge i::after{content:"";position:absolute;inset:0;border-radius:50%;background:#34C759;animation:liveRing 2s ease-out infinite;will-change:transform,opacity}
+@keyframes liveRing{0%{transform:scale(1);opacity:.6}80%,100%{transform:scale(2.8);opacity:0}}
+.zb-launch{will-change:transform}
+.fmenu{will-change:opacity,transform}
+@media (prefers-reduced-motion:reduce){.livebadge i::after{animation:none}}
+
+/* tips to get started (js/tips.js) */
+.tips{position:fixed;top:120px;right:76px;z-index:45;width:340px;padding:10px;border-radius:20px;background:rgba(255,255,255,.98);border:1px solid var(--g-edge);box-shadow:var(--g-shadow2);opacity:0;transform:translateY(-6px) scale(.98);transition:opacity .18s,transform .18s}
+.tips.in{opacity:1;transform:none}
+.tips[hidden]{display:none}
+.tips header{display:flex;align-items:center;justify-content:space-between;padding:4px 6px 8px}
+.tips header b{font-size:14px}
+.tips .tx{width:26px;height:26px;border:0;border-radius:50%;background:rgba(118,118,128,.14);color:#3A3A3C;font-size:16px;line-height:1;cursor:pointer}
+.tip{display:flex;align-items:center;gap:11px;width:100%;padding:9px 8px;border:0;border-radius:14px;background:transparent;text-align:left;cursor:pointer;font:inherit;color:inherit;transition:background .15s}
+.tip:hover{background:rgba(10,124,255,.07)}
+.tip i{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;color:#fff}
+.tip i svg{width:16px;height:16px}
+.ti-marker{background:linear-gradient(135deg,#3AA0FF,#0A7CFF)}.ti-legend{background:linear-gradient(135deg,#A06BFF,#7B4DFF)}.ti-time{background:linear-gradient(135deg,#FFB340,#FF8A00)}.ti-search{background:linear-gradient(135deg,#FF5FA2,#FF3B7F)}.ti-bot{background:linear-gradient(135deg,#34D399,#10B981)}
+.tip>span{flex:1;min-width:0}.tip b{display:block;font-size:13px;font-weight:600}.tip span span{display:block;font-size:12px;color:var(--g-mut);line-height:1.35;margin-top:1px}
+.tip em{font-style:normal;color:#C7C7CC;font-size:18px}
+.tkeys{margin:6px 8px 2px;font-size:11px;color:var(--g-mut)}
+kbd{display:inline-block;min-width:18px;padding:1px 5px;border-radius:5px;background:#F2F2F7;border:1px solid rgba(15,23,42,.12);font:600 10.5px var(--font);text-align:center;color:#3A3A3C}
+.lgd.nudge{animation:nudge 1.5s ease}
+@keyframes nudge{0%,100%{box-shadow:var(--g-shadow)}30%,70%{box-shadow:0 0 0 4px rgba(10,124,255,.35),var(--g-shadow2)}}
+@media (max-width:760px){.tips{left:12px;right:12px;width:auto;top:auto;bottom:90px}}
+.lyhead{display:flex;align-items:center;justify-content:space-between;margin:0 0 4px}
+.lyhead h2{margin:0}
+.lyx{width:26px;height:26px;border:0;border-radius:50%;background:rgba(118,118,128,.14);color:#3A3A3C;font-size:16px;line-height:1;cursor:pointer}
+.lyx:hover{background:rgba(118,118,128,.24)}
+.layers{max-height:calc(100vh - 150px);overflow:auto}
+.lgd{width:208px!important}.lgd:hover{width:268px!important}

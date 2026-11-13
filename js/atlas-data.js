@@ -10,12 +10,15 @@ const INV_LABEL={research:'Research','inspection':'Inspection','structural asses
 const kindOf=p=>p.category==='zag_facility'?'fac':p.evidence_level==='documented'?'doc':'ref';
 
 async function loadAtlas(){
-  const r=await fetch('data/zag_projects.geojson'); if(!r.ok) throw new Error('dataset '+r.status);
+  /* all files are requested at once. The markers wait only for the records, the small building file and the news,
+     the large file of verified values arrives in the background (ZA.twinsReady) */
+  const get=u=>fetch(u).then(r=>r.ok?r.json():null).catch(()=>null);
+  const pG=fetch('data/zag_projects.geojson'), pI=get('data/images.json'), pT=get('data/twins.json'), pB=get('data/gurs_buildings.json'), pN=loadNews();
+  const r=await pG; if(!r.ok) throw new Error('dataset '+r.status);
   const j=await r.json(); ZA.features=j.features; ZA.byId=Object.fromEntries(j.features.map(f=>[f.properties.id,f]));
-  try{ const ri=await fetch('data/images.json'); if(ri.ok) ZA.images=await ri.json(); }catch(_){}
-  await loadNews();
-  try{ const rt=await fetch('data/twins.json'); if(rt.ok){ const j=await rt.json(); ZA.twins=j.objects||{}; } }catch(_){}
-  try{ const rg=await fetch('data/gurs_buildings.json'); if(rg.ok){ const j=await rg.json(); ZA.gurs=j.buildings||{}; ZA.gursMeta=j.meta||null; } }catch(_){}
+  const [im,gu]=await Promise.all([pI,pB,pN]);
+  if(im) ZA.images=im; if(gu){ ZA.gurs=gu.buildings||{}; ZA.gursMeta=gu.meta||null; }
+  ZA.twinsReady=pT.then(t=>{ if(t) ZA.twins=t.objects||{}; try{ window.dispatchEvent(new Event('zag:twins')); }catch(_){} });
 }
 /* recent Slovenian news per record (data/news.json, refreshed by a scheduled GitHub workflow) */
 async function loadNews(){

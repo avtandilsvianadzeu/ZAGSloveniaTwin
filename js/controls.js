@@ -21,6 +21,11 @@ $('lyBld').onchange=e=>setBuildings(e.target.checked);
 $('lyProj').onchange=e=>{ZA.showProj=e.target.checked;refreshProjects();};
 $('lyFac').onchange=e=>{ZA.showFac=e.target.checked;refreshProjects();};
 $('bLayers').onclick=function(){const o=layersEl.hidden;layersEl.hidden=!o;this.setAttribute('aria-expanded',o);};
+/* the layers panel closes with its own button, with Esc, or by clicking the map */
+const closeLayers=()=>{ if(layersEl.hidden) return; layersEl.hidden=true; $('bLayers').setAttribute('aria-expanded',false); };
+if($('layersX')) $('layersX').onclick=closeLayers;
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLayers(); });
+document.addEventListener('pointerdown',e=>{ if(!layersEl.hidden&&!layersEl.contains(e.target)&&!e.target.closest('#bLayers')&&e.target.closest('#map')) closeLayers(); });
 
 document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{
   if(b.dataset.nav==='about'){$('about').showModal();return;}

@@ -92,6 +92,7 @@ function showInfo(id,opts){
   const f=ZA.byId[id]; if(!f) return;
   const p=f.properties; curId=id;
   openShell(infoHTML(f));
+  if(ZA.twinsReady&&!Object.keys(ZA.twins).length) ZA.twinsReady.then(()=>{ if(curId===id&&!info.hidden){ const st=info.scrollTop; openShell(infoHTML(f)); info.scrollTop=st; try{showTwinPoints(id);}catch(_){} } });
   try{history.replaceState(null,'',location.pathname+location.search+'#'+id);}catch(_){}
   emit('selected',id);
   if(!ready) return;

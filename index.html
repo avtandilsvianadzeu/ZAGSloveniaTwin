@@ -7,9 +7,9 @@
 <meta name="description" content="GIS atlas of buildings, bridges and infrastructure where ZAG has documented involvement.">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
-<link rel="stylesheet" href="css/atlas.css?v=51">
-<link rel="stylesheet" href="css/ios.css?v=51">
-<link rel="stylesheet" href="css/macos.css?v=11">
+<link rel="stylesheet" href="css/atlas.css?v=52">
+<link rel="stylesheet" href="css/ios.css?v=52">
+<link rel="stylesheet" href="css/macos.css?v=13">
 </head>
 <body>
 <a class="skip" href="#map">Skip to map</a>
@@ -43,7 +43,7 @@
     <button class="tgl" id="bLayers" aria-expanded="false" aria-controls="layers" title="Data layers and backgrounds"><i data-ic="layers"></i>Layers</button>
   </div>
 </header>
-<script src="js/sitenav.js?v=3"></script>
+<script src="js/sitenav.js?v=4"></script>
 
 <main id="app">
   <div id="map" role="application" aria-label="Map of Slovenia"></div>
@@ -55,7 +55,7 @@
   <aside id="info" class="info" aria-label="Selected object" aria-live="polite" hidden></aside>
 
   <section id="layers" class="layers" aria-label="Layers" hidden>
-    <h2>Layers</h2>
+    <div class="lyhead"><h2>Layers</h2><button type="button" class="lyx" id="layersX" aria-label="Close the layers" title="Close">×</button></div>
     <fieldset>
       <legend>Data</legend>
       <label><input type="checkbox" id="lyProj" checked> ZAG projects <small>documented work</small></label>
@@ -118,21 +118,22 @@
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="data.js"></script>
-<script src="js/icons.js?v=51"></script>
-<script src="js/config.js?v=51"></script>
-<script src="js/mapstyle.js?v=51"></script>
-<script src="js/basemap.js?v=51"></script>
-<script src="js/locate.js?v=51"></script>
+<script src="js/icons.js?v=52"></script>
+<script src="js/config.js?v=52"></script>
+<script src="js/mapstyle.js?v=52"></script>
+<script src="js/basemap.js?v=52"></script>
+<script src="js/locate.js?v=52"></script>
 <script src="js/atlas-data.js?v=52"></script>
-<script src="js/layers.js?v=51"></script>
-<script src="js/panel.js?v=51"></script>
-<script src="js/list.js?v=51"></script>
-<script src="js/search.js?v=51"></script>
-<script src="js/controls.js?v=51"></script>
-<script src="js/main.js?v=51"></script>
-<script src="js/userobjects.js?v=51"></script>
-<script src="js/timeline.js?v=51"></script>
+<script src="js/layers.js?v=52"></script>
+<script src="js/panel.js?v=52"></script>
+<script src="js/list.js?v=52"></script>
+<script src="js/search.js?v=52"></script>
+<script src="js/controls.js?v=52"></script>
+<script src="js/main.js?v=52"></script>
+<script src="js/userobjects.js?v=52"></script>
+<script src="js/timeline.js?v=52"></script>
 <script src="js/legend.js?v=53"></script>
+<script src="js/tips.js?v=1"></script>
 <script src="js/zagbot.js?v=9"></script>
 </body>
 </html>
