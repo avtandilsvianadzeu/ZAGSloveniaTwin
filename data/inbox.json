@@ -1,0 +1,1 @@
+{"url":"","note":"Address of the request inbox (Cloudflare Worker, server/inbox.js). Leave empty to send requests through GitHub instead. Never put a token or the owner code in this file."}

@@ -158,12 +158,35 @@
     say(`Here is the request:<ul class="zb-spec">${lines.map(([a,b])=>`<li><span>${esc(a)}</span><b>${esc(b)}</b></li>`).join('')}</ul>${f.src?'':'<p class="zb-note">Without a source the change is only made if a published source confirms it.</p>'}`);
     const title=`ZAGBOT: ${f.r.name}, ${f.label||{position:'position',model:'3D model',text:'description',source:'sources',other:'request',value:'value'}[f.what]}`;
     const body=['Request written with ZAGBOT on the atlas.','',...lines.map(([a,b])=>`### ${a}\n\n${b}\n`),'### Page',`\nhttps://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/twin.html?id=${f.r.id}\n`,'Photos can be dragged in here before submitting.'].join('\n');
+    if(INBOX.url){ offer([['Send the request',()=>sendInbox(title.replace(/^ZAGBOT: /,''),body.replace('Photos can be dragged in here before submitting.','')),'primary'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
+      say('<span class="zb-note">'+(isOwner()?'You are signed in as the atlas owner, so ZAGBOT starts on it at once.':'No account needed. The atlas team checks it, then ZAGBOT makes the change.')+'</span>'); return; }
     offer([['Send to ZAGBOT on GitHub',`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`,'link'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
     say('<span class="zb-note">GitHub opens with the request filled in. Press <b>Create</b>. When the atlas owner sends it, ZAGBOT on GitHub checks the source, makes the change and replies there.</span>'); }
+  /* ---------- request inbox: no GitHub account needed (server/inbox.js) ---------- */
+  const INBOX={url:''}; fetch('data/inbox.json').then(r=>r.ok?r.json():{}).then(j=>{ if(j&&/^https:\/\//.test(j.url||'')) INBOX.url=j.url.replace(/\/+$/,''); }).catch(()=>{});
+  const code=()=>{ try{ return localStorage.getItem('zag_owner_code')||''; }catch(_){ return ''; } };
+  const isOwner=()=>!!code();
+  async function call(path,method,body){ const r=await fetch(INBOX.url+path,{method:method||'GET',headers:Object.assign({'content-type':'application/json'},code()?{'x-owner-code':code()}:{}),body:body?JSON.stringify(body):undefined}); let j={}; try{ j=await r.json(); }catch(_){} if(!r.ok) throw new Error(j.error||('error '+r.status)); return j; }
+  async function sendInbox(subject,body){ const wait=say('Sending...');
+    try{ const j=await call('/request','POST',{subject,body,website:''}); wait.remove(); ctx.flow=null;
+      say(j.runs?`Sent as request <b>#${j.number}</b>. ZAGBOT is starting on it now and will answer there in a few minutes.`:`Thank you, your request is in as <b>#${j.number}</b>. The atlas team checks it, then ZAGBOT makes the change.`);
+      offer([['Follow it (no sign in needed)',j.url,'link'],['Something else',()=>{ say('What else?'); offer(menu()); }]]); }
+    catch(e){ wait.remove(); say('It could not be sent: '+esc(e.message)); offer([['Try again',()=>sendInbox(subject,body)],['Cancel',cancel]]); } }
+  function ownerLogin(){ if(!INBOX.url){ say('The request inbox is not switched on yet, so there is nothing to sign in to.'); offer(menu()); return; }
+    say('Type the owner code. It stays in this browser only.'); ctx.flow={kind:'code'}; input.type='password'; input.focus(); offer([['Cancel',()=>{ input.type='text'; cancel(); }]]); }
+  async function ownerCheck(c){ input.type='text'; ctx.flow=null; try{ localStorage.setItem('zag_owner_code',c); }catch(_){}
+    try{ await call('/owner','POST',{}); say('Signed in as the atlas owner. Your requests now run at once.'); ownerMenu(); }
+    catch(_){ try{ localStorage.removeItem('zag_owner_code'); }catch(e){} say('That code is not correct.'); offer([['Try again',ownerLogin],['Cancel',cancel]]); } }
+  function ownerMenu(){ offer([['Requests waiting',pending],['Write a request',()=>startUpdate(ctx.rec)],['Sign out',()=>{ try{ localStorage.removeItem('zag_owner_code'); }catch(_){} say('Signed out.'); offer(menu()); }]]); }
+  async function pending(){ try{ const j=await call('/pending'); if(!j.items.length){ say('No requests are waiting.'); ownerMenu(); return; }
+      say(`${j.items.length} waiting. Choose one to run or decline:`); offer(j.items.slice(0,10).map(i=>['#'+i.number+' '+i.title,()=>decide(i)]).concat([['Back',ownerMenu]])); }
+    catch(e){ say('The list could not be read: '+esc(e.message)); ownerMenu(); } }
+  function decide(i){ say(`<b>#${i.number}</b> ${esc(i.title)}`); offer([['Run it',async()=>{ try{ await call('/approve','POST',{number:i.number,action:'run'}); say('Started. ZAGBOT answers on the request in a few minutes.'); }catch(e){ say('Failed: '+esc(e.message)); } ownerMenu(); },'primary'],['Read it',i.url,'link'],['Decline',async()=>{ try{ await call('/approve','POST',{number:i.number,action:'reject'}); say('Declined and closed.'); }catch(e){ say('Failed: '+esc(e.message)); } ownerMenu(); }],['Back',pending]]); }
   function cancel(){ ctx.flow=null; say('Cancelled. Anything else?'); offer(menu()); }
 
   /* ---------- understanding typed text ---------- */
-  function handle(raw,shown){ user(shown||raw); const text=String(raw||'').trim(); if(!text) return;
+  function handle(raw,shown){ if(ctx.flow&&ctx.flow.kind==='code'){ user('******'); return ownerCheck(String(raw||'').trim()); } user(shown||raw); const text=String(raw||'').trim(); if(!text) return;
+    if(/^\/?(owner|admin|lastnik)$/i.test(text)){ if(isOwner()){ say('You are signed in as the atlas owner.'); ownerMenu(); } else ownerLogin(); return; }
     const f=ctx.flow;
     if(f&&f.kind==='update'&&f.step){ const st=f.step;
       if(st==='label'){ f.label=tidy(text); return askValue(); }
