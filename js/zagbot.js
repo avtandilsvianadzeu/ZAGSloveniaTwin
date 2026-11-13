@@ -88,7 +88,7 @@
       <div class="zb-log" id="zbLog" aria-live="polite"></div>
       <div class="zb-chips" id="zbChips"></div>
       <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure, or tell me what to change" aria-label="Message to ZAGBot"><button type="submit">Send</button></form>
-      <p class="zb-foot">Answers come only from the atlas data, with the source. Changes go to the owner as a request on GitHub.</p>
+      <p class="zb-foot">Answers come from the atlas data, with sources. Corrections are reviewed by the ZAG atlas team.</p>
     </section>`;
   document.body.appendChild(root);
   if(ON_MAP) document.body.classList.add('zb-onmap');
@@ -108,7 +108,7 @@
       if(kind!=='link') el.onclick=()=>{ if(typeof act==='function'){ user(label); act(); } else handle(act,label); };
       chips.appendChild(el); } }
   const menu=()=>[['Find a structure',()=>{ say('Type its name or place, for example <i>Kastelec</i>, <i>Arto Blanca</i> or <i>bridges in Ljubljana</i>.'); offer(typeChips()); input.focus(); },null,'Name, place or type','find'],
-    ['Report a correction',()=>startUpdate(ctx.rec),null,'A value, position or model','fix'],['Request a 3D model',()=>startModel(ctx.rec),null,'Built by itself in minutes','cube'],
+    ['Report a correction',()=>startUpdate(ctx.rec),null,'A value, position or model','fix'],['Improve a 3D model',()=>startModel(ctx.rec),null,'Suggest what should change','cube'],
     ON_MAP?['Timeline','timeline',null,'Show or hide ZAG work by year','time']:['What can you do?','help',null,'Everything ZAGBot knows','help']];
   const home=()=>offer(menu(),true);
   const typeChips=()=>TYPES.slice(0,6).map(t=>[t.name[0].toUpperCase()+t.name.slice(1),t.key]);
@@ -135,15 +135,15 @@
   function listType(t,inPlace){ let rs=DB.recs.filter(r=>t.match(r.type)); if(inPlace) rs=rs.filter(r=>inPlace.includes(r));
     if(!rs.length){ say(`No ${esc(t.name)} are recorded${inPlace?' there':''}.`); offer(menu()); return; }
     say(rs.length===1?`One of the ${esc(t.name)} is recorded${inPlace?' there':''}:`:`${rs.length} ${esc(t.name)}${inPlace?' there':''} in the atlas. Choose one:`); offer(rs.slice(0,10).map(r=>[r.name,()=>card(r)]).concat(rs.length>10?[['Show more',()=>{ offer(rs.slice(10,24).map(r=>[r.name,()=>card(r)])); }]]:[])); }
-  function help(){ say(`I can:<ul class="zb-list"><li>find a structure by name, type or place</li><li>answer a value such as height, length, year or power, always with its source</li><li>show it on the map or open its page</li><li>take a report when something is wrong and send it to the owner as an exact request</li><li>open the form for a new 3D model</li></ul>I understand English and Slovenian words, for example <i>predor</i>, <i>most</i>, <i>višina</i>.`); offer(menu()); }
+  function help(){ say(`I can:<ul class="zb-list"><li>find a structure by name, type or place</li><li>answer a value such as height, length, year or power, always with its source</li><li>show it on the map or open its page</li><li>take a report when something is wrong and send it to the atlas team as an exact request</li><li>open the form for a new 3D model</li></ul>I understand English and Slovenian words, for example <i>predor</i>, <i>most</i>, <i>višina</i>.`); offer(menu()); }
 
   /* ---------- guided requests: every step is a click, so the request is exact ---------- */
   function pickRecord(then,why){ say((why||'Which structure is it?')+' Type a name or choose one.'); ctx.flow={pick:then};
     const near=ctx.rec?[[ctx.rec.name,()=>{ ctx.flow=null; then(ctx.rec); }]]:[]; offer(near.concat(typeChips().map(c=>[c[0],()=>listPick(c[1],then)])) ); input.focus(); }
   function listPick(key,then){ const t=TYPES.find(x=>x.key===key); const rs=DB.recs.filter(r=>t.match(r.type)); say('Choose one:'); offer(rs.slice(0,24).map(r=>[r.name,()=>{ ctx.flow=null; then(r); }])); }
-  function startModel(r){ if(!r) return pickRecord(startModel,'Which structure needs a 3D model?'); ctx.rec=r;
-    const has=!!((DB.twins[r.id]||{}).model); say(`${has?'Update':'Request'} the 3D model of <b>${esc(r.name)}</b>. The form asks for the height and its source link, the outline comes from OpenStreetMap. The model is built by itself in about two minutes.`);
-    offer([[has?'Open the update form':'Open the request form',`${REPO}/issues/new?template=model_request.yml&title=${encodeURIComponent('Model: '+r.name+' ('+r.id+')')}`,'link'],['The model looks wrong',()=>startUpdate(r,'model')],['Back',()=>card(r)]]); }
+  function startModel(r){ if(!r) return pickRecord(startModel,'Which structure is it about?'); ctx.rec=r;
+    const has=!!((DB.twins[r.id]||{}).model); say(`${has?'Suggest an improvement to':'Suggest'} the 3D model of <b>${esc(r.name)}</b>. Tell me what should change and where it is published. The atlas team builds the model from the mapped outline and the published dimensions.`);
+    offer([['Describe the change',()=>startUpdate(r,'model'),'primary'],isOwner()?['Open the model form',`${REPO}/issues/new?template=model_request.yml&title=${encodeURIComponent('Model: '+r.name+' ('+r.id+')')}`,'link']:null,['Back',()=>card(r)]]); }
   const WHAT=[['position','The position on the map'],['value','A value (height, length, year)'],['model','The 3D model'],['text','The description or ZAG role'],['source','A source or link'],['other','Something else']];
   function startUpdate(r,what,attr){ if(!r) return pickRecord(x=>startUpdate(x,what,attr),'Which structure is it about?'); ctx.rec=r; ctx.flow={kind:'update',r,what:null,label:attr||null,value:null,src:null};
     if(what) return chooseWhat(what); ctx.flow.step='what'; say(`What is wrong or missing at <b>${esc(r.name)}</b>? Choose below or describe it in your own words.`); offer(WHAT.map(([k,l])=>[l,()=>{ ctx.flow.step=null; chooseWhat(k); }])); }
@@ -152,7 +152,7 @@
     if(k==='value'&&f.label&&!f.old){ const a=ATTRS.find(x=>x.name===f.label), sp=a&&((DB.twins[f.r.id]||{}).specs||[]).find(s=>a.label.test(s.label)); if(sp){ f.label=tidy(sp.label); f.old=tidy(sp.value)+(sp.unit?' '+sp.unit:''); } }
     if(k==='value'&&!f.label){ const sp=((DB.twins[f.r.id]||{}).specs||[]).filter(s=>!/mapped geometry/i.test(s.label)).slice(0,8);
       say('Which value?'); offer(sp.map(s=>[tidy(s.label)+': '+tidy(s.value)+(s.unit?' '+s.unit:''),()=>{ f.label=tidy(s.label); f.old=tidy(s.value)+(s.unit?' '+s.unit:''); askValue(); }]).concat([['A value that is missing',()=>{ say('Type the name of the value, for example <i>span</i>.'); f.step='label'; input.focus(); offer([['Cancel',cancel]]); }]])); return; }
-    if(k==='model'){ say('What is wrong with the model? Type it in a few words, for example <i>gates are missing</i>. You can attach photos on GitHub in the next step.'); f.step='desc'; offer([['Shape is wrong',()=>{ f.desc='The shape does not match the real structure'; askSource(); }],['Height is wrong',()=>{ f.desc='The height is wrong'; askSource(); }],['Parts are missing',()=>{ f.desc='Parts of the structure are missing'; askSource(); }],['Cancel',cancel]]); input.focus(); return; }
+    if(k==='model'){ say('What is wrong with the model? Type it in a few words, for example <i>gates are missing</i>.'); f.step='desc'; offer([['Shape is wrong',()=>{ f.desc='The shape does not match the real structure'; askSource(); }],['Height is wrong',()=>{ f.desc='The height is wrong'; askSource(); }],['Parts are missing',()=>{ f.desc='Parts of the structure are missing'; askSource(); }],['Cancel',cancel]]); input.focus(); return; }
     if(k==='position'){ say('Where should it be? Paste coordinates (latitude, longitude), a Google Maps link, or describe the place.'); f.step='desc'; offer([['Cancel',cancel]]); input.focus(); return; }
     if(k==='value') return askValue();
     say(k==='source'?'Paste the link of the source.':'Describe the change in one or two sentences.'); f.step=k==='source'?'src':'desc'; offer([['Cancel',cancel]]); input.focus(); }
@@ -169,8 +169,8 @@
       say('<span class="zb-note">No account needed. It goes by email to the atlas team, who check it and let ZAGBot make the change.</span>'); return; }
     if(INBOX.url){ offer([['Send the request',()=>sendInbox(title.replace(/^ZAGBot: /,''),body.replace('Photos can be dragged in here before submitting.','')),'primary'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
       say('<span class="zb-note">'+(isOwner()?'You are signed in as the atlas owner, so ZAGBot starts on it at once.':'No account needed. The atlas team checks it, then ZAGBot makes the change.')+'</span>'); return; }
-    offer([['Send to ZAGBot on GitHub',`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`,'link'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
-    say('<span class="zb-note">GitHub opens with the request filled in. Press <b>Create</b>. When the atlas owner sends it, ZAGBot on GitHub checks the source, makes the change and replies there.</span>'); }
+    offer([['Send the request',`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`,'link'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
+    say('<span class="zb-note">The request is reviewed by the ZAG atlas team.</span>'); }
   /* ---------- requests by email: formsubmit.co delivers the message to the atlas owner, the visitor needs no account ---------- */
   const MAIL={to:''}; fetch('data/contacts.json').then(r=>r.ok?r.json():{}).then(j=>{ const m=(j&&(j.zagbot||j.default))||''; if(/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(m)) MAIL.to=m; }).catch(()=>{});
   async function sendMail(subject,lines,runUrl){ const wait=say('Sending...'); const page=location.href.split('#')[0];

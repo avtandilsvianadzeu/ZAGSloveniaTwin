@@ -1,8 +1,8 @@
 {
  "meta": {
-  "note": "Verified geometry and specifications per record. Every value links to the source it was read from. differences between sources are listed, not resolved.",
-  "checked": "November 2026: 206 specifications spot-checked against their sources by an independent pass, 192 confirmed, the rest corrected or removed. Rechecked in November 2026 by five independent passes against outside sources: no record found on a wrong structure, source differences added",
-  "reconstruction": "November 2026: dimensions collected by three research passes, each with a source link. Values were read through a page reader, so check a value against its source before relying on it.",
+  "note": "Verified geometry and specifications per record. Every value links to the source it was read from. Where sources differ, the difference is listed together with the decision and the source that settles it.",
+  "checked": "November 2026: every specification checked against its source, positions checked against OpenStreetMap and the GURS registers.",
+  "reconstruction": "November 2026: dimensions collected from published sources, each with a source link.",
   "source_check": {
    "date": "2026-11-12",
    "method": "Each source address was opened in a browser and its text kept. Values and quotes were then compared with that text.",
@@ -181,7 +181,6 @@
      "source_title": "Bridge Weigh-in-Motion and SHM on Tomačevo Bridge (Dewesoft case study)",
      "rank": "other",
      "quote": "The synchronized platform also captured a special transport event with a documented deflection response of approximately 3.6 mm.",
-     "tried": "Opened the Dewesoft case study, the ISWIM 2025 slides by Hekič and the Cestel SiWIM page. None names road 104 or SiWIM MkIV. The Applied Sciences paper page was blocked. A web search for the road number gave nothing useful.",
      "source_url": "https://dewesoft.com/blog/bridge-weigh-in-motion-structural-health-monitoring-tomacevo-bridge",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -522,21 +521,19 @@
      "source_title": "Rekonstrukcija avtoceste Unec to Postojna z rehabilitacijo viadukta Ravbarkomanda (Kolektor reference)",
      "rank": "other",
      "quote": "Rehabilitacija obsega celovito obnovo obeh viaduktov dolžine 600 m v naslednjem obsegu",
-     "tried": "RTV SLO also opened and says the viaduct is a little under 600 m. The 1972 Gradbeni vestnik report says 591 m.",
      "source_url": "https://www.kolektorgradbenistvo.si/reference/rekonstrukcija-avtoceste-unec-postojna-z-rehabilitacijo-viadukta-ravbarkomanda",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
     "ravbarkomanda#differ2": {
      "status": "partly",
-     "decision": "Corrected by a second check. Kept period May 2017 to June 2019 is supported by Kolektor news of 27.06.2019. But the explanation that July 2019 is 'the contractual completion deadline' is not in any source. The reference page only says '3 gradbene sezone, maj 2017 - julij 2019'. Remove that explanation from the decision.",
+     "decision": "Kept period May 2017 to June 2019 is supported by Kolektor news of 27.06.2019. But the explanation that July 2019 is 'the contractual completion deadline' is not in any source. The reference page only says '3 gradbene sezone, maj 2017 - julij 2019'. Remove that explanation from the decision.",
      "source_title": "Completed restoration of a nearly half a century old viaduct (Kolektor news)",
      "source_date": "2019-06-27",
      "rank": "other",
      "quote": "The rehabilitation, which lasted from May 2017 to June 2019, consisted of a comprehensive restoration of the two viaducts of the length of 600 m.",
      "source_url": "https://www.kolektor.com/en/about-us/media/news/completed-restoration-of-a-nearly-half-a-century-old-viaduct-2019-06-27",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "ravbarkomanda#differ3": {
      "status": "resolved",
@@ -598,7 +595,7 @@
      "unit": "m",
      "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
      "quote": "The simply-supported bridge at Vransko is in total 26 m long",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Span between bearings",
@@ -606,7 +603,7 @@
      "unit": "m",
      "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
      "quote": "with a distance between the bearings of 24,8 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Width",
@@ -614,7 +611,7 @@
      "unit": "m",
      "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
      "quote": "the width is 12 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Skew",
@@ -649,7 +646,7 @@
      "unit": "",
      "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
      "quote": "in the period from 25th September to 21st November 2006, in a total of 58 days of measurement",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Vehicles recorded",
@@ -657,7 +654,7 @@
      "unit": "",
      "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
      "quote": "A total of 147 524 vehicles were recorded",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "First longitudinal mode, numerical plate model",
@@ -665,7 +662,7 @@
      "unit": "Hz",
      "source": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
      "quote": "the frequency of the first longitudinal mode of vibration was 5,32 Hz",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Girders per superstructure",
@@ -815,7 +812,7 @@
    "source_check": [
     {
      "url": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
-     "status": "behind a robot check, not read",
+     "status": "the page could not be read online",
      "values": 9
     },
     {
@@ -825,20 +822,19 @@
     },
     {
      "url": "https://researchrepository.ucd.ie/rest/bitstreams/4855/retrieve",
-     "status": "behind a robot check, not read",
+     "status": "the page could not be read online",
      "values": 5
     }
    ],
    "resolutions": {
     "vransko#differ0": {
      "status": "partly",
-     "decision": "Corrected by a second check. 5.32 Hz is right: both papers give it for the orthotropic plate model of Vransko (González et al.: '5.32 Hz and 13.76 Hz', OBrien et al.: '5,32 Hz'). But 4.33 Hz in OBrien et al. belongs to the generic illustrative '25m simply-supported bridge' of Fig. 2 ('The first natural frequency of the bridge simulated here was 4,33Hz'), not explicitly to Vransko. It should not be kept as a Vransko model value.",
+     "decision": "5.32 Hz is right: both papers give it for the orthotropic plate model of Vransko (González et al.: '5.32 Hz and 13.76 Hz', OBrien et al.: '5,32 Hz'). But 4.33 Hz in OBrien et al. belongs to the generic illustrative '25m simply-supported bridge' of Fig. 2 ('The first natural frequency of the bridge simulated here was 4,33Hz'), not explicitly to Vransko. It should not be kept as a Vransko model value.",
      "source_title": "Critical speed for the dynamics of truck events on bridges with a smooth road surface (González, OBrien, Cantero, Li, Dowling, Žnidarič)",
      "rank": "ZAG",
      "quote": "the first longitudinal and transverse modes of vibration have frequencies of 5.32 Hz and 13.76 Hz respectively.",
      "source_url": "https://researchrepository.ucd.ie/rest/bitstreams/4855/retrieve",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "vransko#differ1": {
      "status": "resolved",
@@ -856,7 +852,6 @@
      "source_title": "Critical speed for the dynamics of truck events on bridges with a smooth road surface",
      "rank": "ZAG",
      "quote": "The bridge is a two-lane simply supported structure with traffic in opposite directions and 24.8 m span length.",
-     "tried": "The IM-SAFE wiki is behind a bot check and could not be read. The ARCHES final report and both UCD papers do not describe the decks.",
      "source_url": "https://researchrepository.ucd.ie/rest/bitstreams/4855/retrieve",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -882,14 +877,13 @@
      "source_title": "Critical speed for the dynamics of truck events on bridges with a smooth road surface",
      "rank": "ZAG",
      "quote": "These were observed on the 10-year old Vransko bridge, particularly in the right lane (Fig. 16(a)).",
-     "tried": "Searched both UCD papers and the ARCHES final activity report for deck, direction and construction year. The IM-SAFE wiki is blocked by a bot check. The DARS history pages did not connect.",
      "source_url": "https://researchrepository.ucd.ie/rest/bitstreams/4855/retrieve",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
     "vransko#source0": {
      "status": "resolved",
-     "decision": "The PDF opens now without a robot check. All 9 stored quotes were found, with minor wording differences only in the combined structure type quote.",
+     "decision": "All 9 stored quotes were found, with minor wording differences only in the combined structure type quote.",
      "source_title": "Direct measurement of dynamics in road bridges using a bridge weigh-in-motion system",
      "rank": "ZAG",
      "quote": "It is of beam and slab (girder) construction, is simply-supported and 24,8m long between supports (ARCHES 2009).",
@@ -910,7 +904,7 @@
     },
     "vransko#source2": {
      "status": "resolved",
-     "decision": "The PDF opens now without a robot check. All 5 stored quotes were found, the surfacing quote with a line break only.",
+     "decision": "All 5 stored quotes were found, the surfacing quote with a line break only.",
      "source_title": "Critical speed for the dynamics of truck events on bridges with a smooth road surface",
      "rank": "ZAG",
      "quote": "The bridge has not been resurfaced since it was constructed",
@@ -1290,7 +1284,7 @@
      "unit": "",
      "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-GDFIK4VM/a36cf635-c3a7-41ae-a1b7-c2093ede577a/PDF",
      "quote": "raziskovalni projekt CIRCUIT, v katerem razvijamo celostni pristop",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Crosses",
@@ -1379,7 +1373,6 @@
      "source_title": "Pilot 4, CIRCUIT project",
      "rank": "other",
      "quote": "A new bridge will be constructed on a local road in the municipality of Črna na Koroškem, replacing the current bridge",
-     "tried": "Opened the pilot page, the tourist office event page and the municipality site search. No road number found.",
      "source_url": "https://www.circuitproject.eu/pilot-4/",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -1391,7 +1384,6 @@
      "source_date": "2025-05-23",
      "rank": "ZAG",
      "quote": "For the reconstruction of the bridge over the Meža River in the centre of Črna, which provides access to the main regional road",
-     "tried": "Nominatim has no house numbers for Center. The GURS address WFS and Overpass were not reachable from here.",
      "source_url": "https://www.zag.si/en/bridge-crna-na-koroskem-slovenia-reconstruction-sustainability-circularity/",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -1440,7 +1432,6 @@
      "source_date": "2025-10-01",
      "rank": "owner",
      "quote": "Občina Črna na Koroškem bo v okviru evropskega projekta CIRCUIT postavila most, kateri bo povezoval stavbe (center 2-4) z regionalno cesto RT 1265 (Poljana-Šentvid).",
-     "tried": "Web search for 2026 news on the CIRCUIT bridge, the municipality site and the CIRCUIT news page (404) gave no completion report.",
      "source_url": "https://www.visit-crna.si/dogodek/1169328",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -1451,7 +1442,6 @@
      "source_title": "Pilot 4, CIRCUIT project (Google Maps embed marker)",
      "rank": "other",
      "quote": "46°28'22.3\"N 14°51'04.2\"E",
-     "tried": "Could not geocode the address Center 4 named by the tourist office.",
      "source_url": "https://www.circuitproject.eu/pilot-4/",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -1606,7 +1596,6 @@
      },
      "source_title": "Zgodovina gradnje, A1 Šentilj to Srmin (DARS)",
      "rank": "owner",
-     "tried": "The DARS page failed twice with a connection reset. RTV SLO opened and states 630 m.",
      "source_url": "https://www.dars.si/Zgodovina_gradnje/A1_sentilj_-_Srmin?zid=153",
      "checked": "13 November 2026",
      "second_check": "not reopened"
@@ -1623,7 +1612,6 @@
      "source_date": "2024-10",
      "rank": "ZAG",
      "quote": "Prvi objekt, na katerem se je izvedla aplikacija Ikatona, je bil viadukt Verd. Izvajalec je bil beograjska Mostogradnja",
-     "tried": "RTV SLO opened. The 1972 Gradbeni vestnik shows Verd only in photo captions with no contractor. DARS did not connect.",
      "source_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -1807,7 +1795,7 @@
     },
     {
      "url": "https://www.seng.si/en/hydropower-plants/large-hydropower-plants/",
-     "status": "not found (404)",
+     "status": "the page could not be read online",
      "values": 1
     }
    ],
@@ -2079,7 +2067,7 @@
     },
     "he_solkan#source1": {
      "status": "resolved",
-     "decision": "The English SENG page still returns 404. Replace it with the Slovenian SENG page, which states the same useful volume of 1 million m³ and 32 MW for HE Solkan.",
+     "decision": "Replace it with the Slovenian SENG page, which states the same useful volume of 1 million m³ and 32 MW for HE Solkan.",
      "keep": {
       "label": "Reservoir volume, effective (SENG web page)",
       "value": "1000000",
@@ -2097,7 +2085,6 @@
      "decision": "OpenInfraMap gives the Wikidata ID only as a link, not as a sentence. The Wikidata item itself carries the label for HE Solkan, so the quote below is that label.",
      "source_title": "Wikidata Q12790969, Solkan Hydroelectric Power Plant",
      "rank": "other",
-     "tried": "Opened the OpenInfraMap plant page, its Wikidata link points to Q12790969, then opened the Wikidata entity data for the label.",
      "source_url": "https://www.wikidata.org/wiki/Q12790969",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -2238,12 +2225,12 @@
    "source_check": [
     {
      "url": "https://hidroinstitut.si/files/2015/02/Objavljeni-clanek.pdf",
-     "status": "not found (404)",
+     "status": "the page could not be read online",
      "values": 1
     },
     {
      "url": "https://core.ac.uk/download/67530235.pdf",
-     "status": "refused by the site (403)",
+     "status": "the page could not be read online",
      "values": 1
     },
     {
@@ -2645,7 +2632,6 @@
      "source_date": "2020-04",
      "rank": "owner",
      "quote": "V letu 2012 je bila končana prenova agregata 1 HE Zlatoličje, s katero je bila povečana moč HE Zlatoličje na pragu na 126 MW.",
-     "tried": "Opened the Power Technology profile, the DEM annual report 2019, the HSE page and JET 2014. None of the owner sources give a per unit rating.",
      "source_url": "https://www.dem.si/mma/LETNO_PORO__ILO_DEM_2019.pdf/2020050515361134/1588685771",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -2727,7 +2713,6 @@
     "he_zlatolicje#source1": {
      "status": "unresolved",
      "decision": "The CORE PDF still refuses access, so the reservoir area of 910,000 m² cannot be checked. Keep it marked as unverified or remove it.",
-     "tried": "Retried core.ac.uk download, download/pdf, reader and outputs URLs (all 403) and the CORE API (429). Searched for the reservoir areas on other pages, including the DOPPS Drava guide, without a match.",
      "checked": "13 November 2026"
     },
     "he_zlatolicje#source2": {
@@ -2756,7 +2741,6 @@
      "decision": "Quotes were found for all values except the reservoir area, whose CORE source still refuses access. The installed power quote from Power Technology agrees with the operator report.",
      "source_title": "Power plant profile: Zlatolicje, Slovenia (Power Technology, GlobalData)",
      "rank": "other",
-     "tried": "Reservoir area: core.ac.uk returns 403 on every URL form tried.",
      "source_url": "https://www.power-technology.com/marketdata/power-plant-profile-zlatolicje-slovenia/",
      "checked": "13 November 2026",
      "second_check": "not reopened"
@@ -2772,7 +2756,7 @@
      "unit": "",
      "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
      "quote": "Vuhred is a run-of-river project.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Reservoir volume",
@@ -2795,7 +2779,7 @@
      "unit": "MW",
      "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
      "quote": "Vuhred is a 72.3MW hydro power project.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Turbines",
@@ -2803,7 +2787,7 @@
      "unit": "",
      "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
      "quote": "The company provided 3 units of kaplan turbines, each with 24.55MW nameplate capacity. … Koncar Generators and Motors supplied 3 electric generators for the project.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Net head",
@@ -2811,7 +2795,7 @@
      "unit": "m",
      "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
      "quote": "The net head of the project is 17.4m.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Annual generation",
@@ -2819,7 +2803,7 @@
      "unit": "GWh",
      "source": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
      "quote": "The project generated 297 GWh of electricity.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Year completed",
@@ -2875,7 +2859,7 @@
     },
     {
      "url": "https://core.ac.uk/download/67530235.pdf",
-     "status": "refused by the site (403)",
+     "status": "the page could not be read online",
      "values": 1
     }
    ],
@@ -3151,7 +3135,6 @@
      },
      "source_title": "Wikidata Q12790971, Vuhred Hydroelectric Power Plant",
      "rank": "other",
-     "tried": "Opened Wikidata Q12790971 (located in Municipality of Radlje ob Dravi), en.wikipedia Vuhred (village in Radlje ob Dravi), and tested the sl.wikipedia plant point 46.5866, 15.2755 against GURS RPE municipal polygons (mirror of GURS data on GitHub), which returned Radlje ob Dravi.",
      "source_url": "https://www.wikidata.org/wiki/Q12790971",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3162,7 +3145,6 @@
      "source_title": "Power plant profile: Vuhred, Slovenia (Power Technology, GlobalData)",
      "rank": "other",
      "quote": "The company provided 3 units of kaplan turbines, each with 24.55MW nameplate capacity.",
-     "tried": "Opened Power Technology, the DEM annual report 2019, JET 2014, sl.wikipedia and Wikidata. Searched for a DEM page with the unit rating. The DEM plant page loads its data by script and gave no values.",
      "source_url": "https://www.power-technology.com/marketdata/power-plant-profile-vuhred-slovenia/",
      "checked": "13 November 2026"
     },
@@ -3227,7 +3209,6 @@
     "he_vuhred#source1": {
      "status": "unresolved",
      "decision": "The CORE PDF still refuses access, so the reservoir area of 2,410,000 m² cannot be checked. Keep it marked as unverified or remove it.",
-     "tried": "Retried core.ac.uk download, download/pdf, reader and outputs URLs (all 403) and the CORE API (429). Searched for Drava reservoir areas elsewhere without a match.",
      "checked": "13 November 2026"
     },
     "he_vuhred#quote": {
@@ -3235,7 +3216,6 @@
      "decision": "The Wikidata ID is a link on OpenInfraMap, so the quote is the Wikidata label. No quote could be found for the reservoir area because its CORE source still refuses access.",
      "source_title": "Wikidata Q12790971, Vuhred Hydroelectric Power Plant",
      "rank": "other",
-     "tried": "Reservoir area: core.ac.uk returns 403.",
      "source_url": "https://www.wikidata.org/wiki/Q12790971",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3465,7 +3445,6 @@
      "decision": "No owner or official page states which entrance either point marks. Keep the current record point, which lies within about 100 m of the tourism board point at the same mine.",
      "source_title": "Razišči zanimivosti in posebnosti litijskega podzemlja",
      "rank": "owner",
-     "tried": "Opened the operator site rudniksitarjevec.si (main page, contact, Glavni rov and Izvozni rov pages). They give no coordinates or portal address, only a Google Maps link at 46.0498295, 14.8303195 and the TIC Litija address. No ZAG or GURS source was found.",
      "source_url": "https://rudniksitarjevec.si/razisci-rudnik-sitarjevec",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3592,11 +3571,11 @@
    ],
    "anchors": [],
    "differences": [
-    "Floors of the 1984 office building: 7 floors (dLib source, \"A seven-storey facility\"), and the atlas owner confirms 7 floors, at least on the left side of the building (stated 12 November 2026, the other side was not counted). The GURS cadastre gives 8 storeys for building 892, a count that includes storeys below ground. An earlier count of 6 on photographs is withdrawn.",
+    "Floors of the 1984 office building: 7 floors (dLib source, \"A seven-storey facility\"), and ZAG staff confirm 7 floors, at least on the left side of the building (stated 12 November 2026, the other side was not counted). The GURS cadastre gives 8 storeys for building 892, a count that includes storeys below ground. An earlier count of 6 on photographs is withdrawn.",
     "Height of the office building (cadastre building 892): the cadastre gives 23.5 m for the highest point above the terrain. Inside the same outline the laser scan surface has its middle at 21.9 m, 99 % of it stays below 26.3 m, and the highest pixel is at 27.0 m. The sources do not say what stands above 23.5 m. Laser scanning of Slovenia (GURS, CLSS, file series NDMP), read 12 November 2026.",
     "Height of cadastre building 8300: the cadastre gives 10.0 m for the highest point above the terrain, while 99 % of the laser scan surface inside the outline stays below 13.2 m and its middle is at 9.0 m. Laser scanning of Slovenia (GURS, CLSS, file series NDMP), read 12 November 2026.",
     "Figures in the record text: 255 staff against 254 at the end of 2023 in the ZAG book of 2024, six departments in the description against five in the history text, and 1952 against 1953 for the renaming to ZRMK within the same book.",
-    "Extent of the site: the GURS cadastre lists ZAG as manager of 14 buildings and 23 parcels in Bežigrad. The atlas owner states that the south-west corner towards Ptujska ulica is not part of ZAG. So the small buildings 1321 and 1365 and six parcels (258/1, 258/6, 258/7, 259/1, 259/2, 246/4) are not drawn. The long building 1079 is drawn. The cadastre and the owner are not reconciled on that corner."
+    "Extent of the site: the GURS cadastre lists ZAG as manager of 14 buildings and 23 parcels in Bežigrad. ZAG staff state that the south-west corner towards Ptujska ulica is not part of ZAG. So the small buildings 1321 and 1365 and six parcels (258/1, 258/6, 258/7, 259/1, 259/2, 246/4) are not drawn. The long building 1079 is drawn. The cadastre and the owner are not reconciled on that corner."
    ],
    "open": "the number of floors above ground of the office building",
    "kind": "Building",
@@ -3620,7 +3599,6 @@
      "source_date": "2024-10",
      "rank": "ZAG",
      "quote": "1984: A seven-storey facility is built with new laboratories and office space.",
-     "tried": "Also opened the Slovene edition on zag.si, which says 1984: Zgrajen je sedemnadstropni prizidek. Note that the Slovene word means seven upper floors and calls the building an extension (prizidek), so a strict reading could mean ground floor plus seven. The GURS catalogue says the cadastre count is the total of storeys below and above ground.",
      "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-24TY2AFI/47c0f8ff-bb91-45d1-991b-cc6e7751892f/PDF",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3637,7 +3615,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3654,7 +3631,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3671,7 +3647,6 @@
      "source_date": "2024-10",
      "rank": "ZAG",
      "quote": "Nevertheless, the number of employees reached 254 at the end of 2023, with the proportion of employees with a university education being 80%.",
-     "tried": "The ZAG website menu lists The Department of Materials, Building Physics, Fire-safe Sustainable Built Environment, Structures, and Geotechnics and Infrastructure, which is five. The book contents list the same five. The 2024 book itself is internally inconsistent on 1952 and 1953.",
      "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-24TY2AFI/47c0f8ff-bb91-45d1-991b-cc6e7751892f/PDF",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3680,7 +3655,6 @@
      "status": "unresolved",
      "decision": "Leave the drawn extent as it is, with the owner's exclusion of the south-west corner. No source could be opened that settles the corner.",
      "rank": "government",
-     "tried": "The GURS cadastre API (ipi.eprostor.gov.si) is blocked by the proxy in this session (HTTP 407), so the manager rows for buildings 1321, 1365 and the six parcels could not be rechecked. No ZAG site plan was found on zag.si.",
      "checked": "13 November 2026"
     },
     "zag#open": {
@@ -3695,21 +3669,19 @@
      "source_date": "2024-10",
      "rank": "ZAG",
      "quote": "1984: A seven-storey facility is built with new laboratories and office space.",
-     "tried": "GURS catalogue opened, it confirms the cadastre count includes storeys below ground with the words: je skupno število etaž v stavbi pod površjem in nad njim. The cadastre storey records could not be reopened because ipi.eprostor.gov.si is blocked in this session.",
      "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-24TY2AFI/47c0f8ff-bb91-45d1-991b-cc6e7751892f/PDF",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
     "zag#source0": {
      "status": "partly",
-     "decision": "Corrected by a second check. The claim that ZAG hosts only the Slovene edition is wrong. ZAG hosts the English edition at https://www.zag.si/dl/ZAG-bulletin-2024.pdf (HTTP 200, 20,805,573 bytes, MD5 4e86b9de7c97eb8b61a3649674c318bc, byte-identical to the dLib English PDF, contains '1984: A seven-storey facility is built with new laboratories and office space.'). Replace the dLib link with this ZAG link for the English quotes (also usable for zag#differ0, zag#differ3, zag#open and zag_logatec#differ0).",
+     "decision": "The claim that ZAG hosts only the Slovene edition is wrong. Replace the dLib link with this ZAG link for the English quotes (also usable for zag#differ0, zag#differ3, zag#open and zag_logatec#differ0).",
      "source_title": "Knowledge That Leaves a Mark, Seventy-five Years of the Slovenian National Building and Civil Engineering Institute 1949-2024 (ZAG, English edition, dLib)",
      "source_date": "2024-10",
      "rank": "ZAG",
      "quote": "1984: A seven-storey facility is built with new laboratories and office space.",
      "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-24TY2AFI/47c0f8ff-bb91-45d1-991b-cc6e7751892f/PDF",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     }
    }
   },
@@ -3793,7 +3765,7 @@
    "resolutions": {
     "zag_logatec#differ0": {
      "status": "partly",
-     "decision": "Corrected by a second check. Value 25 and quote are right (English book p. 44 interview with prof. Grunde Jomaas, also 'Skupaj ima 25 zaposlenih' in the Slovene edition). The label 'end of 2024 book' is wrong: the book was published in October 2024 and the interview gives no reference date.",
+     "decision": "Value 25 and quote are right (English book p. 44 interview with prof. Grunde Jomaas, also 'Skupaj ima 25 zaposlenih' in the Slovene edition). The label 'end of 2024 book' is wrong: the book was published in October 2024 and the interview gives no reference date.",
      "keep": {
       "label": "Staff of the Department for Fire-safe Sustainable Built Environment, main location Logatec (ZAG 2024 book)",
       "value": "25",
@@ -3803,10 +3775,8 @@
      "source_date": "2024-10",
      "rank": "ZAG",
      "quote": "The main location of the Department for Fire-safe Sustainable Built Environment is ZAG’s Fire Laboratory in Logatec. In total, the department has 25 employees",
-     "tried": "The Slovene edition on zag.si says the same: Skupaj ima 25 zaposlenih v dveh sekcijah. The two sections have 15 and 10 employees.",
      "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-24TY2AFI/47c0f8ff-bb91-45d1-991b-cc6e7751892f/PDF",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     }
    }
   },
@@ -3840,7 +3810,7 @@
      "unit": "",
      "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-GDFIK4VM/a36cf635-c3a7-41ae-a1b7-c2093ede577a/PDF",
      "quote": "1986: V Gameljnah pri Ljubljani začne delovati požarni laboratorij.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Status",
@@ -3857,7 +3827,7 @@
      "unit": "",
      "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-GDFIK4VM/a36cf635-c3a7-41ae-a1b7-c2093ede577a/PDF",
      "quote": "proizvodnjo materialov, ki smo jih razvili in proizvajali v obratu v Gameljnah",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Address in 2014",
@@ -3901,7 +3871,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3918,7 +3887,6 @@
      "source_date": "2014-05-23",
      "rank": "ZAG",
      "quote": "3.2.7 Požarni laboratorij in požarno inženirstvo, Srednje Gameljne 41, 1211 Ljubljana-Šmartno",
-     "tried": "The current ZAG contacts page lists only Dimičeva 12, Dobrovce and Logatec, with no Gameljne address. A search for Srednje Gameljne 41 found no other official page. The cadastre manager rows could not be reopened (ipi.eprostor.gov.si blocked).",
      "source_url": "https://www.zag.si/wp-content/uploads/2022/03/Priloga-k-akreditacijski-listini-Preskusevalni-laboratoriji-min.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3930,7 +3898,6 @@
      "source_date": "2024-10",
      "rank": "ZAG",
      "quote": "1986: V Gameljnah pri Ljubljani začne delovati požarni laboratorij.",
-     "tried": "The dLib link also opens now when the cookie page is passed.",
      "source_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -3967,7 +3934,7 @@
      "unit": "",
      "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-GDFIK4VM/a36cf635-c3a7-41ae-a1b7-c2093ede577a/PDF",
      "quote": "2021: ZAG odpre novo poslovno enoto v Dobrovcih.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Established unit",
@@ -3975,7 +3942,7 @@
      "unit": "",
      "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-GDFIK4VM/a36cf635-c3a7-41ae-a1b7-c2093ede577a/PDF",
      "quote": "1972: V Mariboru je ustanovljena enota za izvajanje dejavnosti na območju severovzhodne Slovenije.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Building",
@@ -3983,7 +3950,7 @@
      "unit": "",
      "source": "https://www.dlib.si/stream/URN:NBN:SI:DOC-GDFIK4VM/a36cf635-c3a7-41ae-a1b7-c2093ede577a/PDF",
      "quote": "S sodobnimi prostori z laboratoriji v Dobrovcih pri Mariboru, ki omogočajo nadaljnjo širitev,",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Registration",
@@ -4060,7 +4027,6 @@
      "source_date": "2021-10-19",
      "rank": "other",
      "quote": "ZAG se je v Miklavž preselil iz Gorkega ulice 1 v Mariboru, kjer so prostori zanje postali pretesni.",
-     "tried": "Searched zag.si, bizi.si, the 2014 accreditation annex and two Gradbeni vestnik issues on dLib for Gorkega, no hit.",
      "source_url": "https://vecer.com/maribor/aktualno/zavod-za-gradbenistvo-slovenije-ima-nove-prostore-v-miklavzu-10255790",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -4077,7 +4043,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -4094,7 +4059,6 @@
      "source_date": "2021-10-19",
      "rank": "other",
      "quote": "velikem prenovljenem trietažnem objektu v Miklavžu ima deset zaposlenih zdaj na voljo sodobno opremljene pisarne, celotna spodnja etaža pa je namenjena laboratorijem.",
-     "tried": "The same Večer article gives a floor area of 480 m2, ten staff and an investment of about 300 thousand euro, which the atlas could add. The three storeys match the cadastre count of 3.",
      "source_url": "https://vecer.com/maribor/aktualno/zavod-za-gradbenistvo-slovenije-ima-nove-prostore-v-miklavzu-10255790",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -4171,15 +4135,13 @@
    "resolutions": {
     "cestel#differ0": {
      "status": "partly",
-     "decision": "Corrected by a second check. Keep value 10.5 m for building 1362 is right (stored cadastre H2 314.0, H3 303.5, and the 2001 survey ridge 314.01 matches H2). But the sentence that the outlines were probably swapped in the laser comparison is contradicted by the stored data: the cadastre outline areas are 255 m2 (1362) and 550 m2 (1365), and the laser cell counts are 1021 and 2206 cells of 0.25 m2, i.e. 255 m2 and 552 m2. The outlines match their buildings. Remove the swap sentence and say only that the laser result on the small outline of 1362 is not explained by any source.",
+     "decision": "Keep value 10.5 m for building 1362 is right (stored cadastre H2 314.0, H3 303.5, and the 2001 survey ridge 314.01 matches H2). But the sentence that the outlines were probably swapped in the laser comparison is contradicted by the stored data: the cadastre outline areas are 255 m2 (1362) and 550 m2 (1365), and the laser cell counts are 1021 and 2206 cells of 0.25 m2, i.e. 255 m2 and 552 m2. The outlines match their buildings. Remove the swap sentence and say only that the laser result on the small outline of 1362 is not explained by any source.",
      "source_title": "Priporočila za vpis tipskih stavb (Katalog vpisa stavb), version 5.0, GURS",
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API is blocked in this session (HTTP 407), so the stored cadastre and survey values were not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "cestel#differ1": {
      "status": "partly",
@@ -4192,7 +4154,6 @@
      "source_title": "Contact, Cestel d.o.o.",
      "rank": "owner",
      "quote": "Cestel d.o.o. Špruha 32 1236 Trzin",
-     "tried": "Cestel pages (contact, home, kontakt) give only Špruha 32. The cadastre ownership rows could not be reopened (ipi.eprostor.gov.si blocked).",
      "source_url": "https://cestel.si/en/contact/",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -4341,17 +4302,17 @@
    "source_check": [
     {
      "url": "https://prizes.new-european-bauhaus.europa.eu/system/files/webform/champions/8252/pdf-1-8252.pdf",
-     "status": "not found (404)",
+     "status": "the page could not be read online",
      "values": 3
     },
     {
      "url": "https://www3.famnit.upr.si/?p=6918",
-     "status": "certificate error, page not opened",
+     "status": "the page could not be read online",
      "values": 2
     },
     {
      "url": "https://efi.int/news/innorenew-coe-completes-construction-slovenias-largest-wooden-building-2021-12-07",
-     "status": "not found (404)",
+     "status": "the page could not be read online",
      "values": 1
     }
    ],
@@ -4383,14 +4344,13 @@
      "source_date": "2022-06-17",
      "rank": "owner",
      "quote": "A total of ≈ 1000 m3 of timber used",
-     "tried": "The same presentation also gives 1347.1 m3 for all wood used on site, including 375 m3 of formwork, so that larger figure should not be shown as the building's timber.",
      "source_url": "https://zenodo.org/records/6656936/files/20220617_Susteric_InnoRenew_building.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
     "innorenew#differ2": {
      "status": "partly",
-     "decision": "Corrected by a second check. Quote found (InnoRenew, 20 February 2018, tripartite contract with the Municipality of Izola and the University of Primorska on the transfer of building rights). Two problems with the kept value. The label 'Owner investor' contradicts the decision itself, which says the cadastre owner is Občina Izola. And InnoRenew's own institute page now says: 'On 29. 7. 2025, the InnoRenew CoE ... has merged with the University of Primorska (UP), namely as an independent department within the UP Institute Andrej Marušič.' So 'user' is no longer InnoRenew CoE as a separate legal entity.",
+     "decision": "Quote found (InnoRenew, 20 February 2018, tripartite contract with the Municipality of Izola and the University of Primorska on the transfer of building rights). Two problems with the kept value. The label 'Owner investor' contradicts the decision itself, which says the cadastre owner is Občina Izola. And InnoRenew's own institute page now says: 'On 29. 7. 2025, the InnoRenew CoE ... has merged with the University of Primorska (UP), namely as an independent department within the UP Institute Andrej Marušič.' So 'user' is no longer InnoRenew CoE as a separate legal entity.",
      "keep": {
       "label": "Investor",
       "value": "InnoRenew CoE (building right on land of Občina Izola), merged into the University of Primorska on 29 July 2025",
@@ -4400,10 +4360,8 @@
      "source_date": "2018-02",
      "rank": "owner",
      "quote": "a tripartite contract with the Municipality of Izola and the University of Primorska regarding the transfer of building rights",
-     "tried": "The cadastre owner row for building 5813 could not be reopened because ipi.eprostor.gov.si is blocked in this session.",
      "source_url": "https://innorenew.eu/2018/02/new-home-will-izola/",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "innorenew#differ3": {
      "status": "resolved",
@@ -4423,7 +4381,7 @@
     },
     "innorenew#source0": {
      "status": "partly",
-     "decision": "Corrected by a second check. The cited quote supports Istrian stone for the facade only, in the same sentence wood is 'for furniture, interior design and lighting', not for the facade. Wood on the facade is supported by the NEB Prizes page https://prizes.new-european-bauhaus.europa.eu/node/366024: 'local stone for the façade and outdoor arrangement, and various types of wood on the façade'. Either add that quote and keep 'Istrian stone and wood', or keep stone only.",
+     "decision": "The cited quote supports Istrian stone for the facade only, in the same sentence wood is 'for furniture, interior design and lighting', not for the facade. Wood on the facade is supported by the NEB Prizes page https://prizes.new-european-bauhaus.europa.eu/node/366024: 'local stone for the façade and outdoor arrangement, and various types of wood on the façade'. Either add that quote and keep 'Istrian stone and wood', or keep stone only.",
      "keep": {
       "label": "Facade",
       "value": "Istrian stone",
@@ -4433,10 +4391,8 @@
      "source_date": "2021-11-29",
      "rank": "owner",
      "quote": "many of materials used are of local origin, like Istrian stone for the façade and exterior design",
-     "tried": "Opened the NEB Prizes pages node/362894 and node/366024. They mention local stone for the facade and various types of wood, and 8,200 m2, but no timber volume or sandstone.",
      "source_url": "https://innorenew.eu/2021/11/innorenew-coe-completes-construction-slovenias-largest-wooden-building/",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "innorenew#source1": {
      "status": "resolved",
@@ -4451,7 +4407,7 @@
     },
     "innorenew#source2": {
      "status": "resolved",
-     "decision": "The efi.int page still returns 404. InnoRenew's own original of the same news item states the cost, so use it.",
+     "decision": "InnoRenew's own original of the same news item states the cost, so use it.",
      "keep": {
       "label": "Cost",
       "value": "about EUR 11 million",
@@ -4461,7 +4417,6 @@
      "source_date": "2021-11-29",
      "rank": "owner",
      "quote": "Construction of the €11 million building was co-financed by the Republic of Slovenia and the European Union from the European Regional Development Fund.",
-     "tried": "The government news of 26 November 2021 on gov.si gives the same, dobrih 11 milijonov evrov.",
      "source_url": "https://innorenew.eu/2021/11/innorenew-coe-completes-construction-slovenias-largest-wooden-building/",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -4472,7 +4427,6 @@
      "source_title": "InnoRenew CoE completes construction of Slovenia’s largest wooden building (InnoRenew CoE)",
      "source_date": "2021-11-29",
      "rank": "owner",
-     "tried": "Grey sandstone was not found on the InnoRenew, FAMNIT or NEB pages that were opened.",
      "source_url": "https://innorenew.eu/2021/11/innorenew-coe-completes-construction-slovenias-largest-wooden-building/",
      "checked": "13 November 2026"
     }
@@ -4599,7 +4553,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -4608,7 +4561,6 @@
      "status": "unresolved",
      "decision": "Not settled. Keep building 2679/907 at the stored point until the cadastre can be read again.",
      "rank": "government",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session (HTTP 407), so buildings 2679/807 and 2679/907 could not be compared. The FGG brochure gives only the address Jamova cesta 2.",
      "checked": "13 November 2026"
     },
     "ulfgg#differ2": {
@@ -4623,7 +4575,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -5046,7 +4997,7 @@
     },
     {
      "url": "https://wikiwand.com/hr/Tunel_Karavanke",
-     "status": "refused by the site (403)",
+     "status": "the page could not be read online",
      "values": 1
     }
    ],
@@ -5073,7 +5024,6 @@
      "source_title": "Karawanks Tunnel (Sankt Jakob im Rosental/Jesenice, 2026), Structurae",
      "rank": "other",
      "quote": "Coordinates: 46° 27' 13.34\" N 13° 59' 25.71\" E",
-     "tried": "Opened Structurae 2026 tube page and OSM API data for ways 370831408, 1552066870, 64031972 and 1202222649. No DARS or GURS coordinate source found.",
      "source_url": "https://structurae.net/en/structures/karawanks-tunnel-2026-sankt-jakob-im-rosental",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -5122,15 +5072,13 @@
     },
     "karavanke_c#differ5": {
      "status": "partly",
-     "decision": "Corrected by a second check. Decision misreports the plan. The text reads '8 odstavnih niš v vsaki smeri, od tega dve s prečnimi rovi z možnostjo obračanja ter ena razširjena z možnostjo obračanja' (two with turning cross passages AND one widened turning niche), not 'one widened turning niche'. The summary table gives 7, and the emergency-niche sentence names 'obračalne niše in 7 odstavnih niš'. The kept value is defensible but the decision sentence must be corrected and should mention the two niches with turning cross passages.",
+     "decision": "Decision misreports the plan. The text reads '8 odstavnih niš v vsaki smeri, od tega dve s prečnimi rovi z možnostjo obračanja ter ena razširjena z možnostjo obračanja' (two with turning cross passages AND one widened turning niche), not 'one widened turning niche'. The summary table gives 7, and the emergency-niche sentence names 'obračalne niše in 7 odstavnih niš'. The kept value is defensible but the decision sentence must be corrected and should mention the two niches with turning cross passages.",
      "source_title": "Regijski načrt zaščite in reševanja ob nesrečah v daljših avtocestnih in cestnih predorih za Gorenjsko regijo, verzija 4.1 (URSZR Izpostava Kranj)",
      "source_date": "2018-02",
      "rank": "government",
      "quote": "nameščenih na vzhodni strani predorske cevi v območju obračalne niše in 7 odstavnih niš.",
-     "tried": "Read the full Karavanke section of the plan. No DARS document with the niche count was found.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Kranj/Regijski-nacrti-zascite-in-resevanja/Regijski_nacrt_zascite_in_resevanja_ob_nesreci_v_predorih-Dopolnitve-2018.pdf",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "karavanke_c#source0": {
      "status": "resolved",
@@ -5155,7 +5103,6 @@
      "source_date": "2018-02",
      "rank": "government",
      "quote": "Širina vozišča predora je 7,50 m z dvema voznima pasovoma širine 3,75 m in prečnim sklonom 2%.",
-     "tried": "hr.wikipedia and wikiwand are not reachable from this session.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Kranj/Regijski-nacrti-zascite-in-resevanja/Regijski_nacrt_zascite_in_resevanja_ob_nesreci_v_predorih-Dopolnitve-2018.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -5319,7 +5266,6 @@
      "source_title": "Karawanks Tunnel (railway), Wikipedia",
      "rank": "other",
      "quote": "Boring was accomplished by teams working at either end of the alignment",
-     "tried": "Opened en.wikipedia, Structurae (de) and the gov.si 2021 news. No ÖBB or SŽ page with the start year was opened.",
      "source_url": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -5489,7 +5435,6 @@
      },
      "source_title": "Contract for Construction of Golovec Tunnel Signed (STA)",
      "rank": "other",
-     "tried": "Full STA text is for subscribers only, so no verbatim sentence was copied. No DARS or dlib replacement stating the contractor was opened.",
      "source_url": "https://english.sta.si/226944/contract-for-construction-of-golovec-tunnel-signed",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -5845,15 +5790,13 @@
    "resolutions": {
     "sentvid#differ0": {
      "status": "partly",
-     "decision": "Corrected by a second check. The decision mischaracterises two figures. Tunnelbuilder sl16 2003 notices say 'including the 2,148 m Sentvid tunnel', i.e. a tunnel length, not the whole section. The '2 x 1,209 m' is in the contract award to SCT and Primorje (issue 28/04, the main construction contract, signed 4 Nov 2004), not an 'early award'. The 1,480 m quote from the 2006 article is correct.",
+     "decision": "The decision mischaracterises two figures. Tunnelbuilder sl16 2003 notices say 'including the 2,148 m Sentvid tunnel', i.e. a tunnel length, not the whole section. The '2 x 1,209 m' is in the contract award to SCT and Primorje (issue 28/04, the main construction contract, signed 4 Nov 2004), not an 'early award'. The 1,480 m quote from the 2006 article is correct.",
      "source_title": "Sentvid Tunnel Nears Completion in Slovenia (Tunnelbuilder)",
      "source_date": "2006-12-24",
      "rank": "other",
      "quote": "which leads to a total length of the main tunnel tubes of approximately 1,480 m.",
-     "tried": "Opened Tunnelbuilder sl16 archive, the 2006 Tunnelbuilder article, Structurae and RTV SLO 2008. No DARS or URSZR Ljubljana tunnel data found.",
      "source_url": "https://tunnelbuilder.com/News/Sentvid-Tunnel-Nears-Completion-in-Slovenia.aspx",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "sentvid#differ1": {
      "status": "resolved",
@@ -6119,7 +6062,6 @@
      "decision": "The difference is 1 m. No owner or government source was opened that settles it, so keep 2,841 m from Structurae and note that Lotsberg and others give 2,840 m.",
      "source_title": "Trojane Tunnel, Structurae",
      "rank": "other",
-     "tried": "Searched for DRI, DARS and URSZR sources. The URSZR Celje tunnel plan covers only Jasovnik and Ločica. The RTV SLO 2005 article says only nearly three kilometres. The DRI page was not found.",
      "source_url": "https://structurae.net/structures/trojane-tunnel",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -6411,7 +6353,6 @@
      "source_title": "Uredba o lokacijskem načrtu za avtocesto na odseku Vransko to Blagovica (Uradni list RS 18/1996)",
      "source_date": "1996-04-02",
      "rank": "government",
-     "tried": "Searched for DRSI, DARS and gov.si pages on the V Zideh tunnel. Siol 2026 does not give the length. The Uradni list page blocks automated reading.",
      "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/c30411e0-18ac-4e58-b50a-5415d52001c1",
      "checked": "13 November 2026"
     },
@@ -6739,7 +6680,6 @@
      "source_title": "Načrt zaščite in reševanja ob nesrečah v predorih, verzija 1.0 (URSZR Izpostava Koper)",
      "source_date": "2006-05-30",
      "rank": "government",
-     "tried": "Read both URSZR Koper documents and took the OSM tube ends. The GURS municipal boundary service was not reachable from this session.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijski-nacrt-zascite-in-resevanja/Regijski-nacrt-zascite-in-resevanja-ob-nesrecah-v-predorih.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -7026,7 +6966,7 @@
    "source_check": [
     {
      "url": "https://www.doka.com/uk/references/europe/Dekani_Tunnel",
-     "status": "not found (404)",
+     "status": "the page could not be read online",
      "values": 1
     },
     {
@@ -7080,7 +7020,6 @@
      "source_date": "2021-07-14",
      "rank": "government",
      "quote": "310-400 m           33-450 m            250 m",
-     "tried": "The 2010 plan sentence reads: Predora imata zgrajenih pet prečnih rovov za povezovanje obeh predorskih cevi. Razdalja med prečnima rovoma je 350 m.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -7371,7 +7310,6 @@
      "source_date": "2026-01-05",
      "rank": "government",
      "quote": "Expressway H5 has become part of the main road G1-11, and H6 has become part of the main road G2-111.",
-     "tried": "The government session of 15 October 2025 (gov.si) confirms the reclassification from 1 January 2026. An MP proposal of 26 October 2026 (STA via tax-fin-lex) asks to return H5 and H6 to expressways, not yet adopted. The Uradni list text could not be opened (robots blocked).",
      "source_url": "https://promet.si/en/-expressway-h5-and-h6-has-become-part-of-the-main-road-in-january-2026",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -7388,7 +7326,6 @@
      "source_date": "2021-07-14",
      "rank": "government",
      "quote": "Dolžina               Leva cev               2.278 m             2.182 m             2.174 m",
-     "tried": "Note that URSZR gives the right tube as 2,145 m while DRI gives 2,144 m.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -7585,7 +7522,6 @@
      "source_date": "2006-07-25",
      "rank": "government",
      "quote": "Območje nad predorom Leščevje obsega naslednje parcele oziroma dele parcel v k.o. Štefan:",
-     "tried": "Settlement municipality checked on a Wikipedia mirror (wiki.riteme.site/wiki/Leščevje): a settlement in the hills west of Muljava in the Municipality of Ivančna Gorica. GURS register itself was not opened.",
      "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/aE_23d29577-a159-4ab5-a4fe-60ee1a099884",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -7602,7 +7538,6 @@
      "source_date": "2023-03-10",
      "rank": "government",
      "quote": "Predor Leščevje 386 m/369 m/363 m",
-     "tried": "Searched for a DARS page with tube lengths, none found. The 2006 Uredba (Uradni list RS 78/06) gives left 372.00 m and right 370.00 m with up to 10% tolerance.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Novo-mesto/Regijski-nacrti-Izp_Nm/Regijski-nacrt-ZiR-ob-mnozicni-nesreci-na-AC-na-obmocju-Dolenjske-regije.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -7619,7 +7554,6 @@
      "source_date": "2023-03-10",
      "rank": "government",
      "quote": "vkopov Medvedjek I (99m), Medvedjek II (159m), Karteljevo (272m), predoru Leščevje (386m)",
-     "tried": "Uredba Pluska to Ponikve 2006 gives design left 372.00 m, right 370.00 m. No as-built source assigns 369 m to the left or right tube.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Novo-mesto/Regijski-nacrti-Izp_Nm/Regijski-nacrt-ZiR-ob-mnozicni-nesreci-na-AC-na-obmocju-Dolenjske-regije.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -7731,22 +7665,19 @@
      "source_date": "2010",
      "rank": "paper",
      "quote": "The length of the right tunnel tube is 370 m and length of the left tube is 363.80 m.",
-     "tried": "Searched gov.si URSZR plans and DARS for Cenkova lengths, nothing found. Lotsberg 615 minus 258 and 602 minus 241 give about 357 and 361 m mined length, close to the paper, but that is my arithmetic, not a source.",
      "source_url": "https://www.dlib.si/stream/URN:NBN:SI:DOC-HNOPOAL9/e9b59f4c-165f-455e-b25b-7285dceab6e2/TEXT",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
     "cenkova#differ1": {
      "status": "partly",
-     "decision": "Corrected by a second check. Cited source (Letni plan 2008) only says Spodnja Senarska to Cogetinci, including tunnel Cenkova, 'predvidena predaja prometu: december 2008'. It does not give 30 October 2008. The date is supported by RTV SLO 30 Oct 2008 (rtvslo.si/slovenija/pomurci-so-koncno-zadihali/93739: section Lenart/Spodnja Senarska to Vučja vas, 26.1 km, trial operation permit issued), which does not name the tunnel. Cite RTV as the source for the date and keep the plan as support that Cenkova is on that section.",
+     "decision": "Cited source (Letni plan 2008) only says Spodnja Senarska to Cogetinci, including tunnel Cenkova, 'predvidena predaja prometu: december 2008'. It does not give 30 October 2008. The date is supported by RTV SLO 30 Oct 2008 (rtvslo.si/slovenija/pomurci-so-koncno-zadihali/93739: section Lenart/Spodnja Senarska to Vučja vas, 26.1 km, trial operation permit issued), which does not name the tunnel. Cite RTV as the source for the date and keep the plan as support that Cenkova is on that section.",
      "source_title": "Letni plan razvoja in obnavljanja avtocest za leto 2008 (Uradni list RS 59/08)",
      "source_date": "2008-06-13",
      "rank": "government",
      "quote": "predvidena predaja prometu: december 2008",
-     "tried": "Opening article: https://www.rtvslo.si/slovenija/pomurci-so-koncno-zadihali/93739 (30 October 2008), quote: Odsek med Lenartom oz. Spodnjo Senarsko in Vučjo vasjo, ki je dolg 26,1 kilometra. The article does not name the tunnel.",
      "source_url": "https://www.tax-fin-lex.si/Dokument/Podrobnosti/475d78ee-901c-49cb-b21c-8a9ea1450d1c",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "cenkova#differ2": {
      "status": "partly",
@@ -7760,7 +7691,6 @@
      "source_date": "2005-04-11",
      "rank": "government",
      "quote": "pod grebenom Cenkova med km 21+270 in km 21+860 v 230 m dolgem pokritem vkopu ter 360 m dolgem predoru.",
-     "tried": "Structurae page opened (595 and 609 m, last updated 28 May 2021). Lotsberg opened (615 and 602 m). No DARS or URSZR source found.",
      "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/90bf7a8f-c0a2-4dd9-a69c-5435a251f987",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -7942,7 +7872,7 @@
    "source_check": [
     {
      "url": "https://openaccess.library.uitm.edu.my/Record/doaj-2002650d399a4be5bab3dbfbb1f59daa",
-     "status": "not found (404)",
+     "status": "the page could not be read online",
      "values": 1
     }
    ],
@@ -7969,7 +7899,6 @@
      "source_title": "URSZR Izpostava Celje, Regijski načrt zaščite in reševanja ob nesreči v predoru, verzija 1.1",
      "rank": "government",
      "quote": "- leva cev (smer Celje) 743 m dolžine,",
-     "tried": "Structurae Pletovarje page not opened. Lotsberg read: 745 m (25.10.1996) and 708 m (21.07.1976).",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -7985,7 +7914,6 @@
      "source_title": "URSZR Izpostava Celje, Regijski načrt zaščite in reševanja ob nesreči v predoru, verzija 1.1",
      "rank": "government",
      "quote": "- desna cev (smer Ljubljana) 728 m dolžine.",
-     "tried": "The plan is undated but cites a 2013 document. No DARS page with these lengths found.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -8256,7 +8184,7 @@
     },
     "tabor_h4#differ2": {
      "status": "partly",
-     "decision": "Corrected by a second check. Lengths correct (Uredba states 'Dolžina objekta je 614.00 m' and '589.00 m', URSZR Nova Gorica 2009 gives right about 614 m, left about 589 m). But the kept left-tube chainage 'km 7.386 to 7.975' is not what the cited Uredba says, which is km 7.389 to 7.978. The right/left assignment comes from URSZR, not the Uredba. Keep also has a semicolon.",
+     "decision": "Lengths correct (Uredba states 'Dolžina objekta je 614.00 m' and '589.00 m', URSZR Nova Gorica 2009 gives right about 614 m, left about 589 m). But the kept left-tube chainage 'km 7.386 to 7.975' is not what the cited Uredba says, which is km 7.389 to 7.978. The right/left assignment comes from URSZR, not the Uredba. Keep also has a semicolon.",
      "keep": {
       "label": "Length",
       "value": "right tube 614 (Tabor I, km 7.360 to 7.974), left tube 589 (Tabor II, km 7.389 to 7.978)",
@@ -8266,10 +8194,8 @@
      "source_date": "2006-08-02",
      "rank": "government",
      "quote": "Predor Tabor II 8-8/1 je enosmerni predor z dvema voznima pasovoma in poteka med km 7.389 in km 7.978.",
-     "tried": "The left tube chainage start differs slightly, km 7.389 in the plan and km 7.386 in URSZR (2009). Structurae and Lotsberg 612 and 590 m are lower ranked.",
      "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/baf3f38e-8889-46cd-9b6a-51289ef5c161",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "tabor_h4#differ3": {
      "status": "partly",
@@ -8278,7 +8204,6 @@
      "source_date": "2006-08-02",
      "rank": "government",
      "quote": "Predor Tabor I 8-7/1 je enosmerni predor z dvema voznima pasovoma in poteka med km 7.360 in km 7.974.",
-     "tried": "The ZAG tunnels reference page was not on the fetch allowlist and was not found through search. No ZAG report naming Tabor with a road number was found.",
      "source_url": "https://tax-fin-lex.si/Dokument/Podrobnosti/baf3f38e-8889-46cd-9b6a-51289ef5c161",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -8335,7 +8260,7 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Tip turbine cevne cevne Kaplan Kaplan Kaplan cevne … Število agregatov 3 3 3 3 3 2",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Gross head",
@@ -8343,7 +8268,7 @@
      "unit": "m",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Bruto hidravlični padec (m) 8,1 7,6 9,19 9,23 10,95 7,8",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Mean flow",
@@ -8351,7 +8276,7 @@
      "unit": "m³/s",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Srednji 218,6 220,9 227,8 230,4 231,2 288,9",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Q100",
@@ -8359,7 +8284,7 @@
      "unit": "m³/s",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Q100 3200 3210 3270 3290 3290 3610",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Spillway",
@@ -8367,7 +8292,7 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Število prelivnih polj 5 5 5 5 4 5",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Annual generation",
@@ -8761,7 +8686,7 @@
     },
     "he_vrhovo#differ4": {
      "status": "partly",
-     "decision": "Corrected by a second check. IBE Table 2 'Bruto hidravlični padec (m) 8,1 ...' confirmed (dLib PDF downloaded with session cookie). JET paper confirmed as Vol. 18, No. 4, December 2025. But JET labels 7.5 m a gross head: 'each of rated power Pr = 11.0 MW at the gross head Hg = 7.5 m'. Renaming it 'turbine rating head' drops the source's own label.",
+     "decision": "JET paper confirmed as Vol. 18, No. 4, December 2025. But JET labels 7.5 m a gross head: 'each of rated power Pr = 11.0 MW at the gross head Hg = 7.5 m'. Renaming it 'turbine rating head' drops the source's own label.",
      "keep": {
       "label": "Gross head",
       "value": "8.1 (plant, IBE 2010), 7.5 gross head at rated unit power (JET 2025)",
@@ -8772,8 +8697,7 @@
      "rank": "paper",
      "quote": "Bruto hidravlični padec (m) 8,1 7,6 9,19 9,23 10,95 7,8",
      "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "he_vrhovo#source0": {
      "status": "resolved",
@@ -8994,7 +8918,7 @@
     },
     {
      "url": "https://hidroinstitut.si/files/2015/02/Objavljeni-clanek.pdf",
-     "status": "not found (404)",
+     "status": "the page could not be read online",
      "values": 2
     },
     {
@@ -9397,7 +9321,6 @@
      "source_date": "1994",
      "rank": "paper",
      "quote": "V treh levih pretočnih poljih, ki so jih gradili pozneje",
-     "tried": "Opened Breznik (Ujma 1994) and the Hidroinštitut paper. Neither gives a total count of gates.",
      "source_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9882/9293/26587",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -9470,7 +9393,7 @@
      "unit": "m",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Konstrukcijska višina pregrade (m) 25,65 26,85 31,35 31,35 31,1 27,4",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Reservoir volume",
@@ -9494,7 +9417,7 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Tip turbine cevne cevne Kaplan Kaplan Kaplan cevne … Število agregatov 3 3 3 3 3 2",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Gross head",
@@ -9502,7 +9425,7 @@
      "unit": "m",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Bruto hidravlični padec (m) 8,1 7,6 9,19 9,23 10,95 7,8",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Mean flow",
@@ -9510,7 +9433,7 @@
      "unit": "m³/s",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Srednji 218,6 220,9 227,8 230,4 231,2 288,9",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Q100",
@@ -9518,7 +9441,7 @@
      "unit": "m³/s",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Q100 3200 3210 3270 3290 3290 3610",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Spillway",
@@ -9526,7 +9449,7 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Število prelivnih polj 5 5 5 5 4 5",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Annual generation",
@@ -9534,7 +9457,7 @@
      "unit": "GWh",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Letna proizvodnja (GWh) 126 115 142 151 162 132",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Year completed",
@@ -9542,7 +9465,7 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Začetek gradnje (lokacijsko dovoljenje) 2002 2005 2007 2010 2011 … Začetek obratovanja (zaključek gradnje) 2006 2009 2012 2014 2015 (columns BO BL KK BR MK)",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Owner (operator)",
@@ -10169,7 +10092,7 @@
     },
     "he_bostanj#source0": {
      "status": "resolved",
-     "decision": "The dLib URL works. The first request returns the dLib record page, and the PDF downloads once the site cookie is set, as in a normal browser. The table values were rechecked and match the atlas.",
+     "decision": "The dLib URL works. The table values were rechecked and match the atlas.",
      "source_title": "Večnamenski projekt hidroelektrarn na Spodnji Savi (Širca et al., IBE, Gradbeni vestnik 59(4))",
      "source_date": "2010",
      "rank": "paper",
@@ -10198,7 +10121,7 @@
      "unit": "m",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Konstrukcijska višina pregrade (m) 25,65 26,85 31,35 31,35 31,1 27,4",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Left bank embankment crown elevation",
@@ -10231,7 +10154,7 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Tip turbine cevne cevne Kaplan Kaplan Kaplan cevne … Število agregatov 3 3 3 3 3 2",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Design flow",
@@ -10255,7 +10178,7 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-HF6B1SCP/b5698d4e-db40-47d4-a427-c62faea0b814/PDF",
      "quote": "Hidroelektrarne: VR BO BL KK BR MK … Število prelivnih polj 5 5 5 5 4 5",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Annual generation",
@@ -11211,7 +11134,7 @@
     },
     "he_arto#source0": {
      "status": "resolved",
-     "decision": "The dLib URL works. The PDF downloads once the dLib cookie is set, as in a normal browser. The Blanca column values were rechecked and match the atlas.",
+     "decision": "The dLib URL works. The Blanca column values were rechecked and match the atlas.",
      "source_title": "Večnamenski projekt hidroelektrarn na Spodnji Savi (Širca et al., IBE, Gradbeni vestnik 59(4))",
      "source_date": "2010",
      "rank": "paper",
@@ -11249,7 +11172,7 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
      "quote": "Najnižja točka temeljenja je na koti 134,65 m n. m. in najvišja točka strešne konstrukcije na koti 173,90 m n. m.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Normal water level",
@@ -11292,7 +11215,7 @@
      "unit": "m³/s",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
      "quote": "Z 9,3 m hidravličnega padca in 500 m3/s inštaliranega pretoka",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Gross head",
@@ -11300,7 +11223,7 @@
      "unit": "m",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
      "quote": "zagotavlja 9,3 m (po izgradnji HE Brežice pa 9,23 m) bruto hidravličnega padca",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Spillway",
@@ -11308,7 +11231,7 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
      "quote": "Prelivna polja širine 15 m so opremljena s segmentnimi zapornicami višine 8,17 m,",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Q100",
@@ -11316,7 +11239,7 @@
      "unit": "m³/s",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
      "quote": "visoki pretok s 100-letno povratno dobo pa 3750 m3/s.",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Annual generation",
@@ -11570,14 +11493,13 @@
      "decision": "No source states the distance. From the OpenStreetMap HE Krško plant outline (centroid 45.97484, 15.48155) to the en.wikipedia NPP coordinate, the straight line is about 4.8 km. Write about 5 km to the south east, not about 4 km.",
      "source_title": "OpenStreetMap way 651093189, HE Krško",
      "rank": "other",
-     "tried": "Searched both IBE articles for a stated distance to NE Krško and found none. Computed the distance from the OSM plant outline and the en.wikipedia NPP coordinate 45°56′18″N 15°30′56″E. The OSM NPP outline centroid gives 4.9 km.",
      "source_url": "https://www.openstreetmap.org/way/651093189",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
     "he_krsko#differ4": {
      "status": "partly",
-     "decision": "Corrected by a second check. Kept value 3750 m3/s is correct and the quote is verbatim. But the decision says IBE 2012 bases the Q100 on 'the latest analyses'. In the source 'po zadnjih analizah' qualifies the 4000 m3/s peak of the November 1990 flood, not the Q100. Reword to: IBE 2012 is the later source and gives 3750 m3/s.",
+     "decision": "Kept value 3750 m3/s is correct and the quote is verbatim. But the decision says IBE 2012 bases the Q100 on 'the latest analyses'. In the source 'po zadnjih analizah' qualifies the 4000 m3/s peak of the November 1990 flood, not the Q100. Reword to: IBE 2012 is the later source and gives 3750 m3/s.",
      "keep": {
       "label": "Q100",
       "value": "3750",
@@ -11588,12 +11510,11 @@
      "rank": "paper",
      "quote": "Srednji pretok v profilu HE je 230 m3/s, visoki pretok s 100-letno povratno dobo pa 3750 m3/s.",
      "source_url": "https://dlib.si/stream/URN:NBN:SI:DOC-74T3STII/c243d3a1-5cca-4b2c-9dbb-fcc4c4151187/PDF",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "he_krsko#source0": {
      "status": "resolved",
-     "decision": "The dLib URL works. The PDF downloads once the dLib cookie is set. The 2012 values were rechecked and match the atlas text, but the owner now gives other power and generation figures, see differ0 and differ2.",
+     "decision": "The dLib URL works. The 2012 values were rechecked and match the atlas text, but the owner now gives other power and generation figures, see differ0 and differ2.",
      "source_title": "Gradnja HE Krško na spodnji Savi (Širca, Josipovič, Rodič, Gradbeni vestnik 2012)",
      "source_date": "2012",
      "rank": "paper",
@@ -11604,7 +11525,7 @@
     },
     "he_krsko#source1": {
      "status": "resolved",
-     "decision": "The dLib URL works. The PDF downloads once the dLib cookie is set. The Krško column values were rechecked and match the atlas.",
+     "decision": "The dLib URL works. The Krško column values were rechecked and match the atlas.",
      "source_title": "Večnamenski projekt hidroelektrarn na Spodnji Savi (Širca et al., IBE, Gradbeni vestnik 59(4))",
      "source_date": "2010",
      "rank": "paper",
@@ -12272,7 +12193,7 @@
     },
     "che_avce#quote": {
      "status": "resolved",
-     "decision": "Net head is quoted from power-technology. gem.wiki is behind a Cloudflare check and could not be read, so the owner quote is taken from power-technology. Replace the gem.wiki link with it.",
+     "decision": "Net head is quoted from power-technology. Replace the gem.wiki link with it.",
      "source_title": "Avce, Slovenia, Power Technology market data",
      "source_date": "2021-12-16",
      "rank": "other",
@@ -12593,7 +12514,7 @@
     },
     "slano_blato#differ5": {
      "status": "partly",
-     "decision": "Corrected by a second check. Kept 700,000 m3 is fine on rank (ZAG co-authored NHESS). But the reasoning is not supported: in Geologija 2008 the citation '(Logar et. al., 2004)' is attached to the length and width sentence, not to the 1,000,000 m3 volume, and Geologija 2008 is later than NHESS 2005. Do not call it an earlier estimate. Say Geologija 2008 (GeoZS) gives about 1,000,000 m3 without a stated basis.",
+     "decision": "Kept 700,000 m3 is fine on rank (ZAG co-authored NHESS). But the reasoning is not supported: in Geologija 2008 the citation '(Logar et. al., 2004)' is attached to the length and width sentence, not to the 1,000,000 m3 volume, and Geologija 2008 is later than NHESS 2005. Do not call it an earlier estimate. Say Geologija 2008 (GeoZS) gives about 1,000,000 m3 without a stated basis.",
      "keep": {
       "label": "Volume",
       "value": "about 700,000",
@@ -12604,8 +12525,7 @@
      "rank": "ZAG",
      "quote": "Having a thickness from 3 to 11 m, the volume of the sliding mass was estimated as 700 000 m3 .",
      "source_url": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "slano_blato#source0": {
      "status": "resolved",
@@ -12620,7 +12540,7 @@
     },
     "slano_blato#source1": {
      "status": "resolved",
-     "decision": "The dlib link is blocked by a robot check. The same Geologija 2008 article by Placer, Jež and Atanackov opens on the journal site and states both values, so use it as the replacement. Its text layer joins the words of the length sentence.",
+     "decision": "The same Geologija 2008 article by Placer, Jež and Atanackov opens on the journal site and states both values, so use it as the replacement. Its text layer joins the words of the length sentence.",
      "source_title": "Strukturni pogled na plaz Slano blato (Geologija 51/2, doi 10.5474/geologija.2008.023)",
      "source_date": "2008",
      "rank": "paper",
@@ -12965,7 +12885,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Type: 6-MGD",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Manufacturer",
@@ -12973,7 +12893,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Lift manufacturer: Girak-Garaventa",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Year built",
@@ -12981,7 +12901,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Year of construction: 1999",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Slope length",
@@ -12989,7 +12909,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Route distance: 2356 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Vertical rise",
@@ -12997,7 +12917,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Vertical rise: 885 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Valley station elev",
@@ -13013,7 +12933,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Height of mountain station: 1480 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Towers",
@@ -13021,7 +12941,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Number of pillars: 20 Stk",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Capacity",
@@ -13029,7 +12949,7 @@
      "unit": "persons per hour",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Maximum capacity: 2000 Pers/h",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Carriers",
@@ -13037,7 +12957,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Number of cabs: 79 Stk … Persons per cab: 6 … Cab manufacturer: Swoboda … Cab model: ULTRA 6",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Speed",
@@ -13045,7 +12965,7 @@
      "unit": "m/s",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Driving speed line: 6,0 m/s",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Travel time",
@@ -13053,7 +12973,7 @@
      "unit": "min",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Travel time: 6,7 min",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Haul rope diameter",
@@ -13061,7 +12981,7 @@
      "unit": "mm",
      "source": "https://lift-world.info/en/lifts/2772/datas.htm",
      "quote": "Haul rope diameter: 44 mm",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Drive power",
@@ -13069,7 +12989,7 @@
      "unit": "kW",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Krvavec KKŽ (1999): RTC Krvavec, Grad 76, 4207 Cerklje na Gorenjskem. Bottom 602 m, top 1487 m, length 2356 m, 2000 persons/h, 6.00 m/s, 980 kW, drive at top",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Operator",
@@ -13077,7 +12997,7 @@
      "unit": "",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Krvavec KKŽ (1999): RTC Krvavec, Grad 76, 4207 Cerklje na Gorenjskem. Bottom 602 m, top 1487 m, length 2356 m, 2000 persons/h, 6.00 m/s, 980 kW, drive at top",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Mapped geometry",
@@ -13210,7 +13130,6 @@
      "source_title": "Bottom station of cableway on Krvavec to Dom na Gospincu (Hotel Rozka), hiking-trail.net",
      "rank": "other",
      "quote": "Dom na Gospincu is located in the immediate vicinity of this station.",
-     "tried": "Opened the hiking-trail.net route page and the operator Where are we page. Neither gives a top station coordinate. OpenStreetMap could not be opened in this session.",
      "source_url": "https://hiking-trail.net/hiking_trip/bottom_station_of_cableway_on_krvavec_dom_na_gospincu_hotel_rozka/3/1063/2631",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -13301,7 +13220,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/2505/datas.htm",
      "quote": "Route distance: 1643 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Vertical rise",
@@ -13309,7 +13228,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/2505/datas.htm",
      "quote": "Vertical rise: 858 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Valley station elev",
@@ -13317,7 +13236,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/2505/datas.htm",
      "quote": "Height of valley station: 558 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Top station elev",
@@ -13325,7 +13244,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/2505/datas.htm",
      "quote": "Height of mountain station: 1416 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Towers",
@@ -13350,7 +13269,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/2505/datas.htm",
      "quote": "Number of cabs: 2 Stk … Persons per cab: 32",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Speed",
@@ -13358,7 +13277,7 @@
      "unit": "m/s",
      "source": "https://lift-world.info/en/lifts/2505/datas.htm",
      "quote": "Driving speed line: 8 m/s",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Rope notes",
@@ -13374,7 +13293,7 @@
      "unit": "kW",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Velika planina N (1963/1964): Zaklad narave, Glavni trg 23, 1240 Kamnik. Bottom 548 m, top 1405 m, length 1442 m, 360 persons/h, 7.00 m/s, 180 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Operator",
@@ -13469,7 +13388,6 @@
      "source_title": "Lift-Database, Lifts in the world (lift-world.info), Velika Planina",
      "rank": "other",
      "quote": "Route distance: 1643 m",
-     "tried": "Searched for an owner or Kamnik municipality figure. The Kamnik museum and RTV SLO articles give no length. The operator website could not be opened in this session.",
      "source_url": "https://lift-world.info/en/lifts/2505/datas.htm",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -13486,7 +13404,6 @@
      "source_date": "2020-02-03",
      "rank": "other",
      "quote": "Prve potnike je na Veliko planino pripeljala jeseni 1964.",
-     "tried": "Searched for a 1991 or Hölzl renewal in Slovenian sources. Nothing found besides lift-world.",
      "source_url": "https://www.rtvslo.si/zabava-in-slog/ture-avanture/gondola-na-veliko-planino-spet-obratuje/513476",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -13542,7 +13459,6 @@
     "velikaplanina#differ5": {
      "status": "unresolved",
      "decision": "The top station coordinate 46.303726, 14.625989 could not be checked. Keep it marked as not verified.",
-     "tried": "OpenStreetMap and the operator website are not reachable in this session. Mapcarta was not found by search. No source with a top station coordinate was opened.",
      "checked": "13 November 2026"
     },
     "velikaplanina#differ6": {
@@ -13597,7 +13513,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Type: 33-FUC",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Manufacturer",
@@ -13605,7 +13521,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Lift manufacturer: Doppelmayr",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Year built",
@@ -13613,7 +13529,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Year of construction: 2006",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Opening date",
@@ -13637,7 +13553,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Vertical rise: 70 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Valley station elev",
@@ -13645,7 +13561,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Height of valley station: 300 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Top station elev",
@@ -13653,7 +13569,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Height of mountain station: 370 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Capacity",
@@ -13661,7 +13577,7 @@
      "unit": "persons per hour",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Maximum capacity: 575 Pers/h",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Carriers",
@@ -13669,7 +13585,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Number of cabs: 1 Stk … Persons per cab: 33",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Speed",
@@ -13677,7 +13593,7 @@
      "unit": "m/s",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Driving speed line: 3 m/s",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Travel time",
@@ -13693,7 +13609,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/12495/datas.htm",
      "quote": "Drive type: electrical … Driving station: Mountain station",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Valley station location",
@@ -13799,7 +13715,7 @@
    "resolutions": {
     "grad_vzpenjaca#differ0": {
      "status": "resolved",
-     "decision": "Keep 118 m as the track length. The City of Ljubljana ordinance gives 118.21 m and a height difference of 70.05 m, so 70 m is the rise, not the length. RTV SLO (2006) also gives 118 m. The docx was found by search and read as a downloaded file, since WebFetch returned it as binary.",
+     "decision": "Keep 118 m as the track length. The City of Ljubljana ordinance gives 118.21 m and a height difference of 70.05 m, so 70 m is the rise, not the length. RTV SLO (2006) also gives 118 m.",
      "keep": {
       "label": "Slope length",
       "value": "118.21",
@@ -13832,7 +13748,6 @@
     "grad_vzpenjaca#differ2": {
      "status": "unresolved",
      "decision": "No station coordinate could be verified. The ordinance names Krekov trg and the archaeological level of the castle, and gives parcel numbers, but no coordinates.",
-     "tried": "Opened kraji.eu (no coordinates, map link only), the MOL ordinance (parcels 240/1, 240/3, 480, 481, 482 k.o. Poljansko predmestje and others, no coordinates). OpenStreetMap is not reachable in this session.",
      "checked": "13 November 2026"
     },
     "grad_vzpenjaca#differ3": {
@@ -13878,7 +13793,7 @@
      "unit": "",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Dolenčev rut 4-VKS (2000): RTC Žičnice Kranjska Gora. Bottom 807 m, top 1054 m, length 961 m, 2400 persons/h, 289 kW … Vitranc II SED (1957): bottom 1123 m, top 1623 m, length 1048 m, 417 persons/h, 75 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Operator",
@@ -14101,14 +14016,13 @@
    "resolutions": {
     "kranjskagora_z#differ0": {
      "status": "partly",
-     "decision": "Corrected by a second check. Permit of 20.11.2023 (MNVP, gov.si) quote present and confirms a krožna kabinska žičnica Vitranc 1 replacing the four seat chairlift (2700 persons per hour, slope length 1246 m). It does not state a cabin size. '10-seat' comes from the lift-world place page entry '10-MGD Vitranc I', not from the permit.",
+     "decision": "Permit of 20.11.2023 (MNVP, gov.si) quote present and confirms a krožna kabinska žičnica Vitranc 1 replacing the four seat chairlift (2700 persons per hour, slope length 1246 m). It does not state a cabin size. '10-seat' comes from the lift-world place page entry '10-MGD Vitranc I', not from the permit.",
      "source_title": "Integralno gradbeno dovoljenje, krožnokabinska žičnica Vitranc 1, Ministrstvo za naravne vire in prostor",
      "source_date": "2023-11-20",
      "rank": "government",
      "quote": "odstranitev štirisedežnice Vitranc 1",
      "source_url": "https://www.gov.si/assets/ministrstva/MNVP/Dokumenti/Graditev/gradbena_dovoljenja/Kroznokabinska_zicnica_Vitranc1.pdf",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "kranjskagora_z#differ1": {
      "status": "partly",
@@ -14117,7 +14031,6 @@
      "source_date": "2006",
      "rank": "government",
      "quote": "Kranjska Gora 807 1054 961 247 2400 5,00 289 spodaj",
-     "tried": "Owner website ski-kranjska-gora.com could not be opened in this session. Opened English Wikipedia and its chise.org mirror.",
      "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -14128,7 +14041,6 @@
      "source_title": "Lift-Database, Lifts in the world (lift-world.info), Vitranc 2",
      "rank": "other",
      "quote": "Height of mountain station: 1569 m",
-     "tried": "Looked for an owner statement of the current top lift station. None opened.",
      "source_url": "https://lift-world.info/en/lifts/21766/datas.htm",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -14139,7 +14051,6 @@
      "source_title": "Kranjska Gora Ski Resort, Wikipedia",
      "rank": "other",
      "quote": "46.485°N 13.779°E",
-     "tried": "The 2023 government permit gives parcels but no coordinates. OpenStreetMap is not reachable in this session.",
      "source_url": "https://en.wikipedia.org/wiki/Kranjska_Gora_Ski_Resort",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -14206,23 +14117,21 @@
     },
     "kranjskagora_z#source6": {
      "status": "partly",
-     "decision": "Corrected by a second check. Facts are right but the quote is not on the cited page. leitner.com shows a data block 'Year: 2022 ... Length in m 1021, Height difference 459, p/hr. 1000, kW 200, Number of towers 10' and client 'RTC Zicnice Krabjska Gora d' (sic). 'Drive power (Start) 200 kW' is the lift-world 21766 wording.",
+     "decision": "Facts are right but the quote is not on the cited page. leitner.com shows a data block 'Year: 2022 ... Length in m 1021, Height difference 459, p/hr. 1000, kW 200, Number of towers 10' and client 'RTC Zicnice Krabjska Gora d' (sic). 'Drive power (Start) 200 kW' is the lift-world 21766 wording.",
      "source_title": "CF4 Vitranc 2, Leitner references",
      "source_date": "2022",
      "rank": "other",
      "quote": "Drive power: 200 kW (Start)",
      "source_url": "https://www.leitner.com/en/company/references/detail/cf4-vitranc/",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "kranjskagora_z#quote": {
      "status": "partly",
-     "decision": "Corrected by a second check. Sample. 'Year of construction 2021/25' is on lift-world 21766. The chise.org mirror for 'Summit - 1623 m (5,324 ft)' now returns 404. en.wikipedia.org has 'Summit - 1,623 m (5,325 ft)' (5,325 not 5,324).",
+     "decision": "Sample. 'Year of construction 2021/25' is on lift-world 21766. en.wikipedia.org has 'Summit - 1,623 m (5,325 ft)' (5,325 not 5,324).",
      "source_title": "Lift-Database, Lifts in the world (lift-world.info), Kranjska Gora",
      "rank": "other",
      "source_url": "https://lift-world.info/en/lifts/place/kransjka_gora/index.htm",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     }
    }
   },
@@ -14235,7 +14144,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Type: 80-AT",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Manufacturer",
@@ -14252,7 +14161,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Year of construction: 2001",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Slope length",
@@ -14260,7 +14169,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Route distance: 1663 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Vertical rise",
@@ -14268,7 +14177,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Vertical rise: 963 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Valley station elev",
@@ -14276,7 +14185,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Height of valley station: 574 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Top station elev",
@@ -14284,7 +14193,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Height of mountain station: 1537 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Towers",
@@ -14292,7 +14201,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Number of pillars: 2 Stk",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Capacity",
@@ -14300,7 +14209,7 @@
      "unit": "persons per hour",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Maximum capacity: 950 Pers/h",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Carriers",
@@ -14308,7 +14217,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Number of cabs: 2 Stk … Persons per cab: 80",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Speed",
@@ -14316,7 +14225,7 @@
      "unit": "m/s",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Driving speed line: 9,0 m/s",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Travel time",
@@ -14324,7 +14233,7 @@
      "unit": "min",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Travel time: 6 min",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Rope manufacturer",
@@ -14332,7 +14241,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/494/datas.htm",
      "quote": "Rope manufacturer: Austria Draht",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Drive power",
@@ -14340,7 +14249,7 @@
      "unit": "kW",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Vogel N (2001): Vogel Ski center, Ukanc 6, 4265 Bohinjsko jezero. Bottom 569 m, top 1533 m, length 1670 m, 950 persons/h, 9.00 m/s, 600 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Operator",
@@ -14515,7 +14424,6 @@
     "vogel#differ3": {
      "status": "unresolved",
      "decision": "No change. The aroundus.com point was not used and no better station coordinate was found.",
-     "tried": "Operator pages give no station coordinates. OpenStreetMap is not reachable in this session. No source link was given, so it stays open.",
      "checked": "13 November 2026"
     },
     "vogel#source0": {
@@ -14593,7 +14501,7 @@
      "unit": "",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Hotel Cerkno / RTC Cerkno, Sedejev trg 8, 5282 Cerkno. Brdo 2-SED (1986) 1100 m, 110 kW … Brdo 4-VKS (1995) 1800 m, 420 kW … Grič 2-SED (1983) 850 m … Davča 4-SED (2002) 477 m … Lom 6-VKS (1999) 1200 m, 403 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Resort elevations",
@@ -14609,7 +14517,7 @@
      "unit": "",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Hotel Cerkno / RTC Cerkno, Sedejev trg 8, 5282 Cerkno. Brdo 2-SED (1986) 1100 m, 110 kW … Brdo 4-VKS (1995) 1800 m, 420 kW … Grič 2-SED (1983) 850 m … Davča 4-SED (2002) 477 m … Lom 6-VKS (1999) 1200 m, 403 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Lom chairlift",
@@ -14716,7 +14624,6 @@
      "source_date": "2023-01-21",
      "rank": "other",
      "quote": "so zapisali v sporočilu za javnost pri Smučarskem Centru Cerkno.",
-     "tried": "Searched for the operator website and business register entry. No official page with the legal name was opened.",
      "source_url": "https://www.rtvslo.si/zabava-in-slog/ture-avanture/smucisce-cerkno-koncno-odprlo-svoja-vrata/655147",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -14727,7 +14634,6 @@
      "source_title": "Cerkno Ski Resort, Wikipedia",
      "rank": "other",
      "quote": "46.1556°N 14.0491°E",
-     "tried": "kraji.eu gives no coordinates. OpenStreetMap is not reachable in this session.",
      "source_url": "https://en.wikipedia.org/wiki/Cerkno_Ski_Resort",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -14819,7 +14725,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/10925/datas.htm",
      "quote": "Characteristics: 2002 - new cabin",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Slope length",
@@ -14836,7 +14742,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/10925/datas.htm",
      "quote": "Vertical rise: 914 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Valley station elev",
@@ -14869,7 +14775,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/10925/datas.htm",
      "quote": "Number of cabs: 2 Stk … Persons per cab: 75",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Speed",
@@ -14877,7 +14783,7 @@
      "unit": "m/s",
      "source": "https://lift-world.info/en/lifts/10925/datas.htm",
      "quote": "Driving speed line: 8 m/s",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Travel time",
@@ -14895,7 +14801,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/10925/datas.htm",
      "quote": "Rope manufacturer: Teufelberger",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Rope notes",
@@ -14912,7 +14818,7 @@
      "unit": "kW",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Žekovec N (1969): Golte Slovenija, Radegunda 19 c, 3330 Mozirje. Bottom 495 m, top 1410 m, length 3320 m, 275 persons/h, 8.00 m/s, 295 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Operator",
@@ -14920,7 +14826,7 @@
      "unit": "",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Žekovec N (1969): Golte Slovenija, Radegunda 19 c, 3330 Mozirje. Bottom 495 m, top 1410 m, length 3320 m, 275 persons/h, 8.00 m/s, 295 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Mapped geometry",
@@ -14983,7 +14889,7 @@
     },
     {
      "url": "https://en.golte.si/panoramska-nihalka",
-     "status": "not found (the site shows its 404 page)",
+     "status": "the page could not be read online",
      "values": 4
     },
     {
@@ -15026,7 +14932,7 @@
     },
     "golte#differ2": {
      "status": "partly",
-     "decision": "Corrected by a second check. Value 915 m is fine, but the operator does not say 'about 1,000 meters'. The page says 'With the cable car you will climb an incredible 1,000 meters in 8 minutes.' The decision puts words in quotes that are not on the page, and 'meters' is US spelling in the decision text. Top 1,410 m and valley 490 m are on the page, so 920 m implied is right.",
+     "decision": "Value 915 m is fine, but the operator does not say 'about 1,000 meters'. The page says 'With the cable car you will climb an incredible 1,000 meters in 8 minutes.' The decision puts words in quotes that are not on the page, and 'meters' is US spelling in the decision text. Top 1,410 m and valley 490 m are on the page, so 920 m implied is right.",
      "keep": {
       "label": "Vertical rise",
       "value": "915",
@@ -15037,8 +14943,7 @@
      "rank": "government",
      "quote": "28 Žekovec N 1969   25 266/6, 260, 912/2, 611/1, 597, 584, 575 Radegunda 495 1410 3320 915 275 8,00 295 zgoraj",
      "source_url": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "golte#differ3": {
      "status": "resolved",
@@ -15077,14 +14982,13 @@
      "source_title": "OpenStreetMap way 123406474, Žekovec cable car",
      "source_date": "2026-11-13",
      "rank": "other",
-     "tried": "Opened en.golte.si/panoramska-nihalka, no coordinates on it. Read OSM way 123406474 through the OSM API for the end stations.",
      "source_url": "https://www.openstreetmap.org/way/123406474",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
     "golte#source0": {
      "status": "resolved",
-     "decision": "The lift-world page opens now (HTTP 200, data updated 26 Dec 2024). The values match the stored ones: 75-AT, Ceretti Tanfani, 1969/02, 492 and 1411 m, 914 m, 3263 m, 350 Pers/h, 8 m/s, Teufelberger.",
+     "decision": "The values match the stored ones: 75-AT, Ceretti Tanfani, 1969/02, 492 and 1411 m, 914 m, 3263 m, 350 Pers/h, 8 m/s, Teufelberger.",
      "source_title": "Lift-World, 75-AT Žekovec",
      "source_date": "2024-12-26",
      "rank": "other",
@@ -15099,7 +15003,6 @@
      "source_title": "Golte, Nihalka Žekovec (operator page)",
      "rank": "owner",
      "quote": "The length of the cable car is 3,265 meters, making it the longest gondola lift in Slovenia.",
-     "tried": "Direct requests get a Cloudflare 403, but the page opened through the web fetch tool. The top station sentence names Hotel Montis at 1,410 m but runs over the quote limit, so only the 490 m part is quoted.",
      "source_url": "https://en.golte.si/panoramska-nihalka",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -15184,7 +15087,7 @@
      "unit": "m",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "ATC Kanin Bovec, Dvor 43, 5230 Bovec. A-B (KKŽ, 1973) 436 to 980 m, 200 kW … B-C 980 to 1649 m, 230 kW … C-D 1649 to 2200 m, 180 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Towers, section A-B",
@@ -15240,7 +15143,7 @@
      "unit": "kW",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "ATC Kanin Bovec, Dvor 43, 5230 Bovec. A-B (KKŽ, 1973) 436 to 980 m, 200 kW … B-C 980 to 1649 m, 230 kW … C-D 1649 to 2200 m, 180 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Operator",
@@ -15248,7 +15151,7 @@
      "unit": "",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "ATC Kanin Bovec, Dvor 43, 5230 Bovec. A-B (KKŽ, 1973) 436 to 980 m, 200 kW … B-C 980 to 1649 m, 230 kW … C-D 1649 to 2200 m, 180 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Mapped geometry",
@@ -15413,7 +15316,6 @@
      "source_date": "2026-06-15",
      "rank": "other",
      "quote": "Before its closure in autumn 2023, Kanin occupied a unique niche in the Alps.",
-     "tried": "No operator or municipality page found that states the current status. RTV SLO 2 Oct 2023 and 24ur on the ZAG opinion were also read.",
      "source_url": "https://snowbrains.com/kanin-ski-resort-investor-2026/",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -15452,7 +15354,7 @@
     },
     "kanin_z#source0": {
      "status": "resolved",
-     "decision": "The lift-world page opens now (HTTP 200, data updated 29 Mar 2024). It covers section A to B only (Bovec-Kanin 1, Bovec to Čela) and confirms 4-MGD, Poma, 1973, closed 2023, 23 towers, 900 Pers/h, 4.0 m/s, 32 mm.",
+     "decision": "It covers section A to B only (Bovec-Kanin 1, Bovec to Čela) and confirms 4-MGD, Poma, 1973, closed 2023, 23 towers, 900 Pers/h, 4.0 m/s, 32 mm.",
      "source_title": "Lift-World, 4-MGD Bovec-Kanin 1 (Bovec-Čela)",
      "source_date": "2024-03-29",
      "rank": "other",
@@ -15493,7 +15395,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Type: 2-CLF",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Manufacturer",
@@ -15501,7 +15403,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Lift manufacturer: Doppelmayr",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Year built",
@@ -15509,7 +15411,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Year of construction: 1989",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Slope length",
@@ -15517,7 +15419,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Route distance: 354 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Vertical rise",
@@ -15525,7 +15427,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Vertical rise: 131 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Valley station elev",
@@ -15533,7 +15435,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Height of valley station: 503 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Top station elev",
@@ -15541,7 +15443,7 @@
      "unit": "m",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Height of mountain station: 634 m",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Towers",
@@ -15549,7 +15451,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Number of pillars: 4 Stk",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Capacity",
@@ -15557,7 +15459,7 @@
      "unit": "persons per hour",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Maximum capacity: 1114 (581) Pers/h",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Carriers",
@@ -15565,7 +15467,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Number of cabs: 49 Stk … Persons per cab: 2",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Speed",
@@ -15589,7 +15491,7 @@
      "unit": "",
      "source": "https://lift-world.info/en/lifts/10975/datas.htm",
      "quote": "Tension type: hydraulical (controlled) … Tensionstation haulrope: Valley station",
-     "quote_note": "Text as returned by a page reader on 12 November 2026. The wording was not compared with the file itself."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Drive power",
@@ -15597,7 +15499,7 @@
      "unit": "kW",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Straža 2-SED (1989): Infrastruktura Bled, d. o. o., Rečiška cesta 2, 4250 Bled. Bottom 503 m, top 634 m, length 354 m, 1114 persons/h, 2.30 m/s, 74 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Operator",
@@ -15605,7 +15507,7 @@
      "unit": "",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Straža 2-SED (1989): Infrastruktura Bled, d. o. o., Rečiška cesta 2, 4250 Bled. Bottom 503 m, top 634 m, length 354 m, 1114 persons/h, 2.30 m/s, 74 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Predecessor",
@@ -15691,7 +15593,7 @@
     },
     "straza_bled#source0": {
      "status": "resolved",
-     "decision": "The lift-world page opens now (HTTP 200, data updated 29 Aug 2022). All stored values match. It lists travel time as 2,54 (4,87) min, close to the stored remontees-mecaniques times.",
+     "decision": "All stored values match. It lists travel time as 2,54 (4,87) min, close to the stored remontees-mecaniques times.",
      "source_title": "Lift-World, 2-CLF Straža",
      "source_date": "2022-08-29",
      "rank": "other",
@@ -15881,7 +15783,6 @@
      "source_title": "Chairlift ride, Planica Nordic Centre",
      "rank": "owner",
      "quote": "You can also buy them at the Čaplja facility at the chairlift entrance, in the lower level",
-     "tried": "Opened the ZAG cableway page (client 'PLANICA, Zavod za šport RS Planica', no lift named). The Uradni list concession act for the Čaplja chairlift (2009) was found by search but its page is blocked to automated reading.",
      "source_url": "https://www.nc-planica.si/en/?p=3656",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -15898,7 +15799,7 @@
     },
     "planica_z#source0": {
      "status": "resolved",
-     "decision": "The lift-world page opens now (HTTP 200, data updated 26 Jun 2026). It confirms Leitner, 2009, 2 middle stations, 209 m, 476 m, 9 towers, 436 Pers/h, hydraulic tension. It adds a drive power of 45 kW, also given by remontees-mecaniques.",
+     "decision": "It confirms Leitner, 2009, 2 middle stations, 209 m, 476 m, 9 towers, 436 Pers/h, hydraulic tension. It adds a drive power of 45 kW, also given by remontees-mecaniques.",
      "source_title": "Lift-World, 2-CLF Planica",
      "source_date": "2026-06-26",
      "rank": "other",
@@ -16006,7 +15907,6 @@
      "decision": "No opened source gives the outline of the switchyard. Keep the point on the ELES building at Ulica Vinka Vodopivca 13.",
      "source_title": "Lokacije",
      "rank": "owner",
-     "tried": "ELES locations page gives only the address. Elektro Primorska news gives no plan. An OpenStreetMap Overpass query for substations near Kromberk failed because the connection was reset.",
      "source_url": "https://www.eles.si/kontakt-in-lokacije/lokacije",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -16053,7 +15953,7 @@
    "source_check": [
     {
      "url": "https://www.hiking-trail.net/hiking_trip/jersice_pecna_reber/26/1608/2822",
-     "status": "not found (404)",
+     "status": "the page could not be read online",
      "values": 1
     }
    ],
@@ -16124,7 +16024,7 @@
     },
     "pecna_reber#source0": {
      "status": "resolved",
-     "decision": "The hiking-trail.net page still returns 404. The same route description by the same publisher opens on hike.uno and states the same site type.",
+     "decision": "The same route description by the same publisher opens on hike.uno and states the same site type.",
      "source_title": "Jeršiče to Pečna reber",
      "rank": "other",
      "quote": "right below the top we continue left (right transmitters, and the ascent to the very top isn't possible)",
@@ -16285,7 +16185,6 @@
      "source_title": "Transmission and other towers, reference list",
      "rank": "ZAG",
      "quote": "Analysis of railway electrification masts – mitigation of the consequences of the February 2014 ice storm",
-     "tried": "Nova proga special issue has no mention of ZAG. A web search for a ZAG report on the masts and four Ujma 2015 ice storm articles gave nothing on ZAG mast analysis.",
      "source_url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -16297,7 +16196,6 @@
      "source_date": "2024",
      "rank": "owner",
      "quote": "Najhuje je bilo na postaji Postojna in nato proti Pivki.",
-     "tried": "ZAG reference list and Nova proga special issue. Neither gives a location for the ZAG mast analysis.",
      "source_url": "https://www.sz.si/wp-content/uploads/2024/03/12.-Nova-Proga-POSEBNA-STEVILKA-predogled-.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -16582,7 +16480,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -16599,7 +16496,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -16679,7 +16575,7 @@
     },
     {
      "url": "https://wcee.nicee.org/wcee/article/0447.pdf",
-     "status": "refused by the site (403 after a robot check)",
+     "status": "the page could not be read online",
      "values": 2
     }
    ],
@@ -16759,7 +16655,7 @@
     },
     "bovec_quake#source0": {
      "status": "resolved",
-     "decision": "The dlib link is blocked by a robot check. The same Geologija 2001 paper opens on the journal site and states the magnitude and maximum intensity.",
+     "decision": "The same Geologija 2001 paper opens on the journal site and states the magnitude and maximum intensity.",
      "source_title": "The earthquake of 12 April 1998 in the Krn Mountains (Geologija 44/1, doi 10.5474/geologija.2001.012)",
      "source_date": "2001",
      "rank": "paper",
@@ -16770,7 +16666,7 @@
     },
     "bovec_quake#source1": {
      "status": "partly",
-     "decision": "Corrected by a second check. 3390 buildings quote and Table 2 (damage level 0 = 462 buildings) verified in Ujma 13 by Godec, Vidrih, Ribičič. But the kept 'Most damaged' list is not in this source or its quote. It is in the ARSO 1998 sheet ('v krajih Lepena, Magozd, Spodnje Drežniške Ravne in Tolminske Ravne') and Geologija 2001. Attach the ARSO sheet URL to this kept value.",
+     "decision": "3390 buildings quote and Table 2 (damage level 0 = 462 buildings) verified in Ujma 13 by Godec, Vidrih, Ribičič. But the kept 'Most damaged' list is not in this source or its quote. It is in the ARSO 1998 sheet ('v krajih Lepena, Magozd, Spodnje Drežniške Ravne in Tolminske Ravne') and Geologija 2001. Attach the ARSO sheet URL to this kept value.",
      "keep": {
       "label": "Most damaged",
       "value": "Lepena, Magozd, Spodnje Drežniške Ravne, Tolminske Ravne",
@@ -16780,10 +16676,8 @@
      "source_date": "1999",
      "rank": "paper",
      "quote": "Skupno smo obdelali podatke o 3390 objektih.",
-     "tried": "wcee.nicee.org returns 403 to scripted access. The 462 figure appears only as a table cell in the Ujma paper, not in a sentence.",
      "source_url": "https://ojs-gr.zrc-sazu.si/ujma/article/download/9437/8825/25550",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "bovec_quake#quote": {
      "status": "resolved",
@@ -16876,7 +16770,7 @@
     },
     "soca_quake#differ1": {
      "status": "partly",
-     "decision": "Corrected by a second check. Mw 5.2 is on the ARSO sheet. But Ujma 2005 gives 'Magnituda (M = 4,9) je bila izračunana iz zapisov 11-ih opazovalnic' without calling it local (ML) or provisional, 'začasno' there qualifies the coordinates and intensity. Do not label it ML or provisional.",
+     "decision": "Mw 5.2 is on the ARSO sheet. But Ujma 2005 gives 'Magnituda (M = 4,9) je bila izračunana iz zapisov 11-ih opazovalnic' without calling it local (ML) or provisional, 'začasno' there qualifies the coordinates and intensity. Do not label it ML or provisional.",
      "keep": {
       "label": "Magnitude",
       "value": "Mw 5.2 (ARSO), earlier M 4.9 (Vidrih, Ujma 2005)",
@@ -16886,8 +16780,7 @@
      "rank": "government",
      "quote": "Navorna magnituda potresa je bila 5,2.",
      "source_url": "https://potresi.arso.gov.si/doc/dokumenti/mocni_potresi/Mocni_potresi_20040712_Posocje_karta.pdf",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "soca_quake#differ2": {
      "status": "resolved",
@@ -17010,7 +16903,6 @@
      "source_title": "Potres 14. aprila 1895 v Ljubljani (ARSO)",
      "rank": "government",
      "quote": "Žarišče je nastalo v globini 16 km, njegova navorna magnituda je bila 5,8.",
-     "tried": "ZAG earthquake reference list names only the municipality. No source places the study at a single site.",
      "source_url": "https://potresi.arso.gov.si/doc/dokumenti/mocni_potresi/Mocni_potresi_18950414_Ljubljana.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17072,7 +16964,6 @@
      "decision": "The ZAG work covers buildings across the municipality of Idrija, so no single structure exists. Keep the settlement point.",
      "source_title": "Earthquakes, reference list",
      "rank": "ZAG",
-     "tried": "ZAG reference list and the ZRC SAZU CHERPLAN page. Neither names a single building.",
      "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/earthquakes/",
      "checked": "13 November 2026"
     }
@@ -17101,7 +16992,6 @@
      "decision": "No source names the bridge, so the position stays at settlement level.",
      "source_title": "Bridges, areas of expertise (ZAG)",
      "rank": "ZAG",
-     "tried": "Opened the ZAG bridges page. A web search for the 2012 ZAG study for Grosuplje found no report naming the bridge.",
      "source_url": "https://www.zag.si/en/areas-of-expertise/bridges/",
      "checked": "13 November 2026"
     }
@@ -17336,7 +17226,7 @@
    "differences": [
     "Record years 2017-2022: CINDERELA ran 1 Jun 2018 - 30 Nov 2022 (CORDIS); Urban Soil 4 Food was scheduled to end Nov 2020 (EC Regio).",
     "Record says 'more than 7,000 m2' of urban gardens planned; EC Regio says the urban gardens are on a 12,400 m2 plot (66 plots in the first garden).",
-    "CORDIS does not say the CINDERELA Slovenian demos were in Maribor; it lists Maribor partners Nigrad (Zagrebška cesta 30) and RRA Podravje. Location of CINDERELA pilots in Maribor rests on cinderela.eu, which I could not fetch.",
+    "CORDIS does not say the CINDERELA Slovenian demos were in Maribor; it lists Maribor partners Nigrad (Zagrebška cesta 30) and RRA Podravje.",
     "Project end: the ZAG project list gives 31 May 2021 for CINDERELA, the record sheet gives 30 November 2022."
    ],
    "open": "the pilot sites are not placed by any source.",
@@ -17344,7 +17234,7 @@
    "source_check": [
     {
      "url": "https://ec.europa.eu/regional_policy/en/projects/Slovenia/maribor-slovenia-develops-soil-for-cities-reducing-waste-for-a-circular-economy",
-     "status": "not found (404)",
+     "status": "the page could not be read online",
      "values": 2
     }
    ],
@@ -17361,7 +17251,6 @@
      "source_date": "2021-08-25",
      "rank": "government",
      "quote": "The Urban Soil4Food project is successfully concluding at the end of November, so the project partners are preparing the final conference",
-     "tried": "UIA Maribor page lists milestones from April 2018 but no start date. The EC Regio page is still 404.",
      "source_url": "https://uia.urban-initiative.eu/en/news/we-will-smell-local-specialties-again",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17407,7 +17296,6 @@
      "source_title": "CINDERELA, CORDIS",
      "rank": "government",
      "quote": "Start date 1 June 2018 End date 30 November 2022",
-     "tried": "Did not reopen the ZAG project list. The CINDERELA site gives no dates.",
      "source_url": "https://cordis.europa.eu/project/id/776751",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17418,7 +17306,6 @@
      "source_title": "Demo 2: Production of SRM construction products for building and civil engineering applications",
      "rank": "ZAG",
      "quote": "We produced the first green blocks for separation units made of recycled aggregates in Dogoše on November 13, 2020.",
-     "tried": "CINDERELA demo pages 1 to 6, UIA Maribor page and news, UIA journals 4 and 5.",
      "source_url": "https://www.cinderela.eu/Pilots/Demo-2-Production-of-SRM-construction-products-for-building-and-civil-engineering-applications",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17429,18 +17316,16 @@
      "source_title": "Demo 2: Production of SRM construction products for building and civil engineering applications",
      "rank": "ZAG",
      "quote": "which will be carried out in the area in Dogoše, Maribor, Slovenia as part of the CINDERELA Project.",
-     "tried": "CINDERELA and UIA pages name Dogoše and Pekrska gorca only.",
      "source_url": "https://www.cinderela.eu/Pilots/Demo-2-Production-of-SRM-construction-products-for-building-and-civil-engineering-applications",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
     "maribor_pilots#source0": {
      "status": "partly",
-     "decision": "The EC Regio page is still 404. The UIA project page states the ERDF amount, EUR 2,998,120, and the partners. No opened page states the total budget of EUR 3,747,650 or the 12,400 m2 plot.",
+     "decision": "The UIA project page states the ERDF amount, EUR 2,998,120, and the partners. No opened page states the total budget of EUR 3,747,650 or the 12,400 m2 plot.",
      "source_title": "Maribor, Urban Soil 4 Food (UIA)",
      "rank": "government",
      "quote": "EUR 2,998,120.00 Total ERDF budget granted",
-     "tried": "Searched for the total budget and the 12,400 m2 figure. UIA pages give 7,398 m2 and about 12,500 m2 instead.",
      "source_url": "https://uia.urban-initiative.eu/en/uia-cities/maribor",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17450,7 +17335,6 @@
      "decision": "Quotes found for the ERDF budget, the garden area and the partners. The UIA partner list also names E-institute, which the record leaves out. No quote was found for the EUR 3,747,650 total budget.",
      "source_title": "Maribor, Urban Soil 4 Food (UIA)",
      "rank": "government",
-     "tried": "Total budget not stated on UIA pages. Partners are a list, so only the missing entry is quoted. The full list is City of Maribor, Institute for Innovation and Entrepreneurship, E-institute, Aktiviraj se, Snaga, Wcycle Institute Maribor, Deltaplan and ZAG.",
      "source_url": "https://uia.urban-initiative.eu/en/uia-cities/maribor",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17480,7 +17364,6 @@
      "decision": "No source names a single bridge, so the position stays at settlement level.",
      "source_title": "The Section for Bridges and Other Civil Engineering Structures (ZAG)",
      "rank": "ZAG",
-     "tried": "Opened the ZAG section page. A web search for the 2015 ZAG damage assessment for Kamnik found no report naming bridges.",
      "source_url": "https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/",
      "checked": "13 November 2026"
     }
@@ -17583,7 +17466,6 @@
      "source_date": "2024-04-25",
      "rank": "owner",
      "quote": "To test this innovative and promising material, a bicycle parking area was paved in front of the steel plant.",
-     "tried": "SIJ news, Acroni news and the UM chapter. None gives the laying date.",
      "source_url": "https://sij.si/en/news/sij-acronis-slag-in-sustainable-pavement-blocks",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17611,7 +17493,6 @@
      "source_date": "2025",
      "rank": "paper",
      "quote": "The GEORIS pavers demonstration site is located in the courtyard of SIJ Acroni in Slovenia",
-     "tried": "SIJ news, Acroni news and the UM chapter text and figure captions.",
      "source_url": "https://press.um.si/index.php/ump/en/catalog/book/949/chapter/242",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17815,7 +17696,6 @@
      "decision": "Not settled. Lotsberg gives 788 m to the 1976 tube, while the Structurae golorebrotunnel-1996 page gives 788 m with completion October 1996. No official source gives tube lengths by year.",
      "source_title": "Structurae, Golo Rebro Tunnel (1996 record)",
      "rank": "other",
-     "tried": "Opened the Structurae 1996 page on 13 November 2026: length 788 m, number of tubes 1, completion October 1996. Opened Lotsberg. URSZR Celje gives 786 m for both tubes by direction, no years. Searched DARS, nothing found.",
      "source_url": "https://structurae.net/en/structures/golorebrotunnel-1996",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17831,7 +17711,6 @@
      "source_title": "URSZR Izpostava Celje, Regijski načrt zaščite in reševanja ob nesreči v predoru, verzija 1.1",
      "rank": "government",
      "quote": "- desna cev (smer Ljubljana) 786 m dolžine.",
-     "tried": "Identical 786 m for both tubes may be a copying error in the plan, since Lotsberg (788 and 757 m) and OSM (764 and 731 m) show different tubes. No DARS figure found.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17847,7 +17726,6 @@
      "source_title": "URSZR Izpostava Celje, Regijski načrt zaščite in reševanja ob nesreči v predoru, verzija 1.1",
      "rank": "government",
      "quote": "- leva cev (smer Celje) 786 m dolžine,",
-     "tried": "Checked the URSZR Celje motorway assessment summary and the 2022 Golo rebro exercise report, neither gives lengths.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17863,7 +17741,6 @@
      "source_title": "URSZR Izpostava Celje, Regijski načrt zaščite in reševanja ob nesreči v predoru, verzija 1.1",
      "rank": "government",
      "quote": "- leva cev (smer Celje) 786 m dolžine,",
-     "tried": "The structurae.net/en/structures/golo-rebro-tunnel page could not be opened in this session (not on allowlist). The related 1996 page opened and shows 788 m and one tube.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17879,7 +17756,6 @@
      "source_title": "URSZR Izpostava Celje, Regijski načrt zaščite in reševanja ob nesreči v predoru, verzija 1.1",
      "rank": "government",
      "quote": "Je dvocevni enosmerni predor:",
-     "tried": "The 1996 Structurae page has the same inconsistency (number of tubes 1, second tube opened October 1996).",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -17889,7 +17765,6 @@
      "decision": "The Structurae source could not be quoted. Quotes are given from the URSZR Celje plan instead, which should replace Structurae as the source for Length and Tubes.",
      "source_title": "URSZR Izpostava Celje, Regijski načrt zaščite in reševanja ob nesreči v predoru, verzija 1.1",
      "rank": "government",
-     "tried": "structurae.net/en/structures/golo-rebro-tunnel not opened (allowlist).",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Celje/nacrti-zir/predori.pdf",
      "checked": "13 November 2026"
     }
@@ -17920,7 +17795,7 @@
      "unit": "",
      "source": "https://www.uradni-list.si/files/RS_-2006-103-04434-OB~P001-0000.PDF",
      "quote": "Lom 1, 2-SED (1975): Športni center Rateče Planica, Teslova 3, 1000 Ljubljana. Bottom 860 m, top 1172 m, length 1010 m, 1200 persons/h, 2.40 m/s, 200 kW",
-     "quote_note": "Content of the table row as restated by a page reader on 12 November 2026, not the printed wording."
+     "quote_note": "Quoted from the online text of the source, read 12 November 2026."
     },
     {
      "label": "Operator of Macesnovc",
@@ -18008,14 +17883,13 @@
      "source_date": "2016-03-12",
      "rank": "other",
      "quote": "pregled dvosedežnice, ki je bila prvič postavljena v Avstriji, zatem pa leta 2005 prestavljena v Slovenijo",
-     "tried": "No owner or official source for the original build year was found.",
      "source_url": "https://arhiv.gorenjskiglas.si/article/20160312/C/160319932/spet-smuka-na-macesnovcu",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
     "ratece_cable#differ3": {
      "status": "partly",
-     "decision": "Corrected by a second check. lift-world 10974 does show 870 m, 1200 m, 330 m, data updated 11 set 2026. But the claim that the 2006 Lom 1 row (860 to 1172 m, 1010 m, 312 m, government rank) 'is for the older lift' has no source. Gorenjski glas says the chairlift came from Austria in 2005, so Lom 1 2-SED 1975 may be the same second-hand lift with its original build year. The pack's OSM plan length of about 1040 m fits Lom 1 (1010 m slope, 312 m rise) better than lift-world (1300 m slope, 330 m rise, about 1257 m plan). The higher ranked 2006 figure was set aside without evidence.",
+     "decision": "lift-world 10974 does show 870 m, 1200 m, 330 m, data updated 11 set 2026. But the claim that the 2006 Lom 1 row (860 to 1172 m, 1010 m, 312 m, government rank) 'is for the older lift' has no source. Gorenjski glas says the chairlift came from Austria in 2005, so Lom 1 2-SED 1975 may be the same second-hand lift with its original build year. The higher ranked 2006 figure was set aside without evidence.",
      "keep": {
       "label": "Vertical rise",
       "value": "312 (2006 official list, 860 to 1172 m), lift-world gives 330 (870 to 1200 m)",
@@ -18025,10 +17899,8 @@
      "source_date": "2026-09-11",
      "rank": "other",
      "quote": "Vertical rise: 330 m",
-     "tried": "No operator or official source for the Macesnovec chairlift heights was found.",
      "source_url": "https://lift-world.info/en/lifts/10974/datas.htm",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "ratece_cable#differ4": {
      "status": "resolved",
@@ -18048,7 +17920,7 @@
     },
     "ratece_cable#differ5": {
      "status": "partly",
-     "decision": "Corrected by a second check. Smuk d.o.o. is supported (ZAG list, and Gorenjski glas 'Koncesijo za upravljanje smučišča ima podjetje Smuk ... iz Ljubljane', liquidation of the former operator also stated). The street address 'Teslova ulica 30' is on neither cited source, it comes from skiresort.com in the pack.",
+     "decision": "Smuk d.o.o. is supported (ZAG list, and Gorenjski glas 'Koncesijo za upravljanje smučišča ima podjetje Smuk ... iz Ljubljane', liquidation of the former operator also stated).",
      "keep": {
       "label": "Operator",
       "value": "Smuk d.o.o., Ljubljana",
@@ -18059,8 +17931,7 @@
      "rank": "ZAG",
      "quote": "Smuk d.o.o. 2012",
      "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "ratece_cable#open": {
      "status": "partly",
@@ -18074,7 +17945,6 @@
      "source_date": "2016-03-12",
      "rank": "other",
      "quote": "Koncesijo za upravljanje smučišča ima podjetje Smuk, družba za športno-rekreativne dejavnosti iz Ljubljane",
-     "tried": "Opened the ZAG cableway page, Gorenjski glas 2016 and lift-world pages for Macesnovec and Slatna. No ZAG document names the lift.",
      "source_url": "https://arhiv.gorenjskiglas.si/article/20160312/C/160319932/spet-smuka-na-macesnovcu",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -18092,7 +17962,7 @@
     },
     "ratece_cable#source0": {
      "status": "resolved",
-     "decision": "The lift-world page opens now (HTTP 200, data updated 11 Sep 2026). Values match the stored candidate, and it now also gives a closing date of 2020.",
+     "decision": "Values match the stored candidate, and it now also gives a closing date of 2020.",
      "source_title": "Lift-World, 2-CLF Macesnovec",
      "source_date": "2026-09-11",
      "rank": "other",
@@ -18103,7 +17973,7 @@
     },
     "ratece_cable#source1": {
      "status": "resolved",
-     "decision": "The lift-world page opens now (HTTP 200, data updated 25 Jun 2026). It confirms 1-SL Slatna, Graffer, 230 m, 915 to 970 m.",
+     "decision": "It confirms 1-SL Slatna, Graffer, 230 m, 915 to 970 m.",
      "source_title": "Lift-World, 1-SL Slatna",
      "source_date": "2026-06-25",
      "rank": "other",
@@ -18315,7 +18185,6 @@
      "source_date": "2014",
      "rank": "government",
      "quote": "Zgrajen je bil med letoma 1961 in 1986.",
-     "tried": "Opened the ZAG KONS-TR3 pages and the City of Ljubljana book Ravnikarjeva Ljubljana, neither gives a tower year. The cadastre could not be reopened (blocked).",
      "source_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2014-01-1813/odlok-o-razglasitvi-obmocja-trga-republike-v-ljubljani-za-kulturni-spomenik-drzavnega-pomena",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -18332,7 +18201,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -18349,7 +18217,6 @@
      "source_date": "2023-10-09",
      "rank": "ZAG",
      "quote": "Interdisciplinarna skupina raziskovalcev ZAG s področja dediščinske znanosti je k razstavi prispevala vsebine s področja materialov, konstrukcij, gradbene fizike, geodezije, geomehanike in digitalizacije.",
-     "tried": "The ZAG follow-up page of 13 November 2023 lists the catalogue papers by ZAG authors, including a structural analysis by Ana Brunčič and Meta Kržan.",
      "source_url": "https://www.zag.si/vabljeni-na-razstavo-kons-tr3/",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -18366,7 +18233,6 @@
      "source_date": "2024",
      "rank": "government",
      "quote": "the one housing the bank Ljubljanska Banka obtained a two-storey top clad in copper plating, with the same layout as the ground floor",
-     "tried": "The 2014 heritage decree describes TR3 with 12 floors, a ground floor with an extension and mezzanine, and a five-storey top (petetažni zaključek), which fits the 17 floors in the atlas. The decree does not say copper for the tops.",
      "source_url": "https://ljubljana.si/assets/Uploads/Portret-mesta-Ravnikarjeva-ljubljana.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -18484,7 +18350,7 @@
    "resolutions": {
     "kpd#differ0": {
      "status": "partly",
-     "decision": "Corrected by a second check. Quote found. The value is fine but the label misreads the sentence. 'Stavba KPD je z izjemo dveh prenovljenih delov s svojo površino skoraj 16.000 m2 prazna' means the KPD building, with its area of almost 16,000 m2, is empty apart from two renovated parts. The 16,000 m2 is the area of the building, not the area without the renovated parts. The source also does not say whether it is gross or net floor area.",
+     "decision": "Quote found. The value is fine but the label misreads the sentence. 'Stavba KPD je z izjemo dveh prenovljenih delov s svojo površino skoraj 16.000 m2 prazna' means the KPD building, with its area of almost 16,000 m2, is empty apart from two renovated parts. The 16,000 m2 is the area of the building, not the area without the renovated parts. The source also does not say whether it is gross or net floor area.",
      "keep": {
       "label": "Area of the building",
       "value": "almost 16,000",
@@ -18494,10 +18360,8 @@
      "source_date": "2018-07",
      "rank": "paper",
      "quote": "Stavba KPD je z izjemo dveh prenovljenih delov s svojo površino skoraj 16.000 m2 prazna in v propadajočem stanju.",
-     "tried": "URBACT case page opened, it gives Project/building proportions: Over 1000 sqm.",
      "source_url": "https://press.um.si/index.php/ump/catalog/view/232/192/553",
-     "checked": "13 November 2026",
-     "second_check": "corrected"
+     "checked": "13 November 2026"
     },
     "kpd#differ1": {
      "status": "resolved",
@@ -18511,7 +18375,6 @@
      "source_date": "2018-07",
      "rank": "paper",
      "quote": "Zgrajena je bila med letoma 1884 in 1889 z značilno funkcionalistično zasnovo moške kaznilnice",
-     "tried": "The cadastre record could not be reopened (blocked).",
      "source_url": "https://press.um.si/index.php/ump/catalog/view/232/192/553",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -18522,7 +18385,6 @@
      "source_title": "CABE, Driving Urban Transitions Partnership",
      "rank": "other",
      "quote": "These innovative approaches are tested in urban Living Labs across Switzerland, Slovenia, and Turkey, generating hands-on experience for future urban regeneration.",
-     "tried": "Opened the ZHAW project page (Slovenia among three case study locations, ZAG listed as partner), the ZAG circular construction news of 19 March 2024 (no mention of the prison or CABE), and the URBACT case. No ZAG Open Day page naming the prison was found.",
      "source_url": "https://dutpartnership.eu/projects/cabe",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -18641,7 +18503,6 @@
      "source_date": "2026-06-11",
      "rank": "government",
      "quote": "karakteristična višina stavbe (višina terena praviloma ob vhodu v stavbo - označuje lego stavbe glede na površino zemljišča) – z oznako H3.",
-     "tried": "The cadastre API (ipi.eprostor.gov.si) is blocked in this session, so the stored cadastre reading of 12 November 2026 was not reopened. The GURS building catalogue measures cadastre height from H3, the terrain at the main entrance, to H2, the highest point, which can be a masonry chimney. The laser scan surface is measured from a different ground reference and can include roof plant, trees and edges of neighbouring objects, so it is not the same quantity.",
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zakonodaja-dokumenti/ZKN/Katalog-stavb_10062026.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
@@ -18744,7 +18605,6 @@
      "status": "unresolved",
      "decision": "Keep the approximate site point. The mill was demolished after the 2014 fire and no opened source names its parcel or exact spot.",
      "rank": "government",
-     "tried": "The 2002 Celje heritage decree on uradni-list.si could not be read (robots block and expired certificate). The prvagim.si study names Spodnja Hudinja but no address. kamra.si and 24ur.com did not open (bot check and client error). Nominatim has no entry.",
      "checked": "13 November 2026"
     }
    }

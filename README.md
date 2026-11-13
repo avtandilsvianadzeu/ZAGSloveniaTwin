@@ -14,7 +14,6 @@ Earlier map only version: https://avtandilsvianadzeu.github.io/ZAGMapLive/
 - `twin.html`, `css/twin.css`, `js/twin.js`: record page per object (`twin.html?id=<record id>`) and the list of all objects (`twin.html`), with a schematic model built only from the mapped geometry and official building data
 - `add.html`, `js/add.js`: Add object tool. Draw, paste coordinates or load a file. Objects are kept in the browser and marked as not verified
 - `data/user_objects.json`: objects published from the Add object tool (empty by default)
-- `data/ai_service.json`: address of the optional AI reader service (empty by default, never holds a key)
 - `js/userobjects.js`: layer of added objects on the main map
 - `data/zag_projects.geojson`: the 73 records with involvement type, description, sources and position provenance
 - `data/images.json`: photo per record with author and licence (filled by the "Find record photos" workflow)
@@ -26,7 +25,6 @@ Earlier map only version: https://avtandilsvianadzeu.github.io/ZAGMapLive/
 
 ## Handover
 
-Start with `handover/HANDOVER.md`. It describes the data, how every position and value was checked, what is still open and how each part was built. `handover/research/` holds the research and check results, `handover/dev_tools/` the scripts used for checking positions, and `server/` the optional AI reader (a Cloudflare Worker, see `server/README.md`).
 
 ## Publishing
 
@@ -65,10 +63,9 @@ Every asset page has a button "Request a 3D model" (or "Update the 3D model"). I
 
 It refuses, with an explanation on the issue, when a height has no source link, when no outline is found within 60 m, or when the record already has a more detailed model or the official GURS building (tick "Replace" to override). Editing the issue builds the model again. The workflow needs "Read and write permissions" under Settings, Actions, General, Workflow permissions.
 
-## ZAGBOT
+## ZAGBot
 
-**Chat on the site.** Every page has ZAGBOT in the lower right corner (`js/zagbot.js`, `css/zagbot.css`). It runs in the browser with no server and no AI. It reads `data/zag_projects.geojson` and `data/twins.json`, understands short questions in English and Slovenian (names, places, types such as *predor* or *most*, values such as height, length, year, power), and answers only from that data with the source link. Every step offers clickable replies, so a report of an error ends as an exact request: record, value, current value, new value, source link. "Send to ZAGBOT on GitHub" opens that request as an issue.
+**Chat on the site.** Every page has ZAGBot in the lower right corner (`js/zagbot.js`, `css/zagbot.css`). It runs in the browser with no server. It reads `data/zag_projects.geojson` and `data/twins.json`, understands short questions in English and Slovenian (names, places, types such as *predor* or *most*, values such as height, length, year, power), and answers only from that data with the source link. Every step offers clickable replies, so a report of an error ends as an exact request: record, value, current value, new value, source link. "Send the request" delivers it to the atlas team by email.
 
-**ZAGBOT on GitHub.** `.github/workflows/zagbot.yml` carries out such a request. It runs when the repository owner opens an issue titled `ZAGBOT: ...` (or labelled `zagbot`), or comments `/zagbot` on any issue. An AI agent reads `.github/zagbot/RULES.md` (evidence rules, file layout, house style), checks the sources, edits the data, and the workflow then rebuilds the data, rejects the change if the files are broken or the typography is wrong, commits as `zagbot` and answers on the issue.
+**Change requests.** `.github/workflows/zagbot.yml` processes a change request from an issue opened by the repository owner, rebuilds the data, checks it and commits the result. Setup notes are kept outside the published site.
 
-To switch it on at no extra cost, run `claude setup-token` once on a computer with Claude Code (it signs in with the owner's Claude plan and prints a token), then add that token as the repository secret `CLAUDE_CODE_OAUTH_TOKEN` (Settings, Secrets and variables, Actions). Runs then count towards the plan's usage limits. A paid key from the Claude Console as `ANTHROPIC_API_KEY` also works. The model can be changed with the repository variable `ZAGBOT_MODEL`. Without the key the workflow only replies how to switch it on.
