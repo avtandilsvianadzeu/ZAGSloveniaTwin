@@ -28,6 +28,9 @@ function isVisible(p){
   if(p.category==='zag_facility'){ if(!ZA.showFac) return false; } else if(!ZA.showProj) return false;
   if(ZA.nav!=='projects'&&GROUPS[p.object_type]!==ZA.nav) return false;
   if(ZA.upTo!=null&&p.year_start!=null&&p.year_start>ZA.upTo) return false;
+  if(ZA.onlyTypes&&!ZA.onlyTypes.has(p.object_type)) return false;
+  if(ZA.onlyKinds&&!ZA.onlyKinds.has(kindOf(p))) return false;
+  if(ZA.onlyIds&&!ZA.onlyIds.has(p.id)) return false;
   return true;
 }
 const visibleFeatures=()=>ZA.features.filter(f=>isVisible(f.properties));

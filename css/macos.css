@@ -155,3 +155,24 @@ html{scroll-behavior:smooth}
 @media (max-width:1320px){.thdr .livebadge{display:none}.thdr .jump{flex-basis:180px;min-width:120px}}
 @media (max-width:1650px){.hdr .livebadge span{display:none}.hdr .hsearch{flex:1 1 220px;min-width:170px;max-width:340px}}
 @media (max-width:1360px){.hdr .livebadge{display:none}.hdr .hright .seg button,.hdr .hright .tgl{padding:0 9px!important}}
+
+/* legend as a filter */
+button.lgr{display:flex;align-items:center;width:100%;margin:0;border:0;background:transparent;text-align:left;font:inherit;color:inherit;cursor:pointer;border-radius:10px;padding:2px 6px!important;transition:background .15s,opacity .15s,font-size .15s}
+button.lgr:hover{background:rgba(10,124,255,.07)}
+button.lgr span{flex:1 1 auto;min-width:0}
+button.lgr em{flex:none;font-style:normal;font-size:10.5px;font-weight:600;color:var(--g-mut);background:rgba(118,118,128,.12);border-radius:999px;padding:1px 6px;min-width:18px;text-align:center}
+.lgd.filtering button.lgr:not(.on){opacity:.45}
+.lgd.filtering button.lgr:not(.on):hover{opacity:.85}
+button.lgr.on{background:rgba(10,124,255,.12);color:#0A4FB0;font-weight:600;opacity:1}
+button.lgr.on em{background:#0A7CFF;color:#fff}
+.lgstat{margin:2px 0 6px;font-size:11px;color:var(--g-mut);line-height:1.35}
+.lgd:hover .lgstat{font-size:12px}
+.lgstat b{color:var(--g-ink)}
+.lgall{margin-left:4px;border:0;background:none;color:var(--g-blue);font:600 11.5px var(--font);cursor:pointer;padding:0}
+.lgq{flex:none;width:12px;height:12px;border-radius:4px;margin:0 2px}
+.lgq-news{background:#FF3B30;border-radius:50%;box-shadow:0 0 0 2px rgba(255,59,48,.2)}
+.lgq-model{background:linear-gradient(135deg,#3AA0FF,#0A7CFF)}
+.lgq-exact{background:#34C759;border-radius:50%}
+button.lgr:hover .lgq{transform:scale(1.5)}
+.lgq{transition:transform .15s}
+.lgnote{padding:2px 6px!important}

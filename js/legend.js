@@ -1,16 +1,56 @@
 'use strict';
-/* Legend of the main map: every marker symbol with its caption, the three marker colours and the numbered circle. It can be hidden and shown again. */
+/* Legend of the main map, also a filter.
+   Click a symbol or a colour to show only those records on the map, click it again to show all.
+   Ctrl, Cmd or Shift click adds or removes one more. Quick filters pick records with news, a 3D model or an exact position.
+   The map zooms to what is left, and the line at the bottom says how many are shown. */
 (function(){
   const box=document.getElementById('lgd'), body=document.getElementById('lgdBody'), show=document.getElementById('lgdShow'), hide=document.getElementById('lgdHide'); if(!box||!body) return;
   const CAP=[[['bridge','footbridge','road structure'],'Bridge, viaduct, footbridge or road structure'],[['tunnel'],'Tunnel'],[['dam / hydropower'],'Dam or hydropower plant'],[['cableway'],'Cableway'],[['tower / mast'],'Tower or mast'],
     [['building','company'],'Building or company'],[['institution'],'Institution'],[['landslide'],'Landslide'],[['geotechnical site'],'Geotechnical site'],[['study area (earthquake)'],'Earthquake study area'],[['other'],'Other site']];
+  const KINDS=[['doc','#007AFF','Blue: project with ZAG work'],['fac','#5856D6',"Violet: ZAG's own site"],['ref','#8E8E93','Grey: partner, named in the sources']];
+  const EXACT=new Set(['surveyed','address','matched']);
+  const QUICK=[['news','With news this week',p=>{ try{ return recentNewsIds(7).includes(p.id); }catch(_){ return false; } }],
+    ['model','With a 3D model',p=>!!(p.lines||p.line||(ZA.gurs&&ZA.gurs[p.id])||(ZA.twins&&ZA.twins[p.id]&&ZA.twins[p.id].model))],
+    ['exact','Exact position',p=>EXACT.has(p.position_precision)]];
   const img=(t,k)=>{ try{ const d=markerImage(t,k), c=document.createElement('canvas'); c.width=d.width; c.height=d.height; c.getContext('2d').putImageData(d,0,0); return '<img alt="" width="26" height="26" src="'+c.toDataURL()+'">'; }catch(_){ return ''; } };
   const pref=()=>{ try{ return localStorage.getItem('zag_lgd_hidden')==='1'; }catch(_){ return false; } };
   const set=on=>{ box.hidden=!on; show.hidden=on; try{ localStorage.setItem('zag_lgd_hidden',on?'0':'1'); }catch(_){} };
-  function build(){ const have=new Set(ZA.features.map(f=>f.properties.object_type));
-    const rows=CAP.filter(([ts])=>ts.some(t=>have.has(t))).map(([ts,cap])=>'<div class="lgr">'+img(ts.find(t=>have.has(t)),'doc')+'<span>'+cap+'</span></div>').join('');
-    body.innerHTML='<h4>Symbols</h4>'+rows+'<h4>Colours</h4><div class="lgr"><i class="lgdot" style="background:#007AFF"></i><span>Blue: project with ZAG work</span></div><div class="lgr"><i class="lgdot" style="background:#5856D6"></i><span>Violet - ZAG\'s own site</span></div><div class="lgr"><i class="lgdot" style="background:#8E8E93"></i><span>Grey: partner, named in the sources</span></div><h4>Numbers</h4><div class="lgr"><i class="lgnum">5</i><span>Several records close together. Click to zoom in</span></div>';
-    set(!pref()); }
+  const sel={types:new Set(),kinds:new Set(),quick:new Set()};
+  const kindOfP=p=>p.category==='zag_facility'?'fac':p.evidence_level==='documented'?'doc':'ref';
+
+  function apply(zoom){
+    ZA.onlyTypes=sel.types.size?new Set([...sel.types].flatMap(i=>CAP[i][0])):null;
+    ZA.onlyKinds=sel.kinds.size?new Set(sel.kinds):null;
+    ZA.onlyIds=sel.quick.size?new Set(ZA.features.map(f=>f.properties).filter(p=>[...sel.quick].every(q=>QUICK.find(x=>x[0]===q)[2](p))).map(p=>p.id)):null;
+    refreshProjects(); paint();
+    if(zoom&&typeof map!=='undefined'){ const vis=visibleFeatures(); if(vis.length){ const xs=vis.map(f=>f.geometry.coordinates[0]), ys=vis.map(f=>f.geometry.coordinates[1]);
+      try{ if(vis.length===1) map.easeTo({center:[xs[0],ys[0]],zoom:Math.max(map.getZoom(),11),duration:700});
+        else map.fitBounds([[Math.min(...xs),Math.min(...ys)],[Math.max(...xs),Math.max(...ys)]],{padding:{top:120,bottom:120,left:260,right:120},maxZoom:11,duration:700}); }catch(_){} } } }
+  function paint(){
+    const any=sel.types.size||sel.kinds.size||sel.quick.size, n=visibleFeatures().length, all=ZA.features.length;
+    box.classList.toggle('filtering',!!any);
+    body.querySelectorAll('.lgr[data-g]').forEach(r=>{ const g=r.dataset.g, v=r.dataset.v, on=g==='t'?sel.types.has(+v):g==='k'?sel.kinds.has(v):sel.quick.has(v); r.classList.toggle('on',on); r.setAttribute('aria-pressed',String(on)); });
+    const st=box.querySelector('.lgstat'); if(st) st.innerHTML=any?`Showing <b>${n}</b> of ${all} <button type="button" class="lgall">Show all</button>`:`All <b>${all}</b> records. Click a line to show only those`;
+  }
+  function toggle(group,key,add){
+    const S=group==='t'?sel.types:group==='k'?sel.kinds:sel.quick, k=group==='t'?+key:key;
+    if(add){ S.has(k)?S.delete(k):S.add(k); }
+    else{ const only=S.size===1&&S.has(k); if(group!=='q'){ sel.types.clear(); sel.kinds.clear(); } S.clear(); if(!only) S.add(k); }
+    apply(true);
+  }
+  function build(){
+    const P=ZA.features.map(f=>f.properties), have=new Set(P.map(p=>p.object_type));
+    const cnt=f=>P.filter(f).length;
+    const rows=CAP.map((c,i)=>[c,i]).filter(([[ts]])=>ts.some(t=>have.has(t))).map(([[ts,cap],i])=>`<button type="button" class="lgr" data-g="t" data-v="${i}" aria-pressed="false">${img(ts.find(t=>have.has(t)),'doc')}<span>${cap}</span><em>${cnt(p=>ts.includes(p.object_type))}</em></button>`).join('');
+    const kinds=KINDS.map(([k,col,cap])=>`<button type="button" class="lgr" data-g="k" data-v="${k}" aria-pressed="false"><i class="lgdot" style="background:${col}"></i><span>${cap}</span><em>${cnt(p=>kindOfP(p)===k)}</em></button>`).join('');
+    const quick=QUICK.map(([k,cap,f])=>`<button type="button" class="lgr" data-g="q" data-v="${k}" aria-pressed="false"><i class="lgq lgq-${k}"></i><span>${cap}</span><em>${cnt(f)}</em></button>`).join('');
+    body.innerHTML='<p class="lgstat" aria-live="polite"></p><h4>Symbols</h4>'+rows+'<h4>Colours</h4>'+kinds+'<h4>Quick filters</h4>'+quick+'<h4>Numbers</h4><div class="lgr lgnote"><i class="lgnum">5</i><span>Several records close together. Click to zoom in</span></div>';
+    body.addEventListener('click',e=>{ if(e.target.closest('.lgall')){ sel.types.clear(); sel.kinds.clear(); sel.quick.clear(); apply(true); return; }
+      const r=e.target.closest('.lgr[data-g]'); if(r) toggle(r.dataset.g,r.dataset.v,e.ctrlKey||e.metaKey||e.shiftKey); });
+    box.title='Click to show only these. Ctrl or Shift click to add more.';
+    set(!pref()); paint();
+  }
   hide.addEventListener('click',()=>set(false)); show.addEventListener('click',()=>set(true));
   const wait=setInterval(()=>{ if(typeof ZA!=='undefined'&&ZA.features&&ZA.features.length&&typeof markerImage==='function'){ clearInterval(wait); build(); } },300);
+  window.addEventListener('zag:news',()=>{ try{ paint(); }catch(_){} });
 })();
