@@ -5,11 +5,11 @@
    Changes to the site are never made here: ZAGBot writes a precise request and opens it on GitHub, where the ZAGBot workflow
    (.github/workflows/zagbot.yml) carries it out after the owner submits it. */
 (function(){
-  if(window.__zagbot) return; window.__zagbot=true;
+  if(window.__zagbot||window.top!==window.self||/embed/.test(location.search)) return; window.__zagbot=true;
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=4'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=5'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
@@ -143,7 +143,8 @@
     offer([[has?'Open the update form':'Open the request form',`${REPO}/issues/new?template=model_request.yml&title=${encodeURIComponent('Model: '+r.name+' ('+r.id+')')}`,'link'],['The model looks wrong',()=>startUpdate(r,'model')],['Back',()=>card(r)]]); }
   const WHAT=[['position','The position on the map'],['value','A value (height, length, year)'],['model','The 3D model'],['text','The description or ZAG role'],['source','A source or link'],['other','Something else']];
   function startUpdate(r,what,attr){ if(!r) return pickRecord(x=>startUpdate(x,what,attr),'Which structure is it about?'); ctx.rec=r; ctx.flow={kind:'update',r,what:null,label:attr||null,value:null,src:null};
-    if(what) return chooseWhat(what); say(`What is wrong or missing at <b>${esc(r.name)}</b>?`); offer(WHAT.map(([k,l])=>[l,()=>chooseWhat(k)])); }
+    if(what) return chooseWhat(what); ctx.flow.step='what'; say(`What is wrong or missing at <b>${esc(r.name)}</b>? Choose below or describe it in your own words.`); offer(WHAT.map(([k,l])=>[l,()=>{ ctx.flow.step=null; chooseWhat(k); }])); }
+  const whatOf=n=>/\b(position|where|location|place|coordinates?|lokacij\w*|polozaj\w*|pin)\b/.test(n)?'position':/\b(3d|model\w*|shape|oblik\w*)\b/.test(n)?'model':/\b(source|link|vir\w*)\b/.test(n)?'source':/\b(description|role|text|opis\w*|vloga)\b/.test(n)?'text':null;
   function chooseWhat(k){ const f=ctx.flow; f.what=k;
     if(k==='value'&&f.label&&!f.old){ const a=ATTRS.find(x=>x.name===f.label), sp=a&&((DB.twins[f.r.id]||{}).specs||[]).find(s=>a.label.test(s.label)); if(sp){ f.label=tidy(sp.label); f.old=tidy(sp.value)+(sp.unit?' '+sp.unit:''); } }
     if(k==='value'&&!f.label){ const sp=((DB.twins[f.r.id]||{}).specs||[]).filter(s=>!/mapped geometry/i.test(s.label)).slice(0,8);
@@ -160,10 +161,22 @@
     say(`Here is the request:<ul class="zb-spec">${lines.map(([a,b])=>`<li><span>${esc(a)}</span><b>${esc(b)}</b></li>`).join('')}</ul>${f.src?'':'<p class="zb-note">Without a source the change is only made if a published source confirms it.</p>'}`);
     const title=`ZAGBot: ${f.r.name}, ${f.label||{position:'position',model:'3D model',text:'description',source:'sources',other:'request',value:'value'}[f.what]}`;
     const body=['Request written with ZAGBot on the atlas.','',...lines.map(([a,b])=>`### ${a}\n\n${b}\n`),'### Page',`\nhttps://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/twin.html?id=${f.r.id}\n`,'Photos can be dragged in here before submitting.'].join('\n');
+    const runUrl=`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`;
+    if(!INBOX.url&&MAIL.to){ offer([['Send the request',()=>sendMail(title.replace(/^ZAGBot: /,''),lines,runUrl),'primary'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
+      say('<span class="zb-note">No account needed. It goes by email to the atlas team, who check it and let ZAGBot make the change.</span>'); return; }
     if(INBOX.url){ offer([['Send the request',()=>sendInbox(title.replace(/^ZAGBot: /,''),body.replace('Photos can be dragged in here before submitting.','')),'primary'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
       say('<span class="zb-note">'+(isOwner()?'You are signed in as the atlas owner, so ZAGBot starts on it at once.':'No account needed. The atlas team checks it, then ZAGBot makes the change.')+'</span>'); return; }
     offer([['Send to ZAGBot on GitHub',`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`,'link'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
     say('<span class="zb-note">GitHub opens with the request filled in. Press <b>Create</b>. When the atlas owner sends it, ZAGBot on GitHub checks the source, makes the change and replies there.</span>'); }
+  /* ---------- requests by email: formsubmit.co delivers the message to the atlas owner, the visitor needs no account ---------- */
+  const MAIL={to:''}; fetch('data/contacts.json').then(r=>r.ok?r.json():{}).then(j=>{ const m=(j&&(j.zagbot||j.default))||''; if(/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(m)) MAIL.to=m; }).catch(()=>{});
+  async function sendMail(subject,lines,runUrl){ const wait=say('Sending...'); const page=location.href.split('#')[0];
+    const data={_subject:'ZAGBot request: '+subject,_template:'table',_captcha:'false',Request:subject};
+    lines.forEach(([a,b])=>{ data[a]=b; }); data['Sent from']=page; data['Run it with ZAGBot (opens GitHub, signed in as owner)']=runUrl;
+    try{ const r=await fetch('https://formsubmit.co/ajax/'+encodeURIComponent(MAIL.to),{method:'POST',headers:{'content-type':'application/json',accept:'application/json'},body:JSON.stringify(data)});
+      const j=await r.json().catch(()=>({})); if(!r.ok||String(j.success)==='false') throw new Error(j.message||('error '+r.status));
+      wait.remove(); ctx.flow=null; say('Thank you, your request is sent to the atlas team. They check the source, then ZAGBot makes the change.'); offer([['Something else',()=>{ say('What else?'); offer(menu()); }]]); }
+    catch(e){ wait.remove(); say('It could not be sent: '+esc(e.message)); offer([['Try again',()=>sendMail(subject,lines,runUrl)],['Send with my own email','mailto:'+MAIL.to+'?subject='+encodeURIComponent('ZAGBot request: '+subject)+'&body='+encodeURIComponent(lines.map(([a,b])=>a+': '+b).join('\n')+'\n\n'+location.href),'link'],['Cancel',cancel]]); } }
   /* ---------- request inbox: no GitHub account needed (server/inbox.js) ---------- */
   const INBOX={url:''}; fetch('data/inbox.json').then(r=>r.ok?r.json():{}).then(j=>{ if(j&&/^https:\/\//.test(j.url||'')) INBOX.url=j.url.replace(/\/+$/,''); }).catch(()=>{});
   const code=()=>{ try{ return localStorage.getItem('zag_owner_code')||''; }catch(_){ return ''; } };
@@ -191,6 +204,7 @@
     if(/^\/?(owner|admin|lastnik)$/i.test(text)){ if(isOwner()){ say('You are signed in as the atlas owner.'); ownerMenu(); } else ownerLogin(); return; }
     const f=ctx.flow;
     if(f&&f.kind==='update'&&f.step){ const st=f.step;
+      if(st==='what'){ f.step=null; const w=whatOf(norm(text)); if(w&&text.split(/\s+/).length<=3) return chooseWhat(w); f.what=w||'other'; f.desc=tidy(text); return askSource(); }
       if(st==='label'){ f.label=tidy(text); return askValue(); }
       if(st==='value'){ if(/^(none|not known|unknown|don.?t know|ne vem|\?)$/i.test(text.trim())){ f.value='not known, please find the published value'; return askSource(); } if(!/\d/.test(text)&&!/^(yes|no)$/i.test(text)){ say('A value usually has a number. Type it again, for example <i>126 m</i>.'); return; } f.value=tidy(text); return askSource(); }
       if(st==='desc'){ f.desc=tidy(text); return askSource(); }
@@ -198,6 +212,7 @@
     if(ctx.flow&&ctx.flow.pick){ const hits=findRecords(norm(text).split(' ').filter(w=>w.length>1&&!STOP.has(w))); const then=ctx.flow.pick;
       if(hits.length){ ctx.flow=null; if(hits.length===1||hits[0].s>=hits[1].s*1.6) return then(hits[0].r); say('Which one?'); offer(hits.slice(0,8).map(h=>[h.r.name,()=>then(h.r)])); ctx.flow=null; return; }
       say('I found no structure with that name. Try another word or choose a type.'); return; }
+    try{ if(ON_MAP&&typeof curId!=='undefined'&&curId&&DB.byId[curId]) ctx.rec=DB.byId[curId]; }catch(_){}
     const n=norm(text), tokens=n.split(' ').filter(w=>w&&!STOP.has(w));
     if(/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)&&tokens.length<=2){ say('Hello! What would you like to know?'); offer(menu()); return; }
     if(/\b(help|pomoc|what can you)\b/.test(n)){ help(); return; }
@@ -213,7 +228,7 @@
     if(!r&&!type&&!free.length&&ctx.rec&&(attr||wantFix||wantModel||/\b(zag|role|news)\b/.test(n))) r=ctx.rec;
     if(!r&&!type&&!strong.length&&PAGE_ID&&DB.byId[PAGE_ID]&&(attr||wantFix||wantModel)) r=DB.byId[PAGE_ID];
     if(/\bhow many|koliko\b/.test(n)&&type&&!r){ const c=DB.recs.filter(x=>type.match(x.type)).length; say(`The atlas has <b>${c}</b> ${esc(type.name)}.`); offer([['List them',()=>listType(type)],...menu().slice(0,2)]); return; }
-    if(wantFix&&!wantModel) return startUpdate(r,attr?'value':null,attr?attr.name:null);
+    if(wantFix&&!wantModel) return startUpdate(r,attr?'value':whatOf(n),attr?attr.name:null);
     if(wantModel) return wantFix?startUpdate(r,'model'):startModel(r);
     if(r&&attr) return attrAnswer(r,attr);
     if(r&&/\b(zag|role|vloga|did)\b/.test(n)) return role(r);

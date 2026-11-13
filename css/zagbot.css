@@ -84,3 +84,15 @@
 .zb-typing{display:inline-flex;gap:4px;padding:2px 0}.zb-typing i{width:7px;height:7px;border-radius:50%;background:#8A93A0;animation:zbDot 1s infinite}.zb-typing i:nth-child(2){animation-delay:.15s}.zb-typing i:nth-child(3){animation-delay:.3s}
 @keyframes zbDot{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
 @media (prefers-reduced-motion:reduce){.zb-msg,.zb-typing i{animation:none}}
+
+/* cleaner iOS 6: no pinstripes, softer gloss, more air */
+.zb-panel{background:#F4F6FA;border-radius:12px}
+.zb-log{background:#F4F6FA!important}
+.zb-head{background:linear-gradient(#A9B8CC 0%,#8297B5 50%,#7389AA 51%,#647C9F 100%)}
+.zb-msg.bot{background:#fff;border:1px solid rgba(0,0,0,.10);box-shadow:0 1px 2px rgba(0,0,0,.10)}
+.zb-msg.me{background:linear-gradient(#5EB0FB 0%,#1F87F2 100%);border:1px solid rgba(0,70,160,.35);box-shadow:0 1px 2px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.35)}
+.zb-msg.me::after{opacity:.6}
+.zb-chips{background:#EEF1F6;border-top:1px solid #D5DBE5}
+.zb-chip{background:linear-gradient(#FFFFFF,#F1F4F8)!important;border-color:#B8C2D0!important;text-shadow:none}
+.zb-in{background:linear-gradient(#F1F3F6,#E1E5EB);border-top:1px solid #C3CAD4}
+.zb-foot{background:#E1E5EB}

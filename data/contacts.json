@@ -1,1 +1,6 @@
-{"note":"Email address that the buttons Request latest information and Send by email write to. Leave default empty to let the sender choose the recipient. by_id can hold a different address per object id.","default":"","by_id":{}}
+{
+ "note": "Email address that the buttons Request latest information and Send by email write to, and where ZAGBot sends visitor requests (through formsubmit.co, no account needed by the visitor). by_id can hold a different address per object id.",
+ "default": "avtandil.svianadze@zag.si",
+ "by_id": {},
+ "zagbot": "avtandil.svianadze@zag.si"
+}

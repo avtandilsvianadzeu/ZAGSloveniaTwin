@@ -34,6 +34,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       REPO: ${{ github.repository }}
       N: ${{ github.event.issue.number }}
+      NOTIFY: ${{ vars.NOTIFY_EMAIL || 'avtandil.svianadze@zag.si' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -115,3 +116,15 @@ jobs:
           if [ "${{ steps.check.outputs.changed }}" = "yes" ]; then printf "\n\nSaved. The site updates in about a minute." >> /tmp/answer.md; fi
           if [ "${{ steps.check.outputs.changed }}" = "no" ]; then printf "\n\nNo file was changed." >> /tmp/answer.md; fi
           gh issue comment "$N" --repo "$REPO" --body-file /tmp/answer.md
+          # the final answer also goes by email to the owner (formsubmit.co, same address as the site uses)
+          python - <<'PY' || true
+          import json, os, urllib.request
+          to = os.environ.get('NOTIFY', '')
+          if to:
+              body = open('/tmp/answer.md', encoding='utf-8').read()
+              data = json.dumps({'_subject': 'ZAGBot finished request #' + os.environ['N'], '_template': 'box', '_captcha': 'false',
+                                 'message': body + '\n\nRequest: https://github.com/' + os.environ['REPO'] + '/issues/' + os.environ['N']}).encode()
+              req = urllib.request.Request('https://formsubmit.co/ajax/' + to, data=data, headers={'content-type': 'application/json', 'accept': 'application/json',
+                                           'referer': 'https://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/', 'origin': 'https://avtandilsvianadzeu.github.io'})
+              print(urllib.request.urlopen(req, timeout=30).read()[:200])
+          PY
