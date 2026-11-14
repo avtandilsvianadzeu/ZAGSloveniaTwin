@@ -399,9 +399,9 @@
     try{ sessionStorage.setItem(OKEY,on?'1':'0'); }catch(_){}
     if(on&&!started){ started=true; say('Loading the atlas data...',null,true);
       try{ await load(); log.innerHTML=''; const here=PAGE_ID&&DB.byId[PAGE_ID]; if(here) ctx.rec=here;
-        if(hist.length){ const old=hist.slice(); hist=[]; old.forEach(m=>say(m.h,m.w,true)); hist=old; const d=document.createElement('div'); d.className='zb-day'; d.textContent=window.LANG==='sl'?'Nadaljujemo, kjer smo končali':'Continuing where we left off'; log.appendChild(d); scroll();
+        if(hist.length){ const old=hist.slice(); hist=[]; old.forEach(m=>say(m.h,m.w,true)); hist=old; const d=document.createElement('div'); d.className='zb-day'; d.textContent=L()==='sl'?'Nadaljujemo, kjer smo končali':'Continuing where we left off'; log.appendChild(d); scroll();
           offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); if(on) setTimeout(()=>input.focus(),50); return; }
-        say(window.LANG==='sl'?`Pozdravljeni, sem <b>ZAGBot</b>. Poznam ${DB.recs.length} struktur v atlasu in njihove preverjene vrednosti.${here?` Ste na strani <b>${esc(here.name)}</b>.`:''} Vprašajte me v slovenščini ali angleščini, odgovarjam iz podatkov atlasa. Kaj želite?`:`Hello, I am <b>ZAGBot</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
+        say(L()==='sl'?`Pozdravljeni, sem <b>ZAGBot</b>. Poznam ${DB.recs.length} struktur v atlasu in njihove preverjene vrednosti.${here?` Ste na strani <b>${esc(here.name)}</b>.`:''} Vprašajte me v slovenščini ali angleščini, odgovarjam iz podatkov atlasa. Kaj želite?`:`Hello, I am <b>ZAGBot</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
         offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); }
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
     if(on) setTimeout(()=>input.focus(),50); }
@@ -417,17 +417,24 @@
     setTimeout(()=>{ if(!panel.hidden||done) return; el.classList.add('in'); timer=setTimeout(bye,10000); },1600);
     launch.addEventListener('click',bye); })();
   try{ if(sessionStorage.getItem(OKEY)==='1') setTimeout(()=>toggle(true),400); }catch(_){}
-  $('.zb-new').onclick=()=>{ forget(); log.innerHTML=''; ctx={rec:PAGE_ID&&DB.byId?DB.byId[PAGE_ID]||null:null,flow:null}; say(window.LANG==='sl'?'Nov pogovor. Kaj želite?':'New conversation. What would you like?'); offer(menu(),true); };
+  $('.zb-new').onclick=()=>{ forget(); log.innerHTML=''; ctx={rec:PAGE_ID&&DB.byId?DB.byId[PAGE_ID]||null:null,flow:null}; say(L()==='sl'?'Nov pogovor. Kaj želite?':'New conversation. What would you like?'); offer(menu(),true); };
   launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });
   $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(ctx.flow&&ctx.flow.kind==='code'){ handle(t); return; } user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },350); };
   /* ---------- voice: a question spoken in Slovenian or English, answers read aloud on request ---------- */
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition, mic=$('.zb-mic'), spk=$('.zb-spk'), waveC=$('.zb-wave-c'); let rec=null, listening=false, voiceOn=false;
   try{ voiceOn=localStorage.getItem('zb_voice')==='1'; }catch(_){} spk.setAttribute('aria-pressed',String(voiceOn));
-  /* the chat speaks the language of the site; the flags switch the whole site, as ENG / SLO in the header does */
-  const chatLang=window.LANG==='sl'?'sl':'en';
+  /* the chat has its own language, chosen with the flags and kept in this browser; it starts in the language of the site.
+     A Slovenian chat on an English site is translated through the site dictionary; an English chat on a Slovenian site is left untranslated. */
+  let chatLang=null; try{ chatLang=localStorage.getItem('zb_lang'); }catch(_){} if(chatLang!=='sl'&&chatLang!=='en') chatLang=window.LANG==='sl'?'sl':'en';
   const L=()=>chatLang, lang=()=>chatLang==='sl'?'sl-SI':'en-GB';
-  root.querySelectorAll('.zb-flag').forEach(f=>{ f.setAttribute('aria-pressed',String(f.dataset.l===chatLang)); f.onclick=()=>{ if(f.dataset.l===chatLang) return; try{ sessionStorage.setItem(OKEY,'1'); }catch(_){} if(window.setLang) window.setLang(f.dataset.l); }; });
+  const applyChatLang=()=>{ root.dataset.lang=chatLang; root.querySelectorAll('.zb-flag').forEach(f=>f.setAttribute('aria-pressed',String(f.dataset.l===chatLang)));
+    input.placeholder=chatLang==='sl'?'Vprašajte o objektu':'Ask about a structure'; $('.zb-title span').textContent=chatLang==='sl'?'Na zvezi, 73 zapisov':'Online, 73 records';
+    if(chatLang==='sl'&&window.LANG!=='sl'&&window.ZAGi18n) ZAGi18n.walk(root); };
+  if(window.ZAGi18n&&window.LANG!=='sl'){ new MutationObserver(ms=>{ if(chatLang!=='sl') return; for(const m of ms) m.addedNodes.forEach(n=>{ if(n.isConnected) ZAGi18n.walk(n); }); }).observe(root,{childList:true,subtree:true}); }
+  root.querySelectorAll('.zb-flag').forEach(f=>{ f.onclick=()=>{ if(f.dataset.l===chatLang) return; chatLang=f.dataset.l; try{ localStorage.setItem('zb_lang',chatLang); }catch(_){} applyChatLang(); if(listening){ try{ rec.stop(); }catch(_){} }
+    say(chatLang==='sl'?'Pogovor in glas sta zdaj v slovenščini.':'Chat and voice are now in English.',null,true); }; });
+  applyChatLang();
   /* the voice: a warm, natural one where the browser has it (the online natural voices of Edge, the Google voices of Chrome,
      Samantha and Tina on Apple devices), slightly brighter in pitch, the way an assistant speaks */
   const PREF={en:[/Aria.*Natural/i,/Jenny.*Natural/i,/Libby.*Natural/i,/Sonia.*Natural/i,/Google UK English Female/i,/Google US English/i,/Samantha/i,/Karen/i,/Moira/i,/Serena/i,/Zira/i,/Hazel/i,/en-GB/i,/en-US/i],

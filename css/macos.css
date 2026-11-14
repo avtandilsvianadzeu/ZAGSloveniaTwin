@@ -734,7 +734,7 @@ html.a11y-keep .vctl.idle{opacity:1!important}
 @media (max-width:1650px){.thdr .livebadge span em{display:none}}
 @media (max-width:1540px){.thdr:has(.jump) .brand b{display:none}}
 @media (max-width:1330px){.thdr:has(.jump) .livebadge{display:none}}
-@media (min-width:1101px) and (max-width:1207px){.thdr:has(#prev){flex-wrap:wrap;row-gap:8px}.thdr:has(#prev) .sitenav{order:11;flex:0 1 auto;margin:0 auto}}
+@media (min-width:1101px) and (max-width:1207px){.thdr:has(#prev:not([hidden])){flex-wrap:wrap;row-gap:8px}.thdr:has(#prev:not([hidden])) .sitenav{order:11;flex:0 1 auto;margin:0 auto}}
 /* an empty page tools group takes no row of its own */
 .thdr .tnav:not(:has(> :not([hidden]))){display:none}
 /* phones: the Aa button stays on the first row beside the language switch */

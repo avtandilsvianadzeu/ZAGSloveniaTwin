@@ -7,8 +7,7 @@
   const q=new URLSearchParams(location.search).get('lang'); if(q==='sl'||q==='en'){ lang=q; try{ localStorage.setItem(KEY,lang); }catch(_){} }
   window.LANG=lang;
   window.setLang=l=>{ try{ localStorage.setItem(KEY,l); }catch(_){} const u=new URL(location.href); u.searchParams.delete('lang'); location.replace(u.href); };
-  if(lang!=='sl') return;
-  document.documentElement.lang='sl';
+  const ACTIVE=lang==='sl'; if(ACTIVE) document.documentElement.lang='sl';
 
   const D={
     /* navigation and header */
@@ -168,9 +167,9 @@
   const done=new WeakMap();
   function node(n){ if(done.get(n)===n.nodeValue) return; const v=tr(n.nodeValue); if(v!==n.nodeValue) n.nodeValue=v; done.set(n,n.nodeValue); }
   function attrs(el){ for(const a of ['placeholder','title','aria-label','alt']){ const v=el.getAttribute&&el.getAttribute(a); if(v){ const t=tr(v); if(t!==v) el.setAttribute(a,t); } } }
-  const inSkip=el=>!!(el&&el.closest&&el.closest('blockquote,.quote,code,pre,kbd,textarea'));
+  const inSkip=el=>!!(el&&el.closest&&el.closest('blockquote,.quote,code,pre,kbd,textarea,.zb[data-lang="en"]'));
   function walk(root){ if(!root) return; if(root.nodeType===3){ if(!inSkip(root.parentElement)) node(root); return; } if(root.nodeType!==1||SKIP.has(root.tagName)||inSkip(root)) return;
-    attrs(root); const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT,{acceptNode:n=>n.nodeType===1?(SKIP.has(n.tagName)||n.tagName==='BLOCKQUOTE'||(n.classList&&n.classList.contains('quote'))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_SKIP):NodeFilter.FILTER_ACCEPT});
+    attrs(root); const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT,{acceptNode:n=>n.nodeType===1?(SKIP.has(n.tagName)||n.tagName==='BLOCKQUOTE'||(n.classList&&n.classList.contains('quote'))||(n.matches&&n.matches('.zb[data-lang="en"]'))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_SKIP):NodeFilter.FILTER_ACCEPT});
     const list=[]; while(w.nextNode()) list.push(w.currentNode); list.forEach(node);
     root.querySelectorAll('[placeholder],[title],[aria-label],[alt]').forEach(el=>{ if(!inSkip(el)) attrs(el); }); }
   function titles(){ const t=document.title; const T={'ZAG Digital Atlas':'Digitalni atlas ZAG','Asset record':'Zapis o objektu','Dashboard':'Pregled','Open questions':'Odprta vprašanja','Data API':'Podatkovni API','Add an object':'Dodaj objekt','Page not found':'Strani ni mogoče najti'};
@@ -178,5 +177,7 @@
   function start(){ walk(document.body); titles();
     new MutationObserver(ms=>{ for(const m of ms){ try{ if(m.type==='characterData'){ if(m.target.parentElement&&!inSkip(m.target.parentElement)) node(m.target); } else m.addedNodes.forEach(n=>{ if(n.isConnected) walk(n); }); }catch(_){} } }).observe(document.body,{childList:true,subtree:true,characterData:true});
     new MutationObserver(titles).observe(document.querySelector('title')||document.head,{childList:true,subtree:true,characterData:true}); }
+  window.ZAGi18n={tr,walk,active:ACTIVE};
+  if(!ACTIVE) return;
   if(document.body) start(); else document.addEventListener('DOMContentLoaded',start);
 })();
