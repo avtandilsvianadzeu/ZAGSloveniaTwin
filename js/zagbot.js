@@ -9,13 +9,13 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=27'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=28'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector
      so it stays sharp at every size; a rendered picture can replace it by setting window.ZAGBOT_AVATAR to an image address */
-  const AVATAR=window.ZAGBOT_AVATAR===''?'':(window.ZAGBOT_AVATAR||'img/zagbot_face.svg');
-  const ROBOT=(size,wave)=>AVATAR?`<span class="zb-pic" style="width:${Math.round(size*1.1)}px;height:${Math.round(size*1.1)}px"><img class="zb-robot" src="${AVATAR}" width="${Math.round(size*1.1)}" height="${Math.round(size*1.1)}" alt=""><i class="zb-glow"></i><span class="zb-badge"><img src="img/logo_mark.png" alt=""></span></span>`:`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
+  const AVATAR=window.ZAGBOT_AVATAR===''?'':(window.ZAGBOT_AVATAR||'orb');
+  const ROBOT=(size,wave)=>AVATAR==='orb'?`<span class="zb-pic zb-orb" style="width:${Math.round(size*1.1)}px;height:${Math.round(size*1.1)}px"><canvas class="zb-orb-c" aria-hidden="true"></canvas></span>`:AVATAR?`<span class="zb-pic" style="width:${Math.round(size*1.1)}px;height:${Math.round(size*1.1)}px"><img class="zb-robot" src="${AVATAR}" width="${Math.round(size*1.1)}" height="${Math.round(size*1.1)}" alt=""><i class="zb-glow"></i><span class="zb-badge"><img src="img/logo_mark.png" alt=""></span></span>`:`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
     <defs>
       <linearGradient id="rbSkin" x1="0.2" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#EEF1F6"/><stop offset="1" stop-color="#C9D1DE"/></linearGradient>
       <linearGradient id="rbSkin2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8FAFC"/><stop offset="1" stop-color="#B8C2D2"/></linearGradient>
@@ -518,7 +518,7 @@
     sl:[/Petra.*Natural/i,/Rok.*Natural/i,/Petra/i,/Tina/i,/Lado/i,/Google.*slov/i,/^sl/i]};
   function pickVoice(){ const vs=speechSynthesis.getVoices(); const two=lang().slice(0,2); for(const re of PREF[L()]){ const v=vs.find(x=>re.test(x.name)&&x.lang.toLowerCase().startsWith(two))||(re.source.startsWith('^')||/en-|sl/.test(re.source)?vs.find(x=>re.test(x.lang)):null); if(v) return v; } return vs.find(x=>x.lang.toLowerCase().startsWith(two))||null; }
   function speak(el){ if(!voiceOn||!('speechSynthesis' in window)) return; const t=(el.innerText||'').replace(/\s+/g,' ').replace(/https?:\/\/\S+/g,'').trim().slice(0,600); if(!t) return;
-    const u=new SpeechSynthesisUtterance(t); u.lang=lang(); const v=pickVoice(); if(v) u.voice=v; u.rate=1.04; u.pitch=1.12; u.volume=1; speechSynthesis.cancel(); speechSynthesis.speak(u); }
+    const u=new SpeechSynthesisUtterance(t); u.lang=lang(); const v=pickVoice(); if(v) u.voice=v; u.rate=1.04; u.pitch=1.12; u.volume=1; u.onstart=()=>root.classList.add('speaking'); u.onend=u.onerror=()=>root.classList.remove('speaking'); speechSynthesis.cancel(); speechSynthesis.speak(u); }
   if('speechSynthesis' in window) speechSynthesis.onvoiceschanged=()=>{};
   spk.onclick=()=>{ voiceOn=!voiceOn; spk.setAttribute('aria-pressed',String(voiceOn)); try{ localStorage.setItem('zb_voice',voiceOn?'1':'0'); }catch(_){} if(!voiceOn&&'speechSynthesis' in window) speechSynthesis.cancel();
     const d=say(voiceOn?(L()==='sl'?'Z veseljem. Odgovore bom brala naglas.':'Gladly. I will read my answers aloud.'):(L()==='sl'?'Branje naglas je izklopljeno.':'Reading aloud is off.'),null,true); if(voiceOn) speak(d); };
@@ -544,5 +544,39 @@
       rec.onerror=e=>{ if(e.error==='phrases-not-supported'&&!SR._noPhrases){ SR._noPhrases=true; rec.onend=null; stop(); setTimeout(()=>mic.onclick(),60); return; } stop(); if(e.error==='not-allowed') say(L()==='sl'?'Mikrofon ni dovoljen. Dovolite ga v nastavitvah strani v brskalniku.':'The microphone is not allowed. Allow it for this site in the browser.',null,true); else if(e.error!=='aborted'&&e.error!=='no-speech') say((L()==='sl'?'Prepoznava govora ni uspela: ':'Speech recognition failed: ')+esc(e.error),null,true); };
       rec.onend=()=>{ stop(); const t=input.value.trim(); if(t){ input.value=''; user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },300); } };
       try{ rec.start(); listening=true; mic.setAttribute('aria-pressed','true'); root.classList.add('listening'); input.value=''; input.placeholder=L()==='sl'?'Poslušam':'Listening'; waveStart(); }catch(_){ stop(); } }; }
+  /* ---------- the orb: a glass sphere with sound waves moving inside it, drawn on a canvas.
+     Violet and blue ribbons above, cyan below, a bright rim and a highlight; the waves grow while ZAGBot listens or speaks. */
+  (function orb(){ if(AVATAR!=='orb') return;
+    const still=matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches; let amp=1, t0=performance.now(), lastF=0;
+    function draw(cv,t){ const r=cv.getBoundingClientRect(); if(!r.width) return; const dpr=Math.min(3,window.devicePixelRatio||1), W=Math.round(r.width*dpr);
+      if(cv.width!==W){ cv.width=W; cv.height=W; } const g=cv.getContext('2d'), S=W, c=S/2, R=S*0.47, k=S/56;
+      g.clearRect(0,0,S,S);
+      /* the sphere: deep violet navy inside, lighter towards the rim */
+      let gr=g.createRadialGradient(c,c*1.05,R*0.1,c,c,R); gr.addColorStop(0,'#1E1756'); gr.addColorStop(.62,'#0F0C33'); gr.addColorStop(.9,'#231A63'); gr.addColorStop(1,'#4B3BA8');
+      g.save(); g.beginPath(); g.arc(c,c,R,0,7); g.fillStyle=gr; g.fill(); g.clip();
+      g.globalCompositeOperation='lighter';
+      const band=(n,base,a1,f1,sp,spread,cols,alpha,w)=>{ for(let i=0;i<n;i++){ const u=i/(n-1);
+          const lg=g.createLinearGradient(c-R,0,c+R,0); cols.forEach((col,j)=>lg.addColorStop(j/(cols.length-1),col)); g.strokeStyle=lg; g.globalAlpha=alpha*(0.45+0.55*Math.sin(Math.PI*u)); g.lineWidth=w*k;
+          g.beginPath(); for(let x=-1;x<=1.0001;x+=0.02){ const e=Math.pow(Math.max(0,1-x*x),1.25);
+            const y=c+R*(base+amp*e*(a1*Math.sin(x*f1+t*sp+u*1.3)+a1*0.45*Math.sin(x*f1*1.9-t*sp*0.7+u*2.1))+(u-.5)*spread*e);
+            const px=c+x*R*0.98; x<=-1?g.moveTo(px,y):g.lineTo(px,y); } g.stroke(); } };
+      g.shadowBlur=4*k; g.shadowColor='rgba(130,110,255,.8)';
+      band(26,-0.08,0.30,2.5,1.15,0.30,['#6E4BFF','#3E6BFF','#8C6CFF','#5A49F0'],0.55,0.55);
+      g.shadowColor='rgba(80,230,255,.9)';
+      band(18,0.10,0.16,3.4,-1.5,0.14,['#3FD7FF','#B9FFFF','#55E8FF'],0.7,0.6);
+      g.globalAlpha=1; g.shadowBlur=0; g.globalCompositeOperation='source-over';
+      /* inner violet glow at the edge */
+      gr=g.createRadialGradient(c,c,R*0.72,c,c,R); gr.addColorStop(0,'rgba(150,120,255,0)'); gr.addColorStop(1,'rgba(170,140,255,.55)'); g.fillStyle=gr; g.fillRect(0,0,S,S);
+      g.restore();
+      /* glass rim and highlight */
+      const rg=g.createLinearGradient(c-R,c-R,c+R,c+R); rg.addColorStop(0,'rgba(240,232,255,.95)'); rg.addColorStop(.5,'rgba(170,150,255,.55)'); rg.addColorStop(1,'rgba(200,185,255,.85)');
+      g.lineWidth=1.5*k; g.strokeStyle=rg; g.beginPath(); g.arc(c,c,R-.75*k,0,7); g.stroke();
+      g.lineWidth=1.3*k; g.strokeStyle='rgba(255,255,255,.5)'; g.lineCap='round'; g.beginPath(); g.arc(c,c,R*0.88,Math.PI*1.14,Math.PI*1.38); g.stroke();
+      gr=g.createRadialGradient(c-R*.42,c-R*.5,0,c-R*.42,c-R*.5,R*.32); gr.addColorStop(0,'rgba(255,255,255,.35)'); gr.addColorStop(1,'rgba(255,255,255,0)'); g.fillStyle=gr; g.beginPath(); g.arc(c,c,R,0,7); g.fill(); }
+    function frame(now){ if(!document.hidden&&now-lastF>32){ lastF=now; const want=root.classList.contains('listening')||root.classList.contains('speaking')?1.75:1; amp+=(want-amp)*0.08;
+        root.querySelectorAll('canvas.zb-orb-c').forEach(cv=>{ if(cv.offsetParent!==null) draw(cv,(now-t0)/1000); }); }
+      if(!still) requestAnimationFrame(frame); }
+    if(still) setTimeout(()=>root.querySelectorAll('canvas.zb-orb-c').forEach(cv=>draw(cv,1.2)),50); else requestAnimationFrame(frame);
+    addEventListener('resize',()=>{ if(still) root.querySelectorAll('canvas.zb-orb-c').forEach(cv=>draw(cv,1.2)); }); })();
   window.ZAGBot=window.ZAGBOT={open:()=>toggle(true),ask:t=>{ toggle(true).then(()=>handle(t)); }};
 })();
