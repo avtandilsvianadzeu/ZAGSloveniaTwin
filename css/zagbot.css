@@ -71,18 +71,25 @@
 .zb-onmap .tl,.zb-onmap .tlshow{right:84px}
 @media (max-width:700px){.zb-panel{right:0;left:0;bottom:0;width:100%;height:min(82vh,640px);border-radius:24px 24px 0 0}.zb-lbl{display:none}.zb-launch{width:54px;height:54px;padding:0;justify-content:center}}
 @media print{.zb{display:none}}
-/* greeting next to the launcher: glass card that types out what ZAGBot can do */
-.zb-tease{position:fixed;right:18px;bottom:calc(92px + env(safe-area-inset-bottom,0px));z-index:61;width:min(300px,calc(100vw - 36px));padding:14px 34px 16px 16px;border-radius:20px;cursor:pointer;
-  background:linear-gradient(140deg,rgba(255,255,255,.82),rgba(240,246,255,.66));-webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%);
-  box-shadow:0 0 0 .5px rgba(10,124,255,.28),0 0 0 1px rgba(255,255,255,.7) inset,0 18px 40px rgba(16,40,90,.18),0 0 32px rgba(10,124,255,.16);color:var(--zb-ink);
-  opacity:0;transform:translateY(10px) scale(.96);transform-origin:bottom right;transition:opacity .35s ease,transform .45s cubic-bezier(.2,.9,.25,1.2);pointer-events:none}
-.zb-tease.in{opacity:1;transform:none;pointer-events:auto}
+/* greeting next to the launcher: a glass card that rises like the face of a cube turning up */
+.zb-tease{position:fixed;right:18px;bottom:calc(92px + env(safe-area-inset-bottom,0px));z-index:61;width:min(300px,calc(100vw - 36px));padding:14px 34px 16px 16px;border-radius:22px;cursor:pointer;
+  background:linear-gradient(150deg,rgba(255,255,255,.80),rgba(238,245,255,.58));-webkit-backdrop-filter:blur(26px) saturate(190%);backdrop-filter:blur(26px) saturate(190%);
+  box-shadow:0 0 0 .5px rgba(10,124,255,.26),0 0 0 1px rgba(255,255,255,.75) inset,0 -18px 30px -24px rgba(255,255,255,.9) inset,0 18px 40px rgba(16,40,90,.18),0 0 32px rgba(10,124,255,.14);color:var(--zb-ink);
+  opacity:0;transform:perspective(900px) rotateX(-78deg) translateY(26px);transform-origin:50% 100%;pointer-events:none;will-change:transform,opacity;overflow:hidden}
+.zb-tease::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(115deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 38%,rgba(255,255,255,0) 62%,rgba(255,255,255,.35) 100%);pointer-events:none;transform:translateX(-120%);}
+.zb-tease.in{opacity:1;transform:perspective(900px) rotateX(0) translateY(0);pointer-events:auto;animation:zbCube .72s cubic-bezier(.22,1.1,.3,1) both}
+.zb-tease.in::before{animation:zbSheen 1.4s .5s ease-out both}
+.zb-tease.out{opacity:0;transform:perspective(900px) rotateX(70deg) translateY(16px);transition:opacity .35s ease,transform .45s cubic-bezier(.4,0,.6,1)}
+@keyframes zbCube{0%{opacity:0;transform:perspective(900px) rotateX(-78deg) translateY(26px)}55%{opacity:1}100%{opacity:1;transform:perspective(900px) rotateX(0) translateY(0)}}
+@keyframes zbSheen{to{transform:translateX(120%)}}
 .zb-tease::after{content:"";position:absolute;right:26px;bottom:-7px;width:14px;height:14px;transform:rotate(45deg);background:rgba(244,248,255,.85);box-shadow:.5px .5px 0 rgba(10,124,255,.22)}
-.zb-tt{margin:0;font-size:13.5px;line-height:1.42;min-height:3.9em}
+.zb-tt{margin:0;font-size:13.5px;line-height:1.42}
+.zb-tt b,.zb-tt span{display:inline;opacity:0;transform:translateY(8px)}
+.zb-tease.in .zb-tt b,.zb-tease.in .zb-tt span{animation:zbRise .55s cubic-bezier(.2,.9,.25,1) both}
+.zb-tease.in .zb-tt b{animation-delay:.28s}.zb-tease.in .zb-tt span:nth-of-type(1){animation-delay:.42s}.zb-tease.in .zb-tt span:nth-of-type(2){animation-delay:.56s}
+@keyframes zbRise{to{opacity:1;transform:none}}
 .zb-tt b{font-weight:700;background:linear-gradient(90deg,#0A7CFF,#5E5CE6);-webkit-background-clip:text;background-clip:text;color:transparent}
-.zb-caret{display:inline-block;width:2px;height:1em;margin-left:1px;vertical-align:-2px;background:#0A7CFF;animation:zbCaret .8s steps(1) infinite}
-@keyframes zbCaret{50%{opacity:0}}
-.zb-tx{position:absolute;top:8px;right:8px;width:22px;height:22px;border:0;border-radius:50%;background:rgba(120,120,128,.16);color:#3C3C43;font:500 15px/22px system-ui,sans-serif;cursor:pointer;padding:0}
+.zb-tx{position:absolute;top:8px;right:8px;width:22px;height:22px;border:0;border-radius:50%;background:rgba(120,120,128,.16);color:#3C3C43;font:500 15px/22px system-ui,sans-serif;cursor:pointer;padding:0;z-index:1}
 .zb-tx:hover{background:rgba(120,120,128,.28)}
 .zb-tbar{position:absolute;left:16px;right:16px;bottom:7px;height:2px;border-radius:2px;background:rgba(10,124,255,.12);overflow:hidden}
 .zb-tbar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#0A7CFF,#5E5CE6);transform-origin:left;transform:scaleX(1)}
@@ -97,7 +104,7 @@
 .zb-src{font-size:12px;color:var(--zb-mut);margin:8px 0 0}
 .zb-src a{color:#0064D2}
 .zb-card .zb-list{margin:4px 0 0;padding-left:18px}
-@media (prefers-reduced-motion:reduce){.zb-tease,.zb-tease.in .zb-tbar i,.zb-caret,.zb-spin{animation:none;transition:none}}
+@media (prefers-reduced-motion:reduce){.zb-tease,.zb-tease.in,.zb-tease.in::before,.zb-tease.in .zb-tt b,.zb-tease.in .zb-tt span,.zb-tease.in .zb-tbar i,.zb-spin{animation:none;transition:none;opacity:1;transform:none}.zb-tease:not(.in){opacity:0}}
 @media (max-width:700px){.zb-tease{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 .zb-in button{display:grid;place-items:center}.zb-in button svg{display:block}
 .zb-log{position:relative}

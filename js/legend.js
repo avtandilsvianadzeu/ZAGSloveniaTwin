@@ -37,7 +37,7 @@
     const own=sel.types.size||sel.kinds.size||sel.quick.size, oth=others(), any=own||oth.length, n=visibleFeatures().length, all=ZA.features.length;
     box.classList.toggle('filtering',!!any);
     body.querySelectorAll('.lgr[data-g]').forEach(r=>{ const g=r.dataset.g, v=r.dataset.v, on=g==='t'?sel.types.has(+v):g==='k'?sel.kinds.has(v):sel.quick.has(v); r.classList.toggle('on',on); r.setAttribute('aria-pressed',String(on)); });
-    const st=box.querySelector('.lgstat'); if(st) st.innerHTML=any?`<b>Showing ${n} of ${all}</b>${oth.length?`<span class="lgoth">Also filtered: ${oth.join(', ')}</span>`:''} <button type="button" class="lgall">Show all</button>`:`<span>All ${all} records. Click a line to show only those</span>`;
+    const st=box.querySelector('.lgstat'); if(st) st.innerHTML=any?`<b>Showing ${n} of ${all}</b>${oth.length?`<span class="lgoth">Also filtered: ${oth.join(', ')}</span>`:''} <button type="button" class="lgall">Show all</button>`:'';
   }
   function toggle(group,key,add){
     const S=group==='t'?sel.types:group==='k'?sel.kinds:sel.quick, k=group==='t'?+key:key;
@@ -54,7 +54,7 @@
     body.innerHTML='<p class="lgstat" aria-live="polite"></p><h4>Symbols</h4>'+rows+'<h4>Colours</h4>'+kinds+'<h4>Quick filters</h4>'+quick+'<h4 class="lgpos">Position</h4><div class="lgr lgposr">'+(()=>{ try{ const d=markerImage('other','doc',true), c=document.createElement('canvas'); c.width=d.width; c.height=d.height; c.getContext('2d').putImageData(d,0,0); return '<img alt="" width="26" height="26" src="'+c.toDataURL()+'">'; }catch(_){ return ''; } })()+'<span>Lighter with a dashed ring: approximate position, the centre of an area and not the object</span></div><h4>Numbers</h4><div class="lgr lgnote"><i class="lgnum">5</i><span>Several records close together. Click to zoom in</span></div>';
     body.addEventListener('click',e=>{ if(e.target.closest('.lgall')){ clearAll(); return; }
       const r=e.target.closest('.lgr[data-g]'); if(r) toggle(r.dataset.g,r.dataset.v,e.ctrlKey||e.metaKey||e.shiftKey); });
-    box.title='Click to show only these. Ctrl or Shift click to add more.';
+    box.title='';
     set(!pref()); paint();
   }
   hide.addEventListener('click',()=>set(false)); show.addEventListener('click',()=>set(true));

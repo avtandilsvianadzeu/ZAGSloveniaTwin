@@ -41,12 +41,14 @@
 
   /* live status: a green light, the time of the last news check, refreshed every minute */
   const live=document.createElement('span'); live.className='livebadge'; live.title='The atlas checks Slovenian news for every record several times an hour';
-  live.innerHTML='<i></i><b>LIVE</b><span>connecting</span>'; const right=head.querySelector('.tnav,.hright'); right?head.insertBefore(live,right):head.appendChild(live);
+  live.innerHTML='<i></i><b>LIVE</b><span>'+(window.LANG==='sl'?'povezovanje':'connecting')+'</span>'; const right=head.querySelector('.tnav,.hright'); right?head.insertBefore(live,right):head.appendChild(live);
   const ago=t=>{ const m=Math.max(0,Math.round((Date.now()-t)/60000)); return m<1?'just now':m<60?m+' min ago':m<1440?Math.round(m/60)+' h ago':Math.round(m/1440)+' days ago'; };
   let last=0, upd=0;
   async function tick(){ try{ const r=await fetch('data/news.json?t='+Date.now(),{cache:'no-store'}); if(r.ok){ const j=await r.json(); const t=Date.parse(j.updated||''); if(t){ if(upd&&t>upd){ live.classList.remove('flash'); void live.offsetWidth; live.classList.add('flash'); } upd=t; } } }catch(_){}
     last=Date.now(); paint(); }
-  function paint(){ live.querySelector('span').textContent=upd?'news updated '+ago(upd):'online'; }
+  /* the time of the last update in Slovenian time, written the Slovenian way (14. 11. 2026, 08:08) */
+  const slTime=t=>new Date(t).toLocaleString('sl-SI',{timeZone:'Europe/Ljubljana',day:'numeric',month:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  function paint(){ const sl=window.LANG==='sl'; live.querySelector('span').textContent=upd?(sl?'posodobljeno ':'updated ')+slTime(upd):(sl?'na zvezi':'online'); live.title=upd?(sl?'Zadnja posodobitev novic ':'News last updated ')+slTime(upd)+(sl?' (slovenski čas). Atlas preverja novice večkrat na uro.':' (Slovenian time). The atlas checks the news several times an hour.'):live.title; }
   tick(); setInterval(tick,5*60000); setInterval(paint,30000);
 
   /* numbers count up when they appear, so totals feel live */

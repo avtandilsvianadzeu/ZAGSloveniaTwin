@@ -1,6 +1,6 @@
 name: Refresh news
 
-# Reads Slovenian news per record from Google News and updates data/news.json, so the site stays live.
+# Reads Slovenian news per record from Google News (data/news.json) and the latest items of Aktualno from zag.si (data/zag_news.json).
 # GitHub runs scheduled jobs on a best-effort basis, so a run can start some minutes late.
 on:
   schedule:
@@ -28,14 +28,16 @@ jobs:
           node-version: '20'
       - name: Fetch news
         run: node tools/fetch_news.mjs
+      - name: Fetch Aktualno from zag.si
+        run: node tools/fetch_zag_news.mjs || true
       - name: Save if changed
         run: |
-          if git diff --quiet -- data/news.json; then
+          if git diff --quiet -- data/news.json data/zag_news.json; then
             echo "No new articles."
           else
             git config user.name "news-bot"
             git config user.email "news-bot@users.noreply.github.com"
-            git add data/news.json
+            git add data/news.json data/zag_news.json
             git commit -m "Update news"
             git pull --rebase -q || true
             git push

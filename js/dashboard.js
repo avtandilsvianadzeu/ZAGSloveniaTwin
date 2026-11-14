@@ -25,6 +25,7 @@
         ${withInsp.length?`<div class="tscroll" style="margin-top:12px"><table><thead><tr><th>Object</th><th>Last inspection</th><th>Kind</th><th>Condition</th><th>Kept</th></tr></thead><tbody>${withInsp.sort((x,y)=>x.e.date<y.e.date?1:-1).map(x=>`<tr><td class="v">${a(x.p)}</td><td class="n">${esc(x.e.date)}</td><td>${T(x.e.kind||'')}</td><td><span class="tag ${(COND[x.e.condition]||COND.none)[1]}">${esc((COND[x.e.condition]||COND.none)[0])}</span></td><td class="muted">${esc(x.e.origin)}</td></tr>`).join('')}</tbody></table></div>`
           :'<p class="note" style="margin-top:12px">No inspection record is published. Condition ratings belong to the asset owner (for motorways DARS, for state roads DRSI) and appear here only where the owner has published them. ZAG\'s inspection and quality control work recorded in the sources is counted in the table below and listed under ZAG inspection programmes.</p>'}
         <div class="btnrow"><button class="tbtn" type="button" id="dlInsp">Download inspection records</button></div></section>
+      <section class="panel wide zagnews" id="zagnews" hidden><h2>${window.LANG==='sl'?'Aktualno na ZAG':'Latest from ZAG'}</h2><p class="note" id="znNote"></p><div class="zn-grid" id="znGrid"></div></section>
       <section class="panel wide"><h2>ZAG inspection programmes</h2><p class="note">Network-wide work from ZAG's own reference lists. It is not tied to single structures on the map unless a source names them.</p>
         <div class="progs">${[['Periodic and main inspections of motorway bridges','DARS, 1995 to today','https://www.zag.si/en/areas-of-expertise/bridges/','Bridges'],
           ['Periodic and main inspections of bridges on state roads','Ministry of Transport, Slovenian Roads Agency, 1993 to 2000','https://www.zag.si/en/areas-of-expertise/bridges/','Bridges'],
@@ -40,4 +41,11 @@
     </div></div>`;
   $('dlInsp').onclick=()=>{ const items={}; for(const p of F){ const l=inspFor(p.id).map(e=>{ const o=Object.assign({},e); delete o.origin; return o; }); if(l.length) items[p.id]=l; }
     const blob=new Blob([JSON.stringify({note:'Inspection records from the ZAG Digital Atlas. Upload as data/inspections.json to publish.',items},null,1)],{type:'application/json'}), x=document.createElement('a'); x.href=URL.createObjectURL(blob); x.download='inspections.json'; document.body.appendChild(x); x.click(); x.remove(); };
+  /* the latest items of Aktualno, read from zag.si by the news workflow (data/zag_news.json) */
+  fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000)).then(r=>r.ok?r.json():null).then(j=>{ if(!j||!j.items) return; const sl=window.LANG==='sl', items=(j.items[sl?'sl':'en']||j.items.sl||[]).slice(0,6); if(!items.length) return;
+    const fmt=d=>d?new Date(d).toLocaleDateString('sl-SI',{day:'numeric',month:'numeric',year:'numeric'}):'';
+    $('znGrid').innerHTML=items.map(i=>`<a class="zn" href="${esc(i.url)}" target="_blank" rel="noopener"><time>${esc(fmt(i.date))}</time><b>${esc(i.title)}</b><p>${esc(i.summary||'')}</p></a>`).join('');
+    const up=new Date(j.updated).toLocaleString('sl-SI',{timeZone:'Europe/Ljubljana',day:'numeric',month:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    $('znNote').innerHTML=(sl?'Novice z <a href="https://www.zag.si/" target="_blank" rel="noopener">zag.si</a>, prebrane ':'News from <a href="https://www.zag.si/" target="_blank" rel="noopener">zag.si</a>, read ')+esc(up)+(sl?' (slovenski čas). Posodablja se večkrat na uro.':' (Slovenian time). Refreshed several times an hour.');
+    $('zagnews').hidden=false; }).catch(()=>{});
 })();

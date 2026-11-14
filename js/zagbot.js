@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=9'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=10'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
@@ -32,7 +32,9 @@
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm=s=>String(s||'').normalize('NFKD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9.]+/g,' ').trim();
   const tidy=s=>String(s==null?'':s).replace(/\s*[—–]\s*/g,', ').replace(/\s*;\s*/g,', ').replace(/\s*·\s*/g,', ').replace(/\s+/g,' ').trim();
-  const lev=(a,b)=>{ if(Math.abs(a.length-b.length)>2) return 9; const d=[...Array(b.length+1).keys()]; for(let i=1;i<=a.length;i++){ let p=d[0]; d[0]=i; for(let j=1;j<=b.length;j++){ const t=d[j]; d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]===b[j-1]?0:1)); p=t; } } return d[b.length]; };
+  /* edit distance with swapped letters counted once, so "wrnog" is one step from "wrong" */
+  const lev=(a,b)=>{ if(Math.abs(a.length-b.length)>3) return 9; const m=a.length,n=b.length,d=[]; for(let i=0;i<=m;i++){ d[i]=[i]; } for(let j=1;j<=n;j++) d[0][j]=j;
+    for(let i=1;i<=m;i++) for(let j=1;j<=n;j++){ const c=a[i-1]===b[j-1]?0:1; d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+c); if(i>1&&j>1&&a[i-1]===b[j-2]&&a[i-2]===b[j-1]) d[i][j]=Math.min(d[i][j],d[i-2][j-2]+1); } return d[m][n]; };
   const STOP=new Set('the a an of in on at to is are was were what how which who when where me show find tell about for and or with please can you i my do does did there this that it its kaj je so na v za in ali kje kdaj kako koliko mi pokazi prosim of pri pod nad ob se smo ste sem ki ta to tam tu naredil naredila naredili delal delala delali bil bila bilo'.split(' '));
 
   /* ---------- vocabulary ---------- */
@@ -81,7 +83,7 @@
         DB.news=(n&&n.items)||{}; DB.insp=(i&&i.items)||{}; });
     return DB.ready; }
 
-  function wordHit(q,w){ if(q===w) return 3; if(q.length>=4&&(w.startsWith(q)||q.startsWith(w))&&Math.min(q.length,w.length)>=4) return 2; if(q.length>=5&&lev(q,w)<=1) return 1.5; if(q.length>=7&&lev(q,w)<=2) return 1; if(q.length>=5&&q[0]===w[0]){ const k=x=>x.replace(/[aeiou]/g,''); const a=k(q), b=k(w); if(a.length>=4&&b.startsWith(a)&&Math.abs(q.length-w.length)<=3) return 1.5; } return 0; }
+  function wordHit(q,w){ if(q===w) return 3; if(q.length>=4&&(w.startsWith(q)||q.startsWith(w))&&Math.min(q.length,w.length)>=4) return 2; if(q.length>=4&&lev(q,w)<=1) return 1.5; if(q.length>=6&&lev(q,w)<=2) return 1; if(q.length>=9&&lev(q,w)<=3) return 1; if(q.length>=5&&q[0]===w[0]){ const k=x=>x.replace(/[aeiou]/g,''); const a=k(q), b=k(w); if(a.length>=4&&b.startsWith(a)&&Math.abs(q.length-w.length)<=3) return 1.5; } return 0; }
   function findRecords(tokens){ const out=[];
     for(const r of DB.recs){ let s=0, hits=0; for(const q of tokens){ let best=0; for(const w of r.words) best=Math.max(best,wordHit(q,w)); if(best){ s+=best; hits++; } }
       if(hits){ s+=hits/Math.max(2,r.words.size); out.push({r,s}); } }
@@ -125,6 +127,11 @@
   const typeChips=()=>TYPES.slice(0,6).map(t=>[t.name[0].toUpperCase()+t.name.slice(1),t.key]);
   const recUrl=r=>'twin.html?id='+encodeURIComponent(r.id);
   const recChips=r=>[['Open its page',recUrl(r),'link'],['Show on the map',()=>showOnMap(r)],['Key figures',()=>figures(r)],['What did ZAG do?',()=>role(r)],['Something is wrong',()=>startUpdate(r)]];
+  /* "where is X": the place, the coordinates and the map */
+  function whereIs(r){ ctx.rec=r; const p=r.p, d=(typeof fmtD96==='function')?fmtD96([+p.longitude,+p.latitude]):'';
+    say(`<div class="zb-card"><b>${esc(r.name)}</b><span>${esc(r.place||'')}${p.municipality&&p.municipality!==r.place?', '+esc(p.municipality):''}</span><p>WGS 84 ${(+p.latitude).toFixed(5)}, ${(+p.longitude).toFixed(5)}${d?'<br>'+esc(d):''}</p>${p.position_precision&&!/^(surveyed|address|matched)$/.test(p.position_precision)?'<p class="zb-note">Approximate position: the centre of the area, not the object itself.</p>':''}</div>`);
+    if(ON_MAP&&typeof window.showInfo==='function'){ window.showInfo(r.id); panelSmall(); offer(recChips(r).filter(c=>c[0]!=='Show on the map')); }
+    else { say(window.LANG==='sl'?'Odpiram zemljevid...':'Opening the map...'); setTimeout(()=>{ location.href='index.html#'+encodeURIComponent(r.id); },700); } }
   function showOnMap(r){ if(ON_MAP&&typeof window.showInfo==='function'){ window.showInfo(r.id); say('Shown on the map: <b>'+esc(r.name)+'</b>.'); panelSmall(); } else location.href='index.html#'+encodeURIComponent(r.id); }
   function panelSmall(){ if(window.innerWidth<700) toggle(false); }
 
@@ -263,7 +270,15 @@
   function decide(i){ say(`<b>#${i.number}</b> ${esc(i.title)}`); offer([['Run it',async()=>{ try{ await call('/approve','POST',{number:i.number,action:'run'}); say('Started. ZAGBot answers on the request in a few minutes.'); }catch(e){ say('Failed: '+esc(e.message)); } ownerMenu(); },'primary'],['Read it',i.url,'link'],['Decline',async()=>{ try{ await call('/approve','POST',{number:i.number,action:'reject'}); say('Declined and closed.'); }catch(e){ say('Failed: '+esc(e.message)); } ownerMenu(); }],['Back',pending]]); }
   function cancel(){ ctx.flow=null; say('Cancelled. Anything else?'); offer(menu()); }
 
-  /* ---------- understanding typed text ---------- */
+  /* ---------- understanding typed text, with tolerance for typos ---------- */
+  /* a token counts as a word of the list when it is the word, starts it, or is one or two letters away from it */
+  const near=(tok,list)=>list.some(w=>tok===w||(tok.length>=4&&w.startsWith(tok))||(tok.length>=3&&w.length>=4&&lev(tok,w)<=1)||(tok.length>=6&&lev(tok,w)<=2));
+  const anyNear=(toks,list)=>toks.some(t=>near(t,list));
+  const FUZ={where:['where','location','located','kje','kam','lokacija'],show:['show','see','display','pokazi','prikazi','poglej'],map:['map','zemljevid','zemljevidu','karta'],open:['open','odpri'],page:['page','record','sheet','stran','zapis'],
+    figs:['figures','values','specs','specifications','numbers','dimensions','podatki','vrednosti','mere','kljucni'],story:['story','history','about','background','happened','explain','describe','tell','zgodba','zgodovina','opisi','povej'],
+    inspect:['inspection','inspections','inspected','inspect','pregled','pregledi','pregledan','monitored','checked'],who:['who','people','team','researchers','led','author','authors','kdo','avtor','avtorji'],src:['sources','source','references','viri','vir','evidence','proof','dokaz'],
+    proj:['projects','project','projekt','projekti'],fix:['wrong','incorrect','error','mistake','fix','update','change','correct','napaka','narobe','popravi','spremeni','posodobi','missing','manjka'],help:['help','pomoc','commands'],hello:['hi','hello','hey','zdravo','zivjo','pozdravljeni','hej'],
+    tall:['tall','high','height','visina','visok','visoka'],long:['long','length','dolzina','dolg','dolga'],when:['when','built','opened','year','kdaj','zgrajen','leto'],how:['how','kako']};
   function handle(raw,shown,said){ if(ctx.flow&&ctx.flow.kind==='code'){ user('******'); return ownerCheck(String(raw||'').trim()); } if(!said) user(shown||raw); const text=String(raw||'').trim(); if(!text) return;
     if(/^\/?(owner|admin|lastnik)$/i.test(text)){ if(isOwner()){ say('You are signed in as the atlas owner.'); ownerMenu(); } else ownerLogin(); return; }
     const f=ctx.flow;
@@ -278,24 +293,27 @@
       say('I found no structure with that name. Try another word or choose a type.'); return; }
     try{ if(ON_MAP&&typeof curId!=='undefined'&&curId&&DB.byId[curId]) ctx.rec=DB.byId[curId]; }catch(_){}
     const n=norm(text), tokens=n.split(' ').filter(w=>w&&!STOP.has(w));
-    if(/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)&&tokens.length<=2){ say('Hello! What would you like to know?'); home(); return; }
+    if((/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)||(tokens.length<=2&&anyNear(n.split(' '),FUZ.hello)))&&tokens.length<=2){ say('Hello! What would you like to know?'); home(); return; }
     if(/\b(help|pomoc|what can you)\b/.test(n)){ help(); return; }
     if(/\btimeline|casovn\w*\b/.test(n)){ const b=document.getElementById('tlShow'); if(b){ b.click(); say('Done, the timeline is '+(document.getElementById('tl').hidden?'hidden':'shown')+'.'); } else say('The timeline is on the map page.'); offer(menu()); return; }
     if(/\b(add|new|dodaj)\b.*\b(object|structure|objekt)\b/.test(n)){ say('You can draw a new structure on the Add object page, or tell me what is missing and I write a request.'); offer([['Open Add object','add.html','link'],['Write a request',()=>startUpdate(null,'other')]]); return; }
-    const wantFix=/\b(wrong|incorrect|error|mistake|fix|update|change|correct|napak\w*|narobe|popravi\w*|spremeni\w*|posodobi\w*|missing|manjka\w*)\b/.test(n);
+    const wantFix=/\b(wrong|incorrect|error|mistake|fix|update|change|correct|napak\w*|narobe|popravi\w*|spremeni\w*|posodobi\w*|missing|manjka\w*)\b/.test(n)||anyNear(tokens,FUZ.fix);
     const wantModel=/\b(3d|model\w*)\b/.test(n);
-    const attr=ATTRS.find(a=>tokens.some(w=>a.re.test(w)));
+    const attr=ATTRS.find(a=>tokens.some(w=>a.re.test(w)))||(anyNear(tokens,FUZ.tall)?ATTRS.find(a=>a.key==='height'):anyNear(tokens,FUZ.long)?ATTRS.find(a=>a.key==='length'):anyNear(tokens,FUZ.when)?ATTRS.find(a=>a.key==='year'):null);
     const type=TYPES.find(t=>tokens.some(w=>t.re.test(w)));
     const free=tokens.filter(w=>!(attr&&attr.re.test(w))&&!(type&&type.re.test(w))&&!/^(wrong|incorrect|error|fix|update|change|model|3d|how|many|much|koliko|zag|role|vloga|news|novice|figures|values|podatki|inspect\w*|pregled\w*|story|history|tell|we|our|us|did|done|doing|work\w*|who|people|team|sources?|references?|projects?|compare|versus|vs|give|know|explain|describe|background|happened|was|been|also|both|all|any|some|more|info\w*|details?|ever|last|recent\w*|kaj|smo|naredili|delali)$/.test(w));
-    const hits=findRecords(free), strong=hits.filter(h=>h.s>=2), place=placeRecords(free);
-    const I={inspect:/\b(inspect\w*|pregled\w*|monitored|checked)\b/.test(n),story:/\b(story|history|histor\w*|tell me|about|background|happened|happen|zgodilo|zgodb\w*|zgodovin\w*|explain|describe|opisi)\b/.test(n),
+    const hits=findRecords(free), strong=hits.filter(h=>h.s>=1.5), place=placeRecords(free);
+    const I={inspect:/\b(inspect\w*|pregled\w*|monitored|checked)\b/.test(n)||anyNear(tokens,FUZ.inspect),story:/\b(story|history|histor\w*|tell me|about|background|happened|happen|zgodilo|zgodb\w*|zgodovin\w*|explain|describe|opisi)\b/.test(n),
       role:/\b(we|our|zag)\b.*\b(did|do|does|done|work\w*|role)\b|\b(what did|role|vloga|involv\w*|contribut\w*|naredil\w*|delal\w*)\b/.test(n),
-      who:/\b(who|kdo|people|team|researchers?|led|lead)\b/.test(n),src:/\b(sources?|references?|viri|evidence|proof)\b/.test(n),proj:/\b(projects?|projekt\w*)\b/.test(n),cmp:/\b(compare|vs|versus|longer|taller|higher|bigger|primerjaj)\b/.test(n)};
+      who:/\b(who|kdo|people|team|researchers?|led|lead)\b/.test(n)||anyNear(tokens,FUZ.who),src:/\b(sources?|references?|viri|evidence|proof)\b/.test(n)||anyNear(tokens,FUZ.src),proj:/\b(projects?|projekt\w*)\b/.test(n)||anyNear(tokens,FUZ.proj),cmp:/\b(compare|vs|versus|longer|taller|higher|bigger|primerjaj)\b/.test(n)};
     let r=strong.length&&(strong.length===1||strong[0].s>=strong[1].s*1.4)?strong[0].r:null;
     /* follow-ups about the record we are already talking about */
-    const F={map:/\b(show|see|put|display|pokazi|prikazi)\b.*\b(map|zemljevid\w*)\b|\bon the map\b|\bna zemljevid\w*\b/.test(n),page:/\b(open|odpri)\b.*\b(page|record|sheet|stran)\b|\bits page\b/.test(n),figs:/\b(key figures|figures|values|specs|specifications|podatki|vrednosti|kljucn\w*)\b/.test(n)};
+    const toks=n.split(' ').filter(Boolean);
+    const F={where:anyNear(toks,FUZ.where)&&!anyNear(toks,FUZ.fix),map:(anyNear(toks,FUZ.show)&&anyNear(toks,FUZ.map))||/\bon the map\b|\bna zemljevid\w*\b/.test(n),page:anyNear(toks,FUZ.open)&&anyNear(toks,FUZ.page)||/\bits page\b/.test(n),figs:anyNear(toks,FUZ.figs)&&!attr};
+    F.map=F.map||F.where;
     if(!r&&ctx.rec&&!strong.length&&!type&&(F.map||F.page||F.figs)){ r=ctx.rec; }
-    if(r&&!wantFix&&!wantModel&&!attr){ if(F.map) return showOnMap(r); if(F.page){ location.href=recUrl(r); return; } if(F.figs) return figures(r); }
+    if(!r&&F.where&&hits.length&&hits[0].s>=1.4) r=hits[0].r;
+    if(r&&!wantFix&&!wantModel&&!attr){ if(F.map) return whereIs(r); if(F.page){ location.href=recUrl(r); return; } if(F.figs) return figures(r); }
     const prj=strong.length?null:projectOf(free); if(prj&&!wantFix&&!wantModel) return analyse(['Looking up '+tidy(prj.ac||prj.t),'Reading the ZAG project page entry','Writing the answer'],()=>projectCard(prj));
     const many=mentioned(free);
     if(many.length>=2&&!type&&!wantFix&&!wantModel){ const rs=many.slice(0,4);
@@ -337,18 +355,16 @@
         offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); }
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
     if(on) setTimeout(()=>input.focus(),50); }
-  /* greeting next to the launcher: types out what ZAGBot can do, stays 10 seconds, can be closed */
+  /* greeting next to the launcher: rises like the face of a cube, stays 10 seconds, can be closed */
   (function teaser(){ let off=false; try{ off=sessionStorage.getItem('zb_teaser_off')==='1'; }catch(_){} if(off) return;
-    const T=window.LANG==='sl'?['Pozdravljeni, sem ZAGBot.','Vprašajte me, kaj je ZAG naredil pri kateri koli od 73 struktur, o njeni zgodbi, ključnih podatkih z viri ali projektih za njo.','Sprejmem tudi popravek za ekipo atlasa.']:['Hi, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also take a correction to the atlas team.'];
+    const T=window.LANG==='sl'?['Dober dan, sem ZAGBot.','Vprašajte me, kaj je ZAG naredil pri kateri koli od 73 struktur, o njeni zgodbi, ključnih podatkih z viri ali projektih za njo.','Sprejmem tudi popravek za ekipo atlasa.']:['Dober dan, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also take a correction to the atlas team.'];
     const el=document.createElement('div'); el.className='zb-tease'; el.setAttribute('role','status');
-    el.innerHTML='<button type="button" class="zb-tx" aria-label="Close the greeting">×</button><p class="zb-tt"></p><span class="zb-tbar"><i></i></span>'; root.appendChild(el);
-    const tt=el.querySelector('.zb-tt'); let timer=null, done=false;
-    const bye=()=>{ if(done) return; done=true; clearTimeout(timer); el.classList.remove('in'); setTimeout(()=>el.remove(),400); };
+    el.innerHTML='<button type="button" class="zb-tx" aria-label="Close the greeting">×</button><p class="zb-tt"><b>'+esc(T[0])+'</b> <span>'+esc(T[1])+'</span> <span>'+esc(T[2])+'</span></p><span class="zb-tbar"><i></i></span>'; root.appendChild(el);
+    let timer=null, done=false;
+    const bye=()=>{ if(done) return; done=true; clearTimeout(timer); el.classList.remove('in'); el.classList.add('out'); setTimeout(()=>el.remove(),500); };
     el.querySelector('.zb-tx').onclick=e=>{ e.stopPropagation(); try{ sessionStorage.setItem('zb_teaser_off','1'); }catch(_){} bye(); };
     el.onclick=()=>{ bye(); toggle(true); };
-    setTimeout(()=>{ if(!panel.hidden||done) return; el.classList.add('in'); const full=T.join(' '), still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches; let i=0;
-      if(still) tt.textContent=full; else { const step=()=>{ if(done) return; i=Math.min(full.length,i+2); tt.innerHTML=esc(full.slice(0,i)).replace(/^(Hi, I am ZAGBot\.|Pozdravljeni, sem ZAGBot\.)/,'<b>$1</b>')+(i<full.length?'<i class="zb-caret"></i>':''); if(i<full.length) setTimeout(step,22); }; step(); }
-      timer=setTimeout(bye,10000); },1600);
+    setTimeout(()=>{ if(!panel.hidden||done) return; el.classList.add('in'); timer=setTimeout(bye,10000); },1600);
     launch.addEventListener('click',bye); })();
   launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });

@@ -10,9 +10,11 @@ async function boot(){
     style=prep({version:8,glyphs:'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf',sources:{},layers:[{id:'background',type:'background',paint:{}}]});
   }
   style.sky=skyFor();
-  map=new maplibregl.Map({container:'map',style,center:[14.99,46.15],zoom:7.1,pitch:0,maxPitch:80,hash:false,maxTileCacheSize:600,pixelRatio:Math.min(window.devicePixelRatio||1,2),
+  map=new maplibregl.Map({container:'map',style,center:[14.99,46.15],zoom:7.1,pitch:0,maxPitch:80,maxZoom:20,hash:false,maxTileCacheSize:900,pixelRatio:Math.min(window.devicePixelRatio||1,3),cancelPendingTileRequestsWhileZooming:false,
     attributionControl:{compact:innerWidth<700,customAttribution:'Geocoding <a href="https://photon.komoot.io" target="_blank" rel="noopener">Photon</a>'},
-    maxBounds:[[11.5,44.6],[18.5,47.7]],fadeDuration:200,canvasContextAttributes:{antialias:true}});
+    maxBounds:[[11.5,44.6],[18.5,47.7]],fadeDuration:160,canvasContextAttributes:{antialias:true,powerPreference:'high-performance'}});
+  /* gentler wheel and trackpad zoom, as in Apple Maps */
+  try{ map.scrollZoom.setWheelZoomRate(1/600); map.scrollZoom.setZoomRate(1/120); }catch(_){}
   window.zagMap=map;
   map.on('load',async()=>{
     addAtlasLayers(); ready=true;
@@ -33,7 +35,7 @@ async function boot(){
       else if(pick.kind==='structure') showStructurePick(pick.f,ll);
       else if(pick.kind==='building'&&map.getZoom()>=14.5) showBuildingPick(ll,pick.f);
     });
-    map.on('mousemove',ev=>{ const c=$('stCoord'); if(c) c.textContent=`${ev.lngLat.lat.toFixed(5)}° N, ${ev.lngLat.lng.toFixed(5)}° E`+(typeof toD96==='function'?(()=>{ const d=toD96([ev.lngLat.lng,ev.lngLat.lat]); return `   D96/TM e ${Math.round(d[0])}, n ${Math.round(d[1])}`; })():''); });
+    map.on('mousemove',ev=>{ const c=$('stCoord'); if(c) c.textContent=(()=>{ const fine=map.getZoom()>=15, dp=fine?6:5; return `${ev.lngLat.lat.toFixed(dp)}° N, ${ev.lngLat.lng.toFixed(dp)}° E`+(typeof toD96==='function'?(()=>{ const d=toD96([ev.lngLat.lng,ev.lngLat.lat]), f=v=>fine?v.toFixed(1):String(Math.round(v)); return `   D96/TM e ${f(d[0])}, n ${f(d[1])}`; })():''); })(); });
     const stZoom=()=>{ const z=$('stZoom'); if(z) z.textContent=`Zoom ${map.getZoom().toFixed(1)}`; const lat=map.getCenter().lat, mpp=156543.03*Math.cos(lat*Math.PI/180)/Math.pow(2,map.getZoom()); const s=$('stScale'); if(s){ if(map.getPitch()>15){ s.textContent='Scale varies in 3D'; } else { const f=mpp*96/0.0254, k=Math.pow(10,Math.floor(Math.log10(f))-1); s.textContent=`About 1 : ${(Math.round(f/k)*k).toLocaleString('en-GB')}`; } } };
     map.on('move',stZoom); map.on('pitch',stZoom); stZoom();
     map.addControl(new maplibregl.ScaleControl({maxWidth:140,unit:'metric'}),'bottom-right');
