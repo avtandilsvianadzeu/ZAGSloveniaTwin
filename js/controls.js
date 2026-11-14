@@ -43,7 +43,7 @@ $('tiltU').onclick=()=>{ if(!is3d) set3d(true); nudge({p:12}); }; $('tiltD').onc
 $('north').onclick=()=>map&&map.easeTo({bearing:0,duration:500});
 /* the view controls fade after five seconds without a touch, so the map stays clean; any pointer or key brings them back */
 (function(){ const v=document.querySelector('.vctl'); if(!v) return; let t=null; const wake=()=>{ v.classList.remove('idle'); clearTimeout(t); t=setTimeout(()=>{ if(!v.matches(':hover, :focus-within')) v.classList.add('idle'); },5000); };
-  ['pointerenter','pointerdown','focusin','touchstart'].forEach(e=>v.addEventListener(e,wake,{passive:true})); v.addEventListener('pointerleave',wake); document.addEventListener('keydown',wake); wake(); })();
+  ['pointerenter','pointerdown','focusin','touchstart'].forEach(e=>v.addEventListener(e,wake,{passive:true})); v.addEventListener('pointerleave',wake); document.addEventListener('keydown',wake); const mp=document.getElementById('map'); if(mp) mp.addEventListener('pointerdown',wake,{passive:true}); wake(); })();
 $('zin').onclick=()=>map&&map.zoomIn(); $('zout').onclick=()=>map&&map.zoomOut();
 $('zhome').onclick=()=>{ closeInfo(); closeList(); if(map) home(); };
 /* Esc closes the top-most panel, unless the cursor is in a text field or the chat */

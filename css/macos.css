@@ -580,3 +580,5 @@ h1,h2,.wrap.home h1,.asset h1,.info h2,.zb-title b,.sf-about b,.printhead h1,.lg
 @keyframes mreadIn{from{opacity:0;transform:translateX(-50%) translateY(-6px)}to{opacity:1;transform:translateX(-50%)}}
 .mread{animation:mreadIn .35s ease both}
 @media (max-width:700px){.mread{top:auto;bottom:calc(170px + env(safe-area-inset-bottom,0px));left:12px;right:12px;transform:none;max-width:none}.mread{animation:none}}
+@media (hover:none){.vctl.idle{opacity:.5}}
+@media (max-width:1100px),(hover:none){.tips .tkeys{display:none}}

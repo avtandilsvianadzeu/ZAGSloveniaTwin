@@ -16,7 +16,7 @@
     bot:'M2 3.5A1.5 1.5 0 0 1 3.5 2h9A1.5 1.5 0 0 1 14 3.5v6a1.5 1.5 0 0 1-1.5 1.5H7l-3.5 3v-3A1.5 1.5 0 0 1 2 9.5z'};
   box.innerHTML=`<header><b>Tips to get started</b><button type="button" class="tx" aria-label="Close the tips">×</button></header>`+
     TIPS.map(([k,t,d],i)=>`<button type="button" class="tip" data-i="${i}"><i class="ti-${k}"><svg viewBox="0 0 16 16"><path d="${ICON[k]}" fill="currentColor"/></svg></i><span><b>${t}</b><span>${d}</span></span><em>›</em></button>`).join('')+
-    `<p class="tkeys">Keys: <kbd>/</kbd> search, <kbd>?</kbd> tips, <kbd>Esc</kbd> close</p>`;
+    `<p class="tkeys">${window.LANG==='sl'?'Tipke: <kbd>/</kbd> iskanje, <kbd>?</kbd> nasveti, <kbd>Esc</kbd> zapri':'Keys: <kbd>/</kbd> search, <kbd>?</kbd> tips, <kbd>Esc</kbd> close'}</p>`;
   document.body.appendChild(box);
   function open(){ box.hidden=false; requestAnimationFrame(()=>box.classList.add('in')); }
   function close(){ box.classList.remove('in'); setTimeout(()=>{ box.hidden=true; },180); try{ localStorage.setItem(KEY,'1'); }catch(_){} }

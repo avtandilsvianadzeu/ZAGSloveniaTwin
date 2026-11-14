@@ -106,9 +106,14 @@ function zoomFor(x){
 function bearingFor(id){let h=0;for(const c of String(id))h=(h*31+c.charCodeAt(0))|0;return (Math.abs(h)%70)-35;}
 /* camera padding keeps the target clear of the info panel (left, desktop) or the bottom sheet (phone) and the timeline */
 function padNow(){
+  /* the whole of Slovenia stays clear of the panels that cover the map: record panel, tips, legend, bottom bars */
   const open=document.body.classList.contains('has-panel');
-  if(phone()) return open?{top:70,bottom:Math.round(innerHeight*0.55),left:20,right:20}:{top:70,bottom:130,left:20,right:20};
-  return open?{top:70,bottom:120,left:430,right:70}:{top:70,bottom:120,left:40,right:70};
+  const tips=document.querySelector('.tips'), tipsOn=!!(tips&&!tips.hidden&&tips.offsetHeight);
+  const lgd=document.getElementById('lgd'), lgdOn=!!(lgd&&!lgd.hidden);
+  const clamp=p=>{ p.bottom=Math.min(p.bottom,Math.max(0,innerHeight-p.top-160)); p.right=Math.min(p.right,Math.max(0,innerWidth-p.left-200)); return p; };
+  if(phone()) return clamp(open?{top:70,bottom:Math.round(innerHeight*0.55),left:20,right:20}:{top:140,bottom:(tipsOn?tips.offsetHeight+60:130),left:16,right:16});
+  if(innerWidth<=1100) return clamp(open?{top:70,bottom:120,left:430,right:70}:{top:140,bottom:(tipsOn?tips.offsetHeight+140:140),left:30,right:70});
+  return clamp(open?{top:70,bottom:120,left:430,right:70}:{top:110,bottom:120,left:lgdOn?290:40,right:tipsOn?390:80});
 }
 /* camera move + callback when it ends. Stops any running animation first, so the callback cannot catch the stale
    moveend of the interrupted one, and is registered before the move, so an instant move (reduced motion) still reports. */
@@ -120,9 +125,10 @@ function flyToSite(x,cb){
 }
 function home(fast){
   orbitOn=false; clearHL(); setSel(null);
-  const cam=map.cameraForBounds(SI_BOUNDS,{padding:padNow()});
+  const pad=padNow(), cam=map.cameraForBounds(SI_BOUNDS,{padding:pad});
   if(!cam) return;
-  moveThen('flyTo',{center:cam.center,zoom:cam.zoom+(is3d?0.15:0),pitch:is3d?38:0,bearing:0,padding:{top:0,bottom:0,left:0,right:0},duration:fast||reduced?0:2200,essential:true});
+  const c=[(SI_BOUNDS[0][0]+SI_BOUNDS[1][0])/2,(SI_BOUNDS[0][1]+SI_BOUNDS[1][1])/2];
+  moveThen('flyTo',{center:c,zoom:cam.zoom+(is3d?0.15:0),pitch:is3d?38:0,bearing:0,padding:pad,duration:fast||reduced?0:2200,essential:true});
 }
 function orbit(tok){
   if(!orbitOn||reduced||!is3d||tok!==hlToken) return;
