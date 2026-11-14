@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T21:00:45.424Z",
+ "updated": "2026-11-14T01:24:06.710Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -8,6 +8,15 @@
     "source": "Siol.net",
     "date": "2026-09-09T22:22:39.000Z",
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
+    "outlets": 1
+   }
+  ],
+  "nm_brv": [
+   {
+    "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
+    "source": "Svet24.si",
+    "date": "2025-12-10T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
     "outlets": 1
    }
   ],
@@ -127,14 +136,21 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWERjRlBFT1l0NXJYLVI4eTZ2R25EQ3p6c055NTlTWkVQSkhNZHgxbmstemJuS0xaMEN2akN0V0lGc1dVWjFoN2lIVXJNRVl1WHRWMU1zRGdNQkZSeHhHbExPbGo4amlyaXc1SktsM3I3NVB5dUhYcFhOcUtXMGw5Q3NBc0ZxTk90YUtXSzdVWm9uTkt1RHJDSW9Lb19hbkhvSmNV?oc=5",
-    "outlets": 1
+    "outlets": 2
    },
    {
     "title": "Predor Karavanke: na avstrijski strani se kolona krajša, na slovenski daljša",
     "source": "Delo.si",
     "date": "2026-08-15T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdURWdFlIRXZfMGlZSFM1cjVMWmZUVjR4WklsXzVScG04ZzN0N1FCaktWLVBrckNkSFRwajAxVm1KNkEzMllDeXRkT3QyRl85eHpXN1hnY2wtOHcyUmV2YklxT3dVbGZDTTZ0S0h2YmJyLTlZWjBkTlV5cm9CRmZoOEFxTQ?oc=5",
-    "outlets": 2
+    "outlets": 1
+   },
+   {
+    "title": "Predor Karavanke spet prevozen",
+    "source": "Delo.si",
+    "date": "2026-07-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQXNMa3VYQlFkdzlQdGx2ZmpEM0xMNTFXa2toY3BoU3RKYjhIN2stTHQ1VkMzU0d6cjZodE1sbGsxYzRBMVo3aGFnQ29nNTRvUVhxX1Bud2pXMzVoT0g0UzkzVm5GVmpXdlo5Ql9fN3VjS1AxNnAyVGttMU1iUW9MV0xXRFJDaG1BNU1V?oc=5",
+    "outlets": 1
    },
    {
     "title": "Kako je videti vožnja skozi novo cev predora Karavanke (VIDEO)",
@@ -165,10 +181,10 @@
     "outlets": 1
    },
    {
-    "title": "Znano, kdo bo z obnovo predora Karavanke služil milijone",
-    "source": "Žurnal24",
-    "date": "2025-12-29T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSi1zMlNRYXpQUDVOVHVodFBBSTFlZTQ1a0xrVlB4Rk02V2pwV0RCTXRKVm9SYXZmbkxfYmU0c2xPQjJjeEZoUmY0M0FsR3BKeG00YldrT1NKcFBEVmRSVVloRm56YTl2YVhNd1FTVFZOWHVkck56bkVrdVJteVdlOXVhWndCc2c3elRacjZrbUxQRDQxemdmcUhQTmzSAaIBQVVfeXFMTjFhQzBVdUJwcVZCRmRaQ1JtbS1JNS1PVUxXSWxFVDJoTUdyZFh1Y2xYX0RFaHhhcmZvZ1JsLS1Sa1lWU2pVV0RCcFNFZjRSLTJyR3E3cGlyeGIwWmxuc010RDQ2UTdoMDRETGdoQVFnc0NLU2xILS1Jc0ZUSEktZlVoMkxObm8xZDBLeVgwWEt1U214MHc3ZWF4cEIya0ZMZ2Fn?oc=5",
+    "title": "Znano, kdo bo za 83 milijonov evrov saniral staro cev predora Karavanke",
+    "source": "Forbes Slovenija",
+    "date": "2025-12-29T08:45:57.000Z",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWlNIcXlDY3NuUnM0azNyUVZ4RmJPZm9EYmVXYXZLZUpsRmlKTDVlRlppejlkOWtOM0ZvU1lNYXBRREsyODAyaTBIcjMzUGNfZDdCVEJqaHVZazZieWtrb3NDX1Fwb01oTWlRTFZ5QkVfdXRKT3pKTDRwZ0xwalVkUEI4UXJUeWdYRWhOLS04RERBcFpsTTFpZWFaaEF2NlBHamNzWQ?oc=5",
     "outlets": 1
    }
   ],
@@ -187,7 +203,7 @@
     "source": "domžalec.si",
     "date": "2026-10-08T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSk9DNGY4NHE2RjR2NE50SVVDLS05T0VKUVBSOGpQOHlHSTZkdlV3eGdCMkdlYXphT0R5STlfNUFmWXo1RE84ekh2d3E1b0RiaDg1Mk84bVNwZ3d1NGEyR01TWXo2UHRHLTd4eExRV2VJbHBTZnplSEgxZENNMkxLWWN5VVVYV2xfRTRvWUo1UGVKYk9QUnJ6dWZ0UQ?oc=5",
-    "outlets": 2
+    "outlets": 1
    },
    {
     "title": "Na primorki zaradi okvare vozila zaprt vozni pas. Predor Šentvid ponovno odprt",
@@ -205,6 +221,13 @@
    }
   ],
   "trojane": [
+   {
+    "title": "Štajerska avtocesta je odprta in ponovno prevozna skozi predor Trojane proti Mariboru",
+    "source": "Siol.net",
+    "date": "2026-10-30T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOSW5Id1h6LXVSU1RBSTJwLXd3N1NsVG1Wc0RDUUhpaFNNSXQ3bUVGYk5BcktWT1hVUEZLdUM1QWlyWGR1ZWFoYXROSC1tTzF4S3pYVzRIakpYUGxUVUNIWllLTF9kWHl3UFFqMU9EMjNnTXJzd0g2MTF0TWQ1T0hLdGdDLXhhbXM1QU4xaDIxRXJsQmVtMFUzX0xobE1pYk91Slh2VldNV2ptN29vaUlHQlhJcnhJd0t2YUdGRjlkek4xaks3LUtfcnZjZkNwOVY3MjFHNVYtQTZuaEtKWW9v?oc=5",
+    "outlets": 1
+   },
    {
     "title": "Med vikendom bodo zaprti trojanski predori",
     "source": "Svet24.si",
@@ -228,7 +251,21 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 5
+    "outlets": 6
+   },
+   {
+    "title": "Primorska avtocesta v predoru Kastelec proti Kopru ponovno odprta",
+    "source": "Dnevnik",
+    "date": "2026-09-24T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1JQWUtScWZqa0dlYTBtdEg5ekZocEZ5emRvTVE2c1lsM05RaVFvNXhHSkN3Q3BhZnpXRWVmVFFTR0Z6N3luTEZMMms4dzM2YnN6Tm5Rbkd4RDE2RDVNNWtGVnRaQUpNNDZWZFphQktDeG9fV1V5MFRaMjNNczZ5TGZEdUFaWGRWdUZEdGpHRC12NTNPTmM2M2tqNi1OV3NjNnhSdDlKcUwtM1EwN3c?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "PREDOR KASTELEC JE ODPRT: Promet ni več preusmerjen na regionalno cesto",
+    "source": "regionalobala.si",
+    "date": "2026-09-24T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUC1pVlJKZEFjUDVGU1dHX0pBaTktcGRXSmx2TjdYYUR2N0NjbmRTaTQzdlFLNldHa2gwNEg4NzRSSi11WjlaRTdMdWhXTHJ3aXlxYV91UTlDYnZhNUs4N1pSNGZTcWNPMFZXVDY1RkhpS0hobWN4a0REbUZrc05pSnRMNkZsTHQ1ZUxFU2g2czhzeTBHVHJQMllfQjdDNnZZUVl4MU9OeFZFQllVUFJlcHBKZEQ?oc=5",
+    "outlets": 1
    },
    {
     "title": "(FOTO) 50-letnik v hudem nalivu zapeljal v predor Kastelec, ga uspešno prevozil, nato pa ...",
@@ -242,17 +279,9 @@
     "source": "Delo.si",
     "date": "2026-07-31T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbmRsdXpVZk9QMUNxZGRvOXg1RzdqUWhtX2twcTIxLXlTZ2ZqSV9Gc2NOOHN0M3ZqLThzM2F1Rm5sVV9pMXdhOWVnZEF5VXRXV05BYTctUVJLME1NWEtkWmNLTHpDcXZUNnpPdVMyWE9KWkFXYTR3VTFlSC0zRVhhbmU2eUE0RVA5ZHRuU0REdm5EU2R6RlN1Uk9nak91bFVm?oc=5",
-    "outlets": 3
-   },
-   {
-    "title": "MOČNA BURJA OHROMILA PROMET: Predor Kastelec je zaprt, prepovedi za več vrst vozil",
-    "source": "regionalobala.si",
-    "date": "2025-11-22T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOFlCaEVaT1M3bC1SN0Nwa0ZjLThyV2lZZ0FjRU81Ny1hZFFLNkJJTXZwTTRHcWVKUUVuT1h3UFhyWkQyOGJnT2dsY0R5MHIwVEdhUTNPN3RRUHJvQk0wc1NwOXhVVm14VHhndDF3MVhoM004cjJXdjFnRzk4NkNleHdndDZ6RlZGUWxDN2J1cF9OWjV2dXJTVWo1OGxHV2VpckZzc0V1Sk5ubUhLZHl2OEg3Rlc0VWc?oc=5",
-    "outlets": 1
+    "outlets": 2
    }
   ],
-  "dekani": [],
   "markovec": [
    {
     "title": "Po predoru Markovec kar z električnim skirojem",
@@ -267,6 +296,13 @@
     "date": "2026-10-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
     "outlets": 3
+   },
+   {
+    "title": "15-LETNIK PO ZADNJEM KOLESU SKOZI PREDOR MARKOVEC: Predelani moped zmogel vrtoglavih 109 km/h",
+    "source": "regionalobala.si",
+    "date": "2026-10-20T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNbzNKWGNhR2JkWEg1RjRHOWlGemNxNlRBNjFqdTEySmE5OVZMc1Jrenh6c3JlaDJWbjVwUTFkeEpPR2Y0Umw2UjYzZzA5UXREZkRZYTVjLThyS0RUUEd1ZC1sVkNoUHM0VDVtVTF3Yy10cFVDMHJWNzFrS3BXcUpXcGRycGVESHJEMEx3RWhyamtBWTkzMmJwSTJvSzZ1bG5Sb3RaUEZ6c2ctMkV2cEV2MG9ObGljNTg5M1pRMXo2RnZaeGFBWHc?oc=5",
+    "outlets": 1
    },
    {
     "title": "VOZNIKI, POZOR: Prali bodo predor Markovec, promet bo potekal po enem pasu",
@@ -296,7 +332,7 @@
     "source": "Novice.si",
     "date": "2026-11-09T13:24:12.000Z",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lbHpPU19KN2pDai05V0l3NW9TNF9CSlFxalRpTG1mZ3Jfa2hOZkNNVFVRYUZqS0k2OWZUYkdsel9tdHlMX3N0dTZuODlBUXRKNGFrLVVfOU5ERS1XdGt3RHY2VGVHMzB5ZjVwTnB4WUt5Skd3?oc=5",
-    "outlets": 8
+    "outlets": 6
    },
    {
     "title": "Štajerska avtocesta v predoru Pletovarje proti Mariboru spet prevozna",
@@ -547,23 +583,21 @@
     "date": "2026-05-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
     "outlets": 1
+   },
+   {
+    "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
+    "source": "Svet24.si",
+    "date": "2026-05-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
+    "outlets": 1
    }
   ],
-  "golo_rebro": [],
-  "tr3": [],
   "nuk": [
    {
     "title": "Kmalu v NUK ne bo več prostora niti za eno samo knjigo",
     "source": "Dnevnik",
     "date": "2026-08-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
-    "outlets": 1
-   },
-   {
-    "title": "Super novica za študente! NUK podaljšuje odprtje čitalnice",
-    "source": "Student.si",
-    "date": "2025-12-30T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2dpVmJwMEVaM2lLdy10SXNEVzRCVTlhSXBUaVp3MTdqbTlOa09JM053REJsT0JJbDktaDd2OE91SzZ2c2kwY2ItVFpIUmJ3a2tNMTVfWjFYN280Tm1XZGZPbUFZOVNzVXkwelpPTHhsVXBUWmtHMXd1QzRhb2p2U3JvenNOa1RuWUhwb1d5VHVkYzVuMThUa1Vtc0pNT2U5VW14ZTE5MEE0UQ?oc=5",
     "outlets": 1
    },
    {
