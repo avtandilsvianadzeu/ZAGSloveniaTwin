@@ -671,3 +671,35 @@ html.a11y-keep .vctl.idle{opacity:1!important}
 .tbv-c{background:linear-gradient(160deg,rgba(255,255,255,.80),rgba(255,251,240,.66))!important}
 /* legibility on glass: text keeps full contrast, muted text a shade darker than before */
 .note,.sub,.zb-foot,.lgd h4,.info h3{color:#505560!important}
+/* credits at the bottom left beside the scale; the status line keeps them in text on wide screens */
+.maplibregl-ctrl-bottom-left{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib.maplibregl-compact{margin:0 0 6px 10px;border-radius:12px!important}
+.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib.maplibregl-compact-show{padding:4px 10px 4px 30px}
+.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-button{left:0;right:auto}
+@media (min-width:1101px){.maplibregl-ctrl-bottom-left{bottom:62px!important;left:260px!important}}
+@media (min-width:701px) and (max-width:1100px){.maplibregl-ctrl-bottom-left{bottom:130px!important;left:12px!important}}
+/* the robot stays whole in its round launcher */
+.zb-launch{overflow:visible}
+.zb-onmap .zb-launch .zb-robot,.zb-launch .zb-robot{width:40px;height:44px}
+@media (max-width:700px){.zb-launch .zb-robot{width:36px;height:40px}}
+/* feature menus open after a short pause, not on a passing pointer */
+.sitenav .item:hover .fmenu{transition-delay:.32s}
+.sitenav .item .fmenu{transition:opacity .18s ease,transform .22s ease,visibility 0s linear .4s}
+.sitenav .item:hover .fmenu,.sitenav .item:focus-within .fmenu{transition:opacity .18s ease .32s,transform .22s ease .32s,visibility 0s linear .32s}
+/* count tiles and filters on the reading pages as glass */
+.dims{background:linear-gradient(160deg,rgba(255,255,255,.62),rgba(255,255,255,.42))!important;border:0!important;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.85),0 0 0 .5px rgba(33,52,105,.10),0 10px 30px rgba(16,40,90,.08)!important;-webkit-backdrop-filter:var(--gl-blur);backdrop-filter:var(--gl-blur)}
+.find,.pill,.viewbar .seg{background:rgba(255,255,255,.55)!important}
+.qst{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font:600 11.5px var(--font);color:#8A5A00;background:rgba(255,232,170,.6);box-shadow:0 0 0 .5px rgba(176,120,0,.3);align-self:flex-start;white-space:nowrap}
+.qst.ok{color:#1F8F3A;background:rgba(52,199,89,.14);box-shadow:0 0 0 .5px rgba(31,143,58,.35)}
+/* the amber mark beside a value the sources give differently, with its glass note */
+.dq{position:relative;display:inline-grid;place-items:center;width:18px;height:18px;margin-left:6px;padding:0;border:0;border-radius:50%;background:transparent;vertical-align:middle;cursor:pointer}
+.dq i{width:9px;height:9px;border-radius:50%;background:#E0A100;box-shadow:0 0 0 3px rgba(224,161,0,.16)}
+.dq:hover i,.dq:focus-visible i{box-shadow:0 0 0 4px rgba(224,161,0,.28)}
+.dq-c{position:absolute;left:0;top:calc(100% + 8px);z-index:30;width:min(340px,70vw);padding:11px 13px 10px;border-radius:14px;text-align:left;font:12.5px/1.42 var(--font);color:#3A3F4B;
+  background:linear-gradient(160deg,rgba(255,255,255,.86),rgba(255,251,240,.72));-webkit-backdrop-filter:blur(20px) saturate(170%);backdrop-filter:blur(20px) saturate(170%);
+  box-shadow:inset 0 0 0 .5px rgba(255,255,255,.85),0 0 0 .5px rgba(176,120,0,.3),0 14px 34px rgba(60,40,0,.16);opacity:0;transform:translateY(-4px);pointer-events:none;transition:opacity .18s,transform .22s;font-weight:400}
+.dq-c b{display:block;font:600 11px var(--font);letter-spacing:.03em;text-transform:uppercase;color:#8A5A00;margin-bottom:4px}
+.dq-c p{margin:0 0 6px}.dq-c p:last-of-type{margin-bottom:0}.dq-c small{display:block;margin-top:6px;font-size:11px;color:#6E6E73}
+.dq:hover .dq-c,.dq:focus-visible .dq-c,.dq.pin .dq-c{opacity:1;transform:none;pointer-events:auto}
+.row{position:relative}
+.row>span:first-child{display:inline-flex;align-items:center}

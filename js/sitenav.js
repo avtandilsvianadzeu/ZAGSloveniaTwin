@@ -5,7 +5,7 @@
    the map keeps its search, background and layers, an asset page keeps Previous, Next and "Open on the map". */
 (function(){
   const PAGES=[['index.html','Map','The map of all ZAG work'],['twin.html','Assets','All objects and their records'],['dashboard.html','Dashboard','What the atlas holds today'],
-    ['questions.html','Open questions','What the sources do not settle yet'],['api.html','Data API','Read the data by address'],['add.html','Add object','Draw a new structure']];
+    ['questions.html','Data quality','What the sources do not settle yet'],['api.html','Data API','Read the data by address'],['add.html','Add object','Draw a new structure']];
   const file=(location.pathname.split('/').pop()||'index.html').toLowerCase();
   const head=document.querySelector('header.thdr,header.hdr'); if(!head) return;
   const nav=document.createElement('nav'); nav.className='sitenav'; nav.setAttribute('aria-label','Site');
@@ -93,7 +93,7 @@
   const footer=function(){ if(/[?&]id=/.test(location.search)||document.getElementById('map')||document.body.classList.contains('embed')||document.body.classList.contains('wsbody')||document.querySelector('.sitefoot')) return;
     const f=document.createElement('footer'); f.className='sitefoot';
     f.innerHTML=`<div class="sf-in"><div class="sf-about"><b>ZAG Digital Atlas</b><p>Structures and sites in Slovenia where the work of ZAG, the Slovenian National Building and Civil Engineering Institute, is documented in published sources.</p></div>
-      <nav aria-label="Pages"><h3>Pages</h3><a href="index.html">Map</a><a href="twin.html">Assets</a><a href="dashboard.html">Dashboard</a><a href="questions.html">Open questions</a><a href="add.html">Add object</a></nav>
+      <nav aria-label="Pages"><h3>Pages</h3><a href="index.html">Map</a><a href="twin.html">Assets</a><a href="dashboard.html">Dashboard</a><a href="questions.html">Data quality</a><a href="add.html">Add object</a></nav>
       <div><h3>Data</h3><a href="api.html">Data API, JSON, GeoJSON and CSV</a><span class="sf-ver">Data version <b id="sfVer">current</b></span><span>Every value links to the source it was read from.</span></div>
       <div><h3>Map data and licences</h3><span>OpenStreetMap contributors, ODbL</span><span>OpenFreeMap and OpenMapTiles</span><span>GURS cadastre and laser scanning, CC BY 4.0</span><span>Esri World Imagery, Mapzen terrain tiles</span></div>
       <div><h3>Contact</h3><a id="sfMail" href="mailto:avtandil.svianadze@zag.si">avtandil.svianadze@zag.si</a><span>Corrections are welcome with a source link, or through ZAGBot.</span></div></div>`;

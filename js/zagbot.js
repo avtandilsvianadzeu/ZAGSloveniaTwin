@@ -9,23 +9,26 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=13'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=14'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
-    <line x1="60" y1="6" x2="60" y2="20" stroke="#213469" stroke-width="3" stroke-linecap="round"/><circle class="zb-ant" cx="60" cy="6" r="5" fill="#ED1C24"/>
-    <rect x="22" y="18" width="76" height="54" rx="20" fill="#F4F6FA" stroke="#213469" stroke-width="3"/>
-    <rect x="32" y="30" width="56" height="30" rx="13" fill="#213469"/>
-    <g class="zb-pupils"><circle class="zb-eye" cx="48" cy="44" r="6" fill="#7FD4FF"/><circle class="zb-eye" cx="72" cy="44" r="6" fill="#7FD4FF"/></g>
-    <path d="M51 53q9 6 18 0" fill="none" stroke="#7FD4FF" stroke-width="3" stroke-linecap="round"/>
-    <rect x="14" y="36" width="8" height="18" rx="4" fill="#213469"/><rect x="98" y="36" width="8" height="18" rx="4" fill="#213469"/>
-    <rect x="52" y="72" width="16" height="6" fill="#213469"/>
-    <clipPath id="zbShirt"><path d="M30 78h60l20 14-9 15-11-6v29H30v-29l-11 6-9-15z"/></clipPath>
-    <g clip-path="url(#zbShirt)"><rect x="0" y="76" width="120" height="20" fill="#FFFFFF"/><rect x="0" y="96" width="120" height="18" fill="#0057B8"/><rect x="0" y="114" width="120" height="20" fill="#ED1C24"/>
-      <path d="M44 106l5-7 4 5 4-8 4 8 4-5 5 7" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round"/></g>
-    <path d="M30 78h60l20 14-9 15-11-6v29H30v-29l-11 6-9-15z" fill="none" stroke="#213469" stroke-width="3" stroke-linejoin="round"/>
-    <text x="60" y="91" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="800" fill="#213469">ZAG</text>
-    ${wave?'<g class="zb-wave"><path d="M104 92l10-14" stroke="#213469" stroke-width="7" stroke-linecap="round"/><circle cx="115" cy="76" r="5" fill="#F4F6FA" stroke="#213469" stroke-width="2.5"/></g>':''}
+    <defs><linearGradient id="zbSkin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E9F2"/></linearGradient>
+      <radialGradient id="zbIris" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#E6F6FF"/><stop offset=".45" stop-color="#4FC3FF"/><stop offset="1" stop-color="#0A5BC4"/></radialGradient>
+      <linearGradient id="zbChrome" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F9FC"/><stop offset="1" stop-color="#C9D2E0"/></linearGradient></defs>
+    <g class="zb-ant"><circle cx="60" cy="9" r="3.2" fill="#4FC3FF"/><circle cx="60" cy="9" r="6" fill="none" stroke="#4FC3FF" stroke-opacity=".35"/></g>
+    <path d="M60 14c22 0 36 15 36 37 0 18-9 32-22 39a22 22 0 0 1-28 0C33 83 24 69 24 51c0-22 14-37 36-37z" fill="url(#zbSkin)" stroke="#B9C3D3" stroke-width="1.5"/>
+    <path d="M38 40q22-9 44 0" fill="none" stroke="#D5DCE8" stroke-width="1.2"/>
+    <path d="M60 56v9M55 68q5 3 10 0" fill="none" stroke="#C3CCDB" stroke-width="1.5" stroke-linecap="round"/>
+    <g class="zb-pupils"><ellipse class="zb-eye" cx="46" cy="52" rx="7.5" ry="5.5" fill="#1B2B4A"/><ellipse class="zb-eye" cx="74" cy="52" rx="7.5" ry="5.5" fill="#1B2B4A"/>
+      <circle cx="46" cy="52" r="4" fill="url(#zbIris)"/><circle cx="74" cy="52" r="4" fill="url(#zbIris)"/><circle cx="47.5" cy="50.5" r="1.2" fill="#fff"/><circle cx="75.5" cy="50.5" r="1.2" fill="#fff"/></g>
+    <path d="M50 78q10 6 20 0" fill="none" stroke="#7E8AA0" stroke-width="2" stroke-linecap="round"/>
+    <g><circle cx="24" cy="54" r="6" fill="url(#zbChrome)" stroke="#B9C3D3"/><circle cx="24" cy="54" r="2.5" fill="#4FC3FF"/><circle cx="96" cy="54" r="6" fill="url(#zbChrome)" stroke="#B9C3D3"/><circle cx="96" cy="54" r="2.5" fill="#4FC3FF"/></g>
+    <path d="M52 92h16v8H52z" fill="url(#zbChrome)" stroke="#B9C3D3"/><path d="M52 95h16M52 98h16" stroke="#B9C3D3" stroke-width=".8"/>
+    <path d="M30 100h60l18 12-6 14-12-6v12H30v-12l-12 6-6-14z" fill="url(#zbChrome)" stroke="#B9C3D3" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="60" cy="116" r="9" fill="#213469"/><circle cx="60" cy="116" r="6.5" fill="none" stroke="#4FC3FF" stroke-width="1.5"/><text x="60" y="118.6" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="6.5" font-weight="800" fill="#FFFFFF">ZAG</text>
+    <g><rect x="34" y="124" width="8" height="2.5" rx="1" fill="#FFFFFF" stroke="#B9C3D3" stroke-width=".5"/><rect x="34" y="126.5" width="8" height="2.5" fill="#0057B8"/><rect x="34" y="129" width="8" height="2.5" rx="1" fill="#ED1C24"/></g>
+    ${wave?'<g class="zb-wave"><path d="M104 112l10-14" stroke="#B9C3D3" stroke-width="7" stroke-linecap="round"/><path d="M104 112l10-14" stroke="url(#zbChrome)" stroke-width="5" stroke-linecap="round"/><circle cx="115" cy="96" r="5" fill="url(#zbChrome)" stroke="#B9C3D3" stroke-width="2"/></g>':''}
   </svg>`;
 
   /* ---------- text helpers ---------- */
@@ -98,7 +101,7 @@
         ${ROBOT(34,true)}<div class="zb-title"><b>ZAGBot</b><span>Online, 73 records</span></div><div class="zb-flags" role="group" aria-label="Language"><button type="button" class="zb-flag" data-l="en" aria-pressed="false" title="English" aria-label="English"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="3.2"/><path d="M0 0l24 16M24 0L0 16" stroke="#C8102E" stroke-width="1.2"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="5"/><path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="3"/></svg></button><button type="button" class="zb-flag" data-l="sl" aria-pressed="false" title="Slovenščina" aria-label="Slovenščina"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect y="5.33" width="24" height="5.34" fill="#0057B8"/><rect y="10.67" width="24" height="5.33" fill="#ED1C24"/><path d="M5 3.2h4.2v3.1c0 1.6-1 2.6-2.1 3.1C6 8.9 5 7.9 5 6.3z" fill="#0057B8" stroke="#ED1C24" stroke-width=".5"/><path d="M5.6 7.3l1.5-2 1.5 2z" fill="#fff"/></svg></button></div><button class="zb-new" type="button" title="New conversation" aria-label="New conversation"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><button class="zb-spk" type="button" aria-pressed="false" title="Read answers aloud" aria-label="Read answers aloud"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2 6h3l4-3v10l-4-3H2z" fill="currentColor"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M12.8 3.5a6 6 0 0 1 0 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button></header>
       <div class="zb-log" id="zbLog" aria-live="polite"></div>
       <div class="zb-chips" id="zbChips"></div>
-      <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure, or tell me what to change" aria-label="Message to ZAGBot"><canvas class="zb-wave-c" width="720" height="88" aria-hidden="true" hidden></canvas><button type="button" class="zb-mic" aria-pressed="false" title="Speak your question (Slovenian or English)" aria-label="Speak your question" hidden><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect x="5.5" y="1.5" width="5" height="8" rx="2.5" fill="currentColor"/><path d="M3.5 7.5a4.5 4.5 0 0 0 9 0M8 12v2.5M5.5 14.5h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><button type="submit" aria-label="Send" title="Send"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V3.5M3.8 7.6 8 3.4l4.2 4.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
+      <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure" aria-label="Message to ZAGBot"><canvas class="zb-wave-c" width="720" height="88" aria-hidden="true" hidden></canvas><button type="button" class="zb-mic" aria-pressed="false" title="Speak your question (Slovenian or English)" aria-label="Speak your question" hidden><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect x="5.5" y="1.5" width="5" height="8" rx="2.5" fill="currentColor"/><path d="M3.5 7.5a4.5 4.5 0 0 0 9 0M8 12v2.5M5.5 14.5h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><button type="submit" aria-label="Send" title="Send"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V3.5M3.8 7.6 8 3.4l4.2 4.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
       <p class="zb-foot">Answers come from the atlas data, with sources. Corrections are reviewed by the ZAG atlas team.</p>
     </section>`;
   document.body.appendChild(root);
@@ -299,7 +302,7 @@
       say('I found no structure with that name. Try another word or choose a type.'); return; }
     try{ if(ON_MAP&&typeof curId!=='undefined'&&curId&&DB.byId[curId]) ctx.rec=DB.byId[curId]; }catch(_){}
     const n=norm(text), tokens=n.split(' ').filter(w=>w&&!STOP.has(w));
-    if((/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)||(tokens.length<=2&&anyNear(n.split(' '),FUZ.hello)))&&tokens.length<=2){ say(L()==='sl'?'Pozdravljeni! Kaj vas zanima?':'Hello! What would you like to know?'); home(); return; }
+    if((/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)||(tokens.length<=2&&anyNear(n.split(' '),FUZ.hello)))&&tokens.length<=2){ say(L()==='sl'?'Pozdravljeni. Kaj vas zanima?':'Hello. What would you like to know?'); home(); return; }
     if(/\b(help|pomoc|what can you)\b/.test(n)){ help(); return; }
     if(/\btimeline|casovn\w*\b/.test(n)){ const b=document.getElementById('tlShow'); if(b){ b.click(); say('Done, the timeline is '+(document.getElementById('tl').hidden?'hidden':'shown')+'.'); } else say('The timeline is on the map page.'); offer(menu()); return; }
     if(/\b(add|new|dodaj)\b.*\b(object|structure|objekt)\b/.test(n)){ say('You can draw a new structure on the Add object page, or tell me what is missing and I write a request.'); offer([['Open Add object','add.html','link'],['Write a request',()=>startUpdate(null,'other')]]); return; }
@@ -418,7 +421,7 @@
     draw(); }
   function waveStop(){ cancelAnimationFrame(waveRaf); waveC.hidden=true; try{ waveC._stream&&waveC._stream.getTracks().forEach(x=>x.stop()); }catch(_){} try{ audio&&audio.close(); }catch(_){} audio=null; analyser=null; }
   if(SR&&(location.protocol==='https:'||location.hostname==='localhost')){ mic.hidden=false;
-    const stop=()=>{ listening=false; mic.setAttribute('aria-pressed','false'); root.classList.remove('listening'); waveStop(); input.placeholder=L()==='sl'?'Vprašajte o objektu ali povejte, kaj naj spremenim':'Ask about a structure, or tell me what to change'; };
+    const stop=()=>{ listening=false; mic.setAttribute('aria-pressed','false'); root.classList.remove('listening'); waveStop(); input.placeholder=L()==='sl'?'Vprašajte o objektu':'Ask about a structure'; };
     mic.onclick=()=>{ if(listening){ try{ rec.stop(); }catch(_){} stop(); return; }
       rec=new SR(); rec.lang=lang(); rec.interimResults=true; rec.continuous=false; rec.maxAlternatives=1; let finalText='';
       rec.onresult=e=>{ let interim=''; for(let i=e.resultIndex;i<e.results.length;i++){ const t=e.results[i][0].transcript; if(e.results[i].isFinal) finalText+=t; else interim+=t; } input.value=(finalText+interim).trim(); synth=Math.min(1,synth+0.4); };

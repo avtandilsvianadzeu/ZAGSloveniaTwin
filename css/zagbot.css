@@ -8,7 +8,7 @@
 @keyframes zbBob{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-2px) rotate(-6deg)}75%{transform:translateY(-2px) rotate(6deg)}}
 .zb-lbl{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1}.zb-lbl b{font-size:14px;font-weight:700}.zb-lbl i{font-style:normal;font-size:11.5px;color:var(--zb-mut)}
 .zb.open .zb-launch{opacity:0;pointer-events:none;animation:none}
-.zb-ant{animation:zbAnt 1.5s steps(1) infinite}@keyframes zbAnt{0%{fill:#ED1C24}50%{fill:#FF8A80}}
+.zb-ant{animation:zbAnt 2.4s ease-in-out infinite;transform-origin:60px 9px;transform-box:view-box}@keyframes zbAnt{0%,100%{opacity:.75}50%{opacity:1}}
 .zb-eye{animation:zbBlink 4s infinite;transform-origin:center;transform-box:fill-box}@keyframes zbBlink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
 .zb-pupils{animation:zbLook 6s ease-in-out infinite}@keyframes zbLook{0%,20%,100%{transform:translateX(0)}30%,45%{transform:translateX(-3px)}55%,70%{transform:translateX(3px)}}
 .zb-wave{transform-origin:104px 92px;animation:zbWave 3s ease-in-out infinite}@keyframes zbWave{0%,55%,100%{transform:rotate(0)}65%{transform:rotate(-22deg)}75%{transform:rotate(10deg)}85%{transform:rotate(-16deg)}}

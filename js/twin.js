@@ -179,6 +179,10 @@ function renderTwin(f){ window.__rec=f.properties;
   const model=buildModel(p,t,g,lines,labels), hasModel=model.els.length>0, EMBED=document.body.classList.contains('embed');
   const dataRows=[...((t&&t.specs)||[]).map(x=>[x.label,clean(x.value)+(x.unit?' '+x.unit:''),x.source,x]),...sRows.map(x=>[x[0],x[1],null]),...((p.facts||[]).map(x=>[x[0],x[1],null]))];
   const anchors=(t&&t.anchors)||[], nd0=t?(t.differences||[]).length:0, nSrc=dataRows.filter(r=>r[2]).length;
+  /* a value that the sources give differently carries a small amber mark; the note opens on hover or on a click */
+  const diffFor=label=>{ const L=String(label).toLowerCase().replace(/\(.*?\)/g,'').trim(); if(L.length<3) return []; const words=L.split(/[^a-zčšžđć0-9]+/).filter(w=>w.length>3&&!/^(the|and|with|from|total|main|above|below|ground|between|number)$/.test(w));
+    return ((t&&t.differences)||[]).filter(x=>{ const lead=String(x).split(':')[0].toLowerCase(); return lead.includes(L)||words.some(w=>lead.includes(w)); }); };
+  const dq=label=>{ const d=diffFor(label); if(!d.length) return ''; return `<button type="button" class="dq" aria-label="The sources give this value differently" title="Sources differ"><i></i><span class="dq-c" role="note"><b>Sources differ</b>${d.map(x=>`<p>${T(x)}</p>`).join('')}<small>None of the values is chosen until a source settles it.</small></span></button>`; };
   const blk=ids=>secs.filter(x=>ids.includes(x.sid)).sort((x,y)=>ids.indexOf(x.sid)-ids.indexOf(y.sid)).map(x=>x.html).join('')||'<p class="note pad">Nothing is recorded here for this asset.</p>';
   const modelPane=hasModel?`<div class="pane pane-model" id="paneModel"><canvas id="fem" tabindex="0" aria-label="Model of ${T(p.name_en||p.name)}. Drag to turn it any way, scroll to zoom, double click to reset."></canvas>
       <div class="ptools"><div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div><button class="tbtn" id="mScan" type="button" aria-pressed="true" hidden title="Show the roof surface measured by the national laser scanning, or the plain blocks">Laser scan</button><button class="tbtn" id="mMeasure" type="button" aria-pressed="false" title="Click two nodes to read the distance between them">Measure</button><button class="tbtn" id="mReset" type="button">Reset</button></div>
@@ -214,7 +218,7 @@ function renderTwin(f){ window.__rec=f.properties;
     <aside class="insp" aria-label="Inspector">
       <div class="tabs" role="tablist">${[['props','Properties'],['data','Data'],['quality','Quality'+(nd0?' '+nd0:'')],['insp','Inspections'],['src','Sources']].map((x,i)=>`<button role="tab" id="tab-${x[0]}" aria-controls="pan-${x[0]}" aria-selected="${i===0}" type="button">${x[1]}</button>`).join('')}</div>
       <div class="tabpan" id="pan-props" role="tabpanel"><div class="pickbox" id="pick" aria-live="polite"></div>
-        <div class="alldata"><h3 class="blk-h">All data on this asset <small>${dataRows.length} values, ${nSrc} with a source link</small></h3>${dataRows.length?dataRows.map(r=>`<div class="row"><span>${T(r[0])}</span><span>${T(r[1])}${r[2]?` ${link(r[2])}`:''}</span></div>${r[3]?evid(r[3]):''}`).join(''):'<p class="note">No specifications are recorded for this asset yet.</p>'}</div>
+        <div class="alldata"><h3 class="blk-h">All data on this asset <small>${dataRows.length} values, ${nSrc} with a source link</small></h3>${dataRows.length?dataRows.map(r=>`<div class="row"><span>${T(r[0])}${dq(r[0])}</span><span>${T(r[1])}${r[2]?` ${link(r[2])}`:''}</span></div>${r[3]?evid(r[3]):''}`).join(''):'<p class="note">No specifications are recorded for this asset yet.</p>'}</div>
         ${hero?`<figure class="photo"><img alt="" src="${esc(hero.src)}">${hero.credit?`<figcaption>${T(hero.credit)}</figcaption>`:''}</figure>`:''}</div>
       <div class="tabpan" id="pan-data" role="tabpanel" hidden>${blk(['about','zag','specs','geometry','owner','record','history'])}</div>
       <div class="tabpan" id="pan-quality" role="tabpanel" hidden>
@@ -649,4 +653,6 @@ if(!window.TWIN_NO_BOOT) (async()=>{
     main.appendChild(foot); }
   window.addEventListener('beforeprint',build);
   if(window.matchMedia) matchMedia('print').addEventListener&&matchMedia('print').addEventListener('change',e=>{ if(e.matches) build(); });
+document.addEventListener('click',e=>{ const b=e.target.closest('.dq'); document.querySelectorAll('.dq.pin').forEach(x=>{ if(x!==b) x.classList.remove('pin'); }); if(b&&!e.target.closest('.dq-c')) b.classList.toggle('pin'); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') document.querySelectorAll('.dq.pin').forEach(x=>x.classList.remove('pin')); });
 })();
