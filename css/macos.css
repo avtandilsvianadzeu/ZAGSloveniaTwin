@@ -561,3 +561,22 @@ h1,h2,.wrap.home h1,.asset h1,.info h2,.zb-title b,.sf-about b,.printhead h1,.lg
 .tbv-c li.op{list-style:none;margin-left:-16px;padding-left:9px;border-left:3px solid #E0A100}
 .tbv-c .note{margin:8px 0 0;font-size:11.5px;color:#6A6F7B}
 @media (hover:none){.tbv-c{position:static;margin-top:8px;display:none;opacity:1;transform:none;pointer-events:auto}.tbv{flex-direction:column;align-items:flex-start}.tbv.pin .tbv-c{display:block}}
+/* measuring on the map */
+#map.measuring .maplibregl-canvas{cursor:crosshair!important}
+.vctl #bMeasure{border-top:1px solid var(--g-edge)!important}
+.mread{position:absolute;left:50%;top:122px;transform:translateX(-50%);z-index:26;display:flex;flex-direction:column;gap:4px;min-width:240px;max-width:min(360px,calc(100% - 24px));padding:10px 14px 10px;border-radius:18px;
+  background:linear-gradient(160deg,rgba(255,255,255,.82),rgba(255,247,240,.66));-webkit-backdrop-filter:blur(20px) saturate(170%);backdrop-filter:blur(20px) saturate(170%);
+  box-shadow:inset 0 0 0 .5px rgba(255,255,255,.8),0 0 0 .5px rgba(217,72,15,.3),0 12px 32px rgba(90,40,0,.14);font:12.5px/1.4 var(--font);color:#3A3F4B;transform-origin:50% 0}
+.mread[hidden]{display:none}
+.mread b{font:600 12px var(--font);color:#D9480F;letter-spacing:.02em}
+.mread .mt{font:700 22px/1.1 var(--font);color:#1D1D1F;font-variant-numeric:tabular-nums}
+.mread .ms{color:#6E6E73;font-size:12px}
+.mread .mh{font-size:12px}
+.mread .mb{display:flex;gap:6px;margin-top:4px}
+.mread .mb button{height:26px;padding:0 11px;border:0;border-radius:999px;background:rgba(255,255,255,.7);box-shadow:0 0 0 .5px rgba(33,52,105,.16);font:600 12px var(--font);color:#213469;cursor:pointer}
+.mread .mb button:disabled{opacity:.45;cursor:default}
+.mread .mb button.pri{background:linear-gradient(#2A93FF,#0070F0);color:#fff;box-shadow:0 0 0 .5px rgba(0,60,140,.45)}
+.mread .mn{display:block;font-size:10.5px;color:#8A8F9B;font-style:normal;margin-top:2px}
+@keyframes mreadIn{from{opacity:0;transform:translateX(-50%) translateY(-6px)}to{opacity:1;transform:translateX(-50%)}}
+.mread{animation:mreadIn .35s ease both}
+@media (max-width:700px){.mread{top:auto;bottom:calc(170px + env(safe-area-inset-bottom,0px));left:12px;right:12px;transform:none;max-width:none}.mread{animation:none}}

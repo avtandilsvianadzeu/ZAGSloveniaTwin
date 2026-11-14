@@ -16,6 +16,7 @@ const ICON={
   up:SVG('<path d="M5 15l7-7 7 7"/>'), down:SVG('<path d="M5 9l7 7 7-7"/>'),
   home:SVG('<path d="M4 11l8-7 8 7v9h-5v-6h-6v6H4z"/>'), search:SVG('<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>'),
   close:SVG('<path d="M6 6l12 12M18 6L6 18"/>'), back:SVG('<path d="M15 5l-7 7 7 7"/>'), ext:SVG('<path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/>'),
+  ruler:SVG('<path d="M3 17L17 3l4 4L7 21zM7 13l2 2M10 10l2 2M13 7l2 2"/>'),
   pin:SVG('<path d="M12 21s-6-6-6-11a6 6 0 0 1 12 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/>')
 };
 /* marker glyphs by object type, drawn in a 24-unit box */
