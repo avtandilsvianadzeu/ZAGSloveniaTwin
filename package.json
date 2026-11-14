@@ -8,7 +8,7 @@
     "qa": "node tools/qa/check_data.mjs && node tools/qa/site_scan.mjs --pages=quick && node tools/qa/bot_check.mjs",
     "qa:bot": "node tools/qa/bot_check.mjs",
     "qa:a11y": "node tools/qa/a11y_check.mjs",
-    "qa:data": "node tools/qa/check_data.mjs",
+    "qa:data": "node tools/qa/check_data.mjs && node tools/qa/check_api.mjs",
     "qa:site": "node tools/qa/site_scan.mjs",
     "qa:links": "node tools/qa/check_links.mjs",
     "news": "node tools/fetch_news.mjs && node tools/fetch_zag_news.mjs"

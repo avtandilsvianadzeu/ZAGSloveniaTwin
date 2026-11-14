@@ -43,6 +43,7 @@ jobs:
           mkdir -p qa
           set -o pipefail
           node tools/qa/check_data.mjs | tee qa/data.txt
+          node tools/qa/check_api.mjs | tee -a qa/data.txt
       - name: Site scan in a browser
         id: site
         if: always()
