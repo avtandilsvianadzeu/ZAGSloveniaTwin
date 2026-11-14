@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=17'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=18'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector
@@ -432,7 +432,7 @@
   /* the avatars turn in 3D towards the pointer, over the launcher and over the chat panel, and sway when left alone */
   (function(){ const pics=[...root.querySelectorAll('.zb-pic')]; if(!pics.length) return; let idleT=null;
     const rest=()=>pics.forEach(p=>{ p.style.removeProperty('--tx'); p.style.removeProperty('--ty'); p.classList.add('idle3d'); });
-    const aim=(p,e)=>{ const r=p.getBoundingClientRect(), dx=(e.clientX-(r.left+r.width/2))/Math.max(80,r.width*3), dy=(e.clientY-(r.top+r.height/2))/Math.max(80,r.height*3); const ty=Math.max(-22,Math.min(22,dx*34)), tx=Math.max(-18,Math.min(18,-dy*30)); p.classList.remove('idle3d'); p.style.setProperty('--tx',tx+'deg'); p.style.setProperty('--ty',ty+'deg'); };
+    const aim=(p,e)=>{ const r=p.getBoundingClientRect(), dx=(e.clientX-(r.left+r.width/2))/Math.max(80,r.width*3), dy=(e.clientY-(r.top+r.height/2))/Math.max(80,r.height*3); const ty=Math.max(-30,Math.min(30,dx*44)), tx=Math.max(-22,Math.min(22,-dy*36)); p.classList.remove('idle3d'); p.style.setProperty('--tx',tx+'deg'); p.style.setProperty('--ty',ty+'deg'); };
     const onMove=e=>{ clearTimeout(idleT); const hp=panel.hidden?null:pics.find(p=>panel.contains(p)); const lp=pics.find(p=>launch.contains(p)); if(hp&&panel.contains(e.target)) aim(hp,e); if(lp&&(launch.contains(e.target)||e.target===launch)) aim(lp,e); idleT=setTimeout(rest,1800); };
     document.addEventListener('pointermove',onMove,{passive:true}); rest(); })();
   $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
