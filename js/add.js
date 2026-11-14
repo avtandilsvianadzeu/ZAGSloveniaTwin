@@ -49,7 +49,7 @@ const enough=()=>A.mode==='line'?A.pts.length>1:A.mode==='poly'?A.pts.length>2:A
 /* ---------- preview ---------- */
 function preview(){ clearTimeout(A.timer); A.timer=setTimeout(()=>{
   if(A.fem){ A.fem.sleep(); A.fem=null; }
-  const body=$('pbody'); body.innerHTML='<canvas id="fem" tabindex="0" aria-label="Model preview"></canvas><aside class="pickbox" id="pick" aria-live="polite"><b>Model</b><p>The model appears when the shape has enough points.</p></aside>';
+  const body=$('pbody'); body.innerHTML='<canvas id="fem" tabindex="0" aria-label="Model preview"></canvas><div class="pickbox" id="pick" aria-live="polite"><b>Model</b><p>The model appears when the shape has enough points.</p></div>';
   drawShape();
   if(!A.pts.length||A.mode==='point'||!enough()){ $('snote').textContent=A.mode==='point'?'A point has no model. It is placed on the map as a marker.':'A line needs two points and an outline needs three.'; return; }
   const f=feature('user_preview'), p=f.properties, u=p.user, t={specs:u.width&&A.mode==='line'?[{label:'Width',value:String(u.width),unit:'m'}]:[],anchors:[]};

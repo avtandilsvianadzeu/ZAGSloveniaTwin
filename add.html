@@ -39,7 +39,7 @@
   <span class="crumb">Add an object</span>
   <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
 </header>
-<script src="js/sitenav.js?v=35"></script>
+<script src="js/sitenav.js?v=36"></script>
 <script src="js/sidebar.js?v=5"></script>
 <main id="main"><div class="wrap home">
   <h1>Add an object</h1>
@@ -84,7 +84,7 @@
         <div class="stagebar"><div class="ctl" id="modelctl">
           <div class="seg" role="group" aria-label="Model view"><button id="m3d" type="button" aria-pressed="true">3D</button><button id="mTop" type="button" aria-pressed="false">Top</button><button id="mSide" type="button" aria-pressed="false">Side</button></div>
                     <button class="tbtn" id="mReset" type="button">Reset</button></div></div>
-        <div class="stagebody" id="pbody"><canvas id="fem" tabindex="0" aria-label="Model preview"></canvas><aside class="pickbox" id="pick" aria-live="polite"><b>Model</b><p>The model appears when the shape has enough points.</p></aside></div>
+        <div class="stagebody" id="pbody"><canvas id="fem" tabindex="0" aria-label="Model preview"></canvas><div class="pickbox" id="pick" aria-live="polite"><b>Model</b><p>The model appears when the shape has enough points.</p></div></div>
         <p class="note stage-note" id="snote">A line needs two points and an outline needs three.</p>
       </section>
     </div>
@@ -96,12 +96,12 @@
     <div class="mine" id="mine"></div>
   </section>
 </div></main>
-<footer class="tfoot"><p>Objects added here are shown as not verified until a source confirms them.</p></footer>
+<aside class="tfoot" aria-label="About this page"><p>Objects added here are shown as not verified until a source confirms them.</p></aside>
 <script>window.TWIN_NO_BOOT=true;</script>
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="js/mapstyle.js?v=67"></script>
 <script src="js/twin.js?v=69"></script>
-<script src="js/add.js?v=67"></script>
+<script src="js/add.js?v=68"></script>
 <script src="js/zagbot.js?v=51"></script>
 </body>
 </html>

@@ -36,7 +36,7 @@
   if(prev&&next){ prev.textContent='‹ Previous'; next.textContent='Next ›'; const pair=document.createElement('span'); pair.className='pager'; prev.parentNode.insertBefore(pair,prev); pair.appendChild(prev); pair.appendChild(next); }
   /* map page: the section filters move onto the map as one segmented control, like the view switch in Maps */
   const sec=document.getElementById('nav');
-  if(sec&&head.classList.contains('hdr')){ const bar=document.createElement('div'); bar.className='mapfilter'; bar.setAttribute('role','group'); bar.setAttribute('aria-label','Show on the map');
+  if(sec&&head.classList.contains('hdr')){ const bar=document.createElement('div'); bar.className='mapfilter'; bar.setAttribute('role','navigation'); bar.setAttribute('aria-label','Show on the map');
     head.parentNode.insertBefore(bar,head.nextSibling); bar.appendChild(sec); document.body.classList.add('has-mapfilter'); }
   document.body.classList.add('sierra');
 

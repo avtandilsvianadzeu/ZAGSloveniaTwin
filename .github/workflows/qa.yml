@@ -47,6 +47,12 @@ jobs:
         id: site
         if: always()
         run: node tools/qa/site_scan.mjs --pages=${{ github.event.inputs.pages || (github.event_name == 'pull_request' && 'quick' || 'all') }}
+      - name: Accessibility
+        id: a11y
+        if: always()
+        run: |
+          set -o pipefail
+          node tools/qa/a11y_check.mjs | tee qa/a11y.txt
       - name: ZAGBot answers
         id: bot
         if: always()
@@ -56,7 +62,7 @@ jobs:
       - name: Report
         if: always()
         run: |
-          { echo '## Data'; echo '```'; cat qa/data.txt 2>/dev/null || echo 'not run'; echo '```'; echo; cat qa/site-report.md 2>/dev/null || echo 'Site scan did not finish.'; echo; echo '## ZAGBot answers'; echo '```'; cat qa/bot.txt 2>/dev/null || echo 'not run'; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          { echo '## Data'; echo '```'; cat qa/data.txt 2>/dev/null || echo 'not run'; echo '```'; echo; cat qa/site-report.md 2>/dev/null || echo 'Site scan did not finish.'; echo; echo '## Accessibility'; echo '```'; cat qa/a11y.txt 2>/dev/null || echo 'not run'; echo '```'; echo '## ZAGBot answers'; echo '```'; cat qa/bot.txt 2>/dev/null || echo 'not run'; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
