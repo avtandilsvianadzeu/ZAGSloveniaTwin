@@ -901,3 +901,5 @@ body:not(:has(#map)){background:
 .panel p,.panel li,.panel td,.asset p,.tsec p{color:#2A2F3A}
 html.a11y-rt .panel,html.a11y-rt .dims{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
 @media (prefers-reduced-transparency:reduce){.panel,.dims,.stats,section.glass,.asset,.tsec,.pane,.info,.list,.lgd,.tl,.sidebar{background:rgba(255,255,255,.96)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}}
+/* the data panel of a record can scroll its last values clear of the ZAGBot button */
+.insp .tabpan,.insp{padding-bottom:84px!important}

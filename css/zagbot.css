@@ -321,3 +321,7 @@ html.a11y-rt .zb .zb-launch{background:#fff!important;-webkit-backdrop-filter:no
 /* the orb's glow in blue and yellow */
 .zb .zb-orb{box-shadow:0 6px 18px rgba(0,87,183,.20),0 0 14px rgba(255,205,0,.30)!important}
 .zb.listening .zb-orb,.zb.speaking .zb-orb{box-shadow:0 0 22px rgba(255,205,0,.55),0 0 10px rgba(0,87,183,.45)!important}
+/* on the record page the button is the orb alone, so it covers less of the data panel */
+body:has(.insp) .zb .zb-launch{width:64px!important;padding:4px!important;border-radius:50%!important;justify-content:center;background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important}
+body:has(.insp) .zb .zb-launch::after{display:none!important}
+body:has(.insp) .zb .zb-lbl{display:none!important}
