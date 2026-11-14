@@ -6,7 +6,8 @@
   let lang='en'; try{ lang=localStorage.getItem(KEY)||((navigator.language||'').toLowerCase().startsWith('sl')?'sl':'en'); }catch(_){}
   const q=new URLSearchParams(location.search).get('lang'); if(q==='sl'||q==='en'){ lang=q; try{ localStorage.setItem(KEY,lang); }catch(_){} }
   window.LANG=lang;
-  window.setLang=l=>{ try{ localStorage.setItem(KEY,l); }catch(_){} const u=new URL(location.href); u.searchParams.delete('lang'); location.replace(u.href); };
+  /* with a selected record the address carries a hash; replacing it with the same address is then a same-document jump and nothing reloads, so reload instead */
+  window.setLang=l=>{ try{ localStorage.setItem(KEY,l); }catch(_){} const u=new URL(location.href); u.searchParams.delete('lang'); if(u.href===location.href) location.reload(); else location.replace(u.href); };
   const ACTIVE=lang==='sl'; if(ACTIVE) document.documentElement.lang='sl';
 
   const D={

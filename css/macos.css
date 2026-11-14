@@ -796,3 +796,45 @@ body.splashing .zb-tease,body.splashing .tips{visibility:hidden}
 /* smoothness: a lighter blur on the two largest glass surfaces, the look unchanged */
 .hdr{-webkit-backdrop-filter:blur(16px) saturate(170%)!important;backdrop-filter:blur(16px) saturate(170%)!important}
 .info{-webkit-backdrop-filter:blur(18px) saturate(170%)!important;backdrop-filter:blur(18px) saturate(170%)!important}
+/* ---------- sidebar in the manner of a macOS app ---------- */
+.sb-btn{display:inline-grid;place-items:center;width:32px;height:30px;border:0;border-radius:9px;background:transparent;color:#213469;cursor:pointer;flex:none;margin-right:2px}
+.sb-btn:hover,.sb-btn[aria-expanded=true]{background:rgba(33,52,105,.10)}
+.sb-btn svg,.sidebar svg{width:16px;height:16px}
+.sidebar{position:fixed;left:0;top:0;bottom:0;z-index:150;width:236px;padding:12px 10px 10px;box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden;
+  background:linear-gradient(170deg,rgba(255,255,255,.70),rgba(240,245,255,.52));-webkit-backdrop-filter:blur(28px) saturate(180%);backdrop-filter:blur(28px) saturate(180%);
+  box-shadow:inset -1px 0 0 rgba(255,255,255,.7),1px 0 0 rgba(33,52,105,.10),12px 0 40px rgba(16,40,90,.10);transform:translateX(-14px);opacity:0;transition:transform .28s cubic-bezier(.2,.9,.25,1),opacity .22s ease;font-family:var(--font)}
+.sb-body{flex:1 1 auto;min-height:0;overflow:auto;scrollbar-width:none;padding-bottom:8px}.sb-body::-webkit-scrollbar{display:none}
+.sidebar.in{transform:none;opacity:1}
+.sidebar[hidden]{display:none}
+.sb-top{display:flex;align-items:center;gap:8px;padding:4px 6px 12px}
+.sb-top img{height:22px;border-radius:5px}.sb-top b{font:700 12px/1 var(--title,var(--font));letter-spacing:.06em;color:#213469;text-transform:uppercase;flex:1}
+.sb-x{width:28px;height:26px;border:0;border-radius:8px;background:transparent;color:#6E6E73;cursor:pointer;display:grid;place-items:center}.sb-x:hover{background:rgba(33,52,105,.08);color:#213469}
+.sidebar h6{margin:8px 8px 3px;font:600 11px var(--font);letter-spacing:.04em;text-transform:uppercase;color:#7C8291}
+.sb-g{display:flex;flex-direction:column;gap:1px}
+.sb-row{display:flex;align-items:center;gap:10px;height:30px;padding:0 10px;border-radius:9px;text-decoration:none;color:#1D1D1F;font-size:13.5px;font-weight:500;transition:background .15s}
+.sb-row svg{color:#0A7CFF;flex:none}
+.sb-row:hover{background:rgba(33,52,105,.08)}
+.sb-row[aria-current=page],.sb-row.on{background:rgba(255,255,255,.85);box-shadow:0 1px 3px rgba(16,40,90,.12),inset 0 0 0 .5px rgba(255,255,255,.9)}
+.sb-row[aria-current=page] svg,.sb-row.on svg{color:#213469}
+.sb-foot{flex:none;padding:10px 8px 2px;display:flex;align-items:center;justify-content:space-between;font-size:11.5px;color:#6E6E73;font-variant-numeric:tabular-nums;box-shadow:0 -.5px 0 rgba(33,52,105,.10)}
+.sb-live{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:#1F8F3A;letter-spacing:.05em;font-size:10.5px}.sb-live i{width:7px;height:7px;border-radius:50%;background:#34C759}
+.sb-scrim{position:fixed;inset:0;z-index:149;background:rgba(16,24,40,.18)}
+.sb-scrim[hidden]{display:none}
+/* on wide screens the open sidebar pushes the page; the map keeps its full width underneath */
+@media (min-width:1101px){
+  body.sb-open .hdr,body.sb-open .thdr{padding-left:252px!important}
+  body.sb-open .hdr .brand,body.sb-open .thdr .brand,body.sb-open .sitenav{display:none}
+  body.sb-open .hdr .hsearch{flex:1 1 320px}
+  body.sb-open main,body.sb-open .sitefoot{margin-left:236px}
+  body.sb-open .info{left:248px}
+  body.sb-open .lgd,body.sb-open .lgdshow{left:248px!important}
+  body.sb-open .maplibregl-ctrl-bottom-left{left:496px!important}
+  body.sb-open .status{padding-left:248px}
+  body.sb-open .mapfilter{left:calc(50% + 118px)}
+  body.sb-open .tl{left:calc(50% + 118px)!important;max-width:min(560px,calc(100% - 660px))}
+  body.sb-open .tlshow{left:calc(50% + 118px)!important}
+  body.sb-open.has-panel .tl,body.sb-open.has-panel .tlshow{left:calc(50% + var(--panel,400px) / 2 + 124px)!important}
+  body.sb-open.has-panel .maplibregl-ctrl-bottom-left{left:calc(var(--panel,400px) + 272px)!important}
+}
+@media (max-width:1100px){.sidebar{width:min(300px,86vw)}}
+html.a11y-rt .sidebar,html.a11y-hc .sidebar{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
