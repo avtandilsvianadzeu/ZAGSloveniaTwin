@@ -51,3 +51,6 @@ let map=null, ready=false, ORIG={}, TOUCHED={}, selMarker=null, hlToken=0, orbit
 /* credits required by the providers (Esri World Imagery item credits; Mapzen terrain attribution list) */
 const TERRAIN_CREDIT='<a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md" target="_blank" rel="noopener">Terrain: Mapzen, AWS Terrain Tiles (EU-DEM produced using Copernicus data, DGM Österreich, USGS)</a>';
 const IMAGERY_CREDIT='Imagery: <a href="https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9" target="_blank" rel="noopener">Esri, Vantor, Earthstar Geographics, and the GIS User Community</a>';
+/* ZAGBot avatar: leave empty for the drawn android; set to an image address (PNG with transparency, at least 480 x 528 px,
+   head and shoulders, the ZAG emblem on the chest) to use a rendered picture instead, for example 'img/zagbot.png'. */
+window.ZAGBOT_AVATAR=window.ZAGBOT_AVATAR||'';

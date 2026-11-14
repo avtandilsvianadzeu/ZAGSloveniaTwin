@@ -12,23 +12,53 @@
   const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=14'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
-  const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
-    <defs><linearGradient id="zbSkin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E9F2"/></linearGradient>
-      <radialGradient id="zbIris" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#E6F6FF"/><stop offset=".45" stop-color="#4FC3FF"/><stop offset="1" stop-color="#0A5BC4"/></radialGradient>
-      <linearGradient id="zbChrome" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F9FC"/><stop offset="1" stop-color="#C9D2E0"/></linearGradient></defs>
-    <g class="zb-ant"><circle cx="60" cy="9" r="3.2" fill="#4FC3FF"/><circle cx="60" cy="9" r="6" fill="none" stroke="#4FC3FF" stroke-opacity=".35"/></g>
-    <path d="M60 14c22 0 36 15 36 37 0 18-9 32-22 39a22 22 0 0 1-28 0C33 83 24 69 24 51c0-22 14-37 36-37z" fill="url(#zbSkin)" stroke="#B9C3D3" stroke-width="1.5"/>
-    <path d="M38 40q22-9 44 0" fill="none" stroke="#D5DCE8" stroke-width="1.2"/>
-    <path d="M60 56v9M55 68q5 3 10 0" fill="none" stroke="#C3CCDB" stroke-width="1.5" stroke-linecap="round"/>
-    <g class="zb-pupils"><ellipse class="zb-eye" cx="46" cy="52" rx="7.5" ry="5.5" fill="#1B2B4A"/><ellipse class="zb-eye" cx="74" cy="52" rx="7.5" ry="5.5" fill="#1B2B4A"/>
-      <circle cx="46" cy="52" r="4" fill="url(#zbIris)"/><circle cx="74" cy="52" r="4" fill="url(#zbIris)"/><circle cx="47.5" cy="50.5" r="1.2" fill="#fff"/><circle cx="75.5" cy="50.5" r="1.2" fill="#fff"/></g>
-    <path d="M50 78q10 6 20 0" fill="none" stroke="#7E8AA0" stroke-width="2" stroke-linecap="round"/>
-    <g><circle cx="24" cy="54" r="6" fill="url(#zbChrome)" stroke="#B9C3D3"/><circle cx="24" cy="54" r="2.5" fill="#4FC3FF"/><circle cx="96" cy="54" r="6" fill="url(#zbChrome)" stroke="#B9C3D3"/><circle cx="96" cy="54" r="2.5" fill="#4FC3FF"/></g>
-    <path d="M52 92h16v8H52z" fill="url(#zbChrome)" stroke="#B9C3D3"/><path d="M52 95h16M52 98h16" stroke="#B9C3D3" stroke-width=".8"/>
-    <path d="M30 100h60l18 12-6 14-12-6v12H30v-12l-12 6-6-14z" fill="url(#zbChrome)" stroke="#B9C3D3" stroke-width="1.5" stroke-linejoin="round"/>
-    <circle cx="60" cy="116" r="9" fill="#213469"/><circle cx="60" cy="116" r="6.5" fill="none" stroke="#4FC3FF" stroke-width="1.5"/><text x="60" y="118.6" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="6.5" font-weight="800" fill="#FFFFFF">ZAG</text>
-    <g><rect x="34" y="124" width="8" height="2.5" rx="1" fill="#FFFFFF" stroke="#B9C3D3" stroke-width=".5"/><rect x="34" y="126.5" width="8" height="2.5" fill="#0057B8"/><rect x="34" y="129" width="8" height="2.5" rx="1" fill="#ED1C24"/></g>
-    ${wave?'<g class="zb-wave"><path d="M104 112l10-14" stroke="#B9C3D3" stroke-width="7" stroke-linecap="round"/><path d="M104 112l10-14" stroke="url(#zbChrome)" stroke-width="5" stroke-linecap="round"/><circle cx="115" cy="96" r="5" fill="url(#zbChrome)" stroke="#B9C3D3" stroke-width="2"/></g>':''}
+  /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector
+     so it stays sharp at every size; a rendered picture can replace it by setting window.ZAGBOT_AVATAR to an image address */
+  const ROBOT=(size,wave)=>window.ZAGBOT_AVATAR?`<img class="zb-robot" src="${window.ZAGBOT_AVATAR}" width="${size}" height="${Math.round(size*1.1)}" alt="">`:`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
+    <defs>
+      <linearGradient id="rbSkin" x1="0.2" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#EEF1F6"/><stop offset="1" stop-color="#C9D1DE"/></linearGradient>
+      <linearGradient id="rbSkin2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8FAFC"/><stop offset="1" stop-color="#B8C2D2"/></linearGradient>
+      <linearGradient id="rbDark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A4356"/><stop offset="1" stop-color="#14192A"/></linearGradient>
+      <radialGradient id="rbIris" cx=".42" cy=".4" r=".6"><stop offset="0" stop-color="#DDF4FF"/><stop offset=".35" stop-color="#5BC8FF"/><stop offset=".75" stop-color="#1177E6"/><stop offset="1" stop-color="#0A3F8F"/></radialGradient>
+      <radialGradient id="rbGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#7FD6FF" stop-opacity=".9"/><stop offset="1" stop-color="#7FD6FF" stop-opacity="0"/></radialGradient>
+      <linearGradient id="rbShade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></linearGradient>
+      <filter id="rbSoft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.1"/></filter>
+    </defs>
+    <!-- neck: segmented column -->
+    <path d="M49 86h22v16H49z" fill="url(#rbSkin2)"/><path d="M49 90h22M49 95h22M49 100h22" stroke="#9AA6B8" stroke-width=".9"/><path d="M52 86h16v16H52z" fill="url(#rbShade)"/>
+    <!-- shoulders and chest plates -->
+    <path d="M60 104c-16 0-30 4-39 10l-5 18h88l-5-18c-9-6-23-10-39-10z" fill="url(#rbSkin)" stroke="#B4BECD" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M60 104c-9 0-17 1-24 4l6 24h36l6-24c-7-3-15-4-24-4z" fill="#F4F6FA" stroke="#C3CCDA" stroke-width="1"/>
+    <path d="M22 118c5-5 12-8 20-10M98 118c-5-5-12-8-20-10" fill="none" stroke="#C3CCDA" stroke-width="1"/>
+    <!-- the emblem on the chest -->
+    <rect x="48.5" y="110" width="23" height="15" rx="3" fill="#213469"/><rect x="48.5" y="110" width="23" height="15" rx="3" fill="none" stroke="#7FD6FF" stroke-opacity=".55" stroke-width=".8"/>
+    <text x="60" y="121.2" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="9.2" font-weight="900" letter-spacing=".2" fill="#FFFFFF">ZAG</text>
+    <circle cx="60" cy="128.5" r="1.6" fill="#7FD6FF"/><circle cx="60" cy="128.5" r="3.2" fill="url(#rbGlow)"/>
+    <!-- head: cranium, cheeks, jaw -->
+    <path d="M60 10c17 0 29 12 29 30 0 9-2 17-6 24-5 9-13 18-23 22-10-4-18-13-23-22-4-7-6-15-6-24 0-18 12-30 29-30z" fill="url(#rbSkin)" stroke="#B4BECD" stroke-width="1.2"/>
+    <path d="M60 10c17 0 29 12 29 30 0 9-2 17-6 24-5 9-13 18-23 22-10-4-18-13-23-22-4-7-6-15-6-24 0-18 12-30 29-30z" fill="url(#rbShade)" opacity=".35"/>
+    <!-- face plate seam, brow and cheek lines -->
+    <path d="M37 44c3-14 11-21 23-21s20 7 23 21" fill="none" stroke="#C3CCDA" stroke-width=".9"/>
+    <path d="M38 50c2 16 10 28 22 36 12-8 20-20 22-36" fill="none" stroke="#C3CCDA" stroke-width=".9"/>
+    <path d="M43 42q7-5 14-3M63 39q7-2 14 3" fill="none" stroke="#AEB9C9" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- ears: dark sockets with a glowing ring -->
+    <ellipse cx="30" cy="52" rx="4.5" ry="7" fill="url(#rbDark)"/><ellipse cx="30" cy="52" rx="2.6" ry="4.6" fill="none" stroke="#5BC8FF" stroke-width="1"/>
+    <ellipse cx="90" cy="52" rx="4.5" ry="7" fill="url(#rbDark)"/><ellipse cx="90" cy="52" rx="2.6" ry="4.6" fill="none" stroke="#5BC8FF" stroke-width="1"/>
+    <!-- eyes -->
+    <g class="zb-pupils">
+      <path class="zb-eye" d="M40 51q9-7 18 0q-9 7-18 0z" fill="url(#rbDark)"/><path class="zb-eye" d="M62 51q9-7 18 0q-9 7-18 0z" fill="url(#rbDark)"/>
+      <circle cx="49" cy="51" r="4.3" fill="url(#rbIris)"/><circle cx="71" cy="51" r="4.3" fill="url(#rbIris)"/>
+      <circle cx="49" cy="51" r="1.7" fill="#06132B"/><circle cx="71" cy="51" r="1.7" fill="#06132B"/>
+      <circle cx="47.4" cy="49.4" r="1.1" fill="#fff"/><circle cx="69.4" cy="49.4" r="1.1" fill="#fff"/>
+      <circle cx="49" cy="51" r="6.5" fill="url(#rbGlow)" opacity=".55"/><circle cx="71" cy="51" r="6.5" fill="url(#rbGlow)" opacity=".55"/>
+    </g>
+    <path d="M40 51q9-7 18 0M62 51q9-7 18 0" fill="none" stroke="#8F9BAE" stroke-width=".8"/>
+    <!-- nose and mouth, shaded rather than drawn -->
+    <path d="M58 56q-2 6 0 10h4q2-4 0-10" fill="#D6DDE8" opacity=".9"/><path d="M57 66q3 2 6 0" fill="none" stroke="#AEB9C9" stroke-width=".9" stroke-linecap="round"/>
+    <path d="M51 76q9 4 18 0" fill="none" stroke="#6F7B90" stroke-width="1.6" stroke-linecap="round"/><path d="M52 77.5q8 3 16 0" fill="none" stroke="#fff" stroke-width=".8" opacity=".7"/>
+    <!-- specular highlight on the cranium -->
+    <ellipse cx="48" cy="22" rx="9" ry="4" fill="#fff" opacity=".65" transform="rotate(-25 48 22)" filter="url(#rbSoft)"/>
+    ${wave?'<g class="zb-wave"><path d="M100 118l12-16" stroke="#B4BECD" stroke-width="8" stroke-linecap="round"/><path d="M100 118l12-16" stroke="url(#rbSkin2)" stroke-width="6" stroke-linecap="round"/><circle cx="113" cy="100" r="5.5" fill="url(#rbSkin2)" stroke="#B4BECD" stroke-width="1.5"/></g>':''}
   </svg>`;
 
   /* ---------- text helpers ---------- */

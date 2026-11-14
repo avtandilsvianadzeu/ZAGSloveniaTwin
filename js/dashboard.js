@@ -42,9 +42,9 @@
   $('dlInsp').onclick=()=>{ const items={}; for(const p of F){ const l=inspFor(p.id).map(e=>{ const o=Object.assign({},e); delete o.origin; return o; }); if(l.length) items[p.id]=l; }
     const blob=new Blob([JSON.stringify({note:'Inspection records from the ZAG Digital Atlas. Upload as data/inspections.json to publish.',items},null,1)],{type:'application/json'}), x=document.createElement('a'); x.href=URL.createObjectURL(blob); x.download='inspections.json'; document.body.appendChild(x); x.click(); x.remove(); };
   /* the latest items of Aktualno, read from zag.si by the news workflow (data/zag_news.json) */
-  fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000)).then(r=>r.ok?r.json():null).then(j=>{ if(!j||!j.items) return; const sl=window.LANG==='sl', items=(j.items[sl?'sl':'en']||j.items.sl||[]).slice(0,6); if(!items.length) return;
+  fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000)).then(r=>r.ok?r.json():null).then(j=>{ if(!j||!j.items) return; const sl=window.LANG==='sl', items=((sl?j.items.sl:j.items.latest)||j.items.sl||[]).slice(0,6); if(!items.length) return;
     const fmt=d=>d?new Date(d).toLocaleDateString('sl-SI',{day:'numeric',month:'numeric',year:'numeric'}):'';
-    $('znGrid').innerHTML=items.map(i=>`<a class="zn" href="${esc(i.url)}" target="_blank" rel="noopener"><time>${esc(fmt(i.date))}</time><b>${esc(i.title)}</b><p>${esc(i.summary||'')}</p></a>`).join('');
+    $('znGrid').innerHTML=items.map(i=>`<a class="zn" href="${esc(i.url)}" target="_blank" rel="noopener"><time>${esc(fmt(i.date))}${!sl&&i.lang==='sl'?' <i>SL</i>':''}</time><b>${esc(i.title)}</b><p>${esc(i.summary||'')}</p></a>`).join('');
     const up=new Date(j.updated).toLocaleString('sl-SI',{timeZone:'Europe/Ljubljana',day:'numeric',month:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit'});
     $('znNote').innerHTML=(sl?'Novice z <a href="https://www.zag.si/" target="_blank" rel="noopener">zag.si</a>, prebrane ':'News from <a href="https://www.zag.si/" target="_blank" rel="noopener">zag.si</a>, read ')+esc(up)+(sl?' (slovenski čas). Posodablja se večkrat na uro.':' (Slovenian time). Refreshed several times an hour.');
     $('zagnews').hidden=false; }).catch(()=>{});
