@@ -27,7 +27,7 @@ function addAtlasLayers(){
 const markerFor=p=>`m-${MARK[p.object_type]?p.object_type:'other'}-${kindOf(p)}${PRECOK(p.position_precision)?'':'-a'}`;
 function refreshProjects(){
   const feats=visibleFeatures();
-  if(ready) map.getSource('sites').setData({type:'FeatureCollection',features:feats.map(f=>({type:'Feature',geometry:f.geometry,properties:{id:f.properties.id,n:f.properties.name_en||f.properties.name,ic:markerFor(f.properties)}}))});
+  if(ready) map.getSource('sites').setData({type:'FeatureCollection',features:feats.map(f=>({type:'Feature',geometry:f.geometry,properties:{id:f.properties.id,n:dispName(f.properties),ic:markerFor(f.properties)}}))});
   emit('filtered',{n:feats.length,total:ZA.features.length});
 }
 function showLine(lines){

@@ -10,7 +10,7 @@
   const col={good:'#34C759',fair:'#FF9500',poor:'#FF3B30',critical:'#A1140C',none:'#8E8E93'}, noRec=zag.length-withInsp.length;
   const exact=zag.filter(p=>EXACT(p.position_precision)).length, openQ=zag.filter(p=>tw(p).open), diff=zag.reduce((a,p)=>a+((tw(p).differences||[]).length),0);
   const news=Object.entries(D.news).flatMap(([id,l])=>(l||[]).map(n=>Object.assign({id},n))).filter(n=>D.byId[n.id]).sort((a,b)=>a.date<b.date?1:-1).slice(0,8);
-  const thin=zag.slice().sort((a,b)=>nSpec(a)-nSpec(b)).slice(0,10), a=p=>`<a href="twin.html?id=${encodeURIComponent(p.id)}">${T(p.name_en||p.name)}</a>`;
+  const thin=zag.slice().sort((a,b)=>nSpec(a)-nSpec(b)).slice(0,10), a=p=>`<a href="twin.html?id=${encodeURIComponent(p.id)}">${T(dispName(p))}</a>`;
   const byType={}; zag.forEach(p=>{ const k=GROUP_NAME[p.object_type]||cap(p.object_type); (byType[k]=byType[k]||[]).push(p); });
   $('main').innerHTML=`<div class="wrap home"><h1>Dashboard</h1><p class="lead">What the atlas holds today, counted from its own data. Condition appears only where an inspection record has been entered.</p>
     <section class="dims" aria-label="Totals"><div class="dim"><div class="v">${zag.length}</div><div class="k">ZAG objects</div></div><div class="dim"><div class="v">${zag.filter(hasGeo).length}</div><div class="k">with a model</div></div>

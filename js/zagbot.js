@@ -329,13 +329,13 @@
   async function toggle(open){ const on=open==null?panel.hidden:open; panel.hidden=!on; launch.setAttribute('aria-expanded',String(on)); root.classList.toggle('open',on);
     if(on&&!started){ started=true; say('Loading the atlas data...');
       try{ await load(); log.innerHTML=''; const here=PAGE_ID&&DB.byId[PAGE_ID]; if(here) ctx.rec=here;
-        say(`Hello, I am <b>ZAGBot</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
+        say(window.LANG==='sl'?`Pozdravljeni, sem <b>ZAGBot</b>. Poznam ${DB.recs.length} struktur v atlasu in njihove preverjene vrednosti.${here?` Ste na strani <b>${esc(here.name)}</b>.`:''} Vprašajte me v slovenščini ali angleščini, odgovarjam iz podatkov atlasa. Kaj želite?`:`Hello, I am <b>ZAGBot</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
         offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); }
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
     if(on) setTimeout(()=>input.focus(),50); }
   /* greeting next to the launcher: types out what ZAGBot can do, stays 10 seconds, can be closed */
   (function teaser(){ let off=false; try{ off=sessionStorage.getItem('zb_teaser_off')==='1'; }catch(_){} if(off) return;
-    const T=['Hi, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also take a correction to the atlas team.'];
+    const T=window.LANG==='sl'?['Pozdravljeni, sem ZAGBot.','Vprašajte me, kaj je ZAG naredil pri kateri koli od 73 struktur, o njeni zgodbi, ključnih podatkih z viri ali projektih za njo.','Sprejmem tudi popravek za ekipo atlasa.']:['Hi, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also take a correction to the atlas team.'];
     const el=document.createElement('div'); el.className='zb-tease'; el.setAttribute('role','status');
     el.innerHTML='<button type="button" class="zb-tx" aria-label="Close the greeting">×</button><p class="zb-tt"></p><span class="zb-tbar"><i></i></span>'; root.appendChild(el);
     const tt=el.querySelector('.zb-tt'); let timer=null, done=false;
@@ -343,7 +343,7 @@
     el.querySelector('.zb-tx').onclick=e=>{ e.stopPropagation(); try{ sessionStorage.setItem('zb_teaser_off','1'); }catch(_){} bye(); };
     el.onclick=()=>{ bye(); toggle(true); };
     setTimeout(()=>{ if(!panel.hidden||done) return; el.classList.add('in'); const full=T.join(' '), still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches; let i=0;
-      if(still) tt.textContent=full; else { const step=()=>{ if(done) return; i=Math.min(full.length,i+2); tt.innerHTML=esc(full.slice(0,i)).replace(/^Hi, I am ZAGBot\./,'<b>Hi, I am ZAGBot.</b>')+(i<full.length?'<i class="zb-caret"></i>':''); if(i<full.length) setTimeout(step,22); }; step(); }
+      if(still) tt.textContent=full; else { const step=()=>{ if(done) return; i=Math.min(full.length,i+2); tt.innerHTML=esc(full.slice(0,i)).replace(/^(Hi, I am ZAGBot\.|Pozdravljeni, sem ZAGBot\.)/,'<b>$1</b>')+(i<full.length?'<i class="zb-caret"></i>':''); if(i<full.length) setTimeout(step,22); }; step(); }
       timer=setTimeout(bye,10000); },1600);
     launch.addEventListener('click',bye); })();
   launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');

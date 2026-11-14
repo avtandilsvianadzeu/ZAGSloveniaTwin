@@ -184,7 +184,7 @@ function renderTwin(f){ window.__rec=f.properties;
   if(EMBED){ $('main').innerHTML=`<div class="embedbox">${modelPane}<div class="pickbox" id="pick" aria-live="polite"></div><p class="note stage-note">${T(model.note||'')}</p></div>`; }
   else $('main').innerHTML=`<div class="ws${hasModel?'':' nomodel'}">
     <aside class="tree" aria-label="Asset and its parts">
-      <div class="asset"><p class="kind">${esc(kind)}</p><h1>${T(p.name_en||p.name)}</h1>${p.name_sl&&p.name_sl!==p.name_en?`<p class="sl" lang="sl">${T(p.name_sl)}</p>`:''}
+      <div class="asset"><p class="kind">${esc(kind)}</p><h1>${T(dispName(p))}</h1>${altName(p)?`<p class="sl" lang="${LANG==='sl'?'en':'sl'}">${T(altName(p))}</p>`:''}
         <div class="tags"><span class="tag">${esc(typeof typeLabel==='function'?typeLabel(p.object_type):cap(p.object_type))}</span>${where?`<span class="tag">${T(where)}</span>`:''}<span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only',user:'Added by a user, not verified'}[p.evidence_level]||p.evidence_level)}</span></div>${typeof zagAreaHTML==='function'?zagAreaHTML(p):''}
         <dl class="meta"><div><dt>Asset ID</dt><dd class="mono">${esc(id)}</dd></div><div><dt>Position basis</dt><dd class="${exact?'okc':'warnc'}">${esc(PREC[p.position_precision]||p.position_precision)}</dd></div><div><dt>WGS 84</dt><dd class="mono">${coord}</dd></div>${typeof toD96==='function'?(()=>{ const d=toD96([+p.longitude,+p.latitude]); return `<div><dt>D96/TM</dt><dd class="mono" title="Slovenian national coordinates, EPSG:3794, easting and northing in metres">e ${Math.round(d[0])}, n ${Math.round(d[1])}</dd></div>`; })():''}<div><dt>Register</dt><dd>${sheet} of ${order.length}</dd></div></dl>
         <div class="btnrow"><a class="tbtn solid" id="req" href="#">Request latest information</a>${EDIT&&INSP_TYPES.has(p.object_type)?'<a class="tbtn" id="toinsp" href="#inspect">Add inspection</a>':'<a class="tbtn" id="toinsp" href="#inspect">Inspections</a>'}</div><div class="btnrow two"><button class="tbtn" type="button" id="prt" title="Print this record with all its data, or save it as a PDF">Print report</button><a class="tbtn" href="api/v1/objects/${encodeURIComponent(p.id)}.json" target="_blank" rel="noopener" title="All data of this record as one file">Data file</a></div>${!hasModel&&isArea(p)?'':`<div class="btnrow"><button type="button" class="tbtn" onclick="window.ZAGBOT&&ZAGBOT.ask('3d model')" title="Tell the atlas team what should change in the 3D model">${hasModel?'Suggest a model update':'Suggest a 3D model'}</button></div>`}</div>
@@ -221,10 +221,10 @@ function renderTwin(f){ window.__rec=f.properties;
       <div class="tabpan" id="pan-src" role="tabpanel" hidden>${blk(['sources','photos','news'])}</div>
     </aside></div>`;
   document.title=`${clean(p.name_en||p.name)}, ZAG Digital Atlas`;
-  const cr=$('crumb'); if(cr) cr.innerHTML=`<a href="twin.html">Assets</a> / ${esc(GROUP_NAME[p.object_type]||cap(p.object_type))} / <b>${T(p.name_en||p.name)}</b>`;
+  const cr=$('crumb'); if(cr) cr.innerHTML=`<a href="twin.html">Assets</a> / ${esc(GROUP_NAME[p.object_type]||cap(p.object_type))} / <b>${T(dispName(p))}</b>`;
   const i0=order.indexOf(id), pv=$('prev'), nx=$('next'); if(pv&&nx){ pv.hidden=nx.hidden=false; pv.href='twin.html?id='+encodeURIComponent(order[(i0-1+order.length)%order.length]); nx.href='twin.html?id='+encodeURIComponent(order[(i0+1)%order.length]); }
   const tm=$('tomap'); if(tm) tm.href='index.html#'+encodeURIComponent(id);
-  const home=()=>{ const el=$('pick'); if(el) el.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(p.name_en||p.name)}</b><div class="row"><span>Type</span><span>${esc(cap(p.object_type))}</span></div><div class="row"><span>Position</span><span>${esc(PREC[p.position_precision]||p.position_precision)}</span></div>${hasModel?'<p>Nothing selected. Click a part on the site map, in the model or in the structure breakdown.</p>':''}`; };
+  const home=()=>{ const el=$('pick'); if(el) el.innerHTML=`<h3 class="blk-h">Selection</h3><b>${T(dispName(p))}</b><div class="row"><span>Type</span><span>${esc(cap(p.object_type))}</span></div><div class="row"><span>Position</span><span>${esc(PREC[p.position_precision]||p.position_precision)}</span></div>${hasModel?'<p>Nothing selected. Click a part on the site map, in the model or in the structure breakdown.</p>':''}`; };
   const ctl={fem:null,map:null}; home();
   const markTree=sel=>{ document.querySelectorAll('.trow').forEach(b=>b.classList.toggle('on',!!sel&&((sel.part!=null&&b.dataset.part==sel.part&&sel.kind!=='ref')||(sel.kind==='ref'&&b.dataset.ref==sel.ref)))); };
   /* short how-to-rotate hint on both views, shown for 10 seconds */
@@ -582,9 +582,9 @@ function renderIndex(){
   const factHit=(p,qq)=>{ const w=qq.split(/\s+/).filter(Boolean); return (FACTS[p.id]||[]).find(f=>w.every(x=>f[1].includes(x)))||null; };
   const matches=(p,qq)=>!qq||qq.split(/\s+/).filter(Boolean).every(x=>nameOf(p).includes(x))||!!factHit(p,qq);
   const card=p=>{const t=D.twins[p.id],n=t?(t.specs||[]).length:0;
-    return `<a class="obj" href="twin.html?id=${encodeURIComponent(p.id)}" data-g="${esc(p.object_type||'other')}" data-id="${esc(p.id)}"><b>${T(p.name_en||p.name)}</b><span>${T(p.locality||p.municipality||'')}</span><small class="hit" hidden></small>
+    return `<a class="obj" href="twin.html?id=${encodeURIComponent(p.id)}" data-g="${esc(p.object_type||'other')}" data-id="${esc(p.id)}"><b>${T(dispName(p))}</b><span>${T(p.locality||p.municipality||'')}</span><small class="hit" hidden></small>
       <div class="tags">${n?`<span class="tag">${n} ${n===1?'specification':'specifications'}</span>`:''}${hasGeo(p)?'<span class="tag ok">3D model</span>':''}${EXACT(p.position_precision)?'':'<span class="tag warn">approximate position</span>'}</div></a>`;};
-  const COLS=[['Name',p=>p.name_en||p.name],['Type',p=>GROUP_NAME[p.object_type]||cap(p.object_type||'other')],['Place',p=>p.locality||p.municipality||''],['ZAG work',p=>String(p.year||'').replace(/^(\d{4})-(\d{4})$/,'$1 to $2').replace(/^(\d{4})-$/,'since $1')],['Built',p=>p.built||''],['Position',p=>EXACT(p.position_precision)?'exact':'approximate'],['Sourced values',p=>{const t=D.twins[p.id];return t?(t.specs||[]).filter(x=>x.source).length:0;}]];
+  const COLS=[['Name',p=>dispName(p)],['Type',p=>GROUP_NAME[p.object_type]||cap(p.object_type||'other')],['Place',p=>p.locality||p.municipality||''],['ZAG work',p=>String(p.year||'').replace(/^(\d{4})-(\d{4})$/,'$1 to $2').replace(/^(\d{4})-$/,'since $1')],['Built',p=>p.built||''],['Position',p=>EXACT(p.position_precision)?'exact':'approximate'],['Sourced values',p=>{const t=D.twins[p.id];return t?(t.specs||[]).filter(x=>x.source).length:0;}]];
   $('main').innerHTML=`<div class="wrap home"><h1>Assets</h1><p class="lead">Structures and sites where ZAG has documented work. Each opens its own sheet with a 3D view, key figures and specifications with sources.</p>
     <section class="dims" aria-label="Platform figures">
       <div class="dim"><div class="v">${D.features.length}</div><div class="k">objects</div></div>
@@ -633,7 +633,7 @@ if(!window.TWIN_NO_BOOT) (async()=>{
     const reg=document.querySelector('.asset')?((document.querySelector('.asset').textContent.match(/Register\s*(\d+ of \d+)/)||[])[1]||''):'';
     const head=document.createElement('header'); head.className='printhead';
     head.innerHTML=`<div class="ph-top"><img src="img/logo.webp" alt="ZAG"><div><b>ZAG Digital Atlas</b><span>Asset record</span></div></div>
-      <h1>${esc(p.name_en||p.name)}</h1>${p.name_sl&&p.name_sl!==p.name_en?`<p class="ph-sl">${esc(p.name_sl)}</p>`:''}
+      <h1>${esc(dispName(p))}</h1>${altName(p)?`<p class="ph-sl">${esc(altName(p))}</p>`:''}
       <table class="ph-tb"><tr><th>Asset ID</th><td>${esc(p.id)}</td><th>Type</th><td>${esc(cap(p.object_type||''))}</td><th>Sheet</th><td>${esc(reg)}</td></tr>
       <tr><th>Place</th><td>${esc([p.locality,p.municipality].filter((x,i,a)=>x&&a.indexOf(x)===i).join(', '))}</td><th>Position</th><td>${esc(PREC[p.position_precision]||p.position_precision||'')}</td><th>WGS 84</th><td>${(+p.latitude).toFixed(6)}, ${(+p.longitude).toFixed(6)}${typeof fmtD96==='function'?'<br>D96/TM '+fmtD96([+p.longitude,+p.latitude]):''}</td></tr>
       <tr><th>ZAG work</th><td colspan="3">${esc(p.zag_role||'')}${p.year?', '+esc(String(p.year).replace(/-$/,' onwards').replace(/-/g,' to ')):''}</td><th>Printed</th><td>${fmt(new Date())}</td></tr></table>`;

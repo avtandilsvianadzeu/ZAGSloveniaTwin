@@ -37,7 +37,7 @@
     const own=sel.types.size||sel.kinds.size||sel.quick.size, oth=others(), any=own||oth.length, n=visibleFeatures().length, all=ZA.features.length;
     box.classList.toggle('filtering',!!any);
     body.querySelectorAll('.lgr[data-g]').forEach(r=>{ const g=r.dataset.g, v=r.dataset.v, on=g==='t'?sel.types.has(+v):g==='k'?sel.kinds.has(v):sel.quick.has(v); r.classList.toggle('on',on); r.setAttribute('aria-pressed',String(on)); });
-    const st=box.querySelector('.lgstat'); if(st) st.innerHTML=any?`Showing <b>${n}</b> of ${all}${oth.length?`<span class="lgoth">Also filtered: ${oth.join(', ')}</span>`:''} <button type="button" class="lgall">Show all</button>`:`All <b>${all}</b> records. Click a line to show only those`;
+    const st=box.querySelector('.lgstat'); if(st) st.innerHTML=any?`<b>Showing ${n} of ${all}</b>${oth.length?`<span class="lgoth">Also filtered: ${oth.join(', ')}</span>`:''} <button type="button" class="lgall">Show all</button>`:`<span>All ${all} records. Click a line to show only those</span>`;
   }
   function toggle(group,key,add){
     const S=group==='t'?sel.types:group==='k'?sel.kinds:sel.quick, k=group==='t'?+key:key;

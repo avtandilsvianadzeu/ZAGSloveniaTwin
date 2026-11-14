@@ -1,0 +1,176 @@
+'use strict';
+/* Slovenian interface. The data stays as read from its sources; the labels, buttons, headings and help texts switch language.
+   The choice is kept in the browser (zag_lang). Loaded first on every page, so other scripts can read window.LANG. */
+(function(){
+  const KEY='zag_lang';
+  let lang='en'; try{ lang=localStorage.getItem(KEY)||((navigator.language||'').toLowerCase().startsWith('sl')?'sl':'en'); }catch(_){}
+  const q=new URLSearchParams(location.search).get('lang'); if(q==='sl'||q==='en'){ lang=q; try{ localStorage.setItem(KEY,lang); }catch(_){} }
+  window.LANG=lang;
+  window.setLang=l=>{ try{ localStorage.setItem(KEY,l); }catch(_){} const u=new URL(location.href); u.searchParams.delete('lang'); location.replace(u.href); };
+  if(lang!=='sl') return;
+  document.documentElement.lang='sl';
+
+  const D={
+    /* navigation and header */
+    'Map':'Zemljevid','Assets':'Objekti','Dashboard':'Pregled','Open questions':'Odprta vprašanja','Data API':'Podatkovni API','Add object':'Dodaj objekt','Add an object':'Dodaj objekt',
+    'Night':'Noč','Satellite':'Satelit','Layers':'Sloji','LIVE':'V ŽIVO','Open on the map':'Odpri na zemljevidu','Find an asset':'Poišči objekt','Previous':'Prejšnji','Next':'Naslednji','‹ Previous':'‹ Prejšnji','Next ›':'Naslednji ›',
+    'Search structures, places, addresses or coordinates':'Išči objekte, kraje, naslove ali koordinate','Search names, places, values, sources and quotes':'Išči imena, kraje, vrednosti, vire in navedke','Search the questions':'Išči po vprašanjih',
+    'All records':'Vsi zapisi','Buildings':'Stavbe','Bridges':'Mostovi','Infrastructure':'Infrastruktura','About the atlas':'O atlasu','Skip to content':'Na vsebino','Skip to map':'Na zemljevid',
+    'ZAG DIGITAL ATLAS':'DIGITALNI ATLAS ZAG','ZAG Digital Atlas':'Digitalni atlas ZAG','Asset record':'Zapis o objektu',
+    /* feature menus */
+    'Search':'Iskanje','Find a structure, a place or an address':'Poišči objekt, kraj ali naslov','Filter by type':'Filtriraj po vrsti','Projects, buildings, bridges or infrastructure':'Projekti, stavbe, mostovi ali infrastruktura',
+    'Timeline':'Časovnica','ZAG work year by year since 1952':'Delo ZAG leto za letom od 1952','Backgrounds':'Podlage','Map, satellite or the GURS 25 cm orthophoto':'Zemljevid, satelit ali ortofoto GURS','3D view':'3D pogled','Terrain relief and buildings in 3D':'Relief in stavbe v 3D',
+    'Ask ZAGBot':'Vprašaj ZAGBota','Questions and corrections in plain words':'Vprašanja in popravki v navadnem jeziku','All objects':'Vsi objekti','The 73 records, filtered by type':'73 zapisov, filtriranih po vrsti','Every value with its source and evidence':'Vsaka vrednost z virom in dokazom',
+    '3D model':'3D model','Rebuilt from mapped outlines and published dimensions':'Zgrajen iz kartiranih obrisov in objavljenih mer','Report and data file':'Poročilo in podatkovna datoteka','Print a record or download it as data':'Natisni zapis ali ga prenesi kot podatke',
+    'Totals':'Skupaj','What the atlas holds today':'Kaj atlas vsebuje danes','Condition':'Stanje','From inspection records, where entered':'Iz zapisov o pregledih, kjer so vneseni','Data to complete':'Podatki za dopolnitev','Records with the fewest values':'Zapisi z najmanj vrednostmi',
+    'Where sources differ':'Kjer se viri razlikujejo','Values that two sources give differently':'Vrednosti, ki jih dva vira navajata različno','Not yet verified':'Še ni preverjeno','What the sources do not settle yet':'Česar viri še ne razrešijo',
+    'Endpoints':'Končne točke','Every record by its own address':'Vsak zapis na svojem naslovu','Developers':'Razvijalci','Copy and run. Each example uses the live addresses.':'Kopirajte in zaženite. Vsak primer uporablja žive naslove.',
+    'Draw a structure':'Nariši konstrukcijo','Click its points on the map, the model appears at once':'Kliknite njene točke na zemljevidu, model se takoj prikaže','Suggest a 3D model':'Predlagaj 3D model','Tell the atlas team what to model':'Povejte ekipi atlasa, kaj naj modelira',
+    /* legend */
+    'Legend':'Legenda','Hide':'Skrij','Symbols':'Simboli','Colours':'Barve','Quick filters':'Hitri filtri','Position':'Položaj','Numbers':'Števila','Show all':'Prikaži vse',
+    'Bridges, viaducts and footbridges':'Mostovi, viadukti in brvi','Tunnels and underground structures':'Predori in podzemni objekti','Dams and hydropower plants':'Jezovi in hidroelektrarne','Cableway installations':'Žičniške naprave',
+    'Transmission and other towers':'Daljnovodni in drugi stolpi','Buildings and companies':'Stavbe in podjetja','Institutions':'Ustanove','Landslides':'Plazovi','Geotechnical sites':'Geotehnična območja','Earthquake study areas':'Območja potresnih študij','Other sites':'Druga območja',
+    'Bridges and viaducts':'Mostovi in viadukti','Footbridges':'Brvi','Companies':'Podjetja','Road structures':'Cestni objekti','Towers and masts':'Stolpi in drogovi',
+    'Blue: project with ZAG work':'Modra: projekt z delom ZAG',"Violet: ZAG's own site":'Vijolična: lastna lokacija ZAG','Grey: partner or referenced only':'Siva: partner ali samo omenjen',
+    'With news this week':'Z novicami ta teden','With a 3D model':'S 3D modelom','Exact position':'Natančen položaj',
+    'Lighter with a dashed ring: approximate position, the centre of an area and not the object':'Svetlejši s črtkanim obročem: približen položaj, središče območja in ne objekt','Several records close together. Click to zoom in':'Več zapisov blizu skupaj. Kliknite za povečavo',
+    'Also filtered: ':'Filtrirano tudi: ','up to ':'do ','projects hidden':'projekti skriti','ZAG sites hidden':'lokacije ZAG skrite',
+    /* timeline, status, controls */
+    'Play':'Predvajaj','Pause':'Premor','All years':'Vsa leta','Coordinates WGS 84 (EPSG:4326), display Web Mercator':'Koordinate WGS 84 (EPSG:4326), prikaz Web Mercator','Scale varies in 3D':'Merilo se v 3D spreminja',
+    'Zoom in':'Povečaj','Zoom out':'Pomanjšaj','Rotate view left':'Zavrti pogled levo','Rotate view right':'Zavrti pogled desno','Tilt view up, more oblique':'Nagni pogled, bolj poševno','Tilt view down, towards top-down':'Nagni pogled navzdol, proti tlorisu','Reset to north':'Obrni na sever','Show all of Slovenia':'Prikaži vso Slovenijo',
+    'Close':'Zapri','Close panel':'Zapri ploščo','Close list':'Zapri seznam','Close the layers':'Zapri sloje','Close the tips':'Zapri nasvete','Close the chat':'Zapri klepet','Hide the legend':'Skrij legendo','Hide the timeline':'Skrij časovnico','Show ZAG work up to this year':'Prikaži delo ZAG do tega leta',
+    /* layers panel */
+    'Background':'Podlaga','OpenStreetMap, shaded relief':'OpenStreetMap, senčen relief','OpenStreetMap footprints':'Tlorisi OpenStreetMap','ZAG projects':'Projekti ZAG','documented work':'dokumentirano delo','ZAG facilities':'Lokacije ZAG','own premises':'lastni prostori','2D':'2D','3D':'3D',
+    'Partner or referenced site':'Partner ali omenjena lokacija','ZAG project':'Projekt ZAG','ZAG facility':'Lokacija ZAG','Referenced in sources':'Omenjen v virih',
+    /* record panel on the map */
+    'Open the asset page':'Odpri stran objekta','Type and evidence':'Vrsta in dokazi','ZAG involvement':'Vloga ZAG','History and engineering':'Zgodovina in inženirstvo','Key figures':'Ključni podatki','Structure':'Konstrukcija','Named in the sources':'Imenovani v virih',
+    'Data sources':'Viri podatkov','Basis':'Podlaga','Google Maps':'Google Zemljevidi','Copy coordinates':'Kopiraj koordinate','More details':'Več podrobnosti','Recent news':'Zadnje novice','Documented':'Dokumentirano','Referenced':'Omenjeno','Location only':'Samo lokacija',
+    'Crosses':'Prečka','Carries':'Nosi','Built':'Zgrajeno','Spans':'Razponi','Length':'Dolžina','Height':'Višina','Width':'Širina','Opened':'Odprto','Owner':'Lastnik','Client':'Naročnik','Years':'Leta','Contractor':'Izvajalec',
+    'Surveyed point':'Izmerjena točka','Published address':'Objavljen naslov','Matched to the mapped structure':'Ujemanje s kartiranim objektom','Published coordinate':'Objavljena koordinata','Approximate':'Približno','Settlement centre':'Središče naselja','Locality only':'Samo kraj',
+    'ZAG area of expertise:':'Področje dela ZAG:','ZAG area of expertise: ':'Področje dela ZAG: ','Dams':'Jezovi','Railways':'Železnice','Roads':'Ceste','Natural disasters and other kinds of emergencies':'Naravne in druge nesreče',
+    /* record page */
+    'Asset ID':'Oznaka objekta','Position basis':'Podlaga položaja','Register':'Register','Request latest information':'Zahtevaj najnovejše podatke','Inspections':'Pregledi','Add inspection':'Dodaj pregled','Print report':'Natisni poročilo','Data file':'Podatkovna datoteka',
+    'Suggest a model update':'Predlagaj posodobitev modela','Structure breakdown':'Členitev konstrukcije','Split':'Deljeno','Site':'Lokacija','Model':'Model','Flat':'Ravno','Fit':'Prilagodi','Top':'Tloris','Side':'Stranski','Measure':'Meri','Reset':'Ponastavi','Laser scan':'Lasersko skeniranje',
+    'Properties':'Lastnosti','Data':'Podatki','Quality':'Kakovost','Sources':'Viri','Selection':'Izbor','Type':'Vrsta','Nothing selected. Click a part on the site map, in the model or in the structure breakdown.':'Nič ni izbrano. Kliknite del na zemljevidu lokacije, v modelu ali v členitvi konstrukcije.',
+    'All data on this asset':'Vsi podatki o objektu','Evidence':'Dokaz','How it was obtained':'Kako je bil pridobljen','Verification':'Preverjanje','Mapped geometry':'Kartirana geometrija','Drag to turn':'Povlecite za vrtenje','Scroll to zoom':'Kolešček za povečavo','Right-drag to turn':'Desni gumb in vlečenje za vrtenje',
+    'Schematic, not the real structure':'Shematsko, ne prava konstrukcija','Mapped outline, published height':'Kartiran obris, objavljena višina','Built from published dimensions':'Zgrajeno iz objavljenih mer','Plan from published dimensions':'Tloris iz objavljenih mer','Plan from the land cadastre':'Tloris iz katastra','Laser scan surface (GURS)':'Površina laserskega skeniranja (GURS)',
+    'Land parcel at the point (GURS cadastre)':'Zemljiška parcela na točki (kataster GURS)','Record data':'Podatki zapisa','About':'O objektu','Geometry':'Geometrija','Specifications':'Specifikacije','History':'Zgodovina','Reference photos':'Referenčne fotografije','Verified reference points':'Preverjene referenčne točke',
+    'Export mesh as CSV':'Izvozi mrežo kot CSV','Copy link to this asset':'Kopiraj povezavo do objekta','Print data sheet':'Natisni podatkovni list',
+    /* inspections */
+    'ZAG work recorded in the sources':'Delo ZAG, zabeleženo v virih','No inspection record is published for this object.':'Za ta objekt ni objavljenega zapisa o pregledu.','Add an inspection record':'Dodaj zapis o pregledu','Date':'Datum','Kind':'Vrsta pregleda','Inspector':'Pregledovalec','Findings and notes':'Ugotovitve in opombe',
+    'Link to the report, if there is one':'Povezava do poročila, če obstaja','Save record':'Shrani zapis','Send by email':'Pošlji po e-pošti','Not rated':'Brez ocene','Good':'Dobro','Fair':'Zadovoljivo','Poor':'Slabo','Critical':'Kritično',
+    "Records are kept in this browser. Publish a rating only with the asset owner's consent.":'Zapisi so shranjeni v tem brskalniku. Oceno objavite le s soglasjem lastnika objekta.',
+    'Road structures are inspected periodically at least once every six years, steel and timber structures at least once a year, and after floods, accidents, fire or abnormal loads (Pravilnik o rednem vzdrževanju javnih cest, Uradni list RS 38/16, articles 8 and 9).':'Cestni objekti se obdobno pregledujejo najmanj enkrat na šest let, jekleni in leseni najmanj enkrat letno, ter po poplavah, nesrečah, požaru ali izrednih obremenitvah (Pravilnik o rednem vzdrževanju javnih cest, Uradni list RS 38/16, 8. in 9. člen).',
+    ' Next periodic inspection due by ':' Naslednji obdobni pregled do ','Condition ratings belong to the asset owner and are shown here only where the owner has published them.':'Ocene stanja pripadajo lastniku objekta in so prikazane le tam, kjer jih je lastnik objavil.',
+    /* assets list */
+    'Structures and sites where ZAG has documented work. Each opens its own sheet with a 3D view, key figures and specifications with sources.':'Objekti in lokacije, kjer ima ZAG dokumentirano delo. Vsak odpre svoj list s 3D pogledom, ključnimi podatki in specifikacijami z viri.',
+    'objects':'objektov','with a 3D model':'s 3D modelom','placed exactly':'natančno umeščenih','facts and figures, each with its source':'dejstev in številk, vsako z virom','with recent news':'z zadnjimi novicami',
+    'Cards':'Kartice','Table':'Tabela','Download table as CSV':'Prenesi tabelo kot CSV','All records as one table':'Vsi zapisi v eni tabeli','approximate position':'približen položaj','All':'Vse','Name':'Ime','Place':'Kraj','ZAG work':'Delo ZAG','Sourced values':'Vrednosti z virom',
+    'Where sources disagree, both values are listed with their sources and none is chosen.':'Kjer se viri ne ujemajo, sta navedeni obe vrednosti z viroma in nobena ni izbrana.',
+    /* dashboard */
+    'What the atlas holds today, counted from its own data. Condition appears only where an inspection record has been entered.':'Kaj atlas vsebuje danes, prešteto iz lastnih podatkov. Stanje je prikazano le tam, kjer je vnesen zapis o pregledu.',
+    'ZAG objects':'Objekti ZAG','with a model':'z modelom','with ZAG inspection or control work':'s pregledi ali kontrolo ZAG','with an open question':'z odprtim vprašanjem','added by users':'dodali uporabniki',
+    'Data coverage':'Pokritost podatkov','How complete the atlas is, out of 73 objects.':'Kako popoln je atlas, od 73 objektov.','Surveyed, address or matched to the mapped structure':'Izmerjeno, naslov ali ujemanje s kartiranim objektom','Mapped geometry, cadastre or published dimensions':'Kartirana geometrija, kataster ali objavljene mere',
+    'Five or more sourced values':'Pet ali več vrednosti z virom','Facts and figures with a source link':'Dejstva in številke s povezavo do vira','Headlines found in the last news run':'Naslovi, najdeni ob zadnjem zajemu novic','Published inspection record':'Objavljen zapis o pregledu',"Shown only with the asset owner's consent":'Prikazano le s soglasjem lastnika objekta',
+    'Condition, where the asset owner allows publication':'Stanje, kjer lastnik objekta dovoli objavo','Download inspection records':'Prenesi zapise o pregledih','ZAG inspection programmes':'Programi pregledov ZAG',
+    "Network-wide work from ZAG's own reference lists. It is not tied to single structures on the map unless a source names them.":'Delo na ravni omrežja iz referenčnih seznamov ZAG. Ni vezano na posamezne objekte na zemljevidu, razen kjer jih vir imenuje.',
+    'Periodic and main inspections of motorway bridges':'Redni in glavni pregledi avtocestnih premostitvenih objektov','Periodic and main inspections of bridges on state roads':'Redni in glavni pregledi premostitvenih objektov na državnih cestah','Methodology for the inspection of bridges in Slovenia':'Metodologija pregledov premostitvenih objektov v Sloveniji',
+    'Safety of bridges for traffic loads, methodology and analyses':'Varnost premostitvenih objektov za prometno obtežbo, metodologija in analize','Inspection of the state of motorway tunnels':'Pregled stanja avtocestnih predorov','Technical inspections of cableway installations as the inspection body (SIST EN ISO/IEC 17020)':'Tehnični pregledi žičniških naprav kot kontrolni organ (SIST EN ISO/IEC 17020)',
+    'DARS, 1995 to today':'DARS, od 1995 do danes','DARS, 2010 to 2016':'DARS, 2010 do 2016','Authorised by the Ministry of Infrastructure':'Pooblastilo Ministrstva za infrastrukturo','Ministry of Transport, Slovenian Roads Agency, 1990 to 1993':'Ministrstvo za promet, Direkcija RS za ceste, 1990 do 1993','Ministry of Transport, Slovenian Roads Agency, 1993 to 2000':'Ministrstvo za promet, Direkcija RS za ceste, 1993 do 2000','Slovenian Roads Agency, 2001 to 2014':'Direkcija RS za ceste, 2001 do 2014',
+    'Objects by type':'Objekti po vrstah','Objects':'Objekti','With a model':'Z modelom','ZAG inspection or control work':'Pregledi ali kontrola ZAG','Object':'Objekt','approximate':'približno','exact':'natančno',
+    'Condition is shown only where a person has entered an inspection record. The atlas holds no sensor readings, so nothing here is measured live.':'Stanje je prikazano le tam, kjer je nekdo vnesel zapis o pregledu. Atlas ne vsebuje meritev senzorjev, zato tukaj nič ni izmerjeno v živo.',
+    /* open questions */
+    'Everything in the atlas that needed a decision or a check. Points settled by research show the source that settles them, preferring ZAG and official documents and the latest one. Tick the rest when decided, and add a note if you like.':'Vse v atlasu, kar je potrebovalo odločitev ali preverjanje. Pri točkah, rešenih z raziskavo, je naveden vir, ki jih razreši, s prednostjo za ZAG in uradne dokumente ter najnovejšega. Ostale označite, ko so odločene, in po želji dodajte opombo.',
+    'points in all':'točk skupaj','places where sources differ':'mest, kjer se viri razlikujejo','not verified or approximate':'nepreverjenih ali približnih','records with values lacking a quote':'zapisov z vrednostmi brez navedka','settled with an official or published source':'rešenih z uradnim ali objavljenim virom',
+    'Sources differ':'Viri se razlikujejo','Not verified':'Nepreverjeno','Approximate position':'Približen položaj','No stored quote':'Brez shranjenega navedka','Source did not open':'Vir se ni odprl','Still open':'Še odprto','Decided':'Odločeno','Download list as CSV':'Prenesi seznam kot CSV',
+    'Settled with a source':'Rešeno z virom','Partly settled':'Delno rešeno','Settled':'Rešeno','Source verified':'Vir preverjen','Other source':'Drug vir','ZAG source':'Vir ZAG','Official register':'Uradni register','Peer reviewed':'Recenzirano','Open source':'Odpri vir','Kept:':'Ohranjeno:','Your decision or note':'Vaša odločitev ali opomba',
+    'Marks and notes on this page are saved in this browser only. They are not shared with other people.':'Oznake in opombe na tej strani so shranjene le v tem brskalniku. Niso deljene z drugimi.',
+    /* API */
+    'Nine addresses under one base. All answer to a plain GET request and can be called from another website.':'Devet naslovov pod eno osnovo. Vsi odgovarjajo na navaden zahtevek GET in jih je mogoče klicati z drugega spletnega mesta.','Base address':'Osnovni naslov','Try it':'Preizkusite','Examples':'Primeri','Record fields':'Polja zapisa','Metadata':'Metapodatki','Copy':'Kopiraj','Copied':'Kopirano','Load record':'Naloži zapis',
+    'Load the full record of one object as the API returns it.':'Naložite celoten zapis enega objekta, kot ga vrne API.','What one object record contains.':'Kaj vsebuje zapis enega objekta.','Field':'Polje','Meaning':'Pomen','Choose an object and load its record.':'Izberite objekt in naložite njegov zapis.',
+    'What the dataset is and where it comes from. The same information is in metadata.json.':'Kaj je nabor podatkov in od kod izvira. Enaki podatki so v metadata.json.','Each source keeps its own licence. The atlas holds no sensor readings, so nothing in the API is measured live.':'Vsak vir ohrani svojo licenco. Atlas ne vsebuje meritev senzorjev, zato nič v API-ju ni izmerjeno v živo.',
+    /* add object */
+    'Give it a name, then click its points on the map. The model appears at once. Everything added here is marked as not verified.':'Poimenujte objekt, nato kliknite njegove točke na zemljevidu. Model se takoj prikaže. Vse, kar dodate tukaj, je označeno kot nepreverjeno.',
+    'Line':'Linija','Outline':'Obris','Point':'Točka','Save object':'Shrani objekt','Undo last point':'Razveljavi zadnjo točko','Clear shape':'Počisti obliko','Download my objects':'Prenesi moje objekte','Load a saved file':'Naloži shranjeno datoteko','My objects':'Moji objekti','No objects yet.':'Še ni objektov.',
+    'Description':'Opis','Source link, if there is one':'Povezava do vira, če obstaja','Dimensions in metres':'Mere v metrih','Place it on the map':'Umestite na zemljevid','Other ways: paste coordinates or load a file':'Drugi načini: prilepite koordinate ali naložite datoteko','Coordinates, one point per row as latitude, longitude':'Koordinate, ena točka na vrstico kot širina, dolžina',
+    'Click the map to add points, or paste coordinates.':'Kliknite zemljevid za dodajanje točk ali prilepite koordinate.','The model appears when the shape has enough points.':'Model se prikaže, ko ima oblika dovolj točk.','A line needs two points and an outline needs three.':'Linija potrebuje dve točki, obris tri.',
+    'Objects added here are shown as not verified until a source confirms them.':'Tukaj dodani objekti so prikazani kot nepreverjeni, dokler jih ne potrdi vir.','What it is and what was done there':'Kaj je in kaj je bilo tam narejeno','For example, footbridge over the Sava':'Na primer brv čez Savo',
+    /* footer */
+    'Pages':'Strani','Map data and licences':'Podatki zemljevida in licence','Contact':'Stik','Data version ':'Različica podatkov ','Data API, JSON, GeoJSON and CSV':'Podatkovni API, JSON, GeoJSON in CSV','Every value links to the source it was read from.':'Vsaka vrednost je povezana z virom, iz katerega je bila prebrana.',
+    'Corrections are welcome with a source link, or through ZAGBot.':'Popravki so dobrodošli s povezavo do vira ali prek ZAGBota.','OpenStreetMap contributors, ODbL':'Avtorji OpenStreetMap, ODbL','GURS cadastre and laser scanning, CC BY 4.0':'Kataster in lasersko skeniranje GURS, CC BY 4.0','Esri World Imagery, Mapzen terrain tiles':'Esri World Imagery, reliefne ploščice Mapzen',
+    'Structures and sites in Slovenia where the work of ZAG, the Slovenian National Building and Civil Engineering Institute, is documented in published sources.':'Objekti in lokacije v Sloveniji, kjer je delo ZAG, Zavoda za gradbeništvo Slovenije, dokumentirano v objavljenih virih.',
+    /* tips */
+    'Tips to get started':'Nasveti za začetek','Open a record':'Odpri zapis','Click any marker. Its record opens on the left with the 3D model.':'Kliknite kateri koli znak. Zapis se odpre na levi s 3D modelom.','Filter with the legend':'Filtriraj z legendo','Click a type in the legend to show only those, for example tunnels.':'Kliknite vrsto v legendi, da prikažete samo te, na primer predore.',
+    'Play the timeline':'Predvajaj časovnico','See ZAG work appear year by year since 1952.':'Oglejte si delo ZAG leto za letom od 1952.','Type a structure, a place or an address. Press / at any time.':'Vnesite objekt, kraj ali naslov. Kadar koli pritisnite /.','Questions and corrections in plain words, with sources.':'Vprašanja in popravki v navadnem jeziku, z viri.','Keys: ':'Tipke: ',' search, ':' iskanje, ',' tips, ':' nasveti, ',' close':' zapri',
+    /* ZAGBot shell */
+    'Online, knows all 73 records':'Na zvezi, pozna vseh 73 zapisov','Ask about a structure, or tell me what to change':'Vprašajte o objektu ali povejte, kaj naj se spremeni','Answers come from the atlas data, with sources. Corrections are reviewed by the ZAG atlas team.':'Odgovori izhajajo iz podatkov atlasa, z viri. Popravke pregleda ekipa atlasa ZAG.',
+    'Find a structure':'Poišči objekt','Name, place or type':'Ime, kraj ali vrsta','Report a correction':'Sporoči popravek','A value, position or model':'Vrednost, položaj ali model','Improve a 3D model':'Izboljšaj 3D model','Suggest what should change':'Predlagaj, kaj naj se spremeni','What can you do?':'Kaj znaš?','Everything ZAGBot knows':'Vse, kar ZAGBot zna','Show or hide ZAG work by year':'Prikaži ali skrij delo ZAG po letih',
+    'Ask me':'Vprašaj me','Send':'Pošlji','Minimise the chat':'Pomanjšaj klepet','Larger chat window':'Večje okno klepeta','Message to ZAGBot':'Sporočilo ZAGBotu',
+    /* 404 */
+    'This page does not exist':'Ta stran ne obstaja','The address may be mistyped, or the page has moved. The atlas itself is one click away.':'Naslov je morda napačno vpisan ali pa se je stran premaknila. Atlas je en klik stran.','Open the map':'Odpri zemljevid',
+    /* type names */
+    'Bridge':'Most','Footbridge':'Brv','Road structure':'Cestni objekt','Tunnel':'Predor','Dam or hydropower plant':'Jez ali hidroelektrarna','Cableway installation':'Žičniška naprava','Transmission or other tower':'Daljnovodni ali drug stolp','Building':'Stavba','Institution':'Ustanova','Company':'Podjetje','Landslide':'Plaz','Geotechnical site':'Geotehnično območje','Earthquake study area':'Območje potresne študije','Other site':'Drugo območje',
+    'Tunnels':'Predori','Cableways':'Žičnice','Dam / hydropower':'Jez / hidroelektrarna','Tower or mast':'Stolp ali drog',
+    /* misc */
+    'Loading the atlas data':'Nalaganje podatkov atlasa','Loading...':'Nalaganje...','Sending...':'Pošiljanje...','No matches':'Ni zadetkov','Coordinates':'Koordinate','Locations':'Kraji','Address':'Naslov','Go to ':'Pojdi na ','WGS 84':'WGS 84','Mapped length':'Kartirana dolžina','drawn geometry':'narisana geometrija','record sources':'viri zapisa','GURS cadastre':'kataster GURS',
+    'Show on the map':'Prikaži na zemljevidu','Open its page':'Odpri njegovo stran','Something is wrong':'Nekaj je narobe','What did ZAG do?':'Kaj je naredil ZAG?','The full story':'Celotna zgodba','Cancel':'Prekliči','Back':'Nazaj','Something else':'Nekaj drugega',
+    'Language':'Jezik','English':'Angleščina','Slovenian':'Slovenščina',
+    'Open the source document':'Odpri izvorni dokument','Open the source at this sentence':'Odpri vir pri tem stavku','Length on the map':'Dolžina na zemljevidu','Lengths are measured along the drawn line and can differ from surveyed lengths.':'Dolžine so izmerjene vzdolž narisane linije in se lahko razlikujejo od izmerjenih dolžin.',
+    'What the dataset is and where it comes from. The same information is in ':'Kaj je nabor podatkov in od kod izvira. Enaki podatki so v ','Easier: open ZAGBot in the lower right corner and tell it what you want to add or change.':'Preprosteje: odprite ZAGBota v spodnjem desnem kotu in mu povejte, kaj želite dodati ali spremeniti.',
+    'Read with AI':'Preberi z UI','Read a description, a drawing or a photo':'Preberi opis, risbo ali fotografijo','Leave a field empty when the value is not known. Length is measured from the drawing when left empty.':'Polje pustite prazno, če vrednost ni znana. Dolžina se izmeri iz risbe, če je prazna.',
+    'Line: for a bridge, tunnel, cableway or dam. Add at least two points along the structure.':'Linija: za most, predor, žičnico ali jez. Dodajte vsaj dve točki vzdolž konstrukcije.','Picture or text file':'Slika ali besedilna datoteka','Description or pasted text':'Opis ali prilepljeno besedilo',
+    'A1 between Planina and Postojna, Postojna':'A1 med Planino in Postojno, Postojna','Hrušica, Jesenice and Kranjska Gora':'Hrušica, Jesenice in Kranjska Gora','Kastelec, Koper and Hrpelje-Kozina':'Kastelec, Koper in Hrpelje-Kozina','Koper and Izola':'Koper in Izola','Pletovarje, Slovenske Konjice and Šentjur':'Pletovarje, Slovenske Konjice in Šentjur',
+    'Inspection record in the atlas':'Zapis o pregledu v atlasu','Position source: ':'Vir položaja: ','Position sources':'Viri položaja','Municipality at the point (GURS register)':'Občina na točki (register GURS)','Settlement at the point (GURS register)':'Naselje na točki (register GURS)','Owner or operator':'Lastnik ali upravljavec',
+    'Evidence':'Dokaz','Verified':'Preverjeno','Source':'Vir','Quote':'Navedek','Value':'Vrednost','Unit':'Enota','Label':'Oznaka','Tubes':'Cevi','Lanes':'Pasovi','Road designation':'Oznaka ceste','Operator':'Upravljavec','Year built':'Leto izgradnje','Year completed':'Leto dokončanja','Installed power':'Instalirana moč','Capacity':'Zmogljivost','Cost':'Strošek',
+    'Sheet':'List','Printed':'Natisnjeno','Atlas record compiled from published sources. It is not an inspection report and gives no assessment of safety.':'Zapis atlasa, sestavljen iz objavljenih virov. Ni poročilo o pregledu in ne podaja ocene varnosti.',
+    "Geographic atlas of buildings, bridges, tunnels, dams, cableways and research sites in Slovenia where the Slovenian National Building and Civil Engineering Institute (ZAG) has documented involvement. Each record carries the type of work, a short description, the structure's attributes and the source.":'Geografski atlas stavb, mostov, predorov, jezov, žičnic in raziskovalnih lokacij v Sloveniji, kjer ima Zavod za gradbeništvo Slovenije (ZAG) dokumentirano sodelovanje. Vsak zapis vsebuje vrsto dela, kratek opis, lastnosti objekta in vir.',
+    'ZAG publications and the sources cited on each record':'Publikacije ZAG in viri, navedeni pri vsakem zapisu','OpenStreetMap via OpenFreeMap (map, building footprints, structure alignments), Photon geocoder':'OpenStreetMap prek OpenFreeMap (zemljevid, tlorisi stavb, potek objektov), geokodirnik Photon',
+    'GURS Kataster nepremičnin, OGC API Features (building attributes), GURS DOF025 orthophoto via Level2.si':'GURS Kataster nepremičnin, OGC API Features (atributi stavb)','Terrain: Mapzen / AWS Terrain Tiles, satellite imagery: Esri World Imagery':'Relief: Mapzen / AWS Terrain Tiles, satelitski posnetki: Esri World Imagery',
+    'Coordinate reference system WGS 84 (EPSG:4326), display in Web Mercator (EPSG:3857). Dataset: ':'Koordinatni sistem WGS 84 (EPSG:4326), prikaz v Web Mercator (EPSG:3857). Nabor podatkov: ',
+    'Clear':'Počisti','Save':'Shrani','Yes':'Da','No':'Ne','Open':'Odpri','Done':'Končano','Error':'Napaka'
+  };
+  /* texts with numbers in them */
+  const spec=n=>n===1?'specifikacija':n===2?'specifikaciji':n<5?'specifikacije':'specifikacij';
+  const zap=n=>n===1?'zapis':n===2?'zapisa':n<5?'zapisi':'zapisov';
+  const R=[
+    [/^(\d+) specifications?$/,(m,n)=>`${n} ${spec(+n)}`],
+    [/^All (\d+) records\. Click a line to show only those$/,(m,n)=>`Vseh ${n} zapisov. Kliknite vrstico, da prikažete samo te`],
+    [/^Showing (\d+) of (\d+)$/,(m,a,b)=>`Prikazanih ${a} od ${b}`],[/^Also filtered: (.+)$/,(m,x)=>`Filtrirano tudi: ${x.split(', ').map(y=>D[y]||y.replace(/^up to /,'do ')).join(', ')}`],
+    [/^(\d+) of (\d+) objects shown$/,(m,a,b)=>`Prikazanih ${a} od ${b} objektov`],
+    [/^(\d+) of (\d+) points? shown, in (\d+) records?$/,(m,a,b,c)=>`Prikazanih ${a} od ${b} točk, v ${c} ${zap(+c)}`],
+    [/^Zoom (\d+\.\d)$/,(m,z)=>`Povečava ${z}`],[/^About 1 : (.+)$/,(m,s)=>`Približno 1 : ${s}`],
+    [/^Work up to $/,()=>'Delo do '],[/^, (\d+) dated records?$/,(m,n)=>`, ${n} datiranih ${zap(+n)}`],[/^All years, (\d+) to (\d+)$/,(m,a,b)=>`Vsa leta, ${a} do ${b}`],
+    [/^(\d+) of (\d+)$/,(m,a,b)=>`${a} od ${b}`],
+    [/^ZAG work (\d{4})/,(m,y)=>`Delo ZAG ${y}`],[/^, ZAG work (.+)$/,(m,y)=>`, delo ZAG ${y.replace(' to ',' do ')}`],
+    [/^Where the sources differ \((\d+)(, (\d+) settled)?\)$/,(m,n,_,s)=>`Kjer se viri razlikujejo (${n}${s?', '+s+' rešenih':''})`],
+    [/^Quality (\d+)$/,(m,n)=>`Kakovost ${n}`],
+    [/^(\d+) values, (\d+) with a source link$/,(m,a,b)=>`${a} vrednosti, ${b} s povezavo do vira`],
+    [/^(\d+) more on its page\.$/,(m,n)=>`Še ${n} na njegovi strani.`],
+    [/^(\d+) nodes and (\d+) elements in the schematic mesh\.$/,(m,a,b)=>`${a} vozlišč in ${b} elementov v shematski mreži.`],
+    [/^decided in all, (\d+) partly$/,(m,n)=>`odločenih skupaj, ${n} delno`],
+    [/^(\d+) linked ZAG projects?$/,(m,n)=>`${n} povezanih projektov ZAG`],
+    [/^checked (\d+ \w+ \d{4})$/,(m,d)=>`preverjeno ${d}`],
+    [/^Settled on (.+)$/,(m,d)=>`Rešeno ${d}`],
+    [/^ZAG area of expertise: (.+)$/,(m,a)=>`Področje dela ZAG: ${D[a]||a}`],
+    [/^(.+) and (.+)$/,(m,a,b)=>/^[A-ZČŠŽ][\wčšžČŠŽ -]+$/.test(a)&&/^[A-ZČŠŽ][\wčšžČŠŽ -]+$/.test(b)&&!/ /.test(a+b)?`${a} in ${b}`:undefined]
+  ];
+  function tr(s){ if(!s) return s; const t=s.trim(); if(!t) return s; let out=D[t];
+    if(out===undefined){ for(const [re,f] of R){ const m=t.match(re); if(m){ const v=f(...m); if(v!==undefined){ out=v; break; } } } }
+    if(out===undefined) return s;
+    return s.replace(t,out); }
+  const SKIP=new Set(['SCRIPT','STYLE','CODE','PRE','TEXTAREA','KBD']);
+  const done=new WeakMap();
+  function node(n){ if(done.get(n)===n.nodeValue) return; const v=tr(n.nodeValue); if(v!==n.nodeValue) n.nodeValue=v; done.set(n,n.nodeValue); }
+  function attrs(el){ for(const a of ['placeholder','title','aria-label','alt']){ const v=el.getAttribute&&el.getAttribute(a); if(v){ const t=tr(v); if(t!==v) el.setAttribute(a,t); } } }
+  const inSkip=el=>!!(el&&el.closest&&el.closest('.zb-log,blockquote,.quote,code,pre,kbd,textarea'));
+  function walk(root){ if(!root) return; if(root.nodeType===3){ if(!inSkip(root.parentElement)) node(root); return; } if(root.nodeType!==1||SKIP.has(root.tagName)||inSkip(root)) return;
+    attrs(root); const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT,{acceptNode:n=>n.nodeType===1?(SKIP.has(n.tagName)||n.tagName==='BLOCKQUOTE'||(n.classList&&(n.classList.contains('zb-log')||n.classList.contains('quote')))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_SKIP):NodeFilter.FILTER_ACCEPT});
+    const list=[]; while(w.nextNode()) list.push(w.currentNode); list.forEach(node);
+    root.querySelectorAll('[placeholder],[title],[aria-label],[alt]').forEach(el=>{ if(!inSkip(el)) attrs(el); }); }
+  function titles(){ const t=document.title; const T={'ZAG Digital Atlas':'Digitalni atlas ZAG','Asset record':'Zapis o objektu','Dashboard':'Pregled','Open questions':'Odprta vprašanja','Data API':'Podatkovni API','Add an object':'Dodaj objekt','Page not found':'Strani ni mogoče najti'};
+    const nt=t.split(', ').map(x=>T[x]||x).join(', '); if(nt!==t) document.title=nt; }
+  function start(){ walk(document.body); titles();
+    new MutationObserver(ms=>{ for(const m of ms){ try{ if(m.type==='characterData'){ if(m.target.parentElement&&!inSkip(m.target.parentElement)) node(m.target); } else m.addedNodes.forEach(n=>{ if(n.isConnected) walk(n); }); }catch(_){} } }).observe(document.body,{childList:true,subtree:true,characterData:true});
+    new MutationObserver(titles).observe(document.querySelector('title')||document.head,{childList:true,subtree:true,characterData:true}); }
+  if(document.body) start(); else document.addEventListener('DOMContentLoaded',start);
+})();

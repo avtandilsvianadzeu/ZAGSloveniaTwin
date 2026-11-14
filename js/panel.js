@@ -64,8 +64,8 @@ function infoHTML(f){
   return `${hero?`<img class="hero" alt="" src="${esc(hero.src)}">${hero.credit?`<div class="credit">${esc(hero.credit)}${hero.page?` (<a href="${esc(hero.page)}" target="_blank" rel="noopener">source</a>)`:''}</div>`:''}`:''}
   <div class="body">
     <div class="kicker ${kicker[1]}">${kicker[0]}</div>
-    <h1>${esc(p.name_en||p.name)}</h1>
-    ${p.name_sl&&p.name_sl!==p.name_en?`<p class="sl">${esc(p.name_sl)}</p>`:''}
+    <h1>${esc(dispName(p))}</h1>
+    ${altName(p)?`<p class="sl">${esc(altName(p))}</p>`:''}
     ${where?`<p class="where">${esc(where)}</p>`:''}
     ${typeof zagAreaHTML==='function'?zagAreaHTML(p):''}
     <p><a class="btn twinlink" href="twin.html?id=${encodeURIComponent(p.id)}">Open the asset page</a></p>
@@ -100,7 +100,7 @@ function showInfo(id,opts){
   emit('selected',id);
   if(!ready) return;
   const e=EBY[id], x={id,lat:p.latitude,lon:p.longitude,prec:p.position_precision,cat:e?e.cat:'build',gurs:ZA.gurs[id]||null,addr:p.address,tol:(p.position_sources&&p.position_sources.length)?150:1500};
-  setSel({id,ll:[p.longitude,p.latitude],label:p.name_en||p.name,glyph:'pin'}); try{showTwinPoints(id);}catch(_){}
+  setSel({id,ll:[p.longitude,p.latitude],label:dispName(p),glyph:'pin'}); try{showTwinPoints(id);}catch(_){}
   const fixed=p.lines||(p.line?[p.line]:null);
   showLine(fixed);
   if(x.addr) geocodeAddress(x.addr);

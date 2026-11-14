@@ -56,6 +56,11 @@
   new MutationObserver(scan).observe(document.body,{childList:true,subtree:true}); scan();
   /* sideways strips on phones fade at the edge while more is hidden, and stop fading at the end */
   const edge=el=>{ const end=el.scrollLeft+el.clientWidth>=el.scrollWidth-4; el.classList.toggle('end',end); };
+  /* language switch: Slovenian or English interface, kept in this browser */
+  (function(){ const head=document.querySelector('header.thdr,header.hdr'); if(!head||document.querySelector('.langsw')) return; const sl=window.LANG==='sl';
+    const b=document.createElement('button'); b.type='button'; b.className='langsw'; b.setAttribute('aria-label',sl?'Switch to English':'Preklopi na slovenščino'); b.title=sl?'English':'Slovenščina';
+    b.innerHTML=`<span class="${sl?'':'on'}">EN</span><span class="${sl?'on':''}">SL</span>`; b.onclick=()=>window.setLang&&window.setLang(sl?'en':'sl');
+    const nav=head.querySelector('.sitenav'); if(nav&&nav.parentNode) nav.parentNode.insertBefore(b,nav.nextSibling); else head.appendChild(b); })();
   const strips=()=>document.querySelectorAll('.sitenav,.pills,.mapfilter,#nav').forEach(el=>{ if(el.dataset.edge) return edge(el); el.dataset.edge='1'; el.addEventListener('scroll',()=>edge(el),{passive:true}); edge(el); });
   window.addEventListener('resize',strips); setTimeout(strips,300); setTimeout(strips,2500);
   /* on phones the navigation strip scrolls so the current page is in view */
