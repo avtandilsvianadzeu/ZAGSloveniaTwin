@@ -9,12 +9,12 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=19'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=20'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector
      so it stays sharp at every size; a rendered picture can replace it by setting window.ZAGBOT_AVATAR to an image address */
-  const AVATAR=window.ZAGBOT_AVATAR===''?'':(window.ZAGBOT_AVATAR||'img/zagbot.png');
+  const AVATAR=window.ZAGBOT_AVATAR===''?'':(window.ZAGBOT_AVATAR||'img/zagbot_face.png');
   const ROBOT=(size,wave)=>AVATAR?`<span class="zb-pic" style="width:${Math.round(size*1.1)}px;height:${Math.round(size*1.1)}px"><img class="zb-robot" src="${AVATAR}" width="${Math.round(size*1.1)}" height="${Math.round(size*1.1)}" alt=""><i class="zb-glow"></i></span>`:`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
     <defs>
       <linearGradient id="rbSkin" x1="0.2" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#EEF1F6"/><stop offset="1" stop-color="#C9D1DE"/></linearGradient>
@@ -65,6 +65,15 @@
   /* ---------- text helpers ---------- */
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm=s=>String(s||'').normalize('NFKD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9.]+/g,' ').trim();
+  /* how a word sounds, so a Slovenian name heard by an English recogniser still finds its record:
+     "chatesh" and "Čatež", "kastelets" and "Kastelec", "yesenice" and "Jesenice", "zak" and "ZAG" */
+  const phon=w=>String(w).replace(/tsch|tch|ch|cz/g,'c').replace(/sch|sh|sz/g,'s').replace(/zh/g,'z').replace(/ts|tz/g,'c').replace(/ck|q/g,'k').replace(/ph/g,'f').replace(/th/g,'t').replace(/w/g,'v').replace(/y/g,'j').replace(/x/g,'ks').replace(/ee/g,'i').replace(/oo/g,'u').replace(/(.)\1+/g,'$1').replace(/g$/,'k').replace(/d$/,'t').replace(/b$/,'p').replace(/z$/,'s');
+  /* ZAG under the names people use for it, and the ways a recogniser mishears it */
+  const canon=n=>(' '+n+' ').replace(/ (the )?(slovenian )?national building (and civil engineering )?institute /g,' zag ')
+    .replace(/ zavod (za )?gradbenistv\w*( slovenije)? /g,' zag ').replace(/ (zack|zak|zag|zagg|zeg|zek|zach|zac|sag|zakk|zags|zag s) (institute|institut|instituta|inštitut|institucija|lab|laboratory|laboratorij) /g,' zag ')
+    .replace(/ building institute /g,' zag ').replace(/ (zack|zak|zagg|zach|zakk) /g,' zag ').replace(/\s+/g,' ').trim();
+  /* Slovenian common nouns understood in an English chat: each adds its English word, the Slovenian stays for the names */
+  const SLX={most:'bridge',mostu:'bridge',mostovi:'bridges',mostov:'bridges',viadukt:'viaduct',viadukta:'viaduct',viadukti:'viaducts',predor:'tunnel',predora:'tunnel',predori:'tunnels',pregrada:'dam',jez:'dam',zicnica:'cableway',zicnice:'cableway',stolp:'tower',stavba:'building',stavbe:'buildings',plaz:'landslide',laboratorij:'laboratory',pozarni:'fire',potres:'earthquake',nadvoz:'overpass',brv:'footbridge',podvoz:'underpass',avtocesta:'motorway',cesta:'road',reka:'river',jezero:'lake',slika:'photo',sliko:'photo',fotografija:'photo',fotografijo:'photo',lokacija:'location',enota:'unit'};
   const tidy=s=>String(s==null?'':s).replace(/\s*[—–]\s*/g,', ').replace(/\s*;\s*/g,', ').replace(/\s*·\s*/g,', ').replace(/\s+/g,' ').trim();
   /* edit distance with swapped letters counted once, so "wrnog" is one step from "wrong" */
   const lev=(a,b)=>{ if(Math.abs(a.length-b.length)>3) return 9; const m=a.length,n=b.length,d=[]; for(let i=0;i<=m;i++){ d[i]=[i]; } for(let j=1;j<=n;j++) d[0][j]=j;
@@ -104,7 +113,8 @@
       DB.recs=g.features.map(f=>{ const p=f.properties; const name=tidy(typeof dispName==='function'?dispName(p):(p.name_en||p.name||p.id));
         const words=new Set(norm([p.name_en,p.name,p.name_sl,p.id.replace(/_/g,' ')].join(' ')).split(' ').filter(w=>w.length>2&&!STOP.has(w)));
         const place=new Set(norm([p.locality,p.municipality].join(' ')).split(' ').filter(w=>w.length>2));
-        return {id:p.id,name,type:p.object_type||'other',place:tidy(p.locality||p.municipality||''),role:tidy(p.zag_role||''),year:p.year||'',words,placeWords:place,p}; });
+        const slw=new Set(norm([p.name_sl].join(' ')).split(' ').filter(w=>w.length>2&&!STOP.has(w))), enw=new Set(norm([p.name_en,p.name].join(' ')).split(' ').filter(w=>w.length>2));
+        return {ph:new Map([...words].map(w=>[w,phon(w)])),slOnly:new Set([...slw].filter(w=>!enw.has(w))),id:p.id,name,type:p.object_type||'other',place:tidy(p.locality||p.municipality||''),role:tidy(p.zag_role||''),year:p.year||'',words,placeWords:place,p}; });
       DB.recs.forEach(r=>DB.byId[r.id]=r);
       /* words that many records share (zag, bridge, laboratory) do not identify one record */
       const df={}; DB.recs.forEach(r=>r.words.forEach(w=>{ df[w]=(df[w]||0)+1; })); DB.common=new Set(Object.keys(df).filter(w=>df[w]>3)); });
@@ -118,8 +128,8 @@
     return DB.ready; }
 
   function wordHit(q,w){ if(q===w) return 3; if(q.length>=4&&(w.startsWith(q)||q.startsWith(w))&&Math.min(q.length,w.length)>=4) return 2; if(q.length>=4&&lev(q,w)<=1) return 1.5; if(q.length>=6&&lev(q,w)<=2) return 1; if(q.length>=9&&lev(q,w)<=3) return 1; if(q.length>=5&&q[0]===w[0]){ const k=x=>x.replace(/[aeiou]/g,''); const a=k(q), b=k(w); if(a.length>=4&&b.startsWith(a)&&Math.abs(q.length-w.length)<=3) return 1.5; } return 0; }
-  function findRecords(tokens){ const out=[];
-    for(const r of DB.recs){ let s=0, hits=0; for(const q of tokens){ let best=0; for(const w of r.words) best=Math.max(best,wordHit(q,w)); if(best){ s+=best; hits++; } }
+  function findRecords(tokens){ const out=[], qp=tokens.map(phon);
+    for(const r of DB.recs){ let s=0, hits=0; tokens.forEach((q,i)=>{ let best=0; for(const w of r.words){ best=Math.max(best,wordHit(q,w)); if(best<3&&q.length>=4){ const k=r.ph.get(w); if(k===qp[i]) best=Math.max(best,2.6); else if(qp[i].length>=5&&lev(qp[i],k)<=1) best=Math.max(best,1.6); } } if(best){ s+=best; hits++; } });
       if(hits){ s+=hits/Math.max(2,r.words.size); out.push({r,s}); } }
     return out.sort((a,b)=>b.s-a.s); }
   function placeRecords(tokens){ const m=[]; for(const r of DB.recs) for(const q of tokens) for(const w of r.placeWords) if(wordHit(q,w)>=2){ m.push(r); break; } return [...new Set(m)]; }
@@ -165,9 +175,17 @@
   const typeChips=()=>TYPES.slice(0,6).map(t=>[t.name[0].toUpperCase()+t.name.slice(1),t.key]);
   const recUrl=r=>'twin.html?id='+encodeURIComponent(r.id);
   const recChips=r=>[['Open its page',recUrl(r),'link'],['Show on the map',()=>showOnMap(r)],['Key figures',()=>figures(r)],['What did ZAG do?',()=>role(r)],['Something is wrong',()=>startUpdate(r)]];
+  /* the name in the language the person used: the Slovenian name when they spoke Slovenian, the other one beneath it */
+  const nm=r=>(ctx.slSaid||L()==='sl')&&r.p.name_sl?tidy(r.p.name_sl):r.name;
+  const altNm=r=>{ const a=nm(r)===r.name?tidy(r.p.name_sl||''):r.name; return a&&norm(a)!==norm(nm(r))?`<em class="zb-alt">${esc(a)}</em>`:''; };
+  const photoTag=r=>r.p.image?`<img class="zb-ph" src="${esc(r.p.image)}" alt="${esc(nm(r))}" loading="lazy"><small class="zb-cr">${r.p.image_credit?esc(tidy(r.p.image_credit)):(L()==='sl'?'Vir slike ni preverjen':'Image credit not yet verified')}</small>`:'';
+  function photoOf(r){ ctx.rec=r; const p=r.p, sl=L()==='sl';
+    say(`<div class="zb-card"><b>${esc(nm(r))}</b>${altNm(r)}<span>${esc(r.place||'')}${p.municipality&&p.municipality!==r.place?', '+esc(p.municipality):''}</span>${p.image?photoTag(r):`<p class="zb-note">${sl?'Za ta zapis v atlasu ni fotografije.':'The atlas has no photo for this record yet.'}</p>`}<p>WGS 84 ${(+p.latitude).toFixed(5)}, ${(+p.longitude).toFixed(5)}</p></div>`);
+    if(ON_MAP&&typeof window.showInfo==='function'){ window.showInfo(r.id); panelSmall(); }
+    offer(recChips(r).filter(c=>!ON_MAP||c[0]!=='Show on the map')); }
   /* "where is X": the place, the coordinates and the map */
   function whereIs(r){ ctx.rec=r; const p=r.p, d=(typeof fmtD96==='function')?fmtD96([+p.longitude,+p.latitude]):'';
-    say(`<div class="zb-card"><b>${esc(r.name)}</b><span>${esc(r.place||'')}${p.municipality&&p.municipality!==r.place?', '+esc(p.municipality):''}</span><p>WGS 84 ${(+p.latitude).toFixed(5)}, ${(+p.longitude).toFixed(5)}${d?'<br>'+esc(d):''}</p>${p.position_precision&&!/^(surveyed|address|matched)$/.test(p.position_precision)?'<p class="zb-note">Approximate position: the centre of the area, not the object itself.</p>':''}</div>`);
+    say(`<div class="zb-card"><b>${esc(nm(r))}</b>${altNm(r)}<span>${esc(r.place||'')}${p.municipality&&p.municipality!==r.place?', '+esc(p.municipality):''}</span><p>WGS 84 ${(+p.latitude).toFixed(5)}, ${(+p.longitude).toFixed(5)}${d?'<br>'+esc(d):''}</p>${p.position_precision&&!/^(surveyed|address|matched)$/.test(p.position_precision)?'<p class="zb-note">Approximate position: the centre of the area, not the object itself.</p>':''}</div>`);
     if(ON_MAP&&typeof window.showInfo==='function'){ window.showInfo(r.id); panelSmall(); offer(recChips(r).filter(c=>c[0]!=='Show on the map')); }
     else { say(window.LANG==='sl'?'Odpiram zemljevid...':'Opening the map...'); setTimeout(()=>{ location.href='index.html#'+encodeURIComponent(r.id); },700); } }
   function showOnMap(r){ if(ON_MAP&&typeof window.showInfo==='function'){ window.showInfo(r.id); say('Shown on the map: <b>'+esc(r.name)+'</b>.'); panelSmall(); } else location.href='index.html#'+encodeURIComponent(r.id); }
@@ -175,7 +193,7 @@
 
   /* ---------- answers ---------- */
   function card(r){ ctx.rec=r; const t=DB.twins[r.id]||{};
-    say(`<div class="zb-card"><b>${esc(r.name)}</b><span>${esc(typeof typeLabel==='function'?typeLabel(r.type):cap(r.type))}${r.place?', '+esc(r.place):''}${r.year?', ZAG work '+esc(String(r.year).replace(/-/g,' to ')):''}</span>${t.summary?`<p>${esc(tidy(t.summary)).slice(0,260)}</p>`:''}</div>`);
+    say(`<div class="zb-card"><b>${esc(nm(r))}</b>${altNm(r)}${photoTag(r)}<span>${esc(typeof typeLabel==='function'?typeLabel(r.type):cap(r.type))}${r.place?', '+esc(r.place):''}${r.year?', ZAG work '+esc(String(r.year).replace(/-/g,' to ')):''}</span>${t.summary?`<p>${esc(tidy(t.summary)).slice(0,260)}</p>`:''}</div>`);
     offer(recChips(r)); }
   const cap=s=>String(s||'').charAt(0).toUpperCase()+String(s||'').slice(1);
   function specLine(s){ const v=tidy(s.value)+(s.unit?' '+esc(s.unit):''); const host=s.source?(()=>{ try{ return new URL(s.source).hostname.replace(/^www\./,''); }catch(_){ return 'source'; } })():null;
@@ -203,7 +221,7 @@
     say(`<div class="zb-card"><b>${headOf(r)}</b>${body||'<p>The sources do not describe the work here in more detail.</p>'}${srcList(r,3)}</div>`);
     if(!quiet) offer([['The full story',()=>story(r)],['Key figures',()=>figures(r)],P.length>3?['All linked projects',()=>projects(r)]:null,['Open its page',recUrl(r),'link'],['Something is wrong',()=>startUpdate(r)]]); }
   function story(r){ ctx.rec=r; const p=r.p, t=DB.twins[r.id]||{}, F=arr(p.facts).filter(f=>Array.isArray(f)&&f[1]).slice(0,5), n=arr(DB.news&&DB.news[r.id]);
-    say(`<div class="zb-card"><b>${esc(r.name)}</b><span>${esc(typeof typeLabel==='function'?typeLabel(r.type):cap(r.type))}${r.place?', '+esc(r.place):''}</span>
+    say(`<div class="zb-card"><b>${esc(nm(r))}</b>${altNm(r)}<span>${esc(typeof typeLabel==='function'?typeLabel(r.type):cap(r.type))}${r.place?', '+esc(r.place):''}</span>
       ${p.hist?`<p>${esc(tidy(p.hist))}</p>`:t.summary?`<p>${esc(tidy(t.summary))}</p>`:''}
       ${p.zag_role?`<p><b>${ownName(r)?'What it does':'What ZAG did'}:</b> ${esc(tidy(p.zag_role))}${r.year?' ('+esc(yrs(r.year))+')':''}.</p>`:''}
       ${F.length?`<ul class="zb-spec">${F.map(f=>`<li><span>${esc(tidy(f[0]))}</span><b>${esc(tidy(f[1]))}</b></li>`).join('')}</ul>`:''}
@@ -332,7 +350,11 @@
       if(hits.length){ ctx.flow=null; if(hits.length===1||hits[0].s>=hits[1].s*1.6) return then(hits[0].r); say('Which one?'); offer(hits.slice(0,8).map(h=>[h.r.name,()=>then(h.r)])); ctx.flow=null; return; }
       say('I found no structure with that name. Try another word or choose a type.'); return; }
     try{ if(ON_MAP&&typeof curId!=='undefined'&&curId&&DB.byId[curId]) ctx.rec=DB.byId[curId]; }catch(_){}
-    const n=norm(text), tokens=n.split(' ').filter(w=>w&&!STOP.has(w));
+    const n0=norm(text), n=canon(n0), tokens0=n.split(' ').filter(w=>w&&!STOP.has(w));
+    /* Slovenian nouns said in an English chat: keep the Slovenian word for names, add the English one for the meaning */
+    const tokens=tokens0.flatMap(w=>SLX[w]&&SLX[w]!==w?[w,...SLX[w].split(' ')]:[w]);
+    ctx.slSaid=tokens0.some(w=>SLX[w])||(DB.recs.length&&tokens0.some(w=>w.length>3&&DB.recs.some(r=>r.slOnly.has(w))));
+    ctx.photo=/\b(photo\w*|pictures?|image\w*|pic|pics|slik\w*|fotografij\w*|foto)\b/.test(n);
     if((/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)||(tokens.length<=2&&anyNear(n.split(' '),FUZ.hello)))&&tokens.length<=2){ say(L()==='sl'?'Pozdravljeni. Kaj vas zanima?':'Hello. What would you like to know?'); home(); return; }
     if(/\b(help|pomoc|what can you)\b/.test(n)){ help(); return; }
     if(/\btimeline|casovn\w*\b/.test(n)){ const b=document.getElementById('tlShow'); if(b){ b.click(); say('Done, the timeline is '+(document.getElementById('tl').hidden?'hidden':'shown')+'.'); } else say('The timeline is on the map page.'); offer(menu()); return; }
@@ -341,17 +363,26 @@
     const wantModel=/\b(3d|model\w*)\b/.test(n);
     const attr=ATTRS.find(a=>tokens.some(w=>a.re.test(w)))||(anyNear(tokens,FUZ.tall)?ATTRS.find(a=>a.key==='height'):anyNear(tokens,FUZ.long)?ATTRS.find(a=>a.key==='length'):anyNear(tokens,FUZ.when)?ATTRS.find(a=>a.key==='year'):null);
     const type=TYPES.find(t=>tokens.some(w=>t.re.test(w)));
-    const free=tokens.filter(w=>!(attr&&attr.re.test(w))&&!(type&&type.re.test(w))&&!/^(wrong|incorrect|error|fix|update|change|model|3d|how|many|much|koliko|zag|role|vloga|news|novice|figures|values|podatki|inspect\w*|pregled\w*|story|history|tell|we|our|us|did|done|doing|work\w*|who|people|team|sources?|references?|projects?|compare|versus|vs|give|know|explain|describe|background|happened|was|been|also|both|all|any|some|more|info\w*|details?|ever|last|recent\w*|kaj|smo|naredili|delali)$/.test(w));
+    const GEN=new Set(['photo','photos','picture','pictures','image','images','pic','pics','location','located','position','address','please','structure','object','objekt','headquarters','office','institute','main','seat','sedez','map','page','slika','sliko','fotografija','fotografijo','foto','lokacija','plan']);
+    const free=tokens.filter(w=>!GEN.has(w)&&!(attr&&attr.re.test(w))&&!(type&&type.re.test(w))&&!/^(wrong|incorrect|error|fix|update|change|model|3d|how|many|much|koliko|zag|role|vloga|news|novice|figures|values|podatki|inspect\w*|pregled\w*|story|history|tell|we|our|us|did|done|doing|work\w*|who|people|team|sources?|references?|projects?|compare|versus|vs|give|know|explain|describe|background|happened|was|been|also|both|all|any|some|more|info\w*|details?|ever|last|recent\w*|kaj|smo|naredili|delali)$/.test(w));
     const hits=findRecords(free), strong=hits.filter(h=>h.s>=1.5), place=placeRecords(free);
     const I={inspect:/\b(inspect\w*|pregled\w*|monitored|checked)\b/.test(n)||anyNear(tokens,FUZ.inspect),story:/\b(story|history|histor\w*|tell me|about|background|happened|happen|zgodilo|zgodb\w*|zgodovin\w*|explain|describe|opisi)\b/.test(n),
       role:/\b(we|our|zag)\b.*\b(did|do|does|done|work\w*|role)\b|\b(what did|role|vloga|involv\w*|contribut\w*|naredil\w*|delal\w*)\b/.test(n),
       who:/\b(who|kdo|people|team|researchers?|led|lead)\b/.test(n)||anyNear(tokens,FUZ.who),src:/\b(sources?|references?|viri|evidence|proof)\b/.test(n)||anyNear(tokens,FUZ.src),proj:/\b(projects?|projekt\w*)\b/.test(n)||anyNear(tokens,FUZ.proj),cmp:/\b(compare|vs|versus|longer|taller|higher|bigger|primerjaj)\b/.test(n)};
     let r=strong.length&&(strong.length===1||strong[0].s>=strong[1].s*1.4)?strong[0].r:null;
+    /* "ZAG", "ZAG Institute", "Zavod za gradbeništvo": the institute itself, its headquarters, when nothing more specific is named */
+    const named=free.filter(w=>w.length>=3&&!GEN.has(w)&&!Object.values(FUZ).some(l=>near(w,l))&&!SLX[w]);
+    if(!r&&/\bzag\b/.test(n)&&!strong.length&&!named.length&&DB.byId.zag&&!/\b(how many|koliko|labs?|laboratories|units?|enot\w*)\b/.test(n)) r=DB.byId.zag;
+    const unknown=!r&&!hits.length?named.filter(w=>w.length>=4):[];
     /* follow-ups about the record we are already talking about */
     const toks=n.split(' ').filter(Boolean);
     const F={where:anyNear(toks,FUZ.where)&&!anyNear(toks,FUZ.fix),map:(anyNear(toks,FUZ.show)&&anyNear(toks,FUZ.map))||/\bon the map\b|\bna zemljevid\w*\b/.test(n),page:anyNear(toks,FUZ.open)&&anyNear(toks,FUZ.page)||/\bits page\b/.test(n),figs:anyNear(toks,FUZ.figs)&&!attr};
     F.map=F.map||F.where;
-    if(!r&&ctx.rec&&!strong.length&&!type&&(F.map||F.page||F.figs)){ r=ctx.rec; }
+    if(!r&&ctx.rec&&!strong.length&&!type&&!unknown.length&&(F.map||F.page||F.figs||ctx.photo)){ r=ctx.rec; }
+    /* a name that matches nothing is said so, never answered with the record that happens to be open */
+    if(!r&&unknown.length&&!type&&!place.length){ const sl=L()==='sl', w=unknown.slice(0,3).join(' ');
+      say(sl?`V atlasu ne najdem objekta z imenom <b>${esc(w)}</b>. Poskusite z drugo besedo ali izberite vrsto.`:`I cannot find <b>${esc(w)}</b> in the atlas. Try another word, the Slovenian name, or choose a type.`); offer(typeChips()); return; }
+    if(r&&ctx.photo&&!wantFix&&!wantModel) return photoOf(r);
     const countQ=/\b(how many|how much|is there (one|a|any|still)|are there|one or two|two or (one|more)|number of|currently|still|koliko|ali (je|sta|so|imamo|obstaja\w*|še)|trenutno|še vedno)\b/.test(n);
     if(countQ&&strong.length>=2&&!type&&!wantFix&&!wantModel&&!attr){ const rs=strong.filter(h=>h.s>=strong[0].s*0.7).map(h=>h.r).slice(0,5);
       if(rs.length>=2) return analyse(readSteps(rs),()=>{ const sl=window.LANG==='sl';
@@ -439,6 +470,14 @@
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });
   $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(ctx.flow&&ctx.flow.kind==='code'){ handle(t); return; } user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },350); };
   /* ---------- voice: a question spoken in Slovenian or English, answers read aloud on request ---------- */
+  /* of the recogniser's guesses, the one that names most of what the atlas holds wins over the one it merely found likeliest */
+  function heardScore(t){ const n=canon(norm(t)), w=n.split(' ').filter(x=>x.length>2&&!STOP.has(x)); let sc=0;
+    if(/\bzag\b/.test(n)) sc+=2;
+    if(DB.recs.length){ const h=findRecords(w); if(h[0]) sc+=Math.min(4,h[0].s); }
+    w.forEach(x=>{ if(SLX[x]||TYPES.some(T=>T.re.test(x))||Object.values(FUZ).some(l=>l.includes(x))) sc+=0.5; }); return sc; }
+  function bestHeard(R){ let best=R[0].transcript, bs=-1; for(let k=0;k<R.length;k++){ const t=R[k].transcript, sc=heardScore(t)+(R[k].confidence||0)*0.8-(k*0.05); if(sc>bs){ bs=sc; best=t; } } return best; }
+  /* what is shown in the box: the names written as the atlas writes them */
+  const heardFix=t=>t.replace(/\b(zack|zak|zagg|zach|zakk|zag)(?=\s+(institute|institut|lab|laboratory)\b)/gi,'ZAG').replace(/\b(zack|zak|zach|zakk)\b/gi,'ZAG').replace(/\bzag\b/g,'ZAG').replace(/\s+/g,' ').trim();
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition, mic=$('.zb-mic'), spk=$('.zb-spk'), waveC=$('.zb-wave-c'); let rec=null, listening=false, voiceOn=false;
   try{ voiceOn=localStorage.getItem('zb_voice')==='1'; }catch(_){} spk.setAttribute('aria-pressed',String(voiceOn));
   /* the chat has its own language, chosen with the flags and kept in this browser; it starts in the language of the site.
@@ -477,9 +516,11 @@
   if(SR&&(location.protocol==='https:'||location.hostname==='localhost')){ mic.hidden=false;
     const stop=()=>{ listening=false; mic.setAttribute('aria-pressed','false'); root.classList.remove('listening'); waveStop(); input.placeholder=L()==='sl'?'Vprašajte o objektu':'Ask about a structure'; };
     mic.onclick=()=>{ if(listening){ try{ rec.stop(); }catch(_){} stop(); return; }
-      rec=new SR(); rec.lang=lang(); rec.interimResults=true; rec.continuous=false; rec.maxAlternatives=1; let finalText='';
-      rec.onresult=e=>{ let interim=''; for(let i=e.resultIndex;i<e.results.length;i++){ const t=e.results[i][0].transcript; if(e.results[i].isFinal) finalText+=t; else interim+=t; } input.value=(finalText+interim).trim(); synth=Math.min(1,synth+0.4); };
-      rec.onerror=e=>{ stop(); if(e.error==='not-allowed') say(L()==='sl'?'Mikrofon ni dovoljen. Dovolite ga v nastavitvah strani v brskalniku.':'The microphone is not allowed. Allow it for this site in the browser.',null,true); else if(e.error!=='aborted'&&e.error!=='no-speech') say((L()==='sl'?'Prepoznava govora ni uspela: ':'Speech recognition failed: ')+esc(e.error),null,true); };
+      load(); rec=new SR(); rec.lang=lang(); rec.interimResults=true; rec.continuous=false; rec.maxAlternatives=6; let finalText='';
+      /* where the browser supports it, the names of the atlas are given to the recogniser as phrases to expect */
+      try{ if(window.SpeechRecognitionPhrase&&DB.recs.length&&!SR._noPhrases) rec.phrases=['ZAG','ZAG institute','Zavod za gradbeništvo Slovenije',...DB.recs.slice(0,60).map(r=>r.p.name_sl||r.name)].map(t=>new SpeechRecognitionPhrase(t,6)); }catch(_){}
+      rec.onresult=e=>{ let interim=''; for(let i=e.resultIndex;i<e.results.length;i++){ const R=e.results[i]; if(R.isFinal) finalText+=' '+bestHeard(R); else interim+=' '+R[0].transcript; } input.value=heardFix((finalText+interim).trim()); synth=Math.min(1,synth+0.4); };
+      rec.onerror=e=>{ if(e.error==='phrases-not-supported'&&!SR._noPhrases){ SR._noPhrases=true; rec.onend=null; stop(); setTimeout(()=>mic.onclick(),60); return; } stop(); if(e.error==='not-allowed') say(L()==='sl'?'Mikrofon ni dovoljen. Dovolite ga v nastavitvah strani v brskalniku.':'The microphone is not allowed. Allow it for this site in the browser.',null,true); else if(e.error!=='aborted'&&e.error!=='no-speech') say((L()==='sl'?'Prepoznava govora ni uspela: ':'Speech recognition failed: ')+esc(e.error),null,true); };
       rec.onend=()=>{ stop(); const t=input.value.trim(); if(t){ input.value=''; user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },300); } };
       try{ rec.start(); listening=true; mic.setAttribute('aria-pressed','true'); root.classList.add('listening'); input.value=''; input.placeholder=L()==='sl'?'Poslušam':'Listening'; waveStart(); }catch(_){ stop(); } }; }
   window.ZAGBot=window.ZAGBOT={open:()=>toggle(true),ask:t=>{ toggle(true).then(()=>handle(t)); }};

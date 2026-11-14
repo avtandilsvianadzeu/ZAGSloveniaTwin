@@ -23,7 +23,8 @@
     'api.html':[['code','JSON per object','Every record by its own address','api.html'],['layers','GeoJSON for GIS','Open the atlas in QGIS','api.html'],['list','CSV for Excel','All records as one table','api.html']],
     'add.html':[['plus','Draw a structure','Click its points on the map, the model appears at once','add.html'],['cube','Suggest a 3D model','Tell the atlas team what to model','#zagbot'],['chat','Ask ZAGBot','Questions and corrections in plain words','#zagbot']]};
   nav.innerHTML=PAGES.map(([h,t,tip])=>`<span class="item"><a href="${h}"${h===file?' aria-current="page"':''}>${t}</a><div class="fmenu" role="menu"><h6>${tip}</h6>${(FEAT[h]||[]).map(([k,b,d,u])=>`<a class="f" role="menuitem" href="${u}"${/^https/.test(u)?' target="_blank" rel="noopener"':''}>${ic(k)}<span><b>${b}</b><span>${d}</span></span></a>`).join('')}</div></span>`).join('');
-  nav.addEventListener('click',e=>{ const a=e.target.closest('a[href="#zagbot"]'); if(a){ e.preventDefault(); if(window.ZAGBOT) window.ZAGBOT.open(); return; } const t=e.target.closest('a[href="index.html?tips=1"]'); if(t&&window.ZAGTIPS){ e.preventDefault(); window.ZAGTIPS.open(); } });
+  /* an item that acts on this page is blurred after the click, otherwise the open menu would stay over the page (focus-within) */
+  nav.addEventListener('click',e=>{ const a=e.target.closest('a[href="#zagbot"]'); if(a){ e.preventDefault(); a.blur(); if(window.ZAGBOT) window.ZAGBOT.open(); return; } const t=e.target.closest('a[href="index.html?tips=1"]'); if(t&&window.ZAGTIPS){ e.preventDefault(); t.blur(); window.ZAGTIPS.open(); } });
   const brand=head.querySelector('.brand'); (brand?brand.nextSibling:head.firstChild)?head.insertBefore(nav,brand?brand.nextSibling:head.firstChild):head.appendChild(nav);
   if(brand&&brand.tagName==='A') brand.title='ZAG Digital Atlas, back to the map';
   /* hide header links that the site navigation now covers, keep page tools */

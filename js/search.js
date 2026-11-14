@@ -52,3 +52,6 @@ qIn.addEventListener('keydown',e=>{
   else if(e.key==='Enter'){const b=btns[Math.max(i,0)]; if(b) b.click();}
 });
 document.addEventListener('click',e=>{ if(!e.target.closest('.hsearch')) resEl.hidden=true; });
+/* a search started elsewhere (the sidebar on another page) arrives as ?q= and runs here once the data is in */
+(function(){ const q0=new URLSearchParams(location.search).get('q'); if(!q0) return; const go=()=>{ const q=document.getElementById('q'); if(!q) return; q.value=q0; q.dispatchEvent(new Event('input',{bubbles:true})); q.focus(); const u=new URL(location.href); u.searchParams.delete('q'); history.replaceState(null,'',u.href); };
+  document.addEventListener('atlas:ready',()=>setTimeout(go,200),{once:true}); })();
