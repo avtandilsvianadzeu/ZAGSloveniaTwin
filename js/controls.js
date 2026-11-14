@@ -3,7 +3,8 @@
 const layersEl=$('layers');
 function syncView(){
   document.querySelectorAll('#bgSeg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.bg===base));
-  $('b3d').setAttribute('aria-pressed',is3d);
+  if($('bSat')){ $('bSat').setAttribute('aria-pressed',base==='sat'); $('bSat').title=base==='sat'?'Satellite imagery on. Click for the street map':'Satellite imagery. Click again for the street map'; }
+  if($('b3d')){ $('b3d').setAttribute('aria-pressed',is3d); $('b3d').title=is3d?'3D view: relief and buildings. Click for a flat view':'Flat view. Click for 3D relief and buildings'; }
   document.querySelectorAll('input[name=lyBg]').forEach(r=>r.checked=r.value===base);
   document.querySelectorAll('input[name=lyViz]').forEach(r=>r.checked=(r.value==='3d')===is3d);
   $('lyBld').checked=bldOn();
@@ -16,7 +17,8 @@ document.addEventListener('atlas:selected',e=>{ if(e.detail&&phone()&&!layersEl.
 document.querySelectorAll('#bgSeg button').forEach(b=>b.onclick=()=>{ theme='light'; setBase(b.dataset.bg); });
 document.querySelectorAll('input[name=lyBg]').forEach(r=>r.onchange=()=>{ if(r.value==='map') theme='light'; setBase(r.value); });
 document.querySelectorAll('input[name=lyViz]').forEach(r=>r.onchange=()=>set3d(r.value==='3d'));
-$('b3d').onclick=()=>set3d(!is3d);
+if($('b3d')) $('b3d').onclick=()=>set3d(!is3d);
+if($('bSat')) $('bSat').onclick=()=>{ theme='light'; setBase(base==='sat'?'map':'sat'); };
 $('lyBld').onchange=e=>setBuildings(e.target.checked);
 $('lyProj').onchange=e=>{ZA.showProj=e.target.checked;refreshProjects();};
 $('lyFac').onchange=e=>{ZA.showFac=e.target.checked;refreshProjects();};
@@ -39,6 +41,9 @@ const nudge=d=>{ if(!map) return; orbitOn=false; userMoved=true; map.easeTo({bea
 $('rotL').onclick=()=>nudge({b:-30}); $('rotR').onclick=()=>nudge({b:30});
 $('tiltU').onclick=()=>{ if(!is3d) set3d(true); nudge({p:12}); }; $('tiltD').onclick=()=>nudge({p:-12});
 $('north').onclick=()=>map&&map.easeTo({bearing:0,duration:500});
+/* the view controls fade after five seconds without a touch, so the map stays clean; any pointer or key brings them back */
+(function(){ const v=document.querySelector('.vctl'); if(!v) return; let t=null; const wake=()=>{ v.classList.remove('idle'); clearTimeout(t); t=setTimeout(()=>{ if(!v.matches(':hover, :focus-within')) v.classList.add('idle'); },5000); };
+  ['pointerenter','pointerdown','focusin','touchstart'].forEach(e=>v.addEventListener(e,wake,{passive:true})); v.addEventListener('pointerleave',wake); document.addEventListener('keydown',wake); wake(); })();
 $('zin').onclick=()=>map&&map.zoomIn(); $('zout').onclick=()=>map&&map.zoomOut();
 $('zhome').onclick=()=>{ closeInfo(); closeList(); if(map) home(); };
 /* Esc closes the top-most panel, unless the cursor is in a text field or the chat */

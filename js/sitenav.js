@@ -46,10 +46,12 @@
   let last=0, upd=0;
   async function tick(){ try{ const r=await fetch('data/news.json?t='+Date.now(),{cache:'no-store'}); if(r.ok){ const j=await r.json(); const t=Date.parse(j.updated||''); if(t){ if(upd&&t>upd){ live.classList.remove('flash'); void live.offsetWidth; live.classList.add('flash'); } upd=t; } } }catch(_){}
     last=Date.now(); paint(); }
-  /* the time of the last update in Slovenian time, written the Slovenian way (14. 11. 2026, 08:08) */
+  /* a live clock in Slovenian time, written the Slovenian way (14. 11. 2026, 08:26:41); the last news check is in the tooltip */
   const slTime=t=>new Date(t).toLocaleString('sl-SI',{timeZone:'Europe/Ljubljana',day:'numeric',month:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  function paint(){ const sl=window.LANG==='sl'; live.querySelector('span').textContent=upd?(sl?'posodobljeno ':'updated ')+slTime(upd):(sl?'na zvezi':'online'); live.title=upd?(sl?'Zadnja posodobitev novic ':'News last updated ')+slTime(upd)+(sl?' (slovenski čas). Atlas preverja novice večkrat na uro.':' (Slovenian time). The atlas checks the news several times an hour.'):live.title; }
-  tick(); setInterval(tick,5*60000); setInterval(paint,30000);
+  const clock=()=>new Date().toLocaleString('sl-SI',{timeZone:'Europe/Ljubljana',day:'numeric',month:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  const span=live.querySelector('span'); span.setAttribute('aria-live','off');
+  function paint(){ const sl=window.LANG==='sl'; span.textContent=clock(); live.title=(sl?'Slovenski čas. ':'Slovenian time. ')+(upd?(sl?'Zadnja posodobitev novic ':'News last updated ')+slTime(upd)+'. ':'')+(sl?'Atlas preverja novice večkrat na uro.':'The atlas checks the news several times an hour.'); }
+  tick(); setInterval(tick,5*60000); paint(); setInterval(paint,1000);
 
   /* numbers count up when they appear, so totals feel live */
   const count=el=>{ if(el.dataset.counted) return; const txt=el.textContent.trim(); if(!/^\d[\d,]*$/.test(txt)) return; el.dataset.counted='1'; const end=+txt.replace(/,/g,''); if(end<2||matchMedia('(prefers-reduced-motion: reduce)').matches) return;

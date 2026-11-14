@@ -24,13 +24,18 @@ const srcLine=s=>`<div class="src"><span>${esc(s.title||s.key)}${s.type?`<br><sm
 
 /* digital twin sheet: verified geometry and specifications, every value with its source */
 /* for buildings the map panel leaves out the list of values (sizes, counts, heights). They stay on the asset page. */
+
 function twinHTML(id,noRows){
   const t=ZA.twins[id]; if(!t) return '';
   const tidy=s=>esc(String(s==null?'':s).replace(/\s*\u2026\s*/g,' ... ').replace(/\s*\u2022\s*/g,', ').replace(/^,\s*/,'').replace(/\s*—\s*/g,', ').replace(/(\d)\s*–\s*(\d)/g,'$1 to $2').replace(/–/g,'-').replace(/\s*;\s*/g,', ').replace(/\s+·\s+/g,', ').replace(/~(?=\d)/g,'about ').replace(/→/g,' to '));
+/* what still needs checking: one small button, the differing values appear on hover or on a click */
+  const tbv=t=>{ const d=t.differences||[], n=d.length+(t.open?1:0); if(!n) return '';
+  const items=[...d.map(x=>`<li>${tidy(x)}</li>`),...(t.open?[`<li class="op">${tidy(t.open)}</li>`]:[])].join('');
+  return `<div class="tbv"><button type="button" class="tbv-b" aria-expanded="false" aria-controls="tbvCard" onclick="this.parentNode.classList.toggle('pin');this.setAttribute('aria-expanded',this.parentNode.classList.contains('pin'))"><i></i>To be verified (${n})</button><div class="tbv-c" id="tbvCard" role="region" aria-label="Values still to be verified">${d.length?`<h5>Where sources differ</h5>`:''}<ul>${items}</ul>${t.open?`<p class="note">Marked in amber: not yet settled by any source.</p>`:''}</div></div>`; };
   const val=s=>`${tidy(s.value)}${s.unit?' '+esc(s.unit):''}`;
   const rows=noRows?'':(t.specs||[]).map(s=>`<div class="kv tw"><span>${esc(s.label)}</span><span>${val(s)}${s.source?` <a class="sref" href="${esc(s.source)}" target="_blank" rel="noopener" title="${esc(s.source)}">${esc(srcHost(s.source))}</a>`:''}</span></div>`).join('');
   const pts=(t.anchors||[]).map(a=>`<div class="kv tw"><span>${esc(a.label)}</span><span>${(+a.lat).toFixed(6)}, ${(+a.lon).toFixed(6)}${a.source?` <a class="sref" href="${esc(a.source)}" target="_blank" rel="noopener">${esc(srcHost(a.source))}</a>`:''}</span></div>`).join('');
-  return `<section class="twin"><h3>Asset record</h3>${t.summary?`<p class="note">${tidy(t.summary)}</p>`:''}${rows}${pts?`<h4>Verified reference points</h4>${pts}`:''}${(t.differences||[]).length?`<details class="twdiff"><summary class="note">Where the sources differ (${t.differences.length})</summary><ul>${t.differences.map(x=>`<li>${tidy(x)}</li>`).join('')}</ul></details>`:''}${t.open?`<p class="note twopen">Not yet verified: ${tidy(t.open)}</p>`:''}</section>`;
+  return `<section class="twin"><h3>Asset record</h3>${t.summary?`<p class="note">${tidy(t.summary)}</p>`:''}${rows}${pts?`<h4>Verified reference points</h4>${pts}`:''}${tbv(t)}</section>`;
 }
 function showTwinPoints(id){
   const t=id&&ZA.twins[id]; const fc={type:'FeatureCollection',features:t?(t.anchors||[]).map(a=>({type:'Feature',properties:{label:a.label},geometry:{type:'Point',coordinates:[+a.lon,+a.lat]}})):[]};

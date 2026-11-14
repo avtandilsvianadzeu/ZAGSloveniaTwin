@@ -43,7 +43,7 @@ async function boot(){
     // MapLibre 5.x leaves the terrain elevation frozen after a programmatic flyTo/easeTo, so terrain tiles that arrive
     // after the flight never lift the camera. On real hills that leaves the camera under the ground. Release it.
     map.on('moveend',()=>{ if(map.terrain&&map._elevationFreeze===true&&!map.isMoving()){ map._elevationFreeze=false; map.triggerRepaint(); } });
-    map.on('rotate',()=>{$('needle').style.transform=`rotate(${-map.getBearing()}deg)`;});
+    map.on('rotate',()=>{ const b=map.getBearing(), d=Math.round(((b%360)+360)%360); $('needle').style.transform=`rotate(${-b}deg)`; const h=$('hdg'), n=$('north'); if(h){ h.hidden=d===0; h.textContent=d+'°'; } if(n){ n.classList.toggle('turned',d!==0); n.title=d===0?'Facing north':`Heading ${d}°. Click to face north`; n.setAttribute('aria-label',n.title); } });
     map.on('error',ev=>{
       if(!ev||!ev.sourceId) return;
       if(ev.sourceId==='dof'&&base==='dof'&&!boot.dofFailed){boot.dofFailed=true;toast('The GURS orthophoto service did not respond. Showing Esri satellite instead.',6000);setBase('sat');}
