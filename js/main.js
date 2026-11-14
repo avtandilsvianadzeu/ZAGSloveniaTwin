@@ -24,6 +24,7 @@ async function boot(){
     /* the credits fold into the (i) button after a few seconds; the status line keeps the map credit in view */
     setTimeout(()=>{ const a=document.querySelector('.maplibregl-ctrl-attrib.maplibregl-compact-show'); if(a) a.classList.remove('maplibregl-compact-show'); },6000);
     applyLook(); syncView(); await dataP; refreshProjects(); try{applyNewsRing();}catch(_){}
+    document.dispatchEvent(new CustomEvent('atlas:ready'));
     const hand=l=>{map.on('mouseenter',l,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',l,()=>map.getCanvas().style.cursor='');};
     ['pt','clu'].forEach(hand);
     map.on('click','pt',ev=>{ev.preventDefault();showInfo(ev.features[0].properties.id);});

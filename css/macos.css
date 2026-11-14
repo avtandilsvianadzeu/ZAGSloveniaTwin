@@ -703,3 +703,60 @@ html.a11y-keep .vctl.idle{opacity:1!important}
 .dq:hover .dq-c,.dq:focus-visible .dq-c,.dq.pin .dq-c{opacity:1;transform:none;pointer-events:auto}
 .row{position:relative}
 .row>span:first-child{display:inline-flex;align-items:center}
+
+/* ---------- layout review: nothing overlaps, nothing is cut off ---------- */
+/* map page: the greeting card stands clear of the view controls on wide screens */
+@media (min-width:1101px){
+  body.zb-onmap .zb-tease{right:58px}
+  /* the credits box, when open, sits above the timeline; with a record open it moves out from under the panel */
+  .maplibregl-ctrl-bottom-left{bottom:76px!important}
+  body.has-panel .maplibregl-ctrl-bottom-left{left:calc(var(--panel,400px) + 24px)!important}
+  /* with a record open, the timeline is centred in the free part of the map, not under the panel */
+  body.has-panel .tl,body.has-panel .tlshow{left:calc(50% + var(--panel,400px) / 2 + 6px)!important}
+}
+@media (max-width:1100px){
+  /* the tips card and the greeting leave the view controls free; the greeting waits while the tips are open */
+  .tips{right:60px}
+  body.zb-onmap:has(.tips:not([hidden])) .zb-tease{display:none}
+  body.zb-onmap .zb-tease{right:60px;bottom:130px}
+  body.has-panel .maplibregl-ctrl-bottom-left{left:calc(var(--panel,340px) + 24px)!important}
+}
+@media (max-width:700px){
+  body.zb-onmap .zb-tease{right:58px;bottom:calc(160px + env(safe-area-inset-bottom,0px));width:min(300px,calc(100vw - 80px))}
+}
+/* small maps on the record and add pages: library controls stay in their own corner, the offsets above belong to the main map */
+:not(#map)>.maplibregl-control-container>.maplibregl-ctrl-bottom-right{right:0!important;bottom:0!important}
+:not(#map)>.maplibregl-control-container>.maplibregl-ctrl-bottom-left{left:0!important;bottom:0!important}
+/* the (i) button sits at the left of the credits, so the text starts after it */
+.maplibregl-ctrl-attrib.maplibregl-compact-show{padding:4px 10px 4px 30px!important}
+/* reading pages: the top bar keeps every control on screen at every width */
+.thdr .jump{min-width:158px}
+@media (max-width:1650px){.thdr .livebadge span{display:none}}
+@media (max-width:1500px){.thdr .brand b{display:none}}
+@media (max-width:1290px){.thdr .livebadge{display:none}}
+@media (min-width:1101px) and (max-width:1210px){.thdr{flex-wrap:wrap;row-gap:8px}.thdr .sitenav{order:11;flex:0 1 auto;margin:0 auto}}
+/* an empty page tools group takes no row of its own */
+.thdr .tnav:not(:has(> :not([hidden]))){display:none}
+/* phones: the Aa button stays on the first row beside the language switch */
+@media (max-width:760px){.thdr .dspb{order:-1}}
+@media (max-width:480px){.thdr .brand b{display:none}}
+/* count tiles between phone and desktop: three to a row, so no tile is left alone */
+@media (min-width:561px) and (max-width:900px){.dims{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:10px}.dim:nth-child(3n+1){border-left:0}}
+/* Data API: an address is never broken inside a word where there is room for it */
+@media (min-width:561px){.eptab .path{white-space:nowrap;word-break:normal}}
+@media (max-width:560px){.eptab .path{word-break:normal;overflow-wrap:anywhere}}
+/* opening: the mark is built in a glass bubble, then glides into the header */
+.splash{position:fixed;inset:0;z-index:400;display:grid;place-items:center;background:radial-gradient(900px 600px at 50% 45%,rgba(255,255,255,.55),rgba(236,240,247,.78));-webkit-backdrop-filter:blur(26px) saturate(160%);backdrop-filter:blur(26px) saturate(160%);cursor:pointer}
+.sp-card{display:flex;flex-direction:column;align-items:center;gap:18px;padding:34px 40px 26px;border-radius:32px;opacity:0;transform:scale(.82);
+  background:linear-gradient(160deg,rgba(255,255,255,.78),rgba(246,248,252,.52));box-shadow:inset 0 0 0 .5px rgba(255,255,255,.95),inset 0 -20px 40px -30px rgba(255,255,255,.9),0 0 0 .5px rgba(33,52,105,.12),0 30px 80px rgba(16,40,90,.18),0 0 60px rgba(10,124,255,.10);will-change:transform,opacity}
+.sp-logo{position:relative;height:150px;aspect-ratio:480/163}
+.sp-orig{display:block;width:100%;height:100%;opacity:0}
+/* the letters occupy a fixed box of the logo file: x 17 to 145.75 and y 55 to 107.5 of 480 x 163 */
+.sp-mark{position:absolute;left:3.54%;top:33.74%;width:26.82%;height:32.21%}
+.sp-mark img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sp-form{clip-path:inset(0 100% 0 0)}
+.sp-bar{width:220px;height:3px;border-radius:3px;background:rgba(33,52,105,.14);overflow:hidden}
+.sp-bar i{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,#213469,#65BC7B);transition:width .18s linear}
+.sp-txt{margin:0;font:600 11.5px/1 var(--title,var(--font));letter-spacing:.14em;text-transform:uppercase;color:#213469;opacity:.8}
+body.splashing .zb-tease,body.splashing .tips{visibility:hidden}
+@media (max-width:700px){.sp-card{padding:22px 20px 20px;border-radius:26px}.sp-logo{height:96px}.sp-bar{width:160px}}
