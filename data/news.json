@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T01:24:06.710Z",
+ "updated": "2026-11-14T07:41:48.296Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -136,7 +136,7 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWERjRlBFT1l0NXJYLVI4eTZ2R25EQ3p6c055NTlTWkVQSkhNZHgxbmstemJuS0xaMEN2akN0V0lGc1dVWjFoN2lIVXJNRVl1WHRWMU1zRGdNQkZSeHhHbExPbGo4amlyaXc1SktsM3I3NVB5dUhYcFhOcUtXMGw5Q3NBc0ZxTk90YUtXSzdVWm9uTkt1RHJDSW9Lb19hbkhvSmNV?oc=5",
-    "outlets": 2
+    "outlets": 1
    },
    {
     "title": "Predor Karavanke: na avstrijski strani se kolona krajša, na slovenski daljša",
@@ -164,7 +164,7 @@
     "source": "Siol.net",
     "date": "2026-03-20T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUndjQ3hWbXJVR1hmSkl0ZV9HX3ZFOEdXSkFmVl9IVkl6cnNzNC15UzZ5c3dwSHV2MW9kWEVWUGV0UkppS3NMZm03S2tjRlMycmszbE10MEFKa3RpTzVyNEZEb3ZRRktWeHVEQk9EbFViYUwwS3hOdmwzT2E1alVabEJLLTh1Q1dhYzJyNTh6MWhFZw?oc=5",
-    "outlets": 5
+    "outlets": 6
    },
    {
     "title": "(VIDEO) Zapeljali smo se skozi novi karavanški predor",
@@ -217,6 +217,13 @@
     "source": "domžalec.si",
     "date": "2026-02-19T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVzhkRDFGNldfS0pjWkEwbFdaQWh4WmdYSGkwZE5sbUgzYzNWS2s3Nm12UWJ4eEtLeDlXbGxyUUVHdTFPNzB5TzF4Y1FwYlllaWZlMEZVR0dtU0ZmUzdWRS1lQ3ZQdHVHQ2VfYWdKdWZMdk1CVkE5TGJicFliNm1EU1hYTnB6R1pqUGw0Yw?oc=5",
+    "outlets": 1
+   },
+   {
+    "title": "Kolaps na cestah: od centra Ljubljane do predora Šentvid ena ura vožnje (FOTO & VIDEO)",
+    "source": "N1 Slovenija",
+    "date": "2026-01-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYkpKWmNFZnpmM0E3aFdxN0ZtaGZQMkpVUnZ2Y2UybWozYWpQSU9fbmVwN2JJal85bTVwdnVMWHFIdUY3cGlsbjN4MzdaZVdiMkdGQlFucEY3d2lGRkp3MFljUjlwMURFbnN3REZPOU85V1p2RWJWV2lrZmJlc3J4SFR0c3VlMzgwOFBRcU50RGRLamUzTHdkTnp0NkdxZw?oc=5",
     "outlets": 1
    }
   ],
@@ -295,14 +302,7 @@
     "source": "OBALAplus",
     "date": "2026-10-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
-    "outlets": 3
-   },
-   {
-    "title": "15-LETNIK PO ZADNJEM KOLESU SKOZI PREDOR MARKOVEC: Predelani moped zmogel vrtoglavih 109 km/h",
-    "source": "regionalobala.si",
-    "date": "2026-10-20T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNbzNKWGNhR2JkWEg1RjRHOWlGemNxNlRBNjFqdTEySmE5OVZMc1Jrenh6c3JlaDJWbjVwUTFkeEpPR2Y0Umw2UjYzZzA5UXREZkRZYTVjLThyS0RUUEd1ZC1sVkNoUHM0VDVtVTF3Yy10cFVDMHJWNzFrS3BXcUpXcGRycGVESHJEMEx3RWhyamtBWTkzMmJwSTJvSzZ1bG5Sb3RaUEZ6c2ctMkV2cEV2MG9ObGljNTg5M1pRMXo2RnZaeGFBWHc?oc=5",
-    "outlets": 1
+    "outlets": 2
    },
    {
     "title": "VOZNIKI, POZOR: Prali bodo predor Markovec, promet bo potekal po enem pasu",
@@ -493,11 +493,11 @@
     "outlets": 1
    },
    {
-    "title": "Na mizi nove rešitve za smučišče Kanin",
-    "source": "OBALAplus",
-    "date": "2026-02-26T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LTVJLU09uUnBhdVhpcU9vSGlKNGprRk9GWHpHb1pSRDZJcUhUdEtDdlRLOXhYTEhFMTBLU0R0bVA4OS1lRll1RUtiLUZ3aW9EQS1Zb1Z0VTMzeXdFZGhGRFdZWTllc0trZlJKVw?oc=5",
-    "outlets": 1
+    "title": "Nova era za smučišče Kanin: Prihajajo nove žičnice",
+    "source": "Goriške novice",
+    "date": "2026-04-24T10:05:03.000Z",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNHBlVUFVTjZZMVNSSVJ3OVczdmZHaVNINnN5U0s5ZXROV0RfMUVuZWEwdU84R2pOTVkzalJobDh5d2JuUjJ0Tkx2ZkIzeXhRb2p3a1oyemVVSzJHSTRrdGMzWkdpb3pfbi1tNmNUVjhpYjduYzNBQ0RWUk1UQU5mTA?oc=5",
+    "outlets": 2
    },
    {
     "title": "Bo Bojan Križaj vlagal v smučišče Kanin?",
