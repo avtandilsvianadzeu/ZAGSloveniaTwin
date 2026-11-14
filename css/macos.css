@@ -593,3 +593,60 @@ h1,h2,.wrap.home h1,.asset h1,.info h2,.zb-title b,.sf-about b,.printhead h1,.lg
 /* credits fold into the (i) button; the status line below the map carries the map credit */
 .maplibregl-ctrl-attrib.maplibregl-compact{min-height:24px;border-radius:12px!important;background:rgba(255,255,255,.6)!important;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 0 0 .5px rgba(33,52,105,.14)}
 .maplibregl-ctrl-attrib.maplibregl-compact-show{padding:4px 30px 4px 10px;max-width:min(560px,70vw)}
+
+/* ---------- display settings (js/display.js): text size, contrast, transparency, motion, idle fade ---------- */
+:root{--ui-scale:1}
+/* text size: the interface scales as a whole, the map canvas itself does not */
+.hdr,.thdr,.info,.list,.lgd,.lgdshow,.mapfilter,.tl,.tlshow,.vctl,.tips,.layers,.results,.status,.mread,.zb-panel,.zb-tease,.zb-launch,.tree,.insp,.vtools,.vstatus,main:not(:has(.panes)),.sitefoot,.tfoot,.dsp{zoom:var(--ui-scale)}
+/* the Aa button */
+.dspb{display:inline-flex;align-items:center;justify-content:center;height:30px;min-width:34px;padding:0 8px;border:0;border-radius:999px;background:rgba(255,255,255,.55);box-shadow:0 0 0 .5px rgba(33,52,105,.14);font:600 12.5px/1 var(--font);color:#213469;cursor:pointer;flex:none;letter-spacing:-.02em}
+.dspb:hover{background:rgba(255,255,255,.9)}
+.dspb[aria-expanded=true]{background:linear-gradient(180deg,#2B90FF,#0A7CFF);color:#fff}
+.dsp{position:fixed;z-index:120;width:min(320px,calc(100vw - 16px));padding:14px 16px 12px;border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.90),rgba(246,248,252,.80));-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);
+  box-shadow:inset 0 0 0 .5px rgba(255,255,255,.8),0 0 0 .5px rgba(33,52,105,.14),0 18px 48px rgba(16,40,90,.18);color:#1D1D1F;font:13px/1.35 var(--font);animation:dspIn .28s cubic-bezier(.2,.9,.25,1) both}
+@keyframes dspIn{from{opacity:0;transform:translateY(-6px) scale(.98)}to{opacity:1;transform:none}}
+.dsp[hidden]{display:none}
+.dsp h6{margin:0 0 10px;font:600 11px var(--font);letter-spacing:.04em;text-transform:uppercase;color:#6E6E73}
+.dsp-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 0}
+.dsp-row .seg{display:inline-flex;padding:2px;border-radius:999px;background:rgba(118,118,128,.14)}
+.dsp-row .seg button{min-width:36px;height:28px;padding:0 10px;border:0;border-radius:999px;background:transparent;color:#1D1D1F;font-family:var(--font);font-weight:600;cursor:pointer;line-height:1}
+.dsp-row .seg button[aria-pressed=true]{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.14)}
+.dsp-sw{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid rgba(15,23,42,.07);cursor:pointer}
+.dsp-sw span{display:flex;flex-direction:column;gap:1px}.dsp-sw small{font-size:11.5px;color:#6E6E73}
+.dsp-sw input{position:absolute;opacity:0;width:0;height:0}
+.dsp-sw i{position:relative;flex:none;width:42px;height:26px;border-radius:13px;background:rgba(120,120,128,.28);transition:background .2s}
+.dsp-sw i::after{content:"";position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.2);transition:transform .2s cubic-bezier(.2,.9,.25,1)}
+.dsp-sw input:checked+i{background:#34C759}.dsp-sw input:checked+i::after{transform:translateX(16px)}
+.dsp-sw input:focus-visible+i{outline:2px solid #0A7CFF;outline-offset:2px}
+.dsp-reset{margin-top:8px;height:30px;padding:0 12px;border:0;border-radius:999px;background:rgba(118,118,128,.12);font:600 12px var(--font);color:#213469;cursor:pointer}
+.dsp-reset:hover{background:rgba(118,118,128,.22)}
+/* high contrast */
+html.a11y-hc{--g-ink:#000;--ink:#000;--g-mut:#2C2C2E;--muted:#2C2C2E;--g-hair:rgba(0,0,0,.35);--g-edge:rgba(0,0,0,.35)}
+html.a11y-hc body{color:#000}
+html.a11y-hc .hdr,html.a11y-hc .thdr,html.a11y-hc .mapfilter,html.a11y-hc .vctl,html.a11y-hc .maplibregl-ctrl-group,html.a11y-hc .info,html.a11y-hc .list,html.a11y-hc .layers,html.a11y-hc .results,html.a11y-hc .tips,html.a11y-hc .lgd,html.a11y-hc .tl,html.a11y-hc .zb-panel,html.a11y-hc .panel,html.a11y-hc .asset,html.a11y-hc .tree .tsec,html.a11y-hc .blk,html.a11y-hc .card,html.a11y-hc .dsp,html.a11y-hc .mread,html.a11y-hc .status{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:0 0 0 1px #000!important;opacity:1!important}
+html.a11y-hc a{color:#0033A0}html.a11y-hc main a:not(.tbtn):not(.btn):not(.chipbtn),html.a11y-hc .info a,html.a11y-hc .insp a,html.a11y-hc .tree a:not(.tbtn):not(.btn){text-decoration:underline}
+html.a11y-hc .tbtn,html.a11y-hc .chipbtn,html.a11y-hc .tgl,html.a11y-hc .btn,html.a11y-hc .tl button,html.a11y-hc .vctl button,html.a11y-hc .dspb,html.a11y-hc .langsw{box-shadow:0 0 0 1px #000!important;color:#000!important}
+html.a11y-hc .tbtn.solid,html.a11y-hc .tbtn[aria-pressed="true"],html.a11y-hc .tgl[aria-pressed="true"],html.a11y-hc .tl button[aria-pressed=true],html.a11y-hc .vctl button[aria-pressed=true],html.a11y-hc .dspb[aria-expanded=true]{background:#0033A0!important;color:#fff!important}
+html.a11y-hc .note,html.a11y-hc .sub,html.a11y-hc small,html.a11y-hc .zb-foot{color:#2C2C2E!important}
+html.a11y-hc .zb-msg.bot{background:#fff!important;box-shadow:0 0 0 1px #000}
+html.a11y-hc .tbv-b{background:#FFF1C2!important;color:#5A3A00!important;box-shadow:0 0 0 1px #5A3A00!important}
+/* reduced transparency, by the system setting or by choice */
+html.a11y-rt .hdr,html.a11y-rt .thdr,html.a11y-rt .mapfilter,html.a11y-rt .vctl,html.a11y-rt .maplibregl-ctrl-group,html.a11y-rt .info,html.a11y-rt .list,html.a11y-rt .layers,html.a11y-rt .results,html.a11y-rt .tips,html.a11y-rt .lgd,html.a11y-rt .tl,html.a11y-rt .zb-panel,html.a11y-rt .zb-tease,html.a11y-rt .dsp,html.a11y-rt .mread,html.a11y-rt .status,html.a11y-rt .tbv-c,html.a11y-rt .hdr .hsearch input{background:rgba(255,255,255,.98)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html.a11y-rt .zb-msg.bot{background:#F2F2F7!important}
+/* reduced motion, by the system setting or by choice */
+html.a11y-rm *,html.a11y-rm *::before,html.a11y-rm *::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important;scroll-behavior:auto!important}
+html.a11y-rm .lgd{animation:none!important;transform:none!important}
+html.a11y-rm .zb-tease,html.a11y-rm .zb-tease.in .zb-tt b,html.a11y-rm .zb-tease.in .zb-tt span{opacity:1;transform:none}
+/* the floating controls fade when the map is left alone; hovering or focusing brings any of them back */
+body.idle .vctl,body.idle .tl,body.idle .tlshow,body.idle .lgdshow,body.idle .mapfilter,body.idle .lgd,body.idle .maplibregl-ctrl-bottom-left,body.idle .maplibregl-ctrl-bottom-right{opacity:.42;transition:opacity .8s ease}
+body.idle .tl{opacity:.35}
+body.idle .vctl:hover,body.idle .tl:hover,body.idle .mapfilter:hover,body.idle .lgd:hover,body.idle .vctl:focus-within,body.idle .tl:focus-within,body.idle .mapfilter:focus-within,body.idle .lgd:focus-within,body.idle .tl:has(#tlPlay[aria-pressed=true]),body.idle .tlshow:hover,body.idle .lgdshow:hover{opacity:1!important}
+html.a11y-keep body.idle .vctl,html.a11y-keep body.idle .tl,html.a11y-keep body.idle .tlshow,html.a11y-keep body.idle .lgdshow,html.a11y-keep body.idle .mapfilter,html.a11y-keep body.idle .lgd,html.a11y-keep body.idle .maplibregl-ctrl-bottom-left,html.a11y-keep body.idle .maplibregl-ctrl-bottom-right{opacity:1!important}
+html.a11y-keep .vctl.idle{opacity:1!important}
+/* close buttons in the manner of iOS: a circled cross drawn as an icon, never a typed character */
+#layersX,.tips .x,.zb-tx,.list header .x{font-size:0!important;position:relative}
+#layersX::before,.tips .x::before,.zb-tx::before,.list header .x::before{content:"";position:absolute;inset:0;margin:auto;width:11px;height:11px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 2l8 8M10 2l-8 8' stroke='%23000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 2l8 8M10 2l-8 8' stroke='%23000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
+/* Hide links in the legend and the timeline as a chevron, in the manner of macOS disclosure controls */
+#lgdHide,#tlHide{font-size:0!important;width:26px;height:26px;padding:0!important;position:relative;color:#6E6E73!important}
+#lgdHide::before,#tlHide::before{content:"";position:absolute;inset:0;margin:auto;width:12px;height:12px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4.5l4 4 4-4' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4.5l4 4 4-4' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+@media (max-width:700px){#tlHide::before{-webkit-mask:none;mask:none;background:none;width:auto;height:auto;position:static;content:"×";font-size:19px;line-height:1}}

@@ -65,6 +65,26 @@
     const b=document.createElement('button'); b.type='button'; b.className='langsw'; b.setAttribute('aria-label',sl?'Switch to English':'Preklopi na slovenščino'); b.title=sl?'English':'Slovenščina';
     b.innerHTML=`<span class="${sl?'':'on'}">ENG</span><i>/</i><span class="${sl?'on':''}">SLO</span>`; b.onclick=()=>window.setLang&&window.setLang(sl?'en':'sl');
     const nav=head.querySelector('.sitenav'); if(nav&&nav.parentNode) nav.parentNode.insertBefore(b,nav.nextSibling); else head.appendChild(b); })();
+  /* display settings: text size, contrast, transparency, motion, controls that stay visible */
+  (function(){ const head=document.querySelector('header.thdr,header.hdr'); if(!head||!window.ZAGDisplay||document.querySelector('.dspb')) return; const sl=window.LANG==='sl';
+    const b=document.createElement('button'); b.type='button'; b.className='dspb'; b.setAttribute('aria-haspopup','dialog'); b.setAttribute('aria-expanded','false'); b.title=sl?'Prikaz: velikost besedila, kontrast, prosojnost':'Display: text size, contrast, transparency'; b.setAttribute('aria-label',b.title); b.innerHTML='<span>Aa</span>';
+    const pop=document.createElement('div'); pop.className='dsp'; pop.setAttribute('role','dialog'); pop.setAttribute('aria-label',sl?'Nastavitve prikaza':'Display settings'); pop.hidden=true;
+    const t=(en,s)=>sl?s:en;
+    pop.innerHTML=`<h6>${t('Display','Prikaz')}</h6>
+      <div class="dsp-row"><span>${t('Text size','Velikost besedila')}</span><div class="seg" role="group" aria-label="${t('Text size','Velikost besedila')}"><button type="button" data-size="1" style="font-size:12px">A</button><button type="button" data-size="1.12" style="font-size:14px">A</button><button type="button" data-size="1.25" style="font-size:16px">A</button></div></div>
+      <label class="dsp-sw"><span>${t('High contrast','Visok kontrast')}<small>${t('Darker text, solid panels, clearer edges','Temnejše besedilo, polne plošče, jasnejši robovi')}</small></span><input type="checkbox" data-k="contrast"><i></i></label>
+      <label class="dsp-sw"><span>${t('Reduce transparency','Manj prosojnosti')}<small>${t('Glass becomes solid white','Steklo postane polno belo')}</small></span><input type="checkbox" data-k="opaque"><i></i></label>
+      <label class="dsp-sw"><span>${t('Reduce motion','Manj gibanja')}<small>${t('No drifting, rising or fading','Brez lebdenja, dviganja in bledenja')}</small></span><input type="checkbox" data-k="motion"><i></i></label>
+      <label class="dsp-sw"><span>${t('Keep map controls visible','Gumbi zemljevida vedno vidni')}<small>${t('They fade after five seconds otherwise','Sicer po petih sekundah zbledijo')}</small></span><input type="checkbox" data-k="keep"><i></i></label>
+      <button type="button" class="dsp-reset">${t('Reset to default','Ponastavi')}</button>`;
+    const sync=()=>{ const S=ZAGDisplay.get(); pop.querySelectorAll('[data-size]').forEach(x=>x.setAttribute('aria-pressed',String(+x.dataset.size===+(S.size||1)))); pop.querySelectorAll('input[data-k]').forEach(x=>x.checked=!!S[x.dataset.k]); };
+    pop.addEventListener('click',e=>{ const sz=e.target.closest('[data-size]'); if(sz){ ZAGDisplay.set('size',+sz.dataset.size); sync(); } if(e.target.closest('.dsp-reset')){ ZAGDisplay.reset(); sync(); } });
+    pop.addEventListener('change',e=>{ const k=e.target.dataset&&e.target.dataset.k; if(k) ZAGDisplay.set(k,e.target.checked); });
+    const open=on=>{ pop.hidden=!on; b.setAttribute('aria-expanded',String(on)); if(on){ sync(); const r=b.getBoundingClientRect(); pop.style.left=Math.max(8,Math.min(innerWidth-pop.offsetWidth-8,r.left+r.width/2-pop.offsetWidth/2))+'px'; pop.style.top=(r.bottom+10)+'px'; } };
+    b.onclick=()=>open(pop.hidden);
+    document.addEventListener('pointerdown',e=>{ if(!pop.hidden&&!pop.contains(e.target)&&!b.contains(e.target)) open(false); });
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!pop.hidden){ open(false); b.focus(); } });
+    const ls=head.querySelector('.langsw'); if(ls&&ls.parentNode) ls.parentNode.insertBefore(b,ls.nextSibling); else head.appendChild(b); document.body.appendChild(pop); })();
   const strips=()=>document.querySelectorAll('.sitenav,.pills,.mapfilter,#nav').forEach(el=>{ if(el.dataset.edge) return edge(el); el.dataset.edge='1'; el.addEventListener('scroll',()=>edge(el),{passive:true}); edge(el); });
   window.addEventListener('resize',strips); setTimeout(strips,300); setTimeout(strips,2500);
   /* on phones the navigation strip scrolls so the current page is in view */

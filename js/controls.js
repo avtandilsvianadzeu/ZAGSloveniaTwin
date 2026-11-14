@@ -41,9 +41,10 @@ const nudge=d=>{ if(!map) return; orbitOn=false; userMoved=true; map.easeTo({bea
 $('rotL').onclick=()=>nudge({b:-30}); $('rotR').onclick=()=>nudge({b:30});
 $('tiltU').onclick=()=>{ if(!is3d) set3d(true); nudge({p:12}); }; $('tiltD').onclick=()=>nudge({p:-12});
 $('north').onclick=()=>map&&map.easeTo({bearing:0,duration:500});
-/* the view controls fade after five seconds without a touch, so the map stays clean; any pointer or key brings them back */
-(function(){ const v=document.querySelector('.vctl'); if(!v) return; let t=null; const wake=()=>{ v.classList.remove('idle'); clearTimeout(t); t=setTimeout(()=>{ if(!v.matches(':hover, :focus-within')) v.classList.add('idle'); },5000); };
-  ['pointerenter','pointerdown','focusin','touchstart'].forEach(e=>v.addEventListener(e,wake,{passive:true})); v.addEventListener('pointerleave',wake); document.addEventListener('keydown',wake); const mp=document.getElementById('map'); if(mp) mp.addEventListener('pointerdown',wake,{passive:true}); wake(); })();
+/* the floating controls fade after five seconds without a pointer, key or touch, so the map stays clean; anything hovered stays clear.
+   Off with the display setting "Keep map controls visible" (html.a11y-keep). */
+(function(){ let t=null; const wake=()=>{ document.body.classList.remove('idle'); clearTimeout(t); t=setTimeout(()=>{ if(!document.documentElement.classList.contains('a11y-keep')) document.body.classList.add('idle'); },5000); };
+  ['pointermove','pointerdown','keydown','touchstart','wheel','focusin'].forEach(e=>document.addEventListener(e,wake,{passive:true})); wake(); })();
 $('zin').onclick=()=>map&&map.zoomIn(); $('zout').onclick=()=>map&&map.zoomOut();
 $('zhome').onclick=()=>{ closeInfo(); closeList(); if(map) home(); };
 /* Esc closes the top-most panel, unless the cursor is in a text field or the chat */
