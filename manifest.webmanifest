@@ -1,0 +1,17 @@
+{
+  "name": "ZAG Digital Atlas",
+  "short_name": "ZAG Atlas",
+  "description": "Structures in Slovenia with documented ZAG involvement: map, asset records, sources and 3D models.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F3F5F9",
+  "theme_color": "#F3F5F9",
+  "lang": "en-GB",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

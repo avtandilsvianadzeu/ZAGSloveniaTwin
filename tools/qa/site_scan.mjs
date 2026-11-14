@@ -16,7 +16,7 @@ let chromium; try { ({ chromium } = require('playwright')); } catch (_) { ({ chr
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const args = Object.fromEntries(process.argv.slice(2).map(a => a.replace(/^--/, '').split('=')));
 const PORT = +(args.port || 8791), MODE = args.pages || 'all';
-const MIME = { html: 'text/html', js: 'text/javascript', css: 'text/css', json: 'application/json', geojson: 'application/geo+json', png: 'image/png', jpg: 'image/jpeg', svg: 'image/svg+xml', csv: 'text/csv', webp: 'image/webp', ico: 'image/x-icon', xml: 'application/xml', txt: 'text/plain', md: 'text/markdown', bin: 'application/octet-stream' };
+const MIME = { html: 'text/html', js: 'text/javascript', css: 'text/css', json: 'application/json', geojson: 'application/geo+json', png: 'image/png', jpg: 'image/jpeg', svg: 'image/svg+xml', csv: 'text/csv', webp: 'image/webp', ico: 'image/x-icon', xml: 'application/xml', txt: 'text/plain', md: 'text/markdown', bin: 'application/octet-stream', webmanifest: 'application/manifest+json' };
 const server = http.createServer((req, res) => {
   const u = decodeURIComponent(req.url.split('?')[0]).replace(/^\/ZAGSloveniaTwin(?=\/|$)/, ''); let f = path.join(ROOT, u === '/' ? 'index.html' : u);
   if (!f.startsWith(ROOT) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); }
