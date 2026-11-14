@@ -251,3 +251,49 @@
 .zb .zb-head .zb-pic .zb-badge{height:13px;right:-6px;bottom:-2px}
 .zb .zb-head .zb-pic .zb-badge img{height:7px!important}
 html.a11y-rt .zb .zb-panel{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+
+/* =====================================================================================================
+   ZAGBot button and avatar in Liquid Glass: the glass is the frame. A clear body that bends the map behind it,
+   a bright rim that catches light at the top left, a soft inner glow along the edge, a faint shade at the bottom
+   for depth. The face sits inside the glass; the ZAG mark is set into the glass inside the circle, never outside it.
+   ===================================================================================================== */
+.zb{--lg-body:linear-gradient(140deg,rgba(255,255,255,.42) 0%,rgba(255,255,255,.16) 48%,rgba(255,255,255,.26) 100%);
+  --lg-filter:blur(14px) saturate(190%) brightness(1.08);
+  --lg-shadow:inset 0 1.5px 0 rgba(255,255,255,.95),inset 1px 0 0 rgba(255,255,255,.55),inset -1px 0 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(255,255,255,.5),
+    inset 0 0 14px rgba(255,255,255,.38),inset 0 -12px 18px -12px rgba(16,60,140,.20),0 10px 28px rgba(16,40,90,.18),0 1px 3px rgba(16,40,90,.14)}
+/* the button: a glass capsule with the label, or a glass circle on the map */
+.zb .zb-launch,.zb-onmap .zb-launch{background:var(--lg-body)!important;-webkit-backdrop-filter:var(--lg-filter)!important;backdrop-filter:var(--lg-filter)!important;
+  border:0!important;box-shadow:var(--lg-shadow)!important;animation:none!important;padding:4px 16px 4px 4px!important;height:64px!important;gap:10px!important;overflow:visible}
+.zb .zb-launch::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(90% 55% at 28% 0%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%),radial-gradient(70% 40% at 80% 105%,rgba(255,255,255,.28),rgba(255,255,255,0) 60%)}
+.zb .zb-launch:hover{box-shadow:var(--lg-shadow),0 0 0 4px rgba(10,132,255,.10)!important;transform:translateY(-1px)}
+.zb .zb-launch:active{transform:scale(.97)}
+.zb-onmap .zb-launch{width:64px!important;padding:4px!important;border-radius:50%!important;justify-content:center}
+.zb .zb-lbl b{color:#14306B;font-size:14px;letter-spacing:-.01em}.zb .zb-lbl i{color:#3E4A63;font-size:11.5px}
+/* the face: a round window inside the glass, with its own thin glass rim and a dome highlight over it */
+.zb .zb-pic,.zb .zb-launch .zb-pic,.zb .zb-pic.idle3d{position:relative;border-radius:50%!important;overflow:hidden!important;background:linear-gradient(160deg,#F4F8FF,#DCE8FA)!important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.85),0 2px 8px rgba(16,40,90,.18)!important;transform:none!important;animation:none!important;isolation:isolate}
+.zb .zb-launch .zb-pic,.zb-onmap .zb-launch .zb-pic{width:56px!important;height:56px!important}
+.zb .zb-pic img{position:absolute!important;inset:0;width:100%!important;height:100%!important;border-radius:50%!important;object-fit:cover!important;object-position:50% 46%!important;
+  box-shadow:none!important;animation:zbAvBreathe 7s ease-in-out infinite!important}
+.zb .zb-pic::before{content:""!important;display:block!important;position:absolute;inset:0;z-index:2;border-radius:50%;pointer-events:none;animation:none!important;
+  background:radial-gradient(85% 50% at 34% 6%,rgba(255,255,255,.62),rgba(255,255,255,0) 58%)!important;filter:none!important;opacity:1!important;-webkit-mask:none!important;mask:none!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 0 0 1px rgba(255,255,255,.45),inset 0 -8px 12px -8px rgba(16,60,140,.25)!important}
+.zb .zb-pic::after{display:none!important}
+.zb .zb-pic .zb-glow{display:none!important}
+/* the ZAG mark: a small frosted chip inside the bottom of the circle, centred */
+.zb .zb-pic .zb-badge{display:grid!important;position:absolute;z-index:3;left:50%;right:auto!important;bottom:4px!important;transform:translateX(-50%);height:12px!important;padding:0 5px!important;border-radius:6px!important;
+  background:linear-gradient(160deg,rgba(255,255,255,.88),rgba(255,255,255,.62))!important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  box-shadow:inset 0 .5px 0 rgba(255,255,255,1),0 0 0 .5px rgba(33,52,105,.16),0 1px 3px rgba(16,40,90,.16)!important}
+.zb .zb-pic .zb-badge img{position:static!important;width:auto!important;height:6.5px!important;animation:none!important;object-fit:contain!important;border-radius:0!important}
+.zb .zb-head .zb-pic .zb-badge{display:none!important}
+.zb .zb-head .zb-pic{width:40px!important;height:40px!important}
+/* listening or speaking: the glass glows blue and green instead of a ring */
+.zb.listening .zb-launch,.zb.speaking .zb-launch{box-shadow:var(--lg-shadow),0 0 0 3px rgba(10,132,255,.18),0 0 26px rgba(52,199,89,.28)!important}
+@media (max-width:700px){.zb .zb-launch{padding:4px!important;width:60px!important;height:60px!important;border-radius:50%!important;justify-content:center}.zb .zb-launch .zb-pic{width:52px!important;height:52px!important}}
+@media (prefers-reduced-transparency:reduce){.zb .zb-launch{background:rgba(255,255,255,.96)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}}
+html.a11y-rt .zb .zb-launch{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+/* the head a little smaller and higher, so the forehead is whole and the ZAG chip sits under the chin, not on it */
+.zb .zb-launch .zb-pic img.zb-robot{inset:auto!important;left:4px!important;top:0!important;width:calc(100% - 8px)!important;height:calc(100% - 8px)!important;border-radius:50%!important;-webkit-mask:radial-gradient(closest-side,#000 84%,transparent 100%);mask:radial-gradient(closest-side,#000 84%,transparent 100%)}
+.zb .zb-launch .zb-pic .zb-badge{bottom:3px!important;height:10.5px!important;padding:0 4px!important;border-radius:5px!important}
+.zb .zb-launch .zb-pic .zb-badge img{height:5.5px!important}
