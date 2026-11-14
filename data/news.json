@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T07:41:48.296Z",
+ "updated": "2026-11-14T14:33:05.112Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -218,13 +218,6 @@
     "date": "2026-02-19T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVzhkRDFGNldfS0pjWkEwbFdaQWh4WmdYSGkwZE5sbUgzYzNWS2s3Nm12UWJ4eEtLeDlXbGxyUUVHdTFPNzB5TzF4Y1FwYlllaWZlMEZVR0dtU0ZmUzdWRS1lQ3ZQdHVHQ2VfYWdKdWZMdk1CVkE5TGJicFliNm1EU1hYTnB6R1pqUGw0Yw?oc=5",
     "outlets": 1
-   },
-   {
-    "title": "Kolaps na cestah: od centra Ljubljane do predora Šentvid ena ura vožnje (FOTO & VIDEO)",
-    "source": "N1 Slovenija",
-    "date": "2026-01-06T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYkpKWmNFZnpmM0E3aFdxN0ZtaGZQMkpVUnZ2Y2UybWozYWpQSU9fbmVwN2JJal85bTVwdnVMWHFIdUY3cGlsbjN4MzdaZVdiMkdGQlFucEY3d2lGRkp3MFljUjlwMURFbnN3REZPOU85V1p2RWJWV2lrZmJlc3J4SFR0c3VlMzgwOFBRcU50RGRLamUzTHdkTnp0NkdxZw?oc=5",
-    "outlets": 1
    }
   ],
   "trojane": [
@@ -258,7 +251,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 6
+    "outlets": 5
    },
    {
     "title": "Primorska avtocesta v predoru Kastelec proti Kopru ponovno odprta",
@@ -305,6 +298,13 @@
     "outlets": 2
    },
    {
+    "title": "15-LETNIK PO ZADNJEM KOLESU SKOZI PREDOR MARKOVEC: Predelani moped zmogel vrtoglavih 109 km/h",
+    "source": "regionalobala.si",
+    "date": "2026-10-20T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNbzNKWGNhR2JkWEg1RjRHOWlGemNxNlRBNjFqdTEySmE5OVZMc1Jrenh6c3JlaDJWbjVwUTFkeEpPR2Y0Umw2UjYzZzA5UXREZkRZYTVjLThyS0RUUEd1ZC1sVkNoUHM0VDVtVTF3Yy10cFVDMHJWNzFrS3BXcUpXcGRycGVESHJEMEx3RWhyamtBWTkzMmJwSTJvSzZ1bG5Sb3RaUEZ6c2ctMkV2cEV2MG9ObGljNTg5M1pRMXo2RnZaeGFBWHc?oc=5",
+    "outlets": 1
+   },
+   {
     "title": "VOZNIKI, POZOR: Prali bodo predor Markovec, promet bo potekal po enem pasu",
     "source": "regionalobala.si",
     "date": "2026-05-21T07:00:00.000Z",
@@ -332,7 +332,7 @@
     "source": "Novice.si",
     "date": "2026-11-09T13:24:12.000Z",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lbHpPU19KN2pDai05V0l3NW9TNF9CSlFxalRpTG1mZ3Jfa2hOZkNNVFVRYUZqS0k2OWZUYkdsel9tdHlMX3N0dTZuODlBUXRKNGFrLVVfOU5ERS1XdGt3RHY2VGVHMzB5ZjVwTnB4WUt5Skd3?oc=5",
-    "outlets": 6
+    "outlets": 7
    },
    {
     "title": "Štajerska avtocesta v predoru Pletovarje proti Mariboru spet prevozna",
