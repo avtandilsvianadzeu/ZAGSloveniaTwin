@@ -140,23 +140,26 @@
 .zb-mic[aria-pressed=true]{background:linear-gradient(135deg,#FF375F,#AF52DE,#0A84FF);color:#fff;animation:zbMicGlow 1.6s ease-in-out infinite}
 @keyframes zbMicGlow{0%,100%{box-shadow:0 0 0 0 rgba(175,82,222,.5)}50%{box-shadow:0 0 0 9px rgba(175,82,222,0)}}
 @media (prefers-reduced-motion:reduce){.zb-mic[aria-pressed=true]{animation:none}}
-/* picture avatar: round, floating, lit from the eyes, tilting towards the pointer */
-.zb-pic{position:relative;display:inline-grid;place-items:center;border-radius:50%;flex:none;transform:perspective(300px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));transition:transform .25s ease;transform-style:preserve-3d}
-.zb-pic img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),0 6px 16px rgba(16,40,90,.25)}
-.zb-pic .zb-glow{position:absolute;inset:-6px;border-radius:50%;background:radial-gradient(circle at 56% 44%,rgba(79,195,255,.55),rgba(79,195,255,0) 60%);animation:zbGlow 3.2s ease-in-out infinite;pointer-events:none;mix-blend-mode:screen}
-@keyframes zbGlow{0%,100%{opacity:.35;transform:scale(.96)}50%{opacity:.9;transform:scale(1.06)}}
+/* picture avatar: the android cut out on a pale iOS glass disc, in three layers that move apart as it tilts */
+.zb-pic{position:relative;display:inline-grid;place-items:center;border-radius:50%;flex:none;transform:perspective(420px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));transition:transform .22s ease;transform-style:preserve-3d;will-change:transform}
+.zb-pic::before{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(150deg,rgba(255,255,255,.80),rgba(214,228,255,.42) 55%,rgba(173,205,255,.30));box-shadow:inset 0 0 0 1px rgba(255,255,255,.9),inset 0 -8px 18px rgba(10,124,255,.12),0 8px 22px rgba(16,40,90,.16);transform:translateZ(0)}
+.zb-pic img{position:relative;width:88%;height:88%;border-radius:50%;object-fit:cover;object-position:50% 38%;display:block;transform:translateZ(16px) translateY(2%);filter:drop-shadow(0 6px 10px rgba(16,40,90,.28))}
+.zb-pic .zb-glow{position:absolute;inset:-6px;border-radius:50%;background:radial-gradient(circle at 58% 42%,rgba(79,195,255,.55),rgba(79,195,255,0) 58%);animation:zbGlow 3.2s ease-in-out infinite;pointer-events:none;mix-blend-mode:screen;transform:translateZ(22px)}
+.zb-pic::after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(calc(135deg + var(--ty,0deg)*2),rgba(255,255,255,.0) 35%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 65%);transform:translateZ(26px) translate(calc(var(--ty,0deg)*-0.6),calc(var(--tx,0deg)*0.6));pointer-events:none;opacity:.8}
+@keyframes zbGlow{0%,100%{opacity:.35;transform:translateZ(22px) scale(.96)}50%{opacity:.9;transform:translateZ(22px) scale(1.06)}}
 .zb-launch{cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
 .zb-launch .zb-pic{animation:zbFloat 4.2s ease-in-out infinite}
 @keyframes zbFloat{0%,100%{translate:0 0}50%{translate:0 -3px}}
 .zb.dragging .zb-launch{cursor:grabbing;transition:none;box-shadow:0 18px 44px rgba(16,40,90,.3)}
 .zb.dragging .zb-launch .zb-pic{animation:none}
-.zb-onmap .zb-launch .zb-pic,.zb-launch .zb-pic{width:50px!important;height:50px!important}
-.zb-head .zb-pic{width:40px!important;height:40px!important}.zb-head .zb-pic img{box-shadow:0 0 0 2px #fff,0 4px 12px rgba(16,40,90,.25)}
+.zb-onmap .zb-launch .zb-pic,.zb-launch .zb-pic{width:52px!important;height:52px!important}
+.zb-head .zb-pic{width:44px!important;height:44px!important;margin:-4px 0}
+/* when nobody points at it, it sways slowly in 3D */
+.zb-pic.idle3d{animation:zbSway 7s ease-in-out infinite}
+.zb-launch .zb-pic.idle3d{animation:zbFloat 4.2s ease-in-out infinite,zbSway 7s ease-in-out infinite}
+@keyframes zbSway{0%,100%{transform:perspective(420px) rotateX(2deg) rotateY(-8deg)}50%{transform:perspective(420px) rotateX(-2deg) rotateY(8deg)}}
 /* the panel opens on the side where the launcher is */
 .zb.zb-left .zb-panel{right:auto;left:18px}
 .zb.zb-left .zb-tease{right:auto;left:18px;transform-origin:bottom left}
 .zb.zb-left .zb-tease::after{right:auto;left:26px}
-/* the scene behind the chat header, fading into the glass */
-.zb-panel::before{content:"";position:absolute;left:0;right:0;top:0;height:220px;background:url("../img/zagbot_scene.jpg") center 18%/cover no-repeat;opacity:.16;-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent);mask-image:linear-gradient(180deg,#000 30%,transparent);pointer-events:none;z-index:0}
-.zb-panel>*{position:relative;z-index:1}
-@media (prefers-reduced-motion:reduce){.zb-launch .zb-pic,.zb-pic .zb-glow{animation:none}.zb-pic{transition:none}}
+@media (prefers-reduced-motion:reduce){.zb-launch .zb-pic,.zb-pic .zb-glow,.zb-pic.idle3d{animation:none}.zb-pic{transition:none}}

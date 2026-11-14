@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=16'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=17'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector
@@ -425,11 +425,16 @@
     try{ const p=JSON.parse(localStorage.getItem(KEY)||'null'); if(p&&p.w===innerWidth) place(p.x,p.y); }catch(_){}
     launch.addEventListener('pointerdown',e=>{ if(e.button!==0) return; const r=launch.getBoundingClientRect(); drag={dx:e.clientX-r.left,dy:e.clientY-r.top,x0:e.clientX,y0:e.clientY}; moved=false; launch.setPointerCapture(e.pointerId); });
     launch.addEventListener('pointermove',e=>{ if(drag){ if(Math.hypot(e.clientX-drag.x0,e.clientY-drag.y0)>6){ moved=true; root.classList.add('dragging'); place(e.clientX-drag.dx,e.clientY-drag.dy); } return; }
-      const r=launch.getBoundingClientRect(), px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5; launch.style.setProperty('--tx',(py*-14)+'deg'); launch.style.setProperty('--ty',(px*14)+'deg'); });
-    launch.addEventListener('pointerleave',()=>{ launch.style.setProperty('--tx','0deg'); launch.style.setProperty('--ty','0deg'); });
+    });
     launch.addEventListener('pointerup',e=>{ if(!drag) return; const was=moved; drag=null; root.classList.remove('dragging'); if(was){ const r=launch.getBoundingClientRect(); try{ localStorage.setItem(KEY,JSON.stringify({x:r.left,y:r.top,w:innerWidth})); }catch(_){} } else toggle(); });
     launch.addEventListener('pointercancel',()=>{ drag=null; root.classList.remove('dragging'); });
     launch.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } }); })();
+  /* the avatars turn in 3D towards the pointer, over the launcher and over the chat panel, and sway when left alone */
+  (function(){ const pics=[...root.querySelectorAll('.zb-pic')]; if(!pics.length) return; let idleT=null;
+    const rest=()=>pics.forEach(p=>{ p.style.removeProperty('--tx'); p.style.removeProperty('--ty'); p.classList.add('idle3d'); });
+    const aim=(p,e)=>{ const r=p.getBoundingClientRect(), dx=(e.clientX-(r.left+r.width/2))/Math.max(80,r.width*3), dy=(e.clientY-(r.top+r.height/2))/Math.max(80,r.height*3); const ty=Math.max(-22,Math.min(22,dx*34)), tx=Math.max(-18,Math.min(18,-dy*30)); p.classList.remove('idle3d'); p.style.setProperty('--tx',tx+'deg'); p.style.setProperty('--ty',ty+'deg'); };
+    const onMove=e=>{ clearTimeout(idleT); const hp=panel.hidden?null:pics.find(p=>panel.contains(p)); const lp=pics.find(p=>launch.contains(p)); if(hp&&panel.contains(e.target)) aim(hp,e); if(lp&&(launch.contains(e.target)||e.target===launch)) aim(lp,e); idleT=setTimeout(rest,1800); };
+    document.addEventListener('pointermove',onMove,{passive:true}); rest(); })();
   $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });
   $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(ctx.flow&&ctx.flow.kind==='code'){ handle(t); return; } user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },350); };
