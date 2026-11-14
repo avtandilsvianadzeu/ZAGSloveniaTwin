@@ -14,7 +14,9 @@
     ['exact','Exact position',p=>EXACT.has(p.position_precision)]];
   const img=(t,k)=>{ try{ const d=markerImage(t,k), c=document.createElement('canvas'); c.width=d.width; c.height=d.height; c.getContext('2d').putImageData(d,0,0); return '<img alt="" width="26" height="26" src="'+c.toDataURL()+'">'; }catch(_){ return ''; } };
   const pref=()=>{ if(innerWidth<700) return true; try{ const v=localStorage.getItem('zag_lgd_hidden'); if(v===null) return innerWidth<1100; return v==='1'; }catch(_){ return innerWidth<1100; } };
-  const set=on=>{ box.hidden=!on; show.hidden=on; try{ localStorage.setItem('zag_lgd_hidden',on?'0':'1'); }catch(_){} };
+  /* a choice made by hand is kept for wide screens only; the automatic fold on phones is never saved */
+  const vis=on=>{ box.hidden=!on; show.hidden=on; };
+  const set=on=>{ vis(on); if(innerWidth>=700) try{ localStorage.setItem('zag_lgd_hidden',on?'0':'1'); }catch(_){} };
   const sel={types:new Set(),kinds:new Set(),quick:new Set()};
   const kindOfP=p=>p.category==='zag_facility'?'fac':p.evidence_level==='documented'?'doc':'ref';
 
@@ -55,7 +57,7 @@
     body.addEventListener('click',e=>{ if(e.target.closest('.lgall')){ clearAll(); return; }
       const r=e.target.closest('.lgr[data-g]'); if(r) toggle(r.dataset.g,r.dataset.v,e.ctrlKey||e.metaKey||e.shiftKey); });
     box.title='';
-    set(!pref()); paint();
+    vis(!pref()); paint();
   }
   hide.addEventListener('click',()=>set(false)); show.addEventListener('click',()=>set(true));
   const wait=setInterval(()=>{ if(typeof ZA!=='undefined'&&ZA.features&&ZA.features.length&&typeof markerImage==='function'){ clearInterval(wait); build(); } },300);

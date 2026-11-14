@@ -356,7 +356,7 @@
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
     if(on) setTimeout(()=>input.focus(),50); }
   /* greeting next to the launcher: rises like the face of a cube, stays 10 seconds, can be closed */
-  (function teaser(){ let off=false; try{ off=sessionStorage.getItem('zb_teaser_off')==='1'; }catch(_){} if(off) return;
+  (function teaser(){ let off=false; try{ off=sessionStorage.getItem('zb_teaser_off')==='1'; if(!off) sessionStorage.setItem('zb_teaser_off','1'); }catch(_){} if(off) return;
     const T=window.LANG==='sl'?['Dober dan, sem ZAGBot.','Vprašajte me, kaj je ZAG naredil pri kateri koli od 73 struktur, o njeni zgodbi, ključnih podatkih z viri ali projektih za njo.','Sprejmem tudi popravek za ekipo atlasa.']:['Dober dan, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also take a correction to the atlas team.'];
     const el=document.createElement('div'); el.className='zb-tease'; el.setAttribute('role','status');
     el.innerHTML='<button type="button" class="zb-tx" aria-label="Close the greeting">×</button><p class="zb-tt"><b>'+esc(T[0])+'</b> <span>'+esc(T[1])+'</span> <span>'+esc(T[2])+'</span></p><span class="zb-tbar"><i></i></span>'; root.appendChild(el);

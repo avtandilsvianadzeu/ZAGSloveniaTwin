@@ -361,7 +361,7 @@ body.embed .embedbox .pickbox{max-height:30vh}
 .rothint{white-space:nowrap;max-width:calc(100% - 24px)!important;overflow:hidden}
 .rothint span{flex-wrap:nowrap!important;overflow:hidden;text-overflow:ellipsis}
 .rothint span b{font-weight:600}
-.tabs[role=tablist] [role=tab]{padding:0 7px!important;font-size:12px!important;letter-spacing:-.01em;flex:1 1 auto;min-width:0;justify-content:center}.tabs[role=tablist]{display:flex!important;width:100%;box-sizing:border-box;overflow:hidden}
+.tabs[role=tablist] [role=tab]{padding:0 9px!important;font-size:12px!important;letter-spacing:-.01em;flex:0 0 auto;white-space:nowrap;justify-content:center}.tabs[role=tablist]{display:flex!important;width:100%;box-sizing:border-box;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}.tabs[role=tablist]::-webkit-scrollbar{display:none}
 .pane-map .rothint{top:52px!important;bottom:auto!important}.pane-model .rothint{top:auto!important;bottom:56px!important}
 body.embed .pane-model .rothint{top:auto!important;bottom:12px!important}
 /* 701 to 1100 px: keep the status line free and stack the bottom controls above it */

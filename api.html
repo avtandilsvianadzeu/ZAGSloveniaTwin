@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/twin.css?v=66">
 <link rel="stylesheet" href="css/platform.css?v=66">
 <link rel="stylesheet" href="css/ios.css?v=66">
-<link rel="stylesheet" href="css/macos.css?v=31">
+<link rel="stylesheet" href="css/macos.css?v=32">
 <style>
 .api{max-width:1120px;margin:0 auto;padding:0 20px 72px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:36px;align-items:start}
 .api-hero{grid-column:1/-1;padding:34px 0 22px;border-bottom:1px solid #E3E6EC}
@@ -155,7 +155,7 @@
       <p class="sub">What the dataset is and where it comes from. The same information is in <a href="api/v1/metadata.json">metadata.json</a>.</p>
       <div class="card"><table class="ftab"><tbody>
         <tr><td>Content</td><td>Structures and sites in Slovenia where the work of ZAG is documented in published sources, with every value linked to its source</td></tr>
-        <tr><td>Lineage</td><td>ZAG publications and reference lists, owner, operator and research sources; alignments and many positions matched to OpenStreetMap; building outlines and heights from the GURS real estate cadastre; roof surfaces from GURS laser scanning</td></tr>
+        <tr><td>Lineage</td><td>ZAG publications and reference lists, owner, operator and research sources. Alignments and many positions matched to OpenStreetMap. Building outlines and heights from the GURS real estate cadastre, roof surfaces from GURS laser scanning</td></tr>
         <tr><td>Reference systems</td><td>GeoJSON in WGS 84 longitude and latitude (EPSG:4326, RFC 7946). Slovenian national coordinates D96/TM (EPSG:3794) in the fields e_d96tm and n_d96tm, in metres</td></tr>
         <tr><td>Positional accuracy</td><td>Given per record in position_basis: surveyed or address (published position of the object), matched (matched to the mapped structure), site, settlement, locality or epicentre (centre of an area, not the object)</td></tr>
         <tr><td>Extent</td><td>Slovenia; the Karavanke tunnels continue into Austria</td></tr>
@@ -184,6 +184,6 @@
   }catch(e){ $('stats').insertAdjacentHTML('afterend','<p class="terms">The API files could not be read. '+esc(e.message)+'</p>'); }
 })();
 </script>
-<script src="js/zagbot.js?v=26"></script>
+<script src="js/zagbot.js?v=27"></script>
 </body>
 </html>
