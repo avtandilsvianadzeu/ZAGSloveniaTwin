@@ -880,3 +880,24 @@ html[lang=sl] .info iframe.twinframe:not(.ready){background:url("data:image/svg+
 /* on narrow screens the greeting does not cover an open record; it waits until the record is closed */
 @media (max-width:760px){body.has-panel .zb-tease{display:none!important}}
 .sb-top b{text-transform:none!important;letter-spacing:0!important;font-size:14px!important}
+
+/* =====================================================================================================
+   Transparent glass with a bevel on the main surfaces of every page, after iOS: a clear body that lets the
+   background through, a bright edge at the top left, a faint shade at the bottom right, a soft shadow.
+   Pages other than the map get a quiet blue and green background, so the glass has something to show.
+   ===================================================================================================== */
+:root{--bev-bg:linear-gradient(155deg,rgba(255,255,255,.64),rgba(255,255,255,.36));--bev-blur:blur(22px) saturate(175%);
+  --bev-sh:inset 1.5px 1.5px 0 rgba(255,255,255,.95),inset -1px -1px 0 rgba(33,52,105,.05),inset 0 0 16px rgba(255,255,255,.22),0 0 0 .5px rgba(33,52,105,.10),0 12px 32px rgba(16,40,90,.10)}
+body:not(:has(#map)){background:
+    radial-gradient(900px 520px at 8% -6%,rgba(10,132,255,.13),transparent 62%),
+    radial-gradient(760px 480px at 100% 4%,rgba(101,188,123,.12),transparent 60%),
+    radial-gradient(900px 600px at 70% 110%,rgba(124,98,255,.09),transparent 60%),
+    #EEF2F8!important;background-attachment:fixed!important}
+.panel,.dims,.stats,section.glass,.asset,.tsec,.pane,.tree>.blk,.insp .blk,.mapfilter,.lgd,.tl,.vctl,.maplibregl-ctrl-group,.info,.list,.layers,.results,.tips,.sidebar,.livecard,.fmenu{
+  background:var(--bev-bg)!important;-webkit-backdrop-filter:var(--bev-blur)!important;backdrop-filter:var(--bev-blur)!important;border:1px solid rgba(255,255,255,.7)!important;box-shadow:var(--bev-sh)!important}
+.hdr,.thdr{background:linear-gradient(180deg,rgba(255,255,255,.58),rgba(255,255,255,.34))!important;box-shadow:inset 0 -1px 0 rgba(255,255,255,.6),0 1px 0 rgba(33,52,105,.07),0 8px 24px rgba(16,40,90,.06)!important}
+.sitenav{background:linear-gradient(155deg,rgba(255,255,255,.55),rgba(255,255,255,.28))!important;box-shadow:inset 1px 1px 0 rgba(255,255,255,.95),0 0 0 .5px rgba(33,52,105,.10),0 6px 18px rgba(16,40,90,.08)!important}
+/* text stays as readable as before on the clearer glass */
+.panel p,.panel li,.panel td,.asset p,.tsec p{color:#2A2F3A}
+html.a11y-rt .panel,html.a11y-rt .dims{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+@media (prefers-reduced-transparency:reduce){.panel,.dims,.stats,section.glass,.asset,.tsec,.pane,.info,.list,.lgd,.tl,.sidebar{background:rgba(255,255,255,.96)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}}

@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=28'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=29'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector
@@ -551,28 +551,28 @@
     function draw(cv,t){ const r=cv.getBoundingClientRect(); if(!r.width) return; const dpr=Math.min(3,window.devicePixelRatio||1), W=Math.round(r.width*dpr);
       if(cv.width!==W){ cv.width=W; cv.height=W; } const g=cv.getContext('2d'), S=W, c=S/2, R=S*0.47, k=S/56;
       g.clearRect(0,0,S,S);
-      /* the sphere: deep violet navy inside, lighter towards the rim */
-      let gr=g.createRadialGradient(c,c*1.05,R*0.1,c,c,R); gr.addColorStop(0,'#1E1756'); gr.addColorStop(.62,'#0F0C33'); gr.addColorStop(.9,'#231A63'); gr.addColorStop(1,'#4B3BA8');
+      /* the sphere: clear white glass, a faint lavender towards the rim */
+      let gr=g.createRadialGradient(c-R*.25,c-R*.3,R*0.05,c,c,R); gr.addColorStop(0,'rgba(255,255,255,.55)'); gr.addColorStop(.6,'rgba(244,242,255,.32)'); gr.addColorStop(.9,'rgba(214,206,255,.38)'); gr.addColorStop(1,'rgba(190,176,255,.6)');
       g.save(); g.beginPath(); g.arc(c,c,R,0,7); g.fillStyle=gr; g.fill(); g.clip();
-      g.globalCompositeOperation='lighter';
       const band=(n,base,a1,f1,sp,spread,cols,alpha,w)=>{ for(let i=0;i<n;i++){ const u=i/(n-1);
-          const lg=g.createLinearGradient(c-R,0,c+R,0); cols.forEach((col,j)=>lg.addColorStop(j/(cols.length-1),col)); g.strokeStyle=lg; g.globalAlpha=alpha*(0.45+0.55*Math.sin(Math.PI*u)); g.lineWidth=w*k;
+          const lg=g.createLinearGradient(c-R,0,c+R,0); cols.forEach((col,j)=>lg.addColorStop(j/(cols.length-1),col)); g.strokeStyle=lg; g.globalAlpha=alpha*(0.4+0.6*Math.sin(Math.PI*u)); g.lineWidth=w*k;
           g.beginPath(); for(let x=-1;x<=1.0001;x+=0.02){ const e=Math.pow(Math.max(0,1-x*x),1.25);
             const y=c+R*(base+amp*e*(a1*Math.sin(x*f1+t*sp+u*1.3)+a1*0.45*Math.sin(x*f1*1.9-t*sp*0.7+u*2.1))+(u-.5)*spread*e);
             const px=c+x*R*0.98; x<=-1?g.moveTo(px,y):g.lineTo(px,y); } g.stroke(); } };
-      g.shadowBlur=4*k; g.shadowColor='rgba(130,110,255,.8)';
-      band(26,-0.08,0.30,2.5,1.15,0.30,['#6E4BFF','#3E6BFF','#8C6CFF','#5A49F0'],0.55,0.55);
-      g.shadowColor='rgba(80,230,255,.9)';
-      band(18,0.10,0.16,3.4,-1.5,0.14,['#3FD7FF','#B9FFFF','#55E8FF'],0.7,0.6);
-      g.globalAlpha=1; g.shadowBlur=0; g.globalCompositeOperation='source-over';
-      /* inner violet glow at the edge */
-      gr=g.createRadialGradient(c,c,R*0.72,c,c,R); gr.addColorStop(0,'rgba(150,120,255,0)'); gr.addColorStop(1,'rgba(170,140,255,.55)'); g.fillStyle=gr; g.fillRect(0,0,S,S);
+      /* the waves in full colour on the white glass: violet and blue above, cyan and blue below */
+      g.shadowBlur=3*k; g.shadowColor='rgba(110,80,255,.45)';
+      band(24,-0.08,0.30,2.5,1.15,0.30,['#7A52FF','#3D63FF','#9A72FF','#5C45F2'],0.6,0.6);
+      g.shadowColor='rgba(0,190,255,.55)';
+      band(16,0.10,0.16,3.4,-1.5,0.14,['#00B8F0','#2F8CFF','#00C9E8'],0.75,0.65);
+      g.globalAlpha=1; g.shadowBlur=0;
+      /* inner lavender glow at the edge, as in glass */
+      gr=g.createRadialGradient(c,c,R*0.70,c,c,R); gr.addColorStop(0,'rgba(170,150,255,0)'); gr.addColorStop(1,'rgba(160,140,255,.35)'); g.fillStyle=gr; g.fillRect(0,0,S,S);
       g.restore();
-      /* glass rim and highlight */
-      const rg=g.createLinearGradient(c-R,c-R,c+R,c+R); rg.addColorStop(0,'rgba(240,232,255,.95)'); rg.addColorStop(.5,'rgba(170,150,255,.55)'); rg.addColorStop(1,'rgba(200,185,255,.85)');
-      g.lineWidth=1.5*k; g.strokeStyle=rg; g.beginPath(); g.arc(c,c,R-.75*k,0,7); g.stroke();
-      g.lineWidth=1.3*k; g.strokeStyle='rgba(255,255,255,.5)'; g.lineCap='round'; g.beginPath(); g.arc(c,c,R*0.88,Math.PI*1.14,Math.PI*1.38); g.stroke();
-      gr=g.createRadialGradient(c-R*.42,c-R*.5,0,c-R*.42,c-R*.5,R*.32); gr.addColorStop(0,'rgba(255,255,255,.35)'); gr.addColorStop(1,'rgba(255,255,255,0)'); g.fillStyle=gr; g.beginPath(); g.arc(c,c,R,0,7); g.fill(); }
+      /* glass rim, a bright edge at the top left, and the highlight */
+      const rg=g.createLinearGradient(c-R,c-R,c+R,c+R); rg.addColorStop(0,'rgba(255,255,255,1)'); rg.addColorStop(.5,'rgba(176,160,255,.7)'); rg.addColorStop(1,'rgba(150,130,255,.85)');
+      g.lineWidth=1.4*k; g.strokeStyle=rg; g.beginPath(); g.arc(c,c,R-.7*k,0,7); g.stroke();
+      g.lineWidth=1.3*k; g.strokeStyle='rgba(255,255,255,.95)'; g.lineCap='round'; g.beginPath(); g.arc(c,c,R*0.88,Math.PI*1.14,Math.PI*1.38); g.stroke();
+      gr=g.createRadialGradient(c-R*.42,c-R*.5,0,c-R*.42,c-R*.5,R*.36); gr.addColorStop(0,'rgba(255,255,255,.7)'); gr.addColorStop(1,'rgba(255,255,255,0)'); g.fillStyle=gr; g.beginPath(); g.arc(c,c,R,0,7); g.fill(); }
     function frame(now){ if(!document.hidden&&now-lastF>32){ lastF=now; const want=root.classList.contains('listening')||root.classList.contains('speaking')?1.75:1; amp+=(want-amp)*0.08;
         root.querySelectorAll('canvas.zb-orb-c').forEach(cv=>{ if(cv.offsetParent!==null) draw(cv,(now-t0)/1000); }); }
       if(!still) requestAnimationFrame(frame); }
