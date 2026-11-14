@@ -560,7 +560,14 @@ h1,h2,.wrap.home h1,.asset h1,.info h2,.zb-title b,.sf-about b,.printhead h1,.lg
 .tbv-c ul{margin:0;padding-left:16px}.tbv-c li{margin:3px 0}
 .tbv-c li.op{list-style:none;margin-left:-16px;padding-left:9px;border-left:3px solid #E0A100}
 .tbv-c .note{margin:8px 0 0;font-size:11.5px;color:#6A6F7B}
-@media (hover:none){.tbv-c{position:static;margin-top:8px;display:none;opacity:1;transform:none;pointer-events:auto}.tbv{flex-direction:column;align-items:flex-start}.tbv.pin .tbv-c{display:block}}
+.tbv-full{display:none}.tbv.pin .tbv-brief{display:none}.tbv.pin .tbv-full{display:block}
+.tbv.pin{flex-direction:column;align-items:flex-start}
+.tbv.pin .tbv-c{position:static;margin-top:8px;width:100%;max-height:none;overflow:visible;transform:none;opacity:1;pointer-events:auto;box-sizing:border-box}
+.tbv-c li b{color:#1D1D1F;font-weight:600}
+.tbv-c li+li{margin-top:7px;padding-top:7px;border-top:1px solid rgba(176,120,0,.12)}
+.tbv-brief ul{padding-left:0;list-style:none}.tbv-brief li{position:relative;padding-left:14px}.tbv-brief li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:#E0A100}
+.tbv-brief li+li{border-top:0;padding-top:0;margin-top:4px}
+@media (hover:none){.tbv-c{display:none}.tbv.pin .tbv-c{display:block}}
 /* measuring on the map */
 #map.measuring .maplibregl-canvas{cursor:crosshair!important}
 .vctl #bMeasure{border-top:1px solid var(--g-edge)!important}
@@ -582,3 +589,7 @@ h1,h2,.wrap.home h1,.asset h1,.info h2,.zb-title b,.sf-about b,.printhead h1,.lg
 @media (max-width:700px){.mread{top:auto;bottom:calc(170px + env(safe-area-inset-bottom,0px));left:12px;right:12px;transform:none;max-width:none}.mread{animation:none}}
 @media (hover:none){.vctl.idle{opacity:.5}}
 @media (max-width:1100px),(hover:none){.tips .tkeys{display:none}}
+
+/* credits fold into the (i) button; the status line below the map carries the map credit */
+.maplibregl-ctrl-attrib.maplibregl-compact{min-height:24px;border-radius:12px!important;background:rgba(255,255,255,.6)!important;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 0 0 .5px rgba(33,52,105,.14)}
+.maplibregl-ctrl-attrib.maplibregl-compact-show{padding:4px 30px 4px 10px;max-width:min(560px,70vw)}

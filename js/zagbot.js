@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=10'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=11'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   const ROBOT=(size,wave)=>`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
@@ -95,10 +95,10 @@
     <button class="zb-launch" type="button" aria-expanded="false" aria-controls="zbPanel" title="Ask ZAGBot">${ROBOT(44,true)}<span class="zb-lbl"><b>ZAGBot</b><i>Ask me</i></span></button>
     <section class="zb-panel" id="zbPanel" role="dialog" aria-label="ZAGBot chat" hidden>
       <header class="zb-head"><div class="zb-lights"><button class="zb-x zb-red" type="button" aria-label="Close the chat" title="Close"></button><button class="zb-min zb-yel" type="button" aria-label="Minimise the chat" title="Minimise"></button><button class="zb-big zb-grn" type="button" aria-label="Larger chat window" title="Larger window"></button></div>
-        ${ROBOT(34,true)}<div class="zb-title"><b>ZAGBot</b><span>Online, knows all 73 records</span></div></header>
+        ${ROBOT(34,true)}<div class="zb-title"><b>ZAGBot</b><span>Online, knows all 73 records</span></div><button class="zb-new" type="button" title="New conversation" aria-label="New conversation"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><button class="zb-spk" type="button" aria-pressed="false" title="Read answers aloud" aria-label="Read answers aloud"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2 6h3l4-3v10l-4-3H2z" fill="currentColor"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M12.8 3.5a6 6 0 0 1 0 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button></header>
       <div class="zb-log" id="zbLog" aria-live="polite"></div>
       <div class="zb-chips" id="zbChips"></div>
-      <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure, or tell me what to change" aria-label="Message to ZAGBot"><button type="submit" aria-label="Send" title="Send"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V3.5M3.8 7.6 8 3.4l4.2 4.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
+      <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure, or tell me what to change" aria-label="Message to ZAGBot"><button type="button" class="zb-mic" aria-pressed="false" title="Speak your question (Slovenian or English)" aria-label="Speak your question" hidden><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect x="5.5" y="1.5" width="5" height="8" rx="2.5" fill="currentColor"/><path d="M3.5 7.5a4.5 4.5 0 0 0 9 0M8 12v2.5M5.5 14.5h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><button type="submit" aria-label="Send" title="Send"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V3.5M3.8 7.6 8 3.4l4.2 4.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
       <p class="zb-foot">Answers come from the atlas data, with sources. Corrections are reviewed by the ZAG atlas team.</p>
     </section>`;
   document.body.appendChild(root);
@@ -106,9 +106,13 @@
   const $=s=>root.querySelector(s), log=$('#zbLog'), chips=$('#zbChips'), input=$('#zbText'), panel=$('#zbPanel'), launch=$('.zb-launch');
   let ctx={rec:null,flow:null}, started=false;
 
+  /* the conversation is kept in this browser (last 80 messages), so a page change or a new visit continues where it stopped */
+  const HKEY='zb_hist', OKEY='zb_open'; let hist=[]; try{ hist=JSON.parse(localStorage.getItem(HKEY)||'[]'); if(!Array.isArray(hist)) hist=[]; }catch(_){ hist=[]; }
+  const keep=(html,who)=>{ hist.push({w:who||'bot',h:html,t:Date.now()}); if(hist.length>80) hist=hist.slice(-80); try{ localStorage.setItem(HKEY,JSON.stringify(hist)); }catch(_){} };
+  const forget=()=>{ hist=[]; try{ localStorage.removeItem(HKEY); }catch(_){} };
   const scroll=()=>{ log.scrollTop=log.scrollHeight; };
   let typing=null;
-  function say(html,who){ const d=document.createElement('div'); d.className='zb-msg '+(who||'bot'); d.innerHTML=html; if(typing){ typing.remove(); typing=null; } log.appendChild(d);
+  function say(html,who,silent){ const d=document.createElement('div'); d.className='zb-msg '+(who||'bot'); d.innerHTML=html; if(typing){ typing.remove(); typing=null; } log.appendChild(d); if(!silent&&!/zb-ana|zb-typing/.test(html)) keep(html,who); if(!silent&&who!=='me') speak(d);
     /* a long answer is shown from its start, a short one keeps the chat at the bottom */
     if(who==='me') scroll(); else { const q=[...log.querySelectorAll('.zb-msg.me')].pop(); if(q&&log.scrollHeight-q.offsetTop>log.clientHeight) log.scrollTop=Math.max(0,q.offsetTop-8); else scroll(); } return d; }
   function think(){ if(typing) return; typing=document.createElement('div'); typing.className='zb-msg bot'; typing.innerHTML='<span class="zb-typing"><i></i><i></i><i></i></span>'; log.appendChild(typing); scroll(); }
@@ -272,7 +276,9 @@
 
   /* ---------- understanding typed text, with tolerance for typos ---------- */
   /* a token counts as a word of the list when it is the word, starts it, or is one or two letters away from it */
-  const near=(tok,list)=>list.some(w=>tok===w||(tok.length>=4&&w.startsWith(tok))||(tok.length>=3&&w.length>=4&&lev(tok,w)<=1)||(tok.length>=6&&lev(tok,w)<=2));
+  /* everyday words that sit one letter from a keyword (there and where, then and when) count only when typed exactly */
+  const PLAIN=new Set(['there','here','these','those','then','than','their','they','them','this','that','what','with','will','were','have','from','into','over','more','most','also','some','come','same','make','take','like','time','year','one','two','our','out','now','how','who','whom','whose','for','are','and','the','was','his','her','she','has','had','not','but','can','all','any','its','tam','tukaj','kje','kdaj','kako','kdo','kaj','ali','sta','so','je','in','na','za','od','do','pri','po','se','ne','da']);
+  const near=(tok,list)=>list.some(w=>tok===w||(!PLAIN.has(tok)&&((tok.length>=4&&w.startsWith(tok))||(tok.length>=3&&w.length>=4&&lev(tok,w)<=1)||(tok.length>=6&&lev(tok,w)<=2))));
   const anyNear=(toks,list)=>toks.some(t=>near(t,list));
   const FUZ={where:['where','location','located','kje','kam','lokacija'],show:['show','see','display','pokazi','prikazi','poglej'],map:['map','zemljevid','zemljevidu','karta'],open:['open','odpri'],page:['page','record','sheet','stran','zapis'],
     figs:['figures','values','specs','specifications','numbers','dimensions','podatki','vrednosti','mere','kljucni'],story:['story','history','about','background','happened','explain','describe','tell','zgodba','zgodovina','opisi','povej'],
@@ -312,6 +318,14 @@
     const F={where:anyNear(toks,FUZ.where)&&!anyNear(toks,FUZ.fix),map:(anyNear(toks,FUZ.show)&&anyNear(toks,FUZ.map))||/\bon the map\b|\bna zemljevid\w*\b/.test(n),page:anyNear(toks,FUZ.open)&&anyNear(toks,FUZ.page)||/\bits page\b/.test(n),figs:anyNear(toks,FUZ.figs)&&!attr};
     F.map=F.map||F.where;
     if(!r&&ctx.rec&&!strong.length&&!type&&(F.map||F.page||F.figs)){ r=ctx.rec; }
+    const countQ=/\b(how many|how much|is there (one|a|any|still)|are there|one or two|two or (one|more)|number of|currently|still|koliko|ali (je|sta|so|imamo|obstaja\w*|še)|trenutno|še vedno)\b/.test(n);
+    if(countQ&&strong.length>=2&&!type&&!wantFix&&!wantModel&&!attr){ const rs=strong.filter(h=>h.s>=strong[0].s*0.7).map(h=>h.r).slice(0,5);
+      if(rs.length>=2) return analyse(readSteps(rs),()=>{ const sl=window.LANG==='sl';
+        say(sl?`Atlas vsebuje <b>${rs.length}</b> ustrezna zapisa:`:`The atlas holds <b>${rs.length}</b> matching records:`);
+        say(`<ul class="zb-list">${rs.map(x=>{ const p=x.p, f=arr(p.facts).filter(q=>Array.isArray(q)&&q[1]), line=p.opened||(f[0]?f[0][0]+': '+f[0][1]:'')||(x.year?'ZAG work '+x.year:''); return `<li><b>${esc(x.name)}</b>${x.place?', '+esc(x.place):''}${line?'<br><span>'+esc(tidy(line))+'</span>':''}</li>`; }).join('')}</ul>`);
+        const succ=rs.find(x=>arr(x.p.facts).some(q=>Array.isArray(q)&&/succeeded by|replaced by|until \d{4}/i.test(q[0]+' '+q[1])));
+        if(succ) say(sl?`Po podatkih atlasa je zapis <b>${esc(succ.name)}</b> zgodovinski, nasledil ga je novejši.`:`By the atlas data, <b>${esc(succ.name)}</b> is the earlier one and has been succeeded by the newer.`);
+        offer(rs.map(x=>[(sl?'Več o ':'More on ')+x.name,()=>story(x)])); }); }
     if(!r&&F.where&&hits.length&&hits[0].s>=1.4) r=hits[0].r;
     if(r&&!wantFix&&!wantModel&&!attr){ if(F.map) return whereIs(r); if(F.page){ location.href=recUrl(r); return; } if(F.figs) return figures(r); }
     const prj=strong.length?null:projectOf(free); if(prj&&!wantFix&&!wantModel) return analyse(['Looking up '+tidy(prj.ac||prj.t),'Reading the ZAG project page entry','Writing the answer'],()=>projectCard(prj));
@@ -349,8 +363,11 @@
 
   /* ---------- open and close ---------- */
   async function toggle(open){ const on=open==null?panel.hidden:open; panel.hidden=!on; launch.setAttribute('aria-expanded',String(on)); root.classList.toggle('open',on);
-    if(on&&!started){ started=true; say('Loading the atlas data...');
+    try{ sessionStorage.setItem(OKEY,on?'1':'0'); }catch(_){}
+    if(on&&!started){ started=true; say('Loading the atlas data...',null,true);
       try{ await load(); log.innerHTML=''; const here=PAGE_ID&&DB.byId[PAGE_ID]; if(here) ctx.rec=here;
+        if(hist.length){ const old=hist.slice(); hist=[]; old.forEach(m=>say(m.h,m.w,true)); hist=old; const d=document.createElement('div'); d.className='zb-day'; d.textContent=window.LANG==='sl'?'Nadaljujemo, kjer smo končali':'Continuing where we left off'; log.appendChild(d); scroll();
+          offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); if(on) setTimeout(()=>input.focus(),50); return; }
         say(window.LANG==='sl'?`Pozdravljeni, sem <b>ZAGBot</b>. Poznam ${DB.recs.length} struktur v atlasu in njihove preverjene vrednosti.${here?` Ste na strani <b>${esc(here.name)}</b>.`:''} Vprašajte me v slovenščini ali angleščini, odgovarjam iz podatkov atlasa. Kaj želite?`:`Hello, I am <b>ZAGBot</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
         offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); }
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
@@ -366,8 +383,26 @@
     el.onclick=()=>{ bye(); toggle(true); };
     setTimeout(()=>{ if(!panel.hidden||done) return; el.classList.add('in'); timer=setTimeout(bye,10000); },1600);
     launch.addEventListener('click',bye); })();
+  try{ if(sessionStorage.getItem(OKEY)==='1') setTimeout(()=>toggle(true),400); }catch(_){}
+  $('.zb-new').onclick=()=>{ forget(); log.innerHTML=''; ctx={rec:PAGE_ID&&DB.byId?DB.byId[PAGE_ID]||null:null,flow:null}; say(window.LANG==='sl'?'Nov pogovor. Kaj želite?':'New conversation. What would you like?'); offer(menu(),true); };
   launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });
   $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(ctx.flow&&ctx.flow.kind==='code'){ handle(t); return; } user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },350); };
+  /* ---------- voice: speak a question (Slovenian or English, chosen by the interface language), answers read aloud on request ---------- */
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition, mic=$('.zb-mic'), spk=$('.zb-spk'); let rec=null, listening=false, voiceOn=false;
+  try{ voiceOn=localStorage.getItem('zb_voice')==='1'; }catch(_){} spk.setAttribute('aria-pressed',String(voiceOn));
+  const lang=()=>window.LANG==='sl'?'sl-SI':'en-GB';
+  function speak(el){ if(!voiceOn||!('speechSynthesis' in window)) return; const t=(el.innerText||'').replace(/\s+/g,' ').trim().slice(0,600); if(!t) return;
+    const u=new SpeechSynthesisUtterance(t); u.lang=lang(); const v=speechSynthesis.getVoices().find(x=>x.lang.replace('_','-').toLowerCase().startsWith(lang().slice(0,2))); if(v) u.voice=v; u.rate=1.02; speechSynthesis.cancel(); speechSynthesis.speak(u); }
+  spk.onclick=()=>{ voiceOn=!voiceOn; spk.setAttribute('aria-pressed',String(voiceOn)); try{ localStorage.setItem('zb_voice',voiceOn?'1':'0'); }catch(_){} if(!voiceOn&&'speechSynthesis' in window) speechSynthesis.cancel();
+    say(voiceOn?(window.LANG==='sl'?'Odgovore bom brala naglas.':'I will read my answers aloud.'):(window.LANG==='sl'?'Branje naglas je izklopljeno.':'Reading aloud is off.'),null,true); };
+  if(SR&&location.protocol==='https:'){ mic.hidden=false;
+    const stop=()=>{ listening=false; mic.setAttribute('aria-pressed','false'); root.classList.remove('listening'); input.placeholder=window.LANG==='sl'?'Vprašajte o objektu ali povejte, kaj naj spremenim':'Ask about a structure, or tell me what to change'; };
+    mic.onclick=()=>{ if(listening){ try{ rec.stop(); }catch(_){} stop(); return; }
+      rec=new SR(); rec.lang=lang(); rec.interimResults=true; rec.continuous=false; rec.maxAlternatives=1; let finalText='';
+      rec.onresult=e=>{ let interim=''; for(let i=e.resultIndex;i<e.results.length;i++){ const t=e.results[i][0].transcript; if(e.results[i].isFinal) finalText+=t; else interim+=t; } input.value=(finalText+interim).trim(); };
+      rec.onerror=e=>{ stop(); if(e.error==='not-allowed') say(window.LANG==='sl'?'Mikrofon ni dovoljen. Dovolite ga v nastavitvah strani v brskalniku.':'The microphone is not allowed. Allow it for this site in the browser.',null,true); else if(e.error!=='aborted'&&e.error!=='no-speech') say((window.LANG==='sl'?'Prepoznava govora ni uspela: ':'Speech recognition failed: ')+esc(e.error),null,true); };
+      rec.onend=()=>{ stop(); const t=input.value.trim(); if(t){ input.value=''; user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },300); } };
+      try{ rec.start(); listening=true; mic.setAttribute('aria-pressed','true'); root.classList.add('listening'); input.value=''; input.placeholder=window.LANG==='sl'?'Poslušam (slovensko)':'Listening (English)'; }catch(_){ stop(); } }; }
   window.ZAGBot=window.ZAGBOT={open:()=>toggle(true),ask:t=>{ toggle(true).then(()=>handle(t)); }};
 })();

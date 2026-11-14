@@ -11,7 +11,7 @@ async function boot(){
   }
   style.sky=skyFor();
   map=new maplibregl.Map({container:'map',style,center:[14.99,46.15],zoom:7.1,pitch:0,maxPitch:80,maxZoom:20,hash:false,maxTileCacheSize:900,pixelRatio:Math.min(window.devicePixelRatio||1,3),cancelPendingTileRequestsWhileZooming:false,
-    attributionControl:{compact:innerWidth<700,customAttribution:'Geocoding <a href="https://photon.komoot.io" target="_blank" rel="noopener">Photon</a>'},
+    attributionControl:{compact:true,customAttribution:'Geocoding <a href="https://photon.komoot.io" target="_blank" rel="noopener">Photon</a>'},
     maxBounds:[[11.5,44.6],[18.5,47.7]],fadeDuration:160,canvasContextAttributes:{antialias:true,powerPreference:'high-performance'}});
   /* gentler wheel and trackpad zoom, as in Apple Maps */
   try{ map.scrollZoom.setWheelZoomRate(1/600); map.scrollZoom.setZoomRate(1/120); }catch(_){}
@@ -19,8 +19,8 @@ async function boot(){
   map.on('load',async()=>{
     addAtlasLayers(); ready=true;
     terrainFor(); map.on('zoomend',terrainFor);
-    /* on phones the credits fold into the (i) button after a few seconds, as MapLibre does after the first drag */
-    if(innerWidth<700) setTimeout(()=>{ const a=document.querySelector('.maplibregl-ctrl-attrib.maplibregl-compact-show'); if(a) a.classList.remove('maplibregl-compact-show'); },5000);
+    /* the credits fold into the (i) button after a few seconds; the status line keeps the map credit in view */
+    setTimeout(()=>{ const a=document.querySelector('.maplibregl-ctrl-attrib.maplibregl-compact-show'); if(a) a.classList.remove('maplibregl-compact-show'); },6000);
     applyLook(); syncView(); await dataP; refreshProjects(); try{applyNewsRing();}catch(_){}
     const hand=l=>{map.on('mouseenter',l,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',l,()=>map.getCanvas().style.cursor='');};
     ['pt','clu'].forEach(hand);
