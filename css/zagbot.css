@@ -164,3 +164,7 @@
 .zb.zb-left .zb-tease{right:auto;left:18px;transform-origin:bottom left}
 .zb.zb-left .zb-tease::after{right:auto;left:26px}
 @media (prefers-reduced-motion:reduce){.zb-launch .zb-pic,.zb-pic .zb-glow,.zb-pic.idle3d,.zb-pic::after{animation:none}.zb-pic{transition:none}}
+/* the head comes a little closer and back again, slowly */
+.zb-pic img{animation:zbBreathe 5.2s ease-in-out infinite}
+@keyframes zbBreathe{0%,100%{scale:1}50%{scale:1.09}}
+@media (prefers-reduced-motion:reduce){.zb-pic img{animation:none}}

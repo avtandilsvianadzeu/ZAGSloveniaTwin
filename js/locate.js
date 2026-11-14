@@ -106,14 +106,15 @@ function zoomFor(x){
 function bearingFor(id){let h=0;for(const c of String(id))h=(h*31+c.charCodeAt(0))|0;return (Math.abs(h)%70)-35;}
 /* camera padding keeps the target clear of the info panel (left, desktop) or the bottom sheet (phone) and the timeline */
 function padNow(){
+  const PW=(()=>{ const v=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--panel')); return v>0?v:400; })();
   /* the whole of Slovenia stays clear of the panels that cover the map: record panel, tips, legend, bottom bars */
   const open=document.body.classList.contains('has-panel');
   const tips=document.querySelector('.tips'), tipsOn=!!(tips&&!tips.hidden&&tips.offsetHeight);
   const lgd=document.getElementById('lgd'), lgdOn=!!(lgd&&!lgd.hidden);
   const clamp=p=>{ p.bottom=Math.min(p.bottom,Math.max(0,innerHeight-p.top-160)); p.right=Math.min(p.right,Math.max(0,innerWidth-p.left-200)); return p; };
   if(phone()) return clamp(open?{top:70,bottom:Math.round(innerHeight*0.55),left:20,right:20}:{top:140,bottom:(tipsOn?tips.offsetHeight+60:130),left:16,right:16});
-  if(innerWidth<=1100) return clamp(open?{top:70,bottom:120,left:430,right:70}:{top:140,bottom:(tipsOn?tips.offsetHeight+140:140),left:30,right:70});
-  return clamp(open?{top:70,bottom:120,left:430,right:70}:{top:110,bottom:120,left:lgdOn?290:40,right:tipsOn?390:80});
+  if(innerWidth<=1100) return clamp(open?{top:70,bottom:120,left:PW+30,right:70}:{top:140,bottom:(tipsOn?tips.offsetHeight+140:140),left:30,right:70});
+  return clamp(open?{top:70,bottom:120,left:PW+30,right:70}:{top:110,bottom:120,left:lgdOn?290:40,right:tipsOn?390:80});
 }
 /* camera move + callback when it ends. Stops any running animation first, so the callback cannot catch the stale
    moveend of the interrupted one, and is registered before the move, so an instant move (reduced motion) still reports. */

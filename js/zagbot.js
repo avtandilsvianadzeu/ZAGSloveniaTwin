@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=18'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=19'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector

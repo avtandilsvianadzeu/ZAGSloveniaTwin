@@ -787,3 +787,12 @@ body.splashing .zb-tease,body.splashing .tips{visibility:hidden}
 .livecard h6{margin:10px 0 2px;font:600 11px var(--font);letter-spacing:.04em;text-transform:uppercase;color:#6E6E73}
 .livecard time i,.zn time i{font-style:normal;font-weight:600;color:#213469;margin-left:4px}
 .lc-media li b{font-weight:500}
+/* large screens: one step larger interface by default, a wider record panel and chat; the Aa setting still decides */
+@media (min-width:1600px){
+  :root{--ui-scale:1.06;--panel:460px}
+  .zb-panel{width:min(440px,calc(100vw - 36px));height:min(700px,calc(100vh - 100px))}
+  .zb.big .zb-panel{width:min(720px,calc(100vw - 36px))}
+}
+/* smoothness: a lighter blur on the two largest glass surfaces, the look unchanged */
+.hdr{-webkit-backdrop-filter:blur(16px) saturate(170%)!important;backdrop-filter:blur(16px) saturate(170%)!important}
+.info{-webkit-backdrop-filter:blur(18px) saturate(170%)!important;backdrop-filter:blur(18px) saturate(170%)!important}
