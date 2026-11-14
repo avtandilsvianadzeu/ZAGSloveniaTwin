@@ -39,7 +39,10 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Data checks
         id: data
-        run: node tools/qa/check_data.mjs | tee qa/data.txt
+        run: |
+          mkdir -p qa
+          set -o pipefail
+          node tools/qa/check_data.mjs | tee qa/data.txt
       - name: Site scan in a browser
         id: site
         if: always()
@@ -64,7 +67,9 @@ jobs:
         with:
           node-version: 22
       - name: Source links
-        run: node tools/qa/check_links.mjs | tee qa/links.txt
+        run: |
+          mkdir -p qa
+          node tools/qa/check_links.mjs | tee qa/links.txt
       - name: Report
         if: always()
         run: |
