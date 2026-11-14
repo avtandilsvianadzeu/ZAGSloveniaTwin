@@ -40,18 +40,33 @@
   document.body.classList.add('sierra');
 
   /* live status: a green light, the time of the last news check, refreshed every minute */
-  const live=document.createElement('span'); live.className='livebadge'; live.title='The atlas checks Slovenian news for every record several times an hour';
-  live.innerHTML='<i></i><b>LIVE</b><span>'+(window.LANG==='sl'?'povezovanje':'connecting')+'</span>'; const right=head.querySelector('.tnav,.hright'); right?head.insertBefore(live,right):head.appendChild(live);
-  const ago=t=>{ const m=Math.max(0,Math.round((Date.now()-t)/60000)); return m<1?'just now':m<60?m+' min ago':m<1440?Math.round(m/60)+' h ago':Math.round(m/1440)+' days ago'; };
-  let last=0, upd=0;
+  /* live badge: a green light, the Slovenian date and time written the Slovenian way (sobota, 14. 11. 2026, 12.27),
+     and on a click a glass card with the latest items of Aktualno from zag.si */
+  const live=document.createElement('button'); live.type='button'; live.className='livebadge'; live.setAttribute('aria-haspopup','dialog'); live.setAttribute('aria-expanded','false');
+  live.innerHTML='<i></i><b>LIVE</b><span><em></em><time></time></span>'; const right=head.querySelector('.tnav,.hright'); right?head.insertBefore(live,right):head.appendChild(live);
+  let upd=0, zn=null;
   async function tick(){ try{ const r=await fetch('data/news.json?t='+Date.now(),{cache:'no-store'}); if(r.ok){ const j=await r.json(); const t=Date.parse(j.updated||''); if(t){ if(upd&&t>upd){ live.classList.remove('flash'); void live.offsetWidth; live.classList.add('flash'); } upd=t; } } }catch(_){}
-    last=Date.now(); paint(); }
-  /* a live clock in Slovenian time, written the Slovenian way (14. 11. 2026, 08:26:41); the last news check is in the tooltip */
-  const slTime=t=>new Date(t).toLocaleString('sl-SI',{timeZone:'Europe/Ljubljana',day:'numeric',month:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  const clock=()=>new Date().toLocaleString('sl-SI',{timeZone:'Europe/Ljubljana',day:'numeric',month:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'});
-  const span=live.querySelector('span'); span.setAttribute('aria-live','off');
-  function paint(){ const sl=window.LANG==='sl'; span.textContent=clock(); live.title=(sl?'Slovenski čas. ':'Slovenian time. ')+(upd?(sl?'Zadnja posodobitev novic ':'News last updated ')+slTime(upd)+'. ':'')+(sl?'Atlas preverja novice večkrat na uro.':'The atlas checks the news several times an hour.'); }
-  tick(); setInterval(tick,5*60000); paint(); setInterval(paint,1000);
+    try{ const r=await fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000),{cache:'no-store'}); if(r.ok) zn=await r.json(); }catch(_){} paint(); }
+  const TZ={timeZone:'Europe/Ljubljana'};
+  const DAYS_SL=['nedelja','ponedeljek','torek','sreda','četrtek','petek','sobota'], DAYS_EN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const parts=d=>{ const f=new Intl.DateTimeFormat('en-GB',{...TZ,weekday:'short',day:'numeric',month:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(d), g=k=>(f.find(x=>x.type===k)||{}).value; const wd=new Date(d.toLocaleString('en-US',TZ)).getDay(); return {wd,day:+g('day'),month:+g('month'),year:g('year'),h:g('hour'),m:g('minute')}; };
+  /* the Slovenian way: day. month. year with a space after each full stop, the time with a full stop between hours and minutes */
+  const slDate=d=>{ const p=parts(d); return `${p.day}. ${p.month}. ${p.year}`; };
+  const slClock=d=>{ const p=parts(d); return `${p.h}.${p.m}`; };
+  const slFull=d=>{ const p=parts(d); return `${DAYS_SL[p.wd]}, ${slDate(d)}, ${slClock(d)}`; };
+  const em=live.querySelector('em'), tm=live.querySelector('time');
+  function paint(){ const sl=window.LANG==='sl', now=new Date(), p=parts(now); em.textContent=slDate(now); tm.textContent=slClock(now); tm.setAttribute('datetime',now.toISOString());
+    live.title=(sl?`${DAYS_SL[p.wd]}, slovenski čas. `:`${DAYS_EN[p.wd]}, Slovenian time. `)+(upd?(sl?'Zadnja posodobitev novic ':'News last updated ')+slFull(new Date(upd))+'. ':'')+(sl?'Kliknite za Aktualno na ZAG.':'Click for the latest from ZAG.'); live.setAttribute('aria-label',live.title); }
+  /* the card with the latest from ZAG */
+  const card=document.createElement('div'); card.className='livecard'; card.setAttribute('role','dialog'); card.hidden=true; document.body.appendChild(card);
+  function openCard(on){ card.hidden=!on; live.setAttribute('aria-expanded',String(on)); if(!on) return; const sl=window.LANG==='sl', items=zn&&zn.items?(zn.items[sl?'sl':'en']||zn.items.sl||[]).slice(0,5):[];
+    const fmtD=d=>d?slDate(new Date(d)):'';
+    card.innerHTML=`<div class="lc-h"><b>${sl?'Aktualno na ZAG':'Latest from ZAG'}</b><span>${slFull(new Date())}</span></div>`+(items.length?`<ul>${items.map(i=>`<li><a href="${i.url}" target="_blank" rel="noopener"><time>${fmtD(i.date)}</time><b>${i.title}</b></a></li>`).join('')}</ul>`:`<p class="note">${sl?'Novic trenutno ni mogoče prebrati.':'The news cannot be read at the moment.'}</p>`)+`<div class="lc-f"><a href="https://www.zag.si/${sl?'':'en/'}" target="_blank" rel="noopener">zag.si</a><span>${upd?(sl?'Novice o objektih preverjene ':'Record news checked ')+slClock(new Date(upd)):''}</span></div>`;
+    const r=live.getBoundingClientRect(); card.style.top=(r.bottom+10)+'px'; card.style.left=Math.max(8,Math.min(innerWidth-card.offsetWidth-8,r.left+r.width/2-card.offsetWidth/2))+'px'; }
+  live.onclick=()=>openCard(card.hidden);
+  document.addEventListener('pointerdown',e=>{ if(!card.hidden&&!card.contains(e.target)&&!live.contains(e.target)) openCard(false); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!card.hidden){ openCard(false); live.focus(); } });
+  tick(); setInterval(tick,5*60000); paint(); setInterval(paint,15000);
 
   /* numbers count up when they appear, so totals feel live */
   const count=el=>{ if(el.dataset.counted) return; const txt=el.textContent.trim(); if(!/^\d[\d,]*$/.test(txt)) return; el.dataset.counted='1'; const end=+txt.replace(/,/g,''); if(end<2||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
