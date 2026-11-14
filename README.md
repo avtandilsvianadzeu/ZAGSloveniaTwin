@@ -32,6 +32,7 @@ The checks that keep the site publishable are part of the repository and run in 
 
 - `npm run qa:data` reads `data/twins.json` and `data/zag_projects.geojson` and reports house-style typography in the atlas's own text, working notes left in public fields, values without a source link, differences without a lead label, positions outside Slovenia and duplicate ids. Blocking problems fail the job.
 - `npm run qa:site` serves the repository, opens every page in English and Slovenian in Chromium (plus the main pages at phone width) and reports script errors, failed requests to the site's own files, typography in visible text, English left on Slovenian pages, horizontal overflow and images without alt text. `--pages=quick` opens six record pages instead of all 73.
+- `npm run qa:bot` asks ZAGBot a fixed set of questions in a browser, including misheard names (Zack Institute, chatesh) and Slovenian names in an English chat, and fails when an answer names the wrong record or answers an unknown name with the record already open. Add a line to `CASES` in `tools/qa/bot_check.mjs` whenever ZAGBot gets a question wrong.
 - `npm run qa:links` asks every source URL whether it still answers and lists the ones that do not. It never fails the build.
 - `npm run build` rebuilds `data/zag_projects.geojson` and `api/v1` from `data.js` and `data/twins.json`.
 

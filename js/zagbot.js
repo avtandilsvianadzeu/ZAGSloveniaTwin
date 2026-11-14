@@ -380,7 +380,8 @@
     F.map=F.map||F.where;
     if(!r&&ctx.rec&&!strong.length&&!type&&!unknown.length&&(F.map||F.page||F.figs||ctx.photo)){ r=ctx.rec; }
     /* a name that matches nothing is said so, never answered with the record that happens to be open */
-    if(!r&&unknown.length&&!type&&!place.length){ const sl=L()==='sl', w=unknown.slice(0,3).join(' ');
+    if(!r&&unknown.length&&!place.length&&!wantFix&&!wantModel){ const sl=L()==='sl', w=unknown.slice(0,3).join(' ');
+      if(type){ say(sl?`V atlasu ne najdem objekta z imenom <b>${esc(w)}</b>. To so zapisi te vrste:`:`I cannot find <b>${esc(w)}</b> in the atlas. These are the records of that type:`); return listType(type); }
       say(sl?`V atlasu ne najdem objekta z imenom <b>${esc(w)}</b>. Poskusite z drugo besedo ali izberite vrsto.`:`I cannot find <b>${esc(w)}</b> in the atlas. Try another word, the Slovenian name, or choose a type.`); offer(typeChips()); return; }
     if(r&&ctx.photo&&!wantFix&&!wantModel) return photoOf(r);
     const countQ=/\b(how many|how much|is there (one|a|any|still)|are there|one or two|two or (one|more)|number of|currently|still|koliko|ali (je|sta|so|imamo|obstaja\w*|še)|trenutno|še vedno)\b/.test(n);

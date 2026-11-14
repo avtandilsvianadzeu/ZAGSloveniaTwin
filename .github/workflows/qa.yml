@@ -47,10 +47,16 @@ jobs:
         id: site
         if: always()
         run: node tools/qa/site_scan.mjs --pages=${{ github.event.inputs.pages || (github.event_name == 'pull_request' && 'quick' || 'all') }}
+      - name: ZAGBot answers
+        id: bot
+        if: always()
+        run: |
+          set -o pipefail
+          node tools/qa/bot_check.mjs | tee qa/bot.txt
       - name: Report
         if: always()
         run: |
-          { echo '## Data'; echo '```'; cat qa/data.txt 2>/dev/null || echo 'not run'; echo '```'; echo; cat qa/site-report.md 2>/dev/null || echo 'Site scan did not finish.'; } >> "$GITHUB_STEP_SUMMARY"
+          { echo '## Data'; echo '```'; cat qa/data.txt 2>/dev/null || echo 'not run'; echo '```'; echo; cat qa/site-report.md 2>/dev/null || echo 'Site scan did not finish.'; echo; echo '## ZAGBot answers'; echo '```'; cat qa/bot.txt 2>/dev/null || echo 'not run'; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
