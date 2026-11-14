@@ -37,6 +37,10 @@ The checks that keep the site publishable are part of the repository and run in 
 
 Each run writes `qa/data-report.json`, `qa/site-report.json` and `qa/site-report.md` (ignored by git) and, in Actions, the same as the run summary and a downloadable artifact. Internal working notes about a record belong in the `editorial` field of `data/twins.json`, which is never shown on the site or in the API.
 
+## Desktop application
+
+The atlas also builds as a desktop application: a Windows installer and portable `.exe`, a macOS disk image and a Linux AppImage, from the `desktop` folder. The build runs on GitHub (`.github/workflows/desktop.yml`) on every tag `v*` and attaches the files to that release; `desktop/README.md` has the steps. The pages, data and models are inside the application, the map tiles and the news come from the internet.
+
 ## Publishing
 
 GitHub Pages, branch `main`, folder `/ (root)`.

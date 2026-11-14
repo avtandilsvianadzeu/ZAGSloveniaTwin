@@ -1,0 +1,35 @@
+{
+  "name": "zag-digital-atlas",
+  "productName": "ZAG Digital Atlas",
+  "version": "1.0.0",
+  "description": "ZAG Digital Atlas as a desktop application: the atlas data, 3D models and ZAGBot, with the map tiles from the internet",
+  "main": "main.js",
+  "author": "ZAG, Slovenian National Building and Civil Engineering Institute",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "prepare-site": "node prepare-site.js",
+    "dist:win": "npm run prepare-site && electron-builder --win --x64",
+    "dist:mac": "npm run prepare-site && electron-builder --mac",
+    "dist:linux": "npm run prepare-site && electron-builder --linux AppImage"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "si.zag.digitalatlas",
+    "productName": "ZAG Digital Atlas",
+    "artifactName": "ZAG-Digital-Atlas-${version}-${os}-${arch}.${ext}",
+    "directories": { "buildResources": "build", "output": "dist" },
+    "files": ["main.js", "preload.js", "site/**/*"],
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }, { "target": "portable", "arch": ["x64"] }],
+      "icon": "build/icon.ico"
+    },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "perMachine": false, "shortcutName": "ZAG Digital Atlas" },
+    "mac": { "target": ["dmg"], "icon": "build/icon.png", "category": "public.app-category.reference" },
+    "linux": { "target": ["AppImage"], "icon": "build/icon.png", "category": "Science" }
+  }
+}
