@@ -40,6 +40,10 @@ const CASES = [
   ['switch to satellite', 'Satellite imagery is on'],
   ['zoom in please', 'Zoomed in'],
   ['show Tomačevo bridge on the map', 'Tomačevo', 'whole map'],
+  ['kje je ZAG', 'Dimičeva ulica 12'],
+  ['pokaži celoten zemljevid', 'whole map'],
+  ['kje je most v Tomačevem', 'Tomačevo'],
+  ['koliko predorov je v atlasu', 'tunnel'],
 ];
 
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;

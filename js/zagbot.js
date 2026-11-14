@@ -259,14 +259,14 @@
   function listType(t,inPlace){ let rs=DB.recs.filter(r=>t.match(r.type)); if(inPlace) rs=rs.filter(r=>inPlace.includes(r));
     if(!rs.length){ say(`No ${esc(t.name)} are recorded${inPlace?' there':''}.`); offer(menu()); return; }
     say(rs.length===1?`One of the ${esc(t.name)} is recorded${inPlace?' there':''}:`:`${rs.length} ${esc(t.name)}${inPlace?' there':''} in the atlas. Choose one:`); offer(rs.slice(0,10).map(r=>[r.name,()=>card(r)]).concat(rs.length>10?[['Show more',()=>{ offer(rs.slice(10,24).map(r=>[r.name,()=>card(r)])); }]]:[])); }
-  function help(){ say(`I can:<ul class="zb-list"><li>find a structure by name, type or place</li><li>answer a value such as height, length, year or power, always with its source</li><li>show it on the map or open its page</li><li>take a report when something is wrong and send it to the atlas team as an exact request</li><li>open the form for a new 3D model</li></ul>I understand English and Slovenian words, for example <i>predor</i>, <i>most</i>, <i>višina</i>.`); offer(menu()); }
+  function help(){ say(`I can:<ul class="zb-list"><li>find a structure by name, type or place</li><li>answer a value such as height, length, year or power, always with its source</li><li>show it on the map or open its page</li><li>take a report when something is wrong and send it to the DigitalZAG team as an exact request</li><li>open the form for a new 3D model</li></ul>I understand English and Slovenian words, for example <i>predor</i>, <i>most</i>, <i>višina</i>.`); offer(menu()); }
 
   /* ---------- guided requests: every step is a click, so the request is exact ---------- */
   function pickRecord(then,why){ say((why||'Which structure is it?')+' Type a name or choose one.'); ctx.flow={pick:then};
     const near=ctx.rec?[[ctx.rec.name,()=>{ ctx.flow=null; then(ctx.rec); }]]:[]; offer(near.concat(typeChips().map(c=>[c[0],()=>listPick(c[1],then)])) ); input.focus(); }
   function listPick(key,then){ const t=TYPES.find(x=>x.key===key); const rs=DB.recs.filter(r=>t.match(r.type)); say('Choose one:'); offer(rs.slice(0,24).map(r=>[r.name,()=>{ ctx.flow=null; then(r); }])); }
   function startModel(r){ if(!r) return pickRecord(startModel,'Which structure is it about?'); ctx.rec=r;
-    const has=!!((DB.twins[r.id]||{}).model||r.p.lines||r.p.line); say(`${has?'Suggest an improvement to the 3D model of':'Suggest a 3D model for'} <b>${esc(r.name)}</b>. Tell me what should change and where it is published. The atlas team builds the model from the mapped outline and the published dimensions.`);
+    const has=!!((DB.twins[r.id]||{}).model||r.p.lines||r.p.line); say(`${has?'Suggest an improvement to the 3D model of':'Suggest a 3D model for'} <b>${esc(r.name)}</b>. Tell me what should change and where it is published. The DigitalZAG team builds the model from the mapped outline and the published dimensions.`);
     offer([['Describe the change',()=>startUpdate(r,'model'),'primary'],isOwner()?['Open the model form',`${REPO}/issues/new?template=model_request.yml&title=${encodeURIComponent('Model: '+r.name+' ('+r.id+')')}`,'link']:null,['Back',()=>card(r)]]); }
   const WHAT=[['position','The position on the map'],['value','A value (height, length, year)'],['model','The 3D model'],['text','The description or ZAG role'],['source','A source or link'],['other','Something else']];
   function startUpdate(r,what,attr){ if(!r) return pickRecord(x=>startUpdate(x,what,attr),'Which structure is it about?'); ctx.rec=r; ctx.flow={kind:'update',r,what:null,label:attr||null,value:null,src:null};
@@ -290,9 +290,9 @@
     const body=['Request written with ZAGBot on the atlas.','',...lines.map(([a,b])=>`### ${a}\n\n${b}\n`),'### Page',`\nhttps://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/twin.html?id=${f.r.id}\n`,'Photos can be dragged in here before submitting.'].join('\n');
     const runUrl=`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`;
     if(!INBOX.url&&MAIL.to){ offer([['Send the request',()=>sendMail(title.replace(/^ZAGBot: /,''),lines,runUrl),'primary'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
-      say('<span class="zb-note">No account needed. It goes by email to the atlas team, who check it and let ZAGBot make the change.</span>'); return; }
+      say('<span class="zb-note">No account needed. It goes by email to the DigitalZAG team, who check it and let ZAGBot make the change.</span>'); return; }
     if(INBOX.url){ offer([['Send the request',()=>sendInbox(title.replace(/^ZAGBot: /,''),body.replace('Photos can be dragged in here before submitting.','')),'primary'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
-      say('<span class="zb-note">'+(isOwner()?'You are signed in as the atlas owner, so ZAGBot starts on it at once.':'No account needed. The atlas team checks it, then ZAGBot makes the change.')+'</span>'); return; }
+      say('<span class="zb-note">'+(isOwner()?'You are signed in as the atlas owner, so ZAGBot starts on it at once.':'No account needed. The DigitalZAG team checks it, then ZAGBot makes the change.')+'</span>'); return; }
     offer([['Send the request',`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`,'link'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
     say('<span class="zb-note">The request is reviewed by the DigitalZAG team.</span>'); }
   /* ---------- requests by email: formsubmit.co delivers the message to the atlas owner, the visitor needs no account ---------- */
@@ -302,7 +302,7 @@
     lines.forEach(([a,b])=>{ data[a]=b; }); data['Sent from']=page; data['Run it with ZAGBot (opens GitHub, signed in as owner)']=runUrl;
     try{ const r=await fetch('https://formsubmit.co/ajax/'+encodeURIComponent(MAIL.to),{method:'POST',headers:{'content-type':'application/json',accept:'application/json'},body:JSON.stringify(data)});
       const j=await r.json().catch(()=>({})); if(!r.ok||String(j.success)==='false') throw new Error(j.message||('error '+r.status));
-      wait.remove(); ctx.flow=null; say('Thank you, your request is sent to the atlas team. They check the source, then ZAGBot makes the change.'); offer([['Something else',()=>{ say('What else?'); offer(menu()); }]]); }
+      wait.remove(); ctx.flow=null; say('Thank you, your request is sent to the DigitalZAG team. They check the source, then ZAGBot makes the change.'); offer([['Something else',()=>{ say('What else?'); offer(menu()); }]]); }
     catch(e){ wait.remove(); say('It could not be sent: '+esc(e.message)); offer([['Try again',()=>sendMail(subject,lines,runUrl)],['Send with my own email','mailto:'+MAIL.to+'?subject='+encodeURIComponent('ZAGBot request: '+subject)+'&body='+encodeURIComponent(lines.map(([a,b])=>a+': '+b).join('\n')+'\n\n'+location.href),'link'],['Cancel',cancel]]); } }
   /* ---------- request inbox: no GitHub account needed (server/inbox.js) ---------- */
   const INBOX={url:''}; fetch('data/inbox.json').then(r=>r.ok?r.json():{}).then(j=>{ if(j&&/^https:\/\//.test(j.url||'')) INBOX.url=j.url.replace(/\/+$/,''); }).catch(()=>{});
@@ -311,7 +311,7 @@
   async function call(path,method,body){ const r=await fetch(INBOX.url+path,{method:method||'GET',headers:Object.assign({'content-type':'application/json'},code()?{'x-owner-code':code()}:{}),body:body?JSON.stringify(body):undefined}); let j={}; try{ j=await r.json(); }catch(_){} if(!r.ok) throw new Error(j.error||('error '+r.status)); return j; }
   async function sendInbox(subject,body){ const wait=say('Sending...');
     try{ const j=await call('/request','POST',{subject,body,website:''}); wait.remove(); ctx.flow=null;
-      say(j.runs?`Sent as request <b>#${j.number}</b>. ZAGBot is starting on it now and will answer there in a few minutes.`:`Thank you, your request is in as <b>#${j.number}</b>. The atlas team checks it, then ZAGBot makes the change.`);
+      say(j.runs?`Sent as request <b>#${j.number}</b>. ZAGBot is starting on it now and will answer there in a few minutes.`:`Thank you, your request is in as <b>#${j.number}</b>. The DigitalZAG team checks it, then ZAGBot makes the change.`);
       offer([['Follow it (no sign in needed)',j.url,'link'],['Something else',()=>{ say('What else?'); offer(menu()); }]]); }
     catch(e){ wait.remove(); say('It could not be sent: '+esc(e.message)); offer([['Try again',()=>sendInbox(subject,body)],['Cancel',cancel]]); } }
   function ownerLogin(){ if(!INBOX.url){ say('The request inbox is not switched on yet, so there is nothing to sign in to.'); offer(menu()); return; }
@@ -457,15 +457,17 @@
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
     if(on) setTimeout(()=>input.focus(),50); }
   /* greeting next to the launcher: rises like the face of a cube, stays 10 seconds, can be closed */
-  (function teaser(){ let off=false; try{ off=sessionStorage.getItem('zb_teaser_off')==='1'; if(!off) sessionStorage.setItem('zb_teaser_off','1'); }catch(_){} if(off) return;
-    const T=window.LANG==='sl'?['Dober dan, sem ZAGBot.','Vprašajte me, kaj je ZAG naredil pri kateri koli od 73 struktur, o njeni zgodbi, ključnih podatkih z viri ali projektih za njo.','Sprejmem tudi popravek za ekipo atlasa.']:['Dober dan, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also take a correction to the atlas team.'];
+  /* the greeting: at most once a day in this browser, shorter on a phone, never over an open chat */
+  (function teaser(){ const day=new Date().toISOString().slice(0,10); let off=false; try{ off=sessionStorage.getItem('zb_teaser_off')==='1'||localStorage.getItem('zb_teaser_day')===day; if(!off){ sessionStorage.setItem('zb_teaser_off','1'); localStorage.setItem('zb_teaser_day',day); } }catch(_){} if(off) return;
+    const small=innerWidth<=700;
+    const T=window.LANG==='sl'?(small?['Dober dan, sem ZAGBot.','Vprašajte me o katerem koli od 73 objektov.','']:['Dober dan, sem ZAGBot.','Vprašajte me, kaj je ZAG naredil pri kateri koli od 73 struktur, o njeni zgodbi, ključnih podatkih z viri ali projektih za njo.','Popravek posredujem ekipi DigitalZAG.']):(small?['Dober dan, I am ZAGBot.','Ask me about any of the 73 structures.','']:['Dober dan, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also pass a correction to the DigitalZAG team.']);
     const el=document.createElement('div'); el.className='zb-tease'; el.setAttribute('role','status');
     el.innerHTML='<button type="button" class="zb-tx" aria-label="Close the greeting">×</button><p class="zb-tt"><b>'+esc(T[0])+'</b> <span>'+esc(T[1])+'</span> <span>'+esc(T[2])+'</span></p><span class="zb-tbar"><i></i></span>'; root.appendChild(el);
     let timer=null, done=false;
     const bye=()=>{ if(done) return; done=true; clearTimeout(timer); el.classList.remove('in'); el.classList.add('out'); setTimeout(()=>el.remove(),500); };
     el.querySelector('.zb-tx').onclick=e=>{ e.stopPropagation(); try{ sessionStorage.setItem('zb_teaser_off','1'); }catch(_){} bye(); };
     el.onclick=()=>{ bye(); toggle(true); };
-    setTimeout(()=>{ if(!panel.hidden||done) return; el.classList.add('in'); timer=setTimeout(bye,10000); },1600);
+    setTimeout(()=>{ if(!panel.hidden||done) return; el.classList.add('in'); timer=setTimeout(bye,small?6000:9000); },1600);
     launch.addEventListener('click',bye); })();
   try{ if(sessionStorage.getItem(OKEY)==='1') setTimeout(()=>toggle(true),400); }catch(_){}
   $('.zb-new').onclick=()=>{ forget(); log.innerHTML=''; ctx={rec:PAGE_ID&&DB.byId?DB.byId[PAGE_ID]||null:null,flow:null}; say(L()==='sl'?'Nov pogovor. Kaj želite?':'New conversation. What would you like?'); offer(menu(),true); };
