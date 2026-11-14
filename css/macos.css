@@ -879,3 +879,13 @@ html.a11y-hc .sb-ic{box-shadow:0 0 0 1px #000}
 html[lang=sl] .info iframe.twinframe:not(.ready){background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='40'%3E%3Ctext x='110' y='24' text-anchor='middle' font-family='-apple-system,Segoe UI,Inter,Arial' font-size='13' fill='%236E7380'%3ENalaganje 3D modela%3C/text%3E%3C/svg%3E") center/220px 40px no-repeat,linear-gradient(160deg,rgba(255,255,255,.62),rgba(236,243,255,.42)) center/100% 100% no-repeat}
 /* on narrow screens the greeting does not cover an open record; it waits until the record is closed */
 @media (max-width:760px){body.has-panel .zb-tease{display:none!important}}
+/* live camera on a record: a glass card with the player, a red dot that breathes while it is shown */
+.live{margin:12px 0 4px;padding:10px;border-radius:16px;background:linear-gradient(160deg,rgba(255,255,255,.62),rgba(255,255,255,.38));-webkit-backdrop-filter:blur(14px) saturate(170%);backdrop-filter:blur(14px) saturate(170%);box-shadow:inset 1px 1px 0 rgba(255,255,255,.95),0 0 0 .5px rgba(33,52,105,.10),0 6px 18px rgba(16,40,90,.08)}
+.live header{display:flex;align-items:center;gap:8px;margin:0 2px 8px;font-size:13px;color:#1D1D1F;min-width:0}
+.live header b{font-weight:700}.live header small{color:#6E7380;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#FF3B30;box-shadow:0 0 0 0 rgba(255,59,48,.5);animation:liveDot 1.8s ease-out infinite;flex:none}
+@keyframes liveDot{0%{box-shadow:0 0 0 0 rgba(255,59,48,.45)}100%{box-shadow:0 0 0 8px rgba(255,59,48,0)}}
+.live-v{position:relative;aspect-ratio:16/9;max-width:100%;border-radius:12px;overflow:hidden;background:#0B1730}
+.live-v iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.live-n{margin:8px 2px 0;font-size:11.5px;line-height:1.35;color:#6E7380}
+@media (prefers-reduced-motion:reduce){.live-dot{animation:none}}

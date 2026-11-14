@@ -1,0 +1,4 @@
+{
+  "note": "Live cameras shown on records. Key: record id. youtube: the link of the live stream (any YouTube link form). until: the time after which it is no longer shown, so a finished stream disappears on its own. title: what the camera shows.",
+  "streams": {}
+}
