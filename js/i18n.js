@@ -146,6 +146,7 @@
     [/^Zoom (\d+\.\d)$/,(m,z)=>`Povečava ${z}`],[/^About 1 : (.+)$/,(m,s)=>`Približno 1 : ${s}`],
     [/^Work up to $/,()=>'Delo do '],[/^, (\d+) dated records?$/,(m,n)=>`, ${n} datiranih ${zap(+n)}`],[/^All years, (\d+) to (\d+)$/,(m,a,b)=>`Vsa leta, ${a} do ${b}`],
     [/^(\d+) of (\d+)$/,(m,a,b)=>`${a} od ${b}`],
+    [/^of (\d+), (\d+)%$/,(m,a,b)=>`od ${a}, ${b} %`],[/^(\d+) of (\d+), (\d+)%$/,(m,a,b,c)=>`${a} od ${b}, ${c} %`],
     [/^ZAG work (\d{4})/,(m,y)=>`Delo ZAG ${y}`],[/^, ZAG work (.+)$/,(m,y)=>`, delo ZAG ${y.replace(' to ',' do ')}`],
     [/^Where the sources differ \((\d+)(, (\d+) settled)?\)$/,(m,n,_,s)=>`Kjer se viri razlikujejo (${n}${s?', '+s+' rešenih':''})`],
     [/^Quality (\d+)$/,(m,n)=>`Kakovost ${n}`],
