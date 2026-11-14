@@ -9,7 +9,7 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=29'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=30'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector
@@ -552,7 +552,7 @@
       if(cv.width!==W){ cv.width=W; cv.height=W; } const g=cv.getContext('2d'), S=W, c=S/2, R=S*0.47, k=S/56;
       g.clearRect(0,0,S,S);
       /* the sphere: clear white glass, a faint lavender towards the rim */
-      let gr=g.createRadialGradient(c-R*.25,c-R*.3,R*0.05,c,c,R); gr.addColorStop(0,'rgba(255,255,255,.55)'); gr.addColorStop(.6,'rgba(244,242,255,.32)'); gr.addColorStop(.9,'rgba(214,206,255,.38)'); gr.addColorStop(1,'rgba(190,176,255,.6)');
+      let gr=g.createRadialGradient(c-R*.25,c-R*.3,R*0.05,c,c,R); gr.addColorStop(0,'rgba(255,255,255,.55)'); gr.addColorStop(.6,'rgba(244,242,255,.32)'); gr.addColorStop(.9,'rgba(214,226,250,.38)'); gr.addColorStop(1,'rgba(180,205,245,.6)');
       g.save(); g.beginPath(); g.arc(c,c,R,0,7); g.fillStyle=gr; g.fill(); g.clip();
       const band=(n,base,a1,f1,sp,spread,cols,alpha,w)=>{ for(let i=0;i<n;i++){ const u=i/(n-1);
           const lg=g.createLinearGradient(c-R,0,c+R,0); cols.forEach((col,j)=>lg.addColorStop(j/(cols.length-1),col)); g.strokeStyle=lg; g.globalAlpha=alpha*(0.4+0.6*Math.sin(Math.PI*u)); g.lineWidth=w*k;
@@ -560,16 +560,17 @@
             const y=c+R*(base+amp*e*(a1*Math.sin(x*f1+t*sp+u*1.3)+a1*0.45*Math.sin(x*f1*1.9-t*sp*0.7+u*2.1))+(u-.5)*spread*e);
             const px=c+x*R*0.98; x<=-1?g.moveTo(px,y):g.lineTo(px,y); } g.stroke(); } };
       /* the waves in full colour on the white glass: violet and blue above, cyan and blue below */
-      g.shadowBlur=3*k; g.shadowColor='rgba(110,80,255,.45)';
-      band(24,-0.08,0.30,2.5,1.15,0.30,['#7A52FF','#3D63FF','#9A72FF','#5C45F2'],0.6,0.6);
-      g.shadowColor='rgba(0,190,255,.55)';
-      band(16,0.10,0.16,3.4,-1.5,0.14,['#00B8F0','#2F8CFF','#00C9E8'],0.75,0.65);
+      /* blue and yellow, the colours of the Ukrainian flag: blue above, yellow below */
+      g.shadowBlur=3*k; g.shadowColor='rgba(0,87,183,.45)';
+      band(24,-0.08,0.30,2.5,1.15,0.30,['#0057B7','#1E7BE0','#0A63C9','#0057B7'],0.62,0.6);
+      g.shadowColor='rgba(255,200,0,.6)';
+      band(16,0.10,0.16,3.4,-1.5,0.14,['#FFC400','#FFD700','#FFB800'],0.85,0.7);
       g.globalAlpha=1; g.shadowBlur=0;
       /* inner lavender glow at the edge, as in glass */
-      gr=g.createRadialGradient(c,c,R*0.70,c,c,R); gr.addColorStop(0,'rgba(170,150,255,0)'); gr.addColorStop(1,'rgba(160,140,255,.35)'); g.fillStyle=gr; g.fillRect(0,0,S,S);
+      gr=g.createRadialGradient(c,c,R*0.70,c,c,R); gr.addColorStop(0,'rgba(120,170,255,0)'); gr.addColorStop(1,'rgba(110,160,240,.32)'); g.fillStyle=gr; g.fillRect(0,0,S,S);
       g.restore();
       /* glass rim, a bright edge at the top left, and the highlight */
-      const rg=g.createLinearGradient(c-R,c-R,c+R,c+R); rg.addColorStop(0,'rgba(255,255,255,1)'); rg.addColorStop(.5,'rgba(176,160,255,.7)'); rg.addColorStop(1,'rgba(150,130,255,.85)');
+      const rg=g.createLinearGradient(c-R,c-R,c+R,c+R); rg.addColorStop(0,'rgba(255,255,255,1)'); rg.addColorStop(.5,'rgba(150,185,240,.7)'); rg.addColorStop(1,'rgba(255,214,90,.8)');
       g.lineWidth=1.4*k; g.strokeStyle=rg; g.beginPath(); g.arc(c,c,R-.7*k,0,7); g.stroke();
       g.lineWidth=1.3*k; g.strokeStyle='rgba(255,255,255,.95)'; g.lineCap='round'; g.beginPath(); g.arc(c,c,R*0.88,Math.PI*1.14,Math.PI*1.38); g.stroke();
       gr=g.createRadialGradient(c-R*.42,c-R*.5,0,c-R*.42,c-R*.5,R*.36); gr.addColorStop(0,'rgba(255,255,255,.7)'); gr.addColorStop(1,'rgba(255,255,255,0)'); g.fillStyle=gr; g.beginPath(); g.arc(c,c,R,0,7); g.fill(); }

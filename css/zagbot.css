@@ -318,3 +318,6 @@ html.a11y-rt .zb .zb-launch{background:#fff!important;-webkit-backdrop-filter:no
 .zb .zb-launch:hover .zb-orb{animation-duration:2.2s!important}
 .zb.listening .zb-orb,.zb.speaking .zb-orb{animation-duration:1.4s!important;box-shadow:0 0 22px rgba(0,190,255,.5),0 0 10px rgba(124,98,255,.45)!important}
 @media (prefers-reduced-motion:reduce){.zb .zb-orb{animation:none!important}}
+/* the orb's glow in blue and yellow */
+.zb .zb-orb{box-shadow:0 6px 18px rgba(0,87,183,.20),0 0 14px rgba(255,205,0,.30)!important}
+.zb.listening .zb-orb,.zb.speaking .zb-orb{box-shadow:0 0 22px rgba(255,205,0,.55),0 0 10px rgba(0,87,183,.45)!important}
