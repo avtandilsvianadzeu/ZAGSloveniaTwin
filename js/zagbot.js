@@ -291,6 +291,11 @@
     const I={inspect:/\b(inspect\w*|pregled\w*|monitored|checked)\b/.test(n),story:/\b(story|history|histor\w*|tell me|about|background|happened|happen|zgodilo|zgodb\w*|zgodovin\w*|explain|describe|opisi)\b/.test(n),
       role:/\b(we|our|zag)\b.*\b(did|do|does|done|work\w*|role)\b|\b(what did|role|vloga|involv\w*|contribut\w*|naredil\w*|delal\w*)\b/.test(n),
       who:/\b(who|kdo|people|team|researchers?|led|lead)\b/.test(n),src:/\b(sources?|references?|viri|evidence|proof)\b/.test(n),proj:/\b(projects?|projekt\w*)\b/.test(n),cmp:/\b(compare|vs|versus|longer|taller|higher|bigger|primerjaj)\b/.test(n)};
+    let r=strong.length&&(strong.length===1||strong[0].s>=strong[1].s*1.4)?strong[0].r:null;
+    /* follow-ups about the record we are already talking about */
+    const F={map:/\b(show|see|put|display|pokazi|prikazi)\b.*\b(map|zemljevid\w*)\b|\bon the map\b|\bna zemljevid\w*\b/.test(n),page:/\b(open|odpri)\b.*\b(page|record|sheet|stran)\b|\bits page\b/.test(n),figs:/\b(key figures|figures|values|specs|specifications|podatki|vrednosti|kljucn\w*)\b/.test(n)};
+    if(!r&&ctx.rec&&!strong.length&&!type&&(F.map||F.page||F.figs)){ r=ctx.rec; }
+    if(r&&!wantFix&&!wantModel&&!attr){ if(F.map) return showOnMap(r); if(F.page){ location.href=recUrl(r); return; } if(F.figs) return figures(r); }
     const prj=strong.length?null:projectOf(free); if(prj&&!wantFix&&!wantModel) return analyse(['Looking up '+tidy(prj.ac||prj.t),'Reading the ZAG project page entry','Writing the answer'],()=>projectCard(prj));
     const many=mentioned(free);
     if(many.length>=2&&!type&&!wantFix&&!wantModel){ const rs=many.slice(0,4);
@@ -298,7 +303,6 @@
       return analyse(readSteps(rs),()=>{ say(`You asked about <b>${rs.length}</b> records, so here is each one in turn.`); if(I.inspect&&I.role&&!rs.some(x=>arr(DB.insp&&DB.insp[x.id]).length)) say('No dated inspection reports are published for these, so I cannot give inspection dates. Here is the work the sources record.'); rs.forEach(x=>I.inspect&&!I.role?inspections(x):I.story?story(x):role(x,true));
         offer(rs.map(x=>['More on '+x.name,()=>story(x)]).concat([['Key figures of each',()=>rs.forEach(figures)]])); }); }
     const answer=(x,f)=>analyse(readSteps([x]),f);
-    let r=strong.length&&(strong.length===1||strong[0].s>=strong[1].s*1.4)?strong[0].r:null;
     if(!r&&!type&&!free.length&&ctx.rec&&(attr||wantFix||wantModel||/\b(zag|role|news)\b/.test(n))) r=ctx.rec;
     if(!r&&!type&&!strong.length&&PAGE_ID&&DB.byId[PAGE_ID]&&(attr||wantFix||wantModel)) r=DB.byId[PAGE_ID];
     if(/\bhow many|koliko\b/.test(n)&&type&&!r){ const c=DB.recs.filter(x=>type.match(x.type)).length; say(`The atlas has <b>${c}</b> ${esc(type.name)}.`); offer([['List them',()=>listType(type)],...menu().slice(0,2)]); return; }

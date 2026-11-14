@@ -1,11 +1,11 @@
 name: ZAGBOT
 
-# Carries out a change request from an issue: an AI agent edits the data, the checks run, and the result is committed.
+# Carries out a change request from an issue. A value change with a source is applied by tools/apply_request.py, which first
+# checks that the source really states the value; no AI and no key are needed for that. Other requests are answered as needing
+# a person, unless a Claude token is set, in which case an assistant handles them under .github/zagbot/RULES.md.
 # Runs only for issues and comments by the repository owner. Starts when the owner opens an issue titled "ZAGBOT: ..."
 # or labelled zagbot, or comments "/zagbot" on any issue (also to run a request someone else wrote).
-# Needs one repository secret, either:
-#   CLAUDE_CODE_OAUTH_TOKEN  made with "claude setup-token", uses the owner's Claude plan (Pro, Max, Team or Enterprise), no extra cost
-#   ANTHROPIC_API_KEY        a key from the Claude Console, billed per use
+# Optional repository secret for free-text requests: CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY.
 on:
   issues:
     types: [opened]
@@ -31,6 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
+      TOK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       REPO: ${{ github.repository }}
       N: ${{ github.event.issue.number }}
@@ -43,15 +45,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Check the key
-        env:
-          KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          TOK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-        run: |
-          if [ -z "$KEY" ] && [ -z "$TOK" ]; then
-            gh issue comment "$N" --repo "$REPO" --body "ZAGBOT is not switched on yet. Add the repository secret CLAUDE_CODE_OAUTH_TOKEN (made with claude setup-token, uses your Claude plan) under Settings, Secrets and variables, Actions, then comment /zagbot to run this request."
-            exit 1
-          fi
       - name: Say it started
         run: gh issue comment "$N" --repo "$REPO" --body "ZAGBOT is working on this. It takes a few minutes."
       - name: Collect the request
@@ -59,8 +52,18 @@ jobs:
           gh issue view "$N" --repo "$REPO" --json title,body,comments \
             --jq '"# " + .title + "\n\n" + (.body // "") + "\n\n" + ([.comments[] | select(.author.login != "github-actions") | "Comment by " + .author.login + ":\n" + .body] | join("\n\n"))' > /tmp/request.md
           wc -c /tmp/request.md
+      - name: Apply a value request, checked against its source
+        id: direct
+        run: |
+          sudo apt-get install -y -qq poppler-utils >/dev/null 2>&1 || true
+          set +e
+          python3 tools/apply_request.py /tmp/request.md; code=$?
+          set -e
+          echo "code=$code" >> "$GITHUB_OUTPUT"
       - name: Run the agent
+        if: steps.direct.outputs.code == '3' && (env.TOK != '' || env.KEY != '')
         env:
+          TOK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
@@ -112,6 +115,7 @@ jobs:
         if: always()
         run: |
           if [ -f zagbot_answer.md ]; then cp zagbot_answer.md /tmp/answer.md; else echo "ZAGBOT finished without a written answer." > /tmp/answer.md; fi
+          if [ "${{ steps.direct.outputs.code }}" = "3" ] && [ -z "$TOK" ] && [ -z "$KEY" ]; then printf "\n\nOnly value changes with a source are applied automatically. This request needs a person: open the record page and edit the data, or add a Claude token to the repository secrets to let an assistant handle such requests." >> /tmp/answer.md; fi
           if [ "${{ steps.check.outcome }}" = "failure" ]; then printf "\n\nThe change failed the checks, so nothing was saved. See the Actions log." >> /tmp/answer.md; fi
           if [ "${{ steps.check.outputs.changed }}" = "yes" ]; then printf "\n\nSaved. The site updates in about a minute." >> /tmp/answer.md; fi
           if [ "${{ steps.check.outputs.changed }}" = "no" ]; then printf "\n\nNo file was changed." >> /tmp/answer.md; fi
