@@ -2,7 +2,7 @@
    Glass bars and panels over a soft light background, capsule controls, a white sliding thumb in every switch,
    a soft blue and green glow on the active navigation, bigger fields, thin overlay scroll bars. Layout is kept. */
 :root{
-  --g-bg:#F3F5F9; --g-glass:rgba(255,255,255,.66); --g-glass2:rgba(255,255,255,.82); --g-edge:rgba(255,255,255,.85); --g-hair:rgba(15,23,42,.08);
+  --g-bg:#F3F5F9; --g-glass:rgba(255,255,255,.52); --g-glass2:rgba(255,255,255,.62); --g-edge:rgba(255,255,255,.85); --g-hair:rgba(15,23,42,.08);
   --g-shadow:0 1px 1px rgba(15,23,42,.04),0 8px 28px rgba(15,23,42,.08); --g-shadow2:0 18px 50px rgba(15,23,42,.16);
   --g-blur:saturate(180%) blur(28px); --g-track:rgba(118,118,128,.13); --g-ink:#1D1D1F; --g-mut:#6E6E73; --g-blue:#0A7CFF;
   --g-glow:0 0 0 1px rgba(255,255,255,.7),0 6px 22px rgba(10,124,255,.18),0 0 34px rgba(52,199,123,.10);
@@ -187,9 +187,9 @@ button.lgr:hover .lgq{transform:scale(1.5)}
 /* ---------- speed: no live blur over the moving map, no fixed background repaint, compositor-only animation ---------- */
 body:not(.embed){background-attachment:scroll}
 /* glass everywhere on the map page: the map shows through every bar and panel, as in Apple Maps */
-:root{--gl-bg:linear-gradient(160deg,rgba(255,255,255,.70),rgba(255,255,255,.50));--gl-bg2:linear-gradient(160deg,rgba(255,255,255,.82),rgba(246,248,252,.68));--gl-blur:blur(22px) saturate(175%);
+:root{--gl-bg:linear-gradient(160deg,rgba(255,255,255,.56),rgba(255,255,255,.36));--gl-bg2:linear-gradient(160deg,rgba(255,255,255,.66),rgba(246,248,252,.46));--gl-blur:blur(26px) saturate(180%);
   --gl-edge:inset 0 0 0 .5px rgba(255,255,255,.75),0 0 0 .5px rgba(33,52,105,.12);--gl-shadow:0 8px 26px rgba(16,40,90,.10);--gl-shadow2:0 18px 48px rgba(16,40,90,.16)}
-.hdr{background:linear-gradient(180deg,rgba(255,255,255,.78),rgba(255,255,255,.60))!important;-webkit-backdrop-filter:var(--gl-blur)!important;backdrop-filter:var(--gl-blur)!important;border-bottom:1px solid rgba(255,255,255,.6)!important;box-shadow:0 1px 0 rgba(33,52,105,.08),0 6px 24px rgba(16,40,90,.06)!important}
+.hdr{background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,.42))!important;-webkit-backdrop-filter:var(--gl-blur)!important;backdrop-filter:var(--gl-blur)!important;border-bottom:1px solid rgba(255,255,255,.6)!important;box-shadow:0 1px 0 rgba(33,52,105,.08),0 6px 24px rgba(16,40,90,.06)!important}
 .mapfilter,.vctl,.maplibregl-ctrl-group{background:var(--gl-bg)!important;-webkit-backdrop-filter:var(--gl-blur)!important;backdrop-filter:var(--gl-blur)!important;border:0!important;box-shadow:var(--gl-edge),var(--gl-shadow)!important}
 .info,.list,.layers,.results,.tips{background:var(--gl-bg2)!important;-webkit-backdrop-filter:var(--gl-blur)!important;backdrop-filter:var(--gl-blur)!important;border:0!important;box-shadow:var(--gl-edge),var(--gl-shadow2)!important}
 .zb-onmap .zb-launch{background:var(--gl-bg2)!important;-webkit-backdrop-filter:var(--gl-blur)!important;backdrop-filter:var(--gl-blur)!important}
@@ -655,3 +655,19 @@ html.a11y-keep .vctl.idle{opacity:1!important}
 .zb-card2{background:linear-gradient(160deg,rgba(255,255,255,.62),rgba(255,255,255,.40))!important;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .zb-chip{background:rgba(255,255,255,.55)!important}
 .zb-foot{color:#4A4E57!important}
+
+/* more glass: the chat's cards and chips, the record panel sections, the legend, the tips */
+.zb-card2{background:linear-gradient(160deg,rgba(255,255,255,.46),rgba(255,255,255,.22))!important;border:0!important;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.85),0 6px 18px rgba(16,40,90,.08)!important;-webkit-backdrop-filter:blur(14px) saturate(160%)!important;backdrop-filter:blur(14px) saturate(160%)!important}
+.zb-card2:hover{background:linear-gradient(160deg,rgba(255,255,255,.66),rgba(255,255,255,.40))!important}
+.zb-chip{background:rgba(255,255,255,.42)!important;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.85),0 0 0 .5px rgba(33,52,105,.10)!important}
+.zb-in{background:linear-gradient(160deg,rgba(255,255,255,.56),rgba(255,255,255,.34))!important}
+.zb-msg.bot{background:rgba(255,255,255,.46)!important}
+.zb-onmap .zb-panel,.zb-panel{background:linear-gradient(165deg,rgba(255,255,255,.40),rgba(240,245,255,.24))!important}
+.zb-onmap .zb-launch{background:linear-gradient(160deg,rgba(255,255,255,.60),rgba(255,255,255,.40))!important}
+.tips{background:linear-gradient(160deg,rgba(255,255,255,.60),rgba(246,248,252,.40))!important}
+.lgd{background:linear-gradient(160deg,rgba(255,255,255,.50),rgba(255,255,255,.30))!important}
+.thdr{background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,.42))!important;-webkit-backdrop-filter:var(--gl-blur)!important;backdrop-filter:var(--gl-blur)!important}
+.panel,.asset,.tree .tsec,.blk,.alldata,.card,.home .card{background:linear-gradient(160deg,rgba(255,255,255,.66),rgba(255,255,255,.46))!important;border:0!important;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.85),0 0 0 .5px rgba(33,52,105,.10),0 10px 30px rgba(16,40,90,.08)!important}
+.tbv-c{background:linear-gradient(160deg,rgba(255,255,255,.80),rgba(255,251,240,.66))!important}
+/* legibility on glass: text keeps full contrast, muted text a shade darker than before */
+.note,.sub,.zb-foot,.lgd h4,.info h3{color:#505560!important}
