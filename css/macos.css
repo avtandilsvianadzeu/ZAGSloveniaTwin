@@ -463,3 +463,4 @@ h1,h2,.wrap.home h1,.asset h1,.info h2,.zb-title b,.sf-about b,.printhead h1,.lg
 .langsw span.on{background:#fff;color:#213469;box-shadow:0 1px 3px rgba(15,23,42,.14)}
 .langsw:hover span:not(.on){color:#1D1D1F}
 @media (max-width:760px){.langsw{order:12;margin-left:auto}}
+@media (max-width:760px){.thdr .brand,.hdr .brand{order:-2}.langsw{order:-1;margin-left:auto;margin-right:0}}

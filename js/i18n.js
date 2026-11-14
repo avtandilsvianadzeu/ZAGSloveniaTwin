@@ -127,6 +127,11 @@
     'ZAG publications and the sources cited on each record':'Publikacije ZAG in viri, navedeni pri vsakem zapisu','OpenStreetMap via OpenFreeMap (map, building footprints, structure alignments), Photon geocoder':'OpenStreetMap prek OpenFreeMap (zemljevid, tlorisi stavb, potek objektov), geokodirnik Photon',
     'GURS Kataster nepremičnin, OGC API Features (building attributes), GURS DOF025 orthophoto via Level2.si':'GURS Kataster nepremičnin, OGC API Features (atributi stavb)','Terrain: Mapzen / AWS Terrain Tiles, satellite imagery: Esri World Imagery':'Relief: Mapzen / AWS Terrain Tiles, satelitski posnetki: Esri World Imagery',
     'Coordinate reference system WGS 84 (EPSG:4326), display in Web Mercator (EPSG:3857). Dataset: ':'Koordinatni sistem WGS 84 (EPSG:4326), prikaz v Web Mercator (EPSG:3857). Nabor podatkov: ',
+    'Five things to try first. Press ? on the map':'Pet stvari za začetek. Na zemljevidu pritisnite ?','JSON per object':'JSON za vsak objekt','GeoJSON for GIS':'GeoJSON za GIS','Open the atlas in QGIS':'Odprite atlas v QGIS','CSV for Excel':'CSV za Excel',
+    'Map © OpenStreetMap contributors via OpenFreeMap, relief: Mapzen / AWS Terrain Tiles':'Zemljevid © avtorji OpenStreetMap prek OpenFreeMap, relief: Mapzen / AWS Terrain Tiles','Geocoding':'Geokodiranje','Terrain':'Relief','Imagery':'Posnetki',
+    'Years of ZAG work:':'Leta dela ZAG:','Named in the sources:':'Imenovani v virih:','Partners:':'Partnerji:','Projects linked to it':'Povezani projekti','In the news:':'V novicah:','Sources: ':'Viri: ','What ZAG did:':'Kaj je naredil ZAG:','What it does:':'Kaj počne:','Key figures of each':'Ključni podatki vsakega',
+    'Writing the answer from what the sources say':'Pisanje odgovora iz tega, kar navajajo viri','Reading the record of ':'Branje zapisa ','Loading the atlas data...':'Nalaganje podatkov atlasa...','verified values:':'preverjene vrednosti:','no source link':'brez povezave do vira','Did you mean one of these?':'Ste mislili enega od teh?','None of them':'Nobenega od teh','Which one?':'Katerega?',
+    'I did not understand that. I answer only from the atlas data, so here is what I can do:':'Tega nisem razumel. Odgovarjam le iz podatkov atlasa, zato lahko naredim tole:','Hello! What would you like to know?':'Pozdravljeni! Kaj bi radi vedeli?','Cancelled. Anything else?':'Preklicano. Še kaj?','What else?':'Kaj še?',
     'Clear':'Počisti','Save':'Shrani','Yes':'Da','No':'Ne','Open':'Odpri','Done':'Končano','Error':'Napaka'
   };
   /* texts with numbers in them */
@@ -162,9 +167,9 @@
   const done=new WeakMap();
   function node(n){ if(done.get(n)===n.nodeValue) return; const v=tr(n.nodeValue); if(v!==n.nodeValue) n.nodeValue=v; done.set(n,n.nodeValue); }
   function attrs(el){ for(const a of ['placeholder','title','aria-label','alt']){ const v=el.getAttribute&&el.getAttribute(a); if(v){ const t=tr(v); if(t!==v) el.setAttribute(a,t); } } }
-  const inSkip=el=>!!(el&&el.closest&&el.closest('.zb-log,blockquote,.quote,code,pre,kbd,textarea'));
+  const inSkip=el=>!!(el&&el.closest&&el.closest('blockquote,.quote,code,pre,kbd,textarea'));
   function walk(root){ if(!root) return; if(root.nodeType===3){ if(!inSkip(root.parentElement)) node(root); return; } if(root.nodeType!==1||SKIP.has(root.tagName)||inSkip(root)) return;
-    attrs(root); const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT,{acceptNode:n=>n.nodeType===1?(SKIP.has(n.tagName)||n.tagName==='BLOCKQUOTE'||(n.classList&&(n.classList.contains('zb-log')||n.classList.contains('quote')))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_SKIP):NodeFilter.FILTER_ACCEPT});
+    attrs(root); const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT,{acceptNode:n=>n.nodeType===1?(SKIP.has(n.tagName)||n.tagName==='BLOCKQUOTE'||(n.classList&&n.classList.contains('quote'))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_SKIP):NodeFilter.FILTER_ACCEPT});
     const list=[]; while(w.nextNode()) list.push(w.currentNode); list.forEach(node);
     root.querySelectorAll('[placeholder],[title],[aria-label],[alt]').forEach(el=>{ if(!inSkip(el)) attrs(el); }); }
   function titles(){ const t=document.title; const T={'ZAG Digital Atlas':'Digitalni atlas ZAG','Asset record':'Zapis o objektu','Dashboard':'Pregled','Open questions':'Odprta vprašanja','Data API':'Podatkovni API','Add an object':'Dodaj objekt','Page not found':'Strani ni mogoče najti'};

@@ -171,7 +171,7 @@ function renderTwin(f){ window.__rec=f.properties;
   sec('sources','Sources',(p.sources||[]).length?p.sources.map(s=>`<div class="src"><span>${T(s.title||s.key)}${s.type?`<br><span class="note">${esc(SRC_KIND[s.type]||cap(s.type))}</span>`:''}</span>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">Open source</a>`:''}</div>`).join(''):'');
 
   { const mp=t&&t.model&&t.model.photos||[]; sec('photos','Reference photos',mp.length?`<div class="refph">${mp.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="Reference photo of ${esc(p.name_en||p.name)}" loading="lazy"></a>`).join('')}</div><p class="note" style="padding:6px 18px 12px">Added with a model request${t.model.request?`, <a href="${esc(t.model.request)}" target="_blank" rel="noopener">see the request</a>`:''}. Kept for comparison only, the model geometry comes from the mapped outline and the published height.</p>`:''); }
-  document.title=`${clean(p.name_en||p.name)}, asset record, ZAG Digital Atlas`;
+  document.title=`${clean(dispName(p))}, asset record, ZAG Digital Atlas`;
   $('crumb').textContent=`Assets, ${GROUP_NAME[p.object_type]||cap(p.object_type)}`;
   const order=D.features.map(x=>x.properties.id), sheet=order.indexOf(id)+1;
   const model=buildModel(p,t,g,lines,labels), hasModel=model.els.length>0, EMBED=document.body.classList.contains('embed');
@@ -220,7 +220,7 @@ function renderTwin(f){ window.__rec=f.properties;
       <div class="tabpan" id="pan-insp" role="tabpanel" hidden>${blk(['inspect'])}</div>
       <div class="tabpan" id="pan-src" role="tabpanel" hidden>${blk(['sources','photos','news'])}</div>
     </aside></div>`;
-  document.title=`${clean(p.name_en||p.name)}, ZAG Digital Atlas`;
+  document.title=`${clean(dispName(p))}, ZAG Digital Atlas`;
   const cr=$('crumb'); if(cr) cr.innerHTML=`<a href="twin.html">Assets</a> / ${esc(GROUP_NAME[p.object_type]||cap(p.object_type))} / <b>${T(dispName(p))}</b>`;
   const i0=order.indexOf(id), pv=$('prev'), nx=$('next'); if(pv&&nx){ pv.hidden=nx.hidden=false; pv.href='twin.html?id='+encodeURIComponent(order[(i0-1+order.length)%order.length]); nx.href='twin.html?id='+encodeURIComponent(order[(i0+1)%order.length]); }
   const tm=$('tomap'); if(tm) tm.href='index.html#'+encodeURIComponent(id);

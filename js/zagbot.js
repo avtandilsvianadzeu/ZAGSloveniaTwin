@@ -65,7 +65,7 @@
   function load(){ if(DB.ready) return DB.ready;
     DB.ready=Promise.all([fetch('data/zag_projects.geojson').then(r=>r.json()),fetch('data/twins.json').then(r=>r.json()).catch(()=>({objects:{}}))]).then(([g,t])=>{
       DB.twins=t.objects||{};
-      DB.recs=g.features.map(f=>{ const p=f.properties; const name=tidy(p.name_en||p.name||p.id);
+      DB.recs=g.features.map(f=>{ const p=f.properties; const name=tidy(typeof dispName==='function'?dispName(p):(p.name_en||p.name||p.id));
         const words=new Set(norm([p.name_en,p.name,p.name_sl,p.id.replace(/_/g,' ')].join(' ')).split(' ').filter(w=>w.length>2&&!STOP.has(w)));
         const place=new Set(norm([p.locality,p.municipality].join(' ')).split(' ').filter(w=>w.length>2));
         return {id:p.id,name,type:p.object_type||'other',place:tidy(p.locality||p.municipality||''),role:tidy(p.zag_role||''),year:p.year||'',words,placeWords:place,p}; });
@@ -143,7 +143,7 @@
   const arr=v=>Array.isArray(v)?v:[];
   const yrs=y=>String(y||'').replace(/-$/,' onwards').replace(/-/g,' to ');
   const ownName=r=>/^zag\b/i.test(r.name);
-  const headOf=r=>ownName(r)?esc(r.name):'ZAG at '+esc(r.name);
+  const headOf=r=>ownName(r)?esc(r.name):(window.LANG==='sl'?'ZAG pri objektu ':'ZAG at ')+esc(r.name);
   const projOf=r=>(DB.projects&&DB.projects[r.id])||[];
   const srcList=(r,n)=>{ const S=arr(r.p.sources).filter(x=>x&&x.url); if(!S.length) return ''; return `<p class="zb-src">Sources: ${S.slice(0,n||4).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(tidy(x.title||x.key||'source'))}</a>`).join(', ')}${S.length>(n||4)?`, and ${S.length-(n||4)} more on its page`:''}</p>`; };
   const projLines=(r,n)=>{ const P=projOf(r); if(!P.length) return ''; return `<p><b>Projects linked to it</b></p><ul class="zb-list">${P.slice(0,n||4).map(x=>`<li>${x.ru?`<a href="${esc(x.ru)}" target="_blank" rel="noopener">${esc(tidy(x.ac||x.t))}</a>`:esc(tidy(x.ac||x.t))}${x.y?', '+esc(yrs(x.y)):''}${x.role&&!/not stated/i.test(x.role)?', ZAG as '+esc(x.role.toLowerCase()):''}</li>`).join('')}</ul>`; };
