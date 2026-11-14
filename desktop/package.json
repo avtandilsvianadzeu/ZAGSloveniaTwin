@@ -22,14 +22,54 @@
     "appId": "si.zag.digitalatlas",
     "productName": "ZAG Digital Atlas",
     "artifactName": "ZAG-Digital-Atlas-${version}-${os}-${arch}.${ext}",
-    "directories": { "buildResources": "build", "output": "dist" },
-    "files": ["main.js", "preload.js", "site/**/*"],
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "site/**/*"
+    ],
     "win": {
-      "target": [{ "target": "nsis", "arch": ["x64"] }, { "target": "portable", "arch": ["x64"] }],
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
       "icon": "build/icon.ico"
     },
-    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "perMachine": false, "shortcutName": "ZAG Digital Atlas" },
-    "mac": { "target": ["dmg"], "icon": "build/icon.png", "category": "public.app-category.reference" },
-    "linux": { "target": ["AppImage"], "icon": "build/icon.png", "category": "Science" }
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false,
+      "shortcutName": "ZAG Digital Atlas"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "build/icon.png",
+      "category": "public.app-category.reference"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "build/icon.png",
+      "category": "Science"
+    },
+    "portable": {
+      "artifactName": "ZAG-Digital-Atlas-${version}-portable.exe"
+    }
   }
 }
