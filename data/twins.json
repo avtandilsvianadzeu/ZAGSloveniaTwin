@@ -2241,9 +2241,9 @@
     }
    ],
    "differences": [
-    "Installed capacity disagrees across sources: 136 MW (record 'typ', en.wikipedia Zlatoličje article), 126 MW (power-technology; record facts), 114 MW (en.wikipedia list of power stations, probably pre-refurbishment), max 133.2 MW (UM thesis 2009). Record 'typ' (136 MW) and 'facts' (126 MW) contradict each other.",
-    "Commissioning: power-technology gives commercial operation 1968; record gives first unit trial 19 Oct 1968 and official opening 26 Apr 1969 (compatible). Wikipedia: 'opened in 1969'.",
-    "Refurbishment dates: record 2006-2013; power-technology 2007-2012; Hydropower & Dams 2008 article describes it as ongoing.",
+    "Installed capacity disagrees across sources: 136 MW (record 'typ', en.wikipedia Zlatoličje article), 126 MW (power-technology. Record facts), 114 MW (en.wikipedia list of power stations, probably pre-refurbishment), max 133.2 MW (UM thesis 2009). Record 'typ' (136 MW) and 'facts' (126 MW) contradict each other.",
+    "Commissioning: power-technology gives commercial operation 1968. Record gives first unit trial 19 Oct 1968 and official opening 26 Apr 1969 (compatible). Wikipedia: 'opened in 1969'.",
+    "Refurbishment dates: record 2006-2013. Power-technology 2007-2012. Hydropower & Dams 2008 article describes it as ongoing.",
     "'crosses: Drava' is misleading: the powerhouse is on the derivation canal (Hidroinštitut paper calls Melje/Zlatoličje a derivation-type plant).",
     "Head: power-technology gives a gross head of 33 m and a net head of 5.9 m, two figures that are not consistent with each other.",
     "Installed power: two units of 79 MW each on power-technology add up to 158 MW, against the 126 MW given for the plant.",
@@ -3358,7 +3358,7 @@
     }
    ],
    "differences": [
-    "Project: UL news names researchers from UL NTF Geology, UL FGG and ZAG under the project 'Erosion Processes on Coastal Flysch Cliffs with Risk Assessment' without years; the years 2019 to 2021 come from the ZAG annual report.",
+    "Project: UL news names researchers from UL NTF Geology, UL FGG and ZAG under the project 'Erosion Processes on Coastal Flysch Cliffs with Risk Assessment' without years. The years 2019 to 2021 come from the ZAG annual report.",
     "Site: the UL article places the 2019 collapse 'nearby' the 2023 Sv. Križ rockfall, not exactly in the bay.",
     "Years: the ZAG annual report of 2021 names ZAG as a partner in project J1-2477 without years and places the rockfall 'v zalivu Sv. Križa v Strunjanu'."
    ],
@@ -3628,8 +3628,8 @@
     "Storeys of the 1984 office building: 7 above ground (dLib, \"A seven-storey facility\"), while the GURS cadastre gives 8 storeys for building 892, a count that includes storeys below ground.",
     "Height of the office building (cadastre building 892): 23.5 m in the cadastre for the highest point above the terrain, while the laser scan surface inside the same outline has its middle at 21.9 m, stays below 26.3 m over 99 % of its area and reaches 27.0 m at its highest pixel. Surface: Laser scanning of Slovenia (GURS, CLSS).",
     "Height of cadastre building 8300: 10.0 m in the cadastre for the highest point above the terrain, while the laser scan surface inside the outline stays below 13.2 m over 99 % of its area, with its middle at 9.0 m. Surface: Laser scanning of Slovenia (GURS, CLSS).",
-    "Staff and departments: 255 staff and six departments (description) against 254 staff at the end of 2023 and five departments (ZAG book of 2024); within the same book, 1952 against 1953 for the renaming to ZRMK.",
-    "Extent of the site: the GURS cadastre lists ZAG as manager of 14 buildings and 23 parcels in Bežigrad. The drawn site leaves out the south-west corner towards Ptujska ulica (buildings 1321 and 1365 and six parcels), which according to the institute is not part of ZAG; the long building 1079 is drawn."
+    "Staff and departments: 255 staff and six departments (description) against 254 staff at the end of 2023 and five departments (ZAG book of 2024). Within the same book, 1952 against 1953 for the renaming to ZRMK.",
+    "Extent of the site: the GURS cadastre lists ZAG as manager of 14 buildings and 23 parcels in Bežigrad. The drawn site leaves out the south-west corner towards Ptujska ulica (buildings 1321 and 1365 and six parcels), which according to the institute is not part of ZAG. The long building 1079 is drawn."
    ],
    "open": "the number of floors above ground of the office building",
    "kind": "Building",
@@ -3926,7 +3926,7 @@
    ],
    "anchors": [],
    "differences": [
-    "Heights of cadastre buildings 38 and 71: 10.1 m and 6.7 m in the cadastre for the highest points above the terrain, while the laser scan surface inside the outlines stays below 12.6 m and 10.6 m over 99 % of its area. Buildings 1095 and 1096 have no height in the cadastre; the laser scan surface inside their outlines has its middle at 4.9 m and 5.6 m. Surface: Laser scanning of Slovenia (GURS, CLSS)."
+    "Heights of cadastre buildings 38 and 71: 10.1 m and 6.7 m in the cadastre for the highest points above the terrain, while the laser scan surface inside the outlines stays below 12.6 m and 10.6 m over 99 % of its area. Buildings 1095 and 1096 have no height in the cadastre. The laser scan surface inside their outlines has its middle at 4.9 m and 5.6 m. Surface: Laser scanning of Slovenia (GURS, CLSS)."
    ],
    "open": "OpenStreetMap tags the building at this address as residential and gives it no name, so the map confirms the address and not the laboratory.",
    "kind": "Building",
@@ -5085,9 +5085,9 @@
    "differences": [
     "Reconstruction of the west tube: gov.si (sanacija 1. cevi) gives works from March 2026 to about April 2029, while IC Group gives full two-tube operation in mid-2029.",
     "Position: the atlas point lies about 75 m north of the end of the west tube and about 88 m from the end of the east tube as mapped on OpenStreetMap (east tube end at 46.453011, 13.991006).",
-    "Length of the original tube: 7,864 m (English Wikipedia) against 8,019 m (Lotsberg; Wikiwand gives 8,019 m as the enclosed length between portals). Slovenian part: 3,450 m for the original tube (Lotsberg, Croatian Wikipedia) against 3,546 m for the new east tube (DRI).",
+    "Length of the original tube: 7,864 m (English Wikipedia) against 8,019 m (Lotsberg. Wikiwand gives 8,019 m as the enclosed length between portals). Slovenian part: 3,450 m for the original tube (Lotsberg, Croatian Wikipedia) against 3,546 m for the new east tube (DRI).",
     "Portal position: the reference point attributed to Structurae (46.453408, 13.990164) lies about 44 m from the end of the west tube as mapped on OpenStreetMap.",
-    "Length: the Wikipedia infobox gives 8,138 m; the mapped tubes measure 7,882 and 7,845 m.",
+    "Length: the Wikipedia infobox gives 8,138 m. The mapped tubes measure 7,882 and 7,845 m.",
     "Lay-bys of the original tube: 8 in each direction in the text of the regional plan against 7 in its summary table."
    ],
    "open": null,
@@ -5874,7 +5874,7 @@
     }
    ],
    "differences": [
-    "Tube lengths differ by source: Structurae 1,462 (east) and 1,490 (west) m; Lotsberg 1,486 and 1,461 m; Tunnelbuilder notices 2,148 m, 1,100 m and 2 x 1,209 m (different definitions/phases).",
+    "Tube lengths differ by source: Structurae 1,462 (east) and 1,490 (west) m. Lotsberg 1,486 and 1,461 m. Tunnelbuilder notices 2,148 m, 1,100 m and 2 x 1,209 m (different definitions/phases).",
     "Length including the gallery: 1,480 m (RTV SLO, 1 July 2008) against 1,490 m for the western tube (Structurae).",
     "Start of works: October 2004 in one source against December 2004 in another."
    ],
@@ -6445,7 +6445,7 @@
     }
    ],
    "differences": [
-    "Length: 260 m in the 1996 location plan (design) against 296 m (Lotsberg, listed under the A1 with the year 2002); the mapped geometry measures 284 m.",
+    "Length: 260 m in the 1996 location plan (design) against 296 m (Lotsberg, listed under the A1 with the year 2002). The mapped geometry measures 284 m.",
     "Road: A1 (Lotsberg) against the R 336A deviation in the 1996 location plan, which the atlas follows.",
     "Road the tunnel is on: A1 (Lotsberg) (lotsberg.net) against regional road Trojane to Izlake (domzalec.si 2021, siol.net 2026, nadlani.si 2026) (domzalec.si)"
    ],
@@ -7608,8 +7608,8 @@
     }
    ],
    "differences": [
-    "Locality: 'Leščevje, Trebnje' joins the settlement name with the municipality of the tunnel; the settlement itself is not in Trebnje.",
-    "Lengths: 348.9 m right and 349 m left (Elea) against 369 m and 363 m (Lotsberg) and 384 m (svet24, DARS, 2008); the mapped geometry measures 362 m and 368 m.",
+    "Locality: 'Leščevje, Trebnje' joins the settlement name with the municipality of the tunnel. The settlement itself is not in Trebnje.",
+    "Lengths: 348.9 m right and 349 m left (Elea) against 369 m and 363 m (Lotsberg) and 384 m (svet24, DARS, 2008). The mapped geometry measures 362 m and 368 m.",
     "Right tube length: 386 m (en.wikipedia A2 junction table \"386 and 363\") (en.wikipedia.org) against 369 m (en.wikipedia A2 tunnel list and Lotsberg), 370 m design (location plan), 348.9 m (Elea) (elea.si)"
    ],
    "open": null,
@@ -7767,7 +7767,7 @@
     }
    ],
    "differences": [
-    "Lengths: 595 m north and 609 m south (Structurae) against 615 m and 602 m (Lotsberg, with artificial parts of 258 m and 241 m); the mapped geometry measures 618 m and 605 m.",
+    "Lengths: 595 m north and 609 m south (Structurae) against 615 m and 602 m (Lotsberg, with artificial parts of 258 m and 241 m). The mapped geometry measures 618 m and 605 m.",
     "Opening date: 30 May 2008 (Lotsberg) against 30 October 2008 for the section Spodnja Senarska to Vučja vas (RTV SLO), which does not name the tunnel.",
     "Tunnel length: 360 m bored + 230 m covered cut = 590 m (2005 location plan) (tax-fin-lex.si) against 595 and 609 m (Structurae), 615 and 602 m (Lotsberg) (structurae.net)"
    ],
@@ -7985,7 +7985,7 @@
     }
    ],
    "differences": [
-    "Length: 745 m for the tube opened on 25 October 1996 and 708 m for the tube of 21 July 1976 (Lotsberg) against 743 m (1976) on Structurae; the OpenStreetMap geometry measures 710 m and 721 m.",
+    "Length: 745 m for the tube opened on 25 October 1996 and 708 m for the tube of 21 July 1976 (Lotsberg) against 743 m (1976) on Structurae. The OpenStreetMap geometry measures 710 m and 721 m.",
     "Tube lengths: 743 m left / 728 m right (URSZR Celje) (gov.si) against 745 m left / 708 m right (en.wikipedia A1, Lotsberg) (en.wikipedia.org)"
    ],
    "open": null,
@@ -8255,7 +8255,7 @@
     }
    ],
    "differences": [
-    "Name: Tabor I/II in the 1999 location plan (km 7.420 to 7.940 and 7.414 to 7.947, 520 m and 533 m) against Podnanos for the as-built tunnel at km 7.360 to 7.975 (URSZR, OpenStreetMap, Structurae); Lotsberg lists 'Podnanos (Tabor)'. Tabor as built is the adjacent viaduct.",
+    "Name: Tabor I/II in the 1999 location plan (km 7.420 to 7.940 and 7.414 to 7.947, 520 m and 533 m) against Podnanos for the as-built tunnel at km 7.360 to 7.975 (URSZR, OpenStreetMap, Structurae). Lotsberg lists 'Podnanos (Tabor)'. Tabor as built is the adjacent viaduct.",
     "Lengths: 520 m and 533 m in the 1999 plan against 612 m and 590 m as built (Structurae, Lotsberg) or 614 m and 589 m (URSZR).",
     "Identity: the ZAG list names only \"Tabor\". Lotsberg lists two tunnels, Podnanos (Tabor) on the H4 and Tabor on the A3 near Sežana, so the choice of the H4 tunnel is an inference."
    ],
@@ -8520,7 +8520,7 @@
    "differences": [
     "Dam height: structural height 27 m (SEL) against 'konstrukcijska višina pregrade 25.65 m' (IBE, Gradbeni vestnik 2010).",
     "Annual generation: 118 GWh (SEL) against 126 GWh (IBE 2010).",
-    "Start of operation: SEL 1993; IBE 2010: construction completed 1993, use permit since 1997; 1988 news item planned completion Dec 1990.",
+    "Start of operation: SEL 1993. IBE 2010: construction completed 1993, use permit since 1997. 1988 news item planned completion Dec 1990.",
     "Installed power: 34 MW in the OpenInfraMap summary against 3 x 14.4 = 43.2 MW in its generator table (MVA and MW mixed in the map tagging).",
     "Gross head: 8.1 m against 7.5 m in the JET 2024 paper."
    ],
@@ -10475,7 +10475,7 @@
     "Gross head: 9.19 m (IBE 2010) against a rated head of 9.29 m (CFBR paper).",
     "Installed power: 39.12 MW (OpenInfraMap, CFBR) against 40 MW (IBE 2010, rounded).",
     "Annual generation: 148 GWh (CFBR) against 142 GWh (IBE 2010).",
-    "Dates: construction from 2005; IBE 2010 'technically completed 2009, trial operation'; CFBR operating licence 2011.",
+    "Dates: construction from 2005. IBE 2010 'technically completed 2009, trial operation'. CFBR operating licence 2011.",
     "Annual generation: 148 GWh against 169 GWh before HE Krško and 150 GWh after it in the location plan decree."
    ],
    "open": null,
@@ -11987,8 +11987,8 @@
     "Upper-reservoir embankment heights: 23 m and 17 m (SENG) against 10 m and 15 m for the two earth embankments on the north-west and south-west sides (SENG, Perspektive energije). The two sources may define height differently.",
     "Capacity: 185 MW turbine and 180 MW pump (SENG, power-technology, English Wikipedia) against 180 MW (Global Energy Monitor).",
     "Annual generation: 426 GWh (SENG publication) against 280 GWh (ELES, Naš stik).",
-    "Commercial operation: en.wikipedia April 2010; power-technology 2009; SENG: trial-operation permit Dec 2009.",
-    "Plant coordinate: 46.1027, 13.6707 (Global Energy Monitor) against 46.0838583, 13.6666500 (English Wikipedia), 2.1 km to the south; which part of the plant each marks is not stated.",
+    "Commercial operation: en.wikipedia April 2010. Power-technology 2009. SENG: trial-operation permit Dec 2009.",
+    "Plant coordinate: 46.1027, 13.6707 (Global Energy Monitor) against 46.0838583, 13.6666500 (English Wikipedia), 2.1 km to the south. Which part of the plant each marks is not stated.",
     "Capacity: 180 MW (gem.wiki) against 185 megawatts when producing electricity (en.wikipedia.org)",
     "Start: 2009 (gem.wiki) against put into commercial use in April 2010 (en.wikipedia.org)"
    ],
@@ -12563,8 +12563,8 @@
    ],
    "anchors": [],
    "differences": [
-    "Elevations differ: Wikipedia 360-660 m; NHESS 2005 270-640 m, main scarp ~640 m.",
-    "Main activation date: NHESS 2005 says 19 November 2000; Wikipedia says November 2000. Secondary flows: NHESS says 20 Mar-25 Apr 2001 advance and October 2001 mudflows; record/Wikipedia say September 2001.",
+    "Elevations differ: Wikipedia 360-660 m. NHESS 2005 270-640 m, main scarp ~640 m.",
+    "Main activation date: NHESS 2005 says 19 November 2000. Wikipedia says November 2000. Secondary flows: NHESS says 20 Mar-25 Apr 2001 advance and October 2001 mudflows. Record/Wikipedia say September 2001.",
     "Removed volume: Wikipedia 230,000 m3, NHESS ~200,000 m3 (by end 2004).",
     "Length and volume: more than 1290 m long, about 700 000 m3 (nhess.copernicus.org) against about 1,600 m long, total sliding mass of about 900,000 m3 (landslides.org)",
     "First record: event on 20 October 1885 and a debris flow in 1786 (en.wikipedia.org) against 'The landslide was first mentioned in 1887', table date Nov 11, 1887 (landslides.org)",
@@ -12944,8 +12944,8 @@
    ],
    "anchors": [],
    "differences": [
-    "Volumes differ by source: NHESS 2013 ~1 million m3 displaced; Ostir (ZRC) ~3 million m3 debris flow; Ujma 2001 (Petkovšek, ZAG) gives ~1 million m3 as the remaining part above the slide.",
-    "Depth: NHESS 2013 up to 10 m, locally 50 m; Ujma 2001 up to 50 m.",
+    "Volumes differ by source: NHESS 2013 ~1 million m3 displaced. Ostir (ZRC) ~3 million m3 debris flow. Ujma 2001 (Petkovšek, ZAG) gives ~1 million m3 as the remaining part above the slide.",
+    "Depth: NHESS 2013 up to 10 m, locally 50 m. Ujma 2001 up to 50 m.",
     "Date of failure: triggered on 17 November 2000 (nhess.copernicus.org) against 'v dneh med 15. in 17. novembrom 2000' (ojs-gr.zrc-sazu.si)"
    ],
    "open": null,
@@ -13214,9 +13214,9 @@
     }
    ],
    "differences": [
-    "Station elevations: 595 m and 1,480 m (lift-world) against 602 m and 1,487 m (official cableway list, Uradni list RS 103/2006); length 2,356 m and rise 885 m agree.",
+    "Station elevations: 595 m and 1,480 m (lift-world) against 602 m and 1,487 m (official cableway list, Uradni list RS 103/2006). Length 2,356 m and rise 885 m agree.",
     "Manufacturer: lift-world 'Girak-Garaventa', Wikipedia 'Garaventa' (same lineage, naming only).",
-    "Position of the lower station: the operator's own map pin (rtc-krvavec.si) is at 46.2849476, 14.4959366, which matches the atlas point to about 2 m; the operator states that the car park is directly at the lower station.",
+    "Position of the lower station: the operator's own map pin (rtc-krvavec.si) is at 46.2849476, 14.4959366, which matches the atlas point to about 2 m. The operator states that the car park is directly at the lower station.",
     "Top station: hiking-trail.net places the Dom na Gospincu trailhead next to the upper station (see the reference points).",
     "Drive power: 980 kW (lift-world) against 986 kW (Uradni list 2006).",
     "valley station elevation: 521 m (skiresort.com: 'gondola valley station (521 m)') (skiresort.com) against 595 m (lift-world), 602 m (hike.uno) (lift-world.info)"
@@ -13508,11 +13508,11 @@
    ],
    "differences": [
     "Length: 1,643 m (lift-world) against 1,442 m (official list of 2006). The station coordinates give about 1.35 km horizontally with a rise of 858 m, about 1.6 km along the slope, which fits 1,643 m.",
-    "Year: 1991 with the manufacturer Hölzl (lift-world) against 1963 (list of 2006) and the official opening on 13 September 1964 (Kamnik museum); 1964 is the opening of the line and 1991 fits a rebuild.",
+    "Year: 1991 with the manufacturer Hölzl (lift-world) against 1963 (list of 2006) and the official opening on 13 September 1964 (Kamnik museum). 1964 is the opening of the line and 1991 fits a rebuild.",
     "Capacity and speed: 300 persons per hour at 8 m/s (lift-world) against 360 persons per hour at 7 m/s (list of 2006).",
     "Station elevations: 558 m and 1,416 m (lift-world) against 548 m and 1,405 m (list of 2006).",
-    "Operator in 2006 list: 'Zaklad narave, Kamnik'; today Velika planina d.o.o. (RTV SLO). Record client 'Velika planina d.o.o.' matches the current operator.",
-    "Top station coordinate 46.303726, 14.625989 (OpenStreetMap via Mapcarta) is not confirmed by a second source."
+    "Operator in 2006 list: 'Zaklad narave, Kamnik'. Today Velika planina d.o.o. (RTV SLO). Record client 'Velika planina d.o.o.' matches the current operator.",
+    "Top station coordinate: 46.303726, 14.625989 (OpenStreetMap via Mapcarta) is not confirmed by a second source."
    ],
    "open": null,
    "kind": "Cableway",
@@ -13850,7 +13850,7 @@
     }
    ],
    "differences": [
-    "Length: 118 m (lift-world, matching the 118.21 m of the ordinance) against '70 m' on English Wikipedia and Lonely Planet; lift-world gives 70 m as the vertical rise, so the 70 m is the height difference, not the length.",
+    "Length: 118 m (lift-world, matching the 118.21 m of the ordinance) against '70 m' on English Wikipedia and Lonely Planet. Lift-world gives 70 m as the vertical rise, so the 70 m is the height difference, not the length.",
     "Station elevations: 300 m and 370 m (lift-world) against 294.5 m and 365 m (municipal ordinance).",
     "Year: 2006 is the opening year of the funicular. The ZAG reference list gives the periodic inspections without a year."
    ],
@@ -14744,7 +14744,7 @@
    ],
    "anchors": [],
    "differences": [
-    "Operator name varies: record 'Hotel Cerkno d.o.o.'; 2006 list 'Hotel Cerkno, RTC Cerkno, Sedejev trg 8'; remontees-mecaniques 'Cerkno d.o.o.'."
+    "Operator name varies: record 'Hotel Cerkno d.o.o.'. 2006 list 'Hotel Cerkno, RTC Cerkno, Sedejev trg 8'. Remontees-mecaniques 'Cerkno d.o.o.'."
    ],
    "open": null,
    "kind": "Cableway",
@@ -15031,12 +15031,12 @@
     }
    ],
    "differences": [
-    "Type: record note and operator call it a 'gondola'; lift-world (75-AT), the 2006 list (N = nihalka) and RTV SLO ('nihalka') show it is a pendulum aerial tramway with 2 x 75-person cabins.",
+    "Type: record note and operator call it a 'gondola'. Lift-world (75-AT), the 2006 list (N = nihalka) and RTV SLO ('nihalka') show it is a pendulum aerial tramway with 2 x 75-person cabins.",
     "Length: operator 3265 m, lift-world 3263 m, 2006 list 3320 m.",
     "Vertical: lift-world 914 m (but 1411-492 = 919 m), 2006 list 915 m, operator 'about 1000 m'.",
     "Valley elevation: operator 490 m, lift-world 492 m, 2006 list 495 m.",
     "Capacity: 350 persons per hour (lift-world) against 275 (list of 2006). Travel time: 7 minutes (lift-world) against about 8 minutes (operator, RTV SLO).",
-    "Positions: the valley station agrees with the car park on hiking-trail.net to about 60 m; the operator pages (en.golte.si) give no coordinates for either station."
+    "Positions: the valley station agrees with the car park on hiking-trail.net to about 60 m. The operator pages (en.golte.si) give no coordinates for either station."
    ],
    "open": null,
    "kind": "Cableway",
@@ -15393,10 +15393,10 @@
     }
    ],
    "differences": [
-    "Year: lift-world and 2006 list 1973; remontees-mecaniques 1972.",
+    "Year: lift-world and 2006 list 1973. Remontees-mecaniques 1972.",
     "Capacity: 900 persons per hour (lift-world, remontees-mecaniques) against 1,020 (list of 2006).",
-    "Section A to B: 2,689 m (lift-world) against 2,680 m (list of 2006); station C at 1,649 m (lift-world, list of 2006) against 1,639 m (remontees-mecaniques); station D at 2,200 m against 2,204 m and 2,202 m (hiking-trail).",
-    "Status: closed in 2013 and reopened in 2016 and 2017 (Wikipedia) against closed since 2023 (lift-world, remontees-mecaniques); the Slovenia Times reports that ZAG found not all sections fit to operate and that Poma advised no operation beyond 2022.",
+    "Section A to B: 2,689 m (lift-world) against 2,680 m (list of 2006). Station C at 1,649 m (lift-world, list of 2006) against 1,639 m (remontees-mecaniques). Station D at 2,200 m against 2,204 m and 2,202 m (hiking-trail).",
+    "Status: closed in 2013 and reopened in 2016 and 2017 (Wikipedia) against closed since 2023 (lift-world, remontees-mecaniques). The Slovenia Times reports that ZAG found not all sections fit to operate and that Poma advised no operation beyond 2022.",
     "Total length: the sections A to B 2,689 m, B to C 1,870 m and C to D 1,310 m add up to 5,869 m (5,860 m by the list of 2006), against the 5,110 m given as the total."
    ],
    "open": null,
@@ -15900,8 +15900,8 @@
    ],
    "anchors": [],
    "differences": [
-    "Position: the point at 46.4965, 13.71314 is the centre of the settlement of Rateče, the same as for the Rateče cableway; the Nordic Centre lies about 2.5 km south (Wikipedia, 46.4758, 13.7240).",
-    "Client name: record 'Zavod za šport RS Planica'; Wikipedia operator 'ZŠRS Planica'; remontees 'Nordijski Center Planica' (same body, naming only)."
+    "Position: the point at 46.4965, 13.71314 is the centre of the settlement of Rateče, the same as for the Rateče cableway. The Nordic Centre lies about 2.5 km south (Wikipedia, 46.4758, 13.7240).",
+    "Client name: record 'Zavod za šport RS Planica'. Wikipedia operator 'ZŠRS Planica'. Remontees 'Nordijski Center Planica' (same body, naming only)."
    ],
    "open": "the record does not name the lift. Position: placed on the chairlift mapped at the Planica Nordic Centre (OpenStreetMap way 373928812, named Sedežnica). It is about 420 m long in plan, against 434 m horizontal length in the report on the Čaplja chairlift, which \"provides access to almost all the ski jumps in the Planica Nordic Centre\". The ZAG reference list does not name the lift, so the link to this lift is an inference. The point is the lower station.",
    "kind": "Cableway",
@@ -16139,7 +16139,7 @@
     }
    ],
    "differences": [
-    "Elevation: 660 m (repeater list) against about 763 m for the summit implied by the hiking guide (650 m start and 113 m ascent); neither is the base of the tower."
+    "Elevation: 660 m (repeater list) against about 763 m for the summit implied by the hiking guide (650 m start and 113 m ascent). Neither is the base of the tower."
    ],
    "open": null,
    "kind": "Site",
@@ -16345,7 +16345,7 @@
     }
    ],
    "differences": [
-    "Nova proga: Postojna was the most devastated station; Pivka, Prestranek, Logatec and Verd also badly hit. Record note lists Postojna, Logatec, Verd and the Verd-Logatec, Borovnica-Verd sections but omits Postojna-Prestranek (6.5 km also fully rebuilt) and Pivka/Prestranek."
+    "Nova proga: Postojna was the most devastated station. Pivka, Prestranek, Logatec and Verd also badly hit. Record note lists Postojna, Logatec, Verd and the Verd-Logatec, Borovnica-Verd sections but omits Postojna-Prestranek (6.5 km also fully rebuilt) and Pivka/Prestranek."
    ],
    "open": null,
    "kind": "Site",
@@ -16759,9 +16759,9 @@
    ],
    "anchors": [],
    "differences": [
-    "Magnitudes vary: Wikipedia list 5.7; dlib/Geologija Mhv 5.6, Mw 5.6, Ms 5.7; WCEE 5.8; ASMI MD 5.6.",
+    "Magnitudes vary: Wikipedia list 5.7. Dlib/Geologija Mhv 5.6, Mw 5.6, Ms 5.7. WCEE 5.8. ASMI MD 5.6.",
     "Epicentre: 46.309 N, 13.632 E at 7.6 km depth (Geologija, dLib) against 46.320 N, 13.663 E at about 10 km (WCEE), about 2.6 km apart.",
-    "Intensity: Wikipedia/dlib VII-VIII EMS; ASMI VIII-IX MCS.",
+    "Intensity: Wikipedia/dlib VII-VIII EMS. ASMI VIII-IX MCS.",
     "Epicentre and magnitude of 12 April 1998: 46.309° N, 13.632° E, depth 7.6 km, Mw 5.6 (dlib.si) against 46.320 13.663, magnitude 5.8, focal depth about 10 km (wcee.nicee.org)"
    ],
    "open": null,
@@ -16942,7 +16942,7 @@
    "anchors": [],
    "differences": [
     "Record locality Kobarid: damage was mainly in Čezsoča and Bovec (also Soča, Mala vas, Kal-Koritnica), all in Bovec municipality, per ARSO (Vidrih, Ujma) and EMSC. USGS-derived EarthquakeTrack says '0.0 km from Kobarid', but the ARSO epicentre 46.32N 13.63E is the Krn/Bovec area, ~8 km NE of Kobarid.",
-    "Magnitude differs: ARSO ML 4.9; EMSC title mb 5.1; USGS Mwc 5.2; one EGU abstract says 5.5.",
+    "Magnitude differs: ARSO ML 4.9. EMSC title mb 5.1. USGS Mwc 5.2. One EGU abstract says 5.5.",
     "Magnitude of 12 July 2004: Potres z magnitudo 4,9 (ARSO, Ujma) (ojs-gr.zrc-sazu.si) against Navorna magnituda potresa je bila 5,2 (ARSO map sheet). EMSC title says mb 5.1 (potresi.arso.gov.si)",
     "Depth: okoli 8 km (ARSO) (ojs-gr.zrc-sazu.si) against Depth: 7.0 km (earthquaketrack, USGS-derived) (earthquaketrack.com)"
    ],
@@ -17142,7 +17142,7 @@
    ],
    "anchors": [],
    "differences": [
-    "Years: 2013 against 2011 to 2013 for the whole project; the ZAG part may be 2013."
+    "Years: 2013 against 2011 to 2013 for the whole project. The ZAG part may be 2013."
    ],
    "open": null,
    "kind": "Site",
@@ -17347,7 +17347,7 @@
     }
    ],
    "differences": [
-    "Project years: CROSScade ran from 1 March 2022 to 29 February 2024; 2025 is the year of the paper."
+    "Project years: CROSScade ran from 1 March 2022 to 29 February 2024. 2025 is the year of the paper."
    ],
    "open": null,
    "kind": "Bridge",
@@ -17449,9 +17449,9 @@
    ],
    "anchors": [],
    "differences": [
-    "Record years 2017-2022: CINDERELA ran 1 Jun 2018 - 30 Nov 2022 (CORDIS); Urban Soil 4 Food was scheduled to end Nov 2020 (EC Regio).",
+    "Record years 2017-2022: CINDERELA ran 1 Jun 2018 - 30 Nov 2022 (CORDIS). Urban Soil 4 Food was scheduled to end Nov 2020 (EC Regio).",
     "Urban gardens: 'more than 7,000 m2' planned against a 12,400 m2 plot with 66 plots in the first garden (EC Regio).",
-    "Location of the demonstrations: CORDIS does not place the Slovenian CINDERELA demonstrations in Maribor; it lists the Maribor partners Nigrad (Zagrebška cesta 30) and RRA Podravje.",
+    "Location of the demonstrations: CORDIS does not place the Slovenian CINDERELA demonstrations in Maribor. It lists the Maribor partners Nigrad (Zagrebška cesta 30) and RRA Podravje.",
     "Project end: 31 May 2021 (ZAG project list) against 30 November 2022 (project sheet)."
    ],
    "open": "the pilot sites are not placed by any source.",
@@ -17673,7 +17673,7 @@
    "anchors": [],
    "differences": [
     "Place: 'SIJ Acroni headquarters' against the bicycle parking in front of the steel plant (SIJ) and the SIJ Acroni courtyard (University of Maribor chapter).",
-    "Year: the pavers were already laid before the event of 24 April 2024; the laying date is not given."
+    "Year: the pavers were already laid before the event of 24 April 2024. The laying date is not given."
    ],
    "open": null,
    "kind": "Site",
@@ -17918,8 +17918,8 @@
     }
    ],
    "differences": [
-    "Tube lengths by source: Structurae gives 750 m (eastern) and 786 m (western) with completion in 1976; Lotsberg gives 788 m for the tube of 21 July 1976 and 757 m for the tube of 25 October 1996. Which tube measures 788 m is not settled by the sources.",
-    "Length: 788 m in the atlas against 786 m and 750 m on Structurae; the OpenStreetMap geometry measures 764 m and 731 m.",
+    "Tube lengths by source: Structurae gives 750 m (eastern) and 786 m (western) with completion in 1976. Lotsberg gives 788 m for the tube of 21 July 1976 and 757 m for the tube of 25 October 1996. Which tube measures 788 m is not settled by the sources.",
+    "Length: 788 m in the atlas against 786 m and 750 m on Structurae. The OpenStreetMap geometry measures 764 m and 731 m.",
     "Tube lengths: 786 m left and 786 m right (URSZR Celje, gov.si) against 750 m east and 786 m west (Structurae) and 788 m and 757 m (Lotsberg, English Wikipedia on the A1).",
     "Length on Structurae: 757 m as a single value, against 750 m (eastern tube) and 786 m (western tube) in the atlas.",
     "Number of tubes on Structurae: 1, while its own chronology lists the second tube opened in October 1996."

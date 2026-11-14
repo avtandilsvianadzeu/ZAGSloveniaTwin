@@ -1,0 +1,76 @@
+# Quality checks of the ZAG Digital Atlas.
+# On every push and pull request: the data checks (house style, working notes, sources, positions) and a browser scan
+# of the site in English and Slovenian (script errors, broken own files, typography, English left on Slovenian pages,
+# phone overflow). The job fails on blocking problems and writes the full report to the run summary and an artifact.
+# Every Monday: the slow link check of all source URLs, as a report only.
+name: Quality checks
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['data/news.json', 'data/zag_news.json', 'api/v1/zag_news.json']
+  pull_request:
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: 'Site scan depth'
+        type: choice
+        options: [quick, all]
+        default: all
+permissions:
+  contents: read
+concurrency:
+  group: qa-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  checks:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install the browser
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Data checks
+        id: data
+        run: node tools/qa/check_data.mjs | tee qa/data.txt
+      - name: Site scan in a browser
+        id: site
+        if: always()
+        run: node tools/qa/site_scan.mjs --pages=${{ github.event.inputs.pages || (github.event_name == 'pull_request' && 'quick' || 'all') }}
+      - name: Report
+        if: always()
+        run: |
+          { echo '## Data'; echo '```'; cat qa/data.txt 2>/dev/null || echo 'not run'; echo '```'; echo; cat qa/site-report.md 2>/dev/null || echo 'Site scan did not finish.'; } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-report
+          path: qa/
+          retention-days: 30
+  links:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Source links
+        run: node tools/qa/check_links.mjs | tee qa/links.txt
+      - name: Report
+        if: always()
+        run: { echo '## Source links'; echo '```'; cat qa/links.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: links-report
+          path: qa/
+          retention-days: 90

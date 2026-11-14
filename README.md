@@ -26,6 +26,17 @@ Earlier map only version: https://avtandilsvianadzeu.github.io/ZAGMapLive/
 ## Handover
 
 
+## Quality checks
+
+The checks that keep the site publishable are part of the repository and run in GitHub Actions (`.github/workflows/qa.yml`) on every push, on pull requests and, for the slow link check, every Monday. They can also be run locally with `npm install` once and then:
+
+- `npm run qa:data` reads `data/twins.json` and `data/zag_projects.geojson` and reports house-style typography in the atlas's own text, working notes left in public fields, values without a source link, differences without a lead label, positions outside Slovenia and duplicate ids. Blocking problems fail the job.
+- `npm run qa:site` serves the repository, opens every page in English and Slovenian in Chromium (plus the main pages at phone width) and reports script errors, failed requests to the site's own files, typography in visible text, English left on Slovenian pages, horizontal overflow and images without alt text. `--pages=quick` opens six record pages instead of all 73.
+- `npm run qa:links` asks every source URL whether it still answers and lists the ones that do not. It never fails the build.
+- `npm run build` rebuilds `data/zag_projects.geojson` and `api/v1` from `data.js` and `data/twins.json`.
+
+Each run writes `qa/data-report.json`, `qa/site-report.json` and `qa/site-report.md` (ignored by git) and, in Actions, the same as the run summary and a downloadable artifact. Internal working notes about a record belong in the `editorial` field of `data/twins.json`, which is never shown on the site or in the API.
+
 ## Publishing
 
 GitHub Pages, branch `main`, folder `/ (root)`.

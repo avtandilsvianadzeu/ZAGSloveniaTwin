@@ -1,0 +1,17 @@
+{
+  "name": "zag-digital-atlas",
+  "private": true,
+  "description": "ZAG Digital Atlas: static site, data build and quality checks",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node tools/build_geojson.js && node tools/build_api.js",
+    "qa": "node tools/qa/check_data.mjs && node tools/qa/site_scan.mjs --pages=quick",
+    "qa:data": "node tools/qa/check_data.mjs",
+    "qa:site": "node tools/qa/site_scan.mjs",
+    "qa:links": "node tools/qa/check_links.mjs",
+    "news": "node tools/fetch_news.mjs && node tools/fetch_zag_news.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}
