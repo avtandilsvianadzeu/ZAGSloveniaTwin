@@ -9,12 +9,13 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=14'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=16'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector
      so it stays sharp at every size; a rendered picture can replace it by setting window.ZAGBOT_AVATAR to an image address */
-  const ROBOT=(size,wave)=>window.ZAGBOT_AVATAR?`<img class="zb-robot" src="${window.ZAGBOT_AVATAR}" width="${size}" height="${Math.round(size*1.1)}" alt="">`:`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
+  const AVATAR=window.ZAGBOT_AVATAR===''?'':(window.ZAGBOT_AVATAR||'img/zagbot.png');
+  const ROBOT=(size,wave)=>AVATAR?`<span class="zb-pic" style="width:${Math.round(size*1.1)}px;height:${Math.round(size*1.1)}px"><img class="zb-robot" src="${AVATAR}" width="${Math.round(size*1.1)}" height="${Math.round(size*1.1)}" alt=""><i class="zb-glow"></i></span>`:`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
     <defs>
       <linearGradient id="rbSkin" x1="0.2" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#EEF1F6"/><stop offset="1" stop-color="#C9D1DE"/></linearGradient>
       <linearGradient id="rbSkin2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8FAFC"/><stop offset="1" stop-color="#B8C2D2"/></linearGradient>
@@ -418,7 +419,18 @@
     launch.addEventListener('click',bye); })();
   try{ if(sessionStorage.getItem(OKEY)==='1') setTimeout(()=>toggle(true),400); }catch(_){}
   $('.zb-new').onclick=()=>{ forget(); log.innerHTML=''; ctx={rec:PAGE_ID&&DB.byId?DB.byId[PAGE_ID]||null:null,flow:null}; say(L()==='sl'?'Nov pogovor. Kaj želite?':'New conversation. What would you like?'); offer(menu(),true); };
-  launch.onclick=()=>toggle(); $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
+  /* the launcher floats, tilts towards the pointer, and can be dragged anywhere; its place is kept in this browser */
+  (function(){ let drag=null, moved=false; const KEY='zb_pos';
+    const place=(x,y)=>{ const w=launch.offsetWidth, h=launch.offsetHeight; x=Math.max(6,Math.min(innerWidth-w-6,x)); y=Math.max(6,Math.min(innerHeight-h-6,y)); launch.style.left=x+'px'; launch.style.top=y+'px'; launch.style.right='auto'; launch.style.bottom='auto'; root.classList.toggle('zb-left',x+w/2<innerWidth/2); root.classList.toggle('zb-top',y+h/2<innerHeight/2); };
+    try{ const p=JSON.parse(localStorage.getItem(KEY)||'null'); if(p&&p.w===innerWidth) place(p.x,p.y); }catch(_){}
+    launch.addEventListener('pointerdown',e=>{ if(e.button!==0) return; const r=launch.getBoundingClientRect(); drag={dx:e.clientX-r.left,dy:e.clientY-r.top,x0:e.clientX,y0:e.clientY}; moved=false; launch.setPointerCapture(e.pointerId); });
+    launch.addEventListener('pointermove',e=>{ if(drag){ if(Math.hypot(e.clientX-drag.x0,e.clientY-drag.y0)>6){ moved=true; root.classList.add('dragging'); place(e.clientX-drag.dx,e.clientY-drag.dy); } return; }
+      const r=launch.getBoundingClientRect(), px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5; launch.style.setProperty('--tx',(py*-14)+'deg'); launch.style.setProperty('--ty',(px*14)+'deg'); });
+    launch.addEventListener('pointerleave',()=>{ launch.style.setProperty('--tx','0deg'); launch.style.setProperty('--ty','0deg'); });
+    launch.addEventListener('pointerup',e=>{ if(!drag) return; const was=moved; drag=null; root.classList.remove('dragging'); if(was){ const r=launch.getBoundingClientRect(); try{ localStorage.setItem(KEY,JSON.stringify({x:r.left,y:r.top,w:innerWidth})); }catch(_){} } else toggle(); });
+    launch.addEventListener('pointercancel',()=>{ drag=null; root.classList.remove('dragging'); });
+    launch.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } }); })();
+  $('.zb-x').onclick=()=>toggle(false); $('.zb-min').onclick=()=>toggle(false); $('.zb-big').onclick=()=>root.classList.toggle('big');
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!panel.hidden) toggle(false); });
   $('.zb-in').onsubmit=e=>{ e.preventDefault(); const t=input.value; input.value=''; if(!t.trim()) return; if(ctx.flow&&ctx.flow.kind==='code'){ handle(t); return; } user(t); think(); setTimeout(()=>{ load().then(()=>DB.more).then(()=>handle(t,null,true)).catch(()=>handle(t,null,true)); },350); };
   /* ---------- voice: a question spoken in Slovenian or English, answers read aloud on request ---------- */
