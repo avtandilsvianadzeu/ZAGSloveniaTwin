@@ -44,6 +44,18 @@ const CASES = [
   ['pokaži celoten zemljevid', 'whole map'],
   ['kje je most v Tomačevem', 'Tomačevo'],
   ['koliko predorov je v atlasu', 'tunnel'],
+  ['when was the Karavanke tunnel opened', 'Karavanke Railway Tunnel', '15 tunnels'],
+  ['compare length of Verd viaduct and Ravbarkomanda viaduct', 'Ravbarkomanda Viaduct right about 595', 'not published'],
+  ['list all bridges', '9 bridges', 'cannot find'],
+  ['how many dams are in the atlas', 'The atlas has 9', 'cannot find'],
+  ['bridges in Ljubljana', 'recorded there', 'Funicular'],
+  ['kakšna je dolžina viadukta Ravbarkomanda', 'Total length per deck', 'No length'],
+  ['what is the weather', 'only answer about ZAG'],
+  ['news about Tomačevo', 'Recent news'],
+  ['which tunnels did ZAG inspect', 'inspected or monitored'],
+  ['what is B-WIM', 'these records mention it'],
+  ['the height of Krvavec cable car is wrong', 'New value'],
+  ['tell me the story of Melje dam', 'set the correction aside'],
 ];
 
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;

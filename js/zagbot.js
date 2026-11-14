@@ -91,8 +91,8 @@
     {key:'landslide',name:'landslides and geotechnical sites',re:/^(landslides?|plaz\w*|slides?|geotechnic\w*|cliffs?|klif\w*|mines?|rudnik\w*)$/,match:t=>/landslide|geotechnical/.test(t)},
     {key:'quake',name:'earthquake study areas',re:/^(earthquakes?|potres\w*|seismic\w*|quakes?)$/,match:t=>/earthquake/.test(t)}];
   const ATTRS=[
-    {key:'height',name:'height',re:/^(height|high|tall|visin\w*|visok\w*|clearance)$/,label:/^height|clear height|highest point|height above/i},
-    {key:'length',name:'length',re:/^(length|long|dolzin\w*|dolg\w*)$/,label:/^length|slope length/i},
+    {key:'height',name:'height',re:/^(height|high|tall|visin\w*|visok\w*|clearance)$/,label:/\bheight\b|highest point|višina|visina/i},
+    {key:'length',name:'length',re:/^(length|long|dolzin\w*|dolg\w*)$/,label:/\blength\b|dolžina|dolzina/i},
     {key:'year',name:'year',re:/^(year|when|built|opened|completed|zgrajen\w*|odprt\w*|leto|kdaj|age|old)$/,label:/opened|year built|year completed|built/i},
     {key:'power',name:'installed power',re:/^(power|mw|moc|output|generation)$/,label:/installed power|annual generation/i},
     {key:'capacity',name:'capacity',re:/^(capacity|zmogljivost\w*|persons|passengers)$/,label:/capacity/i},
@@ -132,6 +132,9 @@
     for(const r of DB.recs){ let s=0, hits=0; tokens.forEach((q,i)=>{ let best=0; for(const w of r.words){ best=Math.max(best,wordHit(q,w)); if(best<3&&q.length>=4){ const k=r.ph.get(w); if(k===qp[i]) best=Math.max(best,2.6); else if(qp[i].length>=5&&lev(qp[i],k)<=1) best=Math.max(best,1.6); } } if(best){ s+=best; hits++; } });
       if(hits){ s+=hits/Math.max(2,r.words.size); out.push({r,s}); } }
     return out.sort((a,b)=>b.s-a.s); }
+  /* words found in the text of the records: role, story, description and the summary of the asset record */
+  function textHits(words){ const ws=words.map(w=>w.toLowerCase()).filter(w=>w.length>=3); if(!ws.length) return [];
+    return DB.recs.filter(r=>{ const t=norm([r.p.zag_role,r.p.story,r.p.description,r.p.hist,(DB.twins[r.id]||{}).summary].join(' ')); return ws.every(w=>new RegExp('\\b'+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).test(t)); }); }
   function placeRecords(tokens){ const m=[]; for(const r of DB.recs) for(const q of tokens) for(const w of r.placeWords) if(wordHit(q,w)>=2){ m.push(r); break; } return [...new Set(m)]; }
 
   /* ---------- UI ---------- */
@@ -339,7 +342,10 @@
     tall:['tall','high','height','visina','visok','visoka'],long:['long','length','dolzina','dolg','dolga'],when:['when','built','opened','year','kdaj','zgrajen','leto'],how:['how','kako']};
   function handle(raw,shown,said){ if(ctx.flow&&ctx.flow.kind==='code'){ user('******'); return ownerCheck(String(raw||'').trim()); } if(!said) user(shown||raw); const text=String(raw||'').trim(); if(!text) return;
     if(/^\/?(owner|admin|lastnik)$/i.test(text)){ if(isOwner()){ say('You are signed in as the atlas owner.'); ownerMenu(); } else ownerLogin(); return; }
-    const f=ctx.flow;
+    let f=ctx.flow;
+    /* a new question while a correction waits for its next answer: the correction is set aside and the question answered */
+    if(f&&(f.step||f.pick)&&!/\d/.test(text)&&(/^(what|where|who|how|when|which|why|show|tell|list|open|compare|find|hello|hi|hey|help|kje|kdo|kaj|kako|kdaj|kateri|katera|katere|zakaj|pokazi|pokaži|povej|odpri|koliko|kakšna|kaksna|kakšen|kaksen|zdravo|živjo|zivjo)(?=[\s,?.!]|$)/i.test(text)||/\?\s*$/.test(text))){
+      const was=f.step; ctx.flow=null; f=null; if(was) say(L()==='sl'?'Popravek sem odložil. Odgovarjam na novo vprašanje.':'I have set the correction aside to answer your new question.',null,true); }
     if(f&&f.kind==='update'&&f.step){ const st=f.step;
       if(st==='what'){ f.step=null; const w=whatOf(norm(text)); if(w&&text.split(/\s+/).length<=3) return chooseWhat(w); f.what=w||'other'; f.desc=tidy(text); return askSource(); }
       if(st==='label'){ f.label=tidy(text); return askValue(); }
@@ -381,7 +387,7 @@
     const wantModel=/\b(3d|model\w*)\b/.test(n);
     const attr=ATTRS.find(a=>tokens.some(w=>a.re.test(w)))||(anyNear(tokens,FUZ.tall)?ATTRS.find(a=>a.key==='height'):anyNear(tokens,FUZ.long)?ATTRS.find(a=>a.key==='length'):anyNear(tokens,FUZ.when)?ATTRS.find(a=>a.key==='year'):null);
     const type=TYPES.find(t=>tokens.some(w=>t.re.test(w)));
-    const GEN=new Set(['photo','photos','picture','pictures','image','images','pic','pics','location','located','position','address','please','structure','object','objekt','headquarters','office','institute','main','seat','sedez','map','page','slika','sliko','fotografija','fotografijo','foto','lokacija','plan']);
+    const GEN=new Set(['list','lists','all','every','everything','atlas','records','record','entries','items','available','show','give','seznam','vse','vsi','vsa','prikazi','zapisi','zapisov','objekti','objektov','photo','photos','picture','pictures','image','images','pic','pics','location','located','position','address','please','structure','object','objekt','headquarters','office','institute','main','seat','sedez','map','page','slika','sliko','fotografija','fotografijo','foto','lokacija','plan']);
     const free=tokens.filter(w=>!GEN.has(w)&&!(attr&&attr.re.test(w))&&!(type&&type.re.test(w))&&!/^(wrong|incorrect|error|fix|update|change|model|3d|how|many|much|koliko|zag|role|vloga|news|novice|figures|values|podatki|inspect\w*|pregled\w*|story|history|tell|we|our|us|did|done|doing|work\w*|who|people|team|sources?|references?|projects?|compare|versus|vs|give|know|explain|describe|background|happened|was|been|also|both|all|any|some|more|info\w*|details?|ever|last|recent\w*|kaj|smo|naredili|delali)$/.test(w));
     const hits=findRecords(free), strong=hits.filter(h=>h.s>=1.5), place=placeRecords(free);
     const I={inspect:/\b(inspect\w*|pregled\w*|monitored|checked)\b/.test(n)||anyNear(tokens,FUZ.inspect),story:/\b(story|history|histor\w*|tell me|about|background|happened|happen|zgodilo|zgodb\w*|zgodovin\w*|explain|describe|opisi)\b/.test(n),
@@ -390,7 +396,7 @@
     let r=strong.length&&(strong.length===1||strong[0].s>=strong[1].s*1.4)?strong[0].r:null;
     /* "ZAG", "ZAG Institute", "Zavod za gradbeništvo": the institute itself, its headquarters, when nothing more specific is named */
     const named=free.filter(w=>w.length>=3&&!GEN.has(w)&&!Object.values(FUZ).some(l=>near(w,l))&&!SLX[w]);
-    if(!r&&/\bzag\b/.test(n)&&!strong.length&&!named.length&&DB.byId.zag&&!/\b(how many|koliko|labs?|laboratories|units?|enot\w*)\b/.test(n)) r=DB.byId.zag;
+    if(!r&&!type&&/\bzag\b/.test(n)&&!strong.length&&!named.length&&DB.byId.zag&&!/\b(how many|koliko|labs?|laboratories|units?|enot\w*)\b/.test(n)) r=DB.byId.zag;
     const unknown=!r&&!hits.length?named.filter(w=>w.length>=4):[];
     /* follow-ups about the record we are already talking about */
     const toks=n.split(' ').filter(Boolean);
@@ -398,6 +404,10 @@
     F.map=F.map||F.where;
     if(!r&&ctx.rec&&!strong.length&&!type&&!unknown.length&&(F.map||F.page||F.figs||ctx.photo)){ r=ctx.rec; }
     /* a name that matches nothing is said so, never answered with the record that happens to be open */
+    if(/\b(weather|vreme|joke|politic\w*|bitcoin|stock|recipe|football)\b/.test(n)){ say(L()==='sl'?'Odgovarjam samo o ZAG in objektih v tem atlasu, iz objavljenih virov.':'I only answer about ZAG and the structures in this atlas, from published sources. For that, please use another service.'); home(); return; }
+    /* a word that is no record name but appears in what the records say: show where */
+    if(!r&&!hits.length&&named.length&&!type){ const tx=textHits(named); if(tx.length){ const sl=L()==='sl', w=text.replace(/^(what|who|kaj|kdo)( is| are| je| so)?\s+/i,'').replace(/[?.!]+$/,'').slice(0,40);
+        say(sl?`<b>${esc(w)}</b> ni ime objekta, omenjajo pa ga ti zapisi:`:`<b>${esc(w)}</b> is not the name of a structure, but these records mention it:`); offer(tx.slice(0,8).map(x=>[x.name,()=>role(x)])); return; } }
     if(!r&&unknown.length&&!place.length&&!wantFix&&!wantModel){ const sl=L()==='sl', w=unknown.slice(0,3).join(' ');
       if(type){ say(sl?`V atlasu ne najdem objekta z imenom <b>${esc(w)}</b>. To so zapisi te vrste:`:`I cannot find <b>${esc(w)}</b> in the atlas. These are the records of that type:`); return listType(type); }
       say(sl?`V atlasu ne najdem objekta z imenom <b>${esc(w)}</b>. Poskusite z drugo besedo ali izberite vrsto.`:`I cannot find <b>${esc(w)}</b> in the atlas. Try another word, the Slovenian name, or choose a type.`); offer(typeChips()); return; }
@@ -414,7 +424,7 @@
     if(r&&!wantFix&&!wantModel&&!attr){ if(F.map) return whereIs(r); if(F.page){ location.href=recUrl(r); return; } if(F.figs) return figures(r); }
     const prj=strong.length?null:projectOf(free); if(prj&&!wantFix&&!wantModel) return analyse(['Looking up '+tidy(prj.ac||prj.t),'Reading the ZAG project page entry','Writing the answer'],()=>projectCard(prj));
     const many=mentioned(free);
-    if(many.length>=2&&!type&&!wantFix&&!wantModel){ const rs=many.slice(0,4);
+    if(many.length>=2&&(!type||attr||I.cmp)&&!wantFix&&!wantModel){ const rs=many.slice(0,4);
       if(attr) return analyse(readSteps(rs),()=>compare(rs,attr));
       return analyse(readSteps(rs),()=>{ say(`You asked about <b>${rs.length}</b> records, so here is each one in turn.`); if(I.inspect&&I.role&&!rs.some(x=>arr(DB.insp&&DB.insp[x.id]).length)) say('No dated inspection reports are published for these, so I cannot give inspection dates. Here is the work the sources record.'); rs.forEach(x=>I.inspect&&!I.role?inspections(x):I.story?story(x):role(x,true));
         offer(rs.map(x=>['More on '+x.name,()=>story(x)]).concat([['Key figures of each',()=>rs.forEach(figures)]])); }); }
@@ -431,10 +441,16 @@
     if(r&&I.who) return answer(r,()=>people(r));
     if(r&&I.src) return answer(r,()=>sources(r));
     if(r&&I.proj) return answer(r,()=>projects(r));
+    if(r&&/\b(news|novice|novic)\b/.test(n)){ say('Recent news for <b>'+esc(r.name)+'</b> is on its page under Sources.'); offer([['Open its page',recUrl(r)+'#news','link'],...recChips(r).slice(1)]); return; }
     if(r&&I.story) return answer(r,()=>story(r));
     if(r&&(I.role||/\b(zag|role|vloga|did)\b/.test(n))) return answer(r,()=>role(r));
     if(r&&/\bnews|novice\b/.test(n)){ say('Recent news for <b>'+esc(r.name)+'</b> is on its page under Sources.'); offer([['Open its page',recUrl(r)+'#news','link'],...recChips(r).slice(1)]); return; }
     if(r) return card(r);
+    if(!r&&type&&I.inspect){ const rs=DB.recs.filter(x=>type.match(x.type)&&(x.p.zag_involvement_types||[]).some(k=>/inspection|monitoring|quality control/.test(k)));
+      const sl=L()==='sl'; if(!rs.length){ say(sl?'Za to vrsto objektov viri ne navajajo pregledov ZAG.':`The sources record no ZAG inspection or monitoring work on ${esc(type.name)}.`); offer(menu()); return; }
+      say(sl?`ZAG je po virih pregledoval ali spremljal <b>${rs.length}</b> takih objektov:`:`By the sources, ZAG inspected or monitored <b>${rs.length}</b> ${esc(type.name)}:`); offer(rs.slice(0,12).map(x=>[x.name,()=>inspections(x)])); return; }
+    if(!r&&type&&!place.length&&strong.length>=2){ const rs=strong.filter(h=>h.s>=strong[0].s*0.8&&type.match(h.r.type)).slice(0,6).map(h=>h.r);
+      if(rs.length>=2&&rs.length<DB.recs.filter(x=>type.match(x.type)).length){ say(L()==='sl'?'Kateri od teh?':'Which one do you mean?'); offer(rs.map(x=>[x.name,()=>attr?attrAnswer(x,attr):card(x)])); return; } }
     if(type) return listType(type,place.length?place:null);
     if(place.length){ say(`Recorded in that place:`); offer(place.slice(0,12).map(x=>[x.name,()=>card(x)])); return; }
     if(strong.length||hits.length){ const h=(strong.length?strong:hits).slice(0,6); say('Did you mean one of these?'); offer(h.map(x=>[x.r.name,()=>card(x.r)]).concat([['None of them',()=>{ say('Try another word, or choose a type.'); offer(typeChips()); }]])); return; }
