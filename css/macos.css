@@ -869,3 +869,8 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border:0;border-radiu
 .sb-find:focus-within{background:rgba(255,255,255,.85);box-shadow:0 0 0 3px rgba(10,132,255,.25)}
 .sidebar h6[hidden],.sb-g[hidden],.sb-row[hidden]{display:none}
 html.a11y-hc .sb-ic{box-shadow:0 0 0 1px #000}
+/* the text size button: a small and a larger lowercase a, as in the iOS text size control */
+.dsp-aa{display:inline-flex;align-items:baseline;gap:1px;line-height:1;font-family:var(--font)}
+.dsp-aa i{font-style:normal;font-weight:600;font-size:10.5px}
+.dsp-aa b{font-weight:600;font-size:15px}
+.dspb .dsp-ic{display:block;color:#0A6FE0}.dspb{min-width:32px;padding:0 7px}

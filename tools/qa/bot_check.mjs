@@ -35,17 +35,22 @@ const CASES = [
   ['kastelets', 'Kastelec'],
   ['where is the Blorpington laboratory', 'cannot find', 'Podnanos'],
   ['how many fire labs does zag have', 'Gameljne'],
+  ['show me all the map', 'whole map', 'did not understand'],
+  ['show the whole of Slovenia', 'whole map'],
+  ['switch to satellite', 'Satellite imagery is on'],
+  ['zoom in please', 'Zoomed in'],
+  ['show Tomačevo bridge on the map', 'Tomačevo', 'whole map'],
 ];
 
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
 const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'], proxy: proxy ? { server: proxy, bypass: 'localhost,127.0.0.1' } : undefined });
 const p = await b.newPage({ viewport: { width: 1300, height: 850 } });
 const errors = []; p.on('pageerror', e => errors.push(e.message.slice(0, 160)));
-/* the map tiles are not needed to answer, only the atlas data */
-await p.route(/^https?:\/\/(?!localhost|127\.0\.0\.1)/, r => r.abort());
+/* imagery and fonts are not needed to answer; the map style and vector tiles are, for the map commands */
+await p.route(/fonts\.(googleapis|gstatic)\.com|arcgisonline|server\.arcgis|level2\.si|amazonaws|\.pbf(\?|$)|\/\d+\/\d+\/\d+(\.\w+)?(\?|$)/, r => r.abort());
 await p.goto(`http://localhost:${PORT}/index.html`, { waitUntil: 'load' });
 await p.waitForFunction(() => window.ZAGBot, null, { timeout: 30000 });
-await p.waitForTimeout(3000);
+await p.waitForFunction(() => typeof map !== 'undefined' && map, null, { timeout: 60000 }).catch(() => {}); await p.waitForTimeout(2000);
 const results = [];
 for (const [q, must, mustNot] of CASES) {
   /* a record is open on the map, as when the person asks while looking at something else */

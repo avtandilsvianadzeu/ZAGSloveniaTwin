@@ -204,3 +204,50 @@
 .zb .zb-pic img{animation:zbFaceLook 9s ease-in-out infinite!important;transform-origin:50% 60%}
 @keyframes zbFaceLook{0%,100%{transform:translate(0,0) rotate(0) scale(1.02)}25%{transform:translate(-1.5px,.5px) rotate(-1.5deg) scale(1.04)}50%{transform:translate(0,-1px) rotate(0) scale(1.06)}75%{transform:translate(1.5px,.5px) rotate(1.5deg) scale(1.04)}}
 @media (prefers-reduced-motion:reduce){.zb .zb-pic img,.zb .zb-launch .zb-pic{animation:none!important}}
+
+/* ---------- the avatar as an iOS contact picture: the framed head fills the disc, a thin light ring turns around it ---------- */
+.zb .zb-pic{background:none!important;overflow:visible!important;border-radius:50%;isolation:isolate}
+.zb .zb-pic img{position:relative;z-index:1;width:100%!important;height:100%!important;border-radius:50%;object-fit:cover!important;object-position:50% 50%!important;animation:zbAvBreathe 6s ease-in-out infinite!important;transform-origin:50% 50%;box-shadow:0 0 0 1.5px rgba(255,255,255,.95),0 6px 18px rgba(16,40,90,.18)}
+@keyframes zbAvBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.zb .zb-pic::before{content:""!important;display:block!important;position:absolute;inset:-3px;z-index:0;border-radius:50%;
+  background:conic-gradient(from var(--zbA,0deg),#0A84FF,#5AC8FA,#65BC7B,#34C759,#5AC8FA,#0A84FF)!important;box-shadow:none!important;
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2.5px),#000 calc(100% - 2px));mask:radial-gradient(farthest-side,transparent calc(100% - 2.5px),#000 calc(100% - 2px));
+  animation:zbRing 6s linear infinite;opacity:.9;filter:blur(.3px)}
+.zb .zb-pic::after{content:""!important;display:block!important;position:absolute;inset:-8px;z-index:-1;border-radius:50%;background:conic-gradient(from var(--zbA,0deg),rgba(10,132,255,.35),rgba(90,200,250,.25),rgba(101,188,123,.30),rgba(10,132,255,.35))!important;filter:blur(10px);animation:zbRing 6s linear infinite;opacity:.7!important;transform:none!important;mix-blend-mode:normal!important}
+@property --zbA{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes zbRing{to{--zbA:360deg}}
+.zb .zb-pic .zb-glow{display:none!important}
+.zb .zb-launch .zb-pic{width:52px!important;height:52px!important}
+.zb.listening .zb-pic::before,.zb.speaking .zb-pic::before{animation-duration:1.6s}
+.zb-onmap .zb-launch,.zb .zb-launch{padding:0!important}
+.zb-onmap .zb-launch{width:62px!important;height:62px!important;border-radius:50%!important;justify-content:center}
+@media (prefers-reduced-motion:reduce){.zb .zb-pic::before,.zb .zb-pic::after,.zb .zb-pic img{animation:none!important}}
+/* suggestions as compact rows: the icon tile beside the title, the hint under it in small type */
+.zb .zb-chips.cards{gap:6px;padding:6px 12px 4px}
+.zb .zb-card2{display:grid!important;grid-template-columns:24px 1fr;column-gap:9px;row-gap:0;align-items:center;padding:7px 10px!important;border-radius:12px!important}
+.zb .zb-card2 i{grid-row:1 / span 2;width:24px;height:24px;border-radius:7px;margin:0}
+.zb .zb-card2 i svg{width:13px;height:13px}
+.zb .zb-card2 b{font-size:12.5px;line-height:1.25;font-weight:600}
+.zb .zb-card2 span{font-size:11px;line-height:1.25;color:#6E7380}
+.zb .zb-card2:hover{transform:none}
+/* the status line under the name gives way to the flags */
+.zb .zb-title span{overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.zb .zb-title{overflow:hidden}
+
+/* ---------- the chat in the same glass as the legend: transparent, the map colours through the blur, a bevelled edge ---------- */
+.zb .zb-panel{background:linear-gradient(160deg,rgba(255,255,255,.52),rgba(255,255,255,.30))!important;
+  -webkit-backdrop-filter:blur(22px) saturate(170%)!important;backdrop-filter:blur(22px) saturate(170%)!important;border:1px solid rgba(255,255,255,.75)!important;
+  box-shadow:inset 1.5px 1.5px 0 rgba(255,255,255,.95),inset -1px -1px 0 rgba(33,52,105,.06),inset 0 -14px 28px rgba(255,255,255,.18),0 0 0 .5px rgba(33,52,105,.10),0 14px 40px rgba(16,40,90,.16)!important}
+.zb .zb-head{background:linear-gradient(180deg,rgba(255,255,255,.30),rgba(255,255,255,0))!important;border-bottom:.5px solid rgba(255,255,255,.6)!important}
+.zb .zb-msg.bot{background:linear-gradient(160deg,rgba(255,255,255,.66),rgba(255,255,255,.46))!important;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 1px 1px 0 rgba(255,255,255,.95),0 0 0 .5px rgba(33,52,105,.08),0 4px 12px rgba(16,40,90,.06)!important}
+.zb .zb-card2{background:linear-gradient(160deg,rgba(255,255,255,.58),rgba(255,255,255,.32))!important;border:1px solid rgba(255,255,255,.75)!important;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 1px 1px 0 rgba(255,255,255,.95),0 0 0 .5px rgba(33,52,105,.08),0 6px 16px rgba(16,40,90,.07)!important}
+.zb .zb-card2:hover{background:linear-gradient(160deg,rgba(255,255,255,.80),rgba(255,255,255,.55))!important}
+.zb .zb-chip{background:linear-gradient(160deg,rgba(255,255,255,.62),rgba(255,255,255,.38))!important}
+.zb .zb-in{background:linear-gradient(160deg,rgba(255,255,255,.72),rgba(255,255,255,.50))!important;box-shadow:inset 1px 1px 0 rgba(255,255,255,.95),0 0 0 .5px rgba(33,52,105,.10),0 6px 18px rgba(10,124,255,.10)!important}
+.zb .zb-foot{color:#4A4E57!important}
+/* a small ZAG badge on the avatar, the institute's mark in its own navy on white glass */
+.zb .zb-pic .zb-badge{position:absolute;z-index:3;right:-5px;bottom:-3px;height:15px;padding:0 4px;border-radius:6px;display:grid;place-items:center;background:linear-gradient(160deg,rgba(255,255,255,.96),rgba(240,245,255,.88));box-shadow:0 0 0 .5px rgba(33,52,105,.18),0 2px 5px rgba(16,40,90,.18)}
+.zb .zb-pic .zb-badge img{width:auto!important;height:8px!important;border-radius:0!important;box-shadow:none!important;animation:none!important;object-fit:contain!important}
+.zb .zb-head .zb-pic .zb-badge{height:13px;right:-6px;bottom:-2px}
+.zb .zb-head .zb-pic .zb-badge img{height:7px!important}
+html.a11y-rt .zb .zb-panel{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
