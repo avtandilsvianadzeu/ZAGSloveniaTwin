@@ -16,7 +16,7 @@
   const WAVE="url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 300' preserveAspectRatio='none'%3E%3Cpath d='M0 40 Q 25 28 50 40 T 100 40 T 150 40 T 200 40 V300 H0z' fill='%23000'/%3E%3C/svg%3E\")";
   fill.style.webkitMaskImage=WAVE; fill.style.maskImage=WAVE; fill.style.webkitMaskSize='200% 300%'; fill.style.maskSize='200% 300%'; fill.style.webkitMaskRepeat='no-repeat'; fill.style.maskRepeat='no-repeat';
   const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2, clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
-  let done=false, mapReady=false, t0=null;
+  let done=false, mapReady=false, t0=null, last=null; const W0=performance.now();
   document.addEventListener('atlas:ready',()=>{ mapReady=true; },{once:true});
   const finish=()=>{ if(done) return; done=true;
     /* the finished mark glides to the logo in the header */
@@ -26,7 +26,10 @@
     setTimeout(()=>{ root.remove(); document.body.classList.remove('splashing'); },900); };
   if(reduced){ fill.style.webkitMaskImage='none'; fill.style.maskImage='none'; form.style.opacity='0'; name.style.opacity='1'; name.style.transform='none'; bar.style.width='100%'; setTimeout(finish,900); return; }
   const skip=()=>{ if(!done) finish(); }; root.addEventListener('click',skip); document.addEventListener('keydown',skip,{once:true});
-  function step(ts){ if(done) return; if(t0===null) t0=ts; const t=(ts-t0)/1000;
+  /* while the page loads, the browser can be too busy to draw for a moment; then the animation skips ahead to the
+     finished mark instead of standing still, and it never stays longer than four and a half seconds after the page started */
+  setTimeout(()=>{ if(!done) finish(); },4500);
+  function step(ts){ if(done) return; if(t0===null) t0=ts; if(last!==null&&ts-last>450) t0=Math.min(t0,ts-2600); if(ts-W0>4000) t0=Math.min(t0,ts-2750); last=ts; const t=(ts-t0)/1000;
     card.style.opacity=String(clamp(t/.35)); const sc=.82+ease(clamp(t/.7))*.18; card.style.transform=`scale(${sc})`;
     /* 1. formwork drawn from left to right */
     const f=ease(clamp((t-.15)/.6)); form.style.clipPath=`inset(0 ${100-f*100}% 0 0)`; form.style.opacity=String(1-clamp((t-2.05)/.4));
