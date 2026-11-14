@@ -40,7 +40,7 @@
       <section class="panel"><h2>Recent news</h2>${news.length?news.map(n=>`<div class="nitem" style="padding-left:0;padding-right:0"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a><div class="note">${a(D.byId[n.id].properties)}, ${esc(n.source)}, ${fmtDate(n.date)}</div></div>`).join(''):'<p class="note">No news in the file.</p>'}</section>
     </div></div>`;
   $('dlInsp').onclick=()=>{ const items={}; for(const p of F){ const l=inspFor(p.id).map(e=>{ const o=Object.assign({},e); delete o.origin; return o; }); if(l.length) items[p.id]=l; }
-    const blob=new Blob([JSON.stringify({note:'Inspection records from the ZAG Digital Atlas. Upload as data/inspections.json to publish.',items},null,1)],{type:'application/json'}), x=document.createElement('a'); x.href=URL.createObjectURL(blob); x.download='inspections.json'; document.body.appendChild(x); x.click(); x.remove(); };
+    const blob=new Blob([JSON.stringify({note:'Inspection records from the DigitalZAG. Upload as data/inspections.json to publish.',items},null,1)],{type:'application/json'}), x=document.createElement('a'); x.href=URL.createObjectURL(blob); x.download='inspections.json'; document.body.appendChild(x); x.click(); x.remove(); };
   /* the latest items of Aktualno, read from zag.si by the news workflow (data/zag_news.json) */
   fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000)).then(r=>r.ok?r.json():null).then(j=>{ if(!j||!j.items) return; const sl=window.LANG==='sl', items=((sl?j.items.sl:j.items.latest)||j.items.sl||[]).slice(0,6); if(!items.length) return;
     const fmt=d=>d?new Date(d).toLocaleDateString('sl-SI',{day:'numeric',month:'numeric',year:'numeric'}):'';

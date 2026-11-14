@@ -21,7 +21,7 @@ const tag = (x, t) => { const m = x.match(new RegExp(`<${t}[^>]*>([\\s\\S]*?)</$
 
 async function search(q) {
   const url = 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=sl&gl=SI&ceid=SI:sl';
-  const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (ZAG Digital Atlas news check)' } });
+  const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (DigitalZAG news check)' } });
   if (!r.ok) throw new Error('HTTP ' + r.status);
   const xml = await r.text();
   return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].map(m => {

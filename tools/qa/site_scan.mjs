@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Site checks of the ZAG Digital Atlas, in a real browser (Playwright Chromium).
+/* Site checks of the DigitalZAG, in a real browser (Playwright Chromium).
    Serves the repository on a local port, opens every page in English and Slovenian, and reports:
    script errors, failed requests to the site's own files, house-style typography in visible text (quotes exempt),
    English left on Slovenian pages, horizontal overflow at phone width, missing alt text, and the record pages' key controls.

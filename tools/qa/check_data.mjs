@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Data checks of the ZAG Digital Atlas. Reads the published data and reports what would embarrass the site:
+/* Data checks of the DigitalZAG. Reads the published data and reports what would embarrass the site:
    typography that the house style excludes, working notes left in public fields, values without a source,
    records without a position, differences without a lead label, coordinates outside Slovenia, duplicate ids.
    Exit code 1 when a blocking problem is found, 0 otherwise. Writes qa/data-report.json. */

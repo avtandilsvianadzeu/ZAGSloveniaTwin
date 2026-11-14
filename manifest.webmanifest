@@ -1,6 +1,6 @@
 {
-  "name": "ZAG Digital Atlas",
-  "short_name": "ZAG Atlas",
+  "name": "DigitalZAG",
+  "short_name": "DigitalZAG",
   "description": "Structures in Slovenia with documented ZAG involvement: map, asset records, sources and 3D models.",
   "start_url": "./index.html",
   "scope": "./",

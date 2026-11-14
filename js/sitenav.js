@@ -26,7 +26,7 @@
   /* an item that acts on this page is blurred after the click, otherwise the open menu would stay over the page (focus-within) */
   nav.addEventListener('click',e=>{ const a=e.target.closest('a[href="#zagbot"]'); if(a){ e.preventDefault(); a.blur(); if(window.ZAGBOT) window.ZAGBOT.open(); return; } const t=e.target.closest('a[href="index.html?tips=1"]'); if(t&&window.ZAGTIPS){ e.preventDefault(); t.blur(); window.ZAGTIPS.open(); } });
   const brand=head.querySelector('.brand'); (brand?brand.nextSibling:head.firstChild)?head.insertBefore(nav,brand?brand.nextSibling:head.firstChild):head.appendChild(nav);
-  if(brand&&brand.tagName==='A') brand.title='ZAG Digital Atlas, back to the map';
+  if(brand&&brand.tagName==='A') brand.title='DigitalZAG, back to the map';
   /* hide header links that the site navigation now covers, keep page tools */
   const known=new Set(PAGES.map(p=>p[0]));
   head.querySelectorAll('.tnav a, .hright a.linkbtn').forEach(a=>{ const h=(a.getAttribute('href')||'').split('?')[0].split('#')[0].toLowerCase();
@@ -108,7 +108,7 @@
   /* site footer on the reading pages: what the atlas is, where the data comes from, licences and contact */
   const footer=function(){ if(/[?&]id=/.test(location.search)||document.getElementById('map')||document.body.classList.contains('embed')||document.body.classList.contains('wsbody')||document.querySelector('.sitefoot')) return;
     const f=document.createElement('footer'); f.className='sitefoot';
-    f.innerHTML=`<div class="sf-in"><div class="sf-about"><b>ZAG Digital Atlas</b><p>Structures and sites in Slovenia where the work of ZAG, the Slovenian National Building and Civil Engineering Institute, is documented in published sources.</p></div>
+    f.innerHTML=`<div class="sf-in"><div class="sf-about"><b>DigitalZAG</b><p>Structures and sites in Slovenia where the work of ZAG, the Slovenian National Building and Civil Engineering Institute, is documented in published sources.</p></div>
       <nav aria-label="Pages"><h3>Pages</h3><a href="index.html">Map</a><a href="twin.html">Assets</a><a href="dashboard.html">Dashboard</a><a href="questions.html">Data quality</a><a href="add.html">Add object</a></nav>
       <div><h3>Data</h3><a href="api.html">Data API, JSON, GeoJSON and CSV</a><span class="sf-ver">Data version <b id="sfVer">current</b></span><span>Every value links to the source it was read from.</span></div>
       <div><h3>Map data and licences</h3><span>OpenStreetMap contributors, ODbL</span><span>OpenFreeMap and OpenMapTiles</span><span>GURS cadastre and laser scanning, CC BY 4.0</span><span>Esri World Imagery, Mapzen terrain tiles</span></div>

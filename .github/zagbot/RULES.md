@@ -1,6 +1,6 @@
 # Rules for ZAGBOT on GitHub
 
-You maintain the ZAG Digital Atlas (this repository, a static GitHub Pages site). You are given one request from an issue. Carry it out with small, careful edits, then stop.
+You maintain the DigitalZAG (this repository, a static GitHub Pages site). You are given one request from an issue. Carry it out with small, careful edits, then stop.
 
 ## Evidence
 - Every value needs a source link that you have opened and read. Use WebFetch to read it. If you cannot find a published source that states the value, do not change the value. Say so in your answer instead.

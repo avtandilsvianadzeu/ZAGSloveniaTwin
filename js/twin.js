@@ -68,7 +68,7 @@ const kindName=(t,k)=>((KINDS[t]||[]).find(x=>x[0]===k)||[k,k])[1];
 const nextDue=(p,list)=>{ if(!ROAD.has(p.object_type)) return null; const last=list.find(e=>/regular|main|detailed/.test(e.kind||'')); if(!last) return null; const d=new Date(last.date); d.setFullYear(d.getFullYear()+6); return d.toISOString().slice(0,10); };
 function inspLocal(){ try{ const j=JSON.parse(localStorage.getItem(INSP_KEY)||'{}'); return j&&typeof j==='object'?j:{}; }catch(_){ return {}; } }
 function inspFor(id){ const pub=(D.insp[id]||[]).map(e=>Object.assign({origin:'published'},e)), loc=(inspLocal()[id]||[]).map(e=>Object.assign({origin:'this browser'},e)); return [...pub,...loc].filter(e=>e&&/^\d{4}-\d{2}-\d{2}$/.test(e.date||'')).sort((a,b)=>a.date<b.date?1:-1); }
-function inspText(p,e){ return `Inspection record, ZAG Digital Atlas\n\nObject: ${p.name_en||p.name}\nDate: ${e.date}\nKind: ${e.kind||''}\nInspector: ${e.inspector||''}\nCondition: ${(COND[e.condition]||COND.none)[0]}\nNotes: ${e.notes||''}\n${e.report?'Report: '+e.report+'\n':''}Object page: ${location.origin+location.pathname}?id=${p.id}\n`; }
+function inspText(p,e){ return `Inspection record, DigitalZAG\n\nObject: ${p.name_en||p.name}\nDate: ${e.date}\nKind: ${e.kind||''}\nInspector: ${e.inspector||''}\nCondition: ${(COND[e.condition]||COND.none)[0]}\nNotes: ${e.notes||''}\n${e.report?'Report: '+e.report+'\n':''}Object page: ${location.origin+location.pathname}?id=${p.id}\n`; }
 const mailto=(to,subject,body)=>'mailto:'+encodeURIComponent(to||'').replace(/%40/g,'@').replace(/%2C/g,',')+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
 function inspHTML(p){ const list=inspFor(p.id).filter(e=>EDIT||e.origin!=='this browser'||true), due=nextDue(p,list), inv=(p.zag_involvement_types||[]);
   const work=(inv.includes('inspection')||inv.includes('external quality control'))&&p.zag_role?`<div class="nitem"><b>ZAG work recorded in the sources</b><div class="note">${T(p.zag_role)}${p.year&&!String(p.zag_role).includes(String(p.year).slice(0,4))?', '+T(String(p.year).replace(/-$/,' onwards').replace(/-/g,' to ')):''}. Condition ratings belong to the asset owner and are shown here only where the owner has published them.</div></div>`:'';
@@ -173,7 +173,7 @@ function renderTwin(f){ window.__rec=f.properties;
   sec('sources','Sources',(p.sources||[]).length?p.sources.map(s=>`<div class="src"><span>${T(s.title||s.key)}${s.type?`<br><span class="note">${esc(SRC_KIND[s.type]||cap(s.type))}</span>`:''}</span>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">Open source</a>`:''}</div>`).join(''):'');
 
   { const mp=t&&t.model&&t.model.photos||[]; sec('photos','Reference photos',mp.length?`<div class="refph">${mp.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="Reference photo of ${esc(p.name_en||p.name)}" loading="lazy"></a>`).join('')}</div><p class="note" style="padding:6px 18px 12px">Added with a model request${t.model.request?`, <a href="${esc(t.model.request)}" target="_blank" rel="noopener">see the request</a>`:''}. Kept for comparison only, the model geometry comes from the mapped outline and the published height.</p>`:''); }
-  document.title=`${clean(dispName(p))}, asset record, ZAG Digital Atlas`;
+  document.title=`${clean(dispName(p))}, asset record, DigitalZAG`;
   $('crumb').textContent=`Assets, ${GROUP_NAME[p.object_type]||cap(p.object_type)}`;
   const order=D.features.map(x=>x.properties.id), sheet=order.indexOf(id)+1;
   const model=buildModel(p,t,g,lines,labels), hasModel=model.els.length>0, EMBED=document.body.classList.contains('embed');
@@ -226,7 +226,7 @@ function renderTwin(f){ window.__rec=f.properties;
       <div class="tabpan" id="pan-insp" role="tabpanel" hidden>${blk(['inspect'])}</div>
       <div class="tabpan" id="pan-src" role="tabpanel" hidden>${blk(['sources','photos','news'])}</div>
     </aside></div>`;
-  document.title=`${clean(dispName(p))}, ZAG Digital Atlas`;
+  document.title=`${clean(dispName(p))}, DigitalZAG`;
   const cr=$('crumb'); if(cr) cr.innerHTML=`<a href="twin.html">Assets</a> / ${esc(GROUP_NAME[p.object_type]||cap(p.object_type))} / <b>${T(dispName(p))}</b>`;
   const i0=order.indexOf(id), pv=$('prev'), nx=$('next'); if(pv&&nx){ pv.hidden=nx.hidden=false; pv.href='twin.html?id='+encodeURIComponent(order[(i0-1+order.length)%order.length]); nx.href='twin.html?id='+encodeURIComponent(order[(i0+1)%order.length]); }
   const tm=$('tomap'); if(tm) tm.href='index.html#'+encodeURIComponent(id);
@@ -265,7 +265,7 @@ function renderTwin(f){ window.__rec=f.properties;
   if($('mMeasure')) $('mMeasure').onclick=()=>{ const on=$('mMeasure').getAttribute('aria-pressed')!=='true'; $('mMeasure').setAttribute('aria-pressed',on?'true':'false'); ctl.fem.measure(on); if(on) tab('props'); };
   { const open=t&&t.open?'\nStill to confirm: '+clean(t.open):'', last=inspFor(id)[0];
     $('req').href=mailto(D.contacts.by_id[id]||D.contacts.default,'Latest information needed: '+(p.name_en||p.name),
-      `Dear colleague,\n\nPlease send the latest information on this structure for the ZAG Digital Atlas.\n\nObject: ${p.name_en||p.name}${p.name_sl&&p.name_sl!==p.name_en?' ('+p.name_sl+')':''}\nType: ${p.object_type}\nPlace: ${where||''}\nPage: ${location.origin+location.pathname}?id=${id}\n${open}${nd0?'\nSources disagree on '+nd0+(nd0===1?' point':' points')+', listed on the page.':''}\nLast inspection in the atlas: ${last?last.date+', '+(COND[last.condition]||COND.none)[0].toLowerCase():'none recorded'}\n\nUseful to have: current condition, date and kind of the last inspection, any change to the structure, and a link to the report.\n\nHvala.\nKind regards,\n`);
+      `Dear colleague,\n\nPlease send the latest information on this structure for the DigitalZAG.\n\nObject: ${p.name_en||p.name}${p.name_sl&&p.name_sl!==p.name_en?' ('+p.name_sl+')':''}\nType: ${p.object_type}\nPlace: ${where||''}\nPage: ${location.origin+location.pathname}?id=${id}\n${open}${nd0?'\nSources disagree on '+nd0+(nd0===1?' point':' points')+', listed on the page.':''}\nLast inspection in the atlas: ${last?last.date+', '+(COND[last.condition]||COND.none)[0].toLowerCase():'none recorded'}\n\nUseful to have: current condition, date and kind of the last inspection, any change to the structure, and a link to the report.\n\nHvala.\nKind regards,\n`);
     inspWire(p); }
   const cp=$('copy'); if(cp) cp.onclick=async()=>{try{await navigator.clipboard.writeText(coord);cp.textContent='Copied';}catch(_){cp.textContent='Copy is not available here';}setTimeout(()=>cp.textContent='Copy coordinates',1800);};
   document.querySelectorAll('tr.pick').forEach(tr=>{ const act=()=>{ if(tr.dataset.line!=null){ const i=+tr.dataset.line; if(ctl.fem) ctl.fem.pickPart(i); if(ctl.map.focusLine) ctl.map.focusLine(i); } else { const i=+tr.dataset.anchor; if(ctl.fem) ctl.fem.pickRef(i); if(ctl.map.focusAnchor) ctl.map.focusAnchor(i); } }; tr.onclick=act; tr.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); act(); } }; });
@@ -576,7 +576,7 @@ async function drawProfiles(lines,labels){ const box=$('prof'); if(!box) return;
     svg.addEventListener('mousemove',mv); svg.addEventListener('touchmove',mv,{passive:true}); });
 }
 function renderIndex(){
-  document.title='Assets, ZAG Digital Atlas';
+  document.title='Assets, DigitalZAG';
   const groups={}; for(const f of D.features){const k=f.properties.object_type||'other';(groups[k]=groups[k]||[]).push(f.properties);}
   const order=[...GROUP_ORDER.filter(k=>groups[k]),...Object.keys(groups).filter(k=>!GROUP_ORDER.includes(k))];
   const hasGeo=p=>!!(p.lines||p.line||D.gurs[p.id]||(((D.twins[p.id]||{}).model||{}).blocks||[]).length);
@@ -638,7 +638,7 @@ if(!window.TWIN_NO_BOOT) (async()=>{
     document.querySelectorAll('.printhead,.printrefs').forEach(x=>x.remove());
     const reg=document.querySelector('.asset')?((document.querySelector('.asset').textContent.match(/Register\s*(\d+ of \d+)/)||[])[1]||''):'';
     const head=document.createElement('header'); head.className='printhead';
-    head.innerHTML=`<div class="ph-top"><img src="img/logo.webp" alt="ZAG"><div><b>ZAG Digital Atlas</b><span>Asset record</span></div></div>
+    head.innerHTML=`<div class="ph-top"><img src="img/logo.webp" alt="ZAG"><div><b>DigitalZAG</b><span>Asset record</span></div></div>
       <h1>${esc(dispName(p))}</h1>${altName(p)?`<p class="ph-sl">${esc(altName(p))}</p>`:''}
       <table class="ph-tb"><tr><th>Asset ID</th><td>${esc(p.id)}</td><th>Type</th><td>${esc(cap(p.object_type||''))}</td><th>Sheet</th><td>${esc(reg)}</td></tr>
       <tr><th>Place</th><td>${esc([p.locality,p.municipality].filter((x,i,a)=>x&&a.indexOf(x)===i).join(', '))}</td><th>Position</th><td>${esc(PREC[p.position_precision]||p.position_precision||'')}</td><th>WGS 84</th><td>${(+p.latitude).toFixed(6)}, ${(+p.longitude).toFixed(6)}${typeof fmtD96==='function'?'<br>D96/TM '+fmtD96([+p.longitude,+p.latitude]):''}</td></tr>

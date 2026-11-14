@@ -1,4 +1,4 @@
-# ZAG Digital Atlas, desktop application
+# DigitalZAG, desktop application
 
 The same atlas as the website, packed as a Windows installer (`.exe`), a portable `.exe`, a macOS disk image and a Linux AppImage. The pages, data, models and API files travel inside the application; the map tiles, the satellite imagery and the live news are read from the internet.
 

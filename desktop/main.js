@@ -1,4 +1,4 @@
-/* ZAG Digital Atlas, desktop shell. Serves the bundled site from a local port (the pages read JSON and GeoJSON with fetch,
+/* DigitalZAG, desktop shell. Serves the bundled site from a local port (the pages read JSON and GeoJSON with fetch,
    which file:// does not allow) and opens it in one window. Outside links open in the system browser. */
 const { app, BrowserWindow, shell, Menu } = require('electron');
 const http = require('http'), fs = require('fs'), path = require('path');
@@ -18,7 +18,7 @@ function serve() {
 }
 async function start() {
   const port = await serve();
-  const win = new BrowserWindow({ width: 1440, height: 900, minWidth: 900, minHeight: 600, title: 'ZAG Digital Atlas', backgroundColor: '#F3F5F9', autoHideMenuBar: true,
+  const win = new BrowserWindow({ width: 1440, height: 900, minWidth: 900, minHeight: 600, title: 'DigitalZAG', backgroundColor: '#F3F5F9', autoHideMenuBar: true,
     webPreferences: { preload: path.join(__dirname, 'preload.js'), contextIsolation: true, nodeIntegration: false, sandbox: true } });
   win.webContents.setWindowOpenHandler(({ url }) => { if (!url.startsWith(`http://127.0.0.1:${port}`)) { shell.openExternal(url); return { action: 'deny' }; } return { action: 'allow' }; });
   win.webContents.on('will-navigate', (e, url) => { if (!url.startsWith(`http://127.0.0.1:${port}`)) { e.preventDefault(); shell.openExternal(url); } });

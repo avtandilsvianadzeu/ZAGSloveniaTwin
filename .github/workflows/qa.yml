@@ -1,4 +1,4 @@
-# Quality checks of the ZAG Digital Atlas.
+# Quality checks of the DigitalZAG.
 # On every push and pull request: the data checks (house style, working notes, sources, positions) and a browser scan
 # of the site in English and Slovenian (script errors, broken own files, typography, English left on Slovenian pages,
 # phone overflow). The job fails on blocking problems and writes the full report to the run summary and an artifact.

@@ -1,7 +1,7 @@
 {
   "name": "zag-digital-atlas",
   "private": true,
-  "description": "ZAG Digital Atlas: static site, data build and quality checks",
+  "description": "DigitalZAG: static site, data build and quality checks",
   "type": "commonjs",
   "scripts": {
     "build": "node tools/build_geojson.js && node tools/build_api.js",

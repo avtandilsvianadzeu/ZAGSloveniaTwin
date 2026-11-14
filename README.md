@@ -1,6 +1,6 @@
 # ZAG Slovenia Twin
 
-Platform version of the ZAG Digital Atlas: the full map, a record page per object and a tool to add objects.
+Platform version of the DigitalZAG: the full map, a record page per object and a tool to add objects.
 
 Geographic atlas of buildings, bridges, tunnels, dams, cableways and research sites in Slovenia where the Slovenian National Building and Civil Engineering Institute (ZAG) has documented involvement.
 

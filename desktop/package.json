@@ -1,8 +1,8 @@
 {
   "name": "zag-digital-atlas",
-  "productName": "ZAG Digital Atlas",
+  "productName": "DigitalZAG",
   "version": "1.0.0",
-  "description": "ZAG Digital Atlas as a desktop application: the atlas data, 3D models and ZAGBot, with the map tiles from the internet",
+  "description": "DigitalZAG as a desktop application: the atlas data, 3D models and ZAGBot, with the map tiles from the internet",
   "main": "main.js",
   "author": "ZAG, Slovenian National Building and Civil Engineering Institute",
   "license": "UNLICENSED",
@@ -20,7 +20,7 @@
   },
   "build": {
     "appId": "si.zag.digitalatlas",
-    "productName": "ZAG Digital Atlas",
+    "productName": "DigitalZAG",
     "artifactName": "ZAG-Digital-Atlas-${version}-${os}-${arch}.${ext}",
     "directories": {
       "buildResources": "build",
@@ -52,7 +52,7 @@
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "perMachine": false,
-      "shortcutName": "ZAG Digital Atlas"
+      "shortcutName": "DigitalZAG"
     },
     "mac": {
       "target": [

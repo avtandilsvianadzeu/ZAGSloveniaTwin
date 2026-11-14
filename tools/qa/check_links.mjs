@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Source link check of the ZAG Digital Atlas. Every value carries the link it was read from; this asks each distinct
+/* Source link check of the DigitalZAG. Every value carries the link it was read from; this asks each distinct
    host once per link whether the page still answers (HEAD, then GET on refusal). Slow and dependent on other sites,
    so it runs on a schedule, never on every push. Writes qa/links-report.json; never fails the build. */
 import fs from 'node:fs';
@@ -9,7 +9,7 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..')
 const twins = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/twins.json'), 'utf8')).objects;
 const links = new Map();
 for (const [id, t] of Object.entries(twins)) for (const s of t.specs || []) if (s.source) { if (!links.has(s.source)) links.set(s.source, []); links.get(s.source).push(id); }
-const UA = 'Mozilla/5.0 (ZAG Digital Atlas link check)';
+const UA = 'Mozilla/5.0 (DigitalZAG link check)';
 async function probe(url) {
   for (const method of ['HEAD', 'GET']) {
     try { const c = new AbortController(); const t = setTimeout(() => c.abort(), 25000);

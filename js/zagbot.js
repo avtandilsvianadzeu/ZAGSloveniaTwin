@@ -1,5 +1,5 @@
 'use strict';
-/* ZAGBot: the chat assistant of the ZAG Digital Atlas.
+/* ZAGBot: the chat assistant of the DigitalZAG.
    Runs fully in the browser. It reads the published data (records and verified values), understands short questions in English
    or Slovenian, answers only from that data with the source link, and offers clickable replies so the input is always exact.
    Changes to the site are never made here: ZAGBot writes a precise request and opens it on GitHub, where the ZAGBot workflow
@@ -143,7 +143,7 @@
       <div class="zb-log" id="zbLog" aria-live="polite"></div>
       <div class="zb-chips" id="zbChips"></div>
       <form class="zb-in" autocomplete="off"><input id="zbText" maxlength="400" placeholder="Ask about a structure" aria-label="Message to ZAGBot"><canvas class="zb-wave-c" width="720" height="88" aria-hidden="true" hidden></canvas><button type="button" class="zb-mic" aria-pressed="false" title="Speak your question (Slovenian or English)" aria-label="Speak your question" hidden><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect x="5.5" y="1.5" width="5" height="8" rx="2.5" fill="currentColor"/><path d="M3.5 7.5a4.5 4.5 0 0 0 9 0M8 12v2.5M5.5 14.5h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><button type="submit" aria-label="Send" title="Send"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V3.5M3.8 7.6 8 3.4l4.2 4.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
-      <p class="zb-foot">Answers come from the atlas data, with sources. Corrections are reviewed by the ZAG atlas team.</p>
+      <p class="zb-foot">Answers come from the atlas data, with sources. Corrections are reviewed by the DigitalZAG team.</p>
     </section>`;
   document.body.appendChild(root);
   if(ON_MAP) document.body.classList.add('zb-onmap');
@@ -294,7 +294,7 @@
     if(INBOX.url){ offer([['Send the request',()=>sendInbox(title.replace(/^ZAGBot: /,''),body.replace('Photos can be dragged in here before submitting.','')),'primary'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
       say('<span class="zb-note">'+(isOwner()?'You are signed in as the atlas owner, so ZAGBot starts on it at once.':'No account needed. The atlas team checks it, then ZAGBot makes the change.')+'</span>'); return; }
     offer([['Send the request',`${REPO}/issues/new?title=${encodeURIComponent(title)}&labels=zagbot&body=${encodeURIComponent(body)}`,'link'],['Change something',()=>startUpdate(f.r)],['Cancel',cancel]]);
-    say('<span class="zb-note">The request is reviewed by the ZAG atlas team.</span>'); }
+    say('<span class="zb-note">The request is reviewed by the DigitalZAG team.</span>'); }
   /* ---------- requests by email: formsubmit.co delivers the message to the atlas owner, the visitor needs no account ---------- */
   const MAIL={to:''}; fetch('data/contacts.json').then(r=>r.ok?r.json():{}).then(j=>{ const m=(j&&(j.zagbot||j.default))||''; if(/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(m)) MAIL.to=m; }).catch(()=>{});
   async function sendMail(subject,lines,runUrl){ const wait=say('Sending...'); const page=location.href.split('#')[0];
