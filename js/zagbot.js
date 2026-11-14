@@ -9,12 +9,12 @@
   const REPO='https://github.com/avtandilsvianadzeu/ZAGSloveniaTwin';
   const ON_MAP=!!document.getElementById('tl')||/index\.html$|\/$/.test(location.pathname)&&!!document.getElementById('map');
   const PAGE_ID=new URLSearchParams(location.search).get('id')||null;
-  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=26'; document.head.appendChild(css);
+  const css=document.createElement('link'); css.rel='stylesheet'; css.href='css/zagbot.css?v=27'; document.head.appendChild(css);
 
   /* ---------- the robot, in a Slovenian shirt: white, blue and red with three white peaks ---------- */
   /* the avatar: a humanoid android in white composite with blue eyes and the ZAG emblem on the chest, drawn as vector
      so it stays sharp at every size; a rendered picture can replace it by setting window.ZAGBOT_AVATAR to an image address */
-  const AVATAR=window.ZAGBOT_AVATAR===''?'':(window.ZAGBOT_AVATAR||'img/zagbot_avatar.png');
+  const AVATAR=window.ZAGBOT_AVATAR===''?'':(window.ZAGBOT_AVATAR||'img/zagbot_face.svg');
   const ROBOT=(size,wave)=>AVATAR?`<span class="zb-pic" style="width:${Math.round(size*1.1)}px;height:${Math.round(size*1.1)}px"><img class="zb-robot" src="${AVATAR}" width="${Math.round(size*1.1)}" height="${Math.round(size*1.1)}" alt=""><i class="zb-glow"></i><span class="zb-badge"><img src="img/logo_mark.png" alt=""></span></span>`:`<svg class="zb-robot" viewBox="0 0 120 132" width="${size}" height="${Math.round(size*1.1)}" aria-hidden="true">
     <defs>
       <linearGradient id="rbSkin" x1="0.2" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#EEF1F6"/><stop offset="1" stop-color="#C9D1DE"/></linearGradient>

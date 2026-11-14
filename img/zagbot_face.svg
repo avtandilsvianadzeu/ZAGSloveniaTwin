@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 16 140 140" role="img" aria-label="ZAGBot">
+<defs>
+  <radialGradient id="skin" cx="46%" cy="40%" r="62%">
+    <stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#EEF3FB"/><stop offset=".85" stop-color="#D6E2F4"/><stop offset="1" stop-color="#C3D4EE"/>
+  </radialGradient>
+  <linearGradient id="neck" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D3E0F2"/><stop offset="1" stop-color="#E9F0FA" stop-opacity="0"/></linearGradient>
+  <radialGradient id="iris" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#E9FBFF"/><stop offset=".35" stop-color="#5AC8FA"/><stop offset=".8" stop-color="#0A84FF"/><stop offset="1" stop-color="#1A4FB0"/></radialGradient>
+  <radialGradient id="cheek" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FF9FB0" stop-opacity=".22"/><stop offset="1" stop-color="#FF9FB0" stop-opacity="0"/></radialGradient>
+  <linearGradient id="lip" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9A3AE"/><stop offset="1" stop-color="#D88795"/></linearGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.2"/></filter>
+  <clipPath id="face"><path d="M100 20C128 20 146 40 147 72C148 96 143 118 133 136C123 154 112 166 100 168C88 166 77 154 67 136C57 118 52 96 53 72C54 40 72 20 100 20Z"/></clipPath>
+  <style>
+    .trace{fill:none;stroke:#7FA3D6;stroke-width:.9;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+    .node{fill:#fff;stroke:#5B8FD9;stroke-width:.9}
+    .pulse{fill:none;stroke:#3FD0FF;stroke-width:1.8;stroke-linecap:round;stroke-dasharray:8 52;filter:url(#glow);animation:run 2.4s linear infinite}
+    .p2{animation-delay:-.8s;stroke:#5CE0A0}.p3{animation-delay:-1.6s}.p4{animation-delay:-.6s;stroke:#5CE0A0}.p5{animation-delay:-1.2s}
+    @keyframes run{from{stroke-dashoffset:60}to{stroke-dashoffset:0}}
+    .eye{transform-box:fill-box;transform-origin:50% 50%;animation:blink 5.5s ease-in-out infinite}
+    .eye.r{animation-delay:.02s}
+    @keyframes blink{0%,44%,50%,100%{transform:scaleY(1)}47%{transform:scaleY(.08)}}
+    .iglow{animation:shine 3.2s ease-in-out infinite}
+    @keyframes shine{0%,100%{opacity:.55}50%{opacity:.95}}
+    .look{animation:look 9s ease-in-out infinite}
+    @keyframes look{0%,30%,100%{transform:translate(0,0)}38%,52%{transform:translate(1.4px,0)}62%,74%{transform:translate(-1.2px,.3px)}}
+    .node.b{animation:nodeb 2.4s ease-in-out infinite}.node.b2{animation-delay:-1.2s}
+    @keyframes nodeb{0%,100%{fill:#fff}50%{fill:#9EE6FF}}
+    @media (prefers-reduced-motion:reduce){.pulse,.eye,.iglow,.look,.node.b{animation:none}}
+  </style>
+</defs>
+
+<!-- neck and shoulders, fading out -->
+<path d="M82 156C82 170 80 182 74 192L126 192C120 182 118 170 118 156Z" fill="url(#neck)"/>
+<path d="M86 160V188M100 166V194M114 160V188" class="trace" opacity=".45"/>
+
+<!-- ears -->
+<path d="M53 84C46 84 44 92 45 100C46 108 49 114 55 114" fill="#E3EBF7" stroke="#A9BEDF" stroke-width="1"/>
+<path d="M147 84C154 84 156 92 155 100C154 108 151 114 145 114" fill="#E3EBF7" stroke="#A9BEDF" stroke-width="1"/>
+<circle cx="150" cy="99" r="5.5" fill="none" stroke="#5AC8FA" stroke-width="1.4" filter="url(#glow)" class="iglow"/>
+<circle cx="150" cy="99" r="2" fill="#5AC8FA" class="iglow"/>
+
+<!-- head -->
+<path d="M100 20C128 20 146 40 147 72C148 96 143 118 133 136C123 154 112 166 100 168C88 166 77 154 67 136C57 118 52 96 53 72C54 40 72 20 100 20Z" fill="url(#skin)" stroke="#A9BEDF" stroke-width="1.1"/>
+
+<g clip-path="url(#face)">
+  <!-- soft modelling of the face -->
+  <ellipse cx="100" cy="150" rx="40" ry="16" fill="#C9D8EE" opacity=".35" filter="url(#soft)"/>
+  <ellipse cx="76" cy="122" rx="12" ry="8" fill="url(#cheek)"/>
+  <ellipse cx="124" cy="122" rx="12" ry="8" fill="url(#cheek)"/>
+  <!-- circuit traces: across the right temple and cheek, a few on the forehead -->
+  <path class="trace" d="M100 22V40L108 48H120M108 48V58"/>
+  <path class="trace" d="M146 60H134L126 68V80M134 60L130 52H122"/>
+  <path class="trace" d="M148 88H140L134 94V104L140 110H147"/>
+  <path class="trace" d="M134 104H128L122 112V126L128 132"/>
+  <path class="trace" d="M140 122L132 130V142L124 150"/>
+  <path class="trace" d="M60 52L70 44H82" opacity=".55"/>
+  <circle class="node b" cx="120" cy="48" r="1.8"/><circle class="node" cx="108" cy="58" r="1.6"/><circle class="node b b2" cx="126" cy="80" r="1.8"/>
+  <circle class="node" cx="122" cy="52" r="1.5"/><circle class="node b" cx="134" cy="104" r="1.7"/><circle class="node b b2" cx="128" cy="132" r="1.7"/>
+  <circle class="node" cx="124" cy="150" r="1.6"/><circle class="node" cx="82" cy="44" r="1.4"/>
+  <!-- light running along the traces -->
+  <path class="pulse" d="M100 22V40L108 48H120"/>
+  <path class="pulse p2" d="M146 60H134L126 68V80"/>
+  <path class="pulse p3" d="M148 88H140L134 94V104L140 110H147"/>
+  <path class="pulse p4" d="M134 104H128L122 112V126L128 132"/>
+  <path class="pulse p5" d="M140 122L132 130V142L124 150"/>
+</g>
+
+<!-- brows -->
+<path d="M66 83Q79 77 92 82" fill="none" stroke="#8A9CBB" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M108 82Q121 77 134 83" fill="none" stroke="#8A9CBB" stroke-width="2.2" stroke-linecap="round"/>
+
+<!-- eyes: they blink, the irises glow and look around a little -->
+<g class="eye l">
+  <path d="M67 96Q80 86 93 96Q80 104 67 96Z" fill="#fff" stroke="#7F93B5" stroke-width="1"/>
+  <g class="look"><circle cx="80" cy="95.5" r="5.6" fill="url(#iris)"/><circle cx="80" cy="95.5" r="2.1" fill="#173A7A"/><circle cx="81.8" cy="93.6" r="1.3" fill="#fff"/><circle cx="80" cy="95.5" r="6.5" fill="none" stroke="#5AC8FA" stroke-width="1" opacity=".6" filter="url(#glow)" class="iglow"/></g>
+</g>
+<g class="eye r">
+  <path d="M107 96Q120 86 133 96Q120 104 107 96Z" fill="#fff" stroke="#7F93B5" stroke-width="1"/>
+  <g class="look"><circle cx="120" cy="95.5" r="5.6" fill="url(#iris)"/><circle cx="120" cy="95.5" r="2.1" fill="#173A7A"/><circle cx="121.8" cy="93.6" r="1.3" fill="#fff"/><circle cx="120" cy="95.5" r="6.5" fill="none" stroke="#5AC8FA" stroke-width="1" opacity=".6" filter="url(#glow)" class="iglow"/></g>
+</g>
+
+<!-- the corners of a smile -->
+<path d="M82 131Q81 134 83 136M118 131Q119 134 117 136" fill="none" stroke="#B9C6DC" stroke-width="1" stroke-linecap="round"/>
+<!-- nose -->
+<path d="M100 100C99 108 96 114 95 118Q100 122 105 118" fill="none" stroke="#9FB1CF" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- a gentle smile that widens now and then -->
+<path fill="url(#lip)" opacity=".9">
+  <animate attributeName="d" dur="7s" repeatCount="indefinite" keyTimes="0;.4;.55;.8;1"
+    values="M85 134Q100 133 115 134Q100 148 85 134Z;M85 134Q100 133 115 134Q100 148 85 134Z;M83 132Q100 132 117 132Q100 151 83 132Z;M83 132Q100 132 117 132Q100 151 83 132Z;M85 134Q100 133 115 134Q100 148 85 134Z"/>
+</path>
+<path fill="none" stroke="#B86677" stroke-width="1.1" stroke-linecap="round">
+  <animate attributeName="d" dur="7s" repeatCount="indefinite" keyTimes="0;.4;.55;.8;1"
+    values="M85 134Q100 142 115 134;M85 134Q100 142 115 134;M83 132Q100 144 117 132;M83 132Q100 144 117 132;M85 134Q100 142 115 134"/>
+</path>
+</svg>

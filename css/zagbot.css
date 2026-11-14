@@ -297,3 +297,6 @@ html.a11y-rt .zb .zb-launch{background:#fff!important;-webkit-backdrop-filter:no
 .zb .zb-launch .zb-pic img.zb-robot{inset:auto!important;left:4px!important;top:0!important;width:calc(100% - 8px)!important;height:calc(100% - 8px)!important;border-radius:50%!important;-webkit-mask:radial-gradient(closest-side,#000 84%,transparent 100%);mask:radial-gradient(closest-side,#000 84%,transparent 100%)}
 .zb .zb-launch .zb-pic .zb-badge{bottom:3px!important;height:10.5px!important;padding:0 4px!important;border-radius:5px!important}
 .zb .zb-launch .zb-pic .zb-badge img{height:5.5px!important}
+/* with the drawn face the ZAG chip sits at the top of the circle, on the forehead like an emblem, leaving the eyes and the smile clear */
+.zb .zb-launch .zb-pic .zb-badge{top:5px!important;bottom:auto!important}
+.zb .zb-launch .zb-pic img.zb-robot{left:0!important;top:0!important;width:100%!important;height:100%!important;-webkit-mask:none!important;mask:none!important}
