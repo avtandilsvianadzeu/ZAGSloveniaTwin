@@ -16,6 +16,9 @@ function openShell(html){
   info.innerHTML=`<button class="x" aria-label="Close panel" title="Close">${ICON.close}</button>${html}`;
   info.hidden=false; info.scrollTop=0; document.body.classList.add('has-panel'); listEl.hidden=true;
   info.querySelector('.x').onclick=closeInfo;
+  /* the model preview loads once the map has settled after the flight to the record, so the two do not compete */
+  info.querySelectorAll('iframe.twinframe[data-src]').forEach(f=>{ let done=false; const go=()=>{ if(done||!f.isConnected) return; done=true; f.src=f.dataset.src; f.addEventListener('load',()=>f.classList.add('ready'),{once:true}); };
+    try{ if(map&&!map.loaded()) map.once('idle',()=>setTimeout(go,150)); else setTimeout(go,300); }catch(_){ setTimeout(go,300); } setTimeout(go,6000); });
   info.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>copyText(b.dataset.copy,'Coordinates copied'));
 }
 async function copyText(t,m){try{await navigator.clipboard.writeText(t);toast(m);}catch(_){toast('Copy is not available here');}}
@@ -76,7 +79,7 @@ function infoHTML(f){
     ${where?`<p class="where">${esc(where)}</p>`:''}
     ${typeof zagAreaHTML==='function'?zagAreaHTML(p):''}
     <p><a class="btn twinlink" href="twin.html?id=${encodeURIComponent(p.id)}">Open the asset page</a></p>
-    ${(p.lines||p.line||ZA.gurs[p.id]||(ZA.twins&&ZA.twins[p.id]&&ZA.twins[p.id].model&&(ZA.twins[p.id].model.blocks||[]).length))?`<iframe class="twinframe" title="Model of ${esc(p.name_en||p.name)}" src="twin.html?id=${encodeURIComponent(p.id)}&embed=1"></iframe>`:''}
+    ${(p.lines||p.line||ZA.gurs[p.id]||(ZA.twins&&ZA.twins[p.id]&&ZA.twins[p.id].model&&(ZA.twins[p.id].model.blocks||[]).length))?`<iframe class="twinframe" title="Model of ${esc(p.name_en||p.name)}" data-src="twin.html?id=${encodeURIComponent(p.id)}&embed=1"></iframe>`:''}
     <h3>Type and evidence</h3>
     <p><span class="tag">${esc(typeof typeLabel==='function'?typeLabel(p.object_type):cap(p.object_type))}</span><span class="tag ${p.evidence_level==='documented'?'ok':'warn'}">${esc({documented:'Documented',referenced:'Referenced',location_only:'Location only'}[p.evidence_level])}</span></p>
     ${bullets?`<h3>ZAG involvement</h3><ul>${bullets}</ul>`:''}
