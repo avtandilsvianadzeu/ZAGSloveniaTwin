@@ -943,3 +943,7 @@ body:not(:has(#map)){background:
 html:has(body.sb-open),body.sb-open{background:linear-gradient(165deg,#BFD9FF 0%,#D8E8FF 45%,#EAF2FF 100%) fixed!important}
 .sidebar{background:linear-gradient(160deg,rgba(255,255,255,.46),rgba(214,232,255,.22) 60%,rgba(255,255,255,.18))!important}
 .sb-row:hover,.fmenu a.f:hover,.sb-row[aria-current=page],.sb-row.on{background:linear-gradient(160deg,rgba(255,255,255,.78),rgba(232,242,255,.42))!important}
+/* menus that open over text need a denser frost so the text behind never reads through */
+.fmenu{background:linear-gradient(160deg,rgba(255,255,255,.88),rgba(238,245,255,.78))!important;-webkit-backdrop-filter:blur(30px) saturate(190%)!important;backdrop-filter:blur(30px) saturate(190%)!important}
+.sidebar{background:linear-gradient(160deg,rgba(255,255,255,.62),rgba(222,236,255,.42) 60%,rgba(255,255,255,.36))!important;-webkit-backdrop-filter:blur(30px) saturate(185%)!important;backdrop-filter:blur(30px) saturate(185%)!important}
+.lgd,.tl,.info,.tips,.results,.layers{-webkit-backdrop-filter:blur(26px) saturate(185%)!important;backdrop-filter:blur(26px) saturate(185%)!important}

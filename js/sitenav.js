@@ -47,7 +47,7 @@
   const live=document.createElement('button'); live.type='button'; live.className='livebadge'; live.setAttribute('aria-haspopup','dialog'); live.setAttribute('aria-expanded','false');
   live.innerHTML='<i></i><b>LIVE</b><span><em></em><time></time></span>'; const right=head.querySelector('.tnav,.hright'); right?head.insertBefore(live,right):head.appendChild(live);
   let upd=0, zn=null;
-  async function tick(){ try{ const r=await fetch('data/news.json?t='+Date.now(),{cache:'no-store'}); if(r.ok){ const j=await r.json(); const t=Date.parse(j.updated||''); if(t){ if(upd&&t>upd){ live.classList.remove('flash'); void live.offsetWidth; live.classList.add('flash'); } upd=t; } } }catch(_){}
+  async function tick(){ if(document.hidden||navigator.onLine===false) return; try{ const r=await fetch('data/news.json?t='+Date.now(),{cache:'no-store'}); if(r.ok){ const j=await r.json(); const t=Date.parse(j.updated||''); if(t){ if(upd&&t>upd){ live.classList.remove('flash'); void live.offsetWidth; live.classList.add('flash'); } upd=t; } } }catch(_){}
     try{ const r=await fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000),{cache:'no-store'}); if(r.ok) zn=await r.json(); }catch(_){} paint(); }
   const TZ={timeZone:'Europe/Ljubljana'};
   const DAYS_SL=['nedelja','ponedeljek','torek','sreda','četrtek','petek','sobota'], DAYS_EN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -68,7 +68,7 @@
   live.onclick=()=>openCard(card.hidden);
   document.addEventListener('pointerdown',e=>{ if(!card.hidden&&!card.contains(e.target)&&!live.contains(e.target)) openCard(false); });
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!card.hidden){ openCard(false); live.focus(); } });
-  tick(); setInterval(tick,5*60000); paint(); setInterval(paint,15000);
+  tick(); setInterval(tick,5*60000); document.addEventListener('visibilitychange',()=>{ if(!document.hidden) tick(); }); window.addEventListener('online',tick); paint(); setInterval(paint,15000);
 
   /* numbers count up when they appear, so totals feel live */
   const count=el=>{ if(el.dataset.counted) return; const txt=el.textContent.trim(); if(!/^\d[\d,]*$/.test(txt)) return; el.dataset.counted='1'; const end=+txt.replace(/,/g,''); if(end<2||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
