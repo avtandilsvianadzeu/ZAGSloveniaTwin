@@ -825,16 +825,9 @@ body.splashing .zb-tease,body.splashing .tips{visibility:hidden}
   body.sb-open .hdr,body.sb-open .thdr{padding-left:252px!important}
   body.sb-open .hdr .brand,body.sb-open .thdr .brand,body.sb-open .sitenav{display:none}
   body.sb-open .hdr .hsearch{flex:1 1 320px}
-  body.sb-open main,body.sb-open .sitefoot{margin-left:236px}
-  body.sb-open .info{left:248px}
-  body.sb-open .lgd,body.sb-open .lgdshow{left:248px!important}
-  body.sb-open .maplibregl-ctrl-bottom-left{left:496px!important}
-  body.sb-open .status{padding-left:248px}
-  body.sb-open .mapfilter{left:calc(50% + 118px)}
-  body.sb-open .tl{left:calc(50% + 118px)!important;max-width:min(560px,calc(100% - 660px))}
-  body.sb-open .tlshow{left:calc(50% + 118px)!important}
-  body.sb-open.has-panel .tl,body.sb-open.has-panel .tlshow{left:calc(50% + var(--panel,400px) / 2 + 124px)!important}
-  body.sb-open.has-panel .maplibregl-ctrl-bottom-left{left:calc(var(--panel,400px) + 272px)!important}
+  body.sb-open main,body.sb-open .sitefoot{margin-left:252px}
+  body.sb-open .hdr,body.sb-open .thdr{padding-left:268px!important}
+  body.sb-open .mapfilter{left:calc(50% + 126px)}
 }
 @media (max-width:1100px){.sidebar{width:min(300px,86vw)}}
 html.a11y-rt .sidebar,html.a11y-hc .sidebar{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
@@ -932,3 +925,21 @@ body:not(:has(#map)){background:
     radial-gradient(900px 640px at 60% 112%,rgba(101,188,123,.12),transparent 62%),
     linear-gradient(180deg,#E3ECFA,#EAF1FB)!important;background-attachment:fixed!important}
 :root{--bev-bg:linear-gradient(155deg,rgba(255,255,255,.56),rgba(255,255,255,.28))}
+.lgd.moved{bottom:auto!important;animation:none!important;transform:none!important}.lgd header{user-select:none;-webkit-user-select:none}
+
+/* ---------- clear bevelled glass for the sidebar and the menus, as in the legend; hover and selection are small glass pills ---------- */
+:root{--lg-clear:linear-gradient(160deg,rgba(255,255,255,.40),rgba(255,255,255,.16));--lg-blur:blur(18px) saturate(185%) brightness(1.05);
+  --lg-bevel:inset 1.5px 1.5px 0 rgba(255,255,255,.95),inset -1px -1px 0 rgba(255,255,255,.35),inset 0 0 18px rgba(255,255,255,.28),0 0 0 .5px rgba(33,52,105,.10),0 16px 40px rgba(16,40,90,.16);
+  --pill:linear-gradient(160deg,rgba(255,255,255,.70),rgba(255,255,255,.34));--pill-sh:inset 1px 1px 0 rgba(255,255,255,1),inset -1px -1px 0 rgba(255,255,255,.35),0 0 0 .5px rgba(33,52,105,.10),0 4px 12px rgba(16,40,90,.10)}
+.sidebar,.fmenu{background:var(--lg-clear)!important;-webkit-backdrop-filter:var(--lg-blur)!important;backdrop-filter:var(--lg-blur)!important;border:1px solid rgba(255,255,255,.65)!important;box-shadow:var(--lg-bevel)!important}
+.sb-row,.fmenu a.f{transition:background .18s ease,box-shadow .18s ease,transform .18s ease}
+.sb-row:hover,.fmenu a.f:hover{background:var(--pill)!important;box-shadow:var(--pill-sh)!important;transform:translateX(1px)}
+.sb-row[aria-current=page],.sb-row.on{background:var(--pill)!important;box-shadow:var(--pill-sh)!important;color:#0A5BC4!important}
+.sb-find{background:linear-gradient(160deg,rgba(255,255,255,.55),rgba(255,255,255,.28))!important;box-shadow:inset 1px 1px 0 rgba(255,255,255,.95),0 0 0 .5px rgba(33,52,105,.10)!important}
+.fmenu a.f i{background:linear-gradient(160deg,rgba(255,255,255,.85),rgba(220,235,255,.6))!important;box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.10)}
+.sidebar h6,.fmenu h4,.fmenu .fh{color:#3E4A63!important}
+.sb-row span,.fmenu a.f b{text-shadow:0 1px 0 rgba(255,255,255,.55)}
+/* the sidebar floats over a soft blue ground so its glass reads as glass, with a faint blue tint of its own */
+html:has(body.sb-open),body.sb-open{background:linear-gradient(165deg,#BFD9FF 0%,#D8E8FF 45%,#EAF2FF 100%) fixed!important}
+.sidebar{background:linear-gradient(160deg,rgba(255,255,255,.46),rgba(214,232,255,.22) 60%,rgba(255,255,255,.18))!important}
+.sb-row:hover,.fmenu a.f:hover,.sb-row[aria-current=page],.sb-row.on{background:linear-gradient(160deg,rgba(255,255,255,.78),rgba(232,242,255,.42))!important}

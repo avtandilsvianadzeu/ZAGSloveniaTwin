@@ -60,6 +60,20 @@
     vis(!pref()); paint();
   }
   hide.addEventListener('click',()=>set(false)); show.addEventListener('click',()=>set(true));
+  /* the legend can be moved: drag it by its header; it keeps the place in this browser, a double click on the header puts it back */
+  (function drag(){ const head=box.querySelector('header'); if(!head) return; const KEY='zag_lgd_pos';
+    const clampTo=(x,y)=>{ const P=box.offsetParent||document.body, pr=P.getBoundingClientRect(), w=box.offsetWidth, h=box.offsetHeight; return [Math.max(4,Math.min(x,pr.width-w-4)),Math.max(4,Math.min(y,pr.height-h-4))]; };
+    const place=(x,y)=>{ [x,y]=clampTo(x,y); box.style.left=x+'px'; box.style.top=y+'px'; box.style.bottom='auto'; box.style.setProperty('animation','none'); box.classList.add('moved'); };
+    try{ const v=JSON.parse(localStorage.getItem(KEY)||'null'); if(v&&innerWidth>=700) requestAnimationFrame(()=>place(v.x,v.y)); }catch(_){}
+    let st=null;
+    head.style.cursor='grab'; head.style.touchAction='none';
+    head.addEventListener('pointerdown',e=>{ if(e.button!==0||e.target.closest('button')||innerWidth<700) return; const r=box.getBoundingClientRect(), pr=(box.offsetParent||document.body).getBoundingClientRect(), z=parseFloat(getComputedStyle(box).zoom)||1;
+      st={dx:e.clientX-r.left,dy:e.clientY-r.top,pl:pr.left,pt:pr.top,z,moved:false}; head.setPointerCapture(e.pointerId); head.style.cursor='grabbing'; });
+    head.addEventListener('pointermove',e=>{ if(!st) return; st.moved=true; place((e.clientX-st.dx-st.pl)/st.z,(e.clientY-st.dy-st.pt)/st.z); });
+    const end=e=>{ if(!st) return; head.style.cursor='grab'; try{ head.releasePointerCapture(e.pointerId); }catch(_){} if(st.moved) try{ localStorage.setItem(KEY,JSON.stringify({x:parseFloat(box.style.left),y:parseFloat(box.style.top)})); }catch(_){} st=null; };
+    head.addEventListener('pointerup',end); head.addEventListener('pointercancel',end);
+    head.addEventListener('dblclick',e=>{ if(e.target.closest('button')) return; box.style.left=box.style.top=box.style.bottom=''; box.style.removeProperty('animation'); box.classList.remove('moved'); try{ localStorage.removeItem(KEY); }catch(_){} });
+    head.title=(window.LANG==='sl'?'Povlecite, da premaknete legendo. Dvojni klik jo vrne na mesto.':'Drag to move the legend. Double click puts it back.'); })();
   const wait=setInterval(()=>{ if(typeof ZA!=='undefined'&&ZA.features&&ZA.features.length&&typeof markerImage==='function'){ clearInterval(wait); build(); } },300);
   window.addEventListener('zag:news',()=>{ try{ paint(); }catch(_){} });
   /* repaint whenever any filter changes the map */
