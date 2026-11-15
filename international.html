@@ -132,14 +132,14 @@
   W.features.forEach(f=>{ const c=CN[f.properties.iso]; f.properties.n=c?c.total:0; f.properties.home=f.properties.iso==='SI'?1:0; });
   const pts=(arr,fn)=>({type:'FeatureCollection',features:arr.map(x=>({type:'Feature',properties:fn(x),geometry:{type:'Point',coordinates:[x.lon,x.lat]}}))});
   const arc=(a,b)=>{ const r=Math.PI/180,[l1,p1]=[a[0]*r,a[1]*r],[l2,p2]=[b[0]*r,b[1]*r]; const d=2*Math.asin(Math.sqrt(Math.sin((p2-p1)/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin((l2-l1)/2)**2)); const o=[]; for(let i=0;i<=48;i++){ const f=i/48,A=Math.sin((1-f)*d)/Math.sin(d),B=Math.sin(f*d)/Math.sin(d); const x=A*Math.cos(p1)*Math.cos(l1)+B*Math.cos(p2)*Math.cos(l2),y=A*Math.cos(p1)*Math.sin(l1)+B*Math.cos(p2)*Math.sin(l2),z=A*Math.sin(p1)+B*Math.sin(p2); o.push([Math.atan2(y,x)/r,Math.atan2(z,Math.sqrt(x*x+y*y))/r]); } return o; };
-  const box=$('imap'), fitZ=()=>Math.max(.5,Math.min(3,Math.log2(Math.min(box.clientWidth,box.clientHeight)*.84*Math.PI/512)));
+  const box=$('imap'), fitZ=()=>{ const s=Math.min(box.clientWidth,box.clientHeight); return s<240?1.7:Math.max(.8,Math.min(3,Math.log2(s*.84*Math.PI/512))); };
   const VIEWS={world:()=>({center:[-8,22],zoom:fitZ()}),europe:()=>({center:[15,50],zoom:Math.max(2.4,fitZ()+1.6)})};
   const map=new maplibregl.Map({container:'imap',style:{version:8,projection:{type:'globe'},sky:{'sky-color':'#CFE3FF','horizon-color':'#FFFFFF','fog-color':'#FFFFFF','sky-horizon-blend':.6,'horizon-fog-blend':.6,'fog-ground-blend':.9,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,5,1,7,0]},sources:{},layers:[{id:'bg',type:'background',paint:{'background-color':'#B9D3F2'}}]},...VIEWS.world(),cooperativeGestures:true,attributionControl:{compact:true,customAttribution:L('Borders: Natural Earth via world-atlas','Meje: Natural Earth prek world-atlas')}});
   window.__imap=map;   map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
   let view='world'; const goView=v=>{ view=v; map.easeTo({...VIEWS[v](),duration:900}); document.querySelectorAll('#views button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===v)); };
   const refit=()=>{ map.resize(); if(view) map.jumpTo(VIEWS[view]()); };
   ['dragstart','wheel','touchstart','dblclick'].forEach(ev=>map.on(ev,e=>{ if(e.originalEvent){ view=null; document.querySelectorAll('#views button').forEach(b=>b.setAttribute('aria-pressed','false')); } }));
-  new ResizeObserver(refit).observe(box); map.once('load',refit); window.addEventListener('load',refit);
+  new ResizeObserver(refit).observe(box); map.once('load',()=>{ refit(); requestAnimationFrame(refit); [400,1200,2500].forEach(ms=>setTimeout(()=>{ if(view) refit(); },ms)); }); window.addEventListener('load',refit);
   map.on('load',()=>{
     const gr=[]; for(let lon=-180;lon<180;lon+=30){ const c=[]; for(let la=-80;la<=80;la+=4) c.push([lon,la]); gr.push({type:'Feature',properties:{},geometry:{type:'LineString',coordinates:c}}); } for(let la=-60;la<=60;la+=30){ const c=[]; for(let lon=-180;lon<=180;lon+=4) c.push([lon,la]); gr.push({type:'Feature',properties:{},geometry:{type:'LineString',coordinates:c}}); }
     map.addSource('grat',{type:'geojson',data:{type:'FeatureCollection',features:gr}}); map.addLayer({id:'grat',type:'line',source:'grat',paint:{'line-color':'#FFFFFF','line-opacity':.35,'line-width':.6}});
