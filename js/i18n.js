@@ -12,7 +12,7 @@
 
   const D={
     /* navigation and header */
-    'Map':'Zemljevid','Assets':'Objekti','Dashboard':'Pregled','Open questions':'Odprta vprašanja','Data API':'Podatkovni API','Add object':'Dodaj objekt','Add an object':'Dodaj objekt',
+    'Map':'Zemljevid','International':'Mednarodno','Structures abroad':'Objekti v tujini','ZAG projects and work abroad':'Projekti in delo ZAG v tujini','Bridges ZAG measured outside Slovenia, with sources':'Mostovi, ki jih je ZAG meril zunaj Slovenije, z viri','Countries':'Države','Projects with partners in 52 countries':'Projekti s partnerji v 52 državah','Projects':'Projekti','International projects of ZAG since 1993':'Mednarodni projekti ZAG od leta 1993','Assets':'Objekti','Dashboard':'Pregled','Open questions':'Odprta vprašanja','Data API':'Podatkovni API','Add object':'Dodaj objekt','Add an object':'Dodaj objekt',
     'Night':'Noč','Satellite':'Satelit','Layers':'Sloji','LIVE':'V ŽIVO','Open on the map':'Odpri na zemljevidu','Find an asset':'Poišči objekt','Previous':'Prejšnji','Next':'Naslednji','‹ Previous':'‹ Prejšnji','Next ›':'Naslednji ›',
     'Search structures, places, addresses or coordinates':'Išči objekte, kraje, naslove ali koordinate','Search names, places, values, sources and quotes':'Išči imena, kraje, vrednosti, vire in navedke','Search the questions':'Išči po vprašanjih',
     'All records':'Vsi zapisi','Buildings':'Stavbe','Bridges':'Mostovi','Infrastructure':'Infrastruktura','About the atlas':'O atlasu','Skip to content':'Na vsebino','Skip to map':'Na zemljevid',

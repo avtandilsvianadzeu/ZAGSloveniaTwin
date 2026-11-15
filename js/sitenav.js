@@ -4,7 +4,7 @@
    Page links that were repeated in each header are hidden here, so every page keeps only its own tools:
    the map keeps its search, background and layers, an asset page keeps Previous, Next and "Open on the map". */
 (function(){
-  const PAGES=[['index.html','Map','The map of all ZAG work'],['twin.html','Assets','All objects and their records'],['dashboard.html','Dashboard','What the atlas holds today'],
+  const PAGES=[['index.html','Map','The map of all ZAG work'],['international.html','International','ZAG projects and work abroad'],['twin.html','Assets','All objects and their records'],['dashboard.html','Dashboard','What the atlas holds today'],
     ['questions.html','Data quality','What the sources do not settle yet'],['api.html','Data API','Read the data by address'],['add.html','Add object','Draw a new structure']];
   const file=(location.pathname.split('/').pop()||'index.html').toLowerCase();
   const head=document.querySelector('header.thdr,header.hdr'); if(!head) return;
@@ -17,6 +17,7 @@
     code:'M5.6 4 1.5 8l4.1 4 1-1L3.5 8l3.1-3zm4.8 0-1 1 3.1 3-3.1 3 1 1 4.1-4z',plus:'M7.3 2h1.4v5.3H14v1.4H8.7V14H7.3V8.7H2V7.3h5.3z',chat:'M2 3.5A1.5 1.5 0 0 1 3.5 2h9A1.5 1.5 0 0 1 14 3.5v6a1.5 1.5 0 0 1-1.5 1.5H7l-3.5 3v-3A1.5 1.5 0 0 1 2 9.5z'};
   const ic=k=>`<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="${I[k]}" fill="currentColor"/></svg></i>`;
   const FEAT={'index.html':[['pin','Search','Find a structure, a place or an address','index.html'],['filter','Filter by type','Projects, buildings, bridges or infrastructure','index.html'],['clock','Timeline','ZAG work year by year since 1952','index.html'],['layers','Backgrounds','Map, satellite or the GURS 25 cm orthophoto','index.html'],['cube','3D view','Terrain relief and buildings in 3D','index.html'],['chat','Tips to get started','Five things to try first. Press ? on the map','index.html?tips=1']],
+    'international.html':[['pin','Structures abroad','Bridges ZAG measured outside Slovenia, with sources','international.html#structures'],['layers','Countries','Projects with partners in 52 countries','international.html#countries'],['list','Projects','International projects of ZAG since 1993','international.html#projects']],
     'twin.html':[['list','All objects','The 73 records, filtered by type','twin.html'],['doc','Asset record','Every value with its source and evidence','twin.html?id=tomacevo'],['cube','3D model','Rebuilt from mapped outlines and published dimensions','twin.html?id=he_arto'],['chart','Report and data file','Print a record or download it as data','twin.html?id=karavanke_c']],
     'dashboard.html':[['chart','Totals','What the atlas holds today','dashboard.html'],['alert','Condition','From inspection records, where entered','dashboard.html'],['list','Data to complete','Records with the fewest values','dashboard.html']],
     'questions.html':[['alert','Where sources differ','Values that two sources give differently','questions.html'],['doc','Not yet verified','What the sources do not settle yet','questions.html']],
@@ -109,7 +110,7 @@
   const footer=function(){ if(/[?&]id=/.test(location.search)||document.getElementById('map')||document.body.classList.contains('embed')||document.body.classList.contains('wsbody')||document.querySelector('.sitefoot')) return;
     const f=document.createElement('footer'); f.className='sitefoot';
     f.innerHTML=`<div class="sf-in"><div class="sf-about"><b>DigitalZAG</b><p>Structures and sites in Slovenia where the work of ZAG, the Slovenian National Building and Civil Engineering Institute, is documented in published sources.</p></div>
-      <nav aria-label="Pages"><h3>Pages</h3><a href="index.html">Map</a><a href="twin.html">Assets</a><a href="dashboard.html">Dashboard</a><a href="questions.html">Data quality</a><a href="add.html">Add object</a></nav>
+      <nav aria-label="Pages"><h3>Pages</h3><a href="index.html">Map</a><a href="international.html">International</a><a href="twin.html">Assets</a><a href="dashboard.html">Dashboard</a><a href="questions.html">Data quality</a><a href="add.html">Add object</a></nav>
       <div><h3>Data</h3><a href="api.html">Data API, JSON, GeoJSON and CSV</a><span>Every value links to the source it was read from.</span></div>
       <div><h3>Map data and licences</h3><span>OpenStreetMap contributors, ODbL</span><span>OpenFreeMap and OpenMapTiles</span><span>GURS cadastre and laser scanning, CC BY 4.0</span><span>Esri World Imagery, Mapzen terrain tiles</span></div>
       <div><h3>Contact</h3><a id="sfMail" href="mailto:avtandil.svianadze@zag.si">avtandil.svianadze@zag.si</a></div></div>
