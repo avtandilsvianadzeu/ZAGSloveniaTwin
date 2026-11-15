@@ -1,5 +1,5 @@
 'use strict';
-/* Tips to get started on the map page. Shown on the first visit, then on demand with the "?" key or from the Map menu.
+/* Tips to get started on the map page. Shown on the first visit on a laptop or desktop (on a phone it would cover the map), then on demand with the "?" key or from the Map menu.
    Every tip does what it says when clicked. Keys: "/" puts the cursor in the search, "?" opens the tips, Esc closes them. */
 (function(){
   if(!document.getElementById('map')) return;
@@ -27,5 +27,5 @@
     else if(e.key==='Escape'&&!box.hidden) close(); });
   window.ZAGTIPS={open,close};
   let seen=false; try{ seen=localStorage.getItem(KEY)==='1'; }catch(_){}
-  if(/[?&]tips=1/.test(location.search)) setTimeout(open,600); else if(!seen&&!location.hash) setTimeout(open,1400);
+  if(/[?&]tips=1/.test(location.search)) setTimeout(open,600); else if(!seen&&!location.hash&&innerWidth>700) setTimeout(open,1400);
 })();

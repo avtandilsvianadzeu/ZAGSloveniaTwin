@@ -11,6 +11,12 @@
   const ACTIVE=lang==='sl'; if(ACTIVE) document.documentElement.lang='sl';
 
   const D={
+    /* pieces of sentences that carry bold or code in the middle, and texts added in November 2026 */
+    'Easier: open':'Preprosteje: odprite','in the lower right corner and tell it what you want to add or change.':'v spodnjem desnem kotu in mu povejte, kaj želite dodati ali spremeniti.',
+    'What is it':'Kaj je to','Saved in this browser only. To show them to everyone, download the file and upload it to the repository as':'Shranjeno samo v tem brskalniku. Da jih vidijo vsi, prenesite datoteko in jo naložite v repozitorij kot',
+    'Search the atlas':'Išči po atlasu','Where is it':'Kje je','Infrastructure and other sites':'Infrastruktura in druge lokacije','Bus stop':'Avtobusna postaja','Platform':'Peron','Secondary':'Regionalna cesta','Unclassified':'Lokalna cesta','Residential':'Stanovanjska ulica','Village':'Vas','Town':'Mesto','City':'Mesto','Hamlet':'Zaselek','River':'Reka','Stream':'Potok','Peak':'Vrh','Choose an object and load its record.':'Izberite objekt in naložite njegov zapis.','with their own source link':'z lastno povezavo na vir','with own source link':'z lastno povezavo na vir',
+    'with quoted sentence':'z navedenim stavkom','quote to check':'navedek za preverjanje','quotes to check':'navedki za preverjanje','Terrain: Mapzen, AWS Terrain Tiles (EU-DEM produced using Copernicus data, DGM Österreich, USGS)':'Relief: Mapzen, AWS Terrain Tiles (EU-DEM, izdelan s podatki Copernicus, DGM Österreich, USGS)','Data from':'Podatki iz','source conflicts':'razhajanj virov','open question':'odprto vprašanje','values':'vrednosti',
+    'Geocoding':'Geokodiranje','Terrain:':'Relief:','produced using':'izdelan s podatki','Data from':'Podatki iz','Borders:':'Meje:',
     /* navigation and header */
     'Map':'Zemljevid','International':'Mednarodno','Latest':'Novice','Value':'Vrednost','ZAG Radar':'Radar ZAG','Radar':'Radar','Partners':'Partnerji','ZAG news, media and structure news':'Novice ZAG, mediji in novice o objektih','From zag.si':'Z zag.si','What ZAG has published, read every 20 minutes':'Kar je objavil ZAG, prebrano vsakih 20 minut','ZAG in the media':'ZAG v medijih','Headlines that name ZAG':'Naslovi, ki navajajo ZAG','About atlas structures':'O objektih v atlasu','News that names a structure of the atlas':'Novice, ki navajajo objekt iz atlasa','Structures abroad':'Objekti v tujini','ZAG projects and work abroad':'Projekti in delo ZAG v tujini','Bridges ZAG measured outside Slovenia, with sources':'Mostovi, ki jih je ZAG meril zunaj Slovenije, z viri','Countries':'Države','Projects with partners across Europe and beyond':'Projekti s partnerji po Evropi in svetu','Projects':'Projekti','International projects of ZAG since 1993':'Mednarodni projekti ZAG od leta 1993','Assets':'Objekti','Dashboard':'Pregled','Open questions':'Odprta vprašanja','Data API':'Podatkovni API','Add object':'Dodaj objekt','Add an object':'Dodaj objekt',
     'Night':'Noč','Satellite':'Satelit','Layers':'Sloji','LIVE':'V ŽIVO','Open on the map':'Odpri na zemljevidu','Find an asset':'Poišči objekt','Previous':'Prejšnji','Next':'Naslednji','‹ Previous':'‹ Prejšnji','Next ›':'Naslednji ›',
@@ -150,6 +156,9 @@
     [/^ZAG work (\d{4})/,(m,y)=>`Delo ZAG ${y}`],[/^, ZAG work (.+)$/,(m,y)=>`, delo ZAG ${y.replace(' to ',' do ')}`],
     [/^Where the sources differ \((\d+)(, (\d+) settled)?\)$/,(m,n,_,s)=>`Kjer se viri razlikujejo (${n}${s?', '+s+' rešenih':''})`],
     [/^Quality (\d+)$/,(m,n)=>`Kakovost ${n}`],
+    [/^(\d+) values, (\d+) checked values with their own source link, the others from the record sources$/,(m,a,b)=>`${a} vrednosti, ${b} preverjenih z lastno povezavo na vir, ostale iz virov zapisa`],
+    [/^(\d+) quotes? to check$/,(m,n)=>`${n} ${+n===1?'navedek':+n===2?'navedka':+n<5?'navedki':'navedkov'} za preverjanje`],
+    [/^([\d,]+) facts and figures with a source in total, and (\d+) points where sources disagree\. These objects have the fewest specifications\.$/,(m,a,b)=>`Skupaj ${a.replace(/,/g,'.')} podatkov z virom in ${b} točk, kjer se viri razhajajo. Ti objekti imajo najmanj specifikacij.`],
     [/^(\d+) values, (\d+) with a source link$/,(m,a,b)=>`${a} vrednosti, ${b} s povezavo do vira`],
     [/^(\d+) more on its page\.$/,(m,n)=>`Še ${n} na njegovi strani.`],
     [/^(\d+) nodes and (\d+) elements in the schematic mesh\.$/,(m,a,b)=>`${a} vozlišč in ${b} elementov v shematski mreži.`],
@@ -164,6 +173,7 @@
     if(out===undefined){ for(const [re,f] of R){ const m=t.match(re); if(m){ let v; try{ v=typeof f==='function'?f(...m):t.replace(re,f); }catch(_){ v=undefined; } if(v!==undefined){ out=v; break; } } } }
     if(out===undefined) return s;
     return s.replace(t,out); }
+  window.i18nWord=w=>ACTIVE&&D[w]?D[w]:w;
   const SKIP=new Set(['SCRIPT','STYLE','CODE','PRE','TEXTAREA','KBD']);
   const done=new WeakMap();
   function node(n){ if(done.get(n)===n.nodeValue) return; const v=tr(n.nodeValue); if(v!==n.nodeValue) n.nodeValue=v; done.set(n,n.nodeValue); }
@@ -172,7 +182,7 @@
   function walk(root){ if(!root) return; if(root.nodeType===3){ if(!inSkip(root.parentElement)) node(root); return; } if(root.nodeType!==1||SKIP.has(root.tagName)||inSkip(root)) return;
     attrs(root); const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT,{acceptNode:n=>n.nodeType===1?(SKIP.has(n.tagName)||n.tagName==='BLOCKQUOTE'||(n.classList&&n.classList.contains('quote'))||(n.matches&&n.matches('.zb[data-lang="en"]'))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_SKIP):NodeFilter.FILTER_ACCEPT});
     const list=[]; while(w.nextNode()) list.push(w.currentNode); list.forEach(node);
-    root.querySelectorAll('[placeholder],[title],[aria-label],[alt]').forEach(el=>{ if(!inSkip(el)) attrs(el); }); }
+    root.querySelectorAll('[placeholder],[title],[aria-label],[alt]').forEach(el=>{ if(!inSkip(el.tagName==='TEXTAREA'?el.parentElement:el)) attrs(el); }); }
   function titles(){ const t=document.title; const T={'Asset record':'Zapis o objektu','Dashboard':'Pregled','Open questions':'Odprta vprašanja','Data API':'Podatkovni API','Add an object':'Dodaj objekt','Page not found':'Strani ni mogoče najti'};
     const nt=t.split(', ').map(x=>T[x]||x).join(', '); if(nt!==t) document.title=nt; }
   function start(){ walk(document.body); titles();

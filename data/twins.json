@@ -450,14 +450,6 @@
      "source": "https://www.mdpi.com/1424-8220/23/4/2067",
      "quote": "in 2008, seismic rehabilitation of the viaduct piers started",
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
-    },
-    {
-     "label": "Rehabilitation cost",
-     "value": "35 million",
-     "unit": "EUR",
-     "source": "https://www.kolektor.com/en/about-us/media/news/completed-restoration-of-a-nearly-half-a-century-old-viaduct-2019-06-27",
-     "quote": "Total investment is estimated at 35 million euros",
-     "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     }
    ],
    "anchors": [
@@ -1154,14 +1146,6 @@
      "unit": "",
      "source": "https://dlib.si/stream/URN:NBN:SI:DOC-05EN3VD8/23141649-7e7b-4c86-ada8-05e62eae89f0/PDF",
      "quote": "so bili vsi izmerjeni pomiki do 10 % manjši od računskih"
-    },
-    {
-     "label": "Cost",
-     "value": "2.6 million",
-     "unit": "EUR",
-     "source": "https://awards.share-architects.com/the-pedestrian-and-cycling-bridge-in-irca-vas-near-novo-mesto/",
-     "quote": "Project costs €2,6 million.",
-     "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
      "label": "Construction period",
@@ -4305,13 +4289,6 @@
      "quote_note": "Settled on 13 November 2026 from the source that ranks highest (ZAG, owner or official, then the latest). Shown before: 1,100 (NEB) / 850 timber section (FAMNIT) m³."
     },
     {
-     "label": "Cost",
-     "value": "about EUR 11 million",
-     "unit": "",
-     "source": "https://efi.int/news/innorenew-coe-completes-construction-slovenias-largest-wooden-building-2021-12-07",
-     "check": "The source page no longer exists (checked 12 November 2026), so this value is not yet checked against it."
-    },
-    {
      "label": "Construction",
      "value": "contract signed 8 Jan 2020; works began January 2020; contractor VG5 with Marles hiše Maribor",
      "unit": "",
@@ -4504,25 +4481,9 @@
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
-    "innorenew#source2": {
-     "status": "resolved",
-     "decision": "InnoRenew's own original of the same news item states the cost, so use it.",
-     "keep": {
-      "label": "Cost",
-      "value": "about EUR 11 million",
-      "unit": ""
-     },
-     "source_title": "InnoRenew CoE completes construction of Slovenia’s largest wooden building (InnoRenew CoE)",
-     "source_date": "2021-11-29",
-     "rank": "owner",
-     "quote": "Construction of the €11 million building was co-financed by the Republic of Slovenia and the European Union from the European Regional Development Fund.",
-     "source_url": "https://innorenew.eu/2021/11/innorenew-coe-completes-construction-slovenias-largest-wooden-building/",
-     "checked": "13 November 2026",
-     "second_check": "confirmed"
-    },
     "innorenew#quote": {
      "status": "partly",
-     "decision": "Quotes found for Storeys, Structure, Timber volume, Cost and Opened. The facade quote supports Istrian stone and wood only, not grey sandstone.",
+     "decision": "Quotes found for Storeys, Structure, Timber volume and Opened. The facade quote supports Istrian stone and wood only, not grey sandstone.",
      "source_title": "InnoRenew CoE completes construction of Slovenia’s largest wooden building (InnoRenew CoE)",
      "source_date": "2021-11-29",
      "rank": "owner",
@@ -5281,14 +5242,6 @@
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Renovation budget",
-     "value": "EUR 115 million total (Slovenia EUR 50 m, Austria EUR 65.3 m); contractor Strabag",
-     "unit": "",
-     "source": "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(railway)",
-     "quote": "The project has a total budget of 115 million euros, divided over the kilometers of each country, Slovenia contributing 50 million euros while Austria is to spend 65.3 million euros … The construction work is scheduled to begin on August 10, 2020, and will be carried out by the Strabag in both countries.",
-     "quote_note": "Copied from the text of the Wikipedia page, read on 12 November 2026."
-    },
-    {
      "label": "Construction method",
      "value": "bored from both ends, opened 1906",
      "unit": "",
@@ -5463,14 +5416,6 @@
      "quote_note": "Checked by reading: the fragment names SCT but not its role and the article could not be read"
     },
     {
-     "label": "Renovation contract value, both tubes",
-     "value": "8.56 million, excluding VAT (west tube 2020, east tube 2021)",
-     "unit": "EUR",
-     "source": "https://svet24.si/lokalno/osrednja/novice/promet/obnova-predora-golovec-uspesno-koncana-875308",
-     "quote": "Skupna vrednost pogodbenih del v obeh letih znaša 8,56 milijona evrov brez DDV",
-     "quote_note": "Settled on 13 November 2026 from the source that ranks highest (ZAG, owner or official, then the latest). Shown before: 8.56 million EUR."
-    },
-    {
      "label": "Renovation equipment",
      "value": "LED lighting and thermal incident detection",
      "unit": "",
@@ -5532,22 +5477,6 @@
      "source_title": "Contract for Construction of Golovec Tunnel Signed (STA)",
      "rank": "other",
      "source_url": "https://english.sta.si/226944/contract-for-construction-of-golovec-tunnel-signed",
-     "checked": "13 November 2026",
-     "second_check": "confirmed"
-    },
-    "golovec#source1": {
-     "status": "resolved",
-     "decision": "The Slovenia Times page opens now. Svet24 and RTV SLO, both quoting DARS, show that EUR 8.56 million excluding VAT is the contract value for both years (west tube 2020, east tube 2021), not the east tube alone. LED lighting and thermal detection were fitted in the west tube in 2020.",
-     "keep": {
-      "label": "Renovation contract value, both tubes 2020 and 2021 (including Strmec cut-and-cover relighting)",
-      "value": "8.56 million EUR excluding VAT",
-      "unit": ""
-     },
-     "source_title": "Obnova predora Golovec uspešno končana (Svet24)",
-     "source_date": "2021-05-21",
-     "rank": "other",
-     "quote": "Skupna vrednost pogodbenih del v obeh letih znaša 8,56 milijona evrov brez DDV",
-     "source_url": "https://svet24.si/lokalno/osrednja/novice/promet/obnova-predora-golovec-uspesno-koncana-875308",
      "checked": "13 November 2026",
      "second_check": "confirmed"
     }
@@ -5831,14 +5760,6 @@
      "quote_note": "Settled on 13 November 2026 from the source that ranks highest (ZAG, owner or official, then the latest). Shown before: December 2004."
     },
     {
-     "label": "Investment value",
-     "value": "120,000,000",
-     "unit": "EUR",
-     "source": "https://www.elea.si/en/?p=58107",
-     "quote": "Inv. value€120,000,000",
-     "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
-    },
-    {
      "label": "Length including gallery",
      "value": "1480",
      "unit": "m",
@@ -6078,14 +5999,6 @@
      "unit": "",
      "source": "https://www.rtvslo.si/gospodarstvo/avtocesta-prek-trojan-se-letos/17151",
      "quote": "Predor Trojane, ki so ga začeli graditi septembra 2000",
-     "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
-    },
-    {
-     "label": "Contract value",
-     "value": "14 billion",
-     "unit": "SIT",
-     "source": "https://www.rtvslo.si/gospodarstvo/avtocesta-prek-trojan-se-letos/17151",
-     "quote": "sklenil pogodbo za 14 milijard tolarjev",
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
@@ -7021,14 +6934,6 @@
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Cost",
-     "value": "70 million",
-     "unit": "USD",
-     "source": "https://tunnelsandtunnelling.com/?p=5052",
-     "quote": "built the US$70M tunnel",
-     "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
-    },
-    {
      "label": "Breakthrough",
      "value": "November 2003",
      "unit": "",
@@ -7322,13 +7227,6 @@
      "unit": "",
      "source": "https://tunneltalk.com/Alpine-July09-Alpine-wins-Slovenia-road-tunnels-contract.php",
      "quote": "Alpine Bau GmbH of Salzburg, Austria won the bid to build the Markovec tunnel"
-    },
-    {
-     "label": "Contract value",
-     "value": "64.5 million",
-     "unit": "EUR",
-     "source": "https://tunneltalk.com/Alpine-July09-Alpine-wins-Slovenia-road-tunnels-contract.php",
-     "quote": "a low bid of €64.5 million"
     }
    ],
    "anchors": [
@@ -7435,17 +7333,6 @@
      "source_url": "https://www.gov.si/assets/organi-v-sestavi/URSZR/Izpostava-Koper/Regijske-ocene-ogrozenosti/Regijska-ocena-ogrozenosti-za-nesrece-v-predorih_2021.pdf",
      "checked": "13 November 2026",
      "second_check": "confirmed"
-    },
-    "markovec#source0": {
-     "status": "resolved",
-     "decision": "The TunnelTalk page opens now (reached through a web search on 13 November 2026). It states the contractor, the NATM method and the bid value, so the three values can stay.",
-     "source_title": "TunnelTalk, Alpine wins Slovenian road tunnel",
-     "source_date": "2009-07",
-     "rank": "other",
-     "quote": "Alpine Bau secured the contract for the NATM tunnel with a low bid of €64.5 million.",
-     "source_url": "https://tunneltalk.com/Alpine-July09-Alpine-wins-Slovenia-road-tunnels-contract.php",
-     "checked": "13 November 2026",
-     "second_check": "confirmed"
     }
    }
   },
@@ -7528,10 +7415,10 @@
     },
     {
      "label": "Owner (operator)",
-     "value": "DARS (investor), investment EUR 11,633,000",
+     "value": "DARS (investor)",
      "unit": "",
      "source": "https://www.elea.si/en/?p=58122",
-     "quote": "Investor DARS d.d. … Inv. value €11,633,000",
+     "quote": "Investor DARS d.d.",
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026. Only line breaks and spacing differ."
     },
     {
@@ -11384,14 +11271,6 @@
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Investment",
-     "value": "just over 100 million EUR",
-     "unit": "",
-     "source": "https://www.rtvslo.si/lokalne-novice/he-krsko-zacel-poskusno-obratovati/306007",
-     "quote": "Naložba v HE Krško je ocenjena na dobrih 100 milijonov evrov.",
-     "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
-    },
-    {
      "label": "Owner (operator)",
      "value": "HESS",
      "unit": "",
@@ -11931,7 +11810,7 @@
      "value": "77",
      "unit": "%",
      "source": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant",
-     "quote": "The efficiency of the process is 77%, which means it is profitable to operate when the electricity generated costs 30% more.",
+     "quote": "The efficiency of the process is 77%",
      "quote_note": "Copied from the text of the Wikipedia page, read on 12 November 2026."
     },
     {
@@ -11958,14 +11837,6 @@
      "source": "https://seng.si/file/8541254715022849_publikacija-perspektive-energije-crpalna-hidroelektrarna-avce-na-reki-soci.pdf",
      "quote": "Konzorcij Consortium Melco – Rudis – Sumitomo",
      "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
-    },
-    {
-     "label": "Cost",
-     "value": "122",
-     "unit": "million EUR",
-     "source": "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant",
-     "quote": "The cost of the Avče pumped storage plant was €122 million.",
-     "quote_note": "Checked word for word against the text of the Wikipedia page, read on 12 November 2026."
     },
     {
      "label": "Mean annual generation",
@@ -12490,10 +12361,10 @@
     },
     {
      "label": "Historic remediation",
-     "value": "torrential check dams, completed 1903, cost 49,857 crowns",
+     "value": "torrential check dams, completed 1903",
      "unit": "",
      "source": "https://nhess.copernicus.org/articles/5/447/2005/nhess-5-447-2005.pdf",
-     "quote": "The main remediation works were completed in 1903 and cost 49 857 crowns",
+     "quote": "The main remediation works were completed in 1903",
      "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
     },
     {
@@ -12792,10 +12663,10 @@
     },
     {
      "label": "Damage",
-     "value": "6 buildings destroyed, 23 damaged; 150 m of Bovec-Predel road, 2 bridges; est. EUR 31.7 million",
+     "value": "6 buildings destroyed, 23 damaged, 150 m of Bovec-Predel road, 2 bridges",
      "unit": "",
      "source": "https://www.gov.si/novice/2020-11-17-izvedena-dela-na-plazu-stovze-so-bistveno-prispevala-k-povecani-stopnji-varnosti-prebivalcev/",
-     "quote": "Zemeljska plazova iz doline Mangartskega potoka sta odnesla približno 150 m regionalne ceste Bovec–Predel. … Uničenih je bilo šest stanovanjskih in gospodarskih objektov, poškodovanih je bilo še 23 stanovanjskih in gospodarskih objektov v Gorenjem Logu. … Neposredna in posredna škoda je bila ocenjena na 7,6 milijarde tolarjev oziroma 31,7 milijona evrov.",
+     "quote": "Zemeljska plazova iz doline Mangartskega potoka sta odnesla približno 150 m regionalne ceste Bovec–Predel. … Uničenih je bilo šest stanovanjskih in gospodarskih objektov, poškodovanih je bilo še 23 stanovanjskih in gospodarskih objektov v Gorenjem Logu.",
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
     },
     {
@@ -12805,14 +12676,6 @@
      "source": "https://www.gov.si/novice/2020-11-17-izvedena-dela-na-plazu-stovze-so-bistveno-prispevala-k-povecani-stopnji-varnosti-prebivalcev/",
      "quote": "vzpostavljen je sistem opazovanja vplivnega območja plazu med izvajanjem ukrepov, ki je sestavljen iz: alarmnega sistema za zagotavljanje pravočasnega opozarjanja prebivalcev Loga pod Mangartom pred morebitnim novim pojavom drobirskega toka večjih razsežnosti; spremljanja plazišča, ki se izvaja s periodičnimi geodetskimi meritvami premikov površine plazišča in meritvami inklinacij v vrtinah",
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
-    },
-    {
-     "label": "Remediation cost",
-     "value": "EUR 26.4 million spent by 2020, ~EUR 5 million still needed",
-     "unit": "",
-     "source": "https://www.gov.si/novice/2020-11-17-izvedena-dela-na-plazu-stovze-so-bistveno-prispevala-k-povecani-stopnji-varnosti-prebivalcev/",
-     "quote": "Do zdaj je bilo za odpravo posledic plazu Stovže v občini Bovec vloženih 26,4 milijona evrov.",
-     "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
      "label": "ZAG author",
@@ -12924,14 +12787,6 @@
      "unit": "",
      "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
      "quote": "two destroyed bridges on the regional road have been replaced by a temporary",
-     "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
-    },
-    {
-     "label": "Estimated remediation cost (feasibility study)",
-     "value": "about 35",
-     "unit": "million EUR",
-     "source": "https://www.interpraevent.at/reference/media/1781/download/2004_4_VIII-181.pdf?v=1",
-     "quote": "estimated the cost at around € 35 million.",
      "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
     },
     {
@@ -13817,14 +13672,6 @@
      "unit": "",
      "source": "https://archiweb.cz/en/b/lanovka-na-lublansky-hrad-vzpenjaca-na-ljubljanski-grad",
      "quote": "Ambient d.o.o.",
-     "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
-    },
-    {
-     "label": "Cost",
-     "value": "7,200,000",
-     "unit": "EUR",
-     "source": "https://archiweb.cz/en/b/lanovka-na-lublansky-hrad-vzpenjaca-na-ljubljanski-grad",
-     "quote": "Price:7 200 000 Euro",
      "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
@@ -16315,14 +16162,6 @@
      "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
     },
     {
-     "label": "Damage cost",
-     "value": ">EUR 40 million across SŽ infrastructure",
-     "unit": "",
-     "source": "https://www.sz.si/wp-content/uploads/2024/03/12.-Nova-Proga-POSEBNA-STEVILKA-predogled-.pdf",
-     "quote": "Škoda je skupaj presegla 40 milijonov evrov",
-     "quote_note": "Checked word for word against the text of the file itself, read on 12 November 2026."
-    },
-    {
      "label": "Postojna railway station elevation",
      "value": "582",
      "unit": "m",
@@ -16447,14 +16286,6 @@
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "Renovation investment",
-     "value": "3240180",
-     "unit": "EUR",
-     "source": "https://www.24ur.com/novice/slovenija/pogorela-sola-bo-docakala-prenovo.html",
-     "quote": "Vrednost naložbe je 3.240.180 evrov.",
-     "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
-    },
-    {
      "label": "Highest point above the terrain at the entrance (cadastre)",
      "value": "18.4",
      "unit": "m",
@@ -16530,14 +16361,6 @@
      "unit": "m²",
      "source": "https://ipi.eprostor.gov.si/jgp/data",
      "basis": "Taken or counted from the cadastre and survey records of this site. The single records are listed under Geometry and under Owner and manager."
-    },
-    {
-     "label": "Fire damage estimate",
-     "value": "at least 1.5",
-     "unit": "million EUR",
-     "source": "https://www.zurnal24.si/slovenija/pouk-tudi-v-gasilskem-domu-196295",
-     "quote": "po prvih ocenah za vsaj 1,5 milijona evrov",
-     "quote_note": "Checked word for word against the text of the page itself, read in the browser on 12 November 2026."
     },
     {
      "label": "Highest point above the terrain, building 555 (cadastre)",
@@ -17408,28 +17231,6 @@
      "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
     },
     {
-     "label": "CINDERELA budget",
-     "value": "EUR 7,596,365.25 total; EU EUR 6,729,219",
-     "unit": "",
-     "source": "https://cordis.europa.eu/project/id/776751",
-     "quote": "Total cost € 7 596 365,25 EU contribution € 6 729 219,00",
-     "quote_note": "Copied from the text of the page itself, read in the browser on 12 November 2026."
-    },
-    {
-     "label": "Urban Soil 4 Food total budget",
-     "value": "EUR 3,747,650",
-     "unit": "",
-     "source": "https://ec.europa.eu/regional_policy/en/projects/Slovenia/maribor-slovenia-develops-soil-for-cities-reducing-waste-for-a-circular-economy",
-     "check": "The source page no longer exists (checked 12 November 2026), so this value is not yet checked against it."
-    },
-    {
-     "label": "Urban Soil 4 Food ERDF grant",
-     "value": "EUR 2,998,120",
-     "unit": "",
-     "source": "https://uia.urban-initiative.eu/en/uia-cities/maribor",
-     "check": "Read on the Urban Innovative Actions page of the project on 14 November 2026: EUR 2,998,120.00, total ERDF budget granted."
-    },
-    {
      "label": "Urban gardens (Urban Soil 4 Food)",
      "value": "7,398 m² of new urban gardens on a site of about 12,500 m² under Pekrska gorca",
      "unit": "",
@@ -17553,19 +17354,9 @@
      "checked": "13 November 2026",
      "second_check": "confirmed"
     },
-    "maribor_pilots#source0": {
-     "status": "partly",
-     "decision": "The UIA project page states the ERDF amount, EUR 2,998,120, and the partners. No opened page states the total budget of EUR 3,747,650 or the 12,400 m2 plot.",
-     "source_title": "Maribor, Urban Soil 4 Food (UIA)",
-     "rank": "government",
-     "quote": "EUR 2,998,120.00 Total ERDF budget granted",
-     "source_url": "https://uia.urban-initiative.eu/en/uia-cities/maribor",
-     "checked": "13 November 2026",
-     "second_check": "confirmed"
-    },
     "maribor_pilots#quote": {
      "status": "partly",
-     "decision": "Quotes found for the ERDF budget, the garden area and the partners. The UIA partner list also names E-institute, which the record leaves out. No quote was found for the EUR 3,747,650 total budget.",
+     "decision": "Quotes found for the garden area and the partners. The UIA partner list also names E-institute, which the record leaves out.",
      "source_title": "Maribor, Urban Soil 4 Food (UIA)",
      "rank": "government",
      "source_url": "https://uia.urban-initiative.eu/en/uia-cities/maribor",

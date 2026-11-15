@@ -112,7 +112,7 @@ function padNow(){
   const tips=document.querySelector('.tips'), tipsOn=!!(tips&&!tips.hidden&&tips.offsetHeight);
   const lgd=document.getElementById('lgd'), lgdOn=!!(lgd&&!lgd.hidden);
   const clamp=p=>{ p.bottom=Math.min(p.bottom,Math.max(0,innerHeight-p.top-160)); p.right=Math.min(p.right,Math.max(0,innerWidth-p.left-200)); return p; };
-  if(phone()) return clamp(open?{top:70,bottom:Math.round(innerHeight*0.55),left:20,right:20}:{top:140,bottom:(tipsOn?tips.offsetHeight+60:130),left:16,right:16});
+  if(phone()) return clamp(open?{top:70,bottom:Math.round(innerHeight*0.55),left:20,right:20}:{top:140,bottom:200,left:16,right:16});
   if(innerWidth<=1100) return clamp(open?{top:70,bottom:120,left:PW+30,right:70}:{top:140,bottom:(tipsOn?tips.offsetHeight+140:140),left:30,right:70});
   return clamp(open?{top:70,bottom:120,left:PW+30,right:70}:{top:110,bottom:120,left:lgdOn?290:40,right:tipsOn?390:80});
 }

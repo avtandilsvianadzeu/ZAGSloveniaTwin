@@ -45,7 +45,9 @@
 /* plain names for the object types stored in the data */
 (function(root){ const L={bridge:'Bridge',footbridge:'Footbridge','road structure':'Road structure',tunnel:'Tunnel','dam / hydropower':'Dam or hydropower plant',cableway:'Cableway installation','tower / mast':'Transmission or other tower',
   building:'Building',institution:'Institution',company:'Company',landslide:'Landslide','geotechnical site':'Geotechnical site','study area (earthquake)':'Earthquake study area',other:'Other site'};
-  root.typeLabel=t=>L[t]||(t?t.charAt(0).toUpperCase()+t.slice(1):''); })(typeof window!=='undefined'?window:globalThis);
+  const S={bridge:'Most',footbridge:'Brv','road structure':'Cestni objekt',tunnel:'Predor','dam / hydropower':'Jez ali hidroelektrarna',cableway:'Žičniška naprava','tower / mast':'Daljnovodni ali drug stolp',
+    building:'Stavba',institution:'Ustanova',company:'Podjetje',landslide:'Plaz','geotechnical site':'Geotehnična lokacija','study area (earthquake)':'Območje potresne študije',other:'Druga lokacija'};
+  root.typeLabel=t=>{ const sl=(root.LANG||(root.document&&root.document.documentElement.lang)||'').startsWith('sl'); return (sl?S[t]:L[t])||L[t]||(t?t.charAt(0).toUpperCase()+t.slice(1):''); }; })(typeof window!=='undefined'?window:globalThis);
 
 /* the name shown first: Slovenian in the Slovenian interface where the record has one, otherwise English */
 (function(root){ root.dispName=p=>(root.LANG==='sl'&&p.name_sl)?p.name_sl:(p.name_en||p.name||p.id); root.altName=p=>{ const d=root.dispName(p), a=(root.LANG==='sl'&&p.name_sl)?(p.name_en||p.name):p.name_sl; return a&&a!==d?a:''; }; })(typeof window!=='undefined'?window:globalThis);

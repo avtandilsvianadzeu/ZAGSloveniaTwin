@@ -11,7 +11,7 @@
   const KIND=EDIT?{differ:'Sources differ',open:'Not verified',position:'Approximate position',quote:'No stored quote',source:'Source did not open'}:{differ:'Sources differ',open:'Not verified',position:'Approximate position'};
   const noSentence=u=>/ipi\.eprostor\.gov\.si|openstreetmap\.org/.test(u||'');
   const items=[];
-  for(const p of D.features.map(f=>f.properties)){ if(p.category==='user_object') continue; const t=D.twins[p.id]||{}, R=t.resolutions||{}, add=(kind,text,pid)=>items.push({id:p.id,name:p.name_en||p.name,type:GROUP_NAME[p.object_type]||cap(p.object_type||'other'),kind,text,key:p.id+'|'+kind+'|'+hash(text),r:R[p.id+'#'+pid]||null});
+  for(const p of D.features.map(f=>f.properties)){ if(p.category==='user_object') continue; const t=D.twins[p.id]||{}, R=t.resolutions||{}, add=(kind,text,pid)=>items.push({id:p.id,name:(window.LANG==='sl'&&p.name_sl)||p.name_en||p.name,type:GROUP_NAME[p.object_type]||cap(p.object_type||'other'),kind,text,key:p.id+'|'+kind+'|'+hash(text),r:R[p.id+'#'+pid]||null});
     (t.differences||[]).forEach((x,i)=>add('differ',x,'differ'+i));
     if(t.open) add('open',String(t.open),'open');
     if(!EXACT(p.position_precision)) add('position',(PREC[p.position_precision]||'Approximate position')+'. '+(p.position_note||'The exact object is not identified in the sources.'),'position');

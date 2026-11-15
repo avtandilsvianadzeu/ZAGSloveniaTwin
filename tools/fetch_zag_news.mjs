@@ -16,6 +16,8 @@ const KINDS = Object.keys(SRC).filter(k => !k.startsWith('_') && Array.isArray(S
 const onDomain = (d, list) => (list || []).some(x => d === x || d.endsWith('.' + x));
 const kindOf = d => KINDS.find(k => onDomain(d, SRC[k])) || null;
 const BLOCK_WORDS = (SRC.block_words || []).map(w => new RegExp('(^|[^a-zčšž])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '([^a-zčšž]|$)', 'i'));
+/* the atlas does not talk about money: headlines with amounts in euros or about costs are left out */
+const MONEY = /(\d[\d.,]*\s*(mio|milijon\w*|milijard\w*|million|billion|tisoč)?\s*(evr\w*|eur\b|euros?\b|€))|€\s?\d/i;
 const SPAM_DOMAIN = /(casino|bet|porn|xxx|adult|escort|crypto|loan|pharma|viagra|torrent|\.xyz$|\.top$|\.click$|\.loan$)/i;
 const ZAG_RULES = [[/zavod\w* za gradbeni[sš]tvo/i, 'headline names Zavod za gradbeništvo Slovenije'], [/national building and civil engineering institute/i, 'headline names the institute in English'], [/\bZAG\b/, 'headline names ZAG']];
 /* atlas records a zag.si item or a media item talks about, from the record keywords used for the news search */
@@ -66,7 +68,7 @@ for (const url of MEDIA) { try { const r = await fetch(url, { headers: { 'user-a
     const domain = ((x.match(/<source[^>]*url="https?:\/\/(?:www\.)?([^/"]+)/) || [])[1] || '').toLowerCase();
     if (!rule || !title || media.some(y => nrm(y.title) === nrm(title))) continue;
     /* filters: blocked domains, spam domains and spam words never pass; old items are left out */
-    if (onDomain(domain, SRC.block) || SPAM_DOMAIN.test(domain) || BLOCK_WORDS.some(re => re.test(title))) { dropped++; continue; }
+    if (onDomain(domain, SRC.block) || SPAM_DOMAIN.test(domain) || BLOCK_WORDS.some(re => re.test(title)) || MONEY.test(title)) { dropped++; continue; }
     if (d && Date.now() - Date.parse(d) > 400 * 864e5) continue;
     const kind = kindOf(domain);
     media.push({ title, outlet: src || (t.match(/\s-\s([^-]+)$/) || [])[1] || '', domain, kind: kind || 'not reviewed', reviewed: !!kind, url: tag(x, 'link'), date: d ? new Date(d).toISOString() : null, match: rule[1], records: recordsIn(title) }); } } catch (e) { console.error('media feed failed', e.message); } }

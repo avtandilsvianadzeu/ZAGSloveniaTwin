@@ -35,7 +35,7 @@ function pick(){resEl.hidden=true;qIn.blur();}
 async function geocode(q,seq,local){
   try{ const r=await fetch(`${PHOTON}/api/?q=${encodeURIComponent(q)}&limit=5&bbox=13.3,45.4,16.7,46.9&lang=en`); if(!r.ok) return; const j=await r.json();
     if(seq!==qSeq) return;
-    locItems=(j.features||[]).map(f=>{const p=f.properties;return{f,title:p.housenumber?fmtAddr(p):(p.name||fmtAddr(p)),sub:[p.osm_value&&!p.housenumber?cap(p.osm_value):'Address',p.city||p.county].filter(Boolean).join(', ')};});
+    locItems=(j.features||[]).map(f=>{const p=f.properties;return{f,title:p.housenumber?fmtAddr(p):(p.name||fmtAddr(p)),sub:[p.osm_value&&!p.housenumber?(window.i18nWord||(x=>x))(cap(String(p.osm_value).replace(/_/g,' '))):(window.i18nWord||(x=>x))('Address'),p.city||p.county].filter(Boolean).join(', ')};});
     draw(local);
   }catch(_){}
 }

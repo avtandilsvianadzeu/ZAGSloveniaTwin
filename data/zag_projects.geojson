@@ -1283,10 +1283,6 @@
       "six spillway gates, all raised in the works"
      ],
      [
-      "Refurbishment",
-      "2007 to 2013, about 62 million euros"
-     ],
-     [
       "Unit 2 runner",
       "5,894 mm diameter, 96 tonnes"
      ],
@@ -1297,6 +1293,10 @@
      [
       "Years",
       "2006 to 2009"
+     ],
+     [
+      "Refurbishment",
+      "2007 to 2013"
      ]
     ],
     "people": [],
@@ -2274,7 +2274,7 @@
     "zag_involvement_type": null,
     "zag_role": "Fire resistance and reaction to fire testing",
     "description": "Opened in 2022 and staffed by around twenty five people. It carries out fire resistance and reaction to fire testing on construction products and assemblies, including large scale furnace tests that the older Gameljne facility could not accommodate.",
-    "hist": "ZAG opened its Fire Laboratory at Obrtna cona 35 in Logatec on 2 September 2022, describing it as the largest facility of its kind in this part of Europe. The building has 3,421.70 square metres of gross floor area and holds two large furnaces with an exhaust gas cleaning plant. Specimens can be tested from microscale up to 4 m by 8 m. The declared project cost was 9,227,065.78 euros excluding VAT, made up of 1,660,554.40 euros from the state budget through the ministry, 4,305,077.38 euros of ZAG funds, 2,896,586.00 euros of ERDF funds through InnoRenew and 364,848.00 euros from ARRS, with the total including equipment reported as close to 11 million euros. Fire resistance testing covers non load bearing walls, ceilings and suspended facades, load bearing walls, ceilings, roofs, beams, columns, balconies and stairs, fire and smoke doors and windows with their hardware, protective systems for concrete, steel and timber, ventilation ducts, fire dampers, cable systems and smoke and heat control systems.",
+    "hist": "ZAG opened its Fire Laboratory at Obrtna cona 35 in Logatec on 2 September 2022, describing it as the largest facility of its kind in this part of Europe. The building has 3,421.70 square metres of gross floor area and holds two large furnaces with an exhaust gas cleaning plant. Specimens can be tested from microscale up to 4 m by 8 m. Fire resistance testing covers non load bearing walls, ceilings and suspended facades, load bearing walls, ceilings, roofs, beams, columns, balconies and stairs, fire and smoke doors and windows with their hardware, protective systems for concrete, steel and timber, ventilation ducts, fire dampers, cable systems and smoke and heat control systems.",
     "facts": [
      [
       "Address",
@@ -2295,10 +2295,6 @@
      [
       "Furnaces",
       "two, with an exhaust gas cleaning plant"
-     ],
-     [
-      "Project cost",
-      "9,227,065.78 euros excluding VAT, close to 11 million with equipment"
      ],
      [
       "Classification standards",
@@ -2484,7 +2480,7 @@
     "zag_involvement_type": null,
     "zag_role": "ZAG regional unit for north-east Slovenia",
     "description": "Opened in 2021, replacing its earlier premises at Gorkega ulica 1 in Maribor. It serves construction testing and site work across Podravska and Pomurska.",
-    "hist": "The Maribor business unit is at Kidričeva cesta 47, Dobrovce, 2204 Miklavž na Dravskem polju. It moved there from Gorkega ulica 1 in Maribor and the new premises opened on 19 October 2021. The unit occupies a renovated three storey building of 480 square metres, with offices and laboratories taking the whole of the ground floor, and the investment was about 300,000 euros. It has ten employees. The then director Aleš Žnidarič explained the move as driven by the formation of the cohesion regions and by the wish to bring together research laboratories that had been dispersed across several locations. The work of the unit spans materials, building physics, structures, geotechnics, transport infrastructure and metrology.",
+    "hist": "The Maribor business unit is at Kidričeva cesta 47, Dobrovce, 2204 Miklavž na Dravskem polju. It moved there from Gorkega ulica 1 in Maribor and the new premises opened on 19 October 2021. It has ten employees. The then director Aleš Žnidarič explained the move as driven by the formation of the cohesion regions and by the wish to bring together research laboratories that had been dispersed across several locations. The work of the unit spans materials, building physics, structures, geotechnics, transport infrastructure and metrology.",
     "facts": [
      [
       "Address",
@@ -2501,10 +2497,6 @@
      [
       "Employees",
       "10"
-     ],
-     [
-      "Investment",
-      "about 300,000 euros"
      ]
     ],
     "people": [],
@@ -2692,27 +2684,15 @@
     "zag_involvement_type": null,
     "zag_role": "Partner institute, ZAG is a founding partner",
     "description": "Set up under the Horizon 2020 teaming action with ZAG among the partners. It works on renewable building materials and healthy indoor environments. Friderik Knez led ZAG's side of the project from 2017-2022.",
-    "hist": "InnoRenew CoE is at Livade 6a in Izola and works on renewable materials and sustainable building. Its two distinguishing fields are wood modification and restorative environmental and ergonomic design. A consortium of ten partners led by the University of Primorska submitted the proposal to Horizon 2020 in 2016, and ZAG was one of the core partners. The Horizon 2020 Teaming operation was valued at 14,996,025.00 euros including tax, with national co financing of about 39 million euros, giving a total of about 54 million euros. Since a court decision of 29 July 2025, InnoRenew CoE has been an independent department of the UP Andrej Marušič Institute at the University of Primorska. Over eight and a half years it had run 96 publicly funded projects worth 15.78 million euros together with industry projects worth 2.81 million euros.",
+    "hist": "InnoRenew CoE is at Livade 6a in Izola and works on renewable materials and sustainable building. Its two distinguishing fields are wood modification and restorative environmental and ergonomic design. A consortium of ten partners led by the University of Primorska submitted the proposal to Horizon 2020 in 2016, and ZAG was one of the core partners. Since a court decision of 29 July 2025, InnoRenew CoE has been an independent department of the UP Andrej Marušič Institute at the University of Primorska.",
     "facts": [
      [
       "Address",
       "Livade 6a, 6310 Izola"
      ],
      [
-      "Teaming operation",
-      "14,996,025.00 euros including tax"
-     ],
-     [
-      "Total project value",
-      "about 54 million euros"
-     ],
-     [
       "Core fields",
       "wood modification, restorative environmental and ergonomic design"
-     ],
-     [
-      "Track record",
-      "96 publicly funded projects worth 15.78 million euros"
      ]
     ],
     "people": [

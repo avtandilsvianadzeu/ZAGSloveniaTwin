@@ -48,7 +48,7 @@ const CASES = [
   ['compare length of Verd viaduct and Ravbarkomanda viaduct', 'Ravbarkomanda Viaduct right about 595', 'not published'],
   ['list all bridges', '9 bridges', 'cannot find'],
   ['how many dams are in the atlas', 'The atlas has 9', 'cannot find'],
-  ['bridges in Ljubljana', 'recorded there', 'Funicular'],
+  ['bridges in Ljubljana', 'Tomačevo Bridge', 'Funicular'],
   ['kakšna je dolžina viadukta Ravbarkomanda', 'Total length per deck', 'No length'],
   ['what is the weather', 'only answer about ZAG'],
   ['news about Tomačevo', 'Recent news'],
@@ -64,6 +64,7 @@ const CASES = [
   ['projects coordinated by ZAG abroad', 'ZAG coordinated'],
   ['kje je ZAG delal v tujini', 'Outside Slovenia'],
   ['latest news from ZAG', 'The latest on zag.si'],
+  ['mostovi v Ljubljani', 'Tomačev', 'Potresno tveganje'],
 ];
 
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;

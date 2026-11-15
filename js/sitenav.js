@@ -145,3 +145,10 @@
   const start=()=>{ run(); new MutationObserver(ms=>{ for(const m of ms){ if(m.type==='characterData') walk(m.target); else m.addedNodes.forEach(walk); } }).observe(document.body,{childList:true,subtree:true,characterData:true}); };
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
 })();
+/* map credits start folded into their asterisk on every map, so they never cover the map or its legend; one click opens them */
+(function(){ const fold=root=>{ (root.querySelectorAll?root.querySelectorAll('.maplibregl-ctrl-attrib.maplibregl-compact-show'):[]).forEach(a=>{ if(a.dataset.folded) return; a.dataset.folded='1'; a.classList.remove('maplibregl-compact-show'); a.removeAttribute('open'); }); };
+  const go=()=>{ fold(document); new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>{ if(n.nodeType===1){ if(n.matches&&n.matches('.maplibregl-ctrl-attrib.maplibregl-compact-show')) fold(n.parentElement||document); else fold(n); } }))).observe(document.body,{childList:true,subtree:true});
+    /* MapLibre opens them again on the first resize: fold once more after the map settles */
+    setTimeout(()=>document.querySelectorAll('.maplibregl-ctrl-attrib.maplibregl-compact-show').forEach(a=>{ if(!a.dataset.userOpen){ a.classList.remove('maplibregl-compact-show'); a.removeAttribute('open'); } }),2500);
+    document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('.maplibregl-ctrl-attrib-button'); if(b) b.parentElement.dataset.userOpen='1'; },true); };
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go(); })();

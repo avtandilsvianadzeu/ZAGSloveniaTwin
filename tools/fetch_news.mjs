@@ -14,6 +14,8 @@ const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : { i
 
 const MAX_AGE_DAYS = 365, PER_RECORD = 8, PAUSE_MS = 1200;
 const norm = s => String(s || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase();
+/* the atlas does not talk about money: headlines about prices, costs or amounts in euros are left out */
+const MONEY = /(\d[\d.,]*\s*(mio|milijon\w*|milijard\w*|million|billion|tisoč)?\s*(evr\w*|eur\b|euros?\b|€))|€\s?\d|\b(stroš\w*|cen[ae]\b|naložb\w*|investicij\w*|cost|price|investment)\b/i;
 const words = s => new Set(norm(s).replace(/[^a-z0-9 ]+/g, ' ').split(' ').filter(w => w.length > 3));
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const unesc = s => String(s || '').replace(/<!\[CDATA\[|\]\]>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim();
@@ -61,6 +63,7 @@ for (const [id, k] of Object.entries(KW)) {
       .filter(it => !must.length || must.some(m => norm(it.title).includes(m)))
       .filter(it => (k.all || []).every(m => norm(it.title).includes(norm(m))))
       .filter(it => !(k.not || []).concat(SHARED_NOT).some(m => norm(it.title).includes(norm(m))))
+      .filter(it => !MONEY.test(it.title))
       .sort((a, b) => b.date.localeCompare(a.date));
     /* why each headline was kept, shown on the Latest page: the record keyword it names */
     const why = it => { const h = norm(it.title); const m = must.find(x => h.includes(x)); return m ? 'headline names "' + m + '"' : 'headline matches the search'; };

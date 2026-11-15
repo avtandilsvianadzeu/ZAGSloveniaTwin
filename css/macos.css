@@ -989,3 +989,32 @@ html:has(body.sb-open),body.sb-open{background:linear-gradient(165deg,#BFD9FF 0%
 .maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-button{position:absolute!important;left:4px!important;right:auto!important;top:50%!important;transform:translateY(-50%)!important;margin:0!important}
 .maplibregl-ctrl-attrib.maplibregl-compact-show,.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib.maplibregl-compact-show{padding:6px 14px 6px 36px!important}
 .maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner{line-height:1.45}
+/* the 3D button keeps its cube on phones, where it has no text */
+@media (max-width:480px){#b3d i{display:inline-flex!important}#b3d{width:36px;padding:0!important;justify-content:center}}
+/* idle map: overlays soften only a little, so map labels never read through their text */
+body.idle .vctl,body.idle .tlshow,body.idle .lgdshow,body.idle .mapfilter,body.idle .lgd,body.idle .maplibregl-ctrl-bottom-left,body.idle .maplibregl-ctrl-bottom-right{opacity:.86}
+body.idle .tl{opacity:.8}
+/* map credit links read clearly on the white pill */
+.maplibregl-ctrl-attrib a{color:#0A5BC4!important}
+.maplibregl-ctrl-attrib .maplibregl-ctrl-attrib-inner{color:#3A3A3C!important}
+/* reading pages keep room at the bottom, so the ZAGBot button never covers the last lines */
+html:not(:has(#map)):not(:has(aside.insp)) body{padding-bottom:96px}
+.tscroll,.ipanel{scroll-padding-bottom:96px}
+/* the map header fits a laptop screen: the date folds away below 1600 px (the time and LIVE stay), and the search keeps its whole pill */
+@media (max-width:1600px){body:has(#map) .livebadge em{display:none}}
+.hsearch input::placeholder{text-overflow:ellipsis}
+/* data quality: six figures in two even rows of three, lines only between cells */
+.qgrid{grid-template-columns:repeat(3,1fr)!important}
+.qgrid div{border-left:1px solid var(--line)!important;border-top:1px solid var(--line)}
+.qgrid div:nth-child(3n+1){border-left:0!important}
+.qgrid div:nth-child(-n+3){border-top:0}
+/* map credits, final: the button keeps the same 6 px inset from the top and the left in both states, the text keeps even margins */
+.maplibregl-ctrl-attrib.maplibregl-compact{min-height:36px!important;min-width:36px;border-radius:18px!important}
+.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-button{top:6px!important;left:6px!important;transform:none!important}
+.maplibregl-ctrl-attrib.maplibregl-compact-show,.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib.maplibregl-compact-show{padding:9px 16px 9px 40px!important;align-items:flex-start}
+.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner{line-height:18px}
+/* model label chip: bright glass, folds to an asterisk instead of an information sign */
+.pane-model .plabel.mlevel,#plabel{background:linear-gradient(160deg,rgba(255,255,255,.94),rgba(234,243,255,.8))!important;color:#1D1D1F!important;box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.16),0 3px 10px rgba(16,40,90,.12)!important}
+#plabel.mini{width:24px;max-width:24px!important;height:24px;box-sizing:border-box;padding:0!important}
+#plabel.mini::before{content:"*"!important;font:700 17px/1 Inter,system-ui,sans-serif!important;font-style:normal!important;color:#0A5BC4!important;padding-top:5px}
+.pane-model:hover #plabel.mini{width:auto;height:auto;padding:5px 10px!important;color:#1D1D1F!important}

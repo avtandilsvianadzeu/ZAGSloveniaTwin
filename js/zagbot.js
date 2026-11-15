@@ -142,7 +142,7 @@
   /* words found in the text of the records: role, story, description and the summary of the asset record */
   function textHits(words){ const ws=words.map(w=>w.toLowerCase()).filter(w=>w.length>=3); if(!ws.length) return [];
     return DB.recs.filter(r=>{ const t=norm([r.p.zag_role,r.p.story,r.p.description,r.p.hist,(DB.twins[r.id]||{}).summary].join(' ')); return ws.every(w=>new RegExp('\\b'+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).test(t)); }); }
-  function placeRecords(tokens){ const m=[]; for(const r of DB.recs) for(const q of tokens) for(const w of r.placeWords) if(wordHit(q,w)>=2){ m.push(r); break; } return [...new Set(m)]; }
+  function placeRecords(tokens){ const m=[], stem=x=>x.length>=5?x.replace(/(ih|em|om|ju|ah|[aeiou])$/,''):x; for(const r of DB.recs) for(const q of tokens) for(const w of r.placeWords) if(wordHit(q,w)>=2||(q.length>=5&&stem(q)===stem(w))){ m.push(r); break; } return [...new Set(m)]; }
 
   /* ---------- UI ---------- */
   const root=document.createElement('div'); root.className='zb'; root.innerHTML=`
@@ -204,7 +204,7 @@
 
   /* ---------- answers ---------- */
   function card(r){ ctx.rec=r; const t=DB.twins[r.id]||{};
-    say(`<div class="zb-card"><b>${esc(nm(r))}</b>${altNm(r)}${photoTag(r)}<span>${esc(typeof typeLabel==='function'?typeLabel(r.type):cap(r.type))}${r.place?', '+esc(r.place):''}${r.year?', ZAG work '+esc(String(r.year).replace(/-/g,' to ')):''}</span>${t.summary?`<p>${esc(tidy(t.summary)).slice(0,260)}</p>`:''}</div>`);
+    say(`<div class="zb-card"><b>${esc(nm(r))}</b>${altNm(r)}${photoTag(r)}<span>${esc(typeof typeLabel==='function'?typeLabel(r.type):cap(r.type))}${r.place?', '+esc(r.place):''}${r.year?(SLc()?', delo ZAG ':', ZAG work ')+esc(String(r.year).replace(/-/g,SLc()?' do ':' to ')):''}</span>${t.summary?`<p>${esc(tidy(t.summary)).slice(0,260)}</p>`:''}</div>`);
     offer(recChips(r)); }
   const cap=s=>String(s||'').charAt(0).toUpperCase()+String(s||'').slice(1);
   function specLine(s){ const v=tidy(s.value)+(s.unit?' '+esc(s.unit):''); const host=s.source?(()=>{ try{ return new URL(s.source).hostname.replace(/^www\./,''); }catch(_){ return 'source'; } })():null;
@@ -269,7 +269,8 @@
     say(`<b>${esc(nm(r))}</b>, ${esc(aN(a))}:<ul class="zb-spec">${sp.slice(0,4).map(specLine).join('')}</ul>`); offer(recChips(r)); }
   function listType(t,inPlace){ let rs=DB.recs.filter(r=>t.match(r.type)); if(inPlace) rs=rs.filter(r=>inPlace.includes(r));
     if(!rs.length){ say(SLc()?`Tu ni zapisov te vrste (${esc(tN(t))}).`:`No ${esc(t.name)} are recorded${inPlace?' there':''}.`); offer(menu()); return; }
-    say(SLc()?(rs.length===1?`Tu je zapisan en objekt te vrste (${esc(tN(t))}):`:`V atlasu ${zN(rs.length)} te vrste (${esc(tN(t))}). Izberite enega:`):(rs.length===1?`One of the ${esc(t.name)} is recorded${inPlace?' there':''}:`:`${rs.length} ${esc(t.name)}${inPlace?' there':''} in the atlas. Choose one:`)); offer(rs.slice(0,10).map(r=>[r.name,()=>card(r)]).concat(rs.length>10?[['Show more',()=>{ offer(rs.slice(10,24).map(r=>[r.name,()=>card(r)])); }]]:[])); }
+    if(rs.length===1){ say(SLc()?`Tu je zapisan en objekt te vrste (${esc(tN(t))}):`:`Only one record of this type (${esc(t.name)}) is ${inPlace?'there':'in the atlas'}:`); return card(rs[0]); }
+    say(SLc()?(rs.length===1?`Tu je zapisan en objekt te vrste (${esc(tN(t))}):`:`V atlasu ${zN(rs.length)} te vrste (${esc(tN(t))}). Izberite enega:`):(rs.length===1?`Only one record of this type (${esc(t.name)}) is ${inPlace?'there':'in the atlas'}:`:`${rs.length} ${esc(t.name)}${inPlace?' there':''} in the atlas. Choose one:`)); offer(rs.slice(0,10).map(r=>[nm(r),()=>card(r)]).concat(rs.length>10?[[SLc()?'Pokaži več':'Show more',()=>{ offer(rs.slice(10,24).map(r=>[nm(r),()=>card(r)])); }]]:[])); }
   function help(){ if(SLc()){ say(`Znam:<ul class="zb-list"><li>poiskati objekt po imenu, vrsti ali kraju</li><li>odgovoriti na vrednost, kot so višina, dolžina, leto ali moč, vedno z virom</li><li>ga prikazati na zemljevidu ali odpreti njegovo stran</li><li>sprejeti sporočilo, ko je kaj narobe, in ga kot natančno zahtevo poslati ekipi DigitalZAG</li><li>povedati, kje je ZAG delal v tujini: mostovi, države, mednarodni projekti in združenja</li><li>odpreti obrazec za nov 3D model</li></ul>Razumem slovenske in angleške besede, na primer <i>tunnel</i>, <i>bridge</i>, <i>height</i>.`); offer(menu()); return; }
     say(`I can:<ul class="zb-list"><li>find a structure by name, type or place</li><li>answer a value such as height, length, year or power, always with its source</li><li>show it on the map or open its page</li><li>take a report when something is wrong and send it to the DigitalZAG team as an exact request</li><li>tell where ZAG has worked abroad: bridges, countries, international projects and associations</li><li>open the form for a new 3D model</li></ul>I understand English and Slovenian words, for example <i>predor</i>, <i>most</i>, <i>višina</i>.`); offer(menu()); }
 
@@ -453,6 +454,8 @@
       role:/\b(we|our|zag)\b.*\b(did|do|does|done|work\w*|role)\b|\b(what did|role|vloga|involv\w*|contribut\w*|naredil\w*|delal\w*)\b/.test(n),
       who:/\b(who|kdo|people|team|researchers?|led|lead)\b/.test(n)||anyNear(tokens,FUZ.who),src:/\b(sources?|references?|viri|evidence|proof)\b/.test(n)||anyNear(tokens,FUZ.src),proj:/\b(projects?|projekt\w*)\b/.test(n)||anyNear(tokens,FUZ.proj),cmp:/\b(compare|vs|versus|longer|taller|higher|bigger|primerjaj)\b/.test(n)};
     let r=strong.length&&(strong.length===1||strong[0].s>=strong[1].s*1.4)?strong[0].r:null;
+    /* "bridges in Ljubljana": a type with a place lists that type there, even when a record of another type carries the place in its name */
+    if(r&&type&&!type.match(r.type)&&place.length) r=null;
     /* "ZAG", "ZAG Institute", "Zavod za gradbeništvo": the institute itself, its headquarters, when nothing more specific is named */
     const named=free.filter(w=>w.length>=3&&!GEN.has(w)&&!Object.values(FUZ).some(l=>near(w,l))&&!SLX[w]);
     if(!r&&!type&&/\bzag\b/.test(n)&&!strong.length&&!named.length&&DB.byId.zag&&!/\b(how many|koliko|labs?|laboratories|units?|enot\w*)\b/.test(n)) r=DB.byId.zag;
@@ -527,7 +530,7 @@
       try{ await load(); log.innerHTML=''; const here=PAGE_ID&&DB.byId[PAGE_ID]; if(here) ctx.rec=here;
         if(hist.length){ const old=hist.slice(); hist=[]; old.forEach(m=>say(m.h,m.w,true)); hist=old; const d=document.createElement('div'); d.className='zb-day'; d.textContent=L()==='sl'?'Nadaljujemo, kjer smo končali':'Continuing where we left off'; log.appendChild(d); scroll();
           offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); if(on) setTimeout(()=>input.focus(),50); return; }
-        say(L()==='sl'?`Pozdravljeni, sem <b>ZAGBot</b>. Poznam ${DB.recs.length} struktur v atlasu in njihove preverjene vrednosti.${here?` Ste na strani <b>${esc(here.name)}</b>.`:''} Vprašajte me v slovenščini ali angleščini, odgovarjam iz podatkov atlasa. Kaj želite?`:`Hello, I am <b>ZAGBot</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
+        say(L()==='sl'?`Pozdravljeni, sem <b>ZAGBot</b>. Poznam ${DB.recs.length} objektov v atlasu in njihove preverjene vrednosti.${here?` Ste na strani <b>${esc(here.name)}</b>.`:''} Vprašajte me v slovenščini ali angleščini, odgovarjam iz podatkov atlasa. Kaj želite?`:`Hello, I am <b>ZAGBot</b>. I know the ${DB.recs.length} structures in the atlas and their verified values.${here?` You are on <b>${esc(here.name)}</b>.`:''} What would you like?`);
         offer(here?[['Key figures',()=>figures(here),null,'Verified values with sources','find'],['What did ZAG do?',()=>role(here),null,'Role and years of work','help'],['Report a correction',()=>startUpdate(here),null,'A value, position or model','fix'],['3D model',()=>startModel(here),null,'Update or request it','cube']]:menu(),true); }
       catch(_){ log.innerHTML=''; say('The atlas data could not be loaded. Please reload the page.'); } }
     if(on) setTimeout(()=>input.focus(),50); }
@@ -535,7 +538,7 @@
   /* the greeting: at most once a day in this browser, shorter on a phone, never over an open chat */
   (function teaser(){ const day=new Date().toISOString().slice(0,10); let off=false; try{ off=sessionStorage.getItem('zb_teaser_off')==='1'||localStorage.getItem('zb_teaser_day')===day; if(!off){ sessionStorage.setItem('zb_teaser_off','1'); localStorage.setItem('zb_teaser_day',day); } }catch(_){} if(off) return;
     const small=innerWidth<=700;
-    const T=window.LANG==='sl'?(small?['Dober dan, sem ZAGBot.','Vprašajte me o katerem koli od 73 objektov.','']:['Dober dan, sem ZAGBot.','Vprašajte me, kaj je ZAG naredil pri kateri koli od 73 struktur, o njeni zgodbi, ključnih podatkih z viri ali projektih za njo.','Popravek posredujem ekipi DigitalZAG.']):(small?['Dober dan, I am ZAGBot.','Ask me about any of the 73 structures.','']:['Dober dan, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also pass a correction to the DigitalZAG team.']);
+    const T=window.LANG==='sl'?(small?['Dober dan, sem ZAGBot.','Vprašajte me o katerem koli od 73 objektov.','']:['Dober dan, sem ZAGBot.','Vprašajte me, kaj je ZAG naredil pri kateri koli od 73 objektov, o njeni zgodbi, ključnih podatkih z viri ali projektih za njo.','Popravek posredujem ekipi DigitalZAG.']):(small?['Hello, I am ZAGBot.','Ask me about any of the 73 structures.','']:['Hello, I am ZAGBot.','Ask me what ZAG did at any of the 73 structures, its story, key figures with sources, or the projects behind it.','I can also pass a correction to the DigitalZAG team.']);
     const el=document.createElement('div'); el.className='zb-tease'; el.setAttribute('role','status');
     el.innerHTML='<button type="button" class="zb-tx" aria-label="Close the greeting">×</button><p class="zb-tt"><b>'+esc(T[0])+'</b> <span>'+esc(T[1])+'</span> <span>'+esc(T[2])+'</span></p><span class="zb-tbar"><i></i></span>'; root.appendChild(el);
     let timer=null, done=false;
