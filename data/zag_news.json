@@ -1,6 +1,6 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-15T10:39:40.427Z",
+ "updated": "2026-11-15T11:32:42.143Z",
  "items": {
   "sl": [
    {
@@ -14,7 +14,7 @@
     "title": "Znanost za družbo, Kolokvij ZAG 2026",
     "url": "https://www.zag.si/znanost-za-druzbo-kolokvij-zag-2026/",
     "date": "2026-11-11T07:34:43.000Z",
-    "summary": "ZAG-ove raziskave v gradbeništvu prispevajo k varnejši, odpornejši in bolj trajnostni Sloveniji. Od razvoja trajnostne infrastrukture in večje potresne ter požarne varnosti do bolj zdravega bivalnega okolja in učinkovitejšega izkoriščanja sekundarnih surovin",
+    "summary": "ZAG-ove raziskave v gradbeništvu prispevajo k varnejši, odpornejši in bolj trajnostni Sloveniji. Od razvoja trajnostne infrastrukture in večje potresne ter požarne varnosti do bolj zdravega bivalnega okolja in učinkovitejšega izkoriščanja sekundarnih surovin,",
     "category": "Aktualno"
    },
    {
@@ -43,7 +43,10 @@
     "url": "https://www.zag.si/zag-raziskovalci-najboljsi-znanstveniki-na-svetu/",
     "date": "2026-10-27T12:29:55.000Z",
     "summary": "Raziskovalci Zavoda za gradbeništvo Slovenije (ZAG) so bili letos ponovno v naboru najboljših 2 odstotkov znanstvenikov na svetu po seznamu Top 2% Scientists. Gre za prestižni mednarodni seznam in pomeni veliko priznanje vsem, ki so nanj uvrščeni, zato smo",
-    "category": "Aktualno"
+    "category": "Aktualno",
+    "records": [
+     "velikaplanina"
+    ]
    },
    {
     "title": "Dan odprtih vrat 2026",
@@ -56,7 +59,7 @@
     "title": "IZ LABORATORIJA V POSEL pokazal pomembnost povezovanja z industrijo",
     "url": "https://www.zag.si/iz-laboratorija-v-posel-pokazal-pomembnost-povezovanja-z-industrijo/",
     "date": "2026-10-21T10:13:21.000Z",
-    "summary": "V gradbenem sektorju obstaja mnogo različnih akterjev – z vidikov projektiranja, gradnje in vzdrževanja, preiskav in raziskav, financiranja ter zakonodaje. Vsak od teh opravlja svoj nabor nalog, pri čemer se marsikdaj sooča s specifičnimi težavami, ki jih sam",
+    "summary": "V gradbenem sektorju obstaja mnogo različnih akterjev, z vidikov projektiranja, gradnje in vzdrževanja, preiskav in raziskav, financiranja ter zakonodaje. Vsak od teh opravlja svoj nabor nalog, pri čemer se marsikdaj sooča s specifičnimi težavami, ki jih sam",
     "category": "Aktualno"
    },
    {
@@ -159,7 +162,7 @@
     "title": "Znanost za družbo, Kolokvij ZAG 2026",
     "url": "https://www.zag.si/znanost-za-druzbo-kolokvij-zag-2026/",
     "date": "2026-11-11T07:34:43.000Z",
-    "summary": "ZAG-ove raziskave v gradbeništvu prispevajo k varnejši, odpornejši in bolj trajnostni Sloveniji. Od razvoja trajnostne infrastrukture in večje potresne ter požarne varnosti do bolj zdravega bivalnega okolja in učinkovitejšega izkoriščanja sekundarnih surovin",
+    "summary": "ZAG-ove raziskave v gradbeništvu prispevajo k varnejši, odpornejši in bolj trajnostni Sloveniji. Od razvoja trajnostne infrastrukture in večje potresne ter požarne varnosti do bolj zdravega bivalnega okolja in učinkovitejšega izkoriščanja sekundarnih surovin,",
     "category": "Aktualno",
     "lang": "sl"
    },
@@ -207,7 +210,7 @@
     "title": "IZ LABORATORIJA V POSEL pokazal pomembnost povezovanja z industrijo",
     "url": "https://www.zag.si/iz-laboratorija-v-posel-pokazal-pomembnost-povezovanja-z-industrijo/",
     "date": "2026-10-21T10:13:21.000Z",
-    "summary": "V gradbenem sektorju obstaja mnogo različnih akterjev – z vidikov projektiranja, gradnje in vzdrževanja, preiskav in raziskav, financiranja ter zakonodaje. Vsak od teh opravlja svoj nabor nalog, pri čemer se marsikdaj sooča s specifičnimi težavami, ki jih sam",
+    "summary": "V gradbenem sektorju obstaja mnogo različnih akterjev, z vidikov projektiranja, gradnje in vzdrževanja, preiskav in raziskav, financiranja ter zakonodaje. Vsak od teh opravlja svoj nabor nalog, pri čemer se marsikdaj sooča s specifičnimi težavami, ki jih sam",
     "category": "Aktualno",
     "lang": "sl"
    },
@@ -230,53 +233,57 @@
   ],
   "media": [
    {
-    "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
-    "outlet": "Večer",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhiUk5DMU9IdmZzN0s1SFZzOHlYTm5rcHlobGttQ29uMjgzVERyM1VjLUdpTTIwNFQ0dDY3Yk9SeDZNTkNiaGQ5UVh1Uy1CRlk4YTZwdWNCZUJkcmVFWnVSNUlremJxQ2NObDNMbnBtdDF0V0tyeHgyWkZ4MkpiMmlxSExWN3ZLcmw5ZWd5d3Q4dGNnc0RhOU5KRVdDMXRWNTZzcFZDT2huU0xSZXRma2hmcDM?oc=5",
-    "date": "2026-10-08T07:00:00.000Z"
-   },
-   {
-    "title": "Priložnosti za učinkovit in lažji prehod v krožno in trajnostno gradbeništvo - Obrtno-podjetniška zbornica Slovenije (OZS)",
-    "outlet": "Obrtno-podjetniška zbornica Slovenije (OZS)",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUUlNbVBUUFk4NC0wQjF5WmJjYWNaY083YXk3aDdmT0ZJSlNtSGtURmZaVklQX2NCTzdJZnFlczFsZ0xvejBBVjBqcXVwdmJjZFgzNm9zZ1Vhb2d5N1Jpakd0R20xOWg3ZWtGM0dRcnVNQXBObXpnYkwwaXg0WXVJZFFHS0JXZGV5UFpPaWVtNzRDcWdPeXRic3IzVmdyTXNjSWpIR2s3bkJJeEdkbGxwVGZ2M1c3dXFqRlJGSXZqVjFOZzBub1E?oc=5",
-    "date": "2026-02-13T08:00:00.000Z"
-   },
-   {
     "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
     "outlet": "MojaObčina.si",
+    "domain": "mojaobcina.si",
+    "kind": "news",
+    "reviewed": true,
     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
-    "date": "2026-10-15T07:00:00.000Z"
+    "date": "2026-10-15T07:00:00.000Z",
+    "match": "headline names ZAG",
+    "records": [
+     "zag_logatec"
+    ]
    },
    {
-    "title": "ZAG sodeloval pri pripravi modela jamskega hroščka",
-    "outlet": "Zelena Slovenija",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORUx5WDBnWlVqc1NEUjdDdnI0UU8wTlp3dnR5bHozOWhTWkpXX3hjbzA1MnlZaERsOTIzVXpwdmEyWUMzcF9Hb2ZndFRGc1ZsVzJfUy0xVmVFRU5ZbmpPaVZ2ZFJWNUJwWEhzdDAzcWxQMkJvelBjTWhJenFCRE5TZ3o2cWt5Q2M3NWN3SXJIcUZOR3FEWGFnZ0lzczEzUQ?oc=5",
-    "date": "2023-05-09T07:00:00.000Z"
+    "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
+    "outlet": "Večer",
+    "domain": "vecer.com",
+    "kind": "news",
+    "reviewed": true,
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhiUk5DMU9IdmZzN0s1SFZzOHlYTm5rcHlobGttQ29uMjgzVERyM1VjLUdpTTIwNFQ0dDY3Yk9SeDZNTkNiaGQ5UVh1Uy1CRlk4YTZwdWNCZUJkcmVFWnVSNUlremJxQ2NObDNMbnBtdDF0V0tyeHgyWkZ4MkpiMmlxSExWN3ZLcmw5ZWd5d3Q4dGNnc0RhOU5KRVdDMXRWNTZzcFZDT2huU0xSZXRma2hmcDM?oc=5",
+    "date": "2026-10-08T07:00:00.000Z",
+    "match": "headline names Zavod za gradbeništvo Slovenije",
+    "records": []
    },
    {
-    "title": "ReBirth se poteguje za nagrado za najboljši okoljski projekt",
-    "outlet": "Delo.si",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPc3B2UG5ZcXdxbzRsTS1QLXh1cEhkYk0zcVFLM3l3cGptOFNMMS1xVWxUN2lOa0xUYnFXM3gxSkhMdDhoRHU4MTJMcmVNelV1aS1yM0ZkaWFGR1QtRmlEbHJkMEhWdWhEaWY5OW9wNUZPZDFLMmg0a2RvX3BKTW1tWklmU1RWcFFYQ2pJU1dsWFhBZGFQUWVSUjBXV1JobzZWX0E?oc=5",
-    "date": "2016-05-20T07:00:00.000Z"
+    "title": "V zavodu za gradbeništvo predstavili rešitev za shranjevanje odvečne poletne toplote",
+    "outlet": "Gorenjski glas",
+    "domain": "gorenjskiglas.si",
+    "kind": "news",
+    "reviewed": true,
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPYWRLTllPQk5JeWljeFdnVW5IWnNYUzNUSnFMMEZGU3pBNlZOb1pBeUV2Wkp1Qzk5LVR3cUJiWTZDZjdzT3VScmNleWIza0VqVXZwREkxV2tsOThxQ3h3U203M2xjRmxZSWd3VUhlT1Y2T1hPcjZRU1NmVGV1dUMydWtHRGFNUmhObHA0V0lkUzBsWTFLU1JXOW9DbEpuRWw4RmlJQjBRWTdjY1R1ZUwtSDFLNXhjNGtlMk9KRElqR2Y?oc=5",
+    "date": "2026-08-10T07:00:00.000Z",
+    "match": "headline names Zavod za gradbeništvo Slovenije",
+    "records": []
    },
    {
-    "title": "SLOVESNOST OB 75. OBLETNICI ZAVODA ZA GRADBENIŠTVO SLOVENIJE: Nagrajena tudi raziskovalca UP Famnit (FOTO)",
-    "outlet": "regionalobala.si",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNm9JWmsyY1Z2dDZ3TXA2T0F1X2VoMmpvdW83enRpOVpjaGNpZXpUaDlJUmhVRzZqUEdqR2RPdGdadzFJMHpHYzh4MWJIajM0WUJwUUhnODJZTXd3QS16Sl90RG9pUEJ4SjBjanY2c3NqUmhGZ2Z1d21YaEpfeDZNSk5TTXV5TkQ3VVpuNlA2MldkRFRhQndXVTVBdTJEcFRGbjI5dUpHX1EwdTc0bXRHeXNGZnVQNUJ6M0tINlRxckpPNTlCSjJWNEVjaV9INlY5c3c?oc=5",
-    "date": "2024-10-22T07:00:00.000Z"
-   },
-   {
-    "title": "FOTO: V Logatcu otvoritev edinstvenega objekta v tem delu EU",
-    "outlet": "Svet24.si",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPN0gwS1k0S3ZaSnBRa3RjbHA5YmVoX3JWOUFVN3pfTGV5NVROUDhqeTljdW4zZDN3ekktTGNZRXdIZGl1RVk4YWdNVDdQcVQwcjk1QjNXU2tFT0lNQnhmeG9CUEFoTVJYNEZKVHR6X1RjbTkzMDdMV1BLcWQ2a0NxNWNTTm42QlNsOEhRMERERmN0MnZqbmtHSmFhZXg4b3lUUzdaeUZ3?oc=5",
-    "date": "2022-08-09T07:00:00.000Z"
-   },
-   {
-    "title": "DAN ODPRTIH VRAT OB 15. LETU SAMOSTOJNEGA DELOVANJA ZAVODA",
+    "title": "Vloga ZAG-a in Slovenije",
     "outlet": "Si21",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxObzl5Y0tZV3gtT3dhdlU5V0RpMThMM2hkMnp0QzBNYjJFR0lJOG8yUVNqYWVoSkxGc3d2elJKY3hReWlmeUpDUFJkcjMxUlhoRl9oS3lqWDBtQk9GcXFiQng3WXdnLUQ4STE3Sk5LTlJGSklhLVlYOEhJRTlSOVlTN2hxSmhmbWtZT1NrZGJyTzNuVnFRVWVIZE1zUlA5ckFZWHk0NC03RkVvV3o3T2pRZm9hYm5qT05YdHRwVG5XMEVzQQ?oc=5",
-    "date": "2009-09-24T07:00:00.000Z"
+    "domain": "si21.com",
+    "kind": "not reviewed",
+    "reviewed": false,
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5HVkRBVXpnQUs4cnQ0ZWlra2RSN2YwVnlKRkduYldRRlJRQUhsTmNac1NhQjJYeEo2alpWRkZnYmNpc3lVOGY0TkZoTWlFcWxhTTR5MkJFSmtXV2tiM2NXWDFfXzByODluLWMw?oc=5",
+    "date": "2026-02-25T08:00:00.000Z",
+    "match": "headline names ZAG",
+    "records": []
    }
   ]
+ },
+ "media_check": {
+  "queries": 5,
+  "kept": 4,
+  "reviewed": 3,
+  "dropped": 0
  }
 }

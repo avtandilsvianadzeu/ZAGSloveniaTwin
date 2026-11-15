@@ -1,0 +1,9 @@
+{
+ "_about": "Sources for the ZAG media monitor (tools/fetch_zag_news.mjs). A media item is shown by default only when its outlet domain is listed under a kind. block: domains never shown. block_words: headline words that drop an item (spam, gambling, adult, scams). Edit this file to review a new outlet.",
+ "news": ["rtvslo.si","delo.si","vecer.com","dnevnik.si","24ur.com","siol.net","n1info.si","sta.si","primorske.si","zurnal24.si","svet24.si","novice.si","slovenskenovice.si","bloomberg-adria.com","bloombergadria.com","finance.si","mladina.si","reporter.si","demokracija.si","necenzurirano.si","casnik.si","nova24tv.si","gorenjskiglas.si","dolenjskilist.si","tednik.si","sobotainfo.com","pomurec.com","celje.info","ljnovice.si","radio1.si","radiostudent.si","mojaobcina.si","domovina.je","24kul.si","forbes.n1info.si","total-slovenia-news.com","sloveniatimes.com","najdi.si"],
+ "public body": ["gov.si","europa.eu","dars.si","drsi.si","slovenske-zeleznice.si","arso.gov.si","ljubljana.si","maribor.si","koper.si","celje.si","kranj.si","izum.si","arrs.si","aris-rs.si"],
+ "professional": ["ozs.si","gzs.si","izs.si","zbornica-zaps.si","gradbisce.si","gradbenistvo.si","gradbeni-vestnik.si","ingrad.si","energetika.net","ekologija.si","fehrl.org","is-wim.net","iabmas.org","cedr.eu","piarc.org","rilem.net","eota.eu","egolf.eu","enbri.eu"],
+ "research": ["uni-lj.si","fgg.uni-lj.si","um.si","upr.si","famnit.upr.si","ung.si","ijs.si","ki.si","sciencedirect.com","mdpi.com","springer.com","researchgate.net","cordis.europa.eu","interreg-central.eu","keep.eu","cost.eu"],
+ "block": [],
+ "block_words": ["casino","kazino","stave","bet","betting","poker","slot","porn","xxx","sex","escort","viagra","cialis","crypto","kripto","bitcoin","forex","loan","kredit brez","dating","torrent","hack","cracked","giveaway","nagradna igra"]
+}
