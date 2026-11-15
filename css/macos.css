@@ -957,3 +957,16 @@ html:has(body.sb-open),body.sb-open{background:linear-gradient(165deg,#BFD9FF 0%
 .ab-row:hover{background:linear-gradient(160deg,rgba(255,255,255,.78),rgba(232,242,255,.42));box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.1)}
 .ab-row i{height:6px;border-radius:3px;background:rgba(120,140,180,.16);overflow:hidden}.ab-row i b{display:block;height:100%;background:linear-gradient(90deg,#4FA3FF,#0A6CFF)}
 .ab-row em{font-style:normal;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+/* the news card over the map: dense frost, the map never reads through the headlines */
+.livecard{background:linear-gradient(160deg,rgba(255,255,255,.95),rgba(242,247,255,.9))!important;-webkit-backdrop-filter:blur(36px) saturate(190%)!important;backdrop-filter:blur(36px) saturate(190%)!important}
+.livecard .lc-f{display:flex;align-items:center;gap:12px}.livecard .lc-all{font-weight:700}
+/* rows of values: hover is a soft glass pill, not a flat grey band */
+.row{border-radius:12px;transition:background .15s ease,box-shadow .15s ease}
+.row:hover{background:linear-gradient(160deg,rgba(255,255,255,.95),rgba(234,243,255,.7))!important;box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.1),0 4px 12px rgba(16,40,90,.07)}
+/* the sticky tab bar of a record: frosted so the cards scrolling under it never show through */
+.tabs[role=tablist]{background:linear-gradient(160deg,rgba(236,242,250,.92),rgba(228,236,248,.86))!important;-webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%);box-shadow:inset 1px 1px 0 rgba(255,255,255,.9),0 0 0 .5px rgba(33,52,105,.1),0 6px 16px rgba(16,40,90,.08)}
+/* map attribution button sits above lines and markers drawn on the map */
+.maplibregl-ctrl-bottom-left,.maplibregl-ctrl-bottom-right{z-index:3}
+.maplibregl-ctrl-attrib.maplibregl-compact{background:rgba(255,255,255,.92)!important;box-shadow:0 0 0 .5px rgba(33,52,105,.15),0 2px 6px rgba(16,40,90,.12)}
+/* the record tab bar always sits above the cards that scroll under it */
+.pane .tabs[role=tablist],.tabs[role=tablist]{position:sticky;z-index:30!important;isolation:isolate}

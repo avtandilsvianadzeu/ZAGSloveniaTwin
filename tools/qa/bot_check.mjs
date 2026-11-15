@@ -63,6 +63,7 @@ const CASES = [
   ['Palhoča bridge Brazil', 'Santa Catarina'],
   ['projects coordinated by ZAG abroad', 'ZAG coordinated'],
   ['kje je ZAG delal v tujini', '52'],
+  ['latest news from ZAG', 'The latest on zag.si'],
 ];
 
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;

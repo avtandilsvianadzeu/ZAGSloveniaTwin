@@ -62,7 +62,9 @@ for (const [id, k] of Object.entries(KW)) {
       .filter(it => (k.all || []).every(m => norm(it.title).includes(norm(m))))
       .filter(it => !(k.not || []).concat(SHARED_NOT).some(m => norm(it.title).includes(norm(m))))
       .sort((a, b) => b.date.localeCompare(a.date));
-    const list = cluster(found).slice(0, PER_RECORD);
+    /* why each headline was kept, shown on the Latest page: the record keyword it names */
+    const why = it => { const h = norm(it.title); const m = must.find(x => h.includes(x)); return m ? 'headline names "' + m + '"' : 'headline matches the search'; };
+    const list = cluster(found).slice(0, PER_RECORD).map(it => ({ ...it, match: why(it) }));
     if (list.length) items[id] = list;
   } catch (e) {
     errors.push(id + ': ' + e.message);

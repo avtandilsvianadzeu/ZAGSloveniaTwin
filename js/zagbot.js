@@ -128,7 +128,8 @@
       (window.ZAG&&window.ZAG.projects?Promise.resolve(window.ZAG):fetch('data.js').then(r=>r.text()).then(t=>JSON.parse(t.slice(t.indexOf('{')).trim().replace(/;\s*$/,'')))).catch(()=>null),
       fetch('data/news.json').then(r=>r.json()).catch(()=>null),
       fetch('data/inspections.json').then(r=>r.json()).catch(()=>null),
-      fetch('data/international.json').then(r=>r.json()).catch(()=>null)]).then(([z,n,i,w])=>{ DB.intl=w;
+      fetch('data/international.json').then(r=>r.json()).catch(()=>null),
+      fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000)).then(r=>r.json()).catch(()=>null)]).then(([z,n,i,w,zn])=>{ DB.intl=w; DB.zn=zn;
         DB.projects={}; DB.projAll=(z&&z.projects)||[]; DB.src=(z&&z.src)||{}; ((z&&z.projects)||[]).forEach(pr=>(pr.sites||[]).forEach(id=>{ if(id!=='zag') (DB.projects[id]=DB.projects[id]||[]).push(pr); }));
         DB.news=(n&&n.items)||{}; DB.insp=(i&&i.items)||{}; });
     return DB.ready; }
@@ -414,8 +415,12 @@
     if((/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)||(tokens.length<=2&&anyNear(n.split(' '),FUZ.hello)))&&tokens.length<=2){ say(L()==='sl'?'Pozdravljeni. Kaj vas zanima?':'Hello. What would you like to know?'); home(); return; }
     if(/\b(help|pomoc|what can you)\b/.test(n)){ help(); return; }
     /* questions about work abroad or projects wait for the background data the first time, instead of being answered without it */
-    if(!DB.intl&&!ctx.waitedMore&&DB.more&&(INTL_W.test(n)||/\b(projects?|projekt\w*|partners?|partner\w*|associations?|zdruzen\w*|siwim|nieporet|palhoca|autreville)\b/.test(n))){ ctx.waitedMore=true; DB.more.then(()=>handle(text,null,true)); return; }
+    if(!DB.intl&&!ctx.waitedMore&&DB.more&&(INTL_W.test(n)||/\b(projects?|projekt\w*|partners?|partner\w*|associations?|zdruzen\w*|siwim|nieporet|palhoca|autreville|latest|news|novice|aktualno|media)\b/.test(n))){ ctx.waitedMore=true; DB.more.then(()=>handle(text,null,true)); return; }
     if(DB.intl&&intlAnswer(n,tokens)) return;
+    /* the latest from ZAG: zag.si and the media, when no structure is named */
+    if(DB.zn&&/\b(latest|news|new at zag|novice|novic|aktualno|media|mediji\w*|press)\b/.test(n)&&!findRecords(tokens.filter(w=>!/^(latest|news|novice|novic|aktualno|zag|media|mediji\w*|press|what|kaj|the|new)$/.test(w))).some(h=>h.s>=2)){ const sl=SLc(), it=((sl?DB.zn.items.sl:DB.zn.items.latest)||[]).slice(0,5), md=(DB.zn.items.media||[]).slice(0,3), dd=s=>{ const d=new Date(s); return `${d.getDate()}. ${d.getMonth()+1}. ${d.getFullYear()}`; }, cl=s=>String(s||'').replace(/\s*[\u2013\u2014]\s*/g,', ');
+      say((sl?'Zadnje na zag.si:':'The latest on zag.si:')+`<ul class="zb-list">${it.map(i=>`<li><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(cl(i.title))}</a> <span>${dd(i.date)}</span></li>`).join('')}</ul>`+(md.length?(sl?'ZAG v medijih:':'ZAG in the media:')+`<ul class="zb-list">${md.map(i=>`<li><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(cl(i.title))}</a> <span>${esc(i.outlet||'')}</span></li>`).join('')}</ul>`:''));
+      offer([[sl?'Vse novice':'All news','latest.html','link'],[sl?'Novice o objektih':'News about structures','latest.html#records','link']]); return; }
     /* commands for the map itself: the whole map, zoom, background, 3D, legend, north. Only when no record is named */
     { const sl=L()==='sl', CMDW=new Set('show me the whole all entire full complete map slovenia country view overview reset zoom in out closer further back satellite aerial imagery street normal flat 3d three tilt legend hide open close north rotate turn please on of to celoten celotni celo cel cela zemljevid slovenijo slovenija pregled povecaj pomanjsaj satelit satelitski legenda legendo skrij pokazi prikazi sever ravni ravno'.split(' '));
       const rest=tokens.filter(w=>!CMDW.has(w)), named=rest.length&&findRecords(rest).some(h=>h.s>=1.5);
