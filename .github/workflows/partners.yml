@@ -31,16 +31,14 @@ jobs:
         run: node tools/fetch_partners.mjs
       - name: Sync projects from CORDIS and zag.si
         run: node tools/sync_cordis.mjs || true
-      - name: Build the ZAG Radar brief
-        run: node tools/build_brief.mjs || true
       - name: Save if changed
         run: |
-          if [ -z "$(git status --porcelain -- data/partners.json data/international.json data/intl_updates.json data/brief.json data/brief_state.json data/briefs)" ]; then
+          if [ -z "$(git status --porcelain -- data/partners.json data/international.json data/intl_updates.json)" ]; then
             echo "No change."
           else
             git config user.name "partner-radar"
             git config user.email "partner-radar@users.noreply.github.com"
-            git add data/partners.json data/international.json data/intl_updates.json data/brief.json data/brief_state.json data/briefs
+            git add data/partners.json data/international.json data/intl_updates.json
             git commit -m "Update partner radar"
             git pull --rebase -q || true
             git push
