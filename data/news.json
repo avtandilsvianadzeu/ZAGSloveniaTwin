@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T17:32:22.241Z",
+ "updated": "2026-11-15T18:34:27.004Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -382,7 +382,7 @@
     "source": "Novice.si",
     "date": "2026-11-09T13:24:12.000Z",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lbHpPU19KN2pDai05V0l3NW9TNF9CSlFxalRpTG1mZ3Jfa2hOZkNNVFVRYUZqS0k2OWZUYkdsel9tdHlMX3N0dTZuODlBUXRKNGFrLVVfOU5ERS1XdGt3RHY2VGVHMzB5ZjVwTnB4WUt5Skd3?oc=5",
-    "outlets": 8,
+    "outlets": 9,
     "match": "headline names \"pletovarj\""
    },
    {
@@ -498,6 +498,14 @@
     "source": "Slovenske novice",
     "date": "2026-07-04T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kranjsk\""
+   },
+   {
+    "title": "V Kranjski Gori odprtje sedežnice do vrha Vitranca",
+    "source": "tv3m.si",
+    "date": "2026-06-25T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfa21KSXdmdDJuOC1mVzdpeG01N0JnTWctLTJqcVpuSnZYbEc5c1laSG1LTkxYWUZublFVTG1la2pIR1E1Uk9xUVpCZVgwYUJpWlRWdkFRMXZqOGJTSmg3ZHRacmVkXy1fdmJqQkpmNjZHOGc2RURDT2J3a3ZQeVU?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
    },
