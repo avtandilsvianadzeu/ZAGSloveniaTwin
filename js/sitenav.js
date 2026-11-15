@@ -119,3 +119,6 @@
   };
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',footer); else footer();
 })();
+/* each table that scrolls sideways is named after the section it is in, so a screen reader can tell them apart */
+(function(){ const name=()=>document.querySelectorAll('.tscroll[role=region]').forEach(t=>{ if(t.dataset.named) return; const h=t.closest('section,details,.blk,.tsec'); const x=h&&h.querySelector('h2,h3,summary'); if(x){ t.setAttribute('aria-label',x.textContent.trim().slice(0,80)+(window.LANG==='sl'?', tabela':', table')); t.dataset.named='1'; } });
+  name(); new MutationObserver(name).observe(document.documentElement,{childList:true,subtree:true}); })();

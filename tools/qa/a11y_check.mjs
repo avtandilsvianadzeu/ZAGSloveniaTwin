@@ -27,8 +27,8 @@ const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
 const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'], proxy: proxy ? { server: proxy, bypass: 'localhost,127.0.0.1' } : undefined });
 const out = { checked: new Date().toISOString(), pages: {}, blocking: 0 };
 for (const [u, wait] of PAGES) {
-  for (const lang of ['en', 'sl']) {
-    const ctx = await b.newContext({ viewport: { width: 1440, height: 860 }, ignoreHTTPSErrors: true });
+  for (const [lang, w] of [['en', 1440], ['sl', 1440], ['en', 1024]]) {
+    const ctx = await b.newContext({ viewport: { width: w, height: 860 }, ignoreHTTPSErrors: true });
     await ctx.addInitScript(() => { try { sessionStorage.setItem('zag_splash', '1'); localStorage.setItem('zb_teaser_day', new Date().toISOString().slice(0, 10)); } catch (_) {} });
     const p = await ctx.newPage();
     await p.route(/fonts\.(googleapis|gstatic)\.com/, r => r.abort());
@@ -37,7 +37,7 @@ for (const [u, wait] of PAGES) {
     await p.addScriptTag({ content: AXE });
     const v = await p.evaluate(async () => (await axe.run(document, { resultTypes: ['violations'], runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'best-practice'] } })).violations
       .map(x => ({ id: x.id, impact: x.impact, help: x.help, nodes: x.nodes.slice(0, 5).map(n => n.target.join(' ')) })));
-    const key = `${u} (${lang})`; out.pages[key] = v;
+    const key = `${u} (${lang}, ${w} px)`; out.pages[key] = v;
     const bad = v.filter(x => x.impact === 'serious' || x.impact === 'critical'); out.blocking += bad.length;
     console.log(`${bad.length ? 'FAIL' : 'ok  '} ${key}: ${v.length ? v.map(x => `${x.impact} ${x.id}`).join(', ') : 'no problems'}`);
     await ctx.close();
@@ -46,5 +46,5 @@ for (const [u, wait] of PAGES) {
 await b.close(); server.close();
 fs.mkdirSync(path.join(ROOT, 'qa'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'qa/a11y-report.json'), JSON.stringify(out, null, 1));
-console.log(`\nAccessibility: ${out.blocking} serious or critical problems on ${PAGES.length * 2} page views`);
+console.log(`\nAccessibility: ${out.blocking} serious or critical problems on ${PAGES.length * 3} page views`);
 process.exit(out.blocking ? 1 : 0);

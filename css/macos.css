@@ -903,3 +903,5 @@ html.a11y-rt .panel,html.a11y-rt .dims{background:#fff!important;-webkit-backdro
 @media (prefers-reduced-transparency:reduce){.panel,.dims,.stats,section.glass,.asset,.tsec,.pane,.info,.list,.lgd,.tl,.sidebar{background:rgba(255,255,255,.96)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}}
 /* the data panel of a record can scroll its last values clear of the ZAGBot button */
 .insp .tabpan,.insp{padding-bottom:84px!important}
+.tscroll:focus-visible{outline:2px solid #0A84FF;outline-offset:2px;border-radius:10px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
