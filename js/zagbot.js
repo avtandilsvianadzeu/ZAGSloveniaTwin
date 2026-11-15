@@ -413,6 +413,8 @@
     ctx.photo=/\b(photo\w*|pictures?|image\w*|pic|pics|slik\w*|fotografij\w*|foto)\b/.test(n);
     if((/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)||(tokens.length<=2&&anyNear(n.split(' '),FUZ.hello)))&&tokens.length<=2){ say(L()==='sl'?'Pozdravljeni. Kaj vas zanima?':'Hello. What would you like to know?'); home(); return; }
     if(/\b(help|pomoc|what can you)\b/.test(n)){ help(); return; }
+    /* questions about work abroad or projects wait for the background data the first time, instead of being answered without it */
+    if(!DB.intl&&!ctx.waitedMore&&DB.more&&(INTL_W.test(n)||/\b(projects?|projekt\w*|partners?|partner\w*|associations?|zdruzen\w*|siwim|nieporet|palhoca|autreville)\b/.test(n))){ ctx.waitedMore=true; DB.more.then(()=>handle(text,null,true)); return; }
     if(DB.intl&&intlAnswer(n,tokens)) return;
     /* commands for the map itself: the whole map, zoom, background, 3D, legend, north. Only when no record is named */
     { const sl=L()==='sl', CMDW=new Set('show me the whole all entire full complete map slovenia country view overview reset zoom in out closer further back satellite aerial imagery street normal flat 3d three tilt legend hide open close north rotate turn please on of to celoten celotni celo cel cela zemljevid slovenijo slovenija pregled povecaj pomanjsaj satelit satelitski legenda legendo skrij pokazi prikazi sever ravni ravno'.split(' '));
