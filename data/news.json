@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T16:30:21.525Z",
+ "updated": "2026-11-15T17:32:22.241Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,6 +10,16 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
+   }
+  ],
+  "nm_brv": [
+   {
+    "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
+    "source": "Svet24.si",
+    "date": "2025-12-10T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
+    "outlets": 1,
+    "match": "headline names \"stukljev\""
    }
   ],
   "strunjan": [
@@ -372,7 +382,7 @@
     "source": "Novice.si",
     "date": "2026-11-09T13:24:12.000Z",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lbHpPU19KN2pDai05V0l3NW9TNF9CSlFxalRpTG1mZ3Jfa2hOZkNNVFVRYUZqS0k2OWZUYkdsel9tdHlMX3N0dTZuODlBUXRKNGFrLVVfOU5ERS1XdGt3RHY2VGVHMzB5ZjVwTnB4WUt5Skd3?oc=5",
-    "outlets": 9,
+    "outlets": 8,
     "match": "headline names \"pletovarj\""
    },
    {
@@ -617,14 +627,6 @@
    }
   ],
   "soca_quake": [
-   {
-    "title": "Okolico Tolmina stresel potres. Ste ga čutili?",
-    "source": "N1 Slovenija",
-    "date": "2026-10-03T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZTJfaXRoQUVqRld4TmJySFdmV3BGN2FseXdOTk81STVrbElmRXY1OWdNYlhYMFFzMDR4aFlHUTMwYkVfLVAwNkE2TGR0XzN6WkcydXBKLV9fcTk0aG9lVTZTNnJYdGliTGJaZWlMX2F0dlhxNEVuZkthMmFuX0Fjek1QQnhfWk0?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
