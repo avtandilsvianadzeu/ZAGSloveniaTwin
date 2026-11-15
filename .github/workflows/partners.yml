@@ -1,0 +1,43 @@
+name: Partner radar
+
+# Reads the public websites of ZAG project partners once a day (data/partners.json):
+# AI and infrastructure topics, the contact page and generic institutional addresses only.
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: partners
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Read partner websites
+        run: node tools/fetch_partners.mjs
+      - name: Save if changed
+        run: |
+          if git diff --quiet -- data/partners.json; then
+            echo "No change."
+          else
+            git config user.name "partner-radar"
+            git config user.email "partner-radar@users.noreply.github.com"
+            git add data/partners.json
+            git commit -m "Update partner radar"
+            git pull --rebase -q || true
+            git push
+            gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
+          fi

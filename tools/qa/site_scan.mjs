@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': MIME[path.extname(f).slice(1)] || 'application/octet-stream' }); fs.createReadStream(f).pipe(res);
 }).listen(PORT);
 const ids = fs.readdirSync(path.join(ROOT, 'api/v1/objects')).map(f => f.replace('.json', ''));
-const base = ['index.html', 'twin.html', 'dashboard.html', 'questions.html', 'api.html', 'international.html', 'latest.html', 'add.html', '404.html'];
+const base = ['index.html', 'twin.html', 'dashboard.html', 'questions.html', 'api.html', 'international.html', 'latest.html', 'value.html', 'add.html', '404.html'];
 const records = MODE === 'quick' ? ids.slice(0, 6) : ids;
 const pages = [...base, ...records.map(i => 'twin.html?id=' + i)];
 const SYMBOLS = /[–—·•…;]/g;

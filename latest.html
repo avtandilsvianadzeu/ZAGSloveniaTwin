@@ -69,7 +69,7 @@ a.tag:hover{background:rgba(10,124,255,.2)}
 .lgroup{font-size:13px;font-weight:700;color:#3A4257;margin:10px 2px 0}
 @media (max-width:900px){.lgrid{grid-template-columns:1fr}.lside{position:static}.lhero h1{font-size:25px}}
 </style>
-<script src="js/i18n.js?v=23"></script>
+<script src="js/i18n.js?v=24"></script>
 <script src="js/display.js?v=2"></script>
 <script src="js/crs.js?v=4"></script>
 </head>
@@ -80,8 +80,8 @@ a.tag:hover{background:rgba(10,124,255,.2)}
   <span class="crumb">Latest</span>
   <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn" href="dashboard.html">Dashboard</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
 </header>
-<script src="js/sitenav.js?v=41"></script>
-<script src="js/sidebar.js?v=8"></script>
+<script src="js/sitenav.js?v=42"></script>
+<script src="js/sidebar.js?v=9"></script>
 <main id="main" class="lt">
   <header class="lhero">
     <p class="kick" id="kick">Read automatically</p>
@@ -143,6 +143,6 @@ a.tag:hover{background:rgba(10,124,255,.2)}
   setInterval(async()=>{ if(document.hidden||navigator.onLine===false) return; const was=JSON.stringify([Z.updated,N.updated]); await load(); meta(); if(JSON.stringify([Z.updated,N.updated])!==was) draw(); },5*60000);
 })();
 </script>
-<script src="js/zagbot.js?v=62"></script>
+<script src="js/zagbot.js?v=64"></script>
 </body>
 </html>

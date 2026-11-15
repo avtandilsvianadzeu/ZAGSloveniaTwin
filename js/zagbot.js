@@ -129,7 +129,8 @@
       fetch('data/news.json').then(r=>r.json()).catch(()=>null),
       fetch('data/inspections.json').then(r=>r.json()).catch(()=>null),
       fetch('data/international.json').then(r=>r.json()).catch(()=>null),
-      fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000)).then(r=>r.json()).catch(()=>null)]).then(([z,n,i,w,zn])=>{ DB.intl=w; DB.zn=zn;
+      fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000)).then(r=>r.json()).catch(()=>null),
+      fetch('data/partners.json?t='+Math.floor(Date.now()/3.6e6)).then(r=>r.json()).catch(()=>null)]).then(([z,n,i,w,zn,pa])=>{ DB.intl=w; DB.zn=zn; if(pa) DB.partners=pa;
         DB.projects={}; DB.projAll=(z&&z.projects)||[]; DB.src=(z&&z.src)||{}; ((z&&z.projects)||[]).forEach(pr=>(pr.sites||[]).forEach(id=>{ if(id!=='zag') (DB.projects[id]=DB.projects[id]||[]).push(pr); }));
         DB.news=(n&&n.items)||{}; DB.insp=(i&&i.items)||{}; });
     return DB.ready; }
@@ -416,6 +417,14 @@
     if(/\b(help|pomoc|what can you)\b/.test(n)){ help(); return; }
     /* questions about work abroad or projects wait for the background data the first time, instead of being answered without it */
     if(!DB.intl&&!ctx.waitedMore&&DB.more&&(INTL_W.test(n)||/\b(projects?|projekt\w*|partners?|partner\w*|associations?|zdruzen\w*|siwim|nieporet|palhoca|autreville|latest|news|novice|aktualno|media)\b/.test(n))){ ctx.waitedMore=true; DB.more.then(()=>handle(text,null,true)); return; }
+    /* partner radar: which partners show AI topics or recent shared work, for possible new collaboration */
+    if(/\b(ai|artificial intelligence|umetn\w* inteligenc\w*|machine learning|strojn\w* ucenj\w*|collaborat\w*|sodelovanj\w*|partners?|partnerj\w*)\b/.test(n)&&/\b(ai|artificial|umetn\w*|machine|strojn\w*|potential|possible|new|future|potencial\w*|mozn\w*|nov\w*|radar)\b/.test(n)){
+      if(!DB.partners){ fetch('data/partners.json?t='+Math.floor(Date.now()/3.6e6)).then(r=>r.json()).then(j=>{ DB.partners=j; handle(text,null,true); }).catch(()=>{ DB.partners={items:[]}; handle(text,null,true); }); return; }
+      const sl=SLc(), wantAI=/\b(ai|artificial|umetn\w*|machine|strojn\w*)\b/.test(n), ps=DB.partners.items.filter(p=>!wantAI||(p.ai||[]).length).slice(0,6), cn=iso=>{ try{ return new Intl.DisplayNames([sl?'sl':'en-GB'],{type:'region'}).of(iso); }catch(_){ return iso; } };
+      if(!ps.length){ say(sl?'Radar partnerjev trenutno ne kaže takih partnerjev.':'The partner radar shows no such partners at the moment.'); offer([[sl?'Odpri radar partnerjev':'Open the partner radar','international.html#partners','link']]); return; }
+      say((sl?(wantAI?'Partnerji ZAG, ki na spletni strani navajajo teme umetne inteligence, z najmočnejšim signalom za sodelovanje:':'Partnerji ZAG z najmočnejšim signalom za novo sodelovanje:'):(wantAI?'ZAG partners whose websites show AI topics, strongest collaboration signal first:':'ZAG partners with the strongest signal for new collaboration:'))+`<ul class="zb-list">${ps.map(p=>`<li><b>${esc(p.name)}</b>, ${esc(cn(p.country))}<br><span>${esc((p.reasons||[]).join('. '))}</span></li>`).join('')}</ul>`);
+      say(sl?'Radar vsak dan prebere javne spletne strani partnerjev. Shrani le teme, stran za stik in splošne naslove ustanov.':'The radar reads the partners\' public websites every day. It keeps only topics, the contact page and generic institutional addresses.',null,true);
+      offer([[sl?'Odpri radar partnerjev':'Open the partner radar','international.html#partners','link']]); return; }
     if(DB.intl&&intlAnswer(n,tokens)) return;
     /* the latest from ZAG: zag.si and the media, when no structure is named */
     if(DB.zn&&/\b(latest|news|new at zag|novice|novic|aktualno|media|mediji\w*|press)\b/.test(n)&&!findRecords(tokens.filter(w=>!/^(latest|news|novice|novic|aktualno|zag|media|mediji\w*|press|what|kaj|the|new)$/.test(w))).some(h=>h.s>=2)){ const sl=SLc(), it=((sl?DB.zn.items.sl:DB.zn.items.latest)||[]).slice(0,5), md=(DB.zn.items.media||[]).slice(0,3), dd=s=>{ const d=new Date(s); return `${d.getDate()}. ${d.getMonth()+1}. ${d.getFullYear()}`; }, cl=s=>String(s||'').replace(/\s*[\u2013\u2014]\s*/g,', ');

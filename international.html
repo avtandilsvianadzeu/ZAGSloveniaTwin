@@ -48,7 +48,7 @@
 .ikey .rl{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums;color:#5A6172}
 .ipanel{border-radius:24px;padding:12px;max-height:640px;display:flex;flex-direction:column;min-width:0}
 .itabs{display:flex;gap:4px;padding:3px;border-radius:14px;background:rgba(120,140,180,.12);margin-bottom:10px}
-.itabs button{flex:1;font:600 12.5px Inter,system-ui,sans-serif;border:0;background:transparent;padding:8px 4px;border-radius:11px;color:#3A4257;cursor:pointer}
+.itabs{flex-wrap:wrap}.itabs button{flex:1 1 auto;white-space:nowrap;padding-left:8px!important;padding-right:8px!important;font:600 12.5px Inter,system-ui,sans-serif;border:0;background:transparent;padding:8px 4px;border-radius:11px;color:#3A4257;cursor:pointer}
 .itabs button[aria-selected=true]{background:linear-gradient(160deg,rgba(255,255,255,.9),rgba(255,255,255,.55));box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.1),0 3px 8px rgba(16,40,90,.1);color:#0A5BC4}
 .ilist{overflow:auto;min-height:0;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%);padding:6px 2px;display:flex;flex-direction:column;gap:8px;padding:2px}
 .ifind{width:100%;box-sizing:border-box;font:500 13.5px Inter,system-ui,sans-serif;padding:9px 12px;border-radius:12px;border:0;margin-bottom:8px;background:rgba(255,255,255,.6);box-shadow:inset 0 0 0 1px rgba(33,52,105,.12)}
@@ -66,6 +66,8 @@
 .crow .bar{flex:1;height:6px;border-radius:3px;background:rgba(120,140,180,.15);overflow:hidden}.crow .bar i{display:block;height:100%;background:linear-gradient(90deg,#4FA3FF,#0A6CFF)}
 .crow b{font-variant-numeric:tabular-nums;font-size:13px;color:#14213D;min-width:2.5em;text-align:right}
 .inote{font-size:12.5px;color:#5A6172;line-height:1.5;margin:4px 2px 8px}
+.pchips{display:flex;flex-wrap:wrap;gap:6px;margin:0 2px 6px}.pchips button{font:600 12px Inter,system-ui,sans-serif;border:0;border-radius:999px;padding:6px 11px;cursor:pointer;color:#3A4257;background:linear-gradient(160deg,rgba(255,255,255,.9),rgba(240,246,255,.6));box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.14)}.pchips button[aria-pressed=true]{color:#0A5BC4;box-shadow:inset 1px 1px 0 #fff,0 0 0 1.5px rgba(10,124,255,.45)}
+.sig{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.b-ai{background:rgba(175,82,222,.14);color:#7A2BA8;text-decoration:none}.b-ai:hover{background:rgba(175,82,222,.24)}.icard .meta a{color:#0A66D8}.mail{font:500 12px ui-monospace,Menlo,Consolas,monospace;color:#3A4257}
 .ifilter{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12.5px;color:#0A5BC4;font-weight:600;margin:0 2px 8px}
 .ifilter button{font:600 12px Inter,system-ui,sans-serif;border:0;border-radius:999px;padding:5px 10px;cursor:pointer;background:rgba(10,124,255,.1);color:#0A5BC4}
 .imethod{margin-top:22px;border-radius:24px;padding:18px 22px;font-size:13.5px;line-height:1.6;color:#2E3648}
@@ -77,7 +79,7 @@
 @media (max-width:1000px){.iwrap{grid-template-columns:1fr}.ipanel{max-height:none}.imap{height:480px}.istats{grid-template-columns:repeat(2,minmax(0,1fr))}.ihero h1{font-size:25px}}
 @media (prefers-reduced-motion:reduce){.icard{transition:none}}
 </style>
-<script src="js/i18n.js?v=23"></script>
+<script src="js/i18n.js?v=24"></script>
 <script src="js/display.js?v=2"></script>
 <script src="js/crs.js?v=4"></script>
 </head>
@@ -88,8 +90,8 @@
   <span class="crumb">International</span>
   <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn" href="dashboard.html">Dashboard</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
 </header>
-<script src="js/sitenav.js?v=41"></script>
-<script src="js/sidebar.js?v=8"></script>
+<script src="js/sitenav.js?v=42"></script>
+<script src="js/sidebar.js?v=9"></script>
 <main id="main" class="intl">
   <header class="ihero">
     <p class="kick" id="kick">Outside Slovenia</p>
@@ -178,7 +180,9 @@
   $('key').innerHTML=`<b>${L('Projects with partners in the country','Projekti s partnerji v državi')}</b><div class="ramp">${RAMP.map(r=>`<span style="background:${r[1]}"></span>`).join('')}</div><div class="rl"><span>1</span><span>3</span><span>10</span><span>30</span><span>60+</span></div>
     <div style="margin-top:7px;display:flex;flex-direction:column;gap:4px"><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#0B2A66;margin-right:6px"></i>${L('Measured or tested by ZAG','Meril ali preizkusil ZAG')}</span><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#FFB800;margin-right:6px"></i>${L('SiWIM, developed at ZAG, used by others','SiWIM, razvit na ZAG, uporabljajo drugi')}</span><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#5E5CE6;margin-right:6px"></i>ZAG, Ljubljana</span></div>`;
   /* panel */
-  const TABS=[['structures',L('Structures','Objekti')],['countries',L('Countries','Države')],['projects',L('Projects','Projekti')],['links',L('Associations','Združenja')]];
+  const TABS=[['structures',L('Structures','Objekti')],['countries',L('Countries','Države')],['projects',L('Projects','Projekti')],['partners',L('Partners','Partnerji')],['links',L('Associations','Združenja')]];
+  let P=null; const PF={ai:false,recent:false}, fold=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const loadP=()=>fetch('data/partners.json?t='+Math.floor(Date.now()/3.6e6)).then(r=>r.json()).then(j=>{ P=j; }).catch(()=>{ P={items:[],counts:{partners:0,read:0,ai:0}}; });
   let tab=(location.hash||'').slice(1); if(!TABS.some(t=>t[0]===tab)) tab='structures'; let country=null, q='';
   $('tabs').innerHTML=TABS.map(([k,t])=>`<button type="button" role="tab" data-t="${k}" aria-selected="${k===tab}">${t}</button>`).join('');
   $('tabs').onclick=e=>{ const b=e.target.closest('button'); if(!b) return; tab=b.dataset.t; q=''; draw(); try{ history.replaceState(null,'','#'+tab); }catch(_){} };
@@ -202,6 +206,21 @@
       const ps=D.projects.filter(p=>(!country||p.c.includes(country))&&(!q||(p.a+' '+p.t).toLowerCase().includes(q))).sort((a,b)=>(b.y0||0)-(a.y0||0));
       Lst.innerHTML=`<input class="ifind" id="pq" type="search" placeholder="${L('Find a project','Poišči projekt')}" aria-label="${L('Find a project','Poišči projekt')}" value="${esc(q)}"><p class="inote">${ps.length} ${L('projects, newest first','projektov, najnovejši najprej')}</p>`+ps.map(prj).join('');
       const i=$('pq'); i.oninput=()=>{ q=i.value.trim().toLowerCase(); const pos=i.selectionStart; draw(); const j=$('pq'); j.focus(); try{ j.setSelectionRange(pos,pos); }catch(_){} };
+    } else if(tab==='partners'){
+      if(!P){ Lst.innerHTML=`<p class="inote">${L('Loading the partner radar.','Nalagam radar partnerjev.')}</p>`; loadP().then(draw); return; }
+      const ps=P.items.filter(p=>(!country||p.country===country)&&(!PF.ai||(p.ai||[]).length)&&(!PF.recent||(p.last&&p.last>=new Date().getFullYear()-4))&&(!q||fold(p.name+' '+(p.city||'')+' '+(p.projects||[]).join(' ')+' '+(p.ai||[]).map(a=>a.topic).join(' ')).includes(fold(q))));
+      const ago=P.updated?new Date(P.updated).toLocaleDateString(SL?'sl-SI':'en-GB',{day:'numeric',month:'short',year:'numeric'}):'';
+      Lst.innerHTML=`<p class="inote">${L(`Partner radar: the public website of each project partner is read once a day. ${P.counts.read} of ${P.counts.partners} read, ${P.counts.ai} show AI topics. Last read ${ago}.`,`Radar partnerjev: javna spletna stran vsakega partnerja se prebere enkrat na dan. Prebranih ${P.counts.read} od ${P.counts.partners}, ${P.counts.ai} kaže teme umetne inteligence. Zadnjič prebrano ${ago}.`)}</p>
+        <input class="ifind" id="pq" type="search" placeholder="${L('Find a partner, city, project or topic','Poišči partnerja, mesto, projekt ali temo')}" aria-label="${L('Find a partner','Poišči partnerja')}" value="${esc(q)}">
+        <div class="pchips"><button type="button" data-f="ai" aria-pressed="${PF.ai}">${L('AI topics on website','Teme UI na spletni strani')}</button><button type="button" data-f="recent" aria-pressed="${PF.recent}">${L('Shared project in the last 4 years','Skupni projekt v zadnjih 4 letih')}</button></div>
+        <p class="inote">${ps.length} ${L('partners, strongest signal first','partnerjev, najmočnejši signal najprej')}</p>`+ps.slice(0,80).map(p=>`<article class="icard"><h3>${esc(p.name)}</h3><div class="meta">${esc(p.city||'')}${p.city?', ':''}${esc(cname(p.country))}${p.website?` <a href="${esc(p.website)}" target="_blank" rel="noopener nofollow">${esc(p.website.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,''))}</a>`:''}</div>
+          <div class="sig"><span class="badge b-zag">${L('Signal','Signal')} ${p.score||0}</span>${(p.ai||[]).map(a=>`<a class="badge b-ai" href="${esc(a.page)}" target="_blank" rel="noopener nofollow" title="${L('Seen on','Najdeno na')} ${esc(a.page)}">${esc(a.topic)}</a>`).join('')}${(p.infra||[]).slice(0,4).map(a=>`<span class="badge b-ap">${esc(a.topic)}</span>`).join('')}</div>
+          ${p.reasons&&p.reasons.length?`<p class="meta">${esc(p.reasons.join('. '))}.</p>`:''}
+          ${(p.projects||[]).length?`<p class="meta">${L('Shared projects','Skupni projekti')}: ${esc(p.projects.slice(0,8).join(', '))}${p.projects.length>8?` ${L('and','in')} ${p.projects.length-8} ${L('more','več')}`:''}</p>`:''}
+          ${p.contact||(p.emails||[]).length?`<p class="meta">${L('Contact','Stik')}: ${p.contact?`<a href="${esc(p.contact)}" target="_blank" rel="noopener nofollow">${L('contact page','stran za stik')}</a>`:''}${(p.emails||[]).map(e=>` <span class="mail">${esc(e)}</span>`).join('')}</p>`:''}
+          ${p.status&&p.status!=='read'?`<p class="meta">${esc(p.status)}</p>`:''}</article>`).join('');
+      const i=$('pq'); i.oninput=()=>{ q=i.value.trim(); const pos=i.selectionStart; draw(); const j=$('pq'); j.focus(); try{ j.setSelectionRange(pos,pos); }catch(_){} };
+      Lst.querySelectorAll('.pchips button').forEach(b=>b.onclick=()=>{ PF[b.dataset.f]=!PF[b.dataset.f]; draw(); });
     } else {
       const ls=D.links.filter(l=>!country||l.c.includes(country));
       Lst.innerHTML=`<p class="inote">${L('Associations, networks and agreements ZAG takes part in, with the member countries the source lists.','Združenja, mreže in sporazumi, v katerih sodeluje ZAG, z državami članic, ki jih navaja vir.')}</p>`+ls.map(l=>`<article class="icard"><h3>${esc(l.name)}</h3><div class="meta">${esc(l.partner)}${l.y?', '+esc(l.y):''}, ${l.c.length} ${L(l.c.length===1?'country':'countries',l.c.length===1?'država':'držav')}</div>${l.s?srcList([[L('Source','Vir'),l.s]]):''}</article>`).join('');
@@ -216,7 +235,7 @@
   }
   function pickCountry(iso,fly){
     country=iso; if(map.getLayer('csel')) map.setFilter('csel',['==',['get','iso'],iso||'']);
-    if(iso&&tab!=='links') tab='projects'; draw();
+    if(iso&&tab!=='links'&&tab!=='partners') tab='projects'; draw();
     if(iso&&fly){ view=null; const f=W.features.find(x=>x.properties.iso===iso); if(f){ const b=new maplibregl.LngLatBounds(); const add=c=>Array.isArray(c[0])?c.forEach(add):b.extend(c); add(f.geometry.coordinates); const fit=d=>map.fitBounds(b,{padding:60,maxZoom:3.6,duration:d===0?0:900}); whenReady(fit); } }
   }
   $('views').onclick=e=>{ const b=e.target.closest('button'); if(b) goView(b.dataset.v); };
@@ -231,6 +250,6 @@
   ].map(t=>`<li>${t}</li>`).join('')+`<li>${L('More about the bridge work:','Več o delu na mostovih:')} <a href="https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/" target="_blank" rel="noopener">${L('ZAG, Section for Bridges and Other Civil Engineering Structures','ZAG, Oddelek za mostove in druge gradbene konstrukcije')}</a></li>`;
 })();
 </script>
-<script src="js/zagbot.js?v=62"></script>
+<script src="js/zagbot.js?v=64"></script>
 </body>
 </html>

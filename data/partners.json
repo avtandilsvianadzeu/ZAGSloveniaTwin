@@ -1,0 +1,5778 @@
+{
+ "updated": "2026-11-15T12:20:25.472Z",
+ "about": "Public websites of ZAG project partners, read once a day. Topics found, contact page and generic institutional addresses only.",
+ "counts": {
+  "partners": 172,
+  "read": 132,
+  "ai": 56
+ },
+ "items": [
+  {
+   "key": "FEHRL, Forum of European National Highway Research Laboratories",
+   "name": "FEHRL, Forum of European National Highway Research Laboratories",
+   "country": "BE",
+   "city": "Brussels",
+   "website": "https://www.fehrl.org/",
+   "lat": 50.85045,
+   "lon": 4.34878,
+   "projects": [
+    "AUGMENTED CCAM",
+    "CIRCUIT",
+    "FOX",
+    "DETRA",
+    "Pilot4Safety",
+    "TRA2008",
+    "SPENS",
+    "CERTAIN"
+   ],
+   "last": 2027,
+   "status": "read",
+   "checked": "2026-11-15T12:07:36.423Z",
+   "title": "Home",
+   "description": "Home",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.fehrl.org/communities/projects"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.fehrl.org/communities/projects"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "structural health monitoring",
+     "page": "https://www.fehrl.org/communities/projects"
+    },
+    {
+     "topic": "bridges",
+     "page": "https://www.fehrl.org/communities/projects"
+    },
+    {
+     "topic": "BIM",
+     "page": "https://www.fehrl.org/communities/projects"
+    },
+    {
+     "topic": "railways",
+     "page": "https://www.fehrl.org/communities/projects"
+    }
+   ],
+   "contact": "http://www.fehrl.org/contact-us",
+   "emails": [
+    "info@fehrl.org"
+   ],
+   "pages": [
+    "https://www.fehrl.org/",
+    "https://www.fehrl.org/about-us/bodies/researchcoordinators",
+    "https://www.fehrl.org/communities/projects"
+   ],
+   "score": 20,
+   "reasons": [
+    "8 shared projects with ZAG",
+    "Latest shared project runs to 2027",
+    "AI topics on its website: artificial intelligence, data science",
+    "Works on structural health monitoring, bridges, BIM, railways"
+   ]
+  },
+  {
+   "key": "TU Wien",
+   "name": "TU Wien",
+   "country": "AT",
+   "city": "Vienna",
+   "website": "https://www.tuwien.at",
+   "lat": 48.20849,
+   "lon": 16.37208,
+   "projects": [
+    "InnoCrossLam",
+    "RIS-ALiCE",
+    "ReBuilt",
+    "RIS-RESTORE"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:08:11.591Z",
+   "title": "Technische Universität Wien | TU Wien",
+   "description": "Homepage der Technischen Universität Wien. TU Wien, TUW. &quot;Technik für Menschen&quot;. News. Alles zu: Studium, Forschung, Kooperationen, Services.",
+   "ai": [
+    {
+     "topic": "machine learning",
+     "page": "https://www.tuwien.at/forschung/profil"
+    },
+    {
+     "topic": "computer vision",
+     "page": "https://www.tuwien.at/forschung/profil"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.tuwien.at/forschung/profil"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.tuwien.at/forschung/profil"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.tuwien.at/tu-wien/kontakt",
+   "emails": [],
+   "pages": [
+    "https://www.tuwien.at/",
+    "https://www.tuwien.at/forschung/news",
+    "https://www.tuwien.at/forschung/profil"
+   ],
+   "score": 19,
+   "reasons": [
+    "4 shared projects with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: machine learning, computer vision, data science, AI in other languages"
+   ]
+  },
+  {
+   "key": "Tecnalia Research and Innovation",
+   "name": "Tecnalia Research and Innovation",
+   "country": "ES",
+   "city": "Donostia-San Sebastián",
+   "website": "https://www.tecnalia.com/en",
+   "lat": 43.31283,
+   "lon": -1.97499,
+   "projects": [
+    "CINDERELA",
+    "LIAISON",
+    "RAGTIME"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:09:24.739Z",
+   "title": "Research centre | Technological development | Tecnalia",
+   "description": "TECNALIA is a benchmark European research and technological development centre, whose mission is to transform technology into GDP.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.tecnalia.com/en"
+    },
+    {
+     "topic": "AI",
+     "page": "https://www.tecnalia.com/en/technologies/artificial-intelligence-and-big-data"
+    },
+    {
+     "topic": "computer vision",
+     "page": "https://www.tecnalia.com/en"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://www.tecnalia.com/en/projects"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.tecnalia.com/en"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "railways",
+     "page": "https://www.tecnalia.com/en/technologies/artificial-intelligence-and-big-data"
+    }
+   ],
+   "contact": "https://www.tecnalia.com/en/contact",
+   "emails": [],
+   "pages": [
+    "https://www.tecnalia.com/en",
+    "https://www.tecnalia.com/en/projects",
+    "https://www.tecnalia.com/en/technologies/artificial-intelligence-and-big-data"
+   ],
+   "score": 18,
+   "reasons": [
+    "3 shared projects with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: artificial intelligence, AI, computer vision, digital twin, data science",
+    "Works on railways"
+   ]
+  },
+  {
+   "key": "TRL, Transport Research Laboratory",
+   "name": "TRL, Transport Research Laboratory",
+   "country": "GB",
+   "city": "Wokingham",
+   "website": "https://www.trl.co.uk/",
+   "lat": 51.4112,
+   "lon": -0.83565,
+   "projects": [
+    "INFRACOMS",
+    "CoDEC",
+    "HI-SPEQ",
+    "BRoWSER",
+    "STARS"
+   ],
+   "last": 2024,
+   "status": "read",
+   "checked": "2026-11-15T12:07:44.667Z",
+   "title": "TRL | THE FUTURE OF TRANSPORT",
+   "description": "",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.trl.co.uk/projects"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://www.trl.co.uk/projects"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.trl.co.uk/contact-us",
+   "emails": [],
+   "pages": [
+    "https://www.trl.co.uk/",
+    "https://www.trl.co.uk/projects",
+    "https://www.trl.co.uk/solutions/collision-research-services-using-raids-data"
+   ],
+   "score": 17,
+   "reasons": [
+    "5 shared projects with ZAG",
+    "Latest shared project runs to 2024",
+    "AI topics on its website: AI, machine learning"
+   ]
+  },
+  {
+   "key": "instytut badawczy drog i mostow",
+   "name": "IBDiM, Road and Bridge Research Institute",
+   "country": "PL",
+   "city": "Warsaw",
+   "website": "https://ibdim.edu.pl/en/",
+   "lat": 52.22977,
+   "lon": 21.01178,
+   "projects": [
+    "ARCHES",
+    "SPENS",
+    "CERTAIN"
+   ],
+   "last": 2010,
+   "status": "read",
+   "checked": "2026-11-15T12:08:38.139Z",
+   "title": "The Road and Bridge Research Institute &raquo; IBDiM",
+   "description": "Instytut Badawczy Dróg i Mostów jest wiodącą placówką naukowo-badawczą w Polsce, która prowadzi innowacyjne badania, ekspertyzy i projekty w zakresie dróg,",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://ibdim.edu.pl/en/projects/"
+    },
+    {
+     "topic": "deep learning",
+     "page": "https://ibdim.edu.pl/en/projects/"
+    },
+    {
+     "topic": "computer vision",
+     "page": "https://ibdim.edu.pl/en/projects/"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://ibdim.edu.pl/en/projects/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "structural health monitoring",
+     "page": "https://ibdim.edu.pl/en/projects/"
+    },
+    {
+     "topic": "bridges",
+     "page": "https://ibdim.edu.pl/en/"
+    },
+    {
+     "topic": "weigh-in-motion",
+     "page": "https://ibdim.edu.pl/en/projects/"
+    },
+    {
+     "topic": "construction materials",
+     "page": "https://ibdim.edu.pl/en/projects/"
+    },
+    {
+     "topic": "railways",
+     "page": "https://ibdim.edu.pl/en/projects/"
+    }
+   ],
+   "contact": "https://ibdim.edu.pl/en/contact/",
+   "emails": [],
+   "pages": [
+    "https://ibdim.edu.pl/en/",
+    "https://ibdim.edu.pl/en/projects/",
+    "https://ibdim.edu.pl/en/research-offer/"
+   ],
+   "score": 17,
+   "reasons": [
+    "3 shared projects with ZAG",
+    "AI topics on its website: artificial intelligence, deep learning, computer vision, digital twin",
+    "Works on structural health monitoring, bridges, weigh-in-motion, construction materials, railways"
+   ]
+  },
+  {
+   "key": "Geological Survey of Slovenia",
+   "name": "Geological Survey of Slovenia",
+   "country": "SI",
+   "city": "Ljubljana",
+   "website": "https://www.geo-zs.si",
+   "lat": 46.05108,
+   "lon": 14.50513,
+   "projects": [
+    "RIS-ALiCE",
+    "RIS-CuRE",
+    "RIS-RECOVER",
+    "EIT RawMaterials RC Adria"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:08:07.504Z",
+   "title": "Domov - GeoZS",
+   "description": "Geološki zavod Slovenije Razumemo procese, ki se dogajajo na Zemljinem površju in pod njim. O nas GeoZS LETOS PRAZNUJE 80 LET! 🎉 → Preberi več Področja delovanja Temeljne geološke raziskave Temeljne geološke raziskave so osnova za razumeva",
+   "ai": [
+    {
+     "topic": "digital twin",
+     "page": "https://www.geo-zs.si/"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.geo-zs.si/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "earthquake engineering",
+     "page": "https://www.geo-zs.si/temeljne-geoloske-raziskave/"
+    }
+   ],
+   "contact": "https://www.geo-zs.si/contact-us/",
+   "emails": [
+    "info@geo-zs.si"
+   ],
+   "pages": [
+    "https://www.geo-zs.si/",
+    "https://www.geo-zs.si/temeljne-geoloske-raziskave/",
+    "https://www.geo-zs.si/digitalna-transformacija-s-ciljem-digitalnega-dvojcka/"
+   ],
+   "score": 16,
+   "reasons": [
+    "4 shared projects with ZAG",
+    "Latest shared project runs to 2023",
+    "AI topics on its website: digital twin, AI in other languages",
+    "Works on earthquake engineering"
+   ]
+  },
+  {
+   "key": "VITO, Flemish Institute for Technological Research",
+   "name": "VITO, Flemish Institute for Technological Research",
+   "country": "BE",
+   "city": "Mol",
+   "website": "https://www.vito.be",
+   "lat": 51.19188,
+   "lon": 5.11662,
+   "projects": [
+    "CO2TREAT",
+    "SPL-CYCLE",
+    "RIS-RECOVER",
+    "FLAME"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:08:16.657Z",
+   "title": "VITO: Duurzame oplossingen voor een betere toekomst",
+   "description": "VITO biedt duurzame oplossingen voor een betere toekomst door onafhankelijk technologisch onderzoek en samenwerking met overheidsinstanties en organisaties om een positieve impact te creëren.",
+   "ai": [
+    {
+     "topic": "digital twin",
+     "page": "https://vito.be/nl"
+    },
+    {
+     "topic": "data science",
+     "page": "https://vito.be/nl"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "construction materials",
+     "page": "https://vito.be/nl"
+    }
+   ],
+   "contact": "https://vito.be/nl/contact",
+   "emails": [],
+   "pages": [
+    "https://vito.be/nl",
+    "https://vito.be/nl/projecten",
+    "https://vito.be/nl/nieuws"
+   ],
+   "score": 16,
+   "reasons": [
+    "4 shared projects with ZAG",
+    "Latest shared project runs to 2025",
+    "AI topics on its website: digital twin, data science",
+    "Works on construction materials"
+   ]
+  },
+  {
+   "key": "EURNEX",
+   "name": "EURNEX",
+   "country": "DE",
+   "city": "Berlin",
+   "website": "https://www.eurnex.org/",
+   "lat": 52.52437,
+   "lon": 13.41053,
+   "projects": [
+    "Academics4Rail"
+   ],
+   "last": 2027,
+   "status": "read",
+   "checked": "2026-11-15T12:13:45.840Z",
+   "title": "Welcome - eurnex",
+   "description": "",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.eurnex.org/projects/"
+    },
+    {
+     "topic": "computer vision",
+     "page": "https://www.eurnex.org/projects/"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://www.eurnex.org/projects/"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.eurnex.org/projects/earlier-projects/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.eurnex.org/projects/"
+    },
+    {
+     "topic": "construction materials",
+     "page": "https://www.eurnex.org/projects/"
+    },
+    {
+     "topic": "railways",
+     "page": "https://www.eurnex.org/"
+    }
+   ],
+   "contact": "https://www.eurnex.org/impressum/",
+   "emails": [],
+   "pages": [
+    "https://www.eurnex.org/",
+    "https://www.eurnex.org/projects/",
+    "https://www.eurnex.org/projects/earlier-projects/"
+   ],
+   "score": 16,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2027",
+    "AI topics on its website: AI, computer vision, digital twin, data science",
+    "Works on bridges, construction materials, railways"
+   ]
+  },
+  {
+   "key": "RISE Research Institutes of Sweden",
+   "name": "RISE Research Institutes of Sweden",
+   "country": "SE",
+   "city": "Borås",
+   "website": "https://www.ri.se/en",
+   "lat": 57.721,
+   "lon": 12.9401,
+   "projects": [
+    "CDCUL (H7-8294)"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:18:01.639Z",
+   "title": "Swedish research for sustainable growth | RISE",
+   "description": "RISE is Sweden’s research institute, with a remit to strengthen the industry competitiveness and drive innovation in the public sector. From idea to innovation and onto the market.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.ri.se/en"
+    },
+    {
+     "topic": "AI",
+     "page": "https://www.ri.se/en/artificial-intelligence"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://www.ri.se/en/artificial-intelligence"
+    },
+    {
+     "topic": "deep learning",
+     "page": "https://www.ri.se/en/artificial-intelligence"
+    },
+    {
+     "topic": "computer vision",
+     "page": "https://www.ri.se/en/artificial-intelligence"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.ri.se/en"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.ri.se/en/digital-infrastructure"
+    },
+    {
+     "topic": "construction materials",
+     "page": "https://www.ri.se/en"
+    },
+    {
+     "topic": "railways",
+     "page": "https://www.ri.se/en/digital-infrastructure"
+    }
+   ],
+   "contact": "https://www.ri.se/en/contact-us",
+   "emails": [],
+   "pages": [
+    "https://www.ri.se/en",
+    "https://www.ri.se/en/artificial-intelligence",
+    "https://www.ri.se/en/digital-infrastructure"
+   ],
+   "score": 16,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: artificial intelligence, AI, machine learning, deep learning, computer vision, data science",
+    "Works on bridges, construction materials, railways"
+   ]
+  },
+  {
+   "key": "fundacio eurecat",
+   "name": "Fundacio Eurecat",
+   "country": "ES",
+   "city": "Cerdanyola del Vallès",
+   "website": "https://www.eurecat.org/",
+   "lat": 41.49109,
+   "lon": 2.14079,
+   "projects": [
+    "Assets4Rail",
+    "LIFE HIDAQUA"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:10:49.503Z",
+   "title": "Inici - Eurecat Centre Tecnològic",
+   "description": "Innovació amb impacte econòmic i social cerca Som Premi Nacional a la Transferència del Coneixement i la Innovació sobre el premi sobre el premi Innovant pel bé comú A través de solucions reals i situacions quotidianes, presentem com la nos",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://eurecat.org/home/"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://eurecat.org/ambits-de-coneixement/applied-artificial-intelligence/"
+    },
+    {
+     "topic": "data science",
+     "page": "https://eurecat.org/home/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "railways",
+     "page": "https://eurecat.org/home/"
+    }
+   ],
+   "contact": "https://eurecat.org/contacte/",
+   "emails": [
+    "info@eurecat.org"
+   ],
+   "pages": [
+    "https://eurecat.org/home/",
+    "https://eurecat.org/eurecat/centres-excellencia/unitat-conjunta-de-recerca-jru-de-fabricacio-digital-de-metalls/",
+    "https://eurecat.org/ambits-de-coneixement/applied-artificial-intelligence/"
+   ],
+   "score": 14,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2025",
+    "AI topics on its website: artificial intelligence, digital twin, data science",
+    "Works on railways"
+   ]
+  },
+  {
+   "key": "typsa",
+   "name": "TYPSA Group (Técnica y Proyectos, S.A.)",
+   "country": "ES",
+   "city": "San Sebastián de los Reyes",
+   "website": "https://www.typsa.com",
+   "lat": 40.55555,
+   "lon": -3.62733,
+   "projects": [
+    "LIFE HIDAQUA"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:18:48.211Z",
+   "title": "Grupo Typsa - Grupo TYPSA",
+   "description": "Más de 50 años de experiencia apoyando a clientes institucionales, públicos y privados en el desarrollo de proyectos de transporte, agua...",
+   "ai": [
+    {
+     "topic": "machine learning",
+     "page": "https://www.typsa.com/gobernanza-del-dato-e-inteligencia-artificial/"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://www.typsa.com/gemelos-digitales/"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.typsa.com/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.typsa.com/"
+    },
+    {
+     "topic": "BIM",
+     "page": "https://www.typsa.com/"
+    },
+    {
+     "topic": "railways",
+     "page": "https://www.typsa.com/gobernanza-del-dato-e-inteligencia-artificial/"
+    }
+   ],
+   "contact": "https://www.typsa.com/contacto",
+   "emails": [],
+   "pages": [
+    "https://www.typsa.com/",
+    "https://www.typsa.com/gemelos-digitales/",
+    "https://www.typsa.com/gobernanza-del-dato-e-inteligencia-artificial/"
+   ],
+   "score": 14,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2025",
+    "AI topics on its website: machine learning, digital twin, AI in other languages",
+    "Works on bridges, BIM, railways"
+   ]
+  },
+  {
+   "key": "University of Zagreb",
+   "name": "University of Zagreb",
+   "country": "HR",
+   "city": "Zagreb",
+   "website": "https://www.unizg.hr/homepage/",
+   "lat": 45.81444,
+   "lon": 15.97798,
+   "projects": [
+    "oVERFLOw",
+    "CROSScade",
+    "NRE-ElectRA",
+    "RIS Internship programme",
+    "DIMESEE-2",
+    "RIS-RESTORE",
+    "REEBAUX",
+    "DIM ESEE"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:07:40.327Z",
+   "title": "Homepage",
+   "description": "Web stranice Sveučilišta u Zagrebu",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.unizg.hr/homepage/about-university/constituent-units/contact/",
+   "emails": [],
+   "pages": [
+    "https://www.unizg.hr/homepage/",
+    "https://www.unizg.hr/homepage/international-relations/projects-and-networks/",
+    "https://www.unizg.hr/homepage/international-relations/projects-and-networks/international-networks/"
+   ],
+   "score": 13,
+   "reasons": [
+    "8 shared projects with ZAG",
+    "Latest shared project runs to 2025"
+   ]
+  },
+  {
+   "key": "Delft University of Technology",
+   "name": "Delft University of Technology",
+   "country": "NL",
+   "city": "Delft",
+   "website": "https://www.tudelft.nl/en/",
+   "lat": 52.00667,
+   "lon": 4.35556,
+   "projects": [
+    "CINDERELA",
+    "INNOMAT",
+    "BusiSource"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:08:23.632Z",
+   "title": "Delft University of Technology | TU Delft | Challenge. Change. Impact!",
+   "description": "Discover TU Delft, the Netherlands&#039; oldest and largest university of technology, offering world-class education, leading research, 16 bachelor&#039;s and 30+ master&#039;s programmes.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.tudelft.nl/en/research"
+    },
+    {
+     "topic": "AI",
+     "page": "https://www.tudelft.nl/en/research"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://www.tudelft.nl/en/research"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.tudelft.nl/en/"
+    }
+   ],
+   "contact": "https://www.tudelft.nl/en/about-tu-delft/contact",
+   "emails": [
+    "info@tudelft.nl"
+   ],
+   "pages": [
+    "https://www.tudelft.nl/en/",
+    "https://www.tudelft.nl/en/research",
+    "https://www.tudelft.nl/en/research/societal-challenges"
+   ],
+   "score": 13,
+   "reasons": [
+    "3 shared projects with ZAG",
+    "AI topics on its website: artificial intelligence, AI, machine learning",
+    "Works on bridges"
+   ]
+  },
+  {
+   "key": "universidad de navarra",
+   "name": "Universidad de Navarra",
+   "country": "ES",
+   "city": "Pamplona",
+   "website": "https://www.unav.es",
+   "lat": 42.81687,
+   "lon": -1.64323,
+   "projects": [
+    "eRISIKO",
+    "InnoCrossLam"
+   ],
+   "last": 2029,
+   "status": "read",
+   "checked": "2026-11-15T12:11:40.588Z",
+   "title": "Portada. Universidad de Navarra",
+   "description": "",
+   "ai": [
+    {
+     "topic": "data science",
+     "page": "https://www.unav.edu/investigacion/colaboracion-con-empresas/cluster-sostenibilidad-empresa"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.unav.edu/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.unav.edu/investigacion/nuestra-investigacion"
+    },
+    {
+     "topic": "railways",
+     "page": "https://www.unav.edu/investigacion/nuestra-investigacion"
+    }
+   ],
+   "contact": "https://www.unav.edu/noticias/-/contents/27/10/2026/las-verdades-palidecen-si-no-se-ponen-en-contacto-con-eventuales-criticas/content/lovPblW1fC70/201460808",
+   "emails": [],
+   "pages": [
+    "https://www.unav.edu/",
+    "https://www.unav.edu/investigacion/nuestra-investigacion",
+    "https://www.unav.edu/investigacion/colaboracion-con-empresas/cluster-sostenibilidad-empresa"
+   ],
+   "score": 13,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2029",
+    "AI topics on its website: data science, AI in other languages",
+    "Works on bridges, railways"
+   ]
+  },
+  {
+   "key": "University of Ljubljana",
+   "name": "University of Ljubljana",
+   "country": "SI",
+   "city": "Ljubljana",
+   "website": "https://www.uni-lj.si/en/",
+   "lat": 46.05108,
+   "lon": 14.50513,
+   "projects": [
+    "RIS-RESTORE",
+    "SPL-CYCLE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:11:45.656Z",
+   "title": "University of Ljubljana",
+   "description": "Welcome to SilverStripe! This is the default homepage. You can edit this page by opening the CMS.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.uni-lj.si/en"
+    },
+    {
+     "topic": "AI",
+     "page": "https://www.uni-lj.si/en/study/center-digitalna-ul"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://www.uni-lj.si/en"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.uni-lj.si/en/contacts",
+   "emails": [],
+   "pages": [
+    "https://www.uni-lj.si/en",
+    "https://www.uni-lj.si/en/research",
+    "https://www.uni-lj.si/en/study/center-digitalna-ul"
+   ],
+   "score": 13,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2023",
+    "AI topics on its website: artificial intelligence, AI, machine learning"
+   ]
+  },
+  {
+   "key": "hochschule munchen hm",
+   "name": "HM Hochschule München University of Applied Sciences",
+   "country": "DE",
+   "city": "Munich",
+   "website": "https://hm.edu/",
+   "lat": 48.13743,
+   "lon": 11.57549,
+   "projects": [
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:14:47.513Z",
+   "title": "Hochschule M&uuml;nchen &ndash; University of Applied Sciences - Hochschule München",
+   "description": "Die Hochschule M&uuml;nchen &ndash; eine der vielf&auml;ltigsten Hochschulen f&uuml;r angewandte Wissenschaften Deutschlands f&uuml;r Technik, Wirtschaft, Soziales und Design.",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://mucdai.hm.edu/"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://hm.edu/"
+    },
+    {
+     "topic": "data science",
+     "page": "https://mucdai.hm.edu/"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://mucdai.hm.edu/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://hm.edu/hochschule_muenchen/kontakt/umfeld_standort/Standort_und_Lageplaene.de.html",
+   "emails": [],
+   "pages": [
+    "https://hm.edu/",
+    "https://mucdai.hm.edu/",
+    "https://hm.edu/lehren/innovative_lehre__neu_/innovative_lehre_1.de.html"
+   ],
+   "score": 13,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: AI, machine learning, data science, AI in other languages"
+   ]
+  },
+  {
+   "key": "ustav stavebnictva a architektury slovenskej akademie vied verejna vyskumna institucia",
+   "name": "Institute of Construction and Architecture, Slovak Academy of Sciences (Ústav stavebníctva a architektúry SAV, v. v. i.)",
+   "country": "SK",
+   "city": "Bratislava",
+   "website": "https://ustarch.sav.sk/",
+   "lat": 48.14816,
+   "lon": 17.10674,
+   "projects": [
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:15:45.229Z",
+   "title": "Ústav stavebníctva a architektúry SAV, v. v. i.",
+   "description": "Institute of Construction and Architecture - SAS Bratislava",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://ustarch.sav.sk/sk/"
+    },
+    {
+     "topic": "AI",
+     "page": "https://ustarch.sav.sk/sk/"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://ustarch.sav.sk/sk/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "structural health monitoring",
+     "page": "https://ustarch.sav.sk/sk/"
+    },
+    {
+     "topic": "construction materials",
+     "page": "https://ustarch.sav.sk/sk/"
+    }
+   ],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://ustarch.sav.sk/sk/",
+    "https://ustarch.sav.sk/sk/conference-artificial-light-at-night-conference-series/",
+    "https://ustarch.sav.sk/sk/our-project-among-the-top-in-2025/"
+   ],
+   "score": 13,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: artificial intelligence, AI, machine learning",
+    "Works on structural health monitoring, construction materials"
+   ]
+  },
+  {
+   "key": "Bay Zoltan Nonprofit Ltd. for Applied Research",
+   "name": "Bay Zoltan Nonprofit Ltd. for Applied Research",
+   "country": "HU",
+   "city": "Budapest",
+   "website": "http://www.bayzoltan.org",
+   "lat": 47.49801,
+   "lon": 19.03991,
+   "projects": [
+    "RIS-RESTORE",
+    "RIS-ALiCE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:10:00.373Z",
+   "title": "Home - Bay Zoltán Kutatóközpont",
+   "description": "From the development of new materials, alloys and polymers to advanced materials testing, we provide a full range of support tailored to the needs of industry",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.bayzoltan.org/"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://www.bayzoltan.org/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "railways",
+     "page": "https://www.bayzoltan.org/material/tribological-research/"
+    }
+   ],
+   "contact": "https://www.bayzoltan.org/partnership/contacts-with-european-research-institutions-partner-search/",
+   "emails": [],
+   "pages": [
+    "https://www.bayzoltan.org/",
+    "https://www.bayzoltan.org/material/tribological-research/",
+    "https://www.bayzoltan.org/energy/research-and-development-of-systems-supporting-the-optimised-use-and-storage-of-alternative-and-conventional-energy-sources/"
+   ],
+   "score": 12,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2023",
+    "AI topics on its website: AI, machine learning",
+    "Works on railways"
+   ]
+  },
+  {
+   "key": "EPFL",
+   "name": "EPFL",
+   "country": "CH",
+   "city": "Lausanne",
+   "website": "https://www.epfl.ch",
+   "lat": 46.516,
+   "lon": 6.63282,
+   "projects": [
+    "Transcend",
+    "NANOCEM"
+   ],
+   "last": 2014,
+   "status": "read",
+   "checked": "2026-11-15T12:10:28.832Z",
+   "title": "EPFL",
+   "description": "Based in Lausanne (Switzerland), EPFL is a university whose three missions are education, research and innovation.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.epfl.ch/en/"
+    },
+    {
+     "topic": "AI",
+     "page": "https://www.epfl.ch/innovation/"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.epfl.ch/research/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.epfl.ch/innovation/"
+    },
+    {
+     "topic": "construction materials",
+     "page": "https://www.epfl.ch/innovation/"
+    }
+   ],
+   "contact": "https://www.epfl.ch/about/contact-en/",
+   "emails": [],
+   "pages": [
+    "https://www.epfl.ch/en/",
+    "https://www.epfl.ch/research/",
+    "https://www.epfl.ch/innovation/"
+   ],
+   "score": 12,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "AI topics on its website: artificial intelligence, AI, data science",
+    "Works on bridges, construction materials"
+   ]
+  },
+  {
+   "key": "Jozef Stefan Institute",
+   "name": "Jozef Stefan Institute",
+   "country": "SI",
+   "city": "Ljubljana",
+   "website": "https://www.ijs.si",
+   "lat": 46.05108,
+   "lon": 14.50513,
+   "projects": [
+    "GreenRenoV8",
+    "LIFE HIDAQUA",
+    "RusaLCA"
+   ],
+   "last": 2027,
+   "status": "read",
+   "checked": "2026-11-15T12:08:50.753Z",
+   "title": "IJS - Institut \"Jožef Stefan\"",
+   "description": "",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.ijs.si/ijsw"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.ijs.si/ijsw/Ljudje%2C%20kontakti%2C%20imenik",
+   "emails": [
+    "info@ijs.si"
+   ],
+   "pages": [
+    "https://www.ijs.si/ijsw"
+   ],
+   "score": 11,
+   "reasons": [
+    "3 shared projects with ZAG",
+    "Latest shared project runs to 2027",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "VTT Technical Research Centre of Finland",
+   "name": "VTT Technical Research Centre of Finland",
+   "country": "FI",
+   "city": "Espoo",
+   "website": "https://www.vttresearch.com/en",
+   "lat": 60.2052,
+   "lon": 24.6522,
+   "projects": [
+    "ACES",
+    "CORTOOLS",
+    "NUGENIA-PLUS"
+   ],
+   "last": 2024,
+   "status": "read",
+   "checked": "2026-11-15T12:09:36.360Z",
+   "title": "Your R&amp;D partner in sustainable growth | VTT",
+   "description": "We help you to science up your solutions and achieve tomorrow’s breakthroughs.​",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.vttresearch.com/en"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.vttresearch.com/en/contact-us",
+   "emails": [],
+   "pages": [
+    "https://www.vttresearch.com/en",
+    "https://www.vttresearch.com/en",
+    "https://www.vttresearch.com/fi"
+   ],
+   "score": 11,
+   "reasons": [
+    "3 shared projects with ZAG",
+    "Latest shared project runs to 2024",
+    "AI topics on its website: AI"
+   ]
+  },
+  {
+   "key": "BAM, Federal Institute for Materials Research and Testing",
+   "name": "BAM, Federal Institute for Materials Research and Testing",
+   "country": "DE",
+   "city": "Berlin",
+   "website": "https://www.bam.de",
+   "lat": 52.52437,
+   "lon": 13.41053,
+   "projects": [
+    "MetrIAQ",
+    "CHEF"
+   ],
+   "last": 2024,
+   "status": "read",
+   "checked": "2026-11-15T12:09:52.249Z",
+   "title": "Startseite - BAM",
+   "description": "Bundesanstalt f&uuml;r Materialforschung und -pr&uuml;fung (BAM)",
+   "ai": [
+    {
+     "topic": "language models",
+     "page": "https://bam.de/themen/digitalthemen/qi-digital"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "structural health monitoring",
+     "page": "https://bam.de/themen/digitalthemen/qi-digital"
+    },
+    {
+     "topic": "construction materials",
+     "page": "https://bam.de/"
+    }
+   ],
+   "contact": "https://bam.de/ueber-die-bam/kontakt",
+   "emails": [],
+   "pages": [
+    "https://bam.de/",
+    "https://bam.de/themen/digitalthemen",
+    "https://bam.de/themen/digitalthemen/qi-digital"
+   ],
+   "score": 11,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2024",
+    "AI topics on its website: language models",
+    "Works on structural health monitoring, construction materials"
+   ]
+  },
+  {
+   "key": "idener research development aie",
+   "name": "Idener Research & Development Aie",
+   "country": "ES",
+   "city": "Seville",
+   "website": "https://idener.ai/",
+   "lat": 37.38283,
+   "lon": -5.97317,
+   "projects": [
+    "GREEN LOOP"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:15:22.040Z",
+   "title": "idener.ai &#8211; Solving science and engineering challenges using AI",
+   "description": "",
+   "ai": [
+    {
+     "topic": "machine learning",
+     "page": "https://idener.ai/technology/"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://idener.ai/"
+    },
+    {
+     "topic": "data science",
+     "page": "https://idener.ai/technology/"
+    }
+   ],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://idener.ai/",
+    "https://idener.ai/",
+    "https://idener.ai/technology/"
+   ],
+   "score": 11,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2025",
+    "AI topics on its website: machine learning, digital twin, data science"
+   ]
+  },
+  {
+   "key": "metso minerals",
+   "name": "Metso Minerals Oy",
+   "country": "FI",
+   "city": "Espoo",
+   "website": "https://www.metso.com",
+   "lat": 60.2052,
+   "lon": 24.6522,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:16:53.819Z",
+   "title": "Metso - Partner for positive change - Metso",
+   "description": "Metso is a frontrunner in sustainable technologies, end-to-end solutions and services for the aggregates, minerals processing and metals refining industries globally.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.metso.com/"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://www.metso.com/"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://www.metso.com/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.metso.com/contact/locations/",
+   "emails": [],
+   "pages": [
+    "https://www.metso.com/",
+    "https://www.metso.com/corporate/sustainability/our-metso-plus-offering/",
+    "https://www.metso.com/products-and-services/digitalization/"
+   ],
+   "score": 11,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023",
+    "AI topics on its website: artificial intelligence, machine learning, digital twin"
+   ]
+  },
+  {
+   "key": "polo tecnologico alto adriatico andrea galvani societa consortile per azioni",
+   "name": "Polo Tecnologico Alto Adriatico \"Andrea Galvani\" (formerly Polo Tecnologico di Pordenone)",
+   "country": "IT",
+   "city": "Pordenone",
+   "website": "https://www.polotecnologicoaltoadriatico.it/",
+   "lat": 45.95689,
+   "lon": 12.66051,
+   "projects": [
+    "CINDERELA",
+    "RETRACKING"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:17:47.510Z",
+   "title": "Polo Tecnologico Alto Adriatico",
+   "description": "Il Polo Tecnologico Alto Adriatico è un motore per accelerare idee imprenditoriali che si nutrono di trasferimento tecnologico e si avviano alla crescita.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.polotecnologicoaltoadriatico.it/"
+    },
+    {
+     "topic": "AI",
+     "page": "https://www.polotecnologicoaltoadriatico.it/business-unit/artificial-intelligence-ai/"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.polotecnologicoaltoadriatico.it/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "construction materials",
+     "page": "https://www.polotecnologicoaltoadriatico.it/business-unit/artificial-intelligence-ai/"
+    }
+   ],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.polotecnologicoaltoadriatico.it/",
+    "https://www.polotecnologicoaltoadriatico.it/business-unit/artificial-intelligence-ai/",
+    "https://www.polotecnologicoaltoadriatico.it/business-unit/digital-servitization/"
+   ],
+   "score": 11,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "AI topics on its website: artificial intelligence, AI, AI in other languages",
+    "Works on construction materials"
+   ]
+  },
+  {
+   "key": "stichting deltares",
+   "name": "Stichting Deltares",
+   "country": "NL",
+   "city": "Delft",
+   "website": "https://www.deltares.nl",
+   "lat": 52.00667,
+   "lon": 4.35556,
+   "projects": [
+    "GEOLAB"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:18:32.827Z",
+   "title": "Homepage - Enabling Delta Life | Deltares",
+   "description": "As an independent knowledge institute, Deltares works on innovative solutions in the field of water and subsurface. Learn more about our expertise.",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.deltares.nl/en"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://www.deltares.nl/en/research-facilities/research-facilities"
+    },
+    {
+     "topic": "deep learning",
+     "page": "https://www.deltares.nl/en/research-facilities/research-facilities"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.deltares.nl/en/contact",
+   "emails": [],
+   "pages": [
+    "https://www.deltares.nl/en",
+    "https://www.deltares.nl/en/expertise/projects",
+    "https://www.deltares.nl/en/research-facilities/research-facilities"
+   ],
+   "score": 11,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2025",
+    "AI topics on its website: AI, machine learning, deep learning"
+   ]
+  },
+  {
+   "key": "technical university of munich",
+   "name": "Technical University of Munich",
+   "country": "DE",
+   "city": "Munich",
+   "website": "https://www.tum.de",
+   "lat": 48.13743,
+   "lon": 11.57549,
+   "projects": [
+    "InnoCrossLam"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:18:55.626Z",
+   "title": "The Entrepreneurial University - TUM",
+   "description": "Technische Universität München: Eine der führenden deutschen Universitäten für Forschung und Lehre in Natur und Ingenieurwissenschaften.",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.tum.de/"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.tum.de/"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.tum.de/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.tum.de/studium/hilfe-und-beratung/hilfe-im-studium/studieninformation",
+   "emails": [
+    "info@tum.de"
+   ],
+   "pages": [
+    "https://www.tum.de/",
+    "https://www.tum.de/innovation/entrepreneurship/fuer-gruendungsinteressierte/education-offerings",
+    "https://www.tum.de/innovation/entrepreneurship"
+   ],
+   "score": 11,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022",
+    "AI topics on its website: AI, data science, AI in other languages"
+   ]
+  },
+  {
+   "key": "TNO, Netherlands Organisation for Applied Scientific Research",
+   "name": "TNO, Netherlands Organisation for Applied Scientific Research",
+   "country": "NL",
+   "city": "The Hague",
+   "website": "https://www.tno.nl",
+   "lat": 52.07667,
+   "lon": 4.29861,
+   "projects": [
+    "CONSISTEND",
+    "ASCAM"
+   ],
+   "last": 2016,
+   "status": "read",
+   "checked": "2026-11-15T12:11:32.922Z",
+   "title": "Innovation for life | TNO",
+   "description": "Impactvolle innovaties creëren voor duurzaam welzijn en welvaart van de samenleving.",
+   "ai": [
+    {
+     "topic": "machine learning",
+     "page": "https://www.tno.nl/nl/gezond/digitale-gezondheid/patientgerichte-metingen/"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://www.tno.nl/nl"
+    },
+    {
+     "topic": "language models",
+     "page": "https://www.tno.nl/nl"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.tno.nl/nl/over-tno/contact/",
+   "emails": [
+    "info@tno.nl"
+   ],
+   "pages": [
+    "https://www.tno.nl/nl",
+    "https://www.tno.nl/nl/gezond/digitale-gezondheid/",
+    "https://www.tno.nl/nl/gezond/digitale-gezondheid/patientgerichte-metingen/"
+   ],
+   "score": 10,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "AI topics on its website: machine learning, digital twin, language models"
+   ]
+  },
+  {
+   "key": "ume",
+   "name": "UME (TÜBİTAK UME, National Metrology Institute of Türkiye)",
+   "country": "TR",
+   "city": "Gebze",
+   "website": "https://www.ume.tubitak.gov.tr/en",
+   "lat": 40.8028,
+   "lon": 29.4307,
+   "projects": [
+    "TracInd BVK-H"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:19:13.183Z",
+   "title": "UME - National Metrology Institute - TUBITAK UME",
+   "description": "TÜBİTAK National Metrology Institute (UME) is a research and development organization operating to ensure the accuracy and reliability of measurements in Turkey.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.ume.tubitak.gov.tr/en/compass-project-in-which-tubitak-national-metrology-institute-umen-is-a-partner-has-been-awarded-support-by-the-european-commission/"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://www.ume.tubitak.gov.tr/en/ongoing-projects/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.ume.tubitak.gov.tr/en/ongoing-projects/"
+    }
+   ],
+   "contact": "https://www.ume.tubitak.gov.tr/en/contact-us/",
+   "emails": [],
+   "pages": [
+    "https://www.ume.tubitak.gov.tr/en/",
+    "https://www.ume.tubitak.gov.tr/en/ongoing-projects/",
+    "https://www.ume.tubitak.gov.tr/en/compass-project-in-which-tubitak-national-metrology-institute-umen-is-a-partner-has-been-awarded-support-by-the-european-commission/"
+   ],
+   "score": 10,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: artificial intelligence, machine learning",
+    "Works on bridges"
+   ]
+  },
+  {
+   "key": "universita di pisa",
+   "name": "University of Pisa (Università di Pisa)",
+   "country": "IT",
+   "city": "Pisa",
+   "website": "https://www.unipi.it/",
+   "lat": 43.70853,
+   "lon": 10.4036,
+   "projects": [
+    "BUILDCHAIN"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:19:47.580Z",
+   "title": "Home ~ UNIPI",
+   "description": "Conoscenza che trasforma il mondo Pause Conoscenza che trasforma il mondo Pause I corsi di laurea Scegli tra i corsi di laurea triennale, magistrale e a ciclo unico dell’Università di Pisa Connessioni Il 27 novembre la reunion degli Alumni ",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.unipi.it/"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.unipi.it/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "construction materials",
+     "page": "https://www.unipi.it/innovazione/"
+    }
+   ],
+   "contact": "https://www.unipi.it/didattica/segreterie/sedi-e-contatti/",
+   "emails": [],
+   "pages": [
+    "https://www.unipi.it/",
+    "https://www.unipi.it/ricerca/",
+    "https://www.unipi.it/innovazione/"
+   ],
+   "score": 10,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2025",
+    "AI topics on its website: artificial intelligence, AI in other languages",
+    "Works on construction materials"
+   ]
+  },
+  {
+   "key": "instytut ekologii terenow uprzemysowionych",
+   "name": "Instytut Ekologii Terenów Uprzemysłowionych",
+   "country": "PL",
+   "city": "Katowice",
+   "website": "https://ietu.pl/en",
+   "lat": 50.25841,
+   "lon": 19.02754,
+   "projects": [
+    "ReBuilt",
+    "LIFEproETV",
+    "CINDERELA"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:08:48.590Z",
+   "title": "Home | IETU",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://ietu.pl/en/contact/",
+   "emails": [],
+   "pages": [
+    "https://ietu.pl/en/",
+    "http://ietu.pl/en/ongoing-projects/",
+    "https://ietu.pl/en/ongoing-projects/"
+   ],
+   "score": 9,
+   "reasons": [
+    "3 shared projects with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "chamber of commerce and industry of slovenia",
+   "name": "Chamber of Commerce and Industry of Slovenia",
+   "country": "SI",
+   "city": "Ljubljana",
+   "website": "https://www.gzs.si/",
+   "lat": 46.05108,
+   "lon": 14.50513,
+   "projects": [
+    "ReInd-BBG",
+    "REBIRTH"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:10:10.790Z",
+   "title": "Gospodarska zbornica Slovenije",
+   "description": "Največje samostojno, prostovoljno, interesno in nepridobitno združenje gospodarstva",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.gzs.si/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.gzs.si/o_gzs/vsebina/Kontakt-kje-smo",
+   "emails": [
+    "info@gzs.si"
+   ],
+   "pages": [
+    "https://www.gzs.si/"
+   ],
+   "score": 9,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "RINA Consulting",
+   "name": "RINA Consulting",
+   "country": "IT",
+   "city": "Genoa",
+   "website": "https://www.rina.org",
+   "lat": 44.40478,
+   "lon": 8.94439,
+   "projects": [
+    "BRIMEE"
+   ],
+   "last": 2017,
+   "status": "read",
+   "checked": "2026-11-15T12:17:54.970Z",
+   "title": "Our experience. Your growth. - RINA.org",
+   "description": "We work closely with customers, assisting them in the most effective, safe and sustainable way across the Energy, Marine, Certification, Transport &amp; Infrastructure and Industry sectors",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.rina.org/en"
+    },
+    {
+     "topic": "AI",
+     "page": "https://www.rina.org/en"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://www.rina.org/en/business/digital-solutions"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "earthquake engineering",
+     "page": "https://www.rina.org/en/business/digital-solutions"
+    }
+   ],
+   "contact": "https://www.rina.org/en/common/contacts",
+   "emails": [],
+   "pages": [
+    "https://www.rina.org/en",
+    "https://www.rina.org/en/business/digital-solutions",
+    "https://www.rina.org/en/expertise/innovation-laboratories"
+   ],
+   "score": 9,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: artificial intelligence, AI, digital twin",
+    "Works on earthquake engineering"
+   ]
+  },
+  {
+   "key": "AIT Austrian Institute of Technology",
+   "name": "AIT Austrian Institute of Technology",
+   "country": "AT",
+   "city": "Vienna",
+   "website": "https://www.ait.ac.at",
+   "lat": 48.20849,
+   "lon": 16.37208,
+   "projects": [
+    "ROSANNE",
+    "MIRAVEC",
+    "TYROSAFE",
+    "SPENS"
+   ],
+   "last": 2016,
+   "status": "read",
+   "checked": "2026-11-15T12:07:46.101Z",
+   "title": "Sicherheitsüberprüfung / Security Check",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.ait.ac.at/"
+   ],
+   "score": 8,
+   "reasons": [
+    "4 shared projects with ZAG"
+   ]
+  },
+  {
+   "key": "fundacion benefico docente gomez pardo",
+   "name": "Fundación Gómez Pardo",
+   "country": "ES",
+   "city": "Madrid",
+   "website": "https://fundaciongomezpardo.es/",
+   "lat": 40.4165,
+   "lon": -3.70256,
+   "projects": [
+    "CINDERELA",
+    "3DBRIEFCASE",
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:08:27.134Z",
+   "title": "Fundación Gómez Pardo",
+   "description": "",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://fundaciongomezpardo.es/"
+    }
+   ],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://fundaciongomezpardo.es/",
+    "https://fundaciongomezpardo.es/cursos/tecnicas-de-inteligencia-artificial-aplicadas-a-la-produccion-de-energia-eolica-nivel-inicial/"
+   ],
+   "score": 8,
+   "reasons": [
+    "3 shared projects with ZAG",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "University College Dublin",
+   "name": "University College Dublin",
+   "country": "IE",
+   "city": "Dublin",
+   "website": "https://www.ucd.ie",
+   "lat": 53.33306,
+   "lon": -6.24889,
+   "projects": [
+    "SmartRail",
+    "YEAR 2010",
+    "YEAR 2008"
+   ],
+   "last": 2014,
+   "status": "read",
+   "checked": "2026-11-15T12:09:33.065Z",
+   "title": "University College Dublin",
+   "description": "UCD is one of Europe",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.ucd.ie/research/"
+    }
+   ],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.ucd.ie/",
+    "https://www.ucd.ie/researchandinnovation/",
+    "https://www.ucd.ie/research/"
+   ],
+   "score": 8,
+   "reasons": [
+    "3 shared projects with ZAG",
+    "AI topics on its website: AI"
+   ]
+  },
+  {
+   "key": "KTI, Institute for Transport Sciences",
+   "name": "KTI, Institute for Transport Sciences",
+   "country": "HU",
+   "city": "Budapest",
+   "website": "https://www.kti.hu",
+   "lat": 47.49801,
+   "lon": 19.03991,
+   "projects": [
+    "RENOINVEST",
+    "SPENS"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:11:08.173Z",
+   "title": "Közlekedéstudományi és Építésügyi Minőségellenőrző Intézet",
+   "description": "",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.kti.hu/hpc-es-digitalizacio-az-innovacio-jovojenek-kulcsa/"
+    }
+   ],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.kti.hu/",
+    "https://www.kti.hu/projects/ginop-plusz-5-2-1-23/",
+    "https://www.kti.hu/hpc-es-digitalizacio-az-innovacio-jovojenek-kulcsa/"
+   ],
+   "score": 8,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2026",
+    "Works on bridges"
+   ]
+  },
+  {
+   "key": "eurac research",
+   "name": "EURAC Research",
+   "country": "IT",
+   "city": "Bolzano",
+   "website": "https://www.eurac.edu",
+   "lat": 46.4983,
+   "lon": 11.3548,
+   "projects": [
+    "MEZeroE"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:13:40.630Z",
+   "title": "Eurac Research - Eurac Research",
+   "description": "Eurac Research is a private research center​ based in Bozen-Bolzano. Our researchers come from a wide variety of scientific fields and all parts of the world.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.eurac.edu/en"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "construction materials",
+     "page": "https://www.eurac.edu/en/about-us-eurac-research"
+    }
+   ],
+   "contact": "https://www.eurac.edu/en/contact",
+   "emails": [],
+   "pages": [
+    "https://www.eurac.edu/en",
+    "https://www.eurac.edu/en/about-us-eurac-research",
+    "https://www.eurac.edu/en/institutes-centers/center-for-global-mountain-safeguard-research"
+   ],
+   "score": 8,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: artificial intelligence",
+    "Works on construction materials"
+   ]
+  },
+  {
+   "key": "envirotis",
+   "name": "Envirotis",
+   "country": "HU",
+   "city": "Tata",
+   "website": "https://www.envirotis.hu",
+   "lat": 47.65289,
+   "lon": 18.31838,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:14:08.798Z",
+   "title": "Home",
+   "description": "",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.envirotis.hu/en/projects?view=article&id=89:koetiviepb-ltd-projects&catid=25"
+    },
+    {
+     "topic": "construction materials",
+     "page": "https://www.envirotis.hu/en/projects?view=article&id=89:koetiviepb-ltd-projects&catid=25"
+    },
+    {
+     "topic": "railways",
+     "page": "https://www.envirotis.hu/en/projects?view=article&id=89:koetiviepb-ltd-projects&catid=25"
+    }
+   ],
+   "contact": "https://www.envirotis.hu/en/contact",
+   "emails": [
+    "info@envirotis.hu"
+   ],
+   "pages": [
+    "https://www.envirotis.hu/en/",
+    "https://www.envirotis.hu/en/projects",
+    "https://www.envirotis.hu/en/projects?view=article&id=89:koetiviepb-ltd-projects&catid=25"
+   ],
+   "score": 8,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023",
+    "Works on bridges, construction materials, railways"
+   ]
+  },
+  {
+   "key": "Fraunhofer Gesellschaft",
+   "name": "Fraunhofer Gesellschaft",
+   "country": "DE",
+   "city": "Munich",
+   "website": "https://www.fraunhofer.de",
+   "lat": 48.13743,
+   "lon": 11.57549,
+   "projects": [
+    "COST-EFFECTIVE"
+   ],
+   "last": 2012,
+   "status": "read",
+   "checked": "2026-11-15T12:14:29.874Z",
+   "title": "Startseite Fraunhofer-Gesellschaft",
+   "description": "Die Fraunhofer-Gesellschaft mit Sitz in Deutschland ist eine der führenden Organisationen für anwendungsorientierte Forschung mit Forschungsschwerpunkten in zukunftsrelevanten Schlüsseltechnologien und dem Transfer von Forschungsergebnissen",
+   "ai": [
+    {
+     "topic": "machine learning",
+     "page": "https://www.fraunhofer.de/de/fuer-kunden-und-partner/digitalwirtschaft.html"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.fraunhofer.de/"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.fraunhofer.de/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.fraunhofer.de/de/kontakt-zentrale.html",
+   "emails": [],
+   "pages": [
+    "https://www.fraunhofer.de/",
+    "https://www.fraunhofer.de/de/fuer-kunden-und-partner/digitalwirtschaft.html",
+    "https://www.fraunhofer.de/de/ueber-fraunhofer/wissenschaftliche-exzellenz/pakt-fuer-forschung-und-innovation.html"
+   ],
+   "score": 8,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: machine learning, data science, AI in other languages"
+   ]
+  },
+  {
+   "key": "grad labin",
+   "name": "Grad Labin",
+   "country": "HR",
+   "city": "Labin",
+   "website": "https://www.labin.hr",
+   "lat": 45.095,
+   "lon": 14.11972,
+   "projects": [
+    "MINE TOUR",
+    "MINE STORY"
+   ],
+   "last": 2028,
+   "status": "read",
+   "checked": "2026-11-15T12:14:41.499Z",
+   "title": "Naslovna | Grad Labin",
+   "description": "Informacije o gradskoj upravi, javnim ustanovama, projektima i planovima Grada Labina, komunikacija građana s javnom upravom - sve na jednom mjestu!",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "earthquake engineering",
+     "page": "https://labin.hr/"
+    }
+   ],
+   "contact": "https://labin.hr/kontakt",
+   "emails": [],
+   "pages": [
+    "https://labin.hr/"
+   ],
+   "score": 8,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2028",
+    "Works on earthquake engineering"
+   ]
+  },
+  {
+   "key": "outotec",
+   "name": "Metso Corporation (Metso Oyj)",
+   "country": "FI",
+   "city": "Espoo",
+   "website": "https://www.metso.com",
+   "lat": 60.2052,
+   "lon": 24.6522,
+   "projects": [
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:16:49.925Z",
+   "title": "Metso - Partner for positive change - Metso",
+   "description": "Metso is a frontrunner in sustainable technologies, end-to-end solutions and services for the aggregates, minerals processing and metals refining industries globally.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.metso.com/"
+    },
+    {
+     "topic": "machine learning",
+     "page": "https://www.metso.com/"
+    },
+    {
+     "topic": "digital twin",
+     "page": "https://www.metso.com/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.metso.com/contact/locations/",
+   "emails": [],
+   "pages": [
+    "https://www.metso.com/",
+    "https://www.metso.com/corporate/sustainability/our-metso-plus-offering/",
+    "https://www.metso.com/products-and-services/digitalization/"
+   ],
+   "score": 8,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: artificial intelligence, machine learning, digital twin"
+   ]
+  },
+  {
+   "key": "alma mater studiorum universita di bologna",
+   "name": "University of Bologna (Alma Mater Studiorum - Università di Bologna)",
+   "country": "IT",
+   "city": "Bologna",
+   "website": "https://www.unibo.it/en",
+   "lat": 44.49381,
+   "lon": 11.33875,
+   "projects": [
+    "ADRISEISMIC"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:19:29.463Z",
+   "title": "University of Bologna",
+   "description": "",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.unibo.it/en"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.unibo.it/en"
+    }
+   ],
+   "contact": "https://www.unibo.it/en/university/contacts",
+   "emails": [],
+   "pages": [
+    "https://www.unibo.it/en",
+    "https://www.unibo.it/en/research",
+    "https://www.unibo.it/en/research/research-in-numbers-1"
+   ],
+   "score": 8,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022",
+    "AI topics on its website: artificial intelligence",
+    "Works on bridges"
+   ]
+  },
+  {
+   "key": "university of modena and reggio emilia",
+   "name": "Università degli Studi di Modena e Reggio Emilia",
+   "country": "IT",
+   "city": "Modena",
+   "website": "https://www.unimore.it/",
+   "lat": 44.64783,
+   "lon": 10.92539,
+   "projects": [
+    "FLOW"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:20:03.123Z",
+   "title": "Home page | Università degli Studi di Modena e Reggio Emilia",
+   "description": "",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.unimore.it/it/didattica/dottorati-di-ricerca"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.unimore.it/it/didattica/dottorati-di-ricerca"
+    },
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.unimore.it/it/didattica/dottorati-di-ricerca"
+    }
+   ],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.unimore.it/it",
+    "https://www.unimore.it/it/didattica/dottorati-di-ricerca",
+    "https://www.unimore.it/it/ricerca"
+   ],
+   "score": 8,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: AI, data science, AI in other languages"
+   ]
+  },
+  {
+   "key": "Universite Gustave Eiffel (IFSTTAR, LCPC)",
+   "name": "Universite Gustave Eiffel (IFSTTAR, LCPC)",
+   "country": "FR",
+   "city": "Marne-la-Vallée",
+   "website": "https://www.univ-gustave-eiffel.fr/en",
+   "lat": 48.85,
+   "lon": 2.6,
+   "projects": [
+    "EVITA",
+    "ENR2",
+    "DIRECT-MAT"
+   ],
+   "last": 2012,
+   "status": "read",
+   "checked": "2026-11-15T12:09:29.709Z",
+   "title": "Home",
+   "description": "Descr OG Home",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.univ-gustave-eiffel.fr/en/university/our-project"
+    }
+   ],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.univ-gustave-eiffel.fr/en",
+    "https://www.univ-gustave-eiffel.fr/en/university/our-project",
+    "https://www.univ-gustave-eiffel.fr/en/university/our-transformative-projects"
+   ],
+   "score": 7,
+   "reasons": [
+    "3 shared projects with ZAG",
+    "Works on bridges"
+   ]
+  },
+  {
+   "key": "agence nationale pour la gestion des dechets radioactifs",
+   "name": "Agence Nationale Pour la Gestion des Dechets Radioactifs",
+   "country": "FR",
+   "city": "Châtenay-Malabry",
+   "website": "https://www.andra.fr",
+   "lat": 48.765,
+   "lon": 2.267,
+   "projects": [
+    "EURAD-2",
+    "EURAD"
+   ],
+   "last": 2029,
+   "status": "read",
+   "checked": "2026-11-15T12:09:37.843Z",
+   "title": "",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.andra.fr/"
+   ],
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2029"
+   ]
+  },
+  {
+   "key": "ciemat",
+   "name": "Centro de Investigaciones Energeticas Medioambientales y Tecnologicas (CIEMAT)",
+   "country": "ES",
+   "city": "Madrid",
+   "website": "https://www.ciemat.es/",
+   "lat": 40.4165,
+   "lon": -3.70256,
+   "projects": [
+    "CONNECT-NM",
+    "MEACTOS"
+   ],
+   "last": 2029,
+   "status": "not reachable",
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2029"
+   ]
+  },
+  {
+   "key": "jsc elem",
+   "name": "Elektrani na Severna Makedonija (ESM)",
+   "country": "MK",
+   "city": "Skopje",
+   "website": "https://www.esm.com.mk",
+   "lat": 41.99646,
+   "lon": 21.43141,
+   "projects": [
+    "RIS-ALiCE",
+    "RIS-CuRE"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:10:32.012Z",
+   "title": "АД. ЕСМ",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [
+    "contact@elem.com.mk"
+   ],
+   "pages": [
+    "https://www.esm.com.mk/"
+   ],
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "faculty of technology university of novi sad",
+   "name": "Faculty of Technology Novi Sad",
+   "country": "RS",
+   "city": "Novi Sad",
+   "website": "https://www.tf.uns.ac.rs",
+   "lat": 45.25167,
+   "lon": 19.83694,
+   "projects": [
+    "HEROMAT",
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:10:35.258Z",
+   "title": "Почетна - Технолошки факултет Нови Сад",
+   "description": "Zvanični sajt Tehnološkog fakulteta Novi Sad, Univerziteta u Novom Sadu – informacije o studijskim programima, upisu, nastavi, nauci, međunarodnoj saradnji i aktivnostima fakulteta.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.tf.uns.ac.rs/o-nama/kontakt.html",
+   "emails": [],
+   "pages": [
+    "https://www.tf.uns.ac.rs/"
+   ],
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "javno podjetje nigrad komunalno podjetje",
+   "name": "Javno podjetje Nigrad, komunalno podjetje, d. o. o.",
+   "country": "SI",
+   "city": "Maribor",
+   "website": "https://www.nigrad.si/",
+   "lat": 46.55472,
+   "lon": 15.64667,
+   "projects": [
+    "CINDERELA",
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:11:02.541Z",
+   "title": "Domov &#8211; Nigrad Maribor | komunalno podjetje",
+   "description": "Najbolj iskano Cestne zapore Obvezno praznjenje greznice ali MKČN Vloge inobrazci E-račun in trajnik Čigave storitve plačujem s Nigradovo položnico Pregled izdanih položnic Aktualno Preglednik vsebin Dejavnosti",
+   "ai": [],
+   "infra": [],
+   "contact": "https://nigrad.si/kontakti/",
+   "emails": [
+    "info@nigrad.si"
+   ],
+   "pages": [
+    "https://nigrad.si/"
+   ],
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "ministry of the environment and spatial planning of the republic of slovenia",
+   "name": "Ministry of the Environment and Spatial Planning",
+   "country": "SI",
+   "city": "Ljubljana",
+   "website": "https://www.gov.si/en/state-authorities/ministries/ministry-of-the-environment-and-spatial-planning/",
+   "lat": 46.05108,
+   "lon": 14.50513,
+   "projects": [
+    "LIFE IP RESTART",
+    "LIFE IP CARE4CLIMATE"
+   ],
+   "last": 2030,
+   "status": "read",
+   "checked": "2026-11-15T12:11:11.570Z",
+   "title": "Ministry of the Environment and Spatial Planning | GOV.SI",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.gov.si/en/state-authorities/ministries/ministry-of-the-environment-and-spatial-planning/",
+    "https://www.gov.si/en/state-authorities/ministries/ministry-of-the-environment-and-spatial-planning/topics-and-projects/"
+   ],
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2030"
+   ]
+  },
+  {
+   "key": "National Technical University of Athens",
+   "name": "National Technical University of Athens",
+   "country": "GR",
+   "city": "Zografou",
+   "website": "https://www.ntua.gr/en/",
+   "lat": 37.97574,
+   "lon": 23.76911,
+   "projects": [
+    "RIS-RESTORE",
+    "SPL-CYCLE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:11:16.488Z",
+   "title": "NATIONAL TECHNICAL UNIVERSITY OF ATHENS",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.ntua.gr/en/contact/general-information",
+   "emails": [],
+   "pages": [
+    "https://www.ntua.gr/en/",
+    "https://www.ntua.gr/en/school/research"
+   ],
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "opencontent societa cooperativa",
+   "name": "Opencontent S.c.a.r.l",
+   "country": "IT",
+   "city": "Trento",
+   "website": "https://www.opencontent.it/",
+   "lat": 46.06787,
+   "lon": 11.12108,
+   "projects": [
+    "CINDERELA",
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:11:18.563Z",
+   "title": "OpenContent",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.opencontent.it/"
+   ],
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "oulun yliopisto",
+   "name": "Oulun Yliopisto",
+   "country": "FI",
+   "city": "Oulu",
+   "website": "https://www.oulu.fi",
+   "lat": 65.01236,
+   "lon": 25.46816,
+   "projects": [
+    "AshCycle",
+    "FLOW"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:11:26.294Z",
+   "title": "Oulun yliopisto",
+   "description": "Oulun yliopisto on kansainvälisesti toimiva tiedeyliopisto, joka tuottaa uutta tieteellistä tietoa ja siihen perustuvia ratkaisuja sekä kouluttaa tulevaisuuden suunnannäyttäjiä.",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.oulu.fi/fi",
+    "https://www.oulu.fi/fi/yliopisto/digitalisaatio-tekoaly-ja-data-ihmiskunnan-palveluksessa"
+   ],
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "riga technical university",
+   "name": "Riga Technical University",
+   "country": "LV",
+   "city": "Riga",
+   "website": "https://www.rtu.lv",
+   "lat": 56.946,
+   "lon": 24.10589,
+   "projects": [
+    "EPICENTRE",
+    "TRANSITION"
+   ],
+   "last": 2026,
+   "status": "not reachable",
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "CEA, French Alternative Energies and Atomic Energy Commission",
+   "name": "CEA, French Alternative Energies and Atomic Energy Commission",
+   "country": "FR",
+   "city": "Paris",
+   "website": "https://www.cea.fr",
+   "lat": 48.85341,
+   "lon": 2.3488,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:13:01.829Z",
+   "title": "Recherche et innovation - Le CEA, acteur majeur de la recherche au service de l'Etat, de l'économie et des citoyens.",
+   "description": "Le CEA est un acteur majeur de la recherche, au service de l",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.cea.fr/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.cea.fr/Pages/le-cea/les-centres-cea.aspx",
+   "emails": [],
+   "pages": [
+    "https://www.cea.fr/",
+    "https://www.cea.fr/Pages/le-cea/acteur-clef-de-la-recherche-technologique.aspx",
+    "https://www.cea.fr/drf"
+   ],
+   "score": 7,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "fakulteta za tehnologijo polimerov",
+   "name": "Fakulteta za tehnologijo polimerov",
+   "country": "SI",
+   "city": "Slovenj Gradec",
+   "website": "https://www.ftpo.eu",
+   "lat": 46.51028,
+   "lon": 15.08056,
+   "projects": [
+    "ADDCIRCLES"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:14:23.136Z",
+   "title": "FTPO | Fakulteta za tehnologijo polimerov",
+   "description": "",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.ftpo.eu/Aktualno/Dogodki/polimerni-ve%c4%8der-industrija-40-in-digitalizacija-pri-brizganju"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.ftpo.eu/O-nas/Kontakt",
+   "emails": [],
+   "pages": [
+    "https://www.ftpo.eu/",
+    "https://www.ftpo.eu/Aktualno/Dogodki/polimerni-ve%c4%8der-industrija-40-in-digitalizacija-pri-brizganju"
+   ],
+   "score": 7,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "heidelberg materials",
+   "name": "Heidelberg Materials Ag",
+   "country": "DE",
+   "city": "Heidelberg",
+   "website": "https://www.heidelbergmaterials.com/",
+   "lat": 49.40768,
+   "lon": 8.69079,
+   "projects": [
+    "EnDurCrete"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:14:52.755Z",
+   "title": "Making a material difference | Heidelberg Materials",
+   "description": "Discover Heidelberg Materials, a global leader in building materials. Learn about our products like cement, aggregates, and concrete.",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.heidelbergmaterials.com/en"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.heidelbergmaterials.com/en/150-years-of-innovation-heidelberg-materials"
+    },
+    {
+     "topic": "construction materials",
+     "page": "https://www.heidelbergmaterials.com/en"
+    },
+    {
+     "topic": "railways",
+     "page": "https://www.heidelbergmaterials.com/en/products-and-services/reference-projects"
+    }
+   ],
+   "contact": "https://www.heidelbergmaterials.com/en/contact-us",
+   "emails": [],
+   "pages": [
+    "https://www.heidelbergmaterials.com/en",
+    "https://www.heidelbergmaterials.com/en/150-years-of-innovation-heidelberg-materials",
+    "https://www.heidelbergmaterials.com/en/products-and-services/reference-projects"
+   ],
+   "score": 7,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: AI",
+    "Works on bridges, construction materials, railways"
+   ]
+  },
+  {
+   "key": "priemyselny inovacny klaster",
+   "name": "Industry Innovation Cluster (IIC)",
+   "country": "SK",
+   "city": "Bratislava",
+   "website": "http://www.industryinnovationcluster.sk",
+   "lat": 48.1486,
+   "lon": 17.1077,
+   "projects": [
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:15:28.552Z",
+   "title": "Industry Innovation Cluster &#8211; Innovating Industry. Empowering the Future.",
+   "description": "",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.industryinnovationcluster.sk/about-us/"
+    }
+   ],
+   "infra": [],
+   "contact": null,
+   "emails": [
+    "info@industryinnovationcluster.sk"
+   ],
+   "pages": [
+    "https://www.industryinnovationcluster.sk/",
+    "https://www.industryinnovationcluster.sk/",
+    "https://www.industryinnovationcluster.sk/about-us/"
+   ],
+   "score": 7,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: artificial intelligence"
+   ]
+  },
+  {
+   "key": "mytilineos holdings",
+   "name": "Metlen Energy & Metals S.A. (formerly Mytilineos)",
+   "country": "GR",
+   "city": "Marousi",
+   "website": "https://www.metlen.com/",
+   "lat": 38.05,
+   "lon": 23.8,
+   "projects": [
+    "SPL-CYCLE",
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:16:44.066Z",
+   "title": "METLEN - Metlen Εnergy &amp; Metals",
+   "description": "Welcome to the corporate website of Metlen, a leading global industrial and energy company, operating in more than 30 countries.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.metlen.com/contact-us/",
+   "emails": [],
+   "pages": [
+    "https://www.metlen.com/",
+    "https://www.metlen.com/news/company-news/metlen-and-tsakos-group-construction-begins-on-one-of-greece-s-largest-hybrid-renewable-energy-projects/"
+   ],
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "nobatek",
+   "name": "Nobatek",
+   "country": "FR",
+   "city": "Anglet",
+   "website": "https://www.nobatek.com",
+   "lat": 43.47664,
+   "lon": -1.51346,
+   "projects": [
+    "STAR-track"
+   ],
+   "last": 2027,
+   "status": "read",
+   "checked": "2026-11-15T12:17:08.533Z",
+   "title": "NOBATEK - Impulser les mutations du bâtiment pour construire un avenir viable",
+   "description": "Collective et coopérative, NOBATEK avance depuis plus de 20 ans pour sécuriser et dynamiser dans toute la France, les projets de transition, d’innovation et de…",
+   "ai": [
+    {
+     "topic": "digital twin",
+     "page": "https://www.nobatek.com/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.nobatek.com/contact/",
+   "emails": [],
+   "pages": [
+    "https://www.nobatek.com/",
+    "https://www.nobatek.com/?s=&type=any"
+   ],
+   "score": 7,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2027",
+    "AI topics on its website: digital twin"
+   ]
+  },
+  {
+   "key": "ptb",
+   "name": "Physikalisch-Technische Bundesanstalt (PTB)",
+   "country": "DE",
+   "city": "Braunschweig",
+   "website": "https://www.ptb.de",
+   "lat": 52.26594,
+   "lon": 10.52673,
+   "projects": [
+    "ComTraForce"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:17:17.226Z",
+   "title": "Physikalisch-Technische Bundesanstalt: Home",
+   "description": "Die Physikalisch-Technische Bundesanstalt (PTB), Braunschweig und Berlin, ist das nationale Metrologie-Institut mit wissenschaftlich-technischen Dienstleistungsaufgaben. Sie misst mit höchster Genauigkeit und Zuverlässigkeit – Metrologie al",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.ptb.de/cms/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.ptb.de/cms/meta/kontakt/",
+   "emails": [],
+   "pages": [
+    "https://www.ptb.de/cms/",
+    "https://www.ptb.de/cms/forschung-entwicklung/",
+    "https://www.ptb.de/cms/forschung-entwicklung/arbeits-und-forschungsprogramm/"
+   ],
+   "score": 7,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "Politecnico di Milano",
+   "name": "Politecnico di Milano",
+   "country": "IT",
+   "city": "Milan",
+   "website": "https://www.polimi.it/en/",
+   "lat": 45.46427,
+   "lon": 9.18951,
+   "projects": [
+    "BRIDGITISE",
+    "MESCEL"
+   ],
+   "last": 2027,
+   "status": "not reachable",
+   "score": 7,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2027"
+   ]
+  },
+  {
+   "key": "Roughan and O'Donovan",
+   "name": "Roughan and O'Donovan",
+   "country": "IE",
+   "city": "Dublin",
+   "website": "https://www.rod.ie/",
+   "lat": 53.33306,
+   "lon": -6.24889,
+   "projects": [
+    "RE-GEN"
+   ],
+   "last": 2016,
+   "status": "read",
+   "checked": "2026-11-15T12:18:17.744Z",
+   "title": "Home | ROD",
+   "description": "",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.rod.ie/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "structural health monitoring",
+     "page": "https://www.rod.ie/expertise/markets/research"
+    },
+    {
+     "topic": "bridges",
+     "page": "https://www.rod.ie/"
+    },
+    {
+     "topic": "BIM",
+     "page": "https://www.rod.ie/expertise/markets/research"
+    },
+    {
+     "topic": "railways",
+     "page": "https://www.rod.ie/"
+    }
+   ],
+   "contact": "https://www.rod.ie/about-us/contact-us",
+   "emails": [
+    "info@rod.ie"
+   ],
+   "pages": [
+    "https://www.rod.ie/",
+    "https://www.rod.ie/expertise/markets/research",
+    "https://www.rod.ie/expertise/services/project-management"
+   ],
+   "score": 7,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: artificial intelligence",
+    "Works on structural health monitoring, bridges, BIM, railways"
+   ]
+  },
+  {
+   "key": "wirtschaftskammer karnten",
+   "name": "Wirtschaftskammer Kärnten",
+   "country": "AT",
+   "city": "Klagenfurt",
+   "website": "https://www.wko.at",
+   "lat": 46.62472,
+   "lon": 14.30528,
+   "projects": [
+    "VIRIDI"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:20:12.998Z",
+   "title": "WKO.at - das Portal der Wirtschaftskammern - WKO",
+   "description": "Informationen, Services und Beratungsangebote der WKO für Unternehmerinnen und Unternehmer",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.wko.at/digitalisierung/kuenstliche-intelligenz"
+    }
+   ],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.wko.at/",
+    "https://www.wko.at/steuern/elektronischer-beleg-digitale-belegmitnahme-ab-oktober-2026",
+    "https://www.wko.at/digitalisierung/kuenstliche-intelligenz"
+   ],
+   "score": 7,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "VTI, Swedish National Road and Transport Research Institute",
+   "name": "VTI, Swedish National Road and Transport Research Institute",
+   "country": "SE",
+   "city": "Linköping",
+   "website": "https://www.vti.se",
+   "lat": 58.41086,
+   "lon": 15.62157,
+   "projects": [
+    "TRIMM",
+    "RE-ROAD",
+    "SPENS"
+   ],
+   "last": 2014,
+   "status": "read",
+   "checked": "2026-11-15T12:08:19.571Z",
+   "title": "vti.se - vti.se",
+   "description": "VTI är ett oberoende och internationellt framstående forskningsinstitut.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.vti.se/om-vti/kontakta-vti",
+   "emails": [],
+   "pages": [
+    "https://www.vti.se/",
+    "https://www.vti.se/webbplatsen/hitta-snabbt/hur-vi-anvander-ai"
+   ],
+   "score": 6,
+   "reasons": [
+    "3 shared projects with ZAG"
+   ]
+  },
+  {
+   "key": "civil engineering institute macedonia",
+   "name": "Civil Engineering Institute Macedonia AD Skopje",
+   "country": "MK",
+   "city": "Skopje",
+   "website": "",
+   "lat": 41.99646,
+   "lon": 21.43141,
+   "projects": [
+    "CINDERELA",
+    "RIS-CuRE",
+    "RIS-RECOVER"
+   ],
+   "last": 2021,
+   "status": "no website listed",
+   "score": 6,
+   "reasons": [
+    "3 shared projects with ZAG"
+   ]
+  },
+  {
+   "key": "consiglio nazionale delle ricerche",
+   "name": "Consiglio Nazionale delle Ricerche (CNR)",
+   "country": "IT",
+   "city": "Rome",
+   "website": "https://www.cnr.it/en",
+   "lat": 41.89193,
+   "lon": 12.51133,
+   "projects": [
+    "BloW-uP",
+    "InnoWEE"
+   ],
+   "last": 2020,
+   "status": "read",
+   "checked": "2026-11-15T12:10:15.346Z",
+   "title": "Home | Consiglio Nazionale delle Ricerche",
+   "description": "",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.cnr.it/en"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.cnr.it/en/contatti",
+   "emails": [],
+   "pages": [
+    "https://www.cnr.it/en",
+    "https://www.cnr.it/en/channels/researchers",
+    "https://www.cnr.it/en/structure/dcsr/direzione-centrale-servizi-per-la-ricerca"
+   ],
+   "score": 6,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "salonit anhovo d d",
+   "name": "Alpacem Cement, d.d.",
+   "country": "SI",
+   "city": "Deskle",
+   "website": "https://alpacem.si/",
+   "lat": 46.05307,
+   "lon": 13.61382,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:12:06.840Z",
+   "title": "Domov - Alpacem",
+   "description": "",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "construction materials",
+     "page": "https://alpacem.si/"
+    }
+   ],
+   "contact": "https://alpacem.si/kontakti/",
+   "emails": [
+    "info.cement@alpacem.si",
+    "info.beton@alpacem.si",
+    "info.kamnolomi@alpacem.si"
+   ],
+   "pages": [
+    "https://alpacem.si/"
+   ],
+   "score": 6,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022",
+    "Works on construction materials"
+   ]
+  },
+  {
+   "key": "universita commerciale luigi bocconi",
+   "name": "Bocconi University (Università Bocconi)",
+   "country": "IT",
+   "city": "Milan",
+   "website": "https://www.unibocconi.it/",
+   "lat": 45.46427,
+   "lon": 9.18951,
+   "projects": [
+    "CINDERELA"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:12:54.600Z",
+   "title": "Università Bocconi",
+   "description": "La Bocconi è tra le principali università europee specializzate nelle scienze sociali, con un&#039;offerta che comprende le aree di economia, finanza, management, studi giuridici, scienze politiche, data e computer science con una crescente",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.unibocconi.it/it/docenti-e-ricerca/docenti"
+    },
+    {
+     "topic": "data science",
+     "page": "https://www.unibocconi.it/it/docenti-e-ricerca/docenti"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.unibocconi.it/it/contatti",
+   "emails": [],
+   "pages": [
+    "https://www.unibocconi.it/it",
+    "https://www.unibocconi.it/it/docenti-e-ricerca/docenti",
+    "https://www.unibocconi.it/it/docenti-e-ricerca/dipartimenti"
+   ],
+   "score": 6,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: artificial intelligence, data science"
+   ]
+  },
+  {
+   "key": "enalos",
+   "name": "Enalos",
+   "country": "GR",
+   "city": "Chalandri",
+   "website": "https://enalos.com",
+   "lat": 38.02369,
+   "lon": 23.80068,
+   "projects": [
+    "GEORIS-KAVA9"
+   ],
+   "last": 2024,
+   "status": "read",
+   "checked": "2026-11-15T12:13:57.629Z",
+   "title": "ENALOS &#8211; ENALOS",
+   "description": "",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "railways",
+     "page": "https://enalos.com/"
+    }
+   ],
+   "contact": "https://enalos.com/contact/",
+   "emails": [
+    "info@enalos.com"
+   ],
+   "pages": [
+    "https://enalos.com/",
+    "https://enalos.com/research-program/",
+    "https://enalos.com/research-program/carbonbeto-geo/"
+   ],
+   "score": 6,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2024",
+    "Works on railways"
+   ]
+  },
+  {
+   "key": "lund university division of structural mechanics",
+   "name": "Lund University (Lunds universitet), Division of Structural Mechanics",
+   "country": "SE",
+   "city": "Lund",
+   "website": "https://www.construction.lth.se/about/structural-mechanics",
+   "lat": 55.70584,
+   "lon": 13.19321,
+   "projects": [
+    "InnoCrossLam"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:16:40.789Z",
+   "title": "Structural Mechanics | Department of Construction Sciences",
+   "description": "We at the Division of Structural Mechanics are driven by understanding engineering problems and conducting research that contributes to solving societal challenges. Our core areas are Structural Mechanics, Constitutive Modelling and Computa",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.construction.lth.se/about/structural-mechanics/research-structural-mechanics"
+    }
+   ],
+   "contact": "https://www.construction.lth.se/contact",
+   "emails": [],
+   "pages": [
+    "https://www.construction.lth.se/about/structural-mechanics",
+    "https://www.construction.lth.se/research",
+    "https://www.construction.lth.se/about/structural-mechanics/research-structural-mechanics"
+   ],
+   "score": 6,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022",
+    "Works on bridges"
+   ]
+  },
+  {
+   "key": "geological survey of montenegro",
+   "name": "Geological Survey of Montenegro (GSM)",
+   "country": "ME",
+   "city": "Podgorica",
+   "website": "http://geozavod.co.me/",
+   "lat": 42.441,
+   "lon": 19.263,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:10:54.466Z",
+   "title": "JU Zavod za geološka istraživanja Podgorica",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "http://geozavod.co.me/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "Acciona Construccion",
+   "name": "Acciona Construccion",
+   "country": "ES",
+   "city": "Madrid",
+   "website": "https://www.acciona.com/",
+   "lat": 40.4165,
+   "lon": -3.70256,
+   "projects": [
+    "PAPERCHAIN"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:11:54.502Z",
+   "title": "ACCIONA | Business as unusual",
+   "description": "At ACCIONA we offer sustainable solutions to the most urgent challenges facing the planet, such as global warming, energy needs and water shortages",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.acciona.com/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "railways",
+     "page": "https://www.acciona.com/"
+    }
+   ],
+   "contact": "https://www.acciona.com/contact",
+   "emails": [],
+   "pages": [
+    "https://www.acciona.com/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: AI",
+    "Works on railways"
+   ]
+  },
+  {
+   "key": "alumina",
+   "name": "Alumina doo",
+   "country": "BA",
+   "city": "Zvornik",
+   "website": "https://en.aluminazv.ba",
+   "lat": 44.38605,
+   "lon": 19.10247,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "not reachable",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "burst nonprofit",
+   "name": "BURST Nonprofit Kft.",
+   "country": "HU",
+   "city": "Budapest",
+   "website": "https://www.burstgroup.eu/",
+   "lat": 47.49801,
+   "lon": 19.03991,
+   "projects": [
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:12:46.056Z",
+   "title": "Sustainable Urban Development Consultancy – BURST Group",
+   "description": "BURST supports cities and regions with sustainable urban development, co-creation and European research and innovation projects.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://burstgroup.eu/contact-us/",
+   "emails": [
+    "info.burst@burstgroup.eu"
+   ],
+   "pages": [
+    "https://burstgroup.eu/",
+    "https://burstgroup.eu/projects/",
+    "https://burstgroup.eu/project/energy2act/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "Bexel Consulting",
+   "name": "Bexel Consulting",
+   "country": "RS",
+   "city": "Belgrade",
+   "website": "https://bexelconsulting.com/",
+   "lat": 44.80401,
+   "lon": 20.46513,
+   "projects": [
+    "CINDERELA"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:12:50.507Z",
+   "title": "BIM Project Management Software | BEXEL Manager",
+   "description": "The most extensive integrated 3D, 4D, 5D and 6D BIM software solution for ultimate construction and project management results.",
+   "ai": [
+    {
+     "topic": "digital twin",
+     "page": "https://bexelmanager.com/"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "BIM",
+     "page": "https://bexelmanager.com/"
+    }
+   ],
+   "contact": null,
+   "emails": [
+    "info@bexelmanager.com"
+   ],
+   "pages": [
+    "https://bexelmanager.com/",
+    "https://bexelmanager.com/digital-transformation-packages/",
+    "https://bexelmanager.com/plans-pricing/bexel-cloud-solutions-single-project/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: digital twin",
+    "Works on BIM"
+   ]
+  },
+  {
+   "key": "stajerska gospodarska zbornica",
+   "name": "Chamber of Commerce and Industry of Štajerska (Štajerska gospodarska zbornica)",
+   "country": "SI",
+   "city": "Maribor",
+   "website": "https://www.stajerskagz.si/",
+   "lat": 46.55472,
+   "lon": 15.64667,
+   "projects": [
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:13:22.005Z",
+   "title": "Vstopna stran - Štajerska gospodarska zbornica",
+   "description": "Največjaregijska zbornicaŠTAJERSKA GOSPODARSKA ZBORNICAPovezani hitrejenajdemo učinkovite rešitvePridružite se nam in izkoristite ugodnosti članstva. INTERNACIONALIZACIJA IN ČEZMEJNE STORITVE Opravljamo celovite storitve na področju mednaro",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [
+    "info@stajerskagz.si"
+   ],
+   "pages": [
+    "https://www.stajerskagz.si/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "cnet centre for new energy technologies",
+   "name": "Cnet Centre for New Energy Technologies Sa",
+   "country": "PT",
+   "city": "Loures",
+   "website": "",
+   "lat": 38.83091,
+   "lon": -9.16845,
+   "projects": [
+    "POCITYF"
+   ],
+   "last": 2024,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2024"
+   ]
+  },
+  {
+   "key": "ceska rada pro setrne budovy",
+   "name": "Czech Green Building Council",
+   "country": "CZ",
+   "city": "Prague",
+   "website": "https://www.czgbc.org/",
+   "lat": 50.08804,
+   "lon": 14.42076,
+   "projects": [
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:13:28.510Z",
+   "title": "CZGBC",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.czgbc.org/cs/kontakt",
+   "emails": [
+    "info@czgbc.org"
+   ],
+   "pages": [
+    "https://www.czgbc.org/",
+    "https://www.czgbc.org/cs/projekty/projekty-rady",
+    "https://www.czgbc.org/cs/projekty/projekty-clenu"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "czech technical university",
+   "name": "Czech Technical University in Prague",
+   "country": "CZ",
+   "city": "Prague",
+   "website": "https://www.cvut.cz/",
+   "lat": 50.08804,
+   "lon": 14.42076,
+   "projects": [
+    "CirCon4Climate"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:13:30.166Z",
+   "title": "Home - Veřejný web - České vysoké učení technické v Praze",
+   "description": "České vysoké učení technické v Praze patří k největším a nejstarším technickým vysokým školám v Evropě.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.cvut.cz/kontakty",
+   "emails": [],
+   "pages": [
+    "https://www.cvut.cz/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2025"
+   ]
+  },
+  {
+   "key": "department for transport",
+   "name": "Department for Transport",
+   "country": "GB",
+   "city": "London",
+   "website": "https://www.gov.uk/government/organisations/department-for-transport",
+   "lat": 51.50853,
+   "lon": -0.12574,
+   "projects": [
+    "ERA NET ROAD"
+   ],
+   "last": 2009,
+   "status": "read",
+   "checked": "2026-11-15T12:13:34.265Z",
+   "title": "Department for Transport - GOV.UK",
+   "description": "We work with our agencies and partners to support the transport network that helps the UK’s businesses and gets people and goods travelling around the country. We plan and invest in transport infrastructure to keep the UK on the move. DfT i",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.gov.uk/search/research-and-statistics"
+    }
+   ],
+   "infra": [
+    {
+     "topic": "railways",
+     "page": "https://www.gov.uk/government/organisations/department-for-transport"
+    }
+   ],
+   "contact": "https://www.gov.uk/contact/govuk",
+   "emails": [
+    "enquiries@dvsa.gov.uk"
+   ],
+   "pages": [
+    "https://www.gov.uk/government/organisations/department-for-transport",
+    "https://www.gov.uk/search/research-and-statistics",
+    "https://www.gov.uk/search/research-and-statistics?organisations[]=department-for-transport&amp;parent=department-for-transport"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: artificial intelligence",
+    "Works on railways"
+   ]
+  },
+  {
+   "key": "eit raw materials clc east sp",
+   "name": "Eit Rawmaterials Clc East Spółka Z Ograniczoną Odpowiedzialnością",
+   "country": "PL",
+   "city": "Kraków",
+   "website": "https://eitrawmaterials.eu/",
+   "lat": 50.06143,
+   "lon": 19.93658,
+   "projects": [
+    "RIS Education & Entrepreneurship"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:13:52.913Z",
+   "title": "Home | EIT RawMaterials - Developing raw materials into a major strength for Europe",
+   "description": "Home",
+   "ai": [],
+   "infra": [],
+   "contact": "https://eitrawmaterials.eu/about-us/contact-us",
+   "emails": [],
+   "pages": [
+    "https://eitrawmaterials.eu/",
+    "https://eitrawmaterials.eu/knowledge-innovation",
+    "https://eitrawmaterials.eu/preview-link/node/3194/3eaeafe7-c4c2-4a04-923d-82bfd2073bbd"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "faculty of metallurgy and technology university of montenegro",
+   "name": "Faculty of Metallurgy and Technology, University of Montenegro",
+   "country": "ME",
+   "city": "Podgorica",
+   "website": "http://www.mtf.ucg.ac.me",
+   "lat": 42.441,
+   "lon": 19.263,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "not reachable",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "ss cyril and methodius university faculty of technology and metallurgy",
+   "name": "Faculty of Technology and Metallurgy, Ss. Cyril and Methodius University in Skopje",
+   "country": "MK",
+   "city": "Skopje",
+   "website": "https://www.tmf.ukim.edu.mk",
+   "lat": 41.99646,
+   "lon": 21.43141,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "not reachable",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "geologija",
+   "name": "GEOLOGIJA(Geologija d.o.o. Idrija, geološke raziskave in projektiranje)",
+   "country": "SI",
+   "city": "Idrija",
+   "website": "http://geologija.si",
+   "lat": 46.0027,
+   "lon": 14.03,
+   "projects": [
+    "LIFE HIDAQUA"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:14:33.241Z",
+   "title": "Geologija d.o.o. Idrija",
+   "description": "hidrogeologija (izvirske in podzemne vode),hidrogeoloske raziskave,inzenirska geologija,geomehanika,terenske raziskave,projektiranje inzenirskih objektov,strokovni geoloski nadzor pri razlicnih vrstah gradenj,izvedbe zemeljskih del,svetovan",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [
+    "info@geologija.si"
+   ],
+   "pages": [
+    "http://geologija.si/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2025"
+   ]
+  },
+  {
+   "key": "geological survey of the federation of bosnia and herzegovina",
+   "name": "Geological Survey of the Federation of Bosnia and Herzegovina",
+   "country": "BA",
+   "city": "Ilidža",
+   "website": "https://www.fzzg.gov.ba",
+   "lat": 43.83148,
+   "lon": 18.30697,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "not reachable",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "gravity mining",
+   "name": "Gravity Mining Limited",
+   "country": "GB",
+   "city": "",
+   "website": "",
+   "lat": null,
+   "lon": null,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "hidria",
+   "name": "Hidria d.o.o.",
+   "country": "SI",
+   "city": "Spodnja Idrija",
+   "website": "https://www.hidria.com",
+   "lat": 46.03194,
+   "lon": 14.02722,
+   "projects": [
+    "LIFE HIDAQUA"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:14:55.050Z",
+   "title": "Hidria",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.hidria.com/int/sl/kontakt/",
+   "emails": [],
+   "pages": [
+    "https://www.hidria.com/int/sl/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2025"
+   ]
+  },
+  {
+   "key": "IGH, Civil Engineering Institute of Croatia",
+   "name": "IGH, Civil Engineering Institute of Croatia",
+   "country": "HR",
+   "city": "Zagreb",
+   "website": "https://www.igh.hr",
+   "lat": 45.81444,
+   "lon": 15.97798,
+   "projects": [
+    "SPENS"
+   ],
+   "last": 2009,
+   "status": "read",
+   "checked": "2026-11-15T12:15:03.734Z",
+   "title": "Institut IGH d.d. - Leading European Civil Engineering &amp; Laboratory Services Company",
+   "description": "",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://www.igh.hr/"
+    },
+    {
+     "topic": "BIM",
+     "page": "https://www.igh.hr/"
+    },
+    {
+     "topic": "railways",
+     "page": "https://www.igh.hr/"
+    }
+   ],
+   "contact": "https://www.igh.hr/contact/",
+   "emails": [
+    "info.georgia@igh.hr"
+   ],
+   "pages": [
+    "https://www.igh.hr/",
+    "https://www.igh.hr/services/project-management/",
+    "https://www.igh.hr/services/research-studies-and-planning-documents/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Works on bridges, BIM, railways"
+   ]
+  },
+  {
+   "key": "iskra isd",
+   "name": "ISKRA ISD d.o.o.",
+   "country": "SI",
+   "city": "Kranj",
+   "website": "https://iskra-isd.com",
+   "lat": 46.23887,
+   "lon": 14.35561,
+   "projects": [
+    "CastQC"
+   ],
+   "last": 2024,
+   "status": "read",
+   "checked": "2026-11-15T12:15:18.586Z",
+   "title": "Iskra ISD Technofusion. | Multi-material component supplier",
+   "description": "Iskra ISD - Your R&amp;D and manufacturing partner | Plastic injection moulding | Aluminium HPDC | CNC turning &amp; grinding | Electroplating | Assembly",
+   "ai": [],
+   "infra": [],
+   "contact": "https://iskra-isd.com/contacts",
+   "emails": [],
+   "pages": [
+    "https://iskra-isd.com/",
+    "https://iskra-isd.com/research-and-development"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2024"
+   ]
+  },
+  {
+   "key": "infordata sistemi",
+   "name": "Infordata Sistemi srl",
+   "country": "IT",
+   "city": "Trieste",
+   "website": "http://www.infordata.it",
+   "lat": 45.64953,
+   "lon": 13.77678,
+   "projects": [
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "not reachable",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "lucis",
+   "name": "Lucis d.o.o.",
+   "country": "SI",
+   "city": "Šempeter pri Gorici",
+   "website": "",
+   "lat": 45.9333,
+   "lon": 13.633,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "magyarmet",
+   "name": "Magyarmet Finomöntöde Bt.",
+   "country": "HU",
+   "city": "Bicske",
+   "website": "",
+   "lat": 47.48419,
+   "lon": 18.64404,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "ministry of public administration and regional development",
+   "name": "Ministry of Public Administration and Regional Development",
+   "country": "HU",
+   "city": "Budapest",
+   "website": "https://kormany.hu/kozigazgatasi-es-teruletfejlesztesi-miniszterium",
+   "lat": 47.49801,
+   "lon": 19.03991,
+   "projects": [
+    "SAFETY4TMF"
+   ],
+   "last": 2026,
+   "status": "not reachable",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "nemetali",
+   "name": "Nemetali doo",
+   "country": "MK",
+   "city": "",
+   "website": "",
+   "lat": null,
+   "lon": null,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "por consult projekti odrzivog razvoja",
+   "name": "POR Consult d.o.o.",
+   "country": "HR",
+   "city": "Zagreb",
+   "website": "",
+   "lat": 45.81444,
+   "lon": 15.97798,
+   "projects": [
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "sij acroni",
+   "name": "SIJ Acroni d.o.o.",
+   "country": "SI",
+   "city": "Jesenice",
+   "website": "https://www.acroni.si",
+   "lat": 46.43056,
+   "lon": 14.06694,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:18:19.846Z",
+   "title": "Živimo krožno gospodarstvo. Danes. Za jutri. | SIJ Acroni",
+   "description": "SIJ Acroni je eden vodilnih proizvajalcev nerjavnih in specialnih jekel v Evropi. Smo del največje slovenske vertikalno integrirane metalurške skupine – Skupine SIJ.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.acroni.si/kontakti",
+   "emails": [
+    "info@acroni.si"
+   ],
+   "pages": [
+    "https://www.acroni.si/",
+    "https://www.acroni.si/news/digitalni-dvojcek-za-napredno-vroco-predelavo-jekla-je-srebrna-inovacija"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "sintef",
+   "name": "SINTEF",
+   "country": "NO",
+   "city": "Trondheim",
+   "website": "https://www.sintef.no/en/",
+   "lat": 63.4305,
+   "lon": 10.3951,
+   "projects": [
+    "TiREX"
+   ],
+   "last": 2027,
+   "status": "not reachable",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2027"
+   ]
+  },
+  {
+   "key": "saint gobain ecophon",
+   "name": "Saint-Gobain Ecophon",
+   "country": "SE",
+   "city": "Hyllinge",
+   "website": "https://www.ecophon.com/en/",
+   "lat": 56.1,
+   "lon": 12.85,
+   "projects": [
+    "Ceilings4LIFE"
+   ],
+   "last": 2029,
+   "status": "read",
+   "checked": "2026-11-15T12:18:23.769Z",
+   "title": "Acoustic ceilings and wall absorbers | Ecophon",
+   "description": "Enhance your wellbeing and performance with Ecophon&#39;s acoustic ceiling tiles and wall panel systems. Discover our range of products now.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.ecophon.com/en/contact/",
+   "emails": [],
+   "pages": [
+    "https://www.ecophon.com/en/",
+    "https://www.ecophon.com/en/tools--services/ecophon-laser-projection-service/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2029"
+   ]
+  },
+  {
+   "key": "saint gobain finland",
+   "name": "Saint-Gobain Finland Oy",
+   "country": "FI",
+   "city": "Helsinki",
+   "website": "",
+   "lat": 60.16952,
+   "lon": 24.93545,
+   "projects": [
+    "WOOL2LOOP"
+   ],
+   "last": 2022,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "structum razvoj trajnostnega gradbenistva",
+   "name": "Structum, razvoj trajnostnega gradbeništva, d.o.o.",
+   "country": "SI",
+   "city": "Ajdovščina",
+   "website": "http://www.structum.si/",
+   "lat": 45.887,
+   "lon": 13.904,
+   "projects": [
+    "REBIRTH",
+    "RusaLCA"
+   ],
+   "last": 2016,
+   "status": "read",
+   "checked": "2026-11-15T12:18:35.489Z",
+   "title": "Structum - Inštitut za gradbeništvo",
+   "description": "Vizija podjetja Structum d.o.o. je investitorjem in izvajalcem ponuditi in zagotoviti celotno storitev od svetovanja, priprave, nadzora, zunanje kontrole, inženiringa do optimizacije gradbenega projekta.",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "railways",
+     "page": "https://structum.si/"
+    }
+   ],
+   "contact": "https://structum.si/index.php?id=7",
+   "emails": [
+    "info@structum.si"
+   ],
+   "pages": [
+    "https://structum.si/"
+   ],
+   "score": 5,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Works on railways"
+   ]
+  },
+  {
+   "key": "teces green tech cluster",
+   "name": "TECES, Green Tech Cluster",
+   "country": "SI",
+   "city": "Maribor",
+   "website": "https://www.teces.si",
+   "lat": 46.55472,
+   "lon": 15.64667,
+   "projects": [
+    "INDY"
+   ],
+   "last": 2024,
+   "status": "read",
+   "checked": "2026-11-15T12:18:42.017Z",
+   "title": "TECES, Grozd zelenih tehnologij - Prva stran",
+   "description": "Mednarodno prepoznan inovacijski grozd na področju zelenih tehnologij in energetsko učinkovitih rešitev. Where linking creates synergy.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.teces.si/sl/kontakt",
+   "emails": [],
+   "pages": [
+    "https://www.teces.si/sl/",
+    "https://www.teces.si/sl/zaposlitev/tec-hr-2026-03-visji-vodja-projektov-senior-project-manager"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2024"
+   ]
+  },
+  {
+   "key": "th mining",
+   "name": "TH Mining AG",
+   "country": "CH",
+   "city": "Sarnen",
+   "website": "",
+   "lat": 46.896,
+   "lon": 8.245,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "cementarnica usje ad",
+   "name": "TITAN USJE AD Skopje",
+   "country": "MK",
+   "city": "Skopje",
+   "website": "https://www.usje.mk",
+   "lat": 41.99646,
+   "lon": 21.43141,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:18:44.792Z",
+   "title": "ТИТАН УСЈЕ АД Скопје",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.usje.mk/mk/kontakt/",
+   "emails": [],
+   "pages": [
+    "https://www.usje.mk/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "technische universitat dresden",
+   "name": "Technische Universität Dresden (TU Dresden)",
+   "country": "DE",
+   "city": "Dresden",
+   "website": "https://tu-dresden.de/",
+   "lat": 51.05089,
+   "lon": 13.73832,
+   "projects": [
+    "BIM4CE"
+   ],
+   "last": 2025,
+   "status": "read",
+   "checked": "2026-11-15T12:18:58.522Z",
+   "title": "Technische Universität Dresden — TU Dresden",
+   "description": "TU Dresden: an excellent place to study, research and work. 43,000 people – 125 nations – one university. Inquisitive, dedicated, innovative – with prime connections to science, industry and society.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://tu-dresden.de/tu-dresden/kontakte-services/notfallkontakte",
+   "emails": [],
+   "pages": [
+    "https://tu-dresden.de/",
+    "https://tu-dresden.de/tu-dresden/newsportal/news/decoding-traffic-rules-inside-nerve-cells-10-million-euros-for-international-research-team",
+    "https://tu-dresden.de/tu-dresden/newsportal/news/wissenschaft-braucht-freiheit-bedrohter-forscher-gubad-ibadoghlu-hat-forschungsaufenthalt-an-der-tu-dresden-angetreten"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2025"
+   ]
+  },
+  {
+   "key": "sostanj thermal power plant",
+   "name": "Termoelektrarna Šoštanj d.o.o.",
+   "country": "SI",
+   "city": "Šoštanj",
+   "website": "https://www.te-sostanj.si",
+   "lat": 46.38,
+   "lon": 15.04861,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:19:00.500Z",
+   "title": "Ustvarjamo svetlo prihodnost Termoelektrarna Šoštanj - TEŠ",
+   "description": "Termoelektrarna Šoštanj TEŠ je družba z omejeno odgovornostjo, v katerih je edini družbenik Holding Slovenske elektrarne. TEŠ z inštalirano močjo 779 MW proizvede povprečno tretjino energije v državi, v kriznih obdobjih pa pokriva preko pol",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.te-sostanj.si/podjetje/kontakti/",
+   "emails": [
+    "info@te-sostanj.si"
+   ],
+   "pages": [
+    "https://www.te-sostanj.si/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "universiteit utrecht",
+   "name": "Universiteit Utrecht",
+   "country": "NL",
+   "city": "Utrecht",
+   "website": "https://www.uu.nl",
+   "lat": 52.09083,
+   "lon": 5.12222,
+   "projects": [
+    "EXCITE2"
+   ],
+   "last": 2028,
+   "status": "read",
+   "checked": "2026-11-15T12:19:18.987Z",
+   "title": "Universiteit Utrecht | Sharing science, shaping tomorrow",
+   "description": "De Universiteit Utrecht is een internationaal vooraanstaande onderzoeksuniversiteit waar studenten en onderzoekers samen werken aan een betere wereld.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.uu.nl/organisatie/contact",
+   "emails": [],
+   "pages": [
+    "https://www.uu.nl/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2028"
+   ]
+  },
+  {
+   "key": "university of tuzla faculty of mining geology and civil engineering",
+   "name": "University Of Tuzla, Faculty of Mining, Geology and Civil Engineering",
+   "country": "BA",
+   "city": "Tuzla",
+   "website": "https://rggf.untz.ba",
+   "lat": 44.5384,
+   "lon": 18.6671,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:19:21.499Z",
+   "title": "Rudarsko geološko građevinski fakultet &#8211; RGGF UNTZ",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://rggf.untz.ba/kontakt/",
+   "emails": [],
+   "pages": [
+    "https://rggf.untz.ba/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "university of banja luka",
+   "name": "University of Banja Luka (UNiBL)",
+   "country": "BA",
+   "city": "Banja Luka",
+   "website": "https://www.unibl.org",
+   "lat": 44.7722,
+   "lon": 17.191,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "read",
+   "checked": "2026-11-15T12:19:25.101Z",
+   "title": "Универзитет у Бањој Луци",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.unibl.org/sr/univerzitet/kontakt",
+   "emails": [
+    "info@unibl.org"
+   ],
+   "pages": [
+    "https://www.unibl.org/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "university of zenica metallurgical institute kemal kapetanovic",
+   "name": "University of Zenica (Univerzitet u Zenici), Institute \"Kemal Kapetanović\"",
+   "country": "BA",
+   "city": "Zenica",
+   "website": "https://www.unze.ba",
+   "lat": 44.20169,
+   "lon": 17.90397,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:19:52.803Z",
+   "title": "Univerzitet u Zenici",
+   "description": "Organizacione jedinice | Izdavačka djelatnost | QA | CIS | Gender | Search",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://unze.ba/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "univerza na primorskem",
+   "name": "Univerza na Primorskem Universita del Litorale",
+   "country": "SI",
+   "city": "Koper",
+   "website": "https://www.upr.si",
+   "lat": 45.54694,
+   "lon": 13.72944,
+   "projects": [
+    "InnoRenew CoE"
+   ],
+   "last": 2022,
+   "status": "site asks robots not to read it",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "vas varmegyei onkormanyzati hivatal",
+   "name": "Vas County Government Office (VVÖH)",
+   "country": "HU",
+   "city": "Szombathely",
+   "website": "http://www.vasmegye.hu",
+   "lat": 47.23088,
+   "lon": 16.62155,
+   "projects": [
+    "ReBuilt"
+   ],
+   "last": 2026,
+   "status": "read",
+   "checked": "2026-11-15T12:20:07.166Z",
+   "title": "Vas megye - Vas megye hivatalos honlapja",
+   "description": "Vas megye hivatalos honlapja – aktuális hírek, események, turizmus, fejlesztések, projektek, választások.",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.vasmegye.hu/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "university of belgrade vinca institute of nuclear sciences",
+   "name": "Vinča Institute of Nuclear Sciences, University of Belgrade",
+   "country": "RS",
+   "city": "Belgrade",
+   "website": "https://www.vin.bg.ac.rs",
+   "lat": 44.755,
+   "lon": 20.599,
+   "projects": [
+    "RIS-ALiCE"
+   ],
+   "last": 2022,
+   "status": "read",
+   "checked": "2026-11-15T12:20:09.473Z",
+   "title": "Home - Institut za nuklearne nauke &quot;Vinča&quot;",
+   "description": "Institut za nuklearne nauke &quot;Vinča&quot;",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.vin.bg.ac.rs/kontakt",
+   "emails": [
+    "office@vin.bg.ac.rs"
+   ],
+   "pages": [
+    "https://www.vin.bg.ac.rs/"
+   ],
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2022"
+   ]
+  },
+  {
+   "key": "weg kolektor berane",
+   "name": "WEG Kolektor doo Berane",
+   "country": "ME",
+   "city": "",
+   "website": "",
+   "lat": null,
+   "lon": null,
+   "projects": [
+    "RIS-RESTORE"
+   ],
+   "last": 2023,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2023"
+   ]
+  },
+  {
+   "key": "omcd tek hub spa",
+   "name": "OMCD TEK HUB SpA (OMCD Group)",
+   "country": "IT",
+   "city": "Anzola d'Ossola",
+   "website": "",
+   "lat": 45.98897,
+   "lon": 8.34531,
+   "projects": [
+    "MESCEL"
+   ],
+   "last": 2026,
+   "status": "no website listed",
+   "score": 5,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2026"
+   ]
+  },
+  {
+   "key": "CDV, Transport Research Centre",
+   "name": "CDV, Transport Research Centre",
+   "country": "CZ",
+   "city": "Brno",
+   "website": "https://www.cdv.cz",
+   "lat": 49.19522,
+   "lon": 16.60796,
+   "projects": [
+    "SPENS",
+    "CERTAIN"
+   ],
+   "last": 2010,
+   "status": "read",
+   "checked": "2026-11-15T12:10:04.853Z",
+   "title": "Výzkum v dopravě | CDV",
+   "description": "Centrum dopravního výzkumu, v. v. i. - veřejná výzkumná instituce a jediná dopravní vědeckovýzkumná organizace v působnosti Ministerstva dopravy",
+   "ai": [],
+   "infra": [],
+   "contact": "https://cdv.gov.cz/kontakt",
+   "emails": [],
+   "pages": [
+    "https://cdv.gov.cz/"
+   ],
+   "score": 4,
+   "reasons": [
+    "2 shared projects with ZAG"
+   ]
+  },
+  {
+   "key": "cstb centre scientifique et technique du batiment",
+   "name": "Centre Scientifique et Technique du Bâtiment (CSTB)",
+   "country": "FR",
+   "city": "Sophia Antipolis",
+   "website": "https://www.cstb.fr/",
+   "lat": 43.6163,
+   "lon": 7.0552,
+   "projects": [
+    "REFINET",
+    "GE2O"
+   ],
+   "last": 2017,
+   "status": "site asks robots not to read it",
+   "score": 4,
+   "reasons": [
+    "2 shared projects with ZAG"
+   ]
+  },
+  {
+   "key": "ddc svetovanje inzeniring druzba za svetovanje in inzeniring",
+   "name": "Ddc Svetovanje Inzeniring, Druzba za Svetovanje in Inzeniring, Doo",
+   "country": "SI",
+   "city": "Ljubljana",
+   "website": "https://www.ddc.si",
+   "lat": 46.05108,
+   "lon": 14.50513,
+   "projects": [
+    "TRA2008",
+    "SPENS"
+   ],
+   "last": 2009,
+   "status": "read",
+   "checked": "2026-11-15T12:10:19.655Z",
+   "title": "DDC.si -",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.ddc.si/",
+    "https://www.ddc.si/kaj-je-digitalno-oglasevanje/"
+   ],
+   "score": 4,
+   "reasons": [
+    "2 shared projects with ZAG"
+   ]
+  },
+  {
+   "key": "ENEA",
+   "name": "ENEA",
+   "country": "IT",
+   "city": "Rome",
+   "website": "http://www.enea.it/en",
+   "lat": 41.9028,
+   "lon": 12.4964,
+   "projects": [
+    "EXTREME",
+    "STORM"
+   ],
+   "last": 2018,
+   "status": "not reachable",
+   "score": 4,
+   "reasons": [
+    "2 shared projects with ZAG"
+   ]
+  },
+  {
+   "key": "goce delcev university stip",
+   "name": "Goce Delcev University - Stip",
+   "country": "MK",
+   "city": "Štip",
+   "website": "https://www.ugd.edu.mk",
+   "lat": 41.74583,
+   "lon": 22.19583,
+   "projects": [
+    "RIS-CuRE",
+    "RIS-RECOVER"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:10:58.477Z",
+   "title": "Универзитет „Гоце Делчев“ - Штип",
+   "description": "15 Факултети, 70 студиски програмиИзбери мудро, делувај храброДознај повеќе„Наш врвен приоритет е квалитетно и применливо знаење“Обраќање на ректоротПовеќе19 години Универзитет „Гоце Делчев“ – ШтипПреку 30 илјади студенти во изминатите 19 г",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.ugd.edu.mk/kontakti/",
+   "emails": [
+    "contact@ugd.edu.mk"
+   ],
+   "pages": [
+    "https://www.ugd.edu.mk/",
+    "https://www.ugd.edu.mk/za-ugd/digitalizacija/",
+    "https://www.ugd.edu.mk/vesti-mk/fon-i-biblioteka-fetkin-kavadarci-so-zaednichka-rabotilnica-za-ulogata-na-knigata-digitalnite-izvori-i-veshtachkata-inteligencija/"
+   ],
+   "score": 4,
+   "reasons": [
+    "2 shared projects with ZAG"
+   ]
+  },
+  {
+   "key": "asociacion de empresarios del henares",
+   "name": "Asociacion de Empresarios del Henares",
+   "country": "ES",
+   "city": "Alcalá de Henares",
+   "website": "https://aedhe.es/",
+   "lat": 40.4818,
+   "lon": -3.3635,
+   "projects": [
+    "CINDERELA"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:12:20.043Z",
+   "title": "Asociación de Empresarios del Henares - AEDHE",
+   "description": "AEDHE ante la convocatoria de elecciones generales y el anuncio de huelga general Leer noticia completa La Asociación de Empresarios del Henares traslada su posición: valoramos las elecciones del 29 de noviembre como una oportunidad para re",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://aedhe.es/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://aedhe.es/contacto/",
+   "emails": [],
+   "pages": [
+    "https://aedhe.es/",
+    "https://aedhe.es/servicios/edih-european-digital-innovation-hubs/",
+    "https://aedhe.es/servicios/comunicacion/comunicacion-prensa-digital/"
+   ],
+   "score": 4,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "BRRC, Belgian Road Research Centre",
+   "name": "BRRC, Belgian Road Research Centre",
+   "country": "BE",
+   "city": "Brussels",
+   "website": "https://www.brrc.be",
+   "lat": 50.85045,
+   "lon": 4.34878,
+   "projects": [
+    "PERSUADE"
+   ],
+   "last": 2015,
+   "status": "read",
+   "checked": "2026-11-15T12:12:37.439Z",
+   "title": "Homepage | Centre de recherches routières",
+   "description": "",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.brrc.be/fr/innovation"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.brrc.be/fr/landing-page/contact",
+   "emails": [],
+   "pages": [
+    "https://www.brrc.be/fr",
+    "https://www.brrc.be/fr",
+    "https://www.brrc.be/fr/innovation"
+   ],
+   "score": 4,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: AI"
+   ]
+  },
+  {
+   "key": "fachhochschule karnten gemeinnutzige privatstiftung",
+   "name": "Fachhochschule Kärnten - gemeinnützige Privatstiftung",
+   "country": "AT",
+   "city": "Villach",
+   "website": "https://www.cu-hochschule-kaernten.at/",
+   "lat": 46.6103,
+   "lon": 13.8558,
+   "projects": [
+    "FIREEXPERT"
+   ],
+   "last": 2020,
+   "status": "read",
+   "checked": "2026-11-15T12:14:14.561Z",
+   "title": "CU Hochschule Kärnten | Studieren in Österreich",
+   "description": "Studieren an der CU Hochschule: Innovative Studiengänge, familiäre Atmosphäre, persönliche Betreuung, hoher Praxisbezug und einzigartige Lebensqualität",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.cu-hochschule-kaernten.at/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.cu-hochschule-kaernten.at/forschung/team-kontakt",
+   "emails": [],
+   "pages": [
+    "https://www.cu-hochschule-kaernten.at/",
+    "https://www.cu-hochschule-kaernten.at/forschung",
+    "https://www.cu-hochschule-kaernten.at/forschung/forschungszentren-und-forschungsgruppen"
+   ],
+   "score": 4,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "ministerie van infrastructuur en waterstaat",
+   "name": "Ministerie van Infrastructuur En Waterstaat",
+   "country": "NL",
+   "city": "The Hague",
+   "website": "https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat",
+   "lat": 52.07667,
+   "lon": 4.29861,
+   "projects": [
+    "AM4INFRA"
+   ],
+   "last": 2018,
+   "status": "read",
+   "checked": "2026-11-15T12:16:56.116Z",
+   "title": "Ministerie van Infrastructuur en Waterstaat | Rijksoverheid.nl",
+   "description": "Informatie over het ministerie van IenW, zoals adresgegevens, beleidsterreinen en informatie voor de pers.",
+   "ai": [
+    {
+     "topic": "AI",
+     "page": "https://www.rijksoverheid.nl/service/ai-gebruik"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat/contact",
+   "emails": [],
+   "pages": [
+    "https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat",
+    "https://www.rijksoverheid.nl/service/ai-gebruik"
+   ],
+   "score": 4,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: AI"
+   ]
+  },
+  {
+   "key": "regione del veneto sezione lavori pubblici",
+   "name": "Regione del Veneto - Lavori pubblici",
+   "country": "IT",
+   "city": "Venice",
+   "website": "https://www.regione.veneto.it/web/lavori-pubblici",
+   "lat": 45.43713,
+   "lon": 12.33265,
+   "projects": [
+    "PROFILI"
+   ],
+   "last": 2014,
+   "status": "read",
+   "checked": "2026-11-15T12:18:11.255Z",
+   "title": "Lavori Pubblici - Regione del Veneto",
+   "description": "",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "construction materials",
+     "page": "https://www.regione.veneto.it/web/lavori-pubblici"
+    },
+    {
+     "topic": "earthquake engineering",
+     "page": "https://www.regione.veneto.it/web/lavori-pubblici"
+    }
+   ],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.regione.veneto.it/web/lavori-pubblici",
+    "https://www.regione.veneto.it/web/guest/ricerca"
+   ],
+   "score": 4,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Works on construction materials, earthquake engineering"
+   ]
+  },
+  {
+   "key": "universite de liege",
+   "name": "University of Liège",
+   "country": "BE",
+   "city": "Liège",
+   "website": "https://www.uliege.be/",
+   "lat": 50.63373,
+   "lon": 5.56749,
+   "projects": [
+    "OREVAL"
+   ],
+   "last": 2018,
+   "status": "read",
+   "checked": "2026-11-15T12:19:33.625Z",
+   "title": "ULiège",
+   "description": "Université publique ouverte sur le monde et ancrée dans le développement scientifique, culturel et économique de sa région, l&apos;ULiège s&apos;appuie sur ses trois piliers : l&apos;enseignement, la recherche et l&apos;engagement citoyen.",
+   "ai": [
+    {
+     "topic": "AI (local language)",
+     "page": "https://www.uliege.be/cms/c_8699436/fr/uliege"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.uliege.be/cms/c_8699403/fr/contacts-generaux",
+   "emails": [],
+   "pages": [
+    "https://www.uliege.be/cms/c_8699436/fr/uliege",
+    "https://www.uliege.be/cms/c_9038292/fr/facultes-departements-et-unites-de-recherche"
+   ],
+   "score": 4,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: AI in other languages"
+   ]
+  },
+  {
+   "key": "Cestel",
+   "name": "Cestel",
+   "country": "SI",
+   "city": "Trzin",
+   "website": "https://www.cestel.si/",
+   "lat": 46.13333,
+   "lon": 14.56667,
+   "projects": [
+    "BRIDGEMON"
+   ],
+   "last": 2014,
+   "status": "read",
+   "checked": "2026-11-15T12:13:09.557Z",
+   "title": "Prispevamo k večji varnosti v prometu - Cestel",
+   "description": "",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "bridges",
+     "page": "https://cestel.si/"
+    }
+   ],
+   "contact": "https://cestel.si/kontaktirajte-nas/",
+   "emails": [
+    "info@cestel.si"
+   ],
+   "pages": [
+    "https://cestel.si/",
+    "https://cestel.si/operacija-digitalna-transformacija-v-podjetju-cestel-d-o-o-je-prejela-sofinanciranje/"
+   ],
+   "score": 3,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Works on bridges"
+   ]
+  },
+  {
+   "key": "ferriere nord",
+   "name": "Ferriere Nord S.p.A.",
+   "country": "IT",
+   "city": "Osoppo",
+   "website": "https://www.pittini.it",
+   "lat": 46.25536,
+   "lon": 13.08453,
+   "projects": [
+    "SPENS"
+   ],
+   "last": 2009,
+   "status": "read",
+   "checked": "2026-11-15T12:14:26.866Z",
+   "title": "Acciaio Sostenibile e High-Tech - Gruppo Pittini",
+   "description": "Entra nel mondo dell&#039;Acciaio Pittini: scopri ora i nostri Progetti tra Innovazione e Sostenibilità.",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "earthquake engineering",
+     "page": "https://www.pittini.it/innovazione/steelahead/"
+    }
+   ],
+   "contact": "https://www.pittini.it/contatti/",
+   "emails": [],
+   "pages": [
+    "https://www.pittini.it/",
+    "https://www.pittini.it/innovazione/steelahead/",
+    "https://www.pittini.it/innovazione/"
+   ],
+   "score": 3,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Works on earthquake engineering"
+   ]
+  },
+  {
+   "key": "obcina sentrupert",
+   "name": "Občina Šentrupert",
+   "country": "SI",
+   "city": "Šentrupert",
+   "website": "https://sentrupert.si",
+   "lat": 45.97,
+   "lon": 15.06,
+   "projects": [
+    "RusaLCA"
+   ],
+   "last": 2016,
+   "status": "read",
+   "checked": "2026-11-15T12:17:13.528Z",
+   "title": "Občina Šentrupert",
+   "description": "Občina Šentrupert. Poslujte elektronsko z občino: oddajte e-vlogo, plačajte takso preko spleta in prejmite odločbo na domač naslov, naročite se na obveščanje občine, preverite lokalne novice, dogodke in še veliko več.",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "railways",
+     "page": "https://sentrupert.si/"
+    }
+   ],
+   "contact": "https://sentrupert.si/imenik",
+   "emails": [],
+   "pages": [
+    "https://sentrupert.si/",
+    "https://sentrupert.si/objava/91490"
+   ],
+   "score": 3,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Works on railways"
+   ]
+  },
+  {
+   "key": "robur",
+   "name": "Robur Spa",
+   "country": "IT",
+   "city": "Verdellino",
+   "website": "https://www.robur.com/it/",
+   "lat": 45.60108,
+   "lon": 9.60805,
+   "projects": [
+    "HEAT4U"
+   ],
+   "last": 2014,
+   "status": "read",
+   "checked": "2026-11-15T12:18:14.317Z",
+   "title": "Robur, soluzioni per il riscaldamento e il raffrescamento industriale",
+   "description": "Robur, azienda interamente italiana, sviluppa e produce sistemi di riscaldamento ad alta efficienza e basso impatto ambientale.",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "construction materials",
+     "page": "https://www.robur.com/it/azienda/ricerca-e-sviluppo/ricerca-e-sviluppo"
+    }
+   ],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.robur.com/it/",
+    "https://www.robur.com/it/supporto/assistenza-tecnica/ricerca-centro-assistenza",
+    "https://www.robur.com/it/azienda/ricerca-e-sviluppo/ricerca-e-sviluppo"
+   ],
+   "score": 3,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Works on construction materials"
+   ]
+  },
+  {
+   "key": "Montanuniversitaet Leoben",
+   "name": "Montanuniversitaet Leoben",
+   "country": "AT",
+   "city": "Leoben",
+   "website": "https://www.unileoben.ac.at/en",
+   "lat": 47.3765,
+   "lon": 15.09144,
+   "projects": [
+    "RIS-RECOVER"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:08:55.568Z",
+   "title": "Technical University of Leoben",
+   "description": "Technical University of Leoben in Austria for sustainable technologies and green tech along the value chain. Find out more now!",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.unileoben.ac.at/en/contact/",
+   "emails": [],
+   "pages": [
+    "https://www.unileoben.ac.at/en",
+    "https://www.unileoben.ac.at/en/university/departments-and-chairs/research-centre-with-the-centres-of-excellence/",
+    "https://www.unileoben.ac.at/en/research/centers-of-excellence/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "6 may drustvo s ogranicenom odgovornoscu za komunalne usluge",
+   "name": "6.MAJ d.o.o.",
+   "country": "HR",
+   "city": "Umag",
+   "website": "https://www.6maj.hr/",
+   "lat": 45.43139,
+   "lon": 13.52389,
+   "projects": [
+    "CINDERELA"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:11:53.208Z",
+   "title": "6. MAJ d.o.o. &#8211; Komunalno poduzeće",
+   "description": "Komunalno poduzeće \r\n\r\n6. maj d.o.o. \r\n\r\nZa komunalne usluge - Servizi comunali               \r\n\r\nNovosti i obavijesti \r\n\r\nPratite naše objave i budite uvijek informirani sa novostima vezano za naše usluge.  Pročitajte više",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.6maj.hr/kontakt/",
+   "emails": [],
+   "pages": [
+    "https://www.6maj.hr/",
+    "https://www.6maj.hr/digitalna-trazilica-pokojnih-i-grobnih-mjesta/",
+    "https://www.6maj.hr/digitalna-trazilica-pokojnih/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "atlantic copper s l u",
+   "name": "Atlantic Copper S.L.U.",
+   "country": "ES",
+   "city": "Huelva",
+   "website": "https://atlantic-copper.es/",
+   "lat": 37.2614,
+   "lon": -6.9447,
+   "projects": [
+    "WhISPER"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:12:33.781Z",
+   "title": "Home - Atlantic Copper",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://atlantic-copper.es/en/contact",
+   "emails": [],
+   "pages": [
+    "https://atlantic-copper.es/en/home-en/",
+    "https://atlantic-copper.es/en/how-we-do-it/innovation/",
+    "https://atlantic-copper.es/en/circular-project/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "dptu buchim radovish trade company for production trade and service",
+   "name": "Bucim D.O.O.E.L.",
+   "country": "MK",
+   "city": "Radoviš",
+   "website": "https://bucim.mk",
+   "lat": 41.63833,
+   "lon": 22.46472,
+   "projects": [
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:12:56.772Z",
+   "title": "bucim.mk &#8211; Минерали за иднината",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://bucim.mk/kontakt/",
+   "emails": [
+    "contact@bucim.mk"
+   ],
+   "pages": [
+    "https://bucim.mk/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "chalmers university of technology",
+   "name": "Chalmers University of Technology",
+   "country": "SE",
+   "city": "Gothenburg",
+   "website": "https://www.chalmers.se/en/",
+   "lat": 57.70716,
+   "lon": 11.96679,
+   "projects": [
+    "SPL-CYCLE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:13:14.345Z",
+   "title": "Chalmers University of Technology",
+   "description": "We push for solutions to important societal challenges every day,  test new ideas and contribute to the development of a sustainable future.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.chalmers.se/en/about-chalmers/contact/whistleblowing-if-you-suspect-misconduct/",
+   "emails": [],
+   "pages": [
+    "https://www.chalmers.se/en/",
+    "https://www.chalmers.se/en/research/selected-research-areas/",
+    "https://www.chalmers.se/en/research/meet-our-scientists/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "chamber of commerce and industry vratsa",
+   "name": "Chamber of Commerce and Industry - Vratsa",
+   "country": "BG",
+   "city": "Vratsa",
+   "website": "https://www.cci-vratsa.org",
+   "lat": 43.21,
+   "lon": 23.5625,
+   "projects": [
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:13:19.779Z",
+   "title": "Начало : ТПП Враца",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.cci-vratsa.org/bg/kontakti",
+   "emails": [],
+   "pages": [
+    "https://www.cci-vratsa.org/",
+    "https://www.cci-vratsa.org/bg/news/17937107798487/inspires-v-deystvie-2-prez-portite-na-severozapada-sachetava-digitalni-resheniya-priroda-i-nasledstvo",
+    "https://www.cci-vratsa.org/bg/izgrazhdane-na-digitalen-klub-vav-vratsa"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "conference europeenne directeurs routes association",
+   "name": "CEDR, Conference of European Directors of Roads",
+   "country": "BE",
+   "city": "Brussels",
+   "website": "https://www.cedr.eu",
+   "lat": 50.8503,
+   "lon": 4.3517,
+   "projects": [
+    "TRA2012"
+   ],
+   "last": 2012,
+   "status": "read",
+   "checked": "2026-11-15T12:13:24.498Z",
+   "title": "CEDR",
+   "description": "CEDR",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.cedr.eu/team",
+   "emails": [],
+   "pages": [
+    "https://www.cedr.eu/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "ctc servicios ambientales sl",
+   "name": "Ctc Servicios Ambientales Sl",
+   "country": "ES",
+   "city": "Alcalá de Guadaíra",
+   "website": "",
+   "lat": 37.33791,
+   "lon": -5.83951,
+   "projects": [
+    "CINDERELA"
+   ],
+   "last": 2021,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "druzba za raziskave v cestni in prometni stroki slovenije",
+   "name": "Druzba za Raziskave v Cestni in Prometni Stroki Slovenije",
+   "country": "SI",
+   "city": "Ljubljana",
+   "website": "http://www.drc.si",
+   "lat": 46.05108,
+   "lon": 14.50513,
+   "projects": [
+    "TRA2008"
+   ],
+   "last": 2008,
+   "status": "not reachable",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "e2m beheer",
+   "name": "E2m Beheer Bv",
+   "country": "NL",
+   "city": "Eerbeek",
+   "website": "",
+   "lat": 52.105,
+   "lon": 6.05833,
+   "projects": [
+    "CINDERELA"
+   ],
+   "last": 2021,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "ecipa scarl",
+   "name": "Ecipa scarl",
+   "country": "IT",
+   "city": "Marghera (Venice)",
+   "website": "https://www.ecipa.eu",
+   "lat": 45.4371908,
+   "lon": 12.3345898,
+   "projects": [
+    "Building Green Skills"
+   ],
+   "last": 2016,
+   "status": "read",
+   "checked": "2026-11-15T12:13:49.225Z",
+   "title": "HOME ECIPA - ECIPA Nordest",
+   "description": "IN PRIMO PIANO  \r\nECIPA NEWS    \r\nSEI SICURO?",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.ecipa.eu/contatti/",
+   "emails": [
+    "info@ecipa.eu"
+   ],
+   "pages": [
+    "https://www.ecipa.eu/",
+    "https://www.ecipa.eu/innovazione_/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "esplanada",
+   "name": "Esplanada d.o.o.",
+   "country": "SI",
+   "city": "",
+   "website": "",
+   "lat": null,
+   "lon": null,
+   "projects": [
+    "RusaLCA"
+   ],
+   "last": 2016,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "gavin and doherty geosolutions",
+   "name": "Gavin and Doherty Geosolutions Ltd",
+   "country": "IE",
+   "city": "Dublin",
+   "website": "https://www.gdgeo.com",
+   "lat": 53.3498,
+   "lon": -6.2603,
+   "projects": [
+    "DESTinationRAIL"
+   ],
+   "last": 2018,
+   "status": "read",
+   "checked": "2026-11-15T12:14:36.259Z",
+   "title": "Home | GDG Engineering Innovation",
+   "description": "At Gavin &amp; Doherty Geosolutions (GDG), we are experts at finding innovative engineering solutions to some of the most challenging offshore projects around the world.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.gdgeo.com/contact/",
+   "emails": [
+    "info@gdgeo.com"
+   ],
+   "pages": [
+    "https://www.gdgeo.com/",
+    "https://www.gdgeo.com/projects/filter/offshore/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "hoganas",
+   "name": "Höganäs AB",
+   "country": "SE",
+   "city": "Höganäs",
+   "website": "https://www.hoganas.com",
+   "lat": 56.19971,
+   "lon": 12.55795,
+   "projects": [
+    "MIN-PET"
+   ],
+   "last": 2018,
+   "status": "read",
+   "checked": "2026-11-15T12:14:57.334Z",
+   "title": "Metal powders | H&#xF6;gan&#xE4;s",
+   "description": "H&#xF6;gan&#xE4;s is the world leading manufacturer of metal powders for powder metallurgy. By utilising the endless opportunities of our metal powders we inspire industry to make more with less. The applications of metal powders seem almos",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.hoganas.com/en/contact/",
+   "emails": [],
+   "pages": [
+    "https://www.hoganas.com/",
+    "https://www.hoganas.com/en/about-hoganas/our-vision/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "ip",
+   "name": "IP (Institut za puteve)",
+   "country": "RS",
+   "city": "Belgrade",
+   "website": "http://www.highway.rs",
+   "lat": 44.80401,
+   "lon": 20.46513,
+   "projects": [
+    "SPENS"
+   ],
+   "last": 2009,
+   "status": "read",
+   "checked": "2026-11-15T12:15:14.163Z",
+   "title": "Институт за путеве АД Београд &#8211; Институт за путеве бави се стручним активностима и консултантским услугама у области путне привреде.",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://highway.rs/kontakt/",
+   "emails": [],
+   "pages": [
+    "https://highway.rs/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "irgo consulting",
+   "name": "IRGO Consulting d. o. o.",
+   "country": "SI",
+   "city": "Ljubljana",
+   "website": "",
+   "lat": 46.0511,
+   "lon": 14.5051,
+   "projects": [
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "instituto tecnologico del calzado y conexas",
+   "name": "Instituto Tecnologico del Calzado y Conexas",
+   "country": "ES",
+   "city": "Elda",
+   "website": "https://www.inescop.es",
+   "lat": 38.47783,
+   "lon": -0.79157,
+   "projects": [
+    "ULTRAGRIP"
+   ],
+   "last": 2012,
+   "status": "not reachable",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "kghm cuprum centrum badawczo rozwojowe",
+   "name": "KGHM Cuprum sp. z o.o. Centrum Badawczo-Rozwojowe",
+   "country": "PL",
+   "city": "Wrocław",
+   "website": "https://kghmcuprum.com",
+   "lat": 51.10286,
+   "lon": 17.03006,
+   "projects": [
+    "VirtualMine"
+   ],
+   "last": 2019,
+   "status": "not reachable",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "klaro spletna agencija",
+   "name": "KLARO spletna agencija d.o.o.",
+   "country": "SI",
+   "city": "",
+   "website": "",
+   "lat": null,
+   "lon": null,
+   "projects": [
+    "REBIRTH"
+   ],
+   "last": 2014,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "KU Leuven",
+   "name": "KU Leuven",
+   "country": "BE",
+   "city": "Leuven",
+   "website": "https://www.kuleuven.be/english",
+   "lat": 50.8798,
+   "lon": 4.7005,
+   "projects": [
+    "ResiduFlex"
+   ],
+   "last": 2018,
+   "status": "read",
+   "checked": "2026-11-15T12:16:28.417Z",
+   "title": "KU Leuven",
+   "description": "KU Leuven is an international community where innovative research forms the basis of all our academic programmes. Across the university, driven researchers and curious students continually gain new insights and use their knowledge to tackle",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.kuleuven.be/english/contact",
+   "emails": [],
+   "pages": [
+    "https://www.kuleuven.be/english/kuleuven/",
+    "https://www.kuleuven.be/english/apply?project=TL&amp;pagina=Home&amp;thema=Banner&amp;onderwerp=Apply"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "karlsruhe institute of technology",
+   "name": "Karlsruhe Institute of Technology (KIT)",
+   "country": "DE",
+   "city": "Karlsruhe",
+   "website": "https://www.kit.edu",
+   "lat": 49.00937,
+   "lon": 8.40444,
+   "projects": [
+    "POTHOLE"
+   ],
+   "last": 2013,
+   "status": "read",
+   "checked": "2026-11-15T12:16:31.468Z",
+   "title": "KIT - Karlsruher Institut für Technologie",
+   "description": "Karlsruher Institut f&amp;uuml;r Technologie &ndash; technische Universit&amp;auml;t und zugleich nationales Forschungszentrum mit einzigartigen Forschungsinfrastrukturen",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.kit.edu/impressum.php",
+   "emails": [],
+   "pages": [
+    "https://www.kit.edu/",
+    "https://www.kit.edu/kit/34266.php",
+    "https://www.kit.edu/kit/34214.php"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "kplusv organisatieadvies",
+   "name": "KplusV",
+   "country": "NL",
+   "city": "Arnhem",
+   "website": "https://www.kplusv.nl/",
+   "lat": 51.98,
+   "lon": 5.91111,
+   "projects": [
+    "CINDERELA"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:16:34.102Z",
+   "title": "KplusV | Impact ontstaat door actie",
+   "description": "Vooruitgang vraagt om actie. Wij realiseren die vooruitgang. Samen met onze klanten ontwikkelen wij werkende oplossingen voor complexe vraagstukken. Oplossingen die duurzaam, innovatief en inclusief zijn.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.kplusv.nl/contact",
+   "emails": [
+    "info@kplusv.nl"
+   ],
+   "pages": [
+    "https://www.kplusv.nl/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "lulea university of technology",
+   "name": "Luleå University of Technology",
+   "country": "SE",
+   "city": "Luleå",
+   "website": "https://www.ltu.se/",
+   "lat": 65.58415,
+   "lon": 22.15465,
+   "projects": [
+    "Visual3D"
+   ],
+   "last": 2020,
+   "status": "read",
+   "checked": "2026-11-15T12:16:36.281Z",
+   "title": "Luleå tekniska universitet",
+   "description": "Luleå tekniska universitet har en nyckelroll i den gröna omställningen med forskning som förändrar och utbildningar som matchar kompetensbehoven.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.ltu.se/kontakta-lulea-tekniska-universitet",
+   "emails": [],
+   "pages": [
+    "https://www.ltu.se/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "mayer mccann",
+   "name": "Mayer McCann d.o.o.",
+   "country": "SI",
+   "city": "",
+   "website": "",
+   "lat": null,
+   "lon": null,
+   "projects": [
+    "REBIRTH"
+   ],
+   "last": 2014,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "municipality of maribor",
+   "name": "City of Maribor (Mestna občina Maribor)",
+   "country": "SI",
+   "city": "Maribor",
+   "website": "https://www.maribor.si",
+   "lat": 46.55472,
+   "lon": 15.64667,
+   "projects": [
+    "URBAN SOIL 4 FOOD"
+   ],
+   "last": 2020,
+   "status": "read",
+   "checked": "2026-11-15T12:17:05.075Z",
+   "title": "Mestna občina Maribor",
+   "description": "Maribor je druga najštevilčnejša mestna občina v Republiki Sloveniji z okoli 113.000 stalnimi prebivalci.",
+   "ai": [],
+   "infra": [],
+   "contact": "http://maribor.si/maribor/splosni-podatki/kontakti/",
+   "emails": [],
+   "pages": [
+    "https://maribor.si/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "pkg sprinzer mirko s p",
+   "name": "PKG Sprinzer Mirko s.p.",
+   "country": "SI",
+   "city": "",
+   "website": "",
+   "lat": null,
+   "lon": null,
+   "projects": [
+    "REBIRTH"
+   ],
+   "last": 2014,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "chamber of commerce and industry of serbia",
+   "name": "Privredna komora Srbije (Chamber of Commerce and Industry of Serbia)",
+   "country": "RS",
+   "city": "Belgrade",
+   "website": "https://www.pks.rs",
+   "lat": 44.80401,
+   "lon": 20.46513,
+   "projects": [
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:17:50.340Z",
+   "title": "Privredna komora Srbije",
+   "description": "Privredna komora Srbije je zakonom definisana organizacija privrednih subjekata. Sa tradicijom dužom od 160 godina, PKS okuplja privredu Srbije u jedinstven sistem, sektorski i regionalno.",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://pks.rs/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "regionalna razvojna agencija za podravje maribor",
+   "name": "Regionalna razvojna agencija za Podravje - Maribor (RRA Podravje - Maribor)",
+   "country": "SI",
+   "city": "Maribor",
+   "website": "https://rra-podravje.si/",
+   "lat": 46.55472,
+   "lon": 15.64667,
+   "projects": [
+    "CINDERELA"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:18:07.772Z",
+   "title": "Dobrodošli | RRA Podravje - Maribor",
+   "description": "Podjetništvo Pomagamo vam pri razvoju vaše poslovne ideje. /podjetniki Regionalni razvoj Razvijamo lokalno okolje in tako izboljšujemo vaše življenje.…",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [
+    "info@rra-podravje.si"
+   ],
+   "pages": [
+    "https://rra-podravje.si/",
+    "https://rra-podravje.si/agencija/raziskave-in-razvoj",
+    "https://rra-podravje.si/projekti/digitalno-zdravje-v-kroznem-gospodarstvu"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "mining and smelting combine bor",
+   "name": "Serbia Zijin Bor Copper (formerly RTB Bor)",
+   "country": "RS",
+   "city": "Bor",
+   "website": "https://zijinbor.com",
+   "lat": 44.07488,
+   "lon": 22.09591,
+   "projects": [
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "not reachable",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "talum tovarna aluminija d d",
+   "name": "TALUM",
+   "country": "SI",
+   "city": "Kidričevo",
+   "website": "https://www.talum.si/",
+   "lat": 46.40361,
+   "lon": 15.79111,
+   "projects": [
+    "SPL-CYCLE"
+   ],
+   "last": 2021,
+   "status": "not reachable",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "tkti",
+   "name": "TKTI",
+   "country": "LT",
+   "city": "",
+   "website": "",
+   "lat": null,
+   "lon": null,
+   "projects": [
+    "SPENS"
+   ],
+   "last": 2009,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "university of belgrade technical faculty in bor",
+   "name": "Technical Faculty in Bor, University of Belgrade (Технички факултет у Бору)",
+   "country": "RS",
+   "city": "Bor",
+   "website": "https://www.tfbor.bg.ac.rs",
+   "lat": 44.07488,
+   "lon": 22.09591,
+   "projects": [
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:18:52.143Z",
+   "title": "Технички факултет у Бору &#8211; Добродошли",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.tfbor.bg.ac.rs/kontakt",
+   "emails": [
+    "office@tfbor.bg.ac.rs"
+   ],
+   "pages": [
+    "https://www.tfbor.bg.ac.rs/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "togo slovenske konjice",
+   "name": "Togo d.o.o.",
+   "country": "SI",
+   "city": "Slovenske Konjice",
+   "website": "",
+   "lat": 46.33667,
+   "lon": 15.42583,
+   "projects": [
+    "FIRECON (E! 4166)"
+   ],
+   "last": 2011,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "trimo arhitekturne resitve",
+   "name": "Trimo Arhitekturne Resitve D.o.o",
+   "country": "SI",
+   "city": "Trebnje",
+   "website": "",
+   "lat": 45.90417,
+   "lon": 15.02167,
+   "projects": [
+    "Q-Air"
+   ],
+   "last": 2018,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "uvr fia",
+   "name": "UVR-FIA GmbH",
+   "country": "DE",
+   "city": "Freiberg",
+   "website": "http://www.uvr-fia.de/",
+   "lat": 50.91089,
+   "lon": 13.33881,
+   "projects": [
+    "SPL-CYCLE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:19:17.477Z",
+   "title": "Dienstleistungen in der Verfahrenstechnik | UVR-FIA GmbH",
+   "description": "UVR-FIA GmbH: Ihr Partner für mechanische Verfahrenstechnik, Aufbereitung, Recycling und Produktionsoptimierung ✓",
+   "ai": [],
+   "infra": [],
+   "contact": "https://uvr-fia.de/kontakt/",
+   "emails": [
+    "info@uvr-fia.de"
+   ],
+   "pages": [
+    "https://uvr-fia.de/",
+    "https://uvr-fia.de/forschungsprojekte/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "university of petrosani",
+   "name": "University of Petrosani",
+   "country": "RO",
+   "city": "Petroșani",
+   "website": "https://www.upet.ro",
+   "lat": 45.4167,
+   "lon": 23.3667,
+   "projects": [
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:19:36.117Z",
+   "title": "UPET.ro | Universitatea din Petroșani",
+   "description": "Universitatea din Petroșani asigură realizarea unui învățământ de performanță, dezvoltat și perfecționat printr-o complexă activitate de cercetare.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.upet.ro/contact-upet/",
+   "emails": [],
+   "pages": [
+    "https://www.upet.ro/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "tuza",
+   "name": "University of Žilina",
+   "country": "SK",
+   "city": "Žilina",
+   "website": "https://www.uniza.sk",
+   "lat": 49.22315,
+   "lon": 18.73941,
+   "projects": [
+    "SPENS"
+   ],
+   "last": 2009,
+   "status": "read",
+   "checked": "2026-11-15T12:19:58.850Z",
+   "title": "Žilinská univerzita v Žiline",
+   "description": "Nová stránka Žilinskej univerzity v Žiline",
+   "ai": [],
+   "infra": [],
+   "contact": "https://www.uniza.sk/index.php/univerzita/vseobecne-informacie/kontakty",
+   "emails": [],
+   "pages": [
+    "https://www.uniza.sk/",
+    "https://www.uniza.sk/index.php/studenti/vseobecne-informacie/oznamy/6916-ai-jam-gamemind-2026",
+    "https://www.uniza.sk/index.php/component/icagenda/700-ai-jam-gamemind-2026"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "vekton",
+   "name": "Vekton d.o.o.",
+   "country": "SI",
+   "city": "",
+   "website": "",
+   "lat": null,
+   "lon": null,
+   "projects": [
+    "RusaLCA"
+   ],
+   "last": 2016,
+   "status": "no website listed",
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "zavod za zdravstveno varstvo novo mesto",
+   "name": "Zavod za zdravstveno varstvo Novo mesto",
+   "country": "SI",
+   "city": "Novo mesto",
+   "website": "https://nijz.si",
+   "lat": 45.80397,
+   "lon": 15.16886,
+   "projects": [
+    "RusaLCA"
+   ],
+   "last": 2016,
+   "status": "read",
+   "checked": "2026-11-15T12:20:17.479Z",
+   "title": "Nacionalni inštitut za javno zdravje – NIJZ",
+   "description": "NIJZ zagotavlja strokovne vsebine, podatke in preventivne informacije za varovanje in krepitev javnega zdravja v Sloveniji.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://nijz.si/kontakt/",
+   "emails": [
+    "pr@nijz.si"
+   ],
+   "pages": [
+    "https://nijz.si/",
+    "https://nijz.si/zivljenjski-slog/digitalno-trzenje/",
+    "https://nijz.si/zivljenjski-slog/prehrana/prehranske-raziskave-in-podatki/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "src bistra ptuj",
+   "name": "Znanstveno-raziskovalno središče Bistra Ptuj",
+   "country": "SI",
+   "city": "Ptuj",
+   "website": "https://www.bistra.si/",
+   "lat": 46.42005,
+   "lon": 15.87018,
+   "projects": [
+    "SPL-CYCLE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:20:21.773Z",
+   "title": "ZRS Bistra, Ptuj",
+   "description": "ZRS Bistra Ptuj, kot vodilna razvojna institucija in vmesnik med javnim in zasebnim sektorjem, si prizadeva prispevati k enakomernejšemu gospodarskemu in pravičnejšemu socialnemu razvoju regije.",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://www.bistra.si/",
+    "https://www.bistra.si/raziskave-razvoj-in-inovacije",
+    "https://www.bistra.si/raziskave-razvoj-in-inovacije/gospodarstvo"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  },
+  {
+   "key": "ekolive",
+   "name": "ekolive s.r.o.",
+   "country": "SK",
+   "city": "Košice",
+   "website": "https://ekolive.eu",
+   "lat": 48.71395,
+   "lon": 21.25808,
+   "projects": [
+    "RIS-CuRE"
+   ],
+   "last": 2021,
+   "status": "read",
+   "checked": "2026-11-15T12:20:24.670Z",
+   "title": "ekolive &#8211; Bioleaching &#8211; Bioremediation &#8211; Bio|me|stimulants",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": "https://ekolive.eu/contact-us/order-page-en/",
+   "emails": [],
+   "pages": [
+    "https://ekolive.eu/"
+   ],
+   "score": 2,
+   "reasons": [
+    "1 shared project with ZAG"
+   ]
+  }
+ ]
+}

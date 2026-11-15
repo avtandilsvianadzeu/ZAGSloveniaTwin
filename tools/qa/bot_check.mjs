@@ -64,6 +64,7 @@ const CASES = [
   ['projects coordinated by ZAG abroad', 'ZAG coordinated'],
   ['kje je ZAG delal v tujini', '52'],
   ['latest news from ZAG', 'The latest on zag.si'],
+  ['which partners work on AI', 'websites show AI topics'],
 ];
 
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
