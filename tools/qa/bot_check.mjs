@@ -56,6 +56,13 @@ const CASES = [
   ['what is B-WIM', 'these records mention it'],
   ['the height of Krvavec cable car is wrong', 'New value'],
   ['tell me the story of Melje dam', 'set the correction aside'],
+  ['where did ZAG work abroad', '52 countries', 'did not understand'],
+  ['which bridges did ZAG measure abroad', 'Nieporęt', 'cannot find'],
+  ['projects with partners in Italy', 'international projects with partners there'],
+  ['what is EURAD', 'European Joint Programme on Radioactive', 'EURAD-2'],
+  ['Palhoča bridge Brazil', 'Santa Catarina'],
+  ['projects coordinated by ZAG abroad', 'ZAG coordinated'],
+  ['kje je ZAG delal v tujini', '52'],
 ];
 
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;

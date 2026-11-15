@@ -127,7 +127,8 @@
     DB.more=Promise.all([
       (window.ZAG&&window.ZAG.projects?Promise.resolve(window.ZAG):fetch('data.js').then(r=>r.text()).then(t=>JSON.parse(t.slice(t.indexOf('{')).trim().replace(/;\s*$/,'')))).catch(()=>null),
       fetch('data/news.json').then(r=>r.json()).catch(()=>null),
-      fetch('data/inspections.json').then(r=>r.json()).catch(()=>null)]).then(([z,n,i])=>{
+      fetch('data/inspections.json').then(r=>r.json()).catch(()=>null),
+      fetch('data/international.json').then(r=>r.json()).catch(()=>null)]).then(([z,n,i,w])=>{ DB.intl=w;
         DB.projects={}; DB.projAll=(z&&z.projects)||[]; DB.src=(z&&z.src)||{}; ((z&&z.projects)||[]).forEach(pr=>(pr.sites||[]).forEach(id=>{ if(id!=='zag') (DB.projects[id]=DB.projects[id]||[]).push(pr); }));
         DB.news=(n&&n.items)||{}; DB.insp=(i&&i.items)||{}; });
     return DB.ready; }
@@ -267,8 +268,8 @@
   function listType(t,inPlace){ let rs=DB.recs.filter(r=>t.match(r.type)); if(inPlace) rs=rs.filter(r=>inPlace.includes(r));
     if(!rs.length){ say(SLc()?`Tu ni zapisov te vrste (${esc(tN(t))}).`:`No ${esc(t.name)} are recorded${inPlace?' there':''}.`); offer(menu()); return; }
     say(SLc()?(rs.length===1?`Tu je zapisan en objekt te vrste (${esc(tN(t))}):`:`V atlasu ${zN(rs.length)} te vrste (${esc(tN(t))}). Izberite enega:`):(rs.length===1?`One of the ${esc(t.name)} is recorded${inPlace?' there':''}:`:`${rs.length} ${esc(t.name)}${inPlace?' there':''} in the atlas. Choose one:`)); offer(rs.slice(0,10).map(r=>[r.name,()=>card(r)]).concat(rs.length>10?[['Show more',()=>{ offer(rs.slice(10,24).map(r=>[r.name,()=>card(r)])); }]]:[])); }
-  function help(){ if(SLc()){ say(`Znam:<ul class="zb-list"><li>poiskati objekt po imenu, vrsti ali kraju</li><li>odgovoriti na vrednost, kot so višina, dolžina, leto ali moč, vedno z virom</li><li>ga prikazati na zemljevidu ali odpreti njegovo stran</li><li>sprejeti sporočilo, ko je kaj narobe, in ga kot natančno zahtevo poslati ekipi DigitalZAG</li><li>odpreti obrazec za nov 3D model</li></ul>Razumem slovenske in angleške besede, na primer <i>tunnel</i>, <i>bridge</i>, <i>height</i>.`); offer(menu()); return; }
-    say(`I can:<ul class="zb-list"><li>find a structure by name, type or place</li><li>answer a value such as height, length, year or power, always with its source</li><li>show it on the map or open its page</li><li>take a report when something is wrong and send it to the DigitalZAG team as an exact request</li><li>open the form for a new 3D model</li></ul>I understand English and Slovenian words, for example <i>predor</i>, <i>most</i>, <i>višina</i>.`); offer(menu()); }
+  function help(){ if(SLc()){ say(`Znam:<ul class="zb-list"><li>poiskati objekt po imenu, vrsti ali kraju</li><li>odgovoriti na vrednost, kot so višina, dolžina, leto ali moč, vedno z virom</li><li>ga prikazati na zemljevidu ali odpreti njegovo stran</li><li>sprejeti sporočilo, ko je kaj narobe, in ga kot natančno zahtevo poslati ekipi DigitalZAG</li><li>povedati, kje je ZAG delal v tujini: mostovi, države, mednarodni projekti in združenja</li><li>odpreti obrazec za nov 3D model</li></ul>Razumem slovenske in angleške besede, na primer <i>tunnel</i>, <i>bridge</i>, <i>height</i>.`); offer(menu()); return; }
+    say(`I can:<ul class="zb-list"><li>find a structure by name, type or place</li><li>answer a value such as height, length, year or power, always with its source</li><li>show it on the map or open its page</li><li>take a report when something is wrong and send it to the DigitalZAG team as an exact request</li><li>tell where ZAG has worked abroad: bridges, countries, international projects and associations</li><li>open the form for a new 3D model</li></ul>I understand English and Slovenian words, for example <i>predor</i>, <i>most</i>, <i>višina</i>.`); offer(menu()); }
 
   /* ---------- guided requests: every step is a click, so the request is exact ---------- */
   function pickRecord(then,why){ say((why||'Which structure is it?')+' Type a name or choose one.'); ctx.flow={pick:then};
@@ -346,6 +347,48 @@
     inspect:['inspection','inspections','inspected','inspect','pregled','pregledi','pregledan','monitored','checked'],who:['who','people','team','researchers','led','author','authors','kdo','avtor','avtorji'],src:['sources','source','references','viri','vir','evidence','proof','dokaz'],
     proj:['projects','project','projekt','projekti'],fix:['wrong','incorrect','error','mistake','fix','update','change','correct','napaka','narobe','popravi','spremeni','posodobi','missing','manjka'],help:['help','pomoc','commands'],hello:['hi','hello','hey','zdravo','zivjo','pozdravljeni','hej'],
     tall:['tall','high','height','visina','visok','visoka'],long:['long','length','dolzina','dolg','dolga'],when:['when','built','opened','year','kdaj','zgrajen','leto'],how:['how','kako']};
+
+  /* ---------- ZAG abroad: structures, partner countries, international projects, associations (data/international.json) ---------- */
+  const INTL_W=/\b(abroad|international\w*|outside slovenia|foreign|overseas|worldwide|globally|countries|tujin\w*|mednarodn\w*|drzav\w*|inozem\w*|svetu|sveta|zunaj slovenije)\b/;
+  const cNames=()=>{ if(DB._cn) return DB._cn; const m=[]; const D=DB.intl; if(!D) return m; let en,sl; try{ en=new Intl.DisplayNames(['en'],{type:'region'}); sl=new Intl.DisplayNames(['sl'],{type:'region'}); }catch(_){}
+    D.countries.forEach(c=>{ const ns=new Set([c.name,en&&en.of(c.iso),sl&&sl.of(c.iso)].filter(Boolean).map(norm)); ns.forEach(x=>m.push([x,c.iso])); });
+    [['usa','US'],['america','US'],['uk','GB'],['britain','GB'],['england','GB'],['holland','NL'],['czechia','CZ']].forEach(x=>m.push(x)); return DB._cn=m; };
+  const cOf=n=>{ const words=n.split(' '); for(const [nm2,iso] of cNames()){ const parts=nm2.split(' '); if(parts.length>1){ if((' '+n+' ').includes(' '+nm2+' ')) return iso; continue; }
+      if(words.some(w=>w===nm2||(nm2.length>=6&&w.length>=5&&w.slice(0,nm2.length-1)===nm2.slice(0,-1)&&w.length<=nm2.length+2))) return iso; } return null; };
+  const cName=iso=>{ try{ return new Intl.DisplayNames([SLc()?'sl':'en-GB'],{type:'region'}).of(iso); }catch(_){ return iso; } };
+  const IURL='international.html', sf=(k,a,b,c,d)=>{ const m=k%100; return k+' '+(m===1?a:m===2?b:m===3||m===4?c:d); }, dz=k=>{ const m=k%100; return k+' '+(m===1?'država':m===2?'državi':m===3||m===4?'države':'držav'); };
+  function stCardI(s){ const sl=SLc();
+    say(`<div class="zb-card"><b>${esc(s.name)}</b><span>${esc(s.type)}, ${esc(s.place)}, ${esc(cName(s.iso))}, ${esc(s.year)}</span><p>${esc(s.what)}</p><ul class="zb-spec"><li><span>${sl?'Kdo':'Who'}</span><b>${esc(s.who)}</b></li><li><span>${sl?'Delo':'Work'}</span><b>${s.cat==='zag'?(sl?'meritve ZAG':'measured by ZAG'):(sl?'SiWIM, razvit na ZAG, uporabljajo drugi':'SiWIM, developed at ZAG, run by others')}</b></li>${s.approx?`<li><span>${sl?'Lega':'Position'}</span><b>${sl?'približna, vir navaja le kraj':'approximate, the source gives only the place'}</b></li>`:''}</ul><p class="zb-src">${sl?'Viri':'Sources'}: ${s.src.map(([a,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(a)}</a>`).join(', ')}</p></div>`); }
+  function prjCardI(p){ const sl=SLc();
+    say(`<div class="zb-card"><b>${esc(p.a)}</b><span>${esc(p.f)}, ${esc(p.y)}</span><p>${esc(p.t)}</p><ul class="zb-spec">${p.r?`<li><span>${sl?'Vloga ZAG':'ZAG role'}</span><b>${esc(p.r)}</b></li>`:''}<li><span>${sl?'Države partnerjev':'Partner countries'}</span><b>${p.c.filter(x=>x!=='SI').map(cName).join(', ')||'-'}</b></li></ul>${p.n?`<p>${esc(p.n)}</p>`:''}<p class="zb-src">${sl?'Vir':'Source'}: <a href="${esc(p.s)}" target="_blank" rel="noopener">${sl?'seznam partnerjev':'partner list'}</a></p></div>`); }
+  function intlAnswer(n,tokens){ const D=DB.intl; if(!D) return false; const sl=SLc(), go=[sl?'Odpri stran Mednarodno':'Open the International page',IURL,'link'];
+    const iw=INTL_W.test(n), recT=tokens.filter(w=>!/^(zag|zavod|gradbenistvo|slovenije|slovenia|work\w*|did|do|does|delal\w*|sodel\w*|measure\w*|meril\w*|bridges?|mostov\w*|most|structures?|objekt\w*|projects?|projekt\w*|partners?|partner\w*|coordinat\w*|koordin\w*|which|kateri\w*|where|kje|what|kaj)$/.test(w)&&!INTL_W.test(w)&&!(DB.common&&DB.common.has(w))), strongRec=recT.length>0&&findRecords(recT).some(h=>h.s>=2);
+    const zagS=D.structures.filter(s=>s.cat==='zag'), KEYS={nieporet:/^niepor/,palhoca:/^palho/,warsaw:/^(warsaw|varsav\w*)$/,bwim_goias:/^(goias|itinguijada|lambari|passa)$/,bwim_se:/^(torsboda|radmanso|storlangtrask)$/,bwim_fr:/^autreville$/}, byName=D.structures.find(s=>KEYS[s.id]&&tokens.some(w=>KEYS[s.id].test(w)));
+    if(byName&&!strongRec){ stCardI(byName); offer([go,[sl?'Vsi objekti v tujini':'All structures abroad',()=>intlStructures()]]); return true; }
+    const structQ=/\b(bridges?|structures?|viaducts?|buildings?|measured|tested|measurements?|mostov\w*|most|objekt\w*|meril\w*|merit\w*|wim|siwim)\b/.test(n);
+    if(iw&&structQ&&!strongRec){ intlStructures(); return true; }
+    if(/\b(associations?|member(ship)?s?|networks?|zdruzen\w*|clan\w*|mrez\w*)\b/.test(n)&&(iw||/\bzag\b/.test(n))){ const L2=D.links.slice(0,12);
+      say(sl?`ZAG sodeluje v <b>${D.links.length}</b> združenjih, mrežah in sporazumih. Nekaj jih je tu, vsa so na strani Mednarodno:`:`ZAG takes part in <b>${D.links.length}</b> associations, networks and agreements. Here are some, all are on the International page:`);
+      say(`<ul class="zb-list">${L2.map(l=>`<li><b>${esc(l.name)}</b>${l.c.length?`, ${sl?dz(l.c.length):l.c.length+(l.c.length===1?' country':' countries')}`:''}</li>`).join('')}</ul>`); offer([[sl?'Odpri združenja':'Open associations',IURL+'#links','link']]); return true; }
+    const acr=D.projects.find(p=>tokens.includes(norm(p.a).replace(/ /g,'')))||D.projects.find(p=>norm(p.a).split(' ')[0].length>=4&&tokens.includes(norm(p.a).split(' ')[0])&&norm(p.a).split(' ').length===1)||D.projects.find(p=>norm(p.a).split(' ').filter(w=>w.length>=4).some(w=>tokens.includes(w)));
+    if(acr&&!strongRec){ prjCardI(acr); const zp=projectOf(tokens); offer([go].concat(zp?[[sl?'Vpis v registru ZAG':'ZAG register entry',()=>projectCard(zp)]]:[])); return true; }
+    if(/\b(coordinat\w*|koordin\w*|led by zag|vodil\w*)\b/.test(n)&&(iw||/\bprojects?|projekt\w*\b/.test(n))){ const ps=D.projects.filter(p=>p.co).sort((a,b)=>(b.y0||0)-(a.y0||0));
+      say(sl?`ZAG je koordiniral <b>${ps.length}</b> mednarodnih projektov:`:`ZAG coordinated <b>${ps.length}</b> international projects:`); offer(ps.slice(0,12).map(p=>[p.a,()=>{ prjCardI(p); offer([go]); }])); return true; }
+    const iso=cOf(n); if(iso&&iso!=='SI'&&!strongRec&&(iw||/\b(projects?|projekt\w*|partners?|partner\w*|work\w*|delal\w*|sodel\w*|in|v|na|with|z)\b/.test(n))){
+      const c=D.countries.find(x=>x.iso===iso), ps=D.projects.filter(p=>p.c.includes(iso)).sort((a,b)=>(b.y0||0)-(a.y0||0)), st=D.structures.filter(s=>s.iso===iso), cn=cName(iso);
+      if(!c&&!st.length){ say(sl?`Viri ne navajajo projektov ZAG s partnerji v državi <b>${esc(cn)}</b>.`:`The sources list no ZAG project with partners in <b>${esc(cn)}</b>.`); offer([go]); return true; }
+      say(sl?`<b>${esc(cn)}</b>: ${c?`${sf(c.total,'mednarodni projekt','mednarodna projekta','mednarodni projekti','mednarodnih projektov')} s partnerji v tej državi, od leta ${c.first}`:'brez projektov s partnerji v tej državi'}${st.length?`, ${sf(st.length,'objekt','objekta','objekti','objektov')} na strani Mednarodno`:''}.`:`<b>${esc(cn)}</b>: ${c?`${c.total} international ${c.total===1?'project':'projects'} with partners there, since ${c.first}`:'no projects with partners there'}${st.length?`, and ${st.length} ${st.length===1?'structure':'structures'} on the International page`:''}.`);
+      st.forEach(stCardI);
+      if(ps.length){ say(sl?'Najnovejši projekti:':'The newest projects:'); offer(ps.slice(0,8).map(p=>[p.a,()=>{ prjCardI(p); offer([go]); }]).concat([go])); } else offer([go]); return true; }
+    if(iw&&!strongRec){ const top=D.countries.slice(0,5).map(c=>`${cName(c.iso)} (${c.total})`).join(', ');
+      say(sl?`Zunaj Slovenije: ZAG je meril <b>${zagS.length}</b> mostove, ki jih javni viri poimenujejo, ima <b>${D.projects.length}</b> mednarodnih projektov s partnerji v <b>${D.countries.length}</b> državah in sodeluje v <b>${D.links.length}</b> združenjih in sporazumih. Največ projektov s partnerji: ${esc(top)}.`
+        :`Outside Slovenia: ZAG measured <b>${zagS.length}</b> bridges that public sources name, has <b>${D.projects.length}</b> international projects with partners in <b>${D.countries.length}</b> countries, and takes part in <b>${D.links.length}</b> associations and agreements. Most projects have partners in ${esc(top)}.`);
+      offer([[sl?'Mostovi v tujini':'Bridges abroad',()=>intlStructures()],[sl?'Projekti, ki jih je vodil ZAG':'Projects ZAG coordinated',()=>handle(sl?'mednarodni projekti koordinator ZAG':'international projects coordinated by zag',null,true)],go]); return true; }
+    return false; }
+  function intlStructures(){ const D=DB.intl, sl=SLc(), z=D.structures.filter(s=>s.cat==='zag'), o=D.structures.filter(s=>s.cat!=='zag');
+    say(sl?`Javni viri poimenujejo <b>${z.length}</b> objekte v tujini, kjer je meril ZAG, in <b>${o.length}</b>, kjer drugi uporabljajo SiWIM, sistem, razvit na ZAG:`:`Public sources name <b>${z.length}</b> structures abroad that ZAG measured, and <b>${o.length}</b> where others run SiWIM, the system developed at ZAG:`);
+    say(`<ul class="zb-list">${D.structures.map(s=>`<li><b>${esc(s.name)}</b>, ${esc(cName(s.iso))}, ${esc(s.year)}${s.cat==='zag'?'':` <span>(SiWIM)</span>`}</li>`).join('')}</ul>`);
+    offer(D.structures.map(s=>[s.short||s.name,()=>{ stCardI(s); offer([[sl?'Odpri stran Mednarodno':'Open the International page',IURL+'#structures','link']]); }])); }
   function handle(raw,shown,said){ if(ctx.flow&&ctx.flow.kind==='code'){ user('******'); return ownerCheck(String(raw||'').trim()); } if(!said) user(shown||raw); const text=String(raw||'').trim(); if(!text) return;
     if(/^\/?(owner|admin|lastnik)$/i.test(text)){ if(isOwner()){ say('You are signed in as the atlas owner.'); ownerMenu(); } else ownerLogin(); return; }
     let f=ctx.flow;
@@ -369,6 +412,7 @@
     ctx.photo=/\b(photo\w*|pictures?|image\w*|pic|pics|slik\w*|fotografij\w*|foto)\b/.test(n);
     if((/^(hi|hello|hey|zdravo|zivjo|dober dan|hej|pozdravljen\w*)\b/.test(n)||(tokens.length<=2&&anyNear(n.split(' '),FUZ.hello)))&&tokens.length<=2){ say(L()==='sl'?'Pozdravljeni. Kaj vas zanima?':'Hello. What would you like to know?'); home(); return; }
     if(/\b(help|pomoc|what can you)\b/.test(n)){ help(); return; }
+    if(DB.intl&&intlAnswer(n,tokens)) return;
     /* commands for the map itself: the whole map, zoom, background, 3D, legend, north. Only when no record is named */
     { const sl=L()==='sl', CMDW=new Set('show me the whole all entire full complete map slovenia country view overview reset zoom in out closer further back satellite aerial imagery street normal flat 3d three tilt legend hide open close north rotate turn please on of to celoten celotni celo cel cela zemljevid slovenijo slovenija pregled povecaj pomanjsaj satelit satelitski legenda legendo skrij pokazi prikazi sever ravni ravno'.split(' '));
       const rest=tokens.filter(w=>!CMDW.has(w)), named=rest.length&&findRecords(rest).some(h=>h.s>=1.5);
