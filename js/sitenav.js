@@ -124,3 +124,24 @@
 /* each table that scrolls sideways is named after the section it is in, so a screen reader can tell them apart */
 (function(){ const name=()=>document.querySelectorAll('.tscroll[role=region]').forEach(t=>{ if(t.dataset.named) return; const h=t.closest('section,details,.blk,.tsec'); const x=h&&h.querySelector('h2,h3,summary'); if(x){ t.setAttribute('aria-label',x.textContent.trim().slice(0,80)+(window.LANG==='sl'?', tabela':', table')); t.dataset.named='1'; } });
   name(); new MutationObserver(name).observe(document.documentElement,{childList:true,subtree:true}); })();
+/* house style on screen: text quoted from sources keeps its words, but dashes, semicolons, middle dots, ellipses and
+   exclamation marks are shown in the atlas's own plain punctuation, on every page and in text added later (news, ZAGBot) */
+(function(){
+  const SKIP='script,style,code,pre,textarea,input,select,[contenteditable],.maplibregl-canvas-container';
+  const to=()=>(document.documentElement.lang||window.LANG||'en').startsWith('sl')?' do ':' to ';
+  const fix=t=>t
+    .replace(/(\d)\s+[–—]\s+(\d)/g,(m,a,b)=>a+to()+b)
+    .replace(/(\S)[–—](\S)/g,'$1-$2')
+    .replace(/\s*[–—]\s*/g,', ')
+    .replace(/\s*[·•]\s*/g,', ')
+    .replace(/…|\.\.\.(?!\w)/g,'')
+    .replace(/\s*;\s*/g,', ')
+    .replace(/!+/g,'.').replace(/\.\.+/g,'.').replace(/\?\./g,'?').replace(/,\s*,/g,',');
+  const BAD=/[–—·•…;!]|\.\.\./;
+  const walk=root=>{ if(!root) return; if(root.nodeType===3){ const p=root.parentElement; if(p&&!p.closest(SKIP)&&BAD.test(root.nodeValue)){ const v=fix(root.nodeValue); if(v!==root.nodeValue) root.nodeValue=v; } return; }
+    if(root.nodeType!==1||root.closest&&root.closest(SKIP)) return;
+    const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT); let n; const L=[]; while(n=w.nextNode()) L.push(n); L.forEach(walk); };
+  const run=()=>{ walk(document.body); if(document.title&&BAD.test(document.title)) document.title=fix(document.title); };
+  const start=()=>{ run(); new MutationObserver(ms=>{ for(const m of ms){ if(m.type==='characterData') walk(m.target); else m.addedNodes.forEach(walk); } }).observe(document.body,{childList:true,subtree:true,characterData:true}); };
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+})();

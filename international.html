@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="css/twin.css?v=66">
 <link rel="stylesheet" href="css/platform.css?v=66">
 <link rel="stylesheet" href="css/ios.css?v=66">
-<link rel="stylesheet" href="css/macos.css?v=78">
+<link rel="stylesheet" href="css/macos.css?v=80">
 <style>
 .intl{max-width:1240px;margin:0 auto;padding:0 20px 72px}
 .ihero{padding:30px 0 18px}
@@ -90,7 +90,7 @@
   <span class="crumb">International</span>
   <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn" href="dashboard.html">Dashboard</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
 </header>
-<script src="js/sitenav.js?v=45"></script>
+<script src="js/sitenav.js?v=46"></script>
 <script src="js/sidebar.js?v=11"></script>
 <main id="main" class="intl">
   <header class="ihero">
@@ -120,7 +120,7 @@
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script>
 (async()=>{
-  const SL=window.LANG==='sl', L=(en,sl)=>SL?sl:en, $=id=>document.getElementById(id);
+  const SL=window.LANG==='sl', L=(en,sl)=>SL?sl:en, T=(o,k)=>SL&&o[k+'_sl']?o[k+'_sl']:o[k], $=id=>document.getElementById(id);
   const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   if(SL){ $('kick').textContent='DigitalZAG'; $('h1').textContent='Mednarodna partnerstva ZAG'; $('lead').textContent='Mostovi, ki jih je ZAG meril v tujini, države partnerjev v mednarodnih projektih in združenja, v katerih sodeluje. Vsak zapis ima povezavo na javni vir.'; $('mh').textContent='Kako je pregled nastal'; $('ph').textContent='Podrobnosti'; }
   let D,W; try{ [D,W]=await Promise.all([fetch('data/international.json').then(r=>r.json()),fetch('data/world.geojson').then(r=>r.json())]); }
@@ -138,7 +138,7 @@
   const VIEWS={world:()=>({center:[-8,22],zoom:fitZ()}),europe:()=>({center:[15,50],zoom:Math.max(2.4,fitZ()+1.6)})};
   const map=new maplibregl.Map({container:'imap',style:{version:8,projection:{type:'globe'},sky:{'sky-color':'#DCEBFF','horizon-color':'#FFFFFF','fog-color':'#FFFFFF','sky-horizon-blend':.55,'horizon-fog-blend':.7,'fog-ground-blend':.85,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,4,.8,7,0]},
     sources:{earth:{type:'raster',tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],tileSize:256,maxzoom:8,attribution:'Imagery © Esri, Maxar, Earthstar Geographics'}},
-    layers:[{id:'bg',type:'background',paint:{'background-color':'#9FC3EA'}},{id:'earth',type:'raster',source:'earth',paint:{'raster-saturation':-.15,'raster-contrast':.08,'raster-brightness-min':.06,'raster-fade-duration':200}}]},...VIEWS.world(),cooperativeGestures:true,attributionControl:{compact:true,customAttribution:L('Borders: © EuroGeographics for the administrative boundaries, Eurostat GISCO','Meje: © EuroGeographics za upravne meje, Eurostat GISCO')}});
+    layers:[{id:'bg',type:'background',paint:{'background-color':'#9FC3EA'}},{id:'earth',type:'raster',source:'earth',paint:{'raster-saturation':-.15,'raster-contrast':.08,'raster-brightness-min':.06,'raster-fade-duration':200}}]},...VIEWS.world(),cooperativeGestures:true,locale:SL?{'CooperativeGesturesHandler.WindowsHelpText':'Za povečavo zemljevida držite Ctrl in vrtite kolesce miške','CooperativeGesturesHandler.MacHelpText':'Za povečavo zemljevida držite ⌘ in vrtite kolesce miške','CooperativeGesturesHandler.MobileHelpText':'Zemljevid premikajte z dvema prstoma'}:{},attributionControl:{compact:true,customAttribution:L('Borders: © EuroGeographics for the administrative boundaries, Eurostat GISCO','Meje: © EuroGeographics za upravne meje, Eurostat GISCO')}});
   window.__imap=map;   map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
   /* a camera move asked for while the globe is still settling is tried at once and again when the globe is idle, so it is never lost */
   const whenReady=f=>{ const c0=map.getCenter(), z0=map.getZoom(); try{ f(); }catch(_){} const still=()=>{ const c=map.getCenter(); return Math.abs(c.lng-c0.lng)<.01&&Math.abs(c.lat-c0.lat)<.01&&Math.abs(map.getZoom()-z0)<.01; };
@@ -166,7 +166,7 @@
     map.addLayer({id:'home',type:'circle',source:'home',paint:{'circle-radius':6,'circle-color':'#5E5CE6','circle-stroke-color':'#fff','circle-stroke-width':2.4}});
     const pop=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:10});
     const hov=(id,fn)=>{ map.on('mousemove',id,e=>{ map.getCanvas().style.cursor='pointer'; pop.setLngLat(e.lngLat).setHTML(fn(e.features[0].properties)).addTo(map); }); map.on('mouseleave',id,()=>{ map.getCanvas().style.cursor=''; pop.remove(); }); };
-    hov('st',p=>{ const s=D.structures.find(x=>x.id===p.id); return `<b>${esc(s.name)}</b><br>${esc(s.place)}, ${esc(cname(s.iso))}, ${esc(s.year)}`; });
+    hov('st',p=>{ const s=D.structures.find(x=>x.id===p.id); return `<b>${esc(T(s,'name'))}</b><br>${esc(T(s,'place'))}, ${esc(cname(s.iso))}, ${esc(T(s,'year'))}`; });
     hov('cities',p=>`<b>${esc(p.city)}</b>, ${esc(cname(p.iso))}<br>${p.n} ${L(p.n===1?'partner institution':'partner institutions',p.n===1?'partnerska ustanova':'partnerskih ustanov')}`);
     hov('home',()=>`<b>ZAG</b>, Dimičeva ulica 12, Ljubljana`);
     map.on('mousemove','cf',e=>{ if(map.queryRenderedFeatures(e.point,{layers:['st','cities','home']}).length) return; const p=e.features[0].properties; if(p.home||!p.n){ pop.remove(); return; } pop.setLngLat(e.lngLat).setHTML(`<b>${esc(cname(p.iso))}</b><br>${p.n} ${L(p.n===1?'project with partners here':'projects with partners here',p.n===1?'projekt s partnerji tukaj':'projektov s partnerji tukaj')}`).addTo(map); });
@@ -189,7 +189,7 @@
   $('tabs').onclick=e=>{ const b=e.target.closest('button'); if(!b) return; tab=b.dataset.t; q=''; draw(); try{ history.replaceState(null,'','#'+tab); }catch(_){} };
   const srcList=a=>`<ul class="src">${a.map(([t,u])=>`<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join('')}</ul>`;
   const stCard=s=>`<article class="icard" data-s="${s.id}" tabindex="0"><span class="badge ${s.cat==='zag'?'b-zag':'b-siwim'}">${s.cat==='zag'?L('Measured by ZAG','Meril ZAG'):L('SiWIM used by others','SiWIM uporabljajo drugi')}</span>${s.approx?`<span class="badge b-ap">${L('Approximate position','Približna lega')}</span>`:''}
-    <h3>${esc(s.name)}</h3><div class="meta">${esc(s.type)}, ${esc(s.place)}, ${esc(cname(s.iso))}, ${esc(s.year)}</div><p>${esc(s.what)}</p><p class="meta">${esc(s.who)}</p>${srcList(s.src)}</article>`;
+    <h3>${esc(T(s,'name'))}</h3><div class="meta">${esc(T(s,'type'))}, ${esc(T(s,'place'))}, ${esc(cname(s.iso))}, ${esc(T(s,'year'))}</div><p>${esc(T(s,'what'))}</p><p class="meta">${esc(T(s,'who'))}</p>${srcList(s.src)}</article>`;
   const prj=p=>`<article class="icard"><h3>${esc(p.a)}${p.co?` <span class="badge b-co">${L('ZAG coordinated','Koordinator ZAG')}</span>`:''}</h3><div class="meta">${esc(p.t)}</div><div class="meta">${esc(p.f)}, ${esc(p.y)}, ${p.c.length} ${L(p.c.length===1?'country':'countries',p.c.length===1?'država':'držav')}</div>${p.n?`<p class="meta">${esc(p.n)}</p>`:''}${srcList([[L('Partner list','Seznam partnerjev'),p.s]])}</article>`;
   function draw(){
     document.querySelectorAll('#tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===tab));
@@ -237,6 +237,6 @@
   ].map(t=>`<li>${t}</li>`).join('')+`<li>${L('More about the bridge work:','Več o delu na mostovih:')} <a href="https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/" target="_blank" rel="noopener">${L('ZAG, Section for Bridges and Other Civil Engineering Structures','ZAG, Oddelek za mostove in druge gradbene konstrukcije')}</a></li>`;
 })();
 </script>
-<script src="js/zagbot.js?v=65"></script>
+<script src="js/zagbot.js?v=66"></script>
 </body>
 </html>

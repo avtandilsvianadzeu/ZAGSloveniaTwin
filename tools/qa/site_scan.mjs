@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* Site checks of the DigitalZAG, in a real browser (Playwright Chromium).
    Serves the repository on a local port, opens every page in English and Slovenian, and reports:
-   script errors, failed requests to the site's own files, house-style typography in visible text (quotes exempt),
+   script errors, failed requests to the site's own files, house-style typography in all visible text, quotes and news included,
    English left on Slovenian pages, horizontal overflow at phone width, missing alt text, and the record pages' key controls.
    Exit code 1 on blocking problems (errors, broken own requests, overflow). Writes qa/site-report.json and qa/site-report.md.
    Usage: node tools/qa/site_scan.mjs [--pages=all|quick] [--port=8791] */
@@ -26,7 +26,7 @@ const ids = fs.readdirSync(path.join(ROOT, 'api/v1/objects')).map(f => f.replace
 const base = ['index.html', 'twin.html', 'dashboard.html', 'questions.html', 'api.html', 'international.html', 'latest.html', 'value.html', 'add.html', '404.html'];
 const records = MODE === 'quick' ? ids.slice(0, 6) : ids;
 const pages = [...base, ...records.map(i => 'twin.html?id=' + i)];
-const SYMBOLS = /[–—·•…;]/g;
+const SYMBOLS = /[–—·•…;!]/g;
 const ENGLISH = /\b(the|and|with|from|for|of|this|that|not|are|is|was|were|open|close|show|hide)\b/i, SLOVENE = /\b(in|na|za|je|so|ki|ali|ne|po|od|do|pri|se|da)\b/;
 const out = { checked: new Date().toISOString(), pages: [], blocking: 0, warnings: 0 };
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
@@ -47,8 +47,8 @@ async function scan(pg, lang, viewport) {
       document.querySelectorAll('details').forEach(d => d.open = true);
       const out = { symbols: [], english: [], noAlt: 0 };
       const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n;
-      while (n = w.nextNode()) { const s = n.textContent.trim(); if (s.length < 3) continue; const el = n.parentElement; if (!el || el.closest('script,style,blockquote,.quote,code,pre,.zn,.nitem,.zb-log')) continue;
-        if (/[–—·•…;]/.test(s)) out.symbols.push(s.slice(0, 80));
+      while (n = w.nextNode()) { const s = n.textContent.trim(); if (s.length < 3) continue; const el = n.parentElement; if (!el || el.closest('script,style,code,pre,textarea')) continue;
+        if (/[–—·•…;!]/.test(s)) out.symbols.push(s.slice(0, 80));
         if (document.documentElement.lang === 'sl' && s.length > 14 && /\b(the|and|with|from|for|this|that|not|are|is|was|were)\b/i.test(s) && !/\b(in|na|za|je|so|ki|ali|ne|po|od|do|pri|se|da|z|s|v)\b/.test(s) && !/\d{3,}/.test(s)) out.english.push(s.slice(0, 80)); }
       out.noAlt = [...document.images].filter(i => !i.hasAttribute('alt')).length;
       out.overflow = document.documentElement.scrollWidth > innerWidth + 1;
@@ -65,7 +65,7 @@ for (const pg of pages) {
   if (base.includes(pg)) out.pages.push(await scan(pg, 'en', { width: 390, height: 844 }));
 }
 await b.close(); server.close();
-for (const r of out.pages) { if (r.errors.length || r.failed.length || r.overflow) out.blocking++; if (r.symbols.length || r.english.length || r.noAlt) out.warnings++; }
+for (const r of out.pages) { if (r.errors.length || r.failed.length || r.overflow || r.symbols.length) out.blocking++; if (r.symbols.length || r.english.length || r.noAlt) out.warnings++; }
 for (const r of out.pages) r.network = (r.network || []).length;
 fs.mkdirSync(path.join(ROOT, 'qa'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'qa/site-report.json'), JSON.stringify(out, null, 1) + '\n');

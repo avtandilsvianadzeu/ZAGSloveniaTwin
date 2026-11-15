@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="css/twin.css?v=66">
 <link rel="stylesheet" href="css/platform.css?v=66">
 <link rel="stylesheet" href="css/ios.css?v=66">
-<link rel="stylesheet" href="css/macos.css?v=78">
+<link rel="stylesheet" href="css/macos.css?v=80">
 <style>
 .vl{max-width:1120px;margin:0 auto;padding:0 20px 80px;display:grid;grid-template-columns:210px minmax(0,1fr);gap:34px;align-items:start}
 .vhero{grid-column:1/-1;padding:30px 0 6px}
@@ -82,7 +82,7 @@
   <span class="crumb">Value</span>
   <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn" href="dashboard.html">Dashboard</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
 </header>
-<script src="js/sitenav.js?v=45"></script>
+<script src="js/sitenav.js?v=46"></script>
 <script src="js/sidebar.js?v=11"></script>
 <main id="main" class="vl">
   <header class="vhero">
@@ -194,7 +194,7 @@
         <li><a href="https://iteh.es/catalog/standards/sist/04ba2b94-f699-4926-8df7-31ad1c4951f9/sist-en-12973-2020" target="_blank" rel="noopener">SIST EN 12973:2020, Value management</a></li>
         <li><a href="https://cdn.ymaws.com/www.value-eng.org/resource/collection/41067BF5-2271-4859-A4AE-E77BB72D0036/SAVE_Certification-Program-Manual_19th_Ed_Sept2026.pdf" target="_blank" rel="noopener">SAVE International, Certification Program Manual</a></li>
         <li><a href="https://www.is-wim.net/events/workshops-webinars/2024-wim-data-for-bridges/" target="_blank" rel="noopener">ISWIM webinar WIM Data for Bridges, 2024, with Aleš Žnidarič (ZAG)</a></li>
-        <li><a href="https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/" target="_blank" rel="noopener">ZAG, Section for Bridges and Other Civil Engineering Structures</a></li>
+        <li><a href="https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/" target="_blank" rel="noopener" data-sl="ZAG, Sekcija za mostove in druge gradbene konstrukcije">ZAG, Section for Bridges and Other Civil Engineering Structures</a></li>
       </ul>
     </section>
   </div>
@@ -219,6 +219,6 @@
   const links=[...document.querySelectorAll('#toc a')]; if('IntersectionObserver' in window){ const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)); }),{rootMargin:'-90px 0px -60% 0px'}); document.querySelectorAll('.vsec').forEach(s=>io.observe(s)); }
 })();
 </script>
-<script src="js/zagbot.js?v=65"></script>
+<script src="js/zagbot.js?v=66"></script>
 </body>
 </html>

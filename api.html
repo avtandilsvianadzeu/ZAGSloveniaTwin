@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="css/twin.css?v=66">
 <link rel="stylesheet" href="css/platform.css?v=66">
 <link rel="stylesheet" href="css/ios.css?v=66">
-<link rel="stylesheet" href="css/macos.css?v=78">
+<link rel="stylesheet" href="css/macos.css?v=80">
 <style>
 .api{max-width:1120px;margin:0 auto;padding:0 20px 72px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:36px;align-items:start}
 .api-hero{grid-column:1/-1;padding:34px 0 22px;border-bottom:1px solid #E3E6EC}
@@ -91,7 +91,7 @@
   <span class="crumb">Data API</span>
   <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn" href="dashboard.html">Dashboard</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
 </header>
-<script src="js/sitenav.js?v=45"></script>
+<script src="js/sitenav.js?v=46"></script>
 <script src="js/sidebar.js?v=11"></script>
 <main id="main" class="api">
   <header class="api-hero">
@@ -186,12 +186,12 @@
   const n=v=>Number(v).toLocaleString('en-GB');
   try{ const [ix,list]=await Promise.all([fetch(B+'index.json').then(r=>r.json()),fetch(B+'objects.json').then(r=>r.json())]);
     $('sObj').textContent=n(ix.objects); $('sVal').textContent=n(ix.values); $('sSrc').textContent=n(ix.values_with_source); $('sVer').textContent=ix.version; $('sGen').textContent=new Date(ix.generated+'T00:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
-    $('pick').innerHTML=list.objects.slice().sort((a,b)=>a.name.localeCompare(b.name,'sl')).map(o=>`<option value="${esc(o.id)}">${esc(o.name)}</option>`).join('');
+    const nm=o=>window.LANG==='sl'&&o.name_sl?o.name_sl:o.name; $('pick').innerHTML=list.objects.slice().sort((a,b)=>nm(a).localeCompare(nm(b),'sl')).map(o=>`<option value="${esc(o.id)}">${esc(nm(o))}</option>`).join('');
     const sync=()=>{ $('open').href=B+'objects/'+$('pick').value+'.json'; }; $('pick').onchange=sync; sync();
     $('go').onclick=async()=>{ $('out').textContent='Loading'; try{ const r=await fetch(B+'objects/'+$('pick').value+'.json').then(x=>x.json()); $('out').textContent=JSON.stringify(r,null,2); }catch(e){ $('out').textContent='The record could not be loaded. '+e.message; } };
   }catch(e){ $('stats').insertAdjacentHTML('afterend','<p class="terms">The API files could not be read. '+esc(e.message)+'</p>'); }
 })();
 </script>
-<script src="js/zagbot.js?v=65"></script>
+<script src="js/zagbot.js?v=66"></script>
 </body>
 </html>
