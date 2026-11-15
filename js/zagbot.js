@@ -354,7 +354,7 @@
     D.countries.forEach(c=>{ const ns=new Set([c.name,en&&en.of(c.iso),sl&&sl.of(c.iso)].filter(Boolean).map(norm)); ns.forEach(x=>m.push([x,c.iso])); });
     [['usa','US'],['america','US'],['uk','GB'],['britain','GB'],['england','GB'],['holland','NL'],['czechia','CZ']].forEach(x=>m.push(x)); return DB._cn=m; };
   const cOf=n=>{ const words=n.split(' '); for(const [nm2,iso] of cNames()){ const parts=nm2.split(' '); if(parts.length>1){ if((' '+n+' ').includes(' '+nm2+' ')) return iso; continue; }
-      if(words.some(w=>w===nm2||(nm2.length>=6&&w.length>=5&&w.slice(0,nm2.length-1)===nm2.slice(0,-1)&&w.length<=nm2.length+2))) return iso; } return null; };
+      if(words.some(w=>w===nm2||(nm2.length>=5&&w.length>=nm2.length-1&&w.slice(0,nm2.length-1)===nm2.slice(0,-1)&&w.length<=nm2.length+2))) return iso; } return null; };
   const cName=iso=>{ try{ return new Intl.DisplayNames([SLc()?'sl':'en-GB'],{type:'region'}).of(iso); }catch(_){ return iso; } };
   const IURL='international.html', sf=(k,a,b,c,d)=>{ const m=k%100; return k+' '+(m===1?a:m===2?b:m===3||m===4?c:d); }, dz=k=>{ const m=k%100; return k+' '+(m===1?'država':m===2?'državi':m===3||m===4?'države':'držav'); };
   function stCardI(s){ const sl=SLc();
