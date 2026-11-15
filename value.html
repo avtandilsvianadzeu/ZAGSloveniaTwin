@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Value, DigitalZAG</title>
-<meta name="description" content="DigitalZAG seen as a Field Value Engineer would present it: the problem, the discovery, the solution, the value case, the lifecycle view and how value is tracked.">
+<meta name="description" content="DigitalZAG seen as a Field Value Engineer would present it: the problem, the discovery, the solution, the time it saves, the service life view and how value is tracked.">
 <link rel="canonical" href="https://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/value.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DigitalZAG">
@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="css/twin.css?v=66">
 <link rel="stylesheet" href="css/platform.css?v=66">
 <link rel="stylesheet" href="css/ios.css?v=66">
-<link rel="stylesheet" href="css/macos.css?v=76">
+<link rel="stylesheet" href="css/macos.css?v=77">
 <style>
 .vl{max-width:1120px;margin:0 auto;padding:0 20px 80px;display:grid;grid-template-columns:210px minmax(0,1fr);gap:34px;align-items:start}
 .vhero{grid-column:1/-1;padding:30px 0 6px}
@@ -71,7 +71,7 @@
 .src a{color:#0A66D8}
 @media (max-width:900px){.vl{grid-template-columns:1fr}.vtoc{position:static;flex-direction:row;flex-wrap:wrap}.two,.calc{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow div:not(:last-child):after{right:50%;top:auto;bottom:-7px;transform:translateX(50%) rotate(135deg)}.vhero h1{font-size:26px}.vsec{padding:18px}}
 </style>
-<script src="js/i18n.js?v=24"></script>
+<script src="js/i18n.js?v=25"></script>
 <script src="js/display.js?v=2"></script>
 <script src="js/crs.js?v=4"></script>
 </head>
@@ -82,7 +82,7 @@
   <span class="crumb">Value</span>
   <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn" href="dashboard.html">Dashboard</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
 </header>
-<script src="js/sitenav.js?v=42"></script>
+<script src="js/sitenav.js?v=43"></script>
 <script src="js/sidebar.js?v=9"></script>
 <main id="main" class="vl">
   <header class="vhero">
@@ -91,16 +91,16 @@
     <p data-sl="Ta stran predstavi atlas tako, kot bi ga predstavil inženir za vrednost na terenu (Field Value Engineer): kateri problem rešuje, kaj je pokazal pregled stanja, kako je rešitev zgrajena, kako se izračuna njena vrednost in kako se vrednost spremlja po uvedbi. Vse številke na strani so prebrane iz podatkov atlasa. Kjer je treba kaj predpostaviti, to vnesete sami.">This page presents the atlas the way a Field Value Engineer would: the problem it solves, what discovery showed, how the solution is built, how its value is worked out, and how that value is tracked after launch. Every figure on this page is read from the atlas data. Where something has to be assumed, you enter it yourself.</p>
   </header>
   <nav class="glass vtoc" aria-label="On this page" id="toc">
-    <a href="#role" data-sl="Vloga">The role</a><a href="#discovery" data-sl="Pregled stanja">Discovery</a><a href="#solution" data-sl="Rešitev">Solution</a><a href="#case" data-sl="Poslovni primer">Value case</a><a href="#lifecycle" data-sl="Življenjski cikel">Lifecycle cost</a><a href="#realisation" data-sl="Uresničena vrednost">Value realisation</a><a href="#skills" data-sl="Znanja">Skills shown</a><a href="#background" data-sl="Ozadje in viri">Background</a>
+    <a href="#role" data-sl="Vloga">The role</a><a href="#discovery" data-sl="Pregled stanja">Discovery</a><a href="#solution" data-sl="Rešitev">Solution</a><a href="#case" data-sl="Poslovni primer">Value case</a><a href="#lifecycle" data-sl="Življenjska doba">Service life</a><a href="#realisation" data-sl="Uresničena vrednost">Value realisation</a><a href="#skills" data-sl="Znanja">Skills shown</a><a href="#background" data-sl="Ozadje in viri">Background</a>
   </nav>
   <div class="vbody">
     <section class="glass vsec" id="role" aria-labelledby="h-role">
       <h2 id="h-role" data-sl="Kaj počne inženir za vrednost na terenu">What a Field Value Engineer does</h2>
       <p class="q" data-sl="Pomen">Meaning</p>
-      <p data-sl="Inženir za vrednost na terenu povezuje tehniko, poslovno strategijo in potrebe naročnika, pogosto neposredno pri naročniku. Ne prodaja funkcij, ampak dokazuje, kaj rešitev naročniku prinese, in to izrazi v času, denarju, tveganju ali kakovosti.">A Field Value Engineer links engineering, business strategy and the customer's needs, often working directly with the client. The job is not to sell features but to prove what a solution is worth to that client, expressed in time, money, risk or quality.</p>
+      <p data-sl="Inženir za vrednost na terenu povezuje tehniko, strategijo in potrebe uporabnikov, pogosto neposredno pri njih. Ne predstavlja funkcij, ampak pokaže, kaj rešitev uporabniku prinese: čas, kakovost in manj tveganja.">A Field Value Engineer links engineering, strategy and the needs of the people who use a solution, often working directly with them. The job is not to present features but to show what a solution brings to its users: time, quality and lower risk.</p>
       <div class="two">
-        <div class="card"><h3 data-sl="Programska oprema in SaaS">Software and SaaS</h3><ul><li data-sl="poslovni primer in donosnost naložbe za vodstvo">business case and return on investment for executives</li><li data-sl="pregled procesov pri naročniku, iskanje ozkih grl">discovery of the client's processes and bottlenecks</li><li data-sl="predstavitve in preizkusi koncepta po meri naročnika">tailored demonstrations and proofs of concept</li><li data-sl="spremljanje dosežene vrednosti po prodaji">tracking the value achieved after the sale</li></ul></div>
-        <div class="card"><h3 data-sl="Gradbeništvo in inženiring">Construction and engineering</h3><ul><li data-sl="optimizacija projekta na terenu ob enaki varnosti in kakovosti">design optimisation on site at equal safety and quality</li><li data-sl="analiza stroškov v življenjski dobi, ne le začetne cene">lifecycle cost analysis, not only the first cost</li><li data-sl="usklajevanje projektantov, izvajalcev, nabave in naročnika">coordination of designers, contractors, procurement and client</li><li data-sl="uskladitev s proračunom, ko ponudbe presežejo načrt">bringing a project back within budget when bids come in high</li></ul></div>
+        <div class="card"><h3 data-sl="Programska oprema in SaaS">Software and SaaS</h3><ul><li data-sl="jasen razlog za spremembo, pripravljen skupaj z uporabniki">a clear case for the change, worked out with the users</li><li data-sl="pregled procesov pri naročniku, iskanje ozkih grl">discovery of the client's processes and bottlenecks</li><li data-sl="predstavitve in preizkusi koncepta po meri naročnika">tailored demonstrations and proofs of concept</li><li data-sl="spremljanje dosežene vrednosti po uvedbi">tracking the value achieved after launch</li></ul></div>
+        <div class="card"><h3 data-sl="Gradbeništvo in inženiring">Construction and engineering</h3><ul><li data-sl="optimizacija projekta na terenu ob enaki varnosti in kakovosti">design optimisation on site at equal safety and quality</li><li data-sl="pogled na celotno življenjsko dobo: pregledi, spremljanje, posegi">a view of the whole service life: inspections, monitoring, interventions</li><li data-sl="usklajevanje projektantov, izvajalcev in lastnikov objektov">coordination of designers, contractors and asset owners</li><li data-sl="enostavnejša izvedba ob enaki funkciji, varnosti in kakovosti">simpler execution at equal function, safety and quality</li></ul></div>
       </div>
       <p data-sl="DigitalZAG leži prav na stičišču obeh: je programski izdelek, katerega vsebina so gradbeni objekti, meritve in ocene. Zato se tu uporabljata oba pogleda: vrednost informacij za uporabnika in vrednost odločitev v življenjski dobi objekta.">DigitalZAG sits exactly where the two meet: it is a software product whose content is civil structures, measurements and assessments. Both lenses therefore apply here: the value of information to its users, and the value of decisions over the life of a structure.</p>
     </section>
@@ -134,15 +134,14 @@
     </section>
 
     <section class="glass vsec" id="case" aria-labelledby="h-case">
-      <h2 id="h-case" data-sl="Poslovni primer: prihranek časa">Value case: time saved</h2>
+      <h2 id="h-case" data-sl="Vrednost: prihranjen čas">Value case: time saved</h2>
       <p class="q" data-sl="Vaše predpostavke, ne naše">Your assumptions, not ours</p>
-      <p data-sl="Inženir za vrednost ne trdi, koliko bo naročnik prihranil, ampak skupaj z njim določi predpostavke in izračun naredi pregleden. Vnesite svoje vrednosti. Začetne številke so le primer.">A Field Value Engineer does not claim what a client will save. Together with the client, they agree the assumptions and make the calculation transparent. Enter your own values. The starting numbers are only an example.</p>
+      <p data-sl="Inženir za vrednost ne trdi, koliko časa bodo uporabniki prihranili, ampak skupaj z njimi določi predpostavke in izračun naredi pregleden. Vnesite svoje vrednosti. Začetne številke so le primer.">A Field Value Engineer does not claim how much time users will save. Together with the users, they agree the assumptions and make the calculation transparent. Enter your own values. The starting numbers are only an example.</p>
       <div class="calc">
         <div>
           <label><span data-sl="Iskanja podatka o objektu na mesec">Lookups of a structure's data per month</span><input id="c1" type="number" min="0" value="20"></label>
           <label><span data-sl="Minut na iskanje brez atlasa">Minutes per lookup without the atlas</span><input id="c2" type="number" min="0" value="45"></label>
           <label><span data-sl="Minut na iskanje z atlasom">Minutes per lookup with the atlas</span><input id="c3" type="number" min="0" value="5"></label>
-          <label><span data-sl="Strošek ure dela (EUR)">Cost of one working hour (EUR)</span><input id="c4" type="number" min="0" value="40"></label>
           <label><span data-sl="Uporabniki">Users</span><input id="c5" type="number" min="1" value="5"></label>
         </div>
         <div class="res" aria-live="polite" id="r1"></div>
@@ -152,23 +151,17 @@
     </section>
 
     <section class="glass vsec" id="lifecycle" aria-labelledby="h-lcc">
-      <h2 id="h-lcc" data-sl="Stroški v življenjski dobi">Lifecycle cost</h2>
+      <h2 id="h-lcc" data-sl="Življenjska doba objekta">Service life of a structure</h2>
       <p class="q" data-sl="Gradbeni pogled">The construction lens</p>
-      <p data-sl="Vrednostni inženiring v gradbeništvu ne išče najcenejše začetne rešitve, ampak najnižji skupni strošek v življenjski dobi ob enaki funkciji, varnosti in kakovosti. Prihodnji stroški se diskontirajo na današnjo vrednost.">Value engineering in construction does not look for the cheapest first cost but for the lowest total cost over the life of the asset at equal function, safety and quality. Future costs are discounted to today's value.</p>
-      <div class="formula">LCC = C<sub>0</sub> + Σ<sub>t=1..T</sub> C<sub>t</sub> ÷ (1 + r)<sup>t</sup></div>
-      <p data-sl="Pri mostovih podatki B-WIM pokažejo dejanske prometne obremenitve. Če je izmerjena obremenitev nižja od predpostavljene, je lahko ojačitev odložena ali manjša. ZAG je o tem predstavil izkušnje iz Slovenije na spletnem seminarju ISWIM leta 2024.">For bridges, B-WIM data show the actual traffic loads. Where the measured load is below the assumed one, strengthening can be smaller or later. ZAG presented the Slovenian experience of this at an ISWIM webinar in 2024.</p>
-      <div class="calc">
-        <div>
-          <label><span data-sl="Možnost A: začetni strošek (EUR)">Option A: first cost (EUR)</span><input id="l1" type="number" min="0" value="1000000"></label>
-          <label><span data-sl="Možnost A: letni strošek (EUR)">Option A: annual cost (EUR)</span><input id="l2" type="number" min="0" value="20000"></label>
-          <label><span data-sl="Možnost B: začetni strošek (EUR)">Option B: first cost (EUR)</span><input id="l3" type="number" min="0" value="300000"></label>
-          <label><span data-sl="Možnost B: letni strošek (EUR)">Option B: annual cost (EUR)</span><input id="l4" type="number" min="0" value="45000"></label>
-          <label><span data-sl="Obdobje (let)">Period (years)</span><input id="l5" type="number" min="1" value="30"></label>
-          <label><span data-sl="Diskontna stopnja (%)">Discount rate (%)</span><input id="l6" type="number" min="0" step="0.5" value="3"></label>
-        </div>
-        <div class="res" aria-live="polite" id="r2"></div>
+      <p data-sl="Vrednostni inženiring v gradbeništvu ne gleda le začetka, ampak celotno življenjsko dobo objekta ob enaki funkciji, varnosti in kakovosti. Prave odločitve v vsaki fazi temeljijo na podatkih z virom.">Value engineering in construction looks beyond the start of a project to the whole service life of a structure, at equal function, safety and quality. Good decisions at each stage rest on data with a source.</p>
+      <div class="flow">
+        <div><b data-sl="Gradnja">Construction</b><span data-sl="kontrola kakovosti, preizkusi materialov">quality control, material tests</span></div>
+        <div><b data-sl="Pregledi">Inspection</b><span data-sl="redni in podrobni pregledi, zapisi z datumom">routine and detailed inspections, dated records</span></div>
+        <div><b data-sl="Spremljanje">Monitoring</b><span data-sl="B-WIM, odziv konstrukcije, prometne obremenitve">B-WIM, structural response, traffic loads</span></div>
+        <div><b data-sl="Ocena">Assessment</b><span data-sl="nosilnost na podlagi izmerjenih obremenitev">load capacity from measured loads</span></div>
+        <div><b data-sl="Poseg">Intervention</b><span data-sl="ob pravem času in v pravem obsegu">at the right time and of the right scope</span></div>
       </div>
-      <p class="note" data-sl="Primer: A je ojačitev zdaj, B je spremljanje z meritvami in poznejši poseg. Številke so primer za razlago metode, ne podatki o objektu.">Example: A is strengthening now, B is monitoring with measurements and a later intervention. The numbers are an example to explain the method, not data of a structure.</p>
+      <p data-sl="Pri mostovih podatki B-WIM pokažejo dejanske prometne obremenitve. Če je izmerjena obremenitev nižja od predpostavljene, je lahko ojačitev manjša ali poznejša. ZAG je o tem predstavil izkušnje iz Slovenije na spletnem seminarju ISWIM leta 2024. Atlas ima za vsak objekt na enem mestu podatke, preglede in vire, ki jih te odločitve potrebujejo.">For bridges, B-WIM data show the actual traffic loads. Where the measured load is below the assumed one, strengthening can be smaller or later. ZAG presented the Slovenian experience of this at an ISWIM webinar in 2024. For each structure, the atlas keeps in one place the values, inspections and sources these decisions need.</p>
     </section>
 
     <section class="glass vsec" id="realisation" aria-labelledby="h-real">
@@ -184,7 +177,7 @@
       <p class="q" data-sl="Kje jih je videti">Where to see them</p>
       <table class="vtab"><thead><tr><th data-sl="Področje">Area</th><th data-sl="Znanje">Competency</th><th data-sl="Kje v atlasu">Where in the atlas</th></tr></thead><tbody>
         <tr><td data-sl="Tehnično">Technical</td><td data-sl="arhitektura sistema, analiza podatkov, GIS in 3D, API">system architecture, data analysis, GIS and 3D, API</td><td><a href="index.html" data-sl="zemljevid">map</a>, <a href="twin.html?id=he_arto" data-sl="3D model">3D model</a>, <a href="api.html">Data API</a></td></tr>
-        <tr><td data-sl="Finančno">Financial</td><td data-sl="donosnost naložbe, skupni strošek lastništva, stroški v življenjski dobi">return on investment, total cost of ownership, lifecycle cost</td><td><a href="#case" data-sl="poslovni primer">value case</a>, <a href="#lifecycle" data-sl="življenjski cikel">lifecycle cost</a></td></tr>
+        <tr><td data-sl="Načrtovanje">Planning</td><td data-sl="pogled na življenjsko dobo, prednostne naloge iz izmerjenih podatkov">service life thinking, priorities from measured data</td><td><a href="#case" data-sl="prihranjen čas">time saved</a>, <a href="#lifecycle" data-sl="življenjska doba">service life</a></td></tr>
         <tr><td data-sl="Medosebno">Interpersonal</td><td data-sl="pregled stanja z naročnikom, predstavitev, sodelovanje">consultative discovery, presentation, collaboration</td><td><a href="#discovery" data-sl="pregled stanja">discovery</a>, <a href="questions.html" data-sl="odprta vprašanja">open questions</a>, ZAGBot</td></tr>
         <tr><td data-sl="Kakovost">Quality</td><td data-sl="dokazljivost, viri, samodejne kontrole">traceability, sources, automatic checks</td><td><a href="questions.html" data-sl="kakovost podatkov">data quality</a>, <a href="latest.html" data-sl="novice s pravili">news with rules</a></td></tr>
         <tr><td data-sl="Mednarodno">International</td><td data-sl="partnerji, projekti, delo v tujini">partners, projects, work abroad</td><td><a href="international.html" data-sl="mednarodni pregled">international view</a></td></tr>
@@ -194,7 +187,7 @@
     <section class="glass vsec" id="background" aria-labelledby="h-bg">
       <h2 id="h-bg" data-sl="Ozadje">Background</h2>
       <p class="q" data-sl="Od kod metoda">Where the method comes from</p>
-      <p data-sl="Vrednostni inženiring je bil prvič uporabljen v proizvodnji med drugo svetovno vojno. Lawrence D. Miles je napisal temeljno delo Techniques of Value Analysis and Engineering. Metoda išče potrebne funkcije pri najnižjem skupnem strošku, vključno z vzdrževanjem in energijo.">Value engineering was first used in manufacturing during the Second World War. Lawrence D. Miles wrote its founding text, Techniques of Value Analysis and Engineering. The method looks for the essential functions at the lowest total cost, including maintenance and energy.</p>
+      <p data-sl="Vrednostni inženiring je bil prvič uporabljen v proizvodnji med drugo svetovno vojno. Lawrence D. Miles je napisal temeljno delo Techniques of Value Analysis and Engineering. Metoda išče bistvene funkcije in najboljšo vrednost v celotni življenjski dobi objekta.">Value engineering was first used in manufacturing during the Second World War. Lawrence D. Miles wrote its founding text, Techniques of Value Analysis and Engineering. The method looks for the essential functions and the best value over the whole life of an asset.</p>
       <p data-sl="V Evropi vrednostni management opisuje standard EN 12973, v Sloveniji sprejet kot SIST EN 12973:2020. SAVE International podeljuje certifikat Certified Value Specialist (CVS).">In Europe, value management is set out in the standard EN 12973, adopted in Slovenia as SIST EN 12973:2020. SAVE International awards the Certified Value Specialist (CVS) certification.</p>
       <ul class="src">
         <li><a href="https://legacy.wbdg.org/do/cost-effective/value-engineering" target="_blank" rel="noopener">Whole Building Design Guide, Value Engineering</a></li>
@@ -210,7 +203,7 @@
 (async()=>{
   const SL=window.LANG==='sl', L=(en,sl)=>SL?sl:en, $=id=>document.getElementById(id);
   if(SL){ document.querySelectorAll('[data-sl]').forEach(e=>{ e.textContent=e.dataset.sl; }); document.documentElement.lang='sl'; }
-  const nf=new Intl.NumberFormat(SL?'sl-SI':'en-GB',{maximumFractionDigits:0}), eur=v=>nf.format(Math.round(v))+' EUR';
+  const nf=new Intl.NumberFormat(SL?'sl-SI':'en-GB',{maximumFractionDigits:0});
   const kp=(el,arr)=>{ $(el).innerHTML=arr.map(([v,t])=>`<div><b>${v}</b><span>${t}</span></div>`).join(''); };
   try{ const [ix,ob,intl,news,zn]=await Promise.all(['api/v1/index.json','api/v1/objects.json','data/international.json','data/news.json','data/zag_news.json'].map(u=>fetch(u).then(r=>r.json()).catch(()=>null)));
     const O=ob?(Array.isArray(ob)?ob:ob.objects||[]):[], exact=O.filter(o=>o.position_exact).length, models=O.filter(o=>o.model&&o.model!=='none').length;
@@ -220,13 +213,9 @@
     kp('kReal',[[ix?nf.format(ix.values):'',L('values, each with its source','vrednosti, vsaka z virom')],[models,L('structures with a 3D model','objektov s 3D modelom')],[newsN,L('news items checked by rule','novic, preverjenih po pravilu')],[(zn&&zn.items&&zn.items.media||[]).filter(i=>i.reviewed!==false).length,L('media items from reviewed sources','medijskih zapisov iz pregledanih virov')],[intl?intl.projects.length:'',L('international projects mapped','mednarodnih projektov na zemljevidu')]]);
   }catch(_){}
   const v=id=>Math.max(0,parseFloat($(id).value)||0);
-  function c1(){ const h=v('c5')*v('c1')*12*Math.max(0,v('c2')-v('c3'))/60, e=h*v('c4');
-    $('r1').innerHTML=`<div class="big"><span>${L('Hours saved per year','Prihranjene ure na leto')}</span><b>${nf.format(Math.round(h))} h</b></div><div><span>${L('Value per year','Vrednost na leto')}</span><b>${eur(e)}</b></div><div><span>${L('Working days per year','Delovnih dni na leto')}</span><b>${nf.format(Math.round(h/8))}</b></div>`; }
-  function c2(){ const T=Math.round(v('l5')), r=v('l6')/100, pv=a=>{ let s=0; for(let t=1;t<=T;t++) s+=a/Math.pow(1+r,t); return s; };
-    const A=v('l1')+pv(v('l2')), B=v('l3')+pv(v('l4')), best=A<=B?'A':'B';
-    $('r2').innerHTML=`<div><span>${L('Lifecycle cost A','Strošek v življenjski dobi A')}</span><b>${eur(A)}</b></div><div><span>${L('Lifecycle cost B','Strošek v življenjski dobi B')}</span><b>${eur(B)}</b></div><div class="big"><span>${L('Lower over','Nižji v')} ${T} ${L('years','letih')}</span><b>${best}, ${eur(Math.abs(A-B))}</b></div>`; }
-  if(SL) $('f1').textContent='prihranjene ure na leto = uporabniki × iskanja na mesec × 12 × (minute prej - minute zdaj) ÷ 60';
-  ['c1','c2','c3','c4','c5'].forEach(i=>$(i).addEventListener('input',c1)); ['l1','l2','l3','l4','l5','l6'].forEach(i=>$(i).addEventListener('input',c2)); c1(); c2();
+  function c1(){ const h=v('c5')*v('c1')*12*Math.max(0,v('c2')-v('c3'))/60;
+    $('r1').innerHTML=`<div class="big"><span>${L('Hours saved per year','Prihranjene ure na leto')}</span><b>${nf.format(Math.round(h))} h</b></div><div><span>${L('Working days per year','Delovnih dni na leto')}</span><b>${nf.format(Math.round(h/8))}</b></div><div><span>${L('Per user per month','Na uporabnika na mesec')}</span><b>${nf.format(Math.round(h/12/Math.max(1,v('c5'))))} h</b></div>`; }
+  ['c1','c2','c3','c5'].forEach(i=>$(i).addEventListener('input',c1)); c1();
   const links=[...document.querySelectorAll('#toc a')]; if('IntersectionObserver' in window){ const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)); }),{rootMargin:'-90px 0px -60% 0px'}); document.querySelectorAll('.vsec').forEach(s=>io.observe(s)); }
 })();
 </script>

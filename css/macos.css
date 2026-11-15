@@ -973,3 +973,6 @@ html:has(body.sb-open),body.sb-open{background:linear-gradient(165deg,#BFD9FF 0%
 .tabs[role=tablist]{top:0!important}
 .tabs[role=tablist]::before{content:"";position:absolute;left:-14px;right:-14px;bottom:100%;height:16px;background:linear-gradient(to bottom,rgba(232,240,250,.96),rgba(232,240,250,.9));-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);pointer-events:none}
 @media (max-width:1600px){.thdr .tnav .tbtn.solid{display:none}}
+/* map credits open from a small asterisk, not an information or exclamation sign */
+.maplibregl-ctrl-attrib-button{background-image:none!important;display:flex!important;align-items:center;justify-content:center}
+.maplibregl-ctrl-attrib-button:before{content:"*";font:700 17px/1 Inter,system-ui,sans-serif;color:#1D1D1F;transform:translateY(3px)}

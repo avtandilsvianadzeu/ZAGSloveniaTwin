@@ -1,15 +1,18 @@
 name: Refresh news
 
-# Reads Slovenian news per record from Google News (data/news.json) and the latest items of Aktualno from zag.si (data/zag_news.json).
-# GitHub runs scheduled jobs on a best-effort basis, so a run can start some minutes late.
+# Reads zag.si (data/zag_news.json), the ZAG media monitor and news per structure (data/news.json).
+# GitHub starts scheduled runs only when it has capacity, often hours apart. So one run keeps checking every
+# 20 minutes for about five and a half hours, and then starts the next run itself. The hourly schedule restarts
+# the chain if it ever stops. data/news_status.json records the time of every check, so the site shows when it last looked.
 on:
   schedule:
-    - cron: '7,27,47 * * * *'
+    - cron: '11 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
   pages: write
+  actions: write
 
 concurrency:
   group: news
@@ -18,7 +21,7 @@ concurrency:
 jobs:
   news:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 350
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -26,20 +29,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Fetch news
-        run: node tools/fetch_news.mjs
-      - name: Fetch Aktualno from zag.si
-        run: node tools/fetch_zag_news.mjs || true
-      - name: Save if changed
+      - name: Check every 20 minutes
         run: |
-          if git diff --quiet -- data/news.json data/zag_news.json; then
-            echo "No new articles."
-          else
-            git config user.name "news-bot"
-            git config user.email "news-bot@users.noreply.github.com"
-            git add data/news.json data/zag_news.json
-            git commit -m "Update news"
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+          for i in $(seq 1 16); do
             git pull --rebase -q || true
-            git push
-            gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
-          fi
+            node tools/fetch_zag_news.mjs || true
+            if [ $((i % 3)) -eq 1 ]; then node tools/fetch_news.mjs || true; fi
+            printf '{"checked":"%s","by":"news workflow, every 20 minutes"}\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > data/news_status.json
+            git add data/news.json data/zag_news.json data/news_status.json
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Update news"
+              git pull --rebase -q || true
+              git push -q || true
+              gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
+            fi
+            [ "$i" -lt 16 ] && sleep 1200
+          done
+      - name: Start the next run
+        if: always()
+        run: gh api -X POST "repos/${{ github.repository }}/actions/workflows/news.yml/dispatches" -f ref=main || true

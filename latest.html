@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="css/twin.css?v=66">
 <link rel="stylesheet" href="css/platform.css?v=66">
 <link rel="stylesheet" href="css/ios.css?v=66">
-<link rel="stylesheet" href="css/macos.css?v=76">
+<link rel="stylesheet" href="css/macos.css?v=77">
 <style>
 .lt{max-width:1120px;margin:0 auto;padding:0 20px 72px}
 .lhero{padding:30px 0 16px}
@@ -69,7 +69,7 @@ a.tag:hover{background:rgba(10,124,255,.2)}
 .lgroup{font-size:13px;font-weight:700;color:#3A4257;margin:10px 2px 0}
 @media (max-width:900px){.lgrid{grid-template-columns:1fr}.lside{position:static}.lhero h1{font-size:25px}}
 </style>
-<script src="js/i18n.js?v=24"></script>
+<script src="js/i18n.js?v=25"></script>
 <script src="js/display.js?v=2"></script>
 <script src="js/crs.js?v=4"></script>
 </head>
@@ -80,7 +80,7 @@ a.tag:hover{background:rgba(10,124,255,.2)}
   <span class="crumb">Latest</span>
   <nav class="tnav" aria-label="Pages"><a class="tbtn" href="twin.html">All objects</a><a class="tbtn" href="dashboard.html">Dashboard</a><a class="tbtn solid" href="index.html">Open the map</a></nav>
 </header>
-<script src="js/sitenav.js?v=42"></script>
+<script src="js/sitenav.js?v=43"></script>
 <script src="js/sidebar.js?v=9"></script>
 <main id="main" class="lt">
   <header class="lhero">
@@ -102,8 +102,9 @@ a.tag:hover{background:rgba(10,124,255,.2)}
   if(SL){ $('kick').textContent='Samodejno prebrano'; $('h1').textContent='Novice'; $('lead').textContent='Kar je ZAG objavil na zag.si, ZAG v medijih in novice o objektih v atlasu. Seznami se samodejno preberejo vsakih 20 minut, vsak zapis pa ostane le, če izpolnjuje pravilo, ki je navedeno ob njem.'; $('rh').textContent='Kako se zapisi preverjajo'; }
   const dt=s=>{ if(!s) return ''; const d=new Date(s); return SL?`${d.getDate()}. ${d.getMonth()+1}. ${d.getFullYear()}`:d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}); };
   const ago=s=>{ const m=Math.round((Date.now()-Date.parse(s))/60000); if(!isFinite(m)) return ''; if(m<1) return L('just now','pravkar'); if(m<60) return L(`${m} min ago`,`pred ${m} min`); const h=Math.round(m/60); return h<48?L(`${h} h ago`,`pred ${h} h`):dt(s); };
-  let Z={items:{}},N={items:{}},O=[];
+  let Z={items:{}},N={items:{}},O=[],S={};
   async function load(){ const q='?t='+Math.floor(Date.now()/120000);
+    const st=await fetch('data/news_status.json?t='+Date.now()).then(r=>r.json()).catch(()=>null); if(st) S=st;
     const [z,n,o]=await Promise.all([fetch('data/zag_news.json'+q).then(r=>r.json()).catch(()=>null),fetch('data/news.json'+q).then(r=>r.json()).catch(()=>null),O.length?Promise.resolve(null):fetch('api/v1/objects.json').then(r=>r.json()).catch(()=>null)]);
     if(z) Z=z; if(n) N=n; if(o) O=(Array.isArray(o)?o:o.objects||[]); }
   await load();
@@ -114,7 +115,7 @@ a.tag:hover{background:rgba(10,124,255,.2)}
   const MF={q:'',kind:'',all:false}, fold=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   let tab=(location.hash||'').slice(1); if(!TABS.some(t=>t[0]===tab)) tab='zag';
   function meta(){ const recN=Object.values(N.items||{}).reduce((a,l)=>a+l.length,0);
-    $('meta').innerHTML=[`<span class="ok">● ${L('Checked','Preverjeno')} ${esc(ago(Z.updated||N.updated))}</span>`,`<span><b>${(Z.items.latest||[]).length}</b> ${L('from zag.si','z zag.si')}</span>`,`<span><b>${(Z.items.media||[]).filter(i=>i.reviewed!==false).length}</b> ${L('in the media','v medijih')}</span>`,`<span><b>${recN}</b> ${L('about','o')} <b>${Object.keys(N.items||{}).length}</b> ${L('structures','objektih')}</span>`].join(''); }
+    $('meta').innerHTML=[`<span class="ok">● ${L('Last check','Zadnje preverjanje')} ${esc(ago(S.checked||Z.updated||N.updated))}</span>`,`<span>${L('Newest change','Zadnja sprememba')} ${esc(ago(Z.updated||N.updated))}</span>`,`<span><b>${(Z.items.latest||[]).length}</b> ${L('from zag.si','z zag.si')}</span>`,`<span><b>${(Z.items.media||[]).filter(i=>i.reviewed!==false).length}</b> ${L('in the media','v medijih')}</span>`,`<span><b>${recN}</b> ${L('about','o')} <b>${Object.keys(N.items||{}).length}</b> ${L('structures','objektih')}</span>`].join(''); }
   function draw(){ document.querySelectorAll('#tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===tab)); const B=byId(); let h='';
     if(tab==='zag'){ const items=(SL?(Z.items.sl||[]).map(i=>({...i,lang:'sl'})):(Z.items.latest||[]));
       h=items.length?items.map(i=>`<article class="litem"><div class="top"><span>${esc(dt(i.date))}</span><span class="lang">${esc((i.lang||'').toUpperCase())}</span><b>${esc(i.category||'Aktualno')}</b><span class="chk">${L('Published on zag.si','Objavljeno na zag.si')}</span></div><h3><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>${i.summary?`<p>${esc(i.summary)}</p>`:''}${recTags(i.records)}</article>`).join(''):`<p class="lempty">${L('zag.si could not be read at the last check. The next check is within 20 minutes.','Ob zadnjem preverjanju zag.si ni bilo mogoče prebrati. Naslednje preverjanje bo v 20 minutah.')}</p>`; }

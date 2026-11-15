@@ -7,7 +7,7 @@ name: Quality checks
 on:
   push:
     branches: [main]
-    paths-ignore: ['data/news.json', 'data/zag_news.json', 'api/v1/zag_news.json']
+    paths-ignore: ['data/news.json', 'data/zag_news.json', 'api/v1/zag_news.json', 'data/news_status.json', 'data/partners.json', 'data/intl_updates.json']
   pull_request:
   schedule:
     - cron: '17 4 * * 1'
