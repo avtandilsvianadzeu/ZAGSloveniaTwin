@@ -90,6 +90,8 @@ $('imp').onchange=async e=>{ const f=e.target.files[0]; if(!f) return; try{ cons
 
 (function initMap(){ const box=$('amap'); if(typeof maplibregl==='undefined'){ box.innerHTML='<div class="vfail">The map could not load. Paste coordinates or load a file instead.</div>'; return; }
   let m; try{ m=new maplibregl.Map({container:box,style:STYLE_URL,center:[14.82,46.12],zoom:7.2,attributionControl:{compact:true}}); }catch(_){ box.innerHTML='<div class="vfail">The map is not available in this browser. Paste coordinates or load a file instead.</div>'; return; }
+  /* the map follows its frame: a frame that settles its size after the map starts never leaves a strip */
+  try{ if(window.ResizeObserver) new ResizeObserver(()=>{ try{ m.resize(); }catch(_){} }).observe(box); m.once('load',()=>{ m.resize(); setTimeout(()=>{ try{ m.resize(); }catch(_){} },600); }); }catch(_){}
   m.addControl(new maplibregl.NavigationControl(),'top-right'); m.getCanvas().style.cursor='crosshair';
   { const paint=()=>{ try{ if(window.iosMap) iosMap(m); }catch(_){} }; m.on('style.load',paint); m.once('load',paint); }
   m.on('load',()=>{ m.addSource('shape',{type:'geojson',data:{type:'FeatureCollection',features:[]}});

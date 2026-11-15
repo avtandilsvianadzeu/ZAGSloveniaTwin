@@ -950,3 +950,8 @@ html:has(body.sb-open),body.sb-open{background:linear-gradient(165deg,#BFD9FF 0%
 /* the top bar never runs past the window: the extra "Open the map" button gives way first, Map is in the page menu */
 @media (max-width:1400px){.thdr .tnav .tbtn.solid{display:none}}
 .thdr{min-width:0}
+.ab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:6px 22px;margin-top:8px}
+.ab-row{display:grid;grid-template-columns:8.5em 1fr 2.6em;align-items:center;gap:10px;padding:6px 8px;border-radius:10px;text-decoration:none;color:#1D1D1F;font-size:13px}
+.ab-row:hover{background:linear-gradient(160deg,rgba(255,255,255,.78),rgba(232,242,255,.42));box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.1)}
+.ab-row i{height:6px;border-radius:3px;background:rgba(120,140,180,.16);overflow:hidden}.ab-row i b{display:block;height:100%;background:linear-gradient(90deg,#4FA3FF,#0A6CFF)}
+.ab-row em{font-style:normal;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
