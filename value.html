@@ -147,7 +147,7 @@
         </div>
         <div class="res" aria-live="polite" id="r1"></div>
       </div>
-      <div class="formula" id="f1">saved hours per year = users × lookups per month × 12 × (minutes before − minutes after) ÷ 60</div>
+      <div class="formula" id="f1">saved hours per year = users × lookups per month × 12 × (minutes before - minutes after) ÷ 60</div>
       <p class="note" data-sl="Izračun upošteva le čas iskanja. Ne upošteva vrednosti manjšega tveganja napačne vrednosti, ker je to odvisno od posamezne odločitve.">The calculation counts search time only. It leaves out the value of a lower risk of using a wrong value, because that depends on each decision.</p>
     </section>
 
@@ -225,7 +225,7 @@
   function c2(){ const T=Math.round(v('l5')), r=v('l6')/100, pv=a=>{ let s=0; for(let t=1;t<=T;t++) s+=a/Math.pow(1+r,t); return s; };
     const A=v('l1')+pv(v('l2')), B=v('l3')+pv(v('l4')), best=A<=B?'A':'B';
     $('r2').innerHTML=`<div><span>${L('Lifecycle cost A','Strošek v življenjski dobi A')}</span><b>${eur(A)}</b></div><div><span>${L('Lifecycle cost B','Strošek v življenjski dobi B')}</span><b>${eur(B)}</b></div><div class="big"><span>${L('Lower over','Nižji v')} ${T} ${L('years','letih')}</span><b>${best}, ${eur(Math.abs(A-B))}</b></div>`; }
-  if(SL) $('f1').textContent='prihranjene ure na leto = uporabniki × iskanja na mesec × 12 × (minute prej − minute zdaj) ÷ 60';
+  if(SL) $('f1').textContent='prihranjene ure na leto = uporabniki × iskanja na mesec × 12 × (minute prej - minute zdaj) ÷ 60';
   ['c1','c2','c3','c4','c5'].forEach(i=>$(i).addEventListener('input',c1)); ['l1','l2','l3','l4','l5','l6'].forEach(i=>$(i).addEventListener('input',c2)); c1(); c2();
   const links=[...document.querySelectorAll('#toc a')]; if('IntersectionObserver' in window){ const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)); }),{rootMargin:'-90px 0px -60% 0px'}); document.querySelectorAll('.vsec').forEach(s=>io.observe(s)); }
 })();
