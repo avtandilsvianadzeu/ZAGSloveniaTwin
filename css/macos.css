@@ -949,4 +949,4 @@ html:has(body.sb-open),body.sb-open{background:linear-gradient(165deg,#BFD9FF 0%
 .lgd,.tl,.info,.tips,.results,.layers{-webkit-backdrop-filter:blur(26px) saturate(185%)!important;backdrop-filter:blur(26px) saturate(185%)!important}
 /* the top bar never runs past the window: the extra "Open the map" button gives way first, Map is in the page menu */
 @media (max-width:1400px){.thdr .tnav .tbtn.solid{display:none}}
-.thdr{min-width:0;overflow:hidden}
+.thdr{min-width:0}
