@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T19:38:28.982Z",
+ "updated": "2026-11-15T20:40:36.791Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -168,14 +168,6 @@
     "source": "Delo.si",
     "date": "2026-08-15T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdURWdFlIRXZfMGlZSFM1cjVMWmZUVjR4WklsXzVScG04ZzN0N1FCaktWLVBrckNkSFRwajAxVm1KNkEzMllDeXRkT3QyRl85eHpXN1hnY2wtOHcyUmV2YklxT3dVbGZDTTZ0S0h2YmJyLTlZWjBkTlV5cm9CRmZoOEFxTQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"karavank\""
-   },
-   {
-    "title": "Predor Karavanke spet prevozen",
-    "source": "Delo.si",
-    "date": "2026-07-12T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQXNMa3VYQlFkdzlQdGx2ZmpEM0xMNTFXa2toY3BoU3RKYjhIN2stTHQ1VkMzU0d6cjZodE1sbGsxYzRBMVo3aGFnQ29nNTRvUVhxX1Bud2pXMzVoT0g0UzkzVm5GVmpXdlo5Ql9fN3VjS1AxNnAyVGttMU1iUW9MV0xXRFJDaG1BNU1V?oc=5",
     "outlets": 1,
     "match": "headline names \"karavank\""
    },
@@ -510,6 +502,14 @@
     "match": "headline names \"kranjsk\""
    },
    {
+    "title": "V Kranjski Gori odprtje sedežnice do vrha Vitranca",
+    "source": "tv3m.si",
+    "date": "2026-06-25T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfa21KSXdmdDJuOC1mVzdpeG01N0JnTWctLTJqcVpuSnZYbEc5c1laSG1LTkxYWUZublFVTG1la2pIR1E1Uk9xUVpCZVgwYUJpWlRWdkFRMXZqOGJTSmg3ZHRacmVkXy1fdmJqQkpmNjZHOGc2RURDT2J3a3ZQeVU?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kranjsk\""
+   },
+   {
     "title": "Nova sedežnica na Vitranc: Kranjska Gora želi postati celoletni gorski center",
     "source": "Gorenjskainfo.com",
     "date": "2026-06-25T07:00:00.000Z",
@@ -519,6 +519,14 @@
    }
   ],
   "cerkno_z": [
+   {
+    "title": "Smučišče Cerkno v nedeljo odpira še preostale proge, med novostmi otroški vrtec in sankališče",
+    "source": "robin.si",
+    "date": "2026-01-08T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOb0hkRDBscF9rQy1FRmgybDNCOEZWLTc2X0x1ZFl1Q0hoZWoyLVJyY0wxQXJZekYwSndUSUJHeldoUVJfeURSaUYtN0N5cllmRG9qR1FvZzkyRFVrSWdaN1gxMlIzVmJDODFLVl83SE10dFM0cF9IOFk3WDI1U3RyVG5tVFlicy1VeGZCRC16VFZnT1dVekRsdTRxWE5yYk80NzNIN2RUTF9vZFB6N1NPWHNGSklxRENOQ1o1QVU5NU9Za1lUV2h0Qg?oc=5",
+    "outlets": 1,
+    "match": "headline names \"cerkn\""
+   },
    {
     "title": "Smučišče Cerkno vabi na bele strmine: začenja se smučarska sezona 2025/26",
     "source": "Izvozniki.si",
