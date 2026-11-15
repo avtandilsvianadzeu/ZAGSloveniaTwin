@@ -218,6 +218,7 @@
   }
   $('views').onclick=e=>{ const b=e.target.closest('button'); if(b) goView(b.dataset.v); };
   if(SL){ const vb=$('views').querySelectorAll('button'); vb[0].textContent='Svet'; vb[1].textContent='Evropa'; }
+  window.ZAGIntl={structure:id=>pickStructure(id,true),country:iso=>pickCountry(iso,true),world:()=>{ pickCountry(null); goView('world'); }};
   draw();
   $('mlist').innerHTML=[
     L('Projects come from the international projects in the ZAG project register. For each one, the official partner list was read and the country of every partner recorded.','Projekti so iz registra mednarodnih projektov ZAG. Za vsakega je bil prebran uradni seznam partnerjev in zabeležena država vsakega partnerja.'),
@@ -227,6 +228,6 @@
   ].map(t=>`<li>${t}</li>`).join('')+`<li>${L('More about the bridge work:','Več o delu na mostovih:')} <a href="https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/" target="_blank" rel="noopener">${L('ZAG, Section for Bridges and Other Civil Engineering Structures','ZAG, Oddelek za mostove in druge gradbene konstrukcije')}</a></li>`;
 })();
 </script>
-<script src="js/zagbot.js?v=58"></script>
+<script src="js/zagbot.js?v=59"></script>
 </body>
 </html>

@@ -325,3 +325,5 @@ html.a11y-rt .zb .zb-launch{background:#fff!important;-webkit-backdrop-filter:no
 body:has(.insp) .zb .zb-launch{width:64px!important;padding:4px!important;border-radius:50%!important;justify-content:center;background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important}
 body:has(.insp) .zb .zb-launch::after{display:none!important}
 body:has(.insp) .zb .zb-lbl{display:none!important}
+/* long text values (who did the work, partner countries) read as a short paragraph under their label */
+.zb-spec.zb-long li{display:block}.zb-spec.zb-long li span{display:block;font-size:11.5px;margin-bottom:1px}.zb-spec.zb-long li b{display:block;text-align:left;font-weight:600;margin:0}
