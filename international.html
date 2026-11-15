@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>International, DigitalZAG</title>
+<title>ZAG International Partnerships, DigitalZAG</title>
 <meta name="description" content="Where ZAG has worked outside Slovenia: structures measured abroad, international projects and partner countries, each with its source.">
 <link rel="canonical" href="https://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/international.html">
 <meta property="og:type" content="website">
@@ -35,13 +35,13 @@
 .istats b{display:block;font-size:22px;color:#14213D;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 .istats span{font-size:12.5px;color:#5A6172}
 .iwrap{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:16px;align-items:start}
-.imap{position:relative;height:640px;border-radius:24px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),0 0 0 .5px rgba(33,52,105,.12),0 18px 44px rgba(16,40,90,.14);background:#D9E9FF}
+.imap{position:relative;height:640px;border-radius:24px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25),0 0 0 .5px rgba(33,52,105,.2),0 18px 44px rgba(16,40,90,.22);background:#071430}
 #imap{position:absolute;inset:0}
 .ichips{position:absolute;left:12px;top:12px;z-index:2;display:flex;flex-wrap:wrap;gap:6px}
 .ichips button{font:600 12.5px/1 Inter,system-ui,sans-serif;padding:8px 12px 8px 10px;border:0;border-radius:999px;cursor:pointer;color:#3A4257;display:flex;align-items:center;gap:7px;background:linear-gradient(160deg,rgba(255,255,255,.86),rgba(240,246,255,.72));-webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%);box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.12),0 4px 12px rgba(16,40,90,.1)}
 .ichips button[aria-pressed=false]{opacity:.55}
 .iviews{left:auto;right:56px}.iviews button[aria-pressed=false]{opacity:1;color:#5A6172}.iviews button[aria-pressed=true]{color:#0A5BC4}
-#imap{background:radial-gradient(circle at 50% 45%,#FFFFFF 0%,#EAF2FF 45%,#D6E6FB 100%)}
+#imap{background:radial-gradient(1px 1px at 12% 18%,rgba(255,255,255,.8),transparent),radial-gradient(1px 1px at 78% 12%,rgba(255,255,255,.7),transparent),radial-gradient(1.5px 1.5px at 88% 64%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 24% 82%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 58% 92%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 6% 52%,rgba(255,255,255,.5),transparent),radial-gradient(1.5px 1.5px at 66% 28%,rgba(255,255,255,.45),transparent),radial-gradient(circle at 50% 46%,#13325F 0%,#0A1B38 55%,#050D1E 100%)}
 .ichips i{width:10px;height:10px;border-radius:50%;display:inline-block}
 .ikey{position:absolute;left:12px;bottom:12px;z-index:2;padding:10px 12px;border-radius:16px;font-size:12px;color:#3A4257;background:linear-gradient(160deg,rgba(255,255,255,.84),rgba(240,246,255,.7));-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.12),0 6px 16px rgba(16,40,90,.1)}
 .ikey .ramp{display:flex;gap:2px;margin:6px 0 3px}.ikey .ramp span{width:30px;height:9px;border-radius:3px}
@@ -94,8 +94,8 @@
 <script src="js/sidebar.js?v=9"></script>
 <main id="main" class="intl">
   <header class="ihero">
-    <p class="kick" id="kick">Outside Slovenia</p>
-    <h1 id="h1">ZAG around the world</h1>
+    <p class="kick" id="kick">DigitalZAG</p>
+    <h1 id="h1">ZAG International Partnerships</h1>
     <p class="lead" id="lead">Bridges that ZAG measured abroad, the countries of its international project partners, and the associations it belongs to. Every item links to the public source it was taken from.</p>
     <div class="istats" id="stats" aria-live="polite"></div>
   </header>
@@ -122,7 +122,7 @@
 (async()=>{
   const SL=window.LANG==='sl', L=(en,sl)=>SL?sl:en, $=id=>document.getElementById(id);
   const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  if(SL){ $('kick').textContent='Zunaj Slovenije'; $('h1').textContent='ZAG po svetu'; $('lead').textContent='Mostovi, ki jih je ZAG meril v tujini, države partnerjev v mednarodnih projektih in združenja, v katerih sodeluje. Vsak zapis ima povezavo na javni vir.'; $('mh').textContent='Kako je pregled nastal'; $('ph').textContent='Podrobnosti'; }
+  if(SL){ $('kick').textContent='DigitalZAG'; $('h1').textContent='Mednarodna partnerstva ZAG'; $('lead').textContent='Mostovi, ki jih je ZAG meril v tujini, države partnerjev v mednarodnih projektih in združenja, v katerih sodeluje. Vsak zapis ima povezavo na javni vir.'; $('mh').textContent='Kako je pregled nastal'; $('ph').textContent='Podrobnosti'; }
   let D,W; try{ [D,W]=await Promise.all([fetch('data/international.json').then(r=>r.json()),fetch('data/world.geojson').then(r=>r.json())]); }
   catch(e){ $('list').innerHTML='<p class="inote">'+L('The data could not be loaded. ','Podatkov ni bilo mogoče naložiti. ')+esc(e.message)+'</p>'; return; }
   const CN=Object.fromEntries(D.countries.map(c=>[c.iso,c])); let dn; try{ dn=new Intl.DisplayNames([SL?'sl':'en-GB'],{type:'region'}); }catch(_){}
@@ -130,13 +130,15 @@
   const ZAG=[14.5155,46.0466];
   $('stats').innerHTML=[[D.structures.filter(s=>s.cat==='zag').length,L('structures abroad measured by ZAG','objektov v tujini, ki jih je meril ZAG')],[D.countries.length,L('countries with project partners','držav s projektnimi partnerji')],[D.projects.length,L('international projects','mednarodnih projektov')],[D.cities.length,L('partner cities mapped','mest partnerjev na zemljevidu')]].map(([n,t])=>`<div><b>${n}</b><span>${t}</span></div>`).join('');
   /* country fills from the number of projects */
-  const RAMP=[[1,'#BCD9FF'],[3,'#8DBFFF'],[10,'#5AA2FF'],[30,'#2B80F4'],[60,'#0A5ADB']];
+  const RAMP=[[1,'#8EC5FF'],[3,'#5EA8FF'],[10,'#3B8CFF'],[30,'#2170F0'],[60,'#0F52D6']];
   W.features.forEach(f=>{ const c=CN[f.properties.iso]; f.properties.n=c?c.total:0; f.properties.home=f.properties.iso==='SI'?1:0; });
   const pts=(arr,fn)=>({type:'FeatureCollection',features:arr.map(x=>({type:'Feature',properties:fn(x),geometry:{type:'Point',coordinates:[x.lon,x.lat]}}))});
   const arc=(a,b)=>{ const r=Math.PI/180,[l1,p1]=[a[0]*r,a[1]*r],[l2,p2]=[b[0]*r,b[1]*r]; const d=2*Math.asin(Math.sqrt(Math.sin((p2-p1)/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin((l2-l1)/2)**2)); const o=[]; for(let i=0;i<=48;i++){ const f=i/48,A=Math.sin((1-f)*d)/Math.sin(d),B=Math.sin(f*d)/Math.sin(d); const x=A*Math.cos(p1)*Math.cos(l1)+B*Math.cos(p2)*Math.cos(l2),y=A*Math.cos(p1)*Math.sin(l1)+B*Math.cos(p2)*Math.sin(l2),z=A*Math.sin(p1)+B*Math.sin(p2); o.push([Math.atan2(y,x)/r,Math.atan2(z,Math.sqrt(x*x+y*y))/r]); } return o; };
   const box=$('imap'), fitZ=()=>{ const s=Math.min(box.clientWidth,box.clientHeight); return s<240?1.7:Math.max(.8,Math.min(3,Math.log2(s*.84*Math.PI/512))); };
   const VIEWS={world:()=>({center:[-8,22],zoom:fitZ()}),europe:()=>({center:[15,50],zoom:Math.max(2.4,fitZ()+1.6)})};
-  const map=new maplibregl.Map({container:'imap',style:{version:8,projection:{type:'globe'},sky:{'sky-color':'#CFE3FF','horizon-color':'#FFFFFF','fog-color':'#FFFFFF','sky-horizon-blend':.6,'horizon-fog-blend':.6,'fog-ground-blend':.9,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,5,1,7,0]},sources:{},layers:[{id:'bg',type:'background',paint:{'background-color':'#D5E2F1'}}]},...VIEWS.world(),cooperativeGestures:true,attributionControl:{compact:true,customAttribution:L('Borders: Natural Earth via world-atlas','Meje: Natural Earth prek world-atlas')}});
+  const map=new maplibregl.Map({container:'imap',style:{version:8,projection:{type:'globe'},sky:{'sky-color':'#0B1E3F','horizon-color':'#6FB2FF','fog-color':'#9CCBFF','sky-horizon-blend':.55,'horizon-fog-blend':.7,'fog-ground-blend':.85,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,4,.8,7,0]},
+    sources:{earth:{type:'raster',tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],tileSize:256,maxzoom:8,attribution:'Imagery © Esri, Maxar, Earthstar Geographics'}},
+    layers:[{id:'bg',type:'background',paint:{'background-color':'#0E2A52'}},{id:'earth',type:'raster',source:'earth',paint:{'raster-saturation':-.15,'raster-contrast':.08,'raster-brightness-min':.06,'raster-fade-duration':200}}]},...VIEWS.world(),cooperativeGestures:true,attributionControl:{compact:true,customAttribution:L('Borders: Natural Earth via world-atlas','Meje: Natural Earth prek world-atlas')}});
   window.__imap=map;   map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
   /* a camera move asked for while the globe is still settling is tried at once and again when the globe is idle, so it is never lost */
   const whenReady=f=>{ const c0=map.getCenter(), z0=map.getZoom(); try{ f(); }catch(_){} const still=()=>{ const c=map.getCenter(); return Math.abs(c.lng-c0.lng)<.01&&Math.abs(c.lat-c0.lat)<.01&&Math.abs(map.getZoom()-z0)<.01; };
@@ -147,18 +149,19 @@
   new ResizeObserver(refit).observe(box); map.once('load',()=>{ refit(); requestAnimationFrame(refit); [400,1200,2500].forEach(ms=>setTimeout(()=>{ if(view) refit(); },ms)); }); window.addEventListener('load',refit);
   map.on('load',()=>{
     const gr=[]; for(let lon=-180;lon<180;lon+=30){ const c=[]; for(let la=-80;la<=80;la+=4) c.push([lon,la]); gr.push({type:'Feature',properties:{},geometry:{type:'LineString',coordinates:c}}); } for(let la=-60;la<=60;la+=30){ const c=[]; for(let lon=-180;lon<=180;lon+=4) c.push([lon,la]); gr.push({type:'Feature',properties:{},geometry:{type:'LineString',coordinates:c}}); }
-    map.addSource('grat',{type:'geojson',data:{type:'FeatureCollection',features:gr}}); map.addLayer({id:'grat',type:'line',source:'grat',paint:{'line-color':'#FFFFFF','line-opacity':.35,'line-width':.6}});
+    map.addSource('grat',{type:'geojson',data:{type:'FeatureCollection',features:gr}}); map.addLayer({id:'grat',type:'line',source:'grat',paint:{'line-color':'#BFDBFF','line-opacity':.16,'line-width':.6}});
     map.addSource('w',{type:'geojson',data:W});
-    map.addLayer({id:'cf',type:'fill',source:'w',paint:{'fill-color':['case',['==',['get','home'],1],'#5E5CE6',['==',['get','n'],0],'#FFFFFF',['step',['get','n'],RAMP[0][1],3,RAMP[1][1],10,RAMP[2][1],30,RAMP[3][1],60,RAMP[4][1]]],'fill-opacity':.96}});
-    map.addLayer({id:'cl',type:'line',source:'w',paint:{'line-color':'#FFFFFF','line-width':['interpolate',['linear'],['zoom'],1,.5,5,1.2]}});
+    map.addLayer({id:'cf',type:'fill',source:'w',paint:{'fill-color':['case',['==',['get','home'],1],'#8E8CFF',['==',['get','n'],0],'#000000',['step',['get','n'],RAMP[0][1],3,RAMP[1][1],10,RAMP[2][1],30,RAMP[3][1],60,RAMP[4][1]]],'fill-opacity':['case',['==',['get','n'],0],0,['==',['get','home'],1],.75,['interpolate',['linear'],['get','n'],1,.26,60,.52]]}});
+    map.addLayer({id:'cl',type:'line',source:'w',paint:{'line-color':'#FFFFFF','line-opacity':['case',['>',['get','n'],0],.7,.28],'line-width':['interpolate',['linear'],['zoom'],1,.4,5,1.1]}});
     map.addLayer({id:'csel',type:'line',source:'w',filter:['==',['get','iso'],''],paint:{'line-color':'#0A2F6B','line-width':2}});
     map.addSource('arcs',{type:'geojson',data:{type:'FeatureCollection',features:D.structures.map(s=>({type:'Feature',properties:{cat:s.cat},geometry:{type:'LineString',coordinates:arc(ZAG,[s.lon,s.lat])}}))}});
-    map.addLayer({id:'arcs',type:'line',source:'arcs',paint:{'line-color':['match',['get','cat'],'zag','#0B2A66','#E0A100'],'line-width':1.6,'line-opacity':.7,'line-dasharray':[2,1.5]}});
+    map.addLayer({id:'arcs-glow',type:'line',source:'arcs',paint:{'line-color':['match',['get','cat'],'zag','#7CC0FF','#FFD24A'],'line-width':6,'line-opacity':.18,'line-blur':4}});
+    map.addLayer({id:'arcs',type:'line',source:'arcs',paint:{'line-color':['match',['get','cat'],'zag','#BFE0FF','#FFD24A'],'line-width':1.5,'line-opacity':.95}});
     map.addSource('cities',{type:'geojson',data:pts(D.cities,c=>({city:c.city,iso:c.iso,n:c.n}))});
     map.addLayer({id:'cities',type:'circle',source:'cities',paint:{'circle-radius':['interpolate',['linear'],['get','n'],1,3,8,7],'circle-color':'#FFFFFF','circle-stroke-color':'#0A64E8','circle-stroke-width':1.4,'circle-opacity':.95}});
     map.addSource('st',{type:'geojson',data:pts(D.structures,s=>({id:s.id,cat:s.cat}))});
     map.addLayer({id:'st-halo',type:'circle',source:'st',paint:{'circle-radius':12,'circle-color':'#FFFFFF','circle-opacity':.55,'circle-blur':.5}});
-    map.addLayer({id:'st',type:'circle',source:'st',paint:{'circle-radius':7,'circle-color':['match',['get','cat'],'zag','#0B2A66','#FFB800'],'circle-stroke-color':'#FFFFFF','circle-stroke-width':2.4}});
+    map.addLayer({id:'st',type:'circle',source:'st',paint:{'circle-radius':7,'circle-color':['match',['get','cat'],'zag','#2F8CFF','#FFB800'],'circle-stroke-color':'#FFFFFF','circle-stroke-width':2.4}});
     map.addSource('home',{type:'geojson',data:{type:'Feature',geometry:{type:'Point',coordinates:ZAG}}});
     map.addLayer({id:'home',type:'circle',source:'home',paint:{'circle-radius':6,'circle-color':'#5E5CE6','circle-stroke-color':'#fff','circle-stroke-width':2.4}});
     const pop=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:10});
@@ -172,13 +175,13 @@
     applyChips();
   });
   /* layer chips and key */
-  const CH=[['st',L('Structures abroad','Objekti v tujini'),'#0B2A66',['st','st-halo','arcs']],['cities',L('Partner cities','Mesta partnerjev'),'#FFFFFF',['cities']],['cf',L('Countries','Države'),'#74AEFF',['cf']]];
+  const CH=[['st',L('Structures abroad','Objekti v tujini'),'#2F8CFF',['st','st-halo','arcs','arcs-glow']],['cities',L('Partner cities','Mesta partnerjev'),'#FFFFFF',['cities']],['cf',L('Countries','Države'),'#74AEFF',['cf']]];
   const on={st:true,cities:true,cf:true};
   $('chips').innerHTML=CH.map(([k,t,c])=>`<button type="button" data-k="${k}" aria-pressed="true"><i style="background:${c};box-shadow:inset 0 0 0 1.4px ${k==='cities'?'#0A64E8':'rgba(255,255,255,.8)'}"></i>${t}</button>`).join('');
   function applyChips(){ if(!map.getLayer('st')) return; CH.forEach(([k,,,ls])=>ls.forEach(l=>map.setLayoutProperty(l,'visibility',on[k]?'visible':'none'))); }
   $('chips').onclick=e=>{ const b=e.target.closest('button'); if(!b) return; const k=b.dataset.k; on[k]=!on[k]; b.setAttribute('aria-pressed',on[k]); applyChips(); };
   $('key').innerHTML=`<b>${L('Projects with partners in the country','Projekti s partnerji v državi')}</b><div class="ramp">${RAMP.map(r=>`<span style="background:${r[1]}"></span>`).join('')}</div><div class="rl"><span>1</span><span>3</span><span>10</span><span>30</span><span>60+</span></div>
-    <div style="margin-top:7px;display:flex;flex-direction:column;gap:4px"><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#0B2A66;margin-right:6px"></i>${L('Measured or tested by ZAG','Meril ali preizkusil ZAG')}</span><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#FFB800;margin-right:6px"></i>${L('SiWIM, developed at ZAG, used by others','SiWIM, razvit na ZAG, uporabljajo drugi')}</span><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#5E5CE6;margin-right:6px"></i>ZAG, Ljubljana</span></div>`;
+    <div style="margin-top:7px;display:flex;flex-direction:column;gap:4px"><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#2F8CFF;margin-right:6px"></i>${L('Measured or tested by ZAG','Meril ali preizkusil ZAG')}</span><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#FFB800;margin-right:6px"></i>${L('SiWIM, developed at ZAG, used by others','SiWIM, razvit na ZAG, uporabljajo drugi')}</span><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#5E5CE6;margin-right:6px"></i>ZAG, Ljubljana</span></div>`;
   /* panel */
   const TABS=[['structures',L('Structures','Objekti')],['countries',L('Countries','Države')],['projects',L('Projects','Projekti')],['partners',L('Partners','Partnerji')],['links',L('Associations','Združenja')]];
   let P=null; const PF={ai:false,recent:false}, fold=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -196,7 +199,7 @@
     F.innerHTML=country&&tab!=='structures'?`<div class="ifilter"><span>${esc(cname(country))}</span><button type="button" id="clr">${L('Show all countries','Prikaži vse države')}</button></div>`:'';
     if($('clr')) $('clr').onclick=()=>pickCountry(null);
     if(tab==='structures'){
-      Lst.innerHTML=`<p class="inote">${L('Only structures that a public source names together with the work done there. Dark blue: fieldwork by ZAG. Yellow: SiWIM, the bridge weigh-in-motion system developed at ZAG, run by others.','Samo objekti, ki jih javni vir navaja skupaj z opravljenim delom. Temno modro: terensko delo ZAG. Rumeno: SiWIM, sistem za tehtanje vozil med vožnjo, razvit na ZAG, ki ga uporabljajo drugi.')}</p>`+D.structures.map(stCard).join('');
+      Lst.innerHTML=`<p class="inote">${L('Only structures that a public source names together with the work done there. Blue: fieldwork by ZAG. Yellow: SiWIM, the bridge weigh-in-motion system developed at ZAG, run by others.','Samo objekti, ki jih javni vir navaja skupaj z opravljenim delom. Modro: terensko delo ZAG. Rumeno: SiWIM, sistem za tehtanje vozil med vožnjo, razvit na ZAG, ki ga uporabljajo drugi.')}</p>`+D.structures.map(stCard).join('');
       Lst.querySelectorAll('[data-s]').forEach(c=>{ c.onclick=e=>{ if(e.target.closest('a')) return; pickStructure(c.dataset.s,false); }; c.onkeydown=e=>{ if(e.key==='Enter') pickStructure(c.dataset.s,false); }; });
     } else if(tab==='countries'){
       const max=D.countries[0].total;
