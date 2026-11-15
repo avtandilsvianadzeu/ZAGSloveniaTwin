@@ -148,7 +148,9 @@ html{scroll-behavior:smooth}
 
 /* ---------- gentle entrance ---------- */
 .sierra .panel,.sierra .blk,.sierra .asset,.sierra .tsec,.sierra .dims,.sierra .card{animation:riseIn .45s cubic-bezier(.2,.8,.2,1) both}
-@keyframes riseIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes riseIn{from{transform:translateY(8px)}to{transform:none}}
+/* the rise is movement only: content is never held faded while a busy page loads */
+@media (prefers-reduced-motion:reduce){.sierra .panel,.sierra .blk,.sierra .asset,.sierra .tsec,.sierra .dims,.sierra .card{animation:none}}
 
 @media (max-width:1380px){.hdr .hsearch{flex-basis:300px;min-width:200px}.sitenav a{padding:0 10px!important}}
 @media (max-width:1100px){.hdr .hsearch{display:none}.thdr .crumb{display:none}}
