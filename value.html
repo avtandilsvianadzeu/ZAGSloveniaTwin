@@ -219,6 +219,6 @@
   const links=[...document.querySelectorAll('#toc a')]; if('IntersectionObserver' in window){ const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)); }),{rootMargin:'-90px 0px -60% 0px'}); document.querySelectorAll('.vsec').forEach(s=>io.observe(s)); }
 })();
 </script>
-<script src="js/zagbot.js?v=64"></script>
+<script src="js/zagbot.js?v=65"></script>
 </body>
 </html>
