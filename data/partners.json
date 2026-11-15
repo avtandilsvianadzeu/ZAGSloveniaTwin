@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-15T12:20:25.472Z",
+ "updated": "2026-11-15T13:00:38.486Z",
  "about": "Public websites of ZAG project partners, read once a day. Topics found, contact page and generic institutional addresses only.",
  "counts": {
   "partners": 172,
-  "read": 132,
-  "ai": 56
+  "read": 137,
+  "ai": 58
  },
  "items": [
   {
@@ -27,7 +27,7 @@
    ],
    "last": 2027,
    "status": "read",
-   "checked": "2026-11-15T12:07:36.423Z",
+   "checked": "2026-11-15T12:49:22.694Z",
    "title": "Home",
    "description": "Home",
    "ai": [
@@ -91,7 +91,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:08:11.591Z",
+   "checked": "2026-11-15T12:49:52.854Z",
    "title": "Technische Universität Wien | TU Wien",
    "description": "Homepage der Technischen Universität Wien. TU Wien, TUW. &quot;Technik für Menschen&quot;. News. Alles zu: Studium, Forschung, Kooperationen, Services.",
    "ai": [
@@ -124,7 +124,7 @@
    "reasons": [
     "4 shared projects with ZAG",
     "Latest shared project runs to 2026",
-    "AI topics on its website: machine learning, computer vision, data science, AI in other languages"
+    "AI topics on its website: machine learning, computer vision, data science, AI (local language)"
    ]
   },
   {
@@ -142,7 +142,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:09:24.739Z",
+   "checked": "2026-11-15T12:50:36.096Z",
    "title": "Research centre | Technological development | Tecnalia",
    "description": "TECNALIA is a benchmark European research and technological development centre, whose mission is to transform technology into GDP.",
    "ai": [
@@ -205,7 +205,7 @@
    ],
    "last": 2024,
    "status": "read",
-   "checked": "2026-11-15T12:07:44.667Z",
+   "checked": "2026-11-15T12:49:30.133Z",
    "title": "TRL | THE FUTURE OF TRANSPORT",
    "description": "",
    "ai": [
@@ -248,7 +248,7 @@
    ],
    "last": 2010,
    "status": "read",
-   "checked": "2026-11-15T12:08:38.139Z",
+   "checked": "2026-11-15T12:50:16.164Z",
    "title": "The Road and Bridge Research Institute &raquo; IBDiM",
    "description": "Instytut Badawczy Dróg i Mostów jest wiodącą placówką naukowo-badawczą w Polsce, która prowadzi innowacyjne badania, ekspertyzy i projekty w zakresie dróg,",
    "ai": [
@@ -321,7 +321,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:08:07.504Z",
+   "checked": "2026-11-15T12:49:49.382Z",
    "title": "Domov - GeoZS",
    "description": "Geološki zavod Slovenije Razumemo procese, ki se dogajajo na Zemljinem površju in pod njim. O nas GeoZS LETOS PRAZNUJE 80 LET! 🎉 → Preberi več Področja delovanja Temeljne geološke raziskave Temeljne geološke raziskave so osnova za razumeva",
    "ai": [
@@ -353,7 +353,7 @@
    "reasons": [
     "4 shared projects with ZAG",
     "Latest shared project runs to 2023",
-    "AI topics on its website: digital twin, AI in other languages",
+    "AI topics on its website: digital twin, AI (local language)",
     "Works on earthquake engineering"
    ]
   },
@@ -373,7 +373,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:08:16.657Z",
+   "checked": "2026-11-15T12:49:56.709Z",
    "title": "VITO: Duurzame oplossingen voor een betere toekomst",
    "description": "VITO biedt duurzame oplossingen voor een betere toekomst door onafhankelijk technologisch onderzoek en samenwerking met overheidsinstanties en organisaties om een positieve impact te creëren.",
    "ai": [
@@ -420,7 +420,7 @@
    ],
    "last": 2027,
    "status": "read",
-   "checked": "2026-11-15T12:13:45.840Z",
+   "checked": "2026-11-15T12:55:02.433Z",
    "title": "Welcome - eurnex",
    "description": "",
    "ai": [
@@ -483,7 +483,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:18:01.639Z",
+   "checked": "2026-11-15T12:58:26.629Z",
    "title": "Swedish research for sustainable growth | RISE",
    "description": "RISE is Sweden’s research institute, with a remit to strengthen the industry competitiveness and drive innovation in the public sector. From idea to innovation and onto the market.",
    "ai": [
@@ -555,7 +555,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:10:49.503Z",
+   "checked": "2026-11-15T12:51:40.895Z",
    "title": "Inici - Eurecat Centre Tecnològic",
    "description": "Innovació amb impacte econòmic i social cerca Som Premi Nacional a la Transferència del Coneixement i la Innovació sobre el premi sobre el premi Innovant pel bé comú A través de solucions reals i situacions quotidianes, presentem com la nos",
    "ai": [
@@ -608,7 +608,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:18:48.211Z",
+   "checked": "2026-11-15T12:59:09.459Z",
    "title": "Grupo Typsa - Grupo TYPSA",
    "description": "Más de 50 años de experiencia apoyando a clientes institucionales, públicos y privados en el desarrollo de proyectos de transporte, agua...",
    "ai": [
@@ -650,7 +650,7 @@
    "reasons": [
     "1 shared project with ZAG",
     "Latest shared project runs to 2025",
-    "AI topics on its website: machine learning, digital twin, AI in other languages",
+    "AI topics on its website: machine learning, digital twin, AI (local language)",
     "Works on bridges, BIM, railways"
    ]
   },
@@ -674,7 +674,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:07:40.327Z",
+   "checked": "2026-11-15T12:49:26.244Z",
    "title": "Homepage",
    "description": "Web stranice Sveučilišta u Zagrebu",
    "ai": [],
@@ -707,7 +707,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:08:23.632Z",
+   "checked": "2026-11-15T12:50:03.092Z",
    "title": "Delft University of Technology | TU Delft | Challenge. Change. Impact!",
    "description": "Discover TU Delft, the Netherlands&#039; oldest and largest university of technology, offering world-class education, leading research, 16 bachelor&#039;s and 30+ master&#039;s programmes.",
    "ai": [
@@ -760,7 +760,7 @@
    ],
    "last": 2029,
    "status": "read",
-   "checked": "2026-11-15T12:11:40.588Z",
+   "checked": "2026-11-15T12:52:47.164Z",
    "title": "Portada. Universidad de Navarra",
    "description": "",
    "ai": [
@@ -794,7 +794,7 @@
    "reasons": [
     "2 shared projects with ZAG",
     "Latest shared project runs to 2029",
-    "AI topics on its website: data science, AI in other languages",
+    "AI topics on its website: data science, AI (local language)",
     "Works on bridges, railways"
    ]
   },
@@ -812,7 +812,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:11:45.656Z",
+   "checked": "2026-11-15T12:52:52.582Z",
    "title": "University of Ljubljana",
    "description": "Welcome to SilverStripe! This is the default homepage. You can edit this page by opening the CMS.",
    "ai": [
@@ -857,7 +857,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:14:47.513Z",
+   "checked": "2026-11-15T12:56:06.021Z",
    "title": "Hochschule M&uuml;nchen &ndash; University of Applied Sciences - Hochschule München",
    "description": "Die Hochschule M&uuml;nchen &ndash; eine der vielf&auml;ltigsten Hochschulen f&uuml;r angewandte Wissenschaften Deutschlands f&uuml;r Technik, Wirtschaft, Soziales und Design.",
    "ai": [
@@ -890,7 +890,7 @@
    "reasons": [
     "1 shared project with ZAG",
     "Latest shared project runs to 2026",
-    "AI topics on its website: AI, machine learning, data science, AI in other languages"
+    "AI topics on its website: AI, machine learning, data science, AI (local language)"
    ]
   },
   {
@@ -906,7 +906,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:15:45.229Z",
+   "checked": "2026-11-15T12:56:54.016Z",
    "title": "Ústav stavebníctva a architektúry SAV, v. v. i.",
    "description": "Institute of Construction and Architecture - SAS Bratislava",
    "ai": [
@@ -949,6 +949,52 @@
    ]
   },
   {
+   "key": "Politecnico di Milano",
+   "name": "Politecnico di Milano",
+   "country": "IT",
+   "city": "Milan",
+   "website": "https://www.polimi.it/en/",
+   "lat": 45.46427,
+   "lon": 9.18951,
+   "projects": [
+    "BRIDGITISE",
+    "MESCEL"
+   ],
+   "last": 2027,
+   "status": "read",
+   "checked": "2026-11-15T12:58:09.920Z",
+   "title": "Politecnico di Milano - polimi",
+   "description": "Politecnico di Milano, since 1863, based in Milan, the largest Italian scientific-technological university, between scientific rigour and creativity",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.polimi.it/en/"
+    },
+    {
+     "topic": "AI",
+     "page": "https://www.polimi.it/en/"
+    },
+    {
+     "topic": "language models",
+     "page": "https://www.polimi.it/en/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.polimi.it/en/the-politecnico/contacts",
+   "emails": [],
+   "pages": [
+    "https://www.polimi.it/en/",
+    "https://www.polimi.it/en/the-politecnico/university-projects",
+    "https://www.polimi.it/en/research/departments"
+   ],
+   "score": 13,
+   "reasons": [
+    "2 shared projects with ZAG",
+    "Latest shared project runs to 2027",
+    "AI topics on its website: artificial intelligence, AI, language models"
+   ]
+  },
+  {
    "key": "Bay Zoltan Nonprofit Ltd. for Applied Research",
    "name": "Bay Zoltan Nonprofit Ltd. for Applied Research",
    "country": "HU",
@@ -962,7 +1008,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:10:00.373Z",
+   "checked": "2026-11-15T12:51:00.627Z",
    "title": "Home - Bay Zoltán Kutatóközpont",
    "description": "From the development of new materials, alloys and polymers to advanced materials testing, we provide a full range of support tailored to the needs of industry",
    "ai": [
@@ -1010,7 +1056,7 @@
    ],
    "last": 2014,
    "status": "read",
-   "checked": "2026-11-15T12:10:28.832Z",
+   "checked": "2026-11-15T12:51:19.575Z",
    "title": "EPFL",
    "description": "Based in Lausanne (Switzerland), EPFL is a university whose three missions are education, research and innovation.",
    "ai": [
@@ -1066,7 +1112,7 @@
    ],
    "last": 2027,
    "status": "read",
-   "checked": "2026-11-15T12:08:50.753Z",
+   "checked": "2026-11-15T12:50:28.615Z",
    "title": "IJS - Institut \"Jožef Stefan\"",
    "description": "",
    "ai": [
@@ -1087,7 +1133,7 @@
    "reasons": [
     "3 shared projects with ZAG",
     "Latest shared project runs to 2027",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -1105,7 +1151,7 @@
    ],
    "last": 2024,
    "status": "read",
-   "checked": "2026-11-15T12:09:36.360Z",
+   "checked": "2026-11-15T12:50:46.875Z",
    "title": "Your R&amp;D partner in sustainable growth | VTT",
    "description": "We help you to science up your solutions and achieve tomorrow’s breakthroughs.​",
    "ai": [
@@ -1143,7 +1189,7 @@
    ],
    "last": 2024,
    "status": "read",
-   "checked": "2026-11-15T12:09:52.249Z",
+   "checked": "2026-11-15T12:50:53.337Z",
    "title": "Startseite - BAM",
    "description": "Bundesanstalt f&uuml;r Materialforschung und -pr&uuml;fung (BAM)",
    "ai": [
@@ -1190,7 +1236,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:15:22.040Z",
+   "checked": "2026-11-15T12:56:34.681Z",
    "title": "idener.ai &#8211; Solving science and engineering challenges using AI",
    "description": "",
    "ai": [
@@ -1235,7 +1281,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:16:53.819Z",
+   "checked": "2026-11-15T12:57:46.776Z",
    "title": "Metso - Partner for positive change - Metso",
    "description": "Metso is a frontrunner in sustainable technologies, end-to-end solutions and services for the aggregates, minerals processing and metals refining industries globally.",
    "ai": [
@@ -1281,7 +1327,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:17:47.510Z",
+   "checked": "2026-11-15T12:58:14.635Z",
    "title": "Polo Tecnologico Alto Adriatico",
    "description": "Il Polo Tecnologico Alto Adriatico è un motore per accelerare idee imprenditoriali che si nutrono di trasferimento tecnologico e si avviano alla crescita.",
    "ai": [
@@ -1314,7 +1360,7 @@
    "score": 11,
    "reasons": [
     "2 shared projects with ZAG",
-    "AI topics on its website: artificial intelligence, AI, AI in other languages",
+    "AI topics on its website: artificial intelligence, AI, AI (local language)",
     "Works on construction materials"
    ]
   },
@@ -1331,7 +1377,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:18:32.827Z",
+   "checked": "2026-11-15T12:58:56.463Z",
    "title": "Homepage - Enabling Delta Life | Deltares",
    "description": "As an independent knowledge institute, Deltares works on innovative solutions in the field of water and subsurface. Learn more about our expertise.",
    "ai": [
@@ -1376,7 +1422,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:18:55.626Z",
+   "checked": "2026-11-15T12:59:16.817Z",
    "title": "The Entrepreneurial University - TUM",
    "description": "Technische Universität München: Eine der führenden deutschen Universitäten für Forschung und Lehre in Natur und Ingenieurwissenschaften.",
    "ai": [
@@ -1407,7 +1453,7 @@
    "reasons": [
     "1 shared project with ZAG",
     "Latest shared project runs to 2022",
-    "AI topics on its website: AI, data science, AI in other languages"
+    "AI topics on its website: AI, data science, AI (local language)"
    ]
   },
   {
@@ -1424,7 +1470,7 @@
    ],
    "last": 2016,
    "status": "read",
-   "checked": "2026-11-15T12:11:32.922Z",
+   "checked": "2026-11-15T12:52:36.234Z",
    "title": "Innovation for life | TNO",
    "description": "Impactvolle innovaties creëren voor duurzaam welzijn en welvaart van de samenleving.",
    "ai": [
@@ -1469,7 +1515,7 @@
     "TracInd BVK-H"
    ],
    "last": 2026,
-   "status": "read",
+   "status": "not reachable today, last good reading kept",
    "checked": "2026-11-15T12:19:13.183Z",
    "title": "UME - National Metrology Institute - TUBITAK UME",
    "description": "TÜBİTAK National Metrology Institute (UME) is a research and development organization operating to ensure the accuracy and reliability of measurements in Turkey.",
@@ -1517,7 +1563,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:19:47.580Z",
+   "checked": "2026-11-15T13:00:01.664Z",
    "title": "Home ~ UNIPI",
    "description": "Conoscenza che trasforma il mondo Pause Conoscenza che trasforma il mondo Pause I corsi di laurea Scegli tra i corsi di laurea triennale, magistrale e a ciclo unico dell’Università di Pisa Connessioni Il 27 novembre la reunion degli Alumni ",
    "ai": [
@@ -1547,7 +1593,7 @@
    "reasons": [
     "1 shared project with ZAG",
     "Latest shared project runs to 2025",
-    "AI topics on its website: artificial intelligence, AI in other languages",
+    "AI topics on its website: artificial intelligence, AI (local language)",
     "Works on construction materials"
    ]
   },
@@ -1566,7 +1612,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:08:48.590Z",
+   "checked": "2026-11-15T12:50:26.723Z",
    "title": "Home | IETU",
    "description": "",
    "ai": [],
@@ -1598,7 +1644,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:10:10.790Z",
+   "checked": "2026-11-15T12:51:07.527Z",
    "title": "Gospodarska zbornica Slovenije",
    "description": "Največje samostojno, prostovoljno, interesno in nepridobitno združenje gospodarstva",
    "ai": [
@@ -1619,7 +1665,7 @@
    "reasons": [
     "2 shared projects with ZAG",
     "Latest shared project runs to 2026",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -1635,7 +1681,7 @@
    ],
    "last": 2017,
    "status": "read",
-   "checked": "2026-11-15T12:17:54.970Z",
+   "checked": "2026-11-15T12:58:22.315Z",
    "title": "Our experience. Your growth. - RINA.org",
    "description": "We work closely with customers, assisting them in the most effective, safe and sustainable way across the Energy, Marine, Certification, Transport &amp; Infrastructure and Industry sectors",
    "ai": [
@@ -1688,7 +1734,7 @@
    ],
    "last": 2016,
    "status": "read",
-   "checked": "2026-11-15T12:07:46.101Z",
+   "checked": "2026-11-15T12:49:31.590Z",
    "title": "Sicherheitsüberprüfung / Security Check",
    "description": "",
    "ai": [],
@@ -1718,7 +1764,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:08:27.134Z",
+   "checked": "2026-11-15T12:50:06.034Z",
    "title": "Fundación Gómez Pardo",
    "description": "",
    "ai": [
@@ -1737,7 +1783,7 @@
    "score": 8,
    "reasons": [
     "3 shared projects with ZAG",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -1755,7 +1801,7 @@
    ],
    "last": 2014,
    "status": "read",
-   "checked": "2026-11-15T12:09:33.065Z",
+   "checked": "2026-11-15T12:50:44.138Z",
    "title": "University College Dublin",
    "description": "UCD is one of Europe",
    "ai": [
@@ -1792,7 +1838,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:11:08.173Z",
+   "checked": "2026-11-15T12:52:05.698Z",
    "title": "Közlekedéstudományi és Építésügyi Minőségellenőrző Intézet",
    "description": "",
    "ai": [],
@@ -1829,7 +1875,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:13:40.630Z",
+   "checked": "2026-11-15T12:54:45.446Z",
    "title": "Eurac Research - Eurac Research",
    "description": "Eurac Research is a private research center​ based in Bozen-Bolzano. Our researchers come from a wide variety of scientific fields and all parts of the world.",
    "ai": [
@@ -1872,7 +1918,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:14:08.798Z",
+   "checked": "2026-11-15T12:55:23.966Z",
    "title": "Home",
    "description": "",
    "ai": [],
@@ -1919,7 +1965,7 @@
    ],
    "last": 2012,
    "status": "read",
-   "checked": "2026-11-15T12:14:29.874Z",
+   "checked": "2026-11-15T12:55:45.764Z",
    "title": "Startseite Fraunhofer-Gesellschaft",
    "description": "Die Fraunhofer-Gesellschaft mit Sitz in Deutschland ist eine der führenden Organisationen für anwendungsorientierte Forschung mit Forschungsschwerpunkten in zukunftsrelevanten Schlüsseltechnologien und dem Transfer von Forschungsergebnissen",
    "ai": [
@@ -1947,7 +1993,7 @@
    "score": 8,
    "reasons": [
     "1 shared project with ZAG",
-    "AI topics on its website: machine learning, data science, AI in other languages"
+    "AI topics on its website: machine learning, data science, AI (local language)"
    ]
   },
   {
@@ -1964,7 +2010,7 @@
    ],
    "last": 2028,
    "status": "read",
-   "checked": "2026-11-15T12:14:41.499Z",
+   "checked": "2026-11-15T12:56:01.848Z",
    "title": "Naslovna | Grad Labin",
    "description": "Informacije o gradskoj upravi, javnim ustanovama, projektima i planovima Grada Labina, komunikacija građana s javnom upravom - sve na jednom mjestu!",
    "ai": [],
@@ -1999,7 +2045,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:16:49.925Z",
+   "checked": "2026-11-15T12:57:43.584Z",
    "title": "Metso - Partner for positive change - Metso",
    "description": "Metso is a frontrunner in sustainable technologies, end-to-end solutions and services for the aggregates, minerals processing and metals refining industries globally.",
    "ai": [
@@ -2043,7 +2089,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:19:29.463Z",
+   "checked": "2026-11-15T12:59:39.150Z",
    "title": "University of Bologna",
    "description": "",
    "ai": [
@@ -2086,7 +2132,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:20:03.123Z",
+   "checked": "2026-11-15T13:00:16.247Z",
    "title": "Home page | Università degli Studi di Modena e Reggio Emilia",
    "description": "",
    "ai": [
@@ -2114,7 +2160,7 @@
    "score": 8,
    "reasons": [
     "1 shared project with ZAG",
-    "AI topics on its website: AI, data science, AI in other languages"
+    "AI topics on its website: AI, data science, AI (local language)"
    ]
   },
   {
@@ -2132,7 +2178,7 @@
    ],
    "last": 2012,
    "status": "read",
-   "checked": "2026-11-15T12:09:29.709Z",
+   "checked": "2026-11-15T12:50:41.394Z",
    "title": "Home",
    "description": "Descr OG Home",
    "ai": [],
@@ -2169,7 +2215,7 @@
    ],
    "last": 2029,
    "status": "read",
-   "checked": "2026-11-15T12:09:37.843Z",
+   "checked": "2026-11-15T12:50:48.054Z",
    "title": "",
    "description": "",
    "ai": [],
@@ -2219,7 +2265,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:10:32.012Z",
+   "checked": "2026-11-15T12:51:22.736Z",
    "title": "АД. ЕСМ",
    "description": "",
    "ai": [],
@@ -2251,7 +2297,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:10:35.258Z",
+   "checked": "2026-11-15T12:51:25.656Z",
    "title": "Почетна - Технолошки факултет Нови Сад",
    "description": "Zvanični sajt Tehnološkog fakulteta Novi Sad, Univerziteta u Novom Sadu – informacije o studijskim programima, upisu, nastavi, nauci, međunarodnoj saradnji i aktivnostima fakulteta.",
    "ai": [],
@@ -2281,7 +2327,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:11:02.541Z",
+   "checked": "2026-11-15T12:52:00.475Z",
    "title": "Domov &#8211; Nigrad Maribor | komunalno podjetje",
    "description": "Najbolj iskano Cestne zapore Obvezno praznjenje greznice ali MKČN Vloge inobrazci E-račun in trajnik Čigave storitve plačujem s Nigradovo položnico Pregled izdanih položnic Aktualno Preglednik vsebin Dejavnosti",
    "ai": [],
@@ -2313,7 +2359,7 @@
    ],
    "last": 2030,
    "status": "read",
-   "checked": "2026-11-15T12:11:11.570Z",
+   "checked": "2026-11-15T12:52:08.899Z",
    "title": "Ministry of the Environment and Spatial Planning | GOV.SI",
    "description": "",
    "ai": [],
@@ -2344,7 +2390,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:11:16.488Z",
+   "checked": "2026-11-15T12:52:14.035Z",
    "title": "NATIONAL TECHNICAL UNIVERSITY OF ATHENS",
    "description": "",
    "ai": [],
@@ -2375,7 +2421,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:11:18.563Z",
+   "checked": "2026-11-15T12:52:15.886Z",
    "title": "OpenContent",
    "description": "",
    "ai": [],
@@ -2405,7 +2451,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:11:26.294Z",
+   "checked": "2026-11-15T12:52:30.468Z",
    "title": "Oulun yliopisto",
    "description": "Oulun yliopisto on kansainvälisesti toimiva tiedeyliopisto, joka tuottaa uutta tieteellistä tietoa ja siihen perustuvia ratkaisuja sekä kouluttaa tulevaisuuden suunnannäyttäjiä.",
    "ai": [],
@@ -2455,7 +2501,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:13:01.829Z",
+   "checked": "2026-11-15T12:54:08.537Z",
    "title": "Recherche et innovation - Le CEA, acteur majeur de la recherche au service de l'Etat, de l'économie et des citoyens.",
    "description": "Le CEA est un acteur majeur de la recherche, au service de l",
    "ai": [
@@ -2476,7 +2522,7 @@
    "reasons": [
     "1 shared project with ZAG",
     "Latest shared project runs to 2022",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -2492,7 +2538,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:14:23.136Z",
+   "checked": "2026-11-15T12:55:39.328Z",
    "title": "FTPO | Fakulteta za tehnologijo polimerov",
    "description": "",
    "ai": [
@@ -2512,7 +2558,7 @@
    "reasons": [
     "1 shared project with ZAG",
     "Latest shared project runs to 2026",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -2528,7 +2574,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:14:52.755Z",
+   "checked": "2026-11-15T12:56:10.502Z",
    "title": "Making a material difference | Heidelberg Materials",
    "description": "Discover Heidelberg Materials, a global leader in building materials. Learn about our products like cement, aggregates, and concrete.",
    "ai": [
@@ -2578,7 +2624,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:15:28.552Z",
+   "checked": "2026-11-15T12:56:40.651Z",
    "title": "Industry Innovation Cluster &#8211; Innovating Industry. Empowering the Future.",
    "description": "",
    "ai": [
@@ -2618,7 +2664,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:16:44.066Z",
+   "checked": "2026-11-15T12:57:38.759Z",
    "title": "METLEN - Metlen Εnergy &amp; Metals",
    "description": "Welcome to the corporate website of Metlen, a leading global industrial and energy company, operating in more than 30 countries.",
    "ai": [],
@@ -2648,7 +2694,7 @@
    ],
    "last": 2027,
    "status": "read",
-   "checked": "2026-11-15T12:17:08.533Z",
+   "checked": "2026-11-15T12:57:59.828Z",
    "title": "NOBATEK - Impulser les mutations du bâtiment pour construire un avenir viable",
    "description": "Collective et coopérative, NOBATEK avance depuis plus de 20 ans pour sécuriser et dynamiser dans toute la France, les projets de transition, d’innovation et de…",
    "ai": [
@@ -2684,7 +2730,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:17:17.226Z",
+   "checked": "2026-11-15T12:58:06.513Z",
    "title": "Physikalisch-Technische Bundesanstalt: Home",
    "description": "Die Physikalisch-Technische Bundesanstalt (PTB), Braunschweig und Berlin, ist das nationale Metrologie-Institut mit wissenschaftlich-technischen Dienstleistungsaufgaben. Sie misst mit höchster Genauigkeit und Zuverlässigkeit – Metrologie al",
    "ai": [
@@ -2705,27 +2751,7 @@
    "reasons": [
     "1 shared project with ZAG",
     "Latest shared project runs to 2023",
-    "AI topics on its website: AI in other languages"
-   ]
-  },
-  {
-   "key": "Politecnico di Milano",
-   "name": "Politecnico di Milano",
-   "country": "IT",
-   "city": "Milan",
-   "website": "https://www.polimi.it/en/",
-   "lat": 45.46427,
-   "lon": 9.18951,
-   "projects": [
-    "BRIDGITISE",
-    "MESCEL"
-   ],
-   "last": 2027,
-   "status": "not reachable",
-   "score": 7,
-   "reasons": [
-    "2 shared projects with ZAG",
-    "Latest shared project runs to 2027"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -2741,7 +2767,7 @@
    ],
    "last": 2016,
    "status": "read",
-   "checked": "2026-11-15T12:18:17.744Z",
+   "checked": "2026-11-15T12:58:41.986Z",
    "title": "Home | ROD",
    "description": "",
    "ai": [
@@ -2797,7 +2823,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:20:12.998Z",
+   "checked": "2026-11-15T13:00:26.704Z",
    "title": "WKO.at - das Portal der Wirtschaftskammern - WKO",
    "description": "Informationen, Services und Beratungsangebote der WKO für Unternehmerinnen und Unternehmer",
    "ai": [
@@ -2818,7 +2844,7 @@
    "reasons": [
     "1 shared project with ZAG",
     "Latest shared project runs to 2026",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -2836,7 +2862,7 @@
    ],
    "last": 2014,
    "status": "read",
-   "checked": "2026-11-15T12:08:19.571Z",
+   "checked": "2026-11-15T12:49:59.356Z",
    "title": "vti.se - vti.se",
    "description": "VTI är ett oberoende och internationellt framstående forskningsinstitut.",
    "ai": [],
@@ -2886,7 +2912,7 @@
    ],
    "last": 2020,
    "status": "read",
-   "checked": "2026-11-15T12:10:15.346Z",
+   "checked": "2026-11-15T12:51:11.163Z",
    "title": "Home | Consiglio Nazionale delle Ricerche",
    "description": "",
    "ai": [
@@ -2906,7 +2932,7 @@
    "score": 6,
    "reasons": [
     "2 shared projects with ZAG",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -2922,7 +2948,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:12:06.840Z",
+   "checked": "2026-11-15T12:53:14.405Z",
    "title": "Domov - Alpacem",
    "description": "",
    "ai": [],
@@ -2961,7 +2987,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:12:54.600Z",
+   "checked": "2026-11-15T12:54:01.464Z",
    "title": "Università Bocconi",
    "description": "La Bocconi è tra le principali università europee specializzate nelle scienze sociali, con un&#039;offerta che comprende le aree di economia, finanza, management, studi giuridici, scienze politiche, data e computer science con una crescente",
    "ai": [
@@ -3001,7 +3027,7 @@
    ],
    "last": 2024,
    "status": "read",
-   "checked": "2026-11-15T12:13:57.629Z",
+   "checked": "2026-11-15T12:55:12.662Z",
    "title": "ENALOS &#8211; ENALOS",
    "description": "",
    "ai": [],
@@ -3040,7 +3066,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:16:40.789Z",
+   "checked": "2026-11-15T12:57:35.100Z",
    "title": "Structural Mechanics | Department of Construction Sciences",
    "description": "We at the Division of Structural Mechanics are driven by understanding engineering problems and conducting research that contributes to solving societal challenges. Our core areas are Structural Mechanics, Constitutive Modelling and Computa",
    "ai": [],
@@ -3065,6 +3091,43 @@
    ]
   },
   {
+   "key": "sintef",
+   "name": "SINTEF",
+   "country": "NO",
+   "city": "Trondheim",
+   "website": "https://www.sintef.no/en/",
+   "lat": 63.4305,
+   "lon": 10.3951,
+   "projects": [
+    "TiREX"
+   ],
+   "last": 2027,
+   "status": "read",
+   "checked": "2026-11-15T12:58:47.406Z",
+   "title": "SINTEF - Applied research, technology and innovation",
+   "description": "SINTEF is one of Europe&#39;s largest independent research organisations. Every year we carry out several thousand projects for customers large and small.",
+   "ai": [],
+   "infra": [
+    {
+     "topic": "construction materials",
+     "page": "https://www.sintef.no/en/main-research-areas/building-and-construction/"
+    }
+   ],
+   "contact": "https://www.sintef.no/en/sintef-group/contact-and-invoice-information/",
+   "emails": [],
+   "pages": [
+    "https://www.sintef.no/en/",
+    "https://www.sintef.no/en/main-research-areas/building-and-construction/",
+    "https://www.sintef.no/en/main-research-areas/climate-and-environment/"
+   ],
+   "score": 6,
+   "reasons": [
+    "1 shared project with ZAG",
+    "Latest shared project runs to 2027",
+    "Works on construction materials"
+   ]
+  },
+  {
    "key": "geological survey of montenegro",
    "name": "Geological Survey of Montenegro (GSM)",
    "country": "ME",
@@ -3077,7 +3140,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:10:54.466Z",
+   "checked": "2026-11-15T12:51:45.781Z",
    "title": "JU Zavod za geološka istraživanja Podgorica",
    "description": "",
    "ai": [],
@@ -3106,7 +3169,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:11:54.502Z",
+   "checked": "2026-11-15T12:53:01.450Z",
    "title": "ACCIONA | Business as unusual",
    "description": "At ACCIONA we offer sustainable solutions to the most urgent challenges facing the planet, such as global warming, energy needs and water shortages",
    "ai": [
@@ -3165,7 +3228,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:12:46.056Z",
+   "checked": "2026-11-15T12:53:50.418Z",
    "title": "Sustainable Urban Development Consultancy – BURST Group",
    "description": "BURST supports cities and regions with sustainable urban development, co-creation and European research and innovation projects.",
    "ai": [],
@@ -3198,7 +3261,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:12:50.507Z",
+   "checked": "2026-11-15T12:53:55.731Z",
    "title": "BIM Project Management Software | BEXEL Manager",
    "description": "The most extensive integrated 3D, 4D, 5D and 6D BIM software solution for ultimate construction and project management results.",
    "ai": [
@@ -3242,7 +3305,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:13:22.005Z",
+   "checked": "2026-11-15T12:54:30.140Z",
    "title": "Vstopna stran - Štajerska gospodarska zbornica",
    "description": "Največjaregijska zbornicaŠTAJERSKA GOSPODARSKA ZBORNICAPovezani hitrejenajdemo učinkovite rešitvePridružite se nam in izkoristite ugodnosti članstva. INTERNACIONALIZACIJA IN ČEZMEJNE STORITVE Opravljamo celovite storitve na področju mednaro",
    "ai": [],
@@ -3292,7 +3355,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:13:28.510Z",
+   "checked": "2026-11-15T12:54:35.747Z",
    "title": "CZGBC",
    "description": "",
    "ai": [],
@@ -3325,7 +3388,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:13:30.166Z",
+   "checked": "2026-11-15T12:54:37.813Z",
    "title": "Home - Veřejný web - České vysoké učení technické v Praze",
    "description": "České vysoké učení technické v Praze patří k největším a nejstarším technickým vysokým školám v Evropě.",
    "ai": [],
@@ -3354,7 +3417,7 @@
    ],
    "last": 2009,
    "status": "read",
-   "checked": "2026-11-15T12:13:34.265Z",
+   "checked": "2026-11-15T12:54:40.993Z",
    "title": "Department for Transport - GOV.UK",
    "description": "We work with our agencies and partners to support the transport network that helps the UK’s businesses and gets people and goods travelling around the country. We plan and invest in transport infrastructure to keep the UK on the move. DfT i",
    "ai": [
@@ -3398,7 +3461,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:13:52.913Z",
+   "checked": "2026-11-15T12:55:07.996Z",
    "title": "Home | EIT RawMaterials - Developing raw materials into a major strength for Europe",
    "description": "Home",
    "ai": [],
@@ -3467,7 +3530,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:14:33.241Z",
+   "checked": "2026-11-15T12:55:47.871Z",
    "title": "Geologija d.o.o. Idrija",
    "description": "hidrogeologija (izvirske in podzemne vode),hidrogeoloske raziskave,inzenirska geologija,geomehanika,terenske raziskave,projektiranje inzenirskih objektov,strokovni geoloski nadzor pri razlicnih vrstah gradenj,izvedbe zemeljskih del,svetovan",
    "ai": [],
@@ -3497,7 +3560,19 @@
     "RIS-RESTORE"
    ],
    "last": 2023,
-   "status": "not reachable",
+   "status": "read",
+   "checked": "2026-11-15T12:55:59.593Z",
+   "title": "Federalni zavod za geologiju - FZZG",
+   "description": "Federalni zavod za geologiju vrši istraživačke, stručno-analitičke i druge poslove iz oblasti fundamentalnih i regionalnih geoloških istraživanja od interesa za Federaciju Bosne i Hercegovine.",
+   "ai": [],
+   "infra": [],
+   "contact": "https://fzzg.gov.ba/kontakt",
+   "emails": [
+    "info@fzzg.gov.ba"
+   ],
+   "pages": [
+    "https://fzzg.gov.ba/"
+   ],
    "score": 5,
    "reasons": [
     "1 shared project with ZAG",
@@ -3536,7 +3611,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:14:55.050Z",
+   "checked": "2026-11-15T12:56:13.109Z",
    "title": "Hidria",
    "description": "",
    "ai": [],
@@ -3565,7 +3640,7 @@
    ],
    "last": 2009,
    "status": "read",
-   "checked": "2026-11-15T12:15:03.734Z",
+   "checked": "2026-11-15T12:56:18.622Z",
    "title": "Institut IGH d.d. - Leading European Civil Engineering &amp; Laboratory Services Company",
    "description": "",
    "ai": [],
@@ -3611,7 +3686,7 @@
    ],
    "last": 2024,
    "status": "read",
-   "checked": "2026-11-15T12:15:18.586Z",
+   "checked": "2026-11-15T12:56:31.485Z",
    "title": "Iskra ISD Technofusion. | Multi-material component supplier",
    "description": "Iskra ISD - Your R&amp;D and manufacturing partner | Plastic injection moulding | Aluminium HPDC | CNC turning &amp; grinding | Electroplating | Assembly",
    "ai": [],
@@ -3755,7 +3830,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:18:19.846Z",
+   "checked": "2026-11-15T12:58:43.800Z",
    "title": "Živimo krožno gospodarstvo. Danes. Za jutri. | SIJ Acroni",
    "description": "SIJ Acroni je eden vodilnih proizvajalcev nerjavnih in specialnih jekel v Evropi. Smo del največje slovenske vertikalno integrirane metalurške skupine – Skupine SIJ.",
    "ai": [],
@@ -3775,25 +3850,6 @@
    ]
   },
   {
-   "key": "sintef",
-   "name": "SINTEF",
-   "country": "NO",
-   "city": "Trondheim",
-   "website": "https://www.sintef.no/en/",
-   "lat": 63.4305,
-   "lon": 10.3951,
-   "projects": [
-    "TiREX"
-   ],
-   "last": 2027,
-   "status": "not reachable",
-   "score": 5,
-   "reasons": [
-    "1 shared project with ZAG",
-    "Latest shared project runs to 2027"
-   ]
-  },
-  {
    "key": "saint gobain ecophon",
    "name": "Saint-Gobain Ecophon",
    "country": "SE",
@@ -3806,7 +3862,7 @@
    ],
    "last": 2029,
    "status": "read",
-   "checked": "2026-11-15T12:18:23.769Z",
+   "checked": "2026-11-15T12:58:49.949Z",
    "title": "Acoustic ceilings and wall absorbers | Ecophon",
    "description": "Enhance your wellbeing and performance with Ecophon&#39;s acoustic ceiling tiles and wall panel systems. Discover our range of products now.",
    "ai": [],
@@ -3856,7 +3912,7 @@
    ],
    "last": 2016,
    "status": "read",
-   "checked": "2026-11-15T12:18:35.489Z",
+   "checked": "2026-11-15T12:58:59.227Z",
    "title": "Structum - Inštitut za gradbeništvo",
    "description": "Vizija podjetja Structum d.o.o. je investitorjem in izvajalcem ponuditi in zagotoviti celotno storitev od svetovanja, priprave, nadzora, zunanje kontrole, inženiringa do optimizacije gradbenega projekta.",
    "ai": [],
@@ -3892,7 +3948,7 @@
    ],
    "last": 2024,
    "status": "read",
-   "checked": "2026-11-15T12:18:42.017Z",
+   "checked": "2026-11-15T12:59:04.381Z",
    "title": "TECES, Grozd zelenih tehnologij - Prva stran",
    "description": "Mednarodno prepoznan inovacijski grozd na področju zelenih tehnologij in energetsko učinkovitih rešitev. Where linking creates synergy.",
    "ai": [],
@@ -3941,7 +3997,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:18:44.792Z",
+   "checked": "2026-11-15T12:59:06.538Z",
    "title": "ТИТАН УСЈЕ АД Скопје",
    "description": "",
    "ai": [],
@@ -3970,7 +4026,7 @@
    ],
    "last": 2025,
    "status": "read",
-   "checked": "2026-11-15T12:18:58.522Z",
+   "checked": "2026-11-15T12:59:19.579Z",
    "title": "Technische Universität Dresden — TU Dresden",
    "description": "TU Dresden: an excellent place to study, research and work. 43,000 people – 125 nations – one university. Inquisitive, dedicated, innovative – with prime connections to science, industry and society.",
    "ai": [],
@@ -4001,7 +4057,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:19:00.500Z",
+   "checked": "2026-11-15T12:59:21.421Z",
    "title": "Ustvarjamo svetlo prihodnost Termoelektrarna Šoštanj - TEŠ",
    "description": "Termoelektrarna Šoštanj TEŠ je družba z omejeno odgovornostjo, v katerih je edini družbenik Holding Slovenske elektrarne. TEŠ z inštalirano močjo 779 MW proizvede povprečno tretjino energije v državi, v kriznih obdobjih pa pokriva preko pol",
    "ai": [],
@@ -4032,7 +4088,7 @@
    ],
    "last": 2028,
    "status": "read",
-   "checked": "2026-11-15T12:19:18.987Z",
+   "checked": "2026-11-15T12:59:30.689Z",
    "title": "Universiteit Utrecht | Sharing science, shaping tomorrow",
    "description": "De Universiteit Utrecht is een internationaal vooraanstaande onderzoeksuniversiteit waar studenten en onderzoekers samen werken aan een betere wereld.",
    "ai": [],
@@ -4061,7 +4117,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:19:21.499Z",
+   "checked": "2026-11-15T12:59:32.434Z",
    "title": "Rudarsko geološko građevinski fakultet &#8211; RGGF UNTZ",
    "description": "",
    "ai": [],
@@ -4090,7 +4146,7 @@
    ],
    "last": 2023,
    "status": "read",
-   "checked": "2026-11-15T12:19:25.101Z",
+   "checked": "2026-11-15T12:59:34.980Z",
    "title": "Универзитет у Бањој Луци",
    "description": "",
    "ai": [],
@@ -4121,7 +4177,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:19:52.803Z",
+   "checked": "2026-11-15T13:00:06.466Z",
    "title": "Univerzitet u Zenici",
    "description": "Organizacione jedinice | Izdavačka djelatnost | QA | CIS | Gender | Search",
    "ai": [],
@@ -4169,7 +4225,7 @@
    ],
    "last": 2026,
    "status": "read",
-   "checked": "2026-11-15T12:20:07.166Z",
+   "checked": "2026-11-15T13:00:20.943Z",
    "title": "Vas megye - Vas megye hivatalos honlapja",
    "description": "Vas megye hivatalos honlapja – aktuális hírek, események, turizmus, fejlesztések, projektek, választások.",
    "ai": [],
@@ -4198,7 +4254,7 @@
    ],
    "last": 2022,
    "status": "read",
-   "checked": "2026-11-15T12:20:09.473Z",
+   "checked": "2026-11-15T13:00:23.290Z",
    "title": "Home - Institut za nuklearne nauke &quot;Vinča&quot;",
    "description": "Institut za nuklearne nauke &quot;Vinča&quot;",
    "ai": [],
@@ -4268,7 +4324,7 @@
    ],
    "last": 2010,
    "status": "read",
-   "checked": "2026-11-15T12:10:04.853Z",
+   "checked": "2026-11-15T12:51:02.646Z",
    "title": "Výzkum v dopravě | CDV",
    "description": "Centrum dopravního výzkumu, v. v. i. - veřejná výzkumná instituce a jediná dopravní vědeckovýzkumná organizace v působnosti Ministerstva dopravy",
    "ai": [],
@@ -4316,7 +4372,7 @@
    ],
    "last": 2009,
    "status": "read",
-   "checked": "2026-11-15T12:10:19.655Z",
+   "checked": "2026-11-15T12:51:14.237Z",
    "title": "DDC.si -",
    "description": "",
    "ai": [],
@@ -4365,7 +4421,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:10:58.477Z",
+   "checked": "2026-11-15T12:51:49.285Z",
    "title": "Универзитет „Гоце Делчев“ - Штип",
    "description": "15 Факултети, 70 студиски програмиИзбери мудро, делувај храброДознај повеќе„Наш врвен приоритет е квалитетно и применливо знаење“Обраќање на ректоротПовеќе19 години Универзитет „Гоце Делчев“ – ШтипПреку 30 илјади студенти во изминатите 19 г",
    "ai": [],
@@ -4397,7 +4453,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:12:20.043Z",
+   "checked": "2026-11-15T12:53:27.347Z",
    "title": "Asociación de Empresarios del Henares - AEDHE",
    "description": "AEDHE ante la convocatoria de elecciones generales y el anuncio de huelga general Leer noticia completa La Asociación de Empresarios del Henares traslada su posición: valoramos las elecciones del 29 de noviembre como una oportunidad para re",
    "ai": [
@@ -4417,7 +4473,7 @@
    "score": 4,
    "reasons": [
     "1 shared project with ZAG",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -4433,7 +4489,7 @@
    ],
    "last": 2015,
    "status": "read",
-   "checked": "2026-11-15T12:12:37.439Z",
+   "checked": "2026-11-15T12:53:42.612Z",
    "title": "Homepage | Centre de recherches routières",
    "description": "",
    "ai": [
@@ -4469,7 +4525,7 @@
    ],
    "last": 2020,
    "status": "read",
-   "checked": "2026-11-15T12:14:14.561Z",
+   "checked": "2026-11-15T12:55:32.050Z",
    "title": "CU Hochschule Kärnten | Studieren in Österreich",
    "description": "Studieren an der CU Hochschule: Innovative Studiengänge, familiäre Atmosphäre, persönliche Betreuung, hoher Praxisbezug und einzigartige Lebensqualität",
    "ai": [
@@ -4489,7 +4545,43 @@
    "score": 4,
    "reasons": [
     "1 shared project with ZAG",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
+   ]
+  },
+  {
+   "key": "instituto tecnologico del calzado y conexas",
+   "name": "Instituto Tecnologico del Calzado y Conexas",
+   "country": "ES",
+   "city": "Elda",
+   "website": "https://www.inescop.es",
+   "lat": 38.47783,
+   "lon": -0.79157,
+   "projects": [
+    "ULTRAGRIP"
+   ],
+   "last": 2012,
+   "status": "read",
+   "checked": "2026-11-15T12:56:58.395Z",
+   "title": "INESCOP - INESCOP. Centre for Technology and Innovation",
+   "description": "Centre for Technology and Innovation that offers technological services and carries out research on topics of interest for the footwear sector.",
+   "ai": [
+    {
+     "topic": "artificial intelligence",
+     "page": "https://www.inescop.es/en/"
+    }
+   ],
+   "infra": [],
+   "contact": "https://www.inescop.es/en/inescop/sobre-inescop/contact-us",
+   "emails": [],
+   "pages": [
+    "https://www.inescop.es/en/",
+    "https://www.inescop.es/en/inescop/activities/r-d-i-projects",
+    "https://www.inescop.es/en/news/news/1040-inescop-strengthens-ties-with-colombian-institutions-and-companies-to-open-new-avenues-for-cooperation-in-training-and-innovation"
+   ],
+   "score": 4,
+   "reasons": [
+    "1 shared project with ZAG",
+    "AI topics on its website: artificial intelligence"
    ]
   },
   {
@@ -4505,7 +4597,7 @@
    ],
    "last": 2018,
    "status": "read",
-   "checked": "2026-11-15T12:16:56.116Z",
+   "checked": "2026-11-15T12:57:48.796Z",
    "title": "Ministerie van Infrastructuur en Waterstaat | Rijksoverheid.nl",
    "description": "Informatie over het ministerie van IenW, zoals adresgegevens, beleidsterreinen en informatie voor de pers.",
    "ai": [
@@ -4540,7 +4632,7 @@
    ],
    "last": 2014,
    "status": "read",
-   "checked": "2026-11-15T12:18:11.255Z",
+   "checked": "2026-11-15T12:58:36.628Z",
    "title": "Lavori Pubblici - Regione del Veneto",
    "description": "",
    "ai": [],
@@ -4579,7 +4671,7 @@
    ],
    "last": 2018,
    "status": "read",
-   "checked": "2026-11-15T12:19:33.625Z",
+   "checked": "2026-11-15T12:59:46.411Z",
    "title": "ULiège",
    "description": "Université publique ouverte sur le monde et ancrée dans le développement scientifique, culturel et économique de sa région, l&apos;ULiège s&apos;appuie sur ses trois piliers : l&apos;enseignement, la recherche et l&apos;engagement citoyen.",
    "ai": [
@@ -4598,7 +4690,7 @@
    "score": 4,
    "reasons": [
     "1 shared project with ZAG",
-    "AI topics on its website: AI in other languages"
+    "AI topics on its website: AI (local language)"
    ]
   },
   {
@@ -4614,7 +4706,7 @@
    ],
    "last": 2014,
    "status": "read",
-   "checked": "2026-11-15T12:13:09.557Z",
+   "checked": "2026-11-15T12:54:15.372Z",
    "title": "Prispevamo k večji varnosti v prometu - Cestel",
    "description": "",
    "ai": [],
@@ -4651,7 +4743,7 @@
    ],
    "last": 2009,
    "status": "read",
-   "checked": "2026-11-15T12:14:26.866Z",
+   "checked": "2026-11-15T12:55:42.915Z",
    "title": "Acciaio Sostenibile e High-Tech - Gruppo Pittini",
    "description": "Entra nel mondo dell&#039;Acciaio Pittini: scopri ora i nostri Progetti tra Innovazione e Sostenibilità.",
    "ai": [],
@@ -4687,7 +4779,7 @@
    ],
    "last": 2016,
    "status": "read",
-   "checked": "2026-11-15T12:17:13.528Z",
+   "checked": "2026-11-15T12:58:02.687Z",
    "title": "Občina Šentrupert",
    "description": "Občina Šentrupert. Poslujte elektronsko z občino: oddajte e-vlogo, plačajte takso preko spleta in prejmite odločbo na domač naslov, naročite se na obveščanje občine, preverite lokalne novice, dogodke in še veliko več.",
    "ai": [],
@@ -4722,7 +4814,7 @@
    ],
    "last": 2014,
    "status": "read",
-   "checked": "2026-11-15T12:18:14.317Z",
+   "checked": "2026-11-15T12:58:38.962Z",
    "title": "Robur, soluzioni per il riscaldamento e il raffrescamento industriale",
    "description": "Robur, azienda interamente italiana, sviluppa e produce sistemi di riscaldamento ad alta efficienza e basso impatto ambientale.",
    "ai": [],
@@ -4758,7 +4850,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:08:55.568Z",
+   "checked": "2026-11-15T12:50:33.188Z",
    "title": "Technical University of Leoben",
    "description": "Technical University of Leoben in Austria for sustainable technologies and green tech along the value chain. Find out more now!",
    "ai": [],
@@ -4788,7 +4880,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:11:53.208Z",
+   "checked": "2026-11-15T12:53:00.169Z",
    "title": "6. MAJ d.o.o. &#8211; Komunalno poduzeće",
    "description": "Komunalno poduzeće \r\n\r\n6. maj d.o.o. \r\n\r\nZa komunalne usluge - Servizi comunali               \r\n\r\nNovosti i obavijesti \r\n\r\nPratite naše objave i budite uvijek informirani sa novostima vezano za naše usluge.  Pročitajte više",
    "ai": [],
@@ -4818,7 +4910,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:12:33.781Z",
+   "checked": "2026-11-15T12:53:39.235Z",
    "title": "Home - Atlantic Copper",
    "description": "",
    "ai": [],
@@ -4848,7 +4940,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:12:56.772Z",
+   "checked": "2026-11-15T12:54:03.229Z",
    "title": "bucim.mk &#8211; Минерали за иднината",
    "description": "",
    "ai": [],
@@ -4878,7 +4970,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:13:14.345Z",
+   "checked": "2026-11-15T12:54:19.732Z",
    "title": "Chalmers University of Technology",
    "description": "We push for solutions to important societal challenges every day,  test new ideas and contribute to the development of a sustainable future.",
    "ai": [],
@@ -4908,7 +5000,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:13:19.779Z",
+   "checked": "2026-11-15T12:54:28.091Z",
    "title": "Начало : ТПП Враца",
    "description": "",
    "ai": [],
@@ -4938,7 +5030,7 @@
    ],
    "last": 2012,
    "status": "read",
-   "checked": "2026-11-15T12:13:24.498Z",
+   "checked": "2026-11-15T12:54:32.257Z",
    "title": "CEDR",
    "description": "CEDR",
    "ai": [],
@@ -5020,18 +5112,15 @@
    ],
    "last": 2016,
    "status": "read",
-   "checked": "2026-11-15T12:13:49.225Z",
-   "title": "HOME ECIPA - ECIPA Nordest",
-   "description": "IN PRIMO PIANO  \r\nECIPA NEWS    \r\nSEI SICURO?",
+   "checked": "2026-11-15T12:55:04.431Z",
+   "title": "",
+   "description": "",
    "ai": [],
    "infra": [],
-   "contact": "https://www.ecipa.eu/contatti/",
-   "emails": [
-    "info@ecipa.eu"
-   ],
+   "contact": null,
+   "emails": [],
    "pages": [
-    "https://www.ecipa.eu/",
-    "https://www.ecipa.eu/innovazione_/"
+    "https://www.ecipa.eu/"
    ],
    "score": 2,
    "reasons": [
@@ -5069,7 +5158,7 @@
    ],
    "last": 2018,
    "status": "read",
-   "checked": "2026-11-15T12:14:36.259Z",
+   "checked": "2026-11-15T12:55:50.587Z",
    "title": "Home | GDG Engineering Innovation",
    "description": "At Gavin &amp; Doherty Geosolutions (GDG), we are experts at finding innovative engineering solutions to some of the most challenging offshore projects around the world.",
    "ai": [],
@@ -5100,7 +5189,7 @@
    ],
    "last": 2018,
    "status": "read",
-   "checked": "2026-11-15T12:14:57.334Z",
+   "checked": "2026-11-15T12:56:15.028Z",
    "title": "Metal powders | H&#xF6;gan&#xE4;s",
    "description": "H&#xF6;gan&#xE4;s is the world leading manufacturer of metal powders for powder metallurgy. By utilising the endless opportunities of our metal powders we inspire industry to make more with less. The applications of metal powders seem almos",
    "ai": [],
@@ -5129,7 +5218,7 @@
    ],
    "last": 2009,
    "status": "read",
-   "checked": "2026-11-15T12:15:14.163Z",
+   "checked": "2026-11-15T12:56:28.309Z",
    "title": "Институт за путеве АД Београд &#8211; Институт за путеве бави се стручним активностима и консултантским услугама у области путне привреде.",
    "description": "",
    "ai": [],
@@ -5157,24 +5246,6 @@
    ],
    "last": 2021,
    "status": "no website listed",
-   "score": 2,
-   "reasons": [
-    "1 shared project with ZAG"
-   ]
-  },
-  {
-   "key": "instituto tecnologico del calzado y conexas",
-   "name": "Instituto Tecnologico del Calzado y Conexas",
-   "country": "ES",
-   "city": "Elda",
-   "website": "https://www.inescop.es",
-   "lat": 38.47783,
-   "lon": -0.79157,
-   "projects": [
-    "ULTRAGRIP"
-   ],
-   "last": 2012,
-   "status": "not reachable",
    "score": 2,
    "reasons": [
     "1 shared project with ZAG"
@@ -5229,7 +5300,7 @@
    ],
    "last": 2018,
    "status": "read",
-   "checked": "2026-11-15T12:16:28.417Z",
+   "checked": "2026-11-15T12:57:24.785Z",
    "title": "KU Leuven",
    "description": "KU Leuven is an international community where innovative research forms the basis of all our academic programmes. Across the university, driven researchers and curious students continually gain new insights and use their knowledge to tackle",
    "ai": [],
@@ -5238,6 +5309,7 @@
    "emails": [],
    "pages": [
     "https://www.kuleuven.be/english/kuleuven/",
+    "https://research.kuleuven.be/en/",
     "https://www.kuleuven.be/english/apply?project=TL&amp;pagina=Home&amp;thema=Banner&amp;onderwerp=Apply"
    ],
    "score": 2,
@@ -5258,7 +5330,7 @@
    ],
    "last": 2013,
    "status": "read",
-   "checked": "2026-11-15T12:16:31.468Z",
+   "checked": "2026-11-15T12:57:28.003Z",
    "title": "KIT - Karlsruher Institut für Technologie",
    "description": "Karlsruher Institut f&amp;uuml;r Technologie &ndash; technische Universit&amp;auml;t und zugleich nationales Forschungszentrum mit einzigartigen Forschungsinfrastrukturen",
    "ai": [],
@@ -5288,7 +5360,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:16:34.102Z",
+   "checked": "2026-11-15T12:57:29.496Z",
    "title": "KplusV | Impact ontstaat door actie",
    "description": "Vooruitgang vraagt om actie. Wij realiseren die vooruitgang. Samen met onze klanten ontwikkelen wij werkende oplossingen voor complexe vraagstukken. Oplossingen die duurzaam, innovatief en inclusief zijn.",
    "ai": [],
@@ -5318,7 +5390,7 @@
    ],
    "last": 2020,
    "status": "read",
-   "checked": "2026-11-15T12:16:36.281Z",
+   "checked": "2026-11-15T12:57:31.688Z",
    "title": "Luleå tekniska universitet",
    "description": "Luleå tekniska universitet har en nyckelroll i den gröna omställningen med forskning som förändrar och utbildningar som matchar kompetensbehoven.",
    "ai": [],
@@ -5364,7 +5436,7 @@
    ],
    "last": 2020,
    "status": "read",
-   "checked": "2026-11-15T12:17:05.075Z",
+   "checked": "2026-11-15T12:57:57.112Z",
    "title": "Mestna občina Maribor",
    "description": "Maribor je druga najštevilčnejša mestna občina v Republiki Sloveniji z okoli 113.000 stalnimi prebivalci.",
    "ai": [],
@@ -5410,7 +5482,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:17:50.340Z",
+   "checked": "2026-11-15T12:58:17.883Z",
    "title": "Privredna komora Srbije",
    "description": "Privredna komora Srbije je zakonom definisana organizacija privrednih subjekata. Sa tradicijom dužom od 160 godina, PKS okuplja privredu Srbije u jedinstven sistem, sektorski i regionalno.",
    "ai": [],
@@ -5438,7 +5510,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:18:07.772Z",
+   "checked": "2026-11-15T12:58:32.906Z",
    "title": "Dobrodošli | RRA Podravje - Maribor",
    "description": "Podjetništvo Pomagamo vam pri razvoju vaše poslovne ideje. /podjetniki Regionalni razvoj Razvijamo lokalno okolje in tako izboljšujemo vaše življenje.…",
    "ai": [],
@@ -5469,7 +5541,17 @@
     "RIS-CuRE"
    ],
    "last": 2021,
-   "status": "not reachable",
+   "status": "read",
+   "checked": "2026-11-15T12:58:52.283Z",
+   "title": "Serbia Zijin Copper DOO",
+   "description": "",
+   "ai": [],
+   "infra": [],
+   "contact": null,
+   "emails": [],
+   "pages": [
+    "https://zijinbor.com/"
+   ],
    "score": 2,
    "reasons": [
     "1 shared project with ZAG"
@@ -5524,7 +5606,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:18:52.143Z",
+   "checked": "2026-11-15T12:59:13.283Z",
    "title": "Технички факултет у Бору &#8211; Добродошли",
    "description": "",
    "ai": [],
@@ -5590,7 +5672,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:19:17.477Z",
+   "checked": "2026-11-15T12:59:29.342Z",
    "title": "Dienstleistungen in der Verfahrenstechnik | UVR-FIA GmbH",
    "description": "UVR-FIA GmbH: Ihr Partner für mechanische Verfahrenstechnik, Aufbereitung, Recycling und Produktionsoptimierung ✓",
    "ai": [],
@@ -5621,7 +5703,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:19:36.117Z",
+   "checked": "2026-11-15T12:59:48.877Z",
    "title": "UPET.ro | Universitatea din Petroșani",
    "description": "Universitatea din Petroșani asigură realizarea unui învățământ de performanță, dezvoltat și perfecționat printr-o complexă activitate de cercetare.",
    "ai": [],
@@ -5649,7 +5731,7 @@
    ],
    "last": 2009,
    "status": "read",
-   "checked": "2026-11-15T12:19:58.850Z",
+   "checked": "2026-11-15T13:00:12.654Z",
    "title": "Žilinská univerzita v Žiline",
    "description": "Nová stránka Žilinskej univerzity v Žiline",
    "ai": [],
@@ -5697,7 +5779,7 @@
    ],
    "last": 2016,
    "status": "read",
-   "checked": "2026-11-15T12:20:17.479Z",
+   "checked": "2026-11-15T13:00:30.995Z",
    "title": "Nacionalni inštitut za javno zdravje – NIJZ",
    "description": "NIJZ zagotavlja strokovne vsebine, podatke in preventivne informacije za varovanje in krepitev javnega zdravja v Sloveniji.",
    "ai": [],
@@ -5729,7 +5811,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:20:21.773Z",
+   "checked": "2026-11-15T13:00:34.776Z",
    "title": "ZRS Bistra, Ptuj",
    "description": "ZRS Bistra Ptuj, kot vodilna razvojna institucija in vmesnik med javnim in zasebnim sektorjem, si prizadeva prispevati k enakomernejšemu gospodarskemu in pravičnejšemu socialnemu razvoju regije.",
    "ai": [],
@@ -5759,7 +5841,7 @@
    ],
    "last": 2021,
    "status": "read",
-   "checked": "2026-11-15T12:20:24.670Z",
+   "checked": "2026-11-15T13:00:37.684Z",
    "title": "ekolive &#8211; Bioleaching &#8211; Bioremediation &#8211; Bio|me|stimulants",
    "description": "",
    "ai": [],
