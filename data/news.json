@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T15:28:21.139Z",
+ "updated": "2026-11-15T16:30:21.525Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -513,9 +513,9 @@
   "golte": [
    {
     "title": "Na Golteh pripravljeni na zimsko sezono",
-    "source": "Naš čas",
+    "source": "Svet24.si",
     "date": "2026-10-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQlFYamY3dzV4cExtbUJrVnJYRERjVXVyT0ZGZ05Pci1UN1NGaXp1NEpLdWpLZzczZlVDNUtUTlI0ZkFEWVNqZXl1Z21ndjkwaUdrWjE5bzhaWTZFWWE4eWx5Qmp4WjBsNXBOQWpVc3Rmb21XaDdPVDV2VG1TYV9ZMUFyZzRGQQ?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBmTjM2cW9kSHFYXzU5Q3R2MW9GQXZHY1M4WTdTT292QXpHTUlEbl9kZ0xKdzFTMV95d0VqQklQbHdIS3RJdWptQVVjVlI2LUdnZUdXa2JnQ0tqNjNTSG1oM2dWbVlqa21HSkFyMzJ2dy1aUXByR2tHWXFFN0w?oc=5",
     "outlets": 1,
     "match": "headline names \"golte\""
    },
@@ -617,6 +617,14 @@
    }
   ],
   "soca_quake": [
+   {
+    "title": "Okolico Tolmina stresel potres. Ste ga čutili?",
+    "source": "N1 Slovenija",
+    "date": "2026-10-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZTJfaXRoQUVqRld4TmJySFdmV3BGN2FseXdOTk81STVrbElmRXY1OWdNYlhYMFFzMDR4aFlHUTMwYkVfLVAwNkE2TGR0XzN6WkcydXBKLV9fcTk0aG9lVTZTNnJYdGliTGJaZWlMX2F0dlhxNEVuZkthMmFuX0Fjek1QQnhfWk0?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
