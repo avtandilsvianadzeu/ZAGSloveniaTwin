@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T02:52:54.283Z",
+ "updated": "2026-11-15T10:39:40.393Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -51,6 +51,13 @@
    }
   ],
   "zag": [
+   {
+    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
+    "source": "MojaObčina.si",
+    "date": "2026-10-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
+    "outlets": 1
+   },
    {
     "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
     "source": "Večer",
@@ -202,6 +209,13 @@
     "date": "2026-02-19T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVzhkRDFGNldfS0pjWkEwbFdaQWh4WmdYSGkwZE5sbUgzYzNWS2s3Nm12UWJ4eEtLeDlXbGxyUUVHdTFPNzB5TzF4Y1FwYlllaWZlMEZVR0dtU0ZmUzdWRS1lQ3ZQdHVHQ2VfYWdKdWZMdk1CVkE5TGJicFliNm1EU1hYTnB6R1pqUGw0Yw?oc=5",
     "outlets": 1
+   },
+   {
+    "title": "Kolaps na cestah: od centra Ljubljane do predora Šentvid ena ura vožnje (FOTO & VIDEO)",
+    "source": "N1 Slovenija",
+    "date": "2026-01-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYkpKWmNFZnpmM0E3aFdxN0ZtaGZQMkpVUnZ2Y2UybWozYWpQSU9fbmVwN2JJal85bTVwdnVMWHFIdUY3cGlsbjN4MzdaZVdiMkdGQlFucEY3d2lGRkp3MFljUjlwMURFbnN3REZPOU85V1p2RWJWV2lrZmJlc3J4SFR0c3VlMzgwOFBRcU50RGRLamUzTHdkTnp0NkdxZw?oc=5",
+    "outlets": 1
    }
   ],
   "trojane": [
@@ -235,7 +249,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 4
+    "outlets": 5
    },
    {
     "title": "Primorska avtocesta v predoru Kastelec proti Kopru ponovno odprta",
@@ -420,6 +434,13 @@
     "date": "2026-07-04T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
     "outlets": 1
+   },
+   {
+    "title": "Nova sedežnica na Vitranc: Kranjska Gora želi postati celoletni gorski center",
+    "source": "Gorenjskainfo.com",
+    "date": "2026-06-25T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeTNPcVNuOWFBNkY1R3RhN2k1SV81WUNwMDM1LU50MDVqdTMxZnRzRS1qdGZMZkZMaV9sVTFrQno0MUdPX1NNcDFSUkpKcFhpZVdUUmpqVFNQY1NXcnFTRGU2MHJ5TUc0RFV5SXNfaDFqbHhnRi1DTm9oRHFMdTBKZGZtSjhMRVl5Wmpfbm9CVG5iM09EQ2NLYl9TZzU3MjZZZkJ3cE9QNHd2U1JiM05KMUVSeExWVEZpR1NUMjZVUXNkZw?oc=5",
+    "outlets": 1
    }
   ],
   "cerkno_z": [
@@ -441,9 +462,9 @@
   "golte": [
    {
     "title": "Na Golteh pripravljeni na zimsko sezono",
-    "source": "Naš čas",
+    "source": "Svet24.si",
     "date": "2026-10-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQlFYamY3dzV4cExtbUJrVnJYRERjVXVyT0ZGZ05Pci1UN1NGaXp1NEpLdWpLZzczZlVDNUtUTlI0ZkFEWVNqZXl1Z21ndjkwaUdrWjE5bzhaWTZFWWE4eWx5Qmp4WjBsNXBOQWpVc3Rmb21XaDdPVDV2VG1TYV9ZMUFyZzRGQQ?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBmTjM2cW9kSHFYXzU5Q3R2MW9GQXZHY1M4WTdTT292QXpHTUlEbl9kZ0xKdzFTMV95d0VqQklQbHdIS3RJdWptQVVjVlI2LUdnZUdXa2JnQ0tqNjNTSG1oM2dWbVlqa21HSkFyMzJ2dy1aUXByR2tHWXFFN0w?oc=5",
     "outlets": 1
    },
    {
