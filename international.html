@@ -201,13 +201,13 @@
   }
   function pickCountry(iso,fly){
     country=iso; if(map.getLayer('csel')) map.setFilter('csel',['==',['get','iso'],iso||'']);
-    if(iso&&tab==='structures') tab='projects'; draw();
+    if(iso&&tab!=='links') tab='projects'; draw();
     if(iso&&fly){ const f=W.features.find(x=>x.properties.iso===iso); if(f){ const b=new maplibregl.LngLatBounds(); const add=c=>Array.isArray(c[0])?c.forEach(add):b.extend(c); add(f.geometry.coordinates); map.fitBounds(b,{padding:60,maxZoom:3.6,duration:900}); } }
   }
   draw();
   $('mlist').innerHTML=[
     L('Projects come from the international projects in the ZAG project register. For each one, the official partner list was read and the country of every partner recorded.','Projekti so iz registra mednarodnih projektov ZAG. Za vsakega je bil prebran uradni seznam partnerjev in zabeležena država vsakega partnerja.'),
-    L('Projects with a CORDIS record were checked against CORDIS on 15 November 2026. CORDIS writes UK and EL for the United Kingdom and Greece. For EURAD and EURAD-2, countries listed in CORDIS were added.','Projekti z zapisom v CORDIS so bili 15. novembra 2026 preverjeni v CORDIS. CORDIS uporablja oznaki UK in EL za Združeno kraljestvo in Grčijo. Pri EURAD in EURAD-2 so bile dodane države iz CORDIS.'),
+    L('Projects with a CORDIS record were checked against CORDIS in November 2026. CORDIS writes UK and EL for the United Kingdom and Greece. For EURAD and EURAD-2, countries listed in CORDIS were added.','Projekti z zapisom v CORDIS so bili novembra 2026 preverjeni v CORDIS. CORDIS uporablja oznaki UK in EL za Združeno kraljestvo in Grčijo. Pri EURAD in EURAD-2 so bile dodane države iz CORDIS.'),
     L('A structure abroad is listed only when a public source names it and says what was done there. Where the source gives only the town or the road, the point is approximate and marked so.','Objekt v tujini je naveden le, če ga javni vir imenuje in pove, kaj je bilo tam narejeno. Kjer vir navaja le kraj ali cesto, je lega približna in tako označena.'),
     L('SiWIM is reported in use in more than 20 countries. Only installations that a source names are shown here.','SiWIM se po navedbah uporablja v več kot 20 državah. Tu so prikazane le postavitve, ki jih vir poimenuje.')
   ].map(t=>`<li>${t}</li>`).join('')+`<li>${L('More about the bridge work:','Več o delu na mostovih:')} <a href="https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/" target="_blank" rel="noopener">${L('ZAG, Section for Bridges and Other Civil Engineering Structures','ZAG, Oddelek za mostove in druge gradbene konstrukcije')}</a></li>`;
