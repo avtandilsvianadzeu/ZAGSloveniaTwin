@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T18:34:27.004Z",
+ "updated": "2026-11-15T19:38:28.982Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -156,10 +156,10 @@
   ],
   "karavanke_c": [
    {
-    "title": "Predor Karavanke proti Avstriji ponovno odprt",
+    "title": "Zaradi varnosti zapirajo predor Karavanke",
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWERjRlBFT1l0NXJYLVI4eTZ2R25EQ3p6c055NTlTWkVQSkhNZHgxbmstemJuS0xaMEN2akN0V0lGc1dVWjFoN2lIVXJNRVl1WHRWMU1zRGdNQkZSeHhHbExPbGo4amlyaXc1SktsM3I3NVB5dUhYcFhOcUtXMGw5Q3NBc0ZxTk90YUtXSzdVWm9uTkt1RHJDSW9Lb19hbkhvSmNV?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
     "outlets": 1,
     "match": "headline names \"karavank\""
    },
@@ -252,6 +252,14 @@
     "source": "domžalec.si",
     "date": "2026-02-19T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVzhkRDFGNldfS0pjWkEwbFdaQWh4WmdYSGkwZE5sbUgzYzNWS2s3Nm12UWJ4eEtLeDlXbGxyUUVHdTFPNzB5TzF4Y1FwYlllaWZlMEZVR0dtU0ZmUzdWRS1lQ3ZQdHVHQ2VfYWdKdWZMdk1CVkE5TGJicFliNm1EU1hYTnB6R1pqUGw0Yw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"sentvid\""
+   },
+   {
+    "title": "Kolaps na cestah: od centra Ljubljane do predora Šentvid ena ura vožnje (FOTO & VIDEO)",
+    "source": "N1 Slovenija",
+    "date": "2026-01-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYkpKWmNFZnpmM0E3aFdxN0ZtaGZQMkpVUnZ2Y2UybWozYWpQSU9fbmVwN2JJal85bTVwdnVMWHFIdUY3cGlsbjN4MzdaZVdiMkdGQlFucEY3d2lGRkp3MFljUjlwMURFbnN3REZPOU85V1p2RWJWV2lrZmJlc3J4SFR0c3VlMzgwOFBRcU50RGRLamUzTHdkTnp0NkdxZw?oc=5",
     "outlets": 1,
     "match": "headline names \"sentvid\""
    }
@@ -498,14 +506,6 @@
     "source": "Slovenske novice",
     "date": "2026-07-04T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kranjsk\""
-   },
-   {
-    "title": "V Kranjski Gori odprtje sedežnice do vrha Vitranca",
-    "source": "tv3m.si",
-    "date": "2026-06-25T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfa21KSXdmdDJuOC1mVzdpeG01N0JnTWctLTJqcVpuSnZYbEc5c1laSG1LTkxYWUZublFVTG1la2pIR1E1Uk9xUVpCZVgwYUJpWlRWdkFRMXZqOGJTSmg3ZHRacmVkXy1fdmJqQkpmNjZHOGc2RURDT2J3a3ZQeVU?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
    },
