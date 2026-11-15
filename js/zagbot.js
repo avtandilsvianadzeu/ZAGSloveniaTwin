@@ -160,6 +160,7 @@
   let ctx={rec:null,flow:null}, started=false;
 
   /* the conversation is kept in this browser (last 80 messages), so a page change or a new visit continues where it stopped */
+  const follow=()=>{ try{ sessionStorage.setItem('zb_follow','1'); }catch(_){} };
   const HKEY='zb_hist', OKEY='zb_open'; let hist=[]; try{ hist=JSON.parse(localStorage.getItem(HKEY)||'[]'); if(!Array.isArray(hist)) hist=[]; }catch(_){ hist=[]; }
   const keep=(html,who)=>{ hist.push({w:who||'bot',h:html,t:Date.now()}); if(hist.length>80) hist=hist.slice(-80); try{ localStorage.setItem(HKEY,JSON.stringify(hist)); }catch(_){} };
   const forget=()=>{ hist=[]; try{ localStorage.removeItem(HKEY); }catch(_){} };
@@ -173,7 +174,7 @@
   /* chips: [label, action] where action is a function or a string the user "types" */
   const QI={find:'M7 2a5 5 0 1 0 3.1 8.9l3.5 3.5 1-1-3.5-3.5A5 5 0 0 0 7 2zm0 1.4a3.6 3.6 0 1 1 0 7.2 3.6 3.6 0 0 1 0-7.2z',help:'M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zm-.7 9.7h1.4v1.4H7.3zM8 4a2.4 2.4 0 0 1 1.2 4.5c-.5.3-.5.6-.5 1.2H7.3c0-1 .2-1.6 1.1-2.2A1 1 0 1 0 6.9 6.4H5.6A2.4 2.4 0 0 1 8 4z',fix:'M11.5 1.8 14.2 4.5 6 12.7l-3.4.7.7-3.4zM3 14h10v1.2H3z',cube:'M8 1 2 4.2v7.6L8 15l6-3.2V4.2zm0 1.6 4.3 2.3L8 7.2 3.7 4.9zM3.2 6l4.2 2.3v4.9L3.2 11zm5.4 7.2V8.3L12.8 6v5z',time:'M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zm.7 6.3 2.6 1.6-.7 1.1-3.3-2V4h1.4z',map:'M1.5 3.5 5.5 2l5 1.6 4-1.5v10.4l-4 1.5-5-1.6-4 1.5zm4.6.1v8.7l3.8 1.2V4.8z'};
   function offer(list,cards){ chips.innerHTML=''; chips.classList.toggle('cards',!!cards); for(const c of list){ if(!c) continue; const [label,act,kind,sub,icon]=c;
-      const el=kind==='link'?Object.assign(document.createElement('a'),{href:act,target:act.startsWith('http')?'_blank':'',rel:'noopener'}):document.createElement('button');
+      const el=kind==='link'?Object.assign(document.createElement('a'),{href:act,target:act.startsWith('http')?'_blank':'',rel:'noopener',onclick:()=>{ if(!act.startsWith('http')) follow(); }}):document.createElement('button');
       if(kind!=='link') el.type='button'; el.className='zb-chip'+(kind==='primary'||kind==='link'?' solid':''); if(cards&&sub){ el.className='zb-card2'; el.innerHTML=`<i class="q-${icon}"><svg viewBox="0 0 16 16"><path d="${QI[icon]||QI.help}" fill="currentColor"/></svg></i><b>${esc(label)}</b><span>${esc(sub)}</span>`; } else el.textContent=label;
       if(kind!=='link') el.onclick=()=>{ if(typeof act==='function'){ user(label); act(); } else handle(act,label); };
       chips.appendChild(el); } }
@@ -196,8 +197,8 @@
   function whereIs(r){ ctx.rec=r; const p=r.p, d=(typeof fmtD96==='function')?fmtD96([+p.longitude,+p.latitude]):'';
     say(`<div class="zb-card"><b>${esc(nm(r))}</b>${altNm(r)}<span>${esc(r.place||'')}${p.municipality&&p.municipality!==r.place?', '+esc(p.municipality):''}</span><p>WGS 84 ${(+p.latitude).toFixed(5)}, ${(+p.longitude).toFixed(5)}${d?'<br>'+esc(d):''}</p>${p.position_precision&&!/^(surveyed|address|matched)$/.test(p.position_precision)?'<p class="zb-note">Approximate position: the centre of the area, not the object itself.</p>':''}</div>`);
     if(ON_MAP&&typeof window.showInfo==='function'){ window.showInfo(r.id); panelSmall(); offer(recChips(r).filter(c=>c[0]!=='Show on the map')); }
-    else { say(window.LANG==='sl'?'Odpiram zemljevid...':'Opening the map...'); setTimeout(()=>{ location.href='index.html#'+encodeURIComponent(r.id); },700); } }
-  function showOnMap(r){ if(ON_MAP&&typeof window.showInfo==='function'){ window.showInfo(r.id); say('Shown on the map: <b>'+esc(r.name)+'</b>.'); panelSmall(); } else location.href='index.html#'+encodeURIComponent(r.id); }
+    else { say(window.LANG==='sl'?'Odpiram zemljevid...':'Opening the map...'); setTimeout(()=>{ follow(),location.href='index.html#'+encodeURIComponent(r.id); },700); } }
+  function showOnMap(r){ if(ON_MAP&&typeof window.showInfo==='function'){ window.showInfo(r.id); say('Shown on the map: <b>'+esc(r.name)+'</b>.'); panelSmall(); } else follow(),location.href='index.html#'+encodeURIComponent(r.id); }
   function panelSmall(){ if(window.innerWidth<700) toggle(false); }
 
   /* ---------- answers ---------- */
@@ -357,7 +358,7 @@
       if(words.some(w=>w===nm2||(nm2.length>=5&&w.length>=nm2.length-1&&w.slice(0,nm2.length-1)===nm2.slice(0,-1)&&w.length<=nm2.length+2))) return iso; } return null; };
   const cName=iso=>{ try{ return new Intl.DisplayNames([SLc()?'sl':'en-GB'],{type:'region'}).of(iso); }catch(_){ return iso; } };
   const ONI=()=>!!window.ZAGIntl, IURL='international.html', sf=(k,a,b,c,d)=>{ const m=k%100; return k+' '+(m===1?a:m===2?b:m===3||m===4?c:d); }, dz=k=>{ const m=k%100; return k+' '+(m===1?'država':m===2?'državi':m===3||m===4?'države':'držav'); };
-  function stCardI(s){ const sl=SLc(); if(ONI()) try{ window.ZAGIntl.structure(s.id); }catch(_){}
+  function stCardI(s,still){ const sl=SLc(); if(ONI()&&!still) try{ window.ZAGIntl.structure(s.id); }catch(_){}
     say(`<div class="zb-card"><b>${esc(s.name)}</b><span>${esc(s.type)}, ${esc(s.place)}, ${esc(cName(s.iso))}, ${esc(s.year)}</span><p>${esc(s.what)}</p><ul class="zb-spec zb-long"><li><span>${sl?'Kdo':'Who'}</span><b>${esc(s.who)}</b></li><li><span>${sl?'Delo':'Work'}</span><b>${s.cat==='zag'?(sl?'meritve ZAG':'measured by ZAG'):(sl?'SiWIM, razvit na ZAG, uporabljajo drugi':'SiWIM, developed at ZAG, run by others')}</b></li>${s.approx?`<li><span>${sl?'Lega':'Position'}</span><b>${sl?'približna, vir navaja le kraj':'approximate, the source gives only the place'}</b></li>`:''}</ul><p class="zb-src">${sl?'Viri':'Sources'}: ${s.src.map(([a,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(a)}</a>`).join(', ')}</p></div>`); }
   function prjCardI(p){ const sl=SLc();
     say(`<div class="zb-card"><b>${esc(p.a)}</b><span>${esc(p.f)}, ${esc(p.y)}</span><p>${esc(p.t)}</p><ul class="zb-spec zb-long">${p.r?`<li><span>${sl?'Vloga ZAG':'ZAG role'}</span><b>${esc(p.r)}</b></li>`:''}<li><span>${sl?'Države partnerjev':'Partner countries'}</span><b>${p.c.filter(x=>x!=='SI').map(cName).join(', ')||'-'}</b></li></ul>${p.n?`<p>${esc(p.n)}</p>`:''}<p class="zb-src">${sl?'Vir':'Source'}: <a href="${esc(p.s)}" target="_blank" rel="noopener">${sl?'seznam partnerjev':'partner list'}</a></p></div>`); }
@@ -378,7 +379,7 @@
       const c=D.countries.find(x=>x.iso===iso), ps=D.projects.filter(p=>p.c.includes(iso)).sort((a,b)=>(b.y0||0)-(a.y0||0)), st=D.structures.filter(s=>s.iso===iso), cn=cName(iso);
       if(!c&&!st.length){ say(sl?`Viri ne navajajo projektov ZAG s partnerji v državi <b>${esc(cn)}</b>.`:`The sources list no ZAG project with partners in <b>${esc(cn)}</b>.`); offer([go]); return true; }
       say(sl?`<b>${esc(cn)}</b>: ${c?`${sf(c.total,'mednarodni projekt','mednarodna projekta','mednarodni projekti','mednarodnih projektov')} s partnerji v tej državi, od leta ${c.first}`:'brez projektov s partnerji v tej državi'}${st.length?`, ${sf(st.length,'objekt','objekta','objekti','objektov')} na strani Mednarodno`:''}.`:`<b>${esc(cn)}</b>: ${c?`${c.total} international ${c.total===1?'project':'projects'} with partners there, since ${c.first}`:'no projects with partners there'}${st.length?`, and ${st.length} ${st.length===1?'structure':'structures'} on the International page`:''}.`);
-      if(ONI()) try{ window.ZAGIntl.country(iso); }catch(_){} st.forEach(stCardI);
+      if(ONI()) try{ window.ZAGIntl.country(iso); }catch(_){} st.forEach(s=>stCardI(s,true));
       if(ps.length){ say(sl?'Najnovejši projekti:':'The newest projects:'); offer(ps.slice(0,8).map(p=>[p.a,()=>{ prjCardI(p); offer([go]); }]).concat([go])); } else offer([go]); return true; }
     if(iw&&!strongRec){ const top=D.countries.slice(0,5).map(c=>`${cName(c.iso)} (${c.total})`).join(', ');
       say(sl?`Zunaj Slovenije: ZAG je meril <b>${zagS.length}</b> mostove, ki jih javni viri poimenujejo, ima <b>${D.projects.length}</b> mednarodnih projektov s partnerji v <b>${D.countries.length}</b> državah in sodeluje v <b>${D.links.length}</b> združenjih in sporazumih. Največ projektov s partnerji: ${esc(top)}.`
@@ -422,7 +423,7 @@
         /\b(satellite|aerial|imagery|satelit\w*)\b/.test(n)?'sat':/\b(street|normal|plain|ordinary|navadn\w*)\b.*\bmap\b|\bzemljevid\b.*\bnavadn\w*/.test(n)?'street':
         /\b(3d|three d|three dimensional|tilt|relief|3 d)\b/.test(n)&&!/\bmodel\w*\b/.test(n)?'3d':/\b(flat|2d|two d|top down|ravn\w*)\b/.test(n)?'flat':
         /\b(legend|legend\w*)\b/.test(n)?(/\b(hide|close|skrij|zapri)\b/.test(n)?'lgdoff':'lgdon'):/\b(north|sever\w*)\b|\breset (the )?rotation\b/.test(n)?'north':null;
-      if(C){ if(!ON_MAP){ say(sl?'To deluje na strani z zemljevidom. Odpiram jo.':'That works on the map page. Opening it.'); setTimeout(()=>{ location.href='index.html'; },700); return; }
+      if(C){ if(!ON_MAP){ say(sl?'To deluje na strani z zemljevidom. Odpiram jo.':'That works on the map page. Opening it.'); setTimeout(()=>{ follow(),location.href='index.html'; },700); return; }
         if(typeof map==='undefined'||!map){ say(sl?'Zemljevid se še nalaga. Vprašajte znova čez trenutek.':'The map is still loading. Ask again in a moment.'); return; }
         const done=t=>{ say(t); offer(menu()); };
         if(C==='whole'){ try{ if(typeof closeInfo==='function') closeInfo(); }catch(_){} if(typeof home==='function') home(); return done(sl?`Celoten zemljevid: vseh <b>${DB.recs.length||73}</b> zapisov po Sloveniji.`:`Here is the whole map: all <b>${DB.recs.length||73}</b> records across Slovenia.`); }
@@ -471,7 +472,7 @@
         if(succ) say(sl?`Po podatkih atlasa je zapis <b>${esc(succ.name)}</b> zgodovinski, nasledil ga je novejši.`:`By the atlas data, <b>${esc(succ.name)}</b> is the earlier one and has been succeeded by the newer.`);
         offer(rs.map(x=>[(sl?'Več o ':'More on ')+x.name,()=>story(x)])); }); }
     if(!r&&F.where&&hits.length&&hits[0].s>=1.4) r=hits[0].r;
-    if(r&&!wantFix&&!wantModel&&!attr){ if(F.map) return whereIs(r); if(F.page){ location.href=recUrl(r); return; } if(F.figs) return figures(r); }
+    if(r&&!wantFix&&!wantModel&&!attr){ if(F.map) return whereIs(r); if(F.page){ follow(),location.href=recUrl(r); return; } if(F.figs) return figures(r); }
     const prj=strong.length?null:projectOf(free); if(prj&&!wantFix&&!wantModel) return analyse(['Looking up '+tidy(prj.ac||prj.t),'Reading the ZAG project page entry','Writing the answer'],()=>projectCard(prj));
     const many=mentioned(free);
     if(many.length>=2&&(!type||attr||I.cmp)&&!wantFix&&!wantModel){ const rs=many.slice(0,4);
@@ -535,7 +536,8 @@
     el.onclick=()=>{ bye(); toggle(true); };
     setTimeout(()=>{ if(!panel.hidden||done) return; el.classList.add('in'); timer=setTimeout(bye,small?6000:9000); },1600);
     launch.addEventListener('click',bye); })();
-  try{ if(sessionStorage.getItem(OKEY)==='1') setTimeout(()=>toggle(true),400); }catch(_){}
+  /* the chat reopens by itself only when ZAGBot itself opened the new page; otherwise the page is shown first and the chat waits behind its button */
+  try{ if(sessionStorage.getItem(OKEY)==='1'&&sessionStorage.getItem('zb_follow')==='1') setTimeout(()=>toggle(true),400); sessionStorage.removeItem('zb_follow'); }catch(_){}
   $('.zb-new').onclick=()=>{ forget(); log.innerHTML=''; ctx={rec:PAGE_ID&&DB.byId?DB.byId[PAGE_ID]||null:null,flow:null}; say(L()==='sl'?'Nov pogovor. Kaj želite?':'New conversation. What would you like?'); offer(menu(),true); };
   /* the launcher floats, tilts towards the pointer, and can be dragged anywhere; its place is kept in this browser */
   (function(){ let drag=null, moved=false; const KEY='zb_pos';
