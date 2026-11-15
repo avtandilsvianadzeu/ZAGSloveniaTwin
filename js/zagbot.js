@@ -90,6 +90,11 @@
     {key:'tower',name:'towers and masts',re:/^(towers?|masts?|stolp\w*|drog\w*)$/,match:t=>/tower/.test(t)},
     {key:'landslide',name:'landslides and geotechnical sites',re:/^(landslides?|plaz\w*|slides?|geotechnic\w*|cliffs?|klif\w*|mines?|rudnik\w*)$/,match:t=>/landslide|geotechnical/.test(t)},
     {key:'quake',name:'earthquake study areas',re:/^(earthquakes?|potres\w*|seismic\w*|quakes?)$/,match:t=>/earthquake/.test(t)}];
+  const TSL={bridge:'mostovi in viadukti',tunnel:'predori',dam:'jezovi in hidroelektrarne',cableway:'žičnice',building:'stavbe',tower:'stolpi in drogovi',landslide:'plazovi in geotehnične lokacije',quake:'območja potresov'};
+  const ASL={height:'višina',length:'dolžina',year:'leto'};
+  /* Slovenian number agreement: je 1 zapis, sta 2 zapisa, so 3 zapisi, je 5 zapisov */
+  const zN=n=>{ const m=n%100; return m===1?`je <b>${n}</b> zapis`:m===2?`sta <b>${n}</b> zapisa`:(m===3||m===4)?`so <b>${n}</b> zapisi`:`je <b>${n}</b> zapisov`; };
+  const SLc=()=>L()==='sl', tN=t=>SLc()&&TSL[t.key]?TSL[t.key]:t.name, aN=a=>SLc()&&ASL[a.key]?ASL[a.key]:a.name;
   const ATTRS=[
     {key:'height',name:'height',re:/^(height|high|tall|visin\w*|visok\w*|clearance)$/,label:/\bheight\b|highest point|višina|visina/i},
     {key:'length',name:'length',re:/^(length|long|dolzin\w*|dolg\w*)$/,label:/\blength\b|dolžina|dolzina/i},
@@ -240,12 +245,12 @@
     say(`<div class="zb-card"><b>${esc(r.name)}</b><p>No dated inspection report is published for it, so I cannot give an inspection date.</p>${r.p.zag_role?`<p>What the sources do record${kw?' about ZAG\'s checks':''}: ${esc(tidy(r.p.zag_role))}${r.year?', '+esc(yrs(r.year)):''}.</p>`:''}${srcList(r,3)}</div>`);
     offer([['What did ZAG do?',()=>role(r)],['The full story',()=>story(r)],['I have an inspection report',()=>startUpdate(r,'source')]]); }
   function people(r){ ctx.rec=r; const ppl=arr(r.p.people), P=projOf(r).filter(x=>x.lead&&!/not stated/i.test(x.lead));
-    if(!ppl.length&&!P.length){ say(`The sources for <b>${esc(r.name)}</b> name no people. I only give names that the sources publish.`); offer(recChips(r)); return; }
-    say(`<b>${esc(r.name)}</b>, people named in the published sources:<ul class="zb-list">${ppl.map(x=>`<li>${esc(x)}</li>`).join('')}${P.slice(0,5).map(x=>`<li>${esc(tidy(x.lead))}, ${esc(tidy(x.ac||x.t))}</li>`).join('')}</ul>`); offer(recChips(r)); }
-  function sources(r){ ctx.rec=r; const S=arr(r.p.sources).filter(x=>x&&x.url); say(S.length?`<b>${esc(r.name)}</b>, ${S.length} sources:<ul class="zb-list">${S.slice(0,10).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(tidy(x.title||x.key))}</a></li>`).join('')}</ul>`:'No source links are stored for this record.'); offer(recChips(r)); }
+    if(!ppl.length&&!P.length){ say(SLc()?`Viri za <b>${esc(nm(r))}</b> ne navajajo oseb. Navajam samo imena, ki jih objavljajo viri.`:`The sources for <b>${esc(r.name)}</b> name no people. I only give names that the sources publish.`); offer(recChips(r)); return; }
+    say(`<b>${esc(nm(r))}</b>, ${SLc()?'osebe, ki jih navajajo objavljeni viri':'people named in the published sources'}:<ul class="zb-list">${ppl.map(x=>`<li>${esc(x)}</li>`).join('')}${P.slice(0,5).map(x=>`<li>${esc(tidy(x.lead))}, ${esc(tidy(x.ac||x.t))}</li>`).join('')}</ul>`); offer(recChips(r)); }
+  function sources(r){ ctx.rec=r; const S=arr(r.p.sources).filter(x=>x&&x.url); say(S.length?`<b>${esc(nm(r))}</b>, ${SLc()?'virov: '+S.length:S.length+' sources'}:<ul class="zb-list">${S.slice(0,10).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(tidy(x.title||x.key))}</a></li>`).join('')}</ul>`:'No source links are stored for this record.'); offer(recChips(r)); }
   function compare(rs,a){ const rows=rs.map(r=>{ const sp=((DB.twins[r.id]||{}).specs||[]).find(s=>a.label.test(s.label)); return [r,sp]; });
-    say(`<b>${esc(cap(a.name))}</b> compared:<ul class="zb-spec">${rows.map(([r,sp])=>sp?specLine(Object.assign({},sp,{label:r.name})):`<li><span>${esc(r.name)}</span><b>not published</b><em>no value in the sources</em></li>`).join('')}</ul>`);
-    offer(rs.map(r=>['Open '+r.name,recUrl(r),'link'])); }
+    say(`<b>${esc(cap(aN(a)))}</b> ${SLc()?'v primerjavi':'compared'}:<ul class="zb-spec">${rows.map(([r,sp])=>sp?specLine(Object.assign({},sp,{label:nm(r)})):`<li><span>${esc(nm(r))}</span><b>${SLc()?'ni objavljeno':'not published'}</b><em>${SLc()?'viri ne navajajo vrednosti':'no value in the sources'}</em></li>`).join('')}</ul>`);
+    offer(rs.map(r=>[(SLc()?'Odpri ':'Open ')+nm(r),recUrl(r),'link'])); }
   function projectOf(free){ if(!DB.projAll) return null; const acr=x=>String(x.ac||'').split(/[\s,]+/).filter(w=>w.length>=4&&/[A-Z].*[A-Z0-9]|\d/.test(w)).map(norm);
     for(const q of free){ if(q.length<4) continue; const hit=DB.projAll.find(x=>acr(x).some(w=>w===q||(q.length>=6&&lev(q,w)<=1))); if(hit) return hit; } return null; }
   function projectCard(x){ const S=(x.sites||[]).filter(id=>id!=='zag'&&DB.byId[id]).map(id=>DB.byId[id]);
@@ -257,12 +262,13 @@
       if(bs>=1.5&&best.length<=2) best.forEach(r=>{ if(!out.includes(r)) out.push(r); }); }
     return out; }
   function attrAnswer(r,a){ ctx.rec=r; const sp=((DB.twins[r.id]||{}).specs||[]).filter(s=>a.label.test(s.label));
-    if(!sp.length){ say(`No ${esc(a.name)} is published in the sources for <b>${esc(r.name)}</b>, so I will not guess one.`); offer([['Key figures',()=>figures(r)],['I have a source for it',()=>startUpdate(r,'value',a.name)],['Open its page',recUrl(r),'link']]); return; }
-    say(`<b>${esc(r.name)}</b>, ${esc(a.name)}:<ul class="zb-spec">${sp.slice(0,4).map(specLine).join('')}</ul>`); offer(recChips(r)); }
+    if(!sp.length){ say(SLc()?`Viri za <b>${esc(nm(r))}</b> ne navajajo podatka (${esc(aN(a))}), zato ga ne bom ugibal.`:`No ${esc(a.name)} is published in the sources for <b>${esc(r.name)}</b>, so I will not guess one.`); offer([['Key figures',()=>figures(r)],['I have a source for it',()=>startUpdate(r,'value',a.name)],['Open its page',recUrl(r),'link']]); return; }
+    say(`<b>${esc(nm(r))}</b>, ${esc(aN(a))}:<ul class="zb-spec">${sp.slice(0,4).map(specLine).join('')}</ul>`); offer(recChips(r)); }
   function listType(t,inPlace){ let rs=DB.recs.filter(r=>t.match(r.type)); if(inPlace) rs=rs.filter(r=>inPlace.includes(r));
-    if(!rs.length){ say(`No ${esc(t.name)} are recorded${inPlace?' there':''}.`); offer(menu()); return; }
-    say(rs.length===1?`One of the ${esc(t.name)} is recorded${inPlace?' there':''}:`:`${rs.length} ${esc(t.name)}${inPlace?' there':''} in the atlas. Choose one:`); offer(rs.slice(0,10).map(r=>[r.name,()=>card(r)]).concat(rs.length>10?[['Show more',()=>{ offer(rs.slice(10,24).map(r=>[r.name,()=>card(r)])); }]]:[])); }
-  function help(){ say(`I can:<ul class="zb-list"><li>find a structure by name, type or place</li><li>answer a value such as height, length, year or power, always with its source</li><li>show it on the map or open its page</li><li>take a report when something is wrong and send it to the DigitalZAG team as an exact request</li><li>open the form for a new 3D model</li></ul>I understand English and Slovenian words, for example <i>predor</i>, <i>most</i>, <i>višina</i>.`); offer(menu()); }
+    if(!rs.length){ say(SLc()?`Tu ni zapisov te vrste (${esc(tN(t))}).`:`No ${esc(t.name)} are recorded${inPlace?' there':''}.`); offer(menu()); return; }
+    say(SLc()?(rs.length===1?`Tu je zapisan en objekt te vrste (${esc(tN(t))}):`:`V atlasu ${zN(rs.length)} te vrste (${esc(tN(t))}). Izberite enega:`):(rs.length===1?`One of the ${esc(t.name)} is recorded${inPlace?' there':''}:`:`${rs.length} ${esc(t.name)}${inPlace?' there':''} in the atlas. Choose one:`)); offer(rs.slice(0,10).map(r=>[r.name,()=>card(r)]).concat(rs.length>10?[['Show more',()=>{ offer(rs.slice(10,24).map(r=>[r.name,()=>card(r)])); }]]:[])); }
+  function help(){ if(SLc()){ say(`Znam:<ul class="zb-list"><li>poiskati objekt po imenu, vrsti ali kraju</li><li>odgovoriti na vrednost, kot so višina, dolžina, leto ali moč, vedno z virom</li><li>ga prikazati na zemljevidu ali odpreti njegovo stran</li><li>sprejeti sporočilo, ko je kaj narobe, in ga kot natančno zahtevo poslati ekipi DigitalZAG</li><li>odpreti obrazec za nov 3D model</li></ul>Razumem slovenske in angleške besede, na primer <i>tunnel</i>, <i>bridge</i>, <i>height</i>.`); offer(menu()); return; }
+    say(`I can:<ul class="zb-list"><li>find a structure by name, type or place</li><li>answer a value such as height, length, year or power, always with its source</li><li>show it on the map or open its page</li><li>take a report when something is wrong and send it to the DigitalZAG team as an exact request</li><li>open the form for a new 3D model</li></ul>I understand English and Slovenian words, for example <i>predor</i>, <i>most</i>, <i>višina</i>.`); offer(menu()); }
 
   /* ---------- guided requests: every step is a click, so the request is exact ---------- */
   function pickRecord(then,why){ say((why||'Which structure is it?')+' Type a name or choose one.'); ctx.flow={pick:then};
@@ -387,7 +393,7 @@
     const wantModel=/\b(3d|model\w*)\b/.test(n);
     const attr=ATTRS.find(a=>tokens.some(w=>a.re.test(w)))||(anyNear(tokens,FUZ.tall)?ATTRS.find(a=>a.key==='height'):anyNear(tokens,FUZ.long)?ATTRS.find(a=>a.key==='length'):anyNear(tokens,FUZ.when)?ATTRS.find(a=>a.key==='year'):null);
     const type=TYPES.find(t=>tokens.some(w=>t.re.test(w)));
-    const GEN=new Set(['list','lists','all','every','everything','atlas','records','record','entries','items','available','show','give','seznam','vse','vsi','vsa','prikazi','zapisi','zapisov','objekti','objektov','photo','photos','picture','pictures','image','images','pic','pics','location','located','position','address','please','structure','object','objekt','headquarters','office','institute','main','seat','sedez','map','page','slika','sliko','fotografija','fotografijo','foto','lokacija','plan']);
+    const GEN=new Set(['atlasu','atlasa','atlasom','zapisa','zapise','list','lists','all','every','everything','atlas','records','record','entries','items','available','show','give','seznam','vse','vsi','vsa','prikazi','zapisi','zapisov','objekti','objektov','photo','photos','picture','pictures','image','images','pic','pics','location','located','position','address','please','structure','object','objekt','headquarters','office','institute','main','seat','sedez','map','page','slika','sliko','fotografija','fotografijo','foto','lokacija','plan']);
     const free=tokens.filter(w=>!GEN.has(w)&&!(attr&&attr.re.test(w))&&!(type&&type.re.test(w))&&!/^(wrong|incorrect|error|fix|update|change|model|3d|how|many|much|koliko|zag|role|vloga|news|novice|figures|values|podatki|inspect\w*|pregled\w*|story|history|tell|we|our|us|did|done|doing|work\w*|who|people|team|sources?|references?|projects?|compare|versus|vs|give|know|explain|describe|background|happened|was|been|also|both|all|any|some|more|info\w*|details?|ever|last|recent\w*|kaj|smo|naredili|delali)$/.test(w));
     const hits=findRecords(free), strong=hits.filter(h=>h.s>=1.5), place=placeRecords(free);
     const I={inspect:/\b(inspect\w*|pregled\w*|monitored|checked)\b/.test(n)||anyNear(tokens,FUZ.inspect),story:/\b(story|history|histor\w*|tell me|about|background|happened|happen|zgodilo|zgodb\w*|zgodovin\w*|explain|describe|opisi)\b/.test(n),
@@ -431,7 +437,7 @@
     const answer=(x,f)=>analyse(readSteps([x]),f);
     if(!r&&!type&&!free.length&&ctx.rec&&(attr||wantFix||wantModel||/\b(zag|role|news)\b/.test(n))) r=ctx.rec;
     if(!r&&!type&&!strong.length&&PAGE_ID&&DB.byId[PAGE_ID]&&(attr||wantFix||wantModel)) r=DB.byId[PAGE_ID];
-    if(/\bhow many|koliko\b/.test(n)&&type&&!r){ const c=DB.recs.filter(x=>type.match(x.type)).length; say(`The atlas has <b>${c}</b> ${esc(type.name)}.`); offer([['List them',()=>listType(type)],...menu().slice(0,2)]); return; }
+    if(/\bhow many|koliko\b/.test(n)&&type&&!r){ const c=DB.recs.filter(x=>type.match(x.type)).length; say(SLc()?`V atlasu ${zN(c)} te vrste (${esc(tN(type))}).`:`The atlas has <b>${c}</b> ${esc(type.name)}.`); offer([['List them',()=>listType(type)],...menu().slice(0,2)]); return; }
     if(wantFix&&!wantModel) return startUpdate(r,attr?'value':whatOf(n),attr?attr.name:null);
     if(wantModel) return wantFix?startUpdate(r,'model'):startModel(r);
     if(!r&&many.length===1&&(I.inspect||I.story||I.role||I.who||I.src||I.proj||attr)) r=many[0];
@@ -441,10 +447,10 @@
     if(r&&I.who) return answer(r,()=>people(r));
     if(r&&I.src) return answer(r,()=>sources(r));
     if(r&&I.proj) return answer(r,()=>projects(r));
-    if(r&&/\b(news|novice|novic)\b/.test(n)){ say('Recent news for <b>'+esc(r.name)+'</b> is on its page under Sources.'); offer([['Open its page',recUrl(r)+'#news','link'],...recChips(r).slice(1)]); return; }
+    if(r&&/\b(news|novice|novic)\b/.test(n)){ say(SLc()?'Zadnje novice o objektu <b>'+esc(nm(r))+'</b> so na njegovi strani pod Viri.':'Recent news for <b>'+esc(r.name)+'</b> is on its page under Sources.'); offer([['Open its page',recUrl(r)+'#news','link'],...recChips(r).slice(1)]); return; }
     if(r&&I.story) return answer(r,()=>story(r));
     if(r&&(I.role||/\b(zag|role|vloga|did)\b/.test(n))) return answer(r,()=>role(r));
-    if(r&&/\bnews|novice\b/.test(n)){ say('Recent news for <b>'+esc(r.name)+'</b> is on its page under Sources.'); offer([['Open its page',recUrl(r)+'#news','link'],...recChips(r).slice(1)]); return; }
+    if(r&&/\bnews|novice\b/.test(n)){ say(SLc()?'Zadnje novice o objektu <b>'+esc(nm(r))+'</b> so na njegovi strani pod Viri.':'Recent news for <b>'+esc(r.name)+'</b> is on its page under Sources.'); offer([['Open its page',recUrl(r)+'#news','link'],...recChips(r).slice(1)]); return; }
     if(r) return card(r);
     if(!r&&type&&I.inspect){ const rs=DB.recs.filter(x=>type.match(x.type)&&(x.p.zag_involvement_types||[]).some(k=>/inspection|monitoring|quality control/.test(k)));
       const sl=L()==='sl'; if(!rs.length){ say(sl?'Za to vrsto objektov viri ne navajajo pregledov ZAG.':`The sources record no ZAG inspection or monitoring work on ${esc(type.name)}.`); offer(menu()); return; }
