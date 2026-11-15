@@ -583,10 +583,11 @@
             const px=c+x*R*0.98; x<=-1?g.moveTo(px,y):g.lineTo(px,y); } g.stroke(); } };
       /* the waves in full colour on the white glass: violet and blue above, cyan and blue below */
       /* blue and yellow, the colours of the Ukrainian flag: blue above, yellow below */
-      g.shadowBlur=3*k; g.shadowColor='rgba(0,87,183,.45)';
-      band(24,-0.08,0.30,2.5,1.15,0.30,['#0057B7','#1E7BE0','#0A63C9','#0057B7'],0.62,0.6);
-      g.shadowColor='rgba(255,200,0,.6)';
-      band(16,0.10,0.16,3.4,-1.5,0.14,['#FFC400','#FFD700','#FFB800'],0.85,0.7);
+      /* brighter and blended: each band runs through the other colour at its ends, so blue and yellow mix softly */
+      g.shadowBlur=4*k; g.shadowColor='rgba(60,150,255,.45)';
+      band(24,-0.08,0.30,2.5,1.15,0.30,['#7CC4FF','#2F8CFF','#55B4FF','#9AD8C8','#FFE36E'],0.55,0.6);
+      g.shadowColor='rgba(255,220,90,.55)';
+      band(16,0.10,0.16,3.4,-1.5,0.14,['#6FC3FF','#FFE45C','#FFD23F','#FFE98A','#8CCBFF'],0.7,0.7);
       g.globalAlpha=1; g.shadowBlur=0;
       /* inner lavender glow at the edge, as in glass */
       gr=g.createRadialGradient(c,c,R*0.70,c,c,R); gr.addColorStop(0,'rgba(120,170,255,0)'); gr.addColorStop(1,'rgba(110,160,240,.32)'); g.fillStyle=gr; g.fillRect(0,0,S,S);

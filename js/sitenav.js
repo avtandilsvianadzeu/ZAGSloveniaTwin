@@ -110,11 +110,11 @@
     const f=document.createElement('footer'); f.className='sitefoot';
     f.innerHTML=`<div class="sf-in"><div class="sf-about"><b>DigitalZAG</b><p>Structures and sites in Slovenia where the work of ZAG, the Slovenian National Building and Civil Engineering Institute, is documented in published sources.</p></div>
       <nav aria-label="Pages"><h3>Pages</h3><a href="index.html">Map</a><a href="twin.html">Assets</a><a href="dashboard.html">Dashboard</a><a href="questions.html">Data quality</a><a href="add.html">Add object</a></nav>
-      <div><h3>Data</h3><a href="api.html">Data API, JSON, GeoJSON and CSV</a><span class="sf-ver">Data version <b id="sfVer">current</b></span><span>Every value links to the source it was read from.</span></div>
+      <div><h3>Data</h3><a href="api.html">Data API, JSON, GeoJSON and CSV</a><span>Every value links to the source it was read from.</span></div>
       <div><h3>Map data and licences</h3><span>OpenStreetMap contributors, ODbL</span><span>OpenFreeMap and OpenMapTiles</span><span>GURS cadastre and laser scanning, CC BY 4.0</span><span>Esri World Imagery, Mapzen terrain tiles</span></div>
-      <div><h3>Contact</h3><a id="sfMail" href="mailto:avtandil.svianadze@zag.si">avtandil.svianadze@zag.si</a><span>Corrections are welcome with a source link, or through ZAGBot.</span></div></div>`;
+      <div><h3>Contact</h3><a id="sfMail" href="mailto:avtandil.svianadze@zag.si">avtandil.svianadze@zag.si</a></div></div>
+      <p class="sf-thanks">Special thanks to Andrej Anžlin and Aleš Žnidarič for inspiration and guidance.</p>`;
     const after=document.querySelector('.tfoot'); (after?after.parentNode:document.body).insertBefore(f,after?after.nextSibling:null);
-    fetch('api/v1/index.json').then(r=>r.json()).then(j=>{ if(j&&j.generated){ const d=new Date(j.generated); document.getElementById('sfVer').textContent=d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}); } }).catch(()=>{});
     fetch('data/contacts.json').then(r=>r.json()).then(j=>{ const m=j&&(j.default||j.zagbot); if(m&&/^[^@\s]+@[^@\s]+$/.test(m)){ const a=document.getElementById('sfMail'); a.href='mailto:'+m; a.textContent=m; } }).catch(()=>{});
   };
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',footer); else footer();
