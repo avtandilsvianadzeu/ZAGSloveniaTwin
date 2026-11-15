@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="css/twin.css?v=66">
 <link rel="stylesheet" href="css/platform.css?v=66">
 <link rel="stylesheet" href="css/ios.css?v=66">
-<link rel="stylesheet" href="css/macos.css?v=77">
+<link rel="stylesheet" href="css/macos.css?v=78">
 <style>
 .intl{max-width:1240px;margin:0 auto;padding:0 20px 72px}
 .ihero{padding:30px 0 18px}
@@ -35,13 +35,13 @@
 .istats b{display:block;font-size:22px;color:#14213D;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 .istats span{font-size:12.5px;color:#5A6172}
 .iwrap{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:16px;align-items:start}
-.imap{position:relative;height:640px;border-radius:24px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25),0 0 0 .5px rgba(33,52,105,.2),0 18px 44px rgba(16,40,90,.22);background:#071430}
+.imap{position:relative;height:640px;border-radius:24px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),0 0 0 .5px rgba(33,52,105,.12),0 18px 44px rgba(16,40,90,.14);background:#E6F0FC}
 #imap{position:absolute;inset:0}
 .ichips{position:absolute;left:12px;top:12px;z-index:2;display:flex;flex-wrap:wrap;gap:6px}
 .ichips button{font:600 12.5px/1 Inter,system-ui,sans-serif;padding:8px 12px 8px 10px;border:0;border-radius:999px;cursor:pointer;color:#3A4257;display:flex;align-items:center;gap:7px;background:linear-gradient(160deg,rgba(255,255,255,.86),rgba(240,246,255,.72));-webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%);box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.12),0 4px 12px rgba(16,40,90,.1)}
 .ichips button[aria-pressed=false]{opacity:.55}
 .iviews{left:auto;right:56px}.iviews button[aria-pressed=false]{opacity:1;color:#5A6172}.iviews button[aria-pressed=true]{color:#0A5BC4}
-#imap{background:radial-gradient(1px 1px at 12% 18%,rgba(255,255,255,.8),transparent),radial-gradient(1px 1px at 78% 12%,rgba(255,255,255,.7),transparent),radial-gradient(1.5px 1.5px at 88% 64%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 24% 82%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 58% 92%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 6% 52%,rgba(255,255,255,.5),transparent),radial-gradient(1.5px 1.5px at 66% 28%,rgba(255,255,255,.45),transparent),radial-gradient(circle at 50% 46%,#13325F 0%,#0A1B38 55%,#050D1E 100%)}
+#imap{background:radial-gradient(circle at 50% 46%,#FFFFFF 0%,#EEF5FF 40%,#D7E7FB 100%)}
 .ichips i{width:10px;height:10px;border-radius:50%;display:inline-block}
 .ikey{position:absolute;left:12px;bottom:12px;z-index:2;padding:10px 12px;border-radius:16px;font-size:12px;color:#3A4257;background:linear-gradient(160deg,rgba(255,255,255,.84),rgba(240,246,255,.7));-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.12),0 6px 16px rgba(16,40,90,.1)}
 .ikey .ramp{display:flex;gap:2px;margin:6px 0 3px}.ikey .ramp span{width:30px;height:9px;border-radius:3px}
@@ -136,9 +136,9 @@
   const arc=(a,b)=>{ const r=Math.PI/180,[l1,p1]=[a[0]*r,a[1]*r],[l2,p2]=[b[0]*r,b[1]*r]; const d=2*Math.asin(Math.sqrt(Math.sin((p2-p1)/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin((l2-l1)/2)**2)); const o=[]; for(let i=0;i<=48;i++){ const f=i/48,A=Math.sin((1-f)*d)/Math.sin(d),B=Math.sin(f*d)/Math.sin(d); const x=A*Math.cos(p1)*Math.cos(l1)+B*Math.cos(p2)*Math.cos(l2),y=A*Math.cos(p1)*Math.sin(l1)+B*Math.cos(p2)*Math.sin(l2),z=A*Math.sin(p1)+B*Math.sin(p2); o.push([Math.atan2(y,x)/r,Math.atan2(z,Math.sqrt(x*x+y*y))/r]); } return o; };
   const box=$('imap'), fitZ=()=>{ const s=Math.min(box.clientWidth,box.clientHeight); return s<240?1.7:Math.max(.8,Math.min(3,Math.log2(s*.84*Math.PI/512))); };
   const VIEWS={world:()=>({center:[-8,22],zoom:fitZ()}),europe:()=>({center:[15,50],zoom:Math.max(2.4,fitZ()+1.6)})};
-  const map=new maplibregl.Map({container:'imap',style:{version:8,projection:{type:'globe'},sky:{'sky-color':'#0B1E3F','horizon-color':'#6FB2FF','fog-color':'#9CCBFF','sky-horizon-blend':.55,'horizon-fog-blend':.7,'fog-ground-blend':.85,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,4,.8,7,0]},
+  const map=new maplibregl.Map({container:'imap',style:{version:8,projection:{type:'globe'},sky:{'sky-color':'#DCEBFF','horizon-color':'#FFFFFF','fog-color':'#FFFFFF','sky-horizon-blend':.55,'horizon-fog-blend':.7,'fog-ground-blend':.85,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,4,.8,7,0]},
     sources:{earth:{type:'raster',tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],tileSize:256,maxzoom:8,attribution:'Imagery © Esri, Maxar, Earthstar Geographics'}},
-    layers:[{id:'bg',type:'background',paint:{'background-color':'#0E2A52'}},{id:'earth',type:'raster',source:'earth',paint:{'raster-saturation':-.15,'raster-contrast':.08,'raster-brightness-min':.06,'raster-fade-duration':200}}]},...VIEWS.world(),cooperativeGestures:true,attributionControl:{compact:true,customAttribution:L('Borders: © EuroGeographics for the administrative boundaries, Eurostat GISCO','Meje: © EuroGeographics za upravne meje, Eurostat GISCO')}});
+    layers:[{id:'bg',type:'background',paint:{'background-color':'#9FC3EA'}},{id:'earth',type:'raster',source:'earth',paint:{'raster-saturation':-.15,'raster-contrast':.08,'raster-brightness-min':.06,'raster-fade-duration':200}}]},...VIEWS.world(),cooperativeGestures:true,attributionControl:{compact:true,customAttribution:L('Borders: © EuroGeographics for the administrative boundaries, Eurostat GISCO','Meje: © EuroGeographics za upravne meje, Eurostat GISCO')}});
   window.__imap=map;   map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
   /* a camera move asked for while the globe is still settling is tried at once and again when the globe is idle, so it is never lost */
   const whenReady=f=>{ const c0=map.getCenter(), z0=map.getZoom(); try{ f(); }catch(_){} const still=()=>{ const c=map.getCenter(); return Math.abs(c.lng-c0.lng)<.01&&Math.abs(c.lat-c0.lat)<.01&&Math.abs(map.getZoom()-z0)<.01; };
@@ -149,7 +149,7 @@
   new ResizeObserver(refit).observe(box); map.once('load',()=>{ refit(); requestAnimationFrame(refit); [400,1200,2500].forEach(ms=>setTimeout(()=>{ if(view) refit(); },ms)); }); window.addEventListener('load',refit);
   map.on('load',()=>{
     const gr=[]; for(let lon=-180;lon<180;lon+=30){ const c=[]; for(let la=-80;la<=80;la+=4) c.push([lon,la]); gr.push({type:'Feature',properties:{},geometry:{type:'LineString',coordinates:c}}); } for(let la=-60;la<=60;la+=30){ const c=[]; for(let lon=-180;lon<=180;lon+=4) c.push([lon,la]); gr.push({type:'Feature',properties:{},geometry:{type:'LineString',coordinates:c}}); }
-    map.addSource('grat',{type:'geojson',data:{type:'FeatureCollection',features:gr}}); map.addLayer({id:'grat',type:'line',source:'grat',paint:{'line-color':'#BFDBFF','line-opacity':.16,'line-width':.6}});
+    map.addSource('grat',{type:'geojson',data:{type:'FeatureCollection',features:gr}}); map.addLayer({id:'grat',type:'line',source:'grat',paint:{'line-color':'#FFFFFF','line-opacity':.3,'line-width':.6}});
     map.addSource('w',{type:'geojson',data:W});
     map.addLayer({id:'cf',type:'fill',source:'w',paint:{'fill-color':['case',['==',['get','home'],1],'#8E8CFF',['==',['get','n'],0],'#000000',['step',['get','n'],RAMP[0][1],3,RAMP[1][1],10,RAMP[2][1],30,RAMP[3][1],60,RAMP[4][1]]],'fill-opacity':['case',['==',['get','n'],0],0,['==',['get','home'],1],.75,['interpolate',['linear'],['get','n'],1,.26,60,.52]]}});
     map.addLayer({id:'cl',type:'line',source:'w',paint:{'line-color':'#FFFFFF','line-opacity':['case',['>',['get','n'],0],.7,.28],'line-width':['interpolate',['linear'],['zoom'],1,.4,5,1.1]}});

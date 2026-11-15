@@ -976,3 +976,7 @@ html:has(body.sb-open),body.sb-open{background:linear-gradient(165deg,#BFD9FF 0%
 /* map credits open from a small asterisk, not an information or exclamation sign */
 .maplibregl-ctrl-attrib-button{background-image:none!important;display:flex!important;align-items:center;justify-content:center}
 .maplibregl-ctrl-attrib-button:before{content:"*";font:700 17px/1 Inter,system-ui,sans-serif;color:#1D1D1F;transform:translateY(3px)}
+/* bright glass for every segmented track: page menu, Previous and Next, view switches, record tabs */
+.pager,.seg,.sitenav,.mapfilter{background:linear-gradient(160deg,rgba(255,255,255,.9),rgba(236,244,255,.7))!important;-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.12),0 4px 12px rgba(16,40,90,.08)!important}
+.pager .tbtn,.seg button,.sitenav a{color:#1D1D1F!important}
+.pager .tbtn:hover{background:linear-gradient(160deg,#fff,rgba(234,243,255,.8))!important;box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.12),0 3px 8px rgba(16,40,90,.1)!important;color:#0A5BC4!important}
