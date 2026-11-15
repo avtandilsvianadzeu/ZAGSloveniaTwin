@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T11:34:43.611Z",
+ "updated": "2026-11-15T13:24:17.676Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -501,14 +501,6 @@
    }
   ],
   "cerkno_z": [
-   {
-    "title": "Smučišče Cerkno v nedeljo odpira še preostale proge, med novostmi otroški vrtec in sankališče",
-    "source": "robin.si",
-    "date": "2026-01-08T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOb0hkRDBscF9rQy1FRmgybDNCOEZWLTc2X0x1ZFl1Q0hoZWoyLVJyY0wxQXJZekYwSndUSUJHeldoUVJfeURSaUYtN0N5cllmRG9qR1FvZzkyRFVrSWdaN1gxMlIzVmJDODFLVl83SE10dFM0cF9IOFk3WDI1U3RyVG5tVFlicy1VeGZCRC16VFZnT1dVekRsdTRxWE5yYk80NzNIN2RUTF9vZFB6N1NPWHNGSklxRENOQ1o1QVU5NU9Za1lUV2h0Qg?oc=5",
-    "outlets": 1,
-    "match": "headline names \"cerkn\""
-   },
    {
     "title": "Smučišče Cerkno vabi na bele strmine: začenja se smučarska sezona 2025/26",
     "source": "Izvozniki.si",
