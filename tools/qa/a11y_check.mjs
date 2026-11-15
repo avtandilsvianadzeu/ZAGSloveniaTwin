@@ -22,7 +22,7 @@ const server = http.createServer((q, res) => {
   if (!f.startsWith(ROOT) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); }
   res.writeHead(200, { 'content-type': MIME[path.extname(f).slice(1)] || 'application/octet-stream' }); fs.createReadStream(f).pipe(res);
 }).listen(PORT);
-const PAGES = [['index.html', 8000], ['twin.html?id=tomacevo', 6000], ['dashboard.html', 3000], ['questions.html', 3000], ['api.html', 2500], ['international.html', 5000], ['latest.html', 2500], ['value.html', 2500], ['add.html', 3500]];
+const PAGES = [['index.html', 8000], ['twin.html?id=tomacevo', 6000], ['dashboard.html', 3000], ['questions.html', 3000], ['api.html', 2500], ['international.html', 5000], ['latest.html', 2500], ['value.html', 2500], ['radar.html', 2500], ['add.html', 3500]];
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
 const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'], proxy: proxy ? { server: proxy, bypass: 'localhost,127.0.0.1' } : undefined });
 const out = { checked: new Date().toISOString(), pages: {}, blocking: 0 };
