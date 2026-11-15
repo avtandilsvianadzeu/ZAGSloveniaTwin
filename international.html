@@ -209,12 +209,12 @@
     if(tab!=='structures'){ tab='structures'; draw(); }
     document.querySelectorAll('[data-s]').forEach(c=>c.classList.toggle('on',c.dataset.s===id));
     const el=document.querySelector(`[data-s="${id}"]`); if(el&&fromMap) el.scrollIntoView({block:'nearest',behavior:'smooth'});
-    view=null; map.flyTo({center:[s.lon,s.lat],zoom:Math.max(fitZ()+(s.iso==='SE'?1.6:2.4),2.6),speed:1.2}); document.querySelectorAll('#views button').forEach(b=>b.setAttribute('aria-pressed','false'));
+    view=null; const fly=()=>map.flyTo({center:[s.lon,s.lat],zoom:Math.max(fitZ()+(s.iso==='SE'?1.6:2.4),2.6),speed:1.2}); if(map.loaded()) fly(); else map.once('load',()=>setTimeout(fly,60)); document.querySelectorAll('#views button').forEach(b=>b.setAttribute('aria-pressed','false'));
   }
   function pickCountry(iso,fly){
     country=iso; if(map.getLayer('csel')) map.setFilter('csel',['==',['get','iso'],iso||'']);
     if(iso&&tab!=='links') tab='projects'; draw();
-    if(iso&&fly){ view=null; const f=W.features.find(x=>x.properties.iso===iso); if(f){ const b=new maplibregl.LngLatBounds(); const add=c=>Array.isArray(c[0])?c.forEach(add):b.extend(c); add(f.geometry.coordinates); map.fitBounds(b,{padding:60,maxZoom:3.6,duration:900}); } }
+    if(iso&&fly){ view=null; const f=W.features.find(x=>x.properties.iso===iso); if(f){ const b=new maplibregl.LngLatBounds(); const add=c=>Array.isArray(c[0])?c.forEach(add):b.extend(c); add(f.geometry.coordinates); const fit=()=>map.fitBounds(b,{padding:60,maxZoom:3.6,duration:900}); if(map.loaded()) fit(); else map.once('load',()=>setTimeout(fit,60)); } }
   }
   $('views').onclick=e=>{ const b=e.target.closest('button'); if(b) goView(b.dataset.v); };
   if(SL){ const vb=$('views').querySelectorAll('button'); vb[0].textContent='Svet'; vb[1].textContent='Evropa'; }
