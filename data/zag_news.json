@@ -1,6 +1,6 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-15T18:32:41.641Z",
+ "updated": "2026-11-15T20:18:42.241Z",
  "items": {
   "sl": [
    {
@@ -266,12 +266,23 @@
     "date": "2026-08-10T07:00:00.000Z",
     "match": "headline names Zavod za gradbeništvo Slovenije",
     "records": []
+   },
+   {
+    "title": "Vloga ZAG-a in Slovenije",
+    "outlet": "Si21",
+    "domain": "si21.com",
+    "kind": "not reviewed",
+    "reviewed": false,
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5HVkRBVXpnQUs4cnQ0ZWlra2RSN2YwVnlKRkduYldRRlJRQUhsTmNac1NhQjJYeEo2alpWRkZnYmNpc3lVOGY0TkZoTWlFcWxhTTR5MkJFSmtXV2tiM2NXWDFfXzByODluLWMw?oc=5",
+    "date": "2026-02-25T08:00:00.000Z",
+    "match": "headline names ZAG",
+    "records": []
    }
   ]
  },
  "media_check": {
   "queries": 5,
-  "kept": 3,
+  "kept": 4,
   "reviewed": 3,
   "dropped": 0
  }
