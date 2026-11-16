@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T04:58:56.483Z",
+ "updated": "2026-11-16T07:04:59.856Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -340,6 +340,14 @@
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNelFxTEJrVkJqNTV4U3VSeGRrR1VQNjhHdXVTUGRmVGNfdGtGWDdzQzBDWkNGUllLMmpYZ3NyU3hsNHVCdjJRVk9WcDJydlZycFJENzBPeFBTSW5oTzBYOHR2WGZJYWpsYU5yUkJ4TXhpNUw2OVJZdmRrYW9ZZVI4LWF1WDdnb2Jt?oc=5",
     "outlets": 1,
     "match": "headline names \"markovec\""
+   },
+   {
+    "title": "Predor Markovec ponovno odprt",
+    "source": "OBALAplus",
+    "date": "2026-04-30T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VVWhOYklWT2dTYVZCdVR0NmhheWlPc1c4R2pLcm1ZMDZsSnh0VHF4a2d3X0hYeEJEQnFxQ2tncnRRQ0tKQUlwRG5zSGpEUzJLcnFwRUJfamg5a0V5QklXMQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"markovec\""
    }
   ],
   "pletovarje": [
@@ -422,40 +430,6 @@
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQa0l1WTdQN0prZEpXTEpQc0VVQXE4a3gwU0t6Q2QtbDNUdFpfNUM1emdpX0pURW81b3hCbnZCQV92Q2t3SFZLUGxGdjVPU1pCUWxYM2FkVXNnOHBIanpsWnhwQU1UU1dpbjlsN0Q2TGxmMDBQNUR0b3ZWa1k5SE1NZlVkclYyRDBKX2MtcFJPR05qSnpySjNUTEJ6cTZoamRCaWx0ektwb3c2NjFVUzc4R1NZZnFiVi13OExv?oc=5",
     "outlets": 1,
     "match": "headline names \"velik\""
-   }
-  ],
-  "grad_vzpenjaca": [
-   {
-    "title": "Podrobnosti prenove vzpenjače na Ljubljanski grad: kje naj bi vozila druga kabina?",
-    "source": "Dnevnik",
-    "date": "2026-05-25T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMVZTekhPazBsckJfRGowMi1CTno0SkdST2EyMFVkOXdyZ0ZFRWpLR29BZGtxalBaTDZaSm1vUXgwc1NHcXk3ay1EbHVmUE0wTHV2RzNiUkltMEU0S1VTdjQ5ZXdpX2pfcnNLNlpneVV6V1VyMHJHR1A4eFE0OUpZQ0ZkalktVS1lY3hEUTRsSzhFQkk?oc=5",
-    "outlets": 1,
-    "match": "headline names \"vzpenjac\""
-   },
-   {
-    "title": "Janković napovedal drugi tir vzpenjače. Kaj se bo res gradilo?",
-    "source": "Svet24.si",
-    "date": "2026-05-19T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWWl1NWVQdGhZWm9WUnJjMjNud014Wm1nQ0tnS2tlUmdfX0VtZlJGZHpqcnZ6aTktUHF4eDNDbGJnd2MtYUZHVGlxekhjRzkxMHM1d1NmNjF5aFg0MTlIeGQzN0FWWWQ0M3VnMjY3Q2JTd19uY08tUzFGck5ROV9aVDdoOVdYVWRsZDNENEkzR1oxS3BkMlc5SkhPOA?oc=5",
-    "outlets": 1,
-    "match": "headline names \"vzpenjac\""
-   },
-   {
-    "title": "Vzpenjača na Ljubljanski grad od danes ne obratuje",
-    "source": "Ljubljanainfo.com",
-    "date": "2026-03-02T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUDFST2xRMjJic0d0UEE3eEpFaW10d2FFMlJvT0RWVjllOFFoTWtJTnZaMmRZMVJkaXFfdUVxWk91cGg1U3pOTi1PMFQ5eWhSYmFYOWFwT0k3eW1rWWxHS002RElta3BBX1c4QTJoQkI4OFg1ZHRXOVdVaDY5V04yUU1PcWFSN3FFREhpWUFZejVHb3cwa01HVWJTWG1NWUk?oc=5",
-    "outlets": 1,
-    "match": "headline names \"vzpenjac\""
-   },
-   {
-    "title": "Milijone voženj in 20 let pozneje: vzpenjača marca nekaj dni ne bo delovala",
-    "source": "Dnevnik",
-    "date": "2026-02-19T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMlk4bTRQSHJyeEx6emdpMXhOSkZOT2pTbnhoT0RFZ0hCWUZIUkpINWdWUVJhazdYeEFuTUtmUk9HNkFIUERxS3AzSkNlaWRsNkdyU29MOVIzWUxOY0dMbFhnQVc1a3IwY0NsRXpBcVpuaEFtZXlkN0NqTndkM3BOWk5EODBNZFg5eUJzMnh3c21PRHZYNmJXTU9mdE5zSjBYX2lleW9vTVNsaDBJOENsNw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"vzpenjac\""
    }
   ],
   "kranjskagora_z": [
