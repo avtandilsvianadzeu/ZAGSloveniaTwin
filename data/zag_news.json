@@ -1,8 +1,15 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-16T11:13:23.564Z",
+ "updated": "2026-11-16T11:35:07.164Z",
  "items": {
   "sl": [
+   {
+    "title": "FRISSBE_Grajenje evropske odličnosti v požarni varnosti: Nova ERA raziskovanja požarov",
+    "url": "https://www.zag.si/frissbe_evropska-odlicnost-pozarna-varnost-zakljucek-projekta/",
+    "date": "2026-11-16T11:23:36.000Z",
+    "summary": "Od leta 2021 do konca letošnjega leta na Zavoda za gradbeništvo Slovenje, ZAG poteka evropski projekt FRISSBE (Fire-safe sustainable built environment), v okviru katerega smo pomembno krepili raziskovalno odličnost in mednarodno prepoznavnost tako našega",
+    "category": "Aktualno"
+   },
    {
     "title": "ZAG gosti uvodno srečanje evropskega projekta ReConstruct4CE",
     "url": "https://www.zag.si/zag-gosti-uvodno-srecanje-evropskega-projekta-reconstruct4ce/",
@@ -67,13 +74,6 @@
     "url": "https://www.zag.si/prometna-infrastruktura-5-0-izzivi-in-priloznosti/",
     "date": "2026-10-13T14:15:30.000Z",
     "summary": "Vabljeni na strokovni predavanji o trajnostnem in pametnem upravljanju prometne infrastrukture, ki bosta v ponedeljek, 19. oktobra 2026, od 13.30 do 15.00 v dvorani v 5. nadstropju ZAG-a. Predavatelja bosta Gerardo W. Flintsch, Ph.D., Virginia Tech in Dr.",
-    "category": "Aktualno"
-   },
-   {
-    "title": "Slovo Tanje Antić",
-    "url": "https://www.zag.si/slovo-tanje-antic/",
-    "date": "2026-10-07T11:03:26.000Z",
-    "summary": "Poslovila se je Tanja Antić iz Laboratorija za kovine, korozijo in protikorozijsko zaščito. Pogreb bo v četrtek, 8.10. ob 12.30 iz mrliške vežice 5 na Novih Žalah. Ohranili jo bomo v lepem spominu.",
     "category": "Aktualno"
    }
   ],
@@ -151,6 +151,14 @@
   ],
   "latest": [
    {
+    "title": "FRISSBE_Grajenje evropske odličnosti v požarni varnosti: Nova ERA raziskovanja požarov",
+    "url": "https://www.zag.si/frissbe_evropska-odlicnost-pozarna-varnost-zakljucek-projekta/",
+    "date": "2026-11-16T11:23:36.000Z",
+    "summary": "Od leta 2021 do konca letošnjega leta na Zavoda za gradbeništvo Slovenje, ZAG poteka evropski projekt FRISSBE (Fire-safe sustainable built environment), v okviru katerega smo pomembno krepili raziskovalno odličnost in mednarodno prepoznavnost tako našega",
+    "category": "Aktualno",
+    "lang": "sl"
+   },
+   {
     "title": "ZAG gosti uvodno srečanje evropskega projekta ReConstruct4CE",
     "url": "https://www.zag.si/zag-gosti-uvodno-srecanje-evropskega-projekta-reconstruct4ce/",
     "date": "2026-11-12T07:58:51.000Z",
@@ -221,14 +229,6 @@
     "summary": "Vabljeni na strokovni predavanji o trajnostnem in pametnem upravljanju prometne infrastrukture, ki bosta v ponedeljek, 19. oktobra 2026, od 13.30 do 15.00 v dvorani v 5. nadstropju ZAG-a. Predavatelja bosta Gerardo W. Flintsch, Ph.D., Virginia Tech in Dr.",
     "category": "Aktualno",
     "lang": "sl"
-   },
-   {
-    "title": "Slovo Tanje Antić",
-    "url": "https://www.zag.si/slovo-tanje-antic/",
-    "date": "2026-10-07T11:03:26.000Z",
-    "summary": "Poslovila se je Tanja Antić iz Laboratorija za kovine, korozijo in protikorozijsko zaščito. Pogreb bo v četrtek, 8.10. ob 12.30 iz mrliške vežice 5 na Novih Žalah. Ohranili jo bomo v lepem spominu.",
-    "category": "Aktualno",
-    "lang": "sl"
    }
   ],
   "media": [
@@ -266,13 +266,24 @@
     "date": "2026-08-10T07:00:00.000Z",
     "match": "headline names Zavod za gradbeništvo Slovenije",
     "records": []
+   },
+   {
+    "title": "Požarni laboratorij Zavoda za gradbeništvo Slovenije postal raziskovalna postaja Evropske vesoljske agencije",
+    "outlet": "Nova24TV",
+    "domain": "nova24tv.si",
+    "kind": "news",
+    "reviewed": true,
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZUY0Um43NkF3MUJDNk96bDk0MWZxNkgyekg5ekZ5d0Y3ZDVKalE3MVg1SWJrbW94LUx4V2tLcFl1TUItVS1OMkw4SVZJaUFIVktNaWswVjJmMWtYa0IwTXZDNnBfd0R2TWlhX0xka3MzNnVmTEVtN2NuMURXRzExV3A1UDZROFREeWMyVmwxVmNNR3p5U1IyX3dVaFFTRm5US2NDbVhHQm9PdjhWSkljcWU4dHFGdUFYbVZzSnpIVTlDNzdkdFE4cFR0WEY?oc=5",
+    "date": "2026-02-26T08:00:00.000Z",
+    "match": "headline names Zavod za gradbeništvo Slovenije",
+    "records": []
    }
   ]
  },
  "media_check": {
   "queries": 5,
-  "kept": 3,
-  "reviewed": 3,
+  "kept": 4,
+  "reviewed": 4,
   "dropped": 0
  }
 }
