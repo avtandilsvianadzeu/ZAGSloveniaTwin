@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T03:56:58.152Z",
+ "updated": "2026-11-16T04:58:56.483Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -246,14 +246,6 @@
     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOSW5Id1h6LXVSU1RBSTJwLXd3N1NsVG1Wc0RDUUhpaFNNSXQ3bUVGYk5BcktWT1hVUEZLdUM1QWlyWGR1ZWFoYXROSC1tTzF4S3pYVzRIakpYUGxUVUNIWllLTF9kWHl3UFFqMU9EMjNnTXJzd0g2MTF0TWQ1T0hLdGdDLXhhbXM1QU4xaDIxRXJsQmVtMFUzX0xobE1pYk91Slh2VldNV2ptN29vaUlHQlhJcnhJd0t2YUdGRjlkek4xaks3LUtfcnZjZkNwOVY3MjFHNVYtQTZuaEtKWW9v?oc=5",
     "outlets": 1,
     "match": "headline names \"trojan\""
-   },
-   {
-    "title": "Med vikendom bodo zaprti trojanski predori",
-    "source": "Svet24.si",
-    "date": "2026-09-04T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPXzFTXzlGUWRpa2ZVVUx1YkgxQWNSTk1vY2Z2VWVocFlsdTVuZDhkYS1jTHVZVkpwWmk0bDlkQlYtSUl0MTNQYTlhMEp5WkN5ci04MnZ3ZUdtZnp5MUkwdnFEYnY4WVdoWE95V3Z6bC1YNzBPVXlyVDJkRk5wb2RDNm5IRUZyWDF1b01PSFJ6aEtnbHIxTmZN?oc=5",
-    "outlets": 1,
-    "match": "headline names \"trojan\""
    }
   ],
   "podmilj": [
@@ -346,14 +338,6 @@
     "source": "Primorske novice",
     "date": "2026-05-01T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNelFxTEJrVkJqNTV4U3VSeGRrR1VQNjhHdXVTUGRmVGNfdGtGWDdzQzBDWkNGUllLMmpYZ3NyU3hsNHVCdjJRVk9WcDJydlZycFJENzBPeFBTSW5oTzBYOHR2WGZJYWpsYU5yUkJ4TXhpNUw2OVJZdmRrYW9ZZVI4LWF1WDdnb2Jt?oc=5",
-    "outlets": 1,
-    "match": "headline names \"markovec\""
-   },
-   {
-    "title": "Predor Markovec ponovno odprt",
-    "source": "OBALAplus",
-    "date": "2026-04-30T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VVWhOYklWT2dTYVZCdVR0NmhheWlPc1c4R2pLcm1ZMDZsSnh0VHF4a2d3X0hYeEJEQnFxQ2tncnRRQ0tKQUlwRG5zSGpEUzJLcnFwRUJfamg5a0V5QklXMQ?oc=5",
     "outlets": 1,
     "match": "headline names \"markovec\""
    }
