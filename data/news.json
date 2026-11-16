@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T14:21:06.142Z",
+ "updated": "2026-11-16T15:23:18.620Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -106,6 +106,14 @@
     "source": "Primorske novice",
     "date": "2026-08-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVJxdUFqWEc0c2x4OExmcER6RkJUS0xIcHhFV2poOE5FaEFiQ0drazBCbUhvVTNtM3VaTmR4bXBVV0p0c2hVSFFUTWE4aU1INktKWm5xaEVrY1JhWnByR2Ntb0tQcC14cDNXWUlTNnJMdFJsc2ZNVTNpRVJOcHQ4VlFjTVJVZEVha2xMUld4S2JISi0wOF9EMjFzcEtzMFVNOHVISXlSWlpFdDBkY2J3QVNIYXFLaDBHc1l5T2Jpa1RxcGE4d1VUVXVUOFFQODByUFVHQQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"innorenew\""
+   },
+   {
+    "title": "InnoRenew CoE, UP IAM organizira konferenco IRIC2026",
+    "source": "Primorske novice",
+    "date": "2026-06-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
     "outlets": 1,
     "match": "headline names \"innorenew\""
    },
@@ -234,14 +242,6 @@
     "source": "domžalec.si",
     "date": "2026-02-19T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVzhkRDFGNldfS0pjWkEwbFdaQWh4WmdYSGkwZE5sbUgzYzNWS2s3Nm12UWJ4eEtLeDlXbGxyUUVHdTFPNzB5TzF4Y1FwYlllaWZlMEZVR0dtU0ZmUzdWRS1lQ3ZQdHVHQ2VfYWdKdWZMdk1CVkE5TGJicFliNm1EU1hYTnB6R1pqUGw0Yw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"sentvid\""
-   },
-   {
-    "title": "Kolaps na cestah: od centra Ljubljane do predora Šentvid ena ura vožnje (FOTO & VIDEO)",
-    "source": "N1 Slovenija",
-    "date": "2026-01-06T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYkpKWmNFZnpmM0E3aFdxN0ZtaGZQMkpVUnZ2Y2UybWozYWpQSU9fbmVwN2JJal85bTVwdnVMWHFIdUY3cGlsbjN4MzdaZVdiMkdGQlFucEY3d2lGRkp3MFljUjlwMURFbnN3REZPOU85V1p2RWJWV2lrZmJlc3J4SFR0c3VlMzgwOFBRcU50RGRLamUzTHdkTnp0NkdxZw?oc=5",
     "outlets": 1,
     "match": "headline names \"sentvid\""
    }
