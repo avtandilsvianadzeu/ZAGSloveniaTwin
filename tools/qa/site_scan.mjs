@@ -32,7 +32,7 @@ const out = { checked: new Date().toISOString(), pages: [], blocking: 0, warning
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
 const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'], proxy: proxy ? { server: proxy, bypass: 'localhost,127.0.0.1' } : undefined });
 async function scan(pg, lang, viewport) {
-  const ctx = await b.newContext({ viewport, deviceScaleFactor: 1, isMobile: viewport.width < 500, hasTouch: viewport.width < 500, ignoreHTTPSErrors: true });
+  const ctx = await b.newContext({ viewport, deviceScaleFactor: 1, isMobile: viewport.width < 500, hasTouch: viewport.width < 500, ignoreHTTPSErrors: true, serviceWorkers: 'block' });
   const p = await ctx.newPage(); const r = { page: pg, lang, width: viewport.width, errors: [], failed: [], symbols: [], english: [], overflow: false, noAlt: 0 };
   const NET = /AJAXError|Failed to fetch|net::|Failed to load resource|WebGL|GPU|swiftshader|NetworkError/i;
   r.network = [];

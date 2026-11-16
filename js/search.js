@@ -10,8 +10,11 @@ function matchLocal(q){
     const name=norm([p.name_en,p.name_sl,p.id].join(' ')).replace(/[^a-z0-9 ]+/g,' ');
     const hay=name+' '+norm([p.municipality,p.locality,p.address,p.structure&&p.structure.crosses,p.structure&&p.structure.carries,p.zag_role,tw.summary].join(' ')).replace(/[^a-z0-9 ]+/g,' ');
     if(!words.length||!words.every(w=>hay.includes(w))) continue;
-    hits.push([f,words.every(w=>name.includes(w))?0:1]); }
-  hits.sort((a,b)=>a[1]-b[1]).forEach(([f])=>{ const g=GROUPS[f.properties.object_type]; (g==='buildings'?out.buildings:g==='bridges'?out.bridges:out.projects).push(f); });
+    const place=norm([p.municipality,p.locality,p.address].join(' ')).replace(/[^a-z0-9 ]+/g,' ');
+    hits.push([f,words.every(w=>name.includes(w))?0:words.every(w=>(name+' '+place).includes(w))?1:2]); }
+  /* a place typed alone ("Ljubljana") lists what is there, not records that only mention it in their text */
+  const best=Math.min(9,...hits.map(h=>h[1])); const keep=words.length===1&&best<2?hits.filter(h=>h[1]<2):hits;
+  keep.sort((a,b)=>a[1]-b[1]).forEach(([f])=>{ const g=GROUPS[f.properties.object_type]; (g==='buildings'?out.buildings:g==='bridges'?out.bridges:out.projects).push(f); });
   return out;
 }
 /* coordinates typed in the box: decimal degrees (either order) or Slovenian D96/TM easting and northing */

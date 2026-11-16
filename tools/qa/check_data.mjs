@@ -32,6 +32,9 @@ for (const f of ['data.js', 'data/twins.json', 'data/zag_projects.geojson', 'dat
 }
 for (const [id, t] of Object.entries(twins)) for (const s of t.specs || []) if (/\b(cost|budget|investment|contract value|price|funding)\b/i.test(s.label)) add('block', `${id} spec "${s.label}"`, 'money value on the site');
 
+/* 1c. offline: every page of the site is saved by sw.js, so a new page also opens without internet */
+try { const sw = read('sw.js'); for (const f of fs.readdirSync(ROOT).filter(f => f.endsWith('.html'))) if (!sw.includes(`'${f}'`)) add('block', 'sw.js', `page ${f} is not in the offline list (PAGES)`); } catch (_) { add('block', 'sw.js', 'missing, the site would not work offline'); }
+
 /* 2. working notes that belong in the editorial field, not on the site */
 const NOTE = /\b(read (again )?(on )?\d{1,2} \w+ 20\d\d|could not be (opened|read|fetched)|not re-?(read|verified)|earlier note|an earlier|in this check|this check|not checked|NOT re|stored point|the record (says|text|wording|calls)|record says|unverified here|did not give its text|we |our )/i;
 for (const [id, t] of Object.entries(twins)) {

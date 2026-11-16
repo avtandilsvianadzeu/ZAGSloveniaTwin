@@ -65,11 +65,14 @@ const CASES = [
   ['kje je ZAG delal v tujini', 'Outside Slovenia'],
   ['latest news from ZAG', 'The latest on zag.si'],
   ['mostovi v Ljubljani', 'Tomačev', 'Potresno tveganje'],
+  ['are you AI', 'rule based assistant'],
+  ['does it work offline', 'after one visit with internet'],
 ];
 
 const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
 const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'], proxy: proxy ? { server: proxy, bypass: 'localhost,127.0.0.1' } : undefined });
-const p = await b.newPage({ viewport: { width: 1300, height: 850 } });
+/* the offline layer (sw.js) is blocked here, so the request routing below sees every request */
+const p = await (await b.newContext({ viewport: { width: 1300, height: 850 }, serviceWorkers: 'block' })).newPage();
 const errors = []; p.on('pageerror', e => errors.push(e.message.slice(0, 160)));
 /* imagery and fonts are not needed to answer; the map style and vector tiles are, for the map commands */
 await p.route(/fonts\.(googleapis|gstatic)\.com|arcgisonline|server\.arcgis|level2\.si|amazonaws|\.pbf(\?|$)|\/\d+\/\d+\/\d+(\.\w+)?(\?|$)/, r => r.abort());

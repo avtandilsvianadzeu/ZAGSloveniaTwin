@@ -1018,3 +1018,6 @@ html:not(:has(#map)):not(:has(aside.insp)) body{padding-bottom:96px}
 #plabel.mini{width:24px;max-width:24px!important;height:24px;box-sizing:border-box;padding:0!important}
 #plabel.mini::before{content:"*"!important;font:700 17px/1 Inter,system-ui,sans-serif!important;font-style:normal!important;color:#0A5BC4!important;padding-top:5px}
 .pane-model:hover #plabel.mini{width:auto;height:auto;padding:5px 10px!important;color:#1D1D1F!important}
+/* offline: the LIVE badge turns grey and says OFFLINE */
+.livebadge.off i{background:#8E8E93!important;box-shadow:none!important;animation:none!important}
+.livebadge.off b{color:#6E6E73!important}

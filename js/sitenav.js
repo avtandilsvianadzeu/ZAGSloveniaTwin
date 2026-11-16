@@ -48,6 +48,9 @@
   const live=document.createElement('button'); live.type='button'; live.className='livebadge'; live.setAttribute('aria-haspopup','dialog'); live.setAttribute('aria-expanded','false');
   live.innerHTML='<i></i><b>LIVE</b><span><em></em><time></time></span>'; const right=head.querySelector('.tnav,.hright'); right?head.insertBefore(live,right):head.appendChild(live);
   let upd=0, zn=null;
+  /* without internet the badge says so; the saved copy of the atlas and ZAGBot keep working */
+  const net=()=>{ const off=navigator.onLine===false, sl=window.LANG==='sl'; live.classList.toggle('off',off); live.querySelector('b').textContent=off?(sl?'BREZ POVEZAVE':'OFFLINE'):(sl?'V ŽIVO':'LIVE'); };
+  window.addEventListener('online',net); window.addEventListener('offline',net); net();
   async function tick(){ if(document.hidden||navigator.onLine===false) return; try{ const r=await fetch('data/news.json?t='+Date.now(),{cache:'no-store'}); if(r.ok){ const j=await r.json(); const t=Date.parse(j.updated||''); if(t){ if(upd&&t>upd){ live.classList.remove('flash'); void live.offsetWidth; live.classList.add('flash'); } upd=t; } } }catch(_){}
     try{ const r=await fetch('data/zag_news.json?t='+Math.floor(Date.now()/600000),{cache:'no-store'}); if(r.ok) zn=await r.json(); }catch(_){} paint(); }
   const TZ={timeZone:'Europe/Ljubljana'};
@@ -152,3 +155,5 @@
     setTimeout(()=>document.querySelectorAll('.maplibregl-ctrl-attrib.maplibregl-compact-show').forEach(a=>{ if(!a.dataset.userOpen){ a.classList.remove('maplibregl-compact-show'); a.removeAttribute('open'); } }),2500);
     document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('.maplibregl-ctrl-attrib-button'); if(b) b.parentElement.dataset.userOpen='1'; },true); };
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go(); })();
+/* offline: after one visit with a connection, the pages, the data, ZAGBot and the 3D models open without internet (sw.js) */
+if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost')){ window.addEventListener('load',()=>{ try{ navigator.serviceWorker.register('sw.js').catch(()=>{}); }catch(_){} }); }

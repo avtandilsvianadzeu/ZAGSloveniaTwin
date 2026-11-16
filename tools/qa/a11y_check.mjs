@@ -28,7 +28,7 @@ const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsaf
 const out = { checked: new Date().toISOString(), pages: {}, blocking: 0 };
 for (const [u, wait] of PAGES) {
   for (const [lang, w] of [['en', 1440], ['sl', 1440], ['en', 1024]]) {
-    const ctx = await b.newContext({ viewport: { width: w, height: 860 }, ignoreHTTPSErrors: true });
+    const ctx = await b.newContext({ viewport: { width: w, height: 860 }, ignoreHTTPSErrors: true, serviceWorkers: 'block' });
     await ctx.addInitScript(() => { try { sessionStorage.setItem('zag_splash', '1'); localStorage.setItem('zb_teaser_day', new Date().toISOString().slice(0, 10)); } catch (_) {} });
     const p = await ctx.newPage();
     await p.route(/fonts\.(googleapis|gstatic)\.com/, r => r.abort());
