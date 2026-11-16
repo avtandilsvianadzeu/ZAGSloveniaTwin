@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T01:52:52.618Z",
+ "updated": "2026-11-16T03:56:58.152Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -348,6 +348,14 @@
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNelFxTEJrVkJqNTV4U3VSeGRrR1VQNjhHdXVTUGRmVGNfdGtGWDdzQzBDWkNGUllLMmpYZ3NyU3hsNHVCdjJRVk9WcDJydlZycFJENzBPeFBTSW5oTzBYOHR2WGZJYWpsYU5yUkJ4TXhpNUw2OVJZdmRrYW9ZZVI4LWF1WDdnb2Jt?oc=5",
     "outlets": 1,
     "match": "headline names \"markovec\""
+   },
+   {
+    "title": "Predor Markovec ponovno odprt",
+    "source": "OBALAplus",
+    "date": "2026-04-30T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VVWhOYklWT2dTYVZCdVR0NmhheWlPc1c4R2pLcm1ZMDZsSnh0VHF4a2d3X0hYeEJEQnFxQ2tncnRRQ0tKQUlwRG5zSGpEUzJLcnFwRUJfamg5a0V5QklXMQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"markovec\""
    }
   ],
   "pletovarje": [
@@ -356,7 +364,7 @@
     "source": "Novice.si",
     "date": "2026-11-09T13:24:12.000Z",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lbHpPU19KN2pDai05V0l3NW9TNF9CSlFxalRpTG1mZ3Jfa2hOZkNNVFVRYUZqS0k2OWZUYkdsel9tdHlMX3N0dTZuODlBUXRKNGFrLVVfOU5ERS1XdGt3RHY2VGVHMzB5ZjVwTnB4WUt5Skd3?oc=5",
-    "outlets": 9,
+    "outlets": 8,
     "match": "headline names \"pletovarj\""
    },
    {
