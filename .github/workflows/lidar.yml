@@ -1,0 +1,36 @@
+# Laser scan for the records whose 3D model has drawn outlines: downloads the GURS laser scanning sheets (CLSS, NDMP)
+# here on GitHub, writes data/lidar/<id>.json and rebuilds data/lidar_massing.json for the main map. Runs by hand.
+name: Laser scan
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'Record ids, separated by spaces (empty: every record with outlines and no laser scan yet)'
+        required: false
+        default: ''
+permissions:
+  contents: write
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Read the laser scan
+        run: |
+          pip install -q numpy rasterio pyproj
+          python tools/lidar_from_outlines.py ${{ github.event.inputs.ids }}
+      - name: Buildings for the main map
+        run: node tools/build_lidar_massing.js
+      - name: Save
+        run: |
+          git config user.name "avtandilsvianadzeu"
+          git config user.email "avtandil.svianadze@zag.si"
+          git add data/lidar data/lidar_massing.json
+          git diff --cached --quiet || { git commit -q -m "Laser scan for more records"; git pull --rebase -q; git push -q; }
