@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T13:19:02.986Z",
+ "updated": "2026-11-16T14:21:06.142Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -106,14 +106,6 @@
     "source": "Primorske novice",
     "date": "2026-08-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVJxdUFqWEc0c2x4OExmcER6RkJUS0xIcHhFV2poOE5FaEFiQ0drazBCbUhvVTNtM3VaTmR4bXBVV0p0c2hVSFFUTWE4aU1INktKWm5xaEVrY1JhWnByR2Ntb0tQcC14cDNXWUlTNnJMdFJsc2ZNVTNpRVJOcHQ4VlFjTVJVZEVha2xMUld4S2JISi0wOF9EMjFzcEtzMFVNOHVISXlSWlpFdDBkY2J3QVNIYXFLaDBHc1l5T2Jpa1RxcGE4d1VUVXVUOFFQODByUFVHQQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"innorenew\""
-   },
-   {
-    "title": "InnoRenew CoE, UP IAM organizira konferenco IRIC2026",
-    "source": "Primorske novice",
-    "date": "2026-06-18T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
     "outlets": 1,
     "match": "headline names \"innorenew\""
    },
@@ -266,11 +258,11 @@
   ],
   "podmilj": [
    {
-    "title": "Pozor! Na štajerki v predoru Podmilj ovira na cesti",
-    "source": "Slovenske novice",
+    "title": "Pozor, obvoz! Štajerska avtocesta je v predoru Podmilj proti Mariboru zaprta",
+    "source": "Ptujinfo.com",
     "date": "2025-11-18T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOaEhFd3VpYmJtZVp3U2RlaVRYekI3R3ZXb0FTbmJkTXZUR3B1WmJSUXlWczNSdERRXy0waGV5M185bTBtNjNLeHJJbTA4REhGb016a0h6TFR3ekJCMUkzVlJtRERNckN2Y2RXTzFPWDN0bFJhaWFmMmtUNzR5RzJ1bERvSDUzejlKeW5aeG41WVZqeWN2eVE?oc=5",
-    "outlets": 1,
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVkJzMlAwbk0xNG9oOHpTTTVHNW9LY3oyS0NsYlIzdW1OQXBMVmlISjNoTHliS0hBbVZkQjMxLURhWU9ISVFLQ3VpektpWmpuUHFuTUVrdEJJczNrekRaanFPN1pvcjl3ekdLQkl3eXRKUEVxQ3JYZUJpaV9qOUJoVFF6LW10eHJ5ODZtRmw3bTl0VWU4MHJMcHZNbEdyWk9ObVZWbG00dk4tbm5adjRYUmVrLU1PUWM1?oc=5",
+    "outlets": 2,
     "match": "headline names \"podmilj\""
    }
   ],
@@ -472,6 +464,14 @@
     "source": "Slovenske novice",
     "date": "2026-07-04T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kranjsk\""
+   },
+   {
+    "title": "V Kranjski Gori odprtje sedežnice do vrha Vitranca",
+    "source": "tv3m.si",
+    "date": "2026-06-25T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfa21KSXdmdDJuOC1mVzdpeG01N0JnTWctLTJqcVpuSnZYbEc5c1laSG1LTkxYWUZublFVTG1la2pIR1E1Uk9xUVpCZVgwYUJpWlRWdkFRMXZqOGJTSmg3ZHRacmVkXy1fdmJqQkpmNjZHOGc2RURDT2J3a3ZQeVU?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
    }
