@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T12:17:03.303Z",
+ "updated": "2026-11-16T13:19:02.986Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -72,14 +72,6 @@
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhiUk5DMU9IdmZzN0s1SFZzOHlYTm5rcHlobGttQ29uMjgzVERyM1VjLUdpTTIwNFQ0dDY3Yk9SeDZNTkNiaGQ5UVh1Uy1CRlk4YTZwdWNCZUJkcmVFWnVSNUlremJxQ2NObDNMbnBtdDF0V0tyeHgyWkZ4MkpiMmlxSExWN3ZLcmw5ZWd5d3Q4dGNnc0RhOU5KRVdDMXRWNTZzcFZDT2huU0xSZXRma2hmcDM?oc=5",
     "outlets": 1,
     "match": "headline names \"zavod za gradbenistvo\""
-   },
-   {
-    "title": "Požarni laboratorij Zavoda za gradbeništvo Slovenije postal raziskovalna postaja Evropske vesoljske agencije",
-    "source": "Nova24TV",
-    "date": "2026-02-26T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZUY0Um43NkF3MUJDNk96bDk0MWZxNkgyekg5ekZ5d0Y3ZDVKalE3MVg1SWJrbW94LUx4V2tLcFl1TUItVS1OMkw4SVZJaUFIVktNaWswVjJmMWtYa0IwTXZDNnBfd0R2TWlhX0xka3MzNnVmTEVtN2NuMURXRzExV3A1UDZROFREeWMyVmwxVmNNR3p5U1IyX3dVaFFTRm5US2NDbVhHQm9PdjhWSkljcWU4dHFGdUFYbVZzSnpIVTlDNzdkdFE4cFR0WEY?oc=5",
-    "outlets": 1,
-    "match": "headline names \"zavoda za gradbenistvo\""
    }
   ],
   "zag_logatec": [
