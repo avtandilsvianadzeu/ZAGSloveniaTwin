@@ -5,6 +5,9 @@ function syncView(){
   document.querySelectorAll('#bgSeg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.bg===base));
   if($('bSat')){ $('bSat').setAttribute('aria-pressed',base==='sat'); $('bSat').title=base==='sat'?'Satellite imagery on. Click for the street map':'Satellite imagery. Click again for the street map'; }
   if($('b3d')){ $('b3d').setAttribute('aria-pressed',is3d); $('b3d').title=is3d?'3D view: relief and buildings. Click for a flat view':'Flat view. Click for 3D relief and buildings'; }
+  /* the two view switches say which view is on, under their icons */
+  { const sl=window.LANG==='sl', L=(b,t)=>{ const e=$(b)&&$(b).querySelector('.vlbl'); if(e) e.textContent=t; };
+    L('bSat',base==='sat'?(sl?'Satelit':'Satellite'):base==='dof'?(sl?'Ortofoto':'Orthophoto'):(sl?'Zemljevid':'Map')); L('b3d',is3d?'3D':(sl?'Ravno':'Flat')); }
   document.querySelectorAll('input[name=lyBg]').forEach(r=>r.checked=r.value===base);
   document.querySelectorAll('input[name=lyViz]').forEach(r=>r.checked=(r.value==='3d')===is3d);
   $('lyBld').checked=bldOn();
@@ -53,3 +56,12 @@ document.addEventListener('keydown',e=>{ if(e.key!=='Escape') return; const t=e.
 const fitHeader=()=>document.documentElement.style.setProperty('--hdr',document.querySelector('.hdr').offsetHeight+'px');
 fitHeader();
 let rz; addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{fitHeader();if(map)map.resize();},150);});
+
+/* short hints beside the map buttons: on hover or keyboard focus, and all together for a few seconds on the first visit */
+(function(){ const box=document.querySelector('.vctl'); if(!box) return; const sl=window.LANG==='sl';
+  const TIP={b3d:sl?'3D relief in stavbe, ali ravni pogled':'3D relief and buildings, or flat',bSat:sl?'Satelit ali zemljevid':'Satellite or map',zin:sl?'Povečaj':'Zoom in',zout:sl?'Pomanjšaj':'Zoom out',
+    rotL:sl?'Zavrti levo':'Rotate left',rotR:sl?'Zavrti desno':'Rotate right',tiltU:sl?'Bolj poševno':'Tilt up',tiltD:sl?'Bolj od zgoraj':'Tilt down',north:sl?'Sever gor':'North up',zhome:sl?'Vsa Slovenija':'All of Slovenia',bMeasure:sl?'Izmeri razdaljo':'Measure a distance'};
+  for(const [id,t] of Object.entries(TIP)){ const b=document.getElementById(id); if(b) b.dataset.tip=t; }
+  let seen=false; try{ seen=localStorage.getItem('zag_vtips')==='1'; }catch(_){}
+  if(!seen&&innerWidth>700){ setTimeout(()=>{ box.classList.add('showtips'); setTimeout(()=>box.classList.remove('showtips'),5000); try{ localStorage.setItem('zag_vtips','1'); }catch(_){} },2500); }
+})();
