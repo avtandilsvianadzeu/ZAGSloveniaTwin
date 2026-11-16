@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T20:35:47.495Z",
+ "updated": "2026-11-16T20:37:50.121Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -68,20 +68,20 @@
   ],
   "zag": [
    {
-    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
-    "source": "MojaObčina.si",
-    "date": "2026-10-15T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
-    "outlets": 1,
-    "match": "headline names \"zag\""
-   },
-   {
     "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
     "source": "Večer",
     "date": "2026-10-08T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhiUk5DMU9IdmZzN0s1SFZzOHlYTm5rcHlobGttQ29uMjgzVERyM1VjLUdpTTIwNFQ0dDY3Yk9SeDZNTkNiaGQ5UVh1Uy1CRlk4YTZwdWNCZUJkcmVFWnVSNUlremJxQ2NObDNMbnBtdDF0V0tyeHgyWkZ4MkpiMmlxSExWN3ZLcmw5ZWd5d3Q4dGNnc0RhOU5KRVdDMXRWNTZzcFZDT2huU0xSZXRma2hmcDM?oc=5",
     "outlets": 1,
     "match": "headline names \"zavod za gradbenistvo\""
+   },
+   {
+    "title": "Požarni laboratorij Zavoda za gradbeništvo Slovenije postal raziskovalna postaja Evropske vesoljske agencije",
+    "source": "Nova24TV",
+    "date": "2026-02-26T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZUY0Um43NkF3MUJDNk96bDk0MWZxNkgyekg5ekZ5d0Y3ZDVKalE3MVg1SWJrbW94LUx4V2tLcFl1TUItVS1OMkw4SVZJaUFIVktNaWswVjJmMWtYa0IwTXZDNnBfd0R2TWlhX0xka3MzNnVmTEVtN2NuMURXRzExV3A1UDZROFREeWMyVmwxVmNNR3p5U1IyX3dVaFFTRm5US2NDbVhHQm9PdjhWSkljcWU4dHFGdUFYbVZzSnpIVTlDNzdkdFE4cFR0WEY?oc=5",
+    "outlets": 1,
+    "match": "headline names \"zavoda za gradbenistvo\""
    }
   ],
   "zag_logatec": [
@@ -506,14 +506,6 @@
   ],
   "golte": [
    {
-    "title": "Na Golteh pripravljeni na zimsko sezono",
-    "source": "Naš čas",
-    "date": "2026-10-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQlFYamY3dzV4cExtbUJrVnJYRERjVXVyT0ZGZ05Pci1UN1NGaXp1NEpLdWpLZzczZlVDNUtUTlI0ZkFEWVNqZXl1Z21ndjkwaUdrWjE5bzhaWTZFWWE4eWx5Qmp4WjBsNXBOQWpVc3Rmb21XaDdPVDV2VG1TYV9ZMUFyZzRGQQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"golte\""
-   },
-   {
     "title": "First minute smučanje na Golteh: dopoldne na smučeh, popoldne v savni",
     "source": "Vandraj",
     "date": "2026-08-18T07:00:00.000Z",
@@ -608,6 +600,14 @@
     "source": "telegraf.si",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Močno tresenje v Breginjah: Potres odmeval po Zgornjem Posočju",
+    "source": "telegraf.si",
+    "date": "2026-08-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSFVhZ2ZxbFdZLUFiOHlKWDF1OGwxdlZkXzhVbFZwN0lPUktCNVFwaDFNekFKWmlmdTFrRUZhN0RxV1ctMFFybm5HZmNSZTdjMlh6YVNQX3hkcDFiWkhleS12OERJOEIyaExKVnpqdFNuYzZqQ0FGclQwbGJmdjlQVG50b1hnWVVhc0E?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    },
