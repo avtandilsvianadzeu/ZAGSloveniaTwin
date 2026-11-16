@@ -8,6 +8,7 @@ function syncView(){
   /* the two view switches say which view is on, under their icons */
   { const sl=window.LANG==='sl', L=(b,t)=>{ const e=$(b)&&$(b).querySelector('.vlbl'); if(e) e.textContent=t; };
     L('bSat',base==='sat'?(sl?'Satelit':'Satellite'):base==='dof'?(sl?'Ortofoto':'Orthophoto'):(sl?'Zemljevid':'Map')); L('b3d',is3d?'3D':(sl?'Ravno':'Flat')); }
+    const box=document.querySelector('.vctl'); if(box){ box.classList.add('lbl-on'); clearTimeout(window.__vlblT); window.__vlblT=setTimeout(()=>box.classList.remove('lbl-on'),5000); }
   document.querySelectorAll('input[name=lyBg]').forEach(r=>r.checked=r.value===base);
   document.querySelectorAll('input[name=lyViz]').forEach(r=>r.checked=(r.value==='3d')===is3d);
   $('lyBld').checked=bldOn();

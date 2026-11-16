@@ -1021,12 +1021,6 @@ html:not(:has(#map)):not(:has(aside.insp)) body{padding-bottom:96px}
 /* offline: the LIVE badge turns grey and says OFFLINE */
 .livebadge.off i{background:#8E8E93!important;box-shadow:none!important;animation:none!important}
 .livebadge.off b{color:#6E6E73!important}
-/* view switches: icon with the current view written under it, set apart from the zoom and rotate buttons */
-.vctl #b3d,.vctl #bSat{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:1px;height:auto!important;min-height:46px;padding:5px 0 4px!important}
-.vctl .vlbl{font:600 9.5px/1.1 Inter,system-ui,sans-serif;letter-spacing:.01em;color:#3A3A3C;white-space:nowrap}
-.vctl #b3d[aria-pressed=true] .vlbl,.vctl #bSat[aria-pressed=true] .vlbl{color:#fff}
-.vctl #bSat{border-bottom:6px solid rgba(33,52,105,.06)!important}
-@media (max-width:480px){.vctl #b3d,.vctl #bSat{width:40px!important}.vctl .vlbl{font-size:8.5px}}
 /* hints beside the map buttons: a small bright glass label to the left */
 .vctl{overflow:visible!important}
 .vctl button{position:relative}
@@ -1034,5 +1028,18 @@ html:not(:has(#map)):not(:has(aside.insp)) body{padding-bottom:96px}
 .vctl button[data-tip]:hover::after,.vctl button[data-tip]:focus-visible::after,.vctl.showtips button[data-tip]::after{opacity:1;transform:translateY(-50%)}
 @media (hover:none),(max-width:700px){.vctl button[data-tip]::after{display:none}}
 @media (prefers-reduced-motion:reduce){.vctl button[data-tip]::after{transition:none}}
-.vctl .vlbl{font-size:8.6px!important;letter-spacing:-.01em;max-width:100%;overflow:hidden;text-overflow:clip}
-.vctl #b3d,.vctl #bSat{padding-left:1px!important;padding-right:1px!important}
+/* map control stack: one rounded glass pill, each button a rounded key inside it, no hard lines */
+.vctl{padding:5px!important;gap:3px;border-radius:24px!important;border:0!important;overflow:visible!important;
+  background:linear-gradient(160deg,rgba(255,255,255,.82),rgba(236,244,255,.62))!important;-webkit-backdrop-filter:blur(22px) saturate(180%)!important;backdrop-filter:blur(22px) saturate(180%)!important;
+  box-shadow:inset 1px 1px 0 rgba(255,255,255,.95),inset -1px -1px 0 rgba(255,255,255,.35),0 0 0 .5px rgba(33,52,105,.14),0 10px 26px rgba(16,40,90,.14)!important}
+.vctl button{width:38px!important;height:36px!important;border:0!important;border-radius:14px!important;margin:0!important;background:transparent!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0!important;transition:background .18s,box-shadow .18s,height .25s}
+.vctl button:hover{background:rgba(255,255,255,.85)!important;box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(33,52,105,.1),0 2px 6px rgba(16,40,90,.08)!important}
+.vctl button[aria-pressed=true]{background:linear-gradient(160deg,#3A9BFF,#0A6CF0)!important;color:#fff!important;box-shadow:inset 1px 1px 0 rgba(255,255,255,.45),0 3px 10px rgba(10,108,240,.35)!important}
+.vctl #bSat{margin-bottom:5px!important}
+.vctl #bSat::before{content:"";position:absolute;left:8px;right:8px;bottom:-5px;height:1px;background:rgba(33,52,105,.12);pointer-events:none}
+/* the view names under the two switches show for 5 seconds after the page opens or after a switch, then fold away */
+.vctl .vlbl{font:600 8.6px/1 Inter,system-ui,sans-serif;letter-spacing:-.01em;color:#3A3A3C;white-space:nowrap;max-height:0;opacity:0;overflow:hidden;transition:max-height .25s,opacity .25s}
+.vctl button[aria-pressed=true] .vlbl{color:#fff}
+.vctl.lbl-on #b3d,.vctl.lbl-on #bSat{height:46px!important}
+.vctl.lbl-on .vlbl{max-height:12px;opacity:1}
+@media (prefers-reduced-motion:reduce){.vctl button,.vctl .vlbl{transition:none}}
