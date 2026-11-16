@@ -1034,3 +1034,5 @@ html:not(:has(#map)):not(:has(aside.insp)) body{padding-bottom:96px}
 .vctl button[data-tip]:hover::after,.vctl button[data-tip]:focus-visible::after,.vctl.showtips button[data-tip]::after{opacity:1;transform:translateY(-50%)}
 @media (hover:none),(max-width:700px){.vctl button[data-tip]::after{display:none}}
 @media (prefers-reduced-motion:reduce){.vctl button[data-tip]::after{transition:none}}
+.vctl .vlbl{font-size:8.6px!important;letter-spacing:-.01em;max-width:100%;overflow:hidden;text-overflow:clip}
+.vctl #b3d,.vctl #bSat{padding-left:1px!important;padding-right:1px!important}
