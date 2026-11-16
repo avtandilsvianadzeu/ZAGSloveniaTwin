@@ -64,8 +64,13 @@ function setMode(k){ A.mode=k; for(const [id,v] of [['gLine','line'],['gPoly','p
 function setPts(pts,fit){ A.pts=pts; syncText(); preview(); if(fit&&A.map&&pts.length){ const b=pts.reduce((bb,c)=>bb.extend(c),new maplibregl.LngLatBounds(pts[0],pts[0])); A.map.fitBounds(b,{padding:60,maxZoom:17,duration:0}); } }
 
 /* ---------- my objects ---------- */
+/* colleagues send an object to the shared map through the object inbox (server/inbox.js); without its address the button stays hidden */
+let OBJ_INBOX=''; fetch('data/inbox.json').then(r=>r.ok?r.json():{}).then(j=>{ if(j&&/^https:\/\/[^\s]+$/.test(j.objects||'')){ OBJ_INBOX=j.objects.replace(/\/+$/,''); if(typeof listMine==='function') listMine(); } }).catch(()=>{});
 function store(fc){ try{ localStorage.setItem(USER_KEY,JSON.stringify(fc)); return true; }catch(_){ say('This browser did not allow saving. Download the file to keep the object.','bad'); return false; } }
-function listMine(){ const fc=localUser(), box=$('mine'); box.innerHTML=fc.features.length?fc.features.map(f=>{ const p=f.properties; return `<div class="it"><b>${T(p.name_en||p.name)}</b><span class="tag warn">not verified</span>${p.user&&p.user.ai?'<span class="tag warn">AI draft</span>':''}<span class="tag">${esc(p.object_type)}</span><a class="tbtn" href="twin.html?id=${encodeURIComponent(p.id)}">Open the twin</a><button class="tbtn danger" type="button" data-rm="${esc(p.id)}">Remove</button></div>`; }).join(''):'<p class="note">No objects yet.</p>';
+function listMine(){ const fc=localUser(), box=$('mine'); box.innerHTML=fc.features.length?fc.features.map(f=>{ const p=f.properties; return `<div class="it"><b>${T(p.name_en||p.name)}</b><span class="tag warn">not verified</span>${p.user&&p.user.ai?'<span class="tag warn">AI draft</span>':''}<span class="tag">${esc(p.object_type)}</span><a class="tbtn" href="twin.html?id=${encodeURIComponent(p.id)}">Open the twin</a>${OBJ_INBOX?`<button class="tbtn solid" type="button" data-send="${esc(p.id)}">Send to the ZAG map</button>`:''}<button class="tbtn danger" type="button" data-rm="${esc(p.id)}">Remove</button></div>`; }).join(''):'<p class="note">No objects yet.</p>';
+  box.querySelectorAll('[data-send]').forEach(b=>b.onclick=()=>{ const f=localUser().features.find(x=>x.properties.id===b.dataset.send); if(!f) return;
+    const enc=btoa(unescape(encodeURIComponent(JSON.stringify(f)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+    window.open(OBJ_INBOX+'/submit#'+enc,'_blank','noopener'); say('A new tab opens. Sign in with your ZAG address, check the object and send it. It appears on the map after the DigitalZAG team has checked it.'); });
   box.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{ const fc2=localUser(); fc2.features=fc2.features.filter(f=>f.properties.id!==b.dataset.rm); store(fc2); listMine(); say('Object removed from this browser.'); }); }
 
 /* ---------- wiring ---------- */

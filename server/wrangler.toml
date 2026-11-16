@@ -1,0 +1,16 @@
+# DigitalZAG object inbox, deployed by .github/workflows/inbox.yml (Cloudflare free plan).
+name = "digitalzag-inbox"
+main = "inbox.js"
+compatibility_date = "2024-11-01"
+workers_dev = true
+
+[vars]
+ACCESS_TEAM = ""          # the team name, as in <team>.cloudflareaccess.com
+ACCESS_AUD = ""           # Application Audience (AUD) tag of the Access application
+OWNER_EMAIL = "avtandil.svianadze@zag.si"
+REPO = "avtandilsvianadzeu/ZAGSloveniaTwin"
+SITE = "https://avtandilsvianadzeu.github.io/ZAGSloveniaTwin/"
+
+[[kv_namespaces]]
+binding = "QUEUE"
+id = "KV_ID"              # filled in by the deploy workflow
