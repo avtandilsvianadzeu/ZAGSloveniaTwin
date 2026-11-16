@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T20:37:50.121Z",
+ "updated": "2026-11-16T21:39:57.212Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,16 +10,6 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
-   }
-  ],
-  "nm_brv": [
-   {
-    "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
-    "source": "Svet24.si",
-    "date": "2025-12-10T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
-    "outlets": 1,
-    "match": "headline names \"stukljev\""
    }
   ],
   "strunjan": [
@@ -68,20 +58,20 @@
   ],
   "zag": [
    {
+    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
+    "source": "MojaObčina.si",
+    "date": "2026-10-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
+    "outlets": 1,
+    "match": "headline names \"zag\""
+   },
+   {
     "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
     "source": "Večer",
     "date": "2026-10-08T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhiUk5DMU9IdmZzN0s1SFZzOHlYTm5rcHlobGttQ29uMjgzVERyM1VjLUdpTTIwNFQ0dDY3Yk9SeDZNTkNiaGQ5UVh1Uy1CRlk4YTZwdWNCZUJkcmVFWnVSNUlremJxQ2NObDNMbnBtdDF0V0tyeHgyWkZ4MkpiMmlxSExWN3ZLcmw5ZWd5d3Q4dGNnc0RhOU5KRVdDMXRWNTZzcFZDT2huU0xSZXRma2hmcDM?oc=5",
     "outlets": 1,
     "match": "headline names \"zavod za gradbenistvo\""
-   },
-   {
-    "title": "Požarni laboratorij Zavoda za gradbeništvo Slovenije postal raziskovalna postaja Evropske vesoljske agencije",
-    "source": "Nova24TV",
-    "date": "2026-02-26T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZUY0Um43NkF3MUJDNk96bDk0MWZxNkgyekg5ekZ5d0Y3ZDVKalE3MVg1SWJrbW94LUx4V2tLcFl1TUItVS1OMkw4SVZJaUFIVktNaWswVjJmMWtYa0IwTXZDNnBfd0R2TWlhX0xka3MzNnVmTEVtN2NuMURXRzExV3A1UDZROFREeWMyVmwxVmNNR3p5U1IyX3dVaFFTRm5US2NDbVhHQm9PdjhWSkljcWU4dHFGdUFYbVZzSnpIVTlDNzdkdFE4cFR0WEY?oc=5",
-    "outlets": 1,
-    "match": "headline names \"zavoda za gradbenistvo\""
    }
   ],
   "zag_logatec": [
@@ -600,14 +590,6 @@
     "source": "telegraf.si",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Močno tresenje v Breginjah: Potres odmeval po Zgornjem Posočju",
-    "source": "telegraf.si",
-    "date": "2026-08-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSFVhZ2ZxbFdZLUFiOHlKWDF1OGwxdlZkXzhVbFZwN0lPUktCNVFwaDFNekFKWmlmdTFrRUZhN0RxV1ctMFFybm5HZmNSZTdjMlh6YVNQX3hkcDFiWkhleS12OERJOEIyaExKVnpqdFNuYzZqQ0FGclQwbGJmdjlQVG50b1hnWVVhc0E?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    },
