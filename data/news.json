@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T00:50:51.662Z",
+ "updated": "2026-11-16T01:52:52.618Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -272,7 +272,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 3,
+    "outlets": 4,
     "match": "headline names \"kastelec\""
    },
    {
