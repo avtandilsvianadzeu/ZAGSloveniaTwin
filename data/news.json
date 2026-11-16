@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T11:15:03.268Z",
+ "updated": "2026-11-16T12:17:03.303Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -528,14 +528,6 @@
     "match": "headline names \"golte\""
    },
    {
-    "title": "Nihalka na Golte bo z jutrišnjim dnem znova obratovala",
-    "source": "Svet24.si",
-    "date": "2026-03-18T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVU1Idmh1UmFJbVgtckhlbFZZNGRsdlZPLVZIejZybnItSW1ET2d2bEFwdzcycXoxZDlRUzV0QUd6aWw2d0lpakhJcWhzOHVvdEd4RU94WlpVTkNENzlOOUtzelAzWHAwZXJtMUtBd2lrbkl6MWhMb29SanJOa3FjQ3ItYXItVTZJeFRzb2d3?oc=5",
-    "outlets": 1,
-    "match": "headline names \"golte\""
-   },
-   {
     "title": "Zakaj nihalka na Golte še vedno ne obratuje?",
     "source": "Svet24.si",
     "date": "2026-01-15T08:00:00.000Z",
@@ -642,18 +634,18 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "50 let od rušilnega potresa: \"Strehe so se rušile, zemlja valovila, skale kotalile, živali norele\"",
-    "source": "rtvslo.si",
-    "date": "2026-05-06T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
     "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
     "source": "Svet24.si",
     "date": "2026-05-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "50 let od rušilnega potresa: \"Strehe so se rušile, zemlja valovila, skale kotalile, živali norele\"",
+    "source": "rtvslo.si",
+    "date": "2026-05-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    }
