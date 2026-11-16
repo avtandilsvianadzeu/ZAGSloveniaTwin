@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T17:29:30.154Z",
+ "updated": "2026-11-16T18:31:33.074Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -268,11 +268,11 @@
   ],
   "podmilj": [
    {
-    "title": "Pozor, obvoz! Štajerska avtocesta je v predoru Podmilj proti Mariboru zaprta",
-    "source": "Ptujinfo.com",
+    "title": "Pozor! Na štajerki v predoru Podmilj ovira na cesti",
+    "source": "Slovenske novice",
     "date": "2025-11-18T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVkJzMlAwbk0xNG9oOHpTTTVHNW9LY3oyS0NsYlIzdW1OQXBMVmlISjNoTHliS0hBbVZkQjMxLURhWU9ISVFLQ3VpektpWmpuUHFuTUVrdEJJczNrekRaanFPN1pvcjl3ekdLQkl3eXRKUEVxQ3JYZUJpaV9qOUJoVFF6LW10eHJ5ODZtRmw3bTl0VWU4MHJMcHZNbEdyWk9ObVZWbG00dk4tbm5adjRYUmVrLU1PUWM1?oc=5",
-    "outlets": 2,
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOaEhFd3VpYmJtZVp3U2RlaVRYekI3R3ZXb0FTbmJkTXZUR3B1WmJSUXlWczNSdERRXy0waGV5M185bTBtNjNLeHJJbTA4REhGb016a0h6TFR3ekJCMUkzVlJtRERNckN2Y2RXTzFPWDN0bFJhaWFmMmtUNzR5RzJ1bERvSDUzejlKeW5aeG41WVZqeWN2eVE?oc=5",
+    "outlets": 1,
     "match": "headline names \"podmilj\""
    }
   ],
@@ -474,14 +474,6 @@
     "source": "Slovenske novice",
     "date": "2026-07-04T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kranjsk\""
-   },
-   {
-    "title": "V Kranjski Gori odprtje sedežnice do vrha Vitranca",
-    "source": "tv3m.si",
-    "date": "2026-06-25T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfa21KSXdmdDJuOC1mVzdpeG01N0JnTWctLTJqcVpuSnZYbEc5c1laSG1LTkxYWUZublFVTG1la2pIR1E1Uk9xUVpCZVgwYUJpWlRWdkFRMXZqOGJTSmg3ZHRacmVkXy1fdmJqQkpmNjZHOGc2RURDT2J3a3ZQeVU?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
    }
