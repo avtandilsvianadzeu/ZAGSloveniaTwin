@@ -1,6 +1,6 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-16T07:25:03.968Z",
+ "updated": "2026-11-16T07:45:12.486Z",
  "items": {
   "sl": [
    {
@@ -266,13 +266,24 @@
     "date": "2026-08-10T07:00:00.000Z",
     "match": "headline names Zavod za gradbeništvo Slovenije",
     "records": []
+   },
+   {
+    "title": "Požarni laboratorij Zavoda za gradbeništvo Slovenije postal raziskovalna postaja Evropske vesoljske agencije",
+    "outlet": "Nova24TV",
+    "domain": "nova24tv.si",
+    "kind": "news",
+    "reviewed": true,
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZUY0Um43NkF3MUJDNk96bDk0MWZxNkgyekg5ekZ5d0Y3ZDVKalE3MVg1SWJrbW94LUx4V2tLcFl1TUItVS1OMkw4SVZJaUFIVktNaWswVjJmMWtYa0IwTXZDNnBfd0R2TWlhX0xka3MzNnVmTEVtN2NuMURXRzExV3A1UDZROFREeWMyVmwxVmNNR3p5U1IyX3dVaFFTRm5US2NDbVhHQm9PdjhWSkljcWU4dHFGdUFYbVZzSnpIVTlDNzdkdFE4cFR0WEY?oc=5",
+    "date": "2026-02-26T08:00:00.000Z",
+    "match": "headline names Zavod za gradbeništvo Slovenije",
+    "records": []
    }
   ]
  },
  "media_check": {
   "queries": 5,
-  "kept": 3,
-  "reviewed": 3,
+  "kept": 4,
+  "reviewed": 4,
   "dropped": 0
  }
 }
