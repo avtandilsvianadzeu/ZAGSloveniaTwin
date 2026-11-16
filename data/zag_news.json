@@ -1,6 +1,6 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-16T11:55:15.015Z",
+ "updated": "2026-11-16T12:37:06.882Z",
  "items": {
   "sl": [
    {
@@ -79,6 +79,13 @@
   ],
   "en": [
    {
+    "title": "FRISSBE_Building European Excellence in Fire Safety: A New ERA in Fire Research",
+    "url": "https://www.zag.si/en/frissbe-european-excellence-fire-safety-project-conclusion/",
+    "date": "2026-11-16T11:23:36.000Z",
+    "summary": "From 2021 to the end of this year the Slovenian National Building and Civil Engineering Institute (ZAG) has been carrying out the European project FRISSBE (Fire-safe sustainable built environment), through which we have significantly strengthened research",
+    "category": "Latest news"
+   },
+   {
     "title": "Our Researchers once again ranked among the “TOP 2% SCIENTISTS”",
     "url": "https://www.zag.si/en/zag-researchers-the-worlds-best-scientists/",
     "date": "2026-10-27T12:29:55.000Z",
@@ -140,23 +147,16 @@
     "date": "2026-07-15T09:39:10.000Z",
     "summary": "The Slovenian National Building and Civil Engineering Institute (ZAG) regularly organizes ZAG Guest Lectures, aimed at experts, researchers and the interested public. This time we invite you to a lecture entitled “Supplementary Cementitious Materials (SCMs)",
     "category": "Latest news"
-   },
-   {
-    "title": "ZAG Guest Lecture: From Industrial Waste to Sand",
-    "url": "https://www.zag.si/en/lecture-on-industrial-waste-sand-construction/",
-    "date": "2026-07-06T12:12:11.000Z",
-    "summary": "The Slovenian National Building and Civil Engineering Institute (ZAG) regularly organizes Guest Lectures ZAG, which are intended for experts, researchers, and the interested general public. This time, we invite you to a lecture titled \"Development of Fly",
-    "category": "Latest news"
    }
   ],
   "latest": [
    {
-    "title": "FRISSBE_Grajenje evropske odličnosti v požarni varnosti: Nova ERA raziskovanja požarov",
-    "url": "https://www.zag.si/frissbe_evropska-odlicnost-pozarna-varnost-zakljucek-projekta/",
+    "title": "FRISSBE_Building European Excellence in Fire Safety: A New ERA in Fire Research",
+    "url": "https://www.zag.si/en/frissbe-european-excellence-fire-safety-project-conclusion/",
     "date": "2026-11-16T11:23:36.000Z",
-    "summary": "Od leta 2021 do konca letošnjega leta na Zavoda za gradbeništvo Slovenje, ZAG poteka evropski projekt FRISSBE (Fire-safe sustainable built environment), v okviru katerega smo pomembno krepili raziskovalno odličnost in mednarodno prepoznavnost tako našega",
-    "category": "Aktualno",
-    "lang": "sl"
+    "summary": "From 2021 to the end of this year the Slovenian National Building and Civil Engineering Institute (ZAG) has been carrying out the European project FRISSBE (Fire-safe sustainable built environment), through which we have significantly strengthened research",
+    "category": "Latest news",
+    "lang": "en"
    },
    {
     "title": "ZAG gosti uvodno srečanje evropskega projekta ReConstruct4CE",
