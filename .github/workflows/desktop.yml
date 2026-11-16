@@ -61,6 +61,6 @@ jobs:
           name: DigitalZAG ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || steps.v.outputs.tag }}
           body: |
             DigitalZAG as a desktop application. The pages, data, 3D models and ZAGBot are inside the application and work offline; map tiles and live news come from the internet.
-            Windows: download the installer (ZAG-Digital-Atlas-...-win-x64.exe) or the portable .exe, which runs without installing. Windows SmartScreen may ask once: choose More info, then Run anyway. The application is not signed with a certificate.
+            Windows: download the installer (the file ending in win-x64.exe) or the portable .exe, which runs without installing. Windows SmartScreen may ask once: choose More info, then Run anyway. The application is not signed with a certificate.
             macOS: the .dmg. Linux: the .AppImage.
           files: out/**/*
