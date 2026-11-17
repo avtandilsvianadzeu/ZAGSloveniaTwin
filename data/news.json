@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T05:58:28.135Z",
+ "updated": "2026-11-17T07:00:29.340Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -606,6 +606,14 @@
     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMzdnakZLblNpMU5uQlAtd3pBaHBtdVlROVBfbVdRdGE1TWpyT1BWVWR0X2ptZFhjOWRxUm1yNEJhWG9TU2pyMWxXOHBpT0hsa2d6NllrNzBQSFBvYWlIekdkU1A0UFhmaEh4bEpSbEF5NmNXYWQ5RDBhX1V6VFQtOThJamwyemFGWVHSAY8BQVVfeXFMUHpGaHg4Z09Fb2c1VF9ncWRrZDdHRVVFellkUk85UEZDc25iWWRQSGtQMnNUc3E1Z3I4ZVcyNkJZcGN1a19yVTd1RzgwWFBrNFFDZldxX0VVUWg0ZnU1R0g2LTd1SW03RUttWkQ3dkVCLTB2WlhXdjJINExBdXRURE1aRFhwT015YjFad1BrVWs?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
+   },
+   {
+    "title": "Potres v bližini Ravene je bilo čutiti tudi v Novi Gorici",
+    "source": "Radio Robin",
+    "date": "2026-01-13T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWGdWb0d3eFVOTEpsbnZxSHA5amRKeXVsRk1FSWJOWDRRRFhVUm1BQzBUUkNlVmg3VHgwdFVQNmtIUHpVVFBwaU1BRHY1MEp5Uk1MeHp6WTE4UEhkREc0ZUFOenBKajk0NFJEOWVmWXp3clQ5Q0F4c2RNbkxPdWtManEyZEIyeUlpVEk4SkN3bzJ1Ty14ODhqS3Fn?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
    }
   ],
   "soca_quake": [
@@ -643,7 +651,7 @@
    },
    {
     "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
-    "source": "Svet24",
+    "source": "Svet24.si",
     "date": "2026-05-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
     "outlets": 1,
