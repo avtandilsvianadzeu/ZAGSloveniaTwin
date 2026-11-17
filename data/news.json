@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T02:52:25.084Z",
+ "updated": "2026-11-17T03:54:27.645Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -72,6 +72,14 @@
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhiUk5DMU9IdmZzN0s1SFZzOHlYTm5rcHlobGttQ29uMjgzVERyM1VjLUdpTTIwNFQ0dDY3Yk9SeDZNTkNiaGQ5UVh1Uy1CRlk4YTZwdWNCZUJkcmVFWnVSNUlremJxQ2NObDNMbnBtdDF0V0tyeHgyWkZ4MkpiMmlxSExWN3ZLcmw5ZWd5d3Q4dGNnc0RhOU5KRVdDMXRWNTZzcFZDT2huU0xSZXRma2hmcDM?oc=5",
     "outlets": 1,
     "match": "headline names \"zavod za gradbenistvo\""
+   },
+   {
+    "title": "Požarni laboratorij Zavoda za gradbeništvo Slovenije postal raziskovalna postaja Evropske vesoljske agencije",
+    "source": "Nova24TV",
+    "date": "2026-02-26T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZUY0Um43NkF3MUJDNk96bDk0MWZxNkgyekg5ekZ5d0Y3ZDVKalE3MVg1SWJrbW94LUx4V2tLcFl1TUItVS1OMkw4SVZJaUFIVktNaWswVjJmMWtYa0IwTXZDNnBfd0R2TWlhX0xka3MzNnVmTEVtN2NuMURXRzExV3A1UDZROFREeWMyVmwxVmNNR3p5U1IyX3dVaFFTRm5US2NDbVhHQm9PdjhWSkljcWU4dHFGdUFYbVZzSnpIVTlDNzdkdFE4cFR0WEY?oc=5",
+    "outlets": 1,
+    "match": "headline names \"zavoda za gradbenistvo\""
    }
   ],
   "zag_logatec": [
@@ -114,6 +122,14 @@
     "source": "Primorske novice",
     "date": "2026-06-18T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
+    "outlets": 1,
+    "match": "headline names \"innorenew\""
+   },
+   {
+    "title": "ZA BOLJ ZDRAVE IN PRIJETNE STAVBE: InnoRenew CoE in UP IAM z inovativnim projektom 'BUILDWELL'",
+    "source": "regionalobala.si",
+    "date": "2026-01-31T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVXIyc1FLaTFKU1dnWTVBX1hQdVc5MEdxVGp4TjNjQlEwQmhYdmdrN1cwMzRQSXNRNVhhaEdIQXJuMXFSNVIzZ0lwWVZzdl8xRkszeFdOU1lvMXpaYlhYZDhCMDZsQlRCaTZKTGZ5RFhqYlFkMzlqbEhXQkMyM0JUX2ZjdXJtZlNabmRtX1RrYk80YV9aYzVEcUhJOWhPNk9tUnY3R1pRaVZWTFBXeHRyV3g0dXJSb1duWlpaZTdjWmhHNmRQT1E?oc=5",
     "outlets": 1,
     "match": "headline names \"innorenew\""
    }
@@ -252,6 +268,14 @@
     "source": "Siol.net",
     "date": "2026-10-30T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOSW5Id1h6LXVSU1RBSTJwLXd3N1NsVG1Wc0RDUUhpaFNNSXQ3bUVGYk5BcktWT1hVUEZLdUM1QWlyWGR1ZWFoYXROSC1tTzF4S3pYVzRIakpYUGxUVUNIWllLTF9kWHl3UFFqMU9EMjNnTXJzd0g2MTF0TWQ1T0hLdGdDLXhhbXM1QU4xaDIxRXJsQmVtMFUzX0xobE1pYk91Slh2VldNV2ptN29vaUlHQlhJcnhJd0t2YUdGRjlkek4xaks3LUtfcnZjZkNwOVY3MjFHNVYtQTZuaEtKWW9v?oc=5",
+    "outlets": 1,
+    "match": "headline names \"trojan\""
+   },
+   {
+    "title": "Med vikendom bodo zaprti trojanski predori",
+    "source": "Svet24",
+    "date": "2026-09-04T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPXzFTXzlGUWRpa2ZVVUx1YkgxQWNSTk1vY2Z2VWVocFlsdTVuZDhkYS1jTHVZVkpwWmk0bDlkQlYtSUl0MTNQYTlhMEp5WkN5ci04MnZ3ZUdtZnp5MUkwdnFEYnY4WVdoWE95V3Z6bC1YNzBPVXlyVDJkRk5wb2RDNm5IRUZyWDF1b01PSFJ6aEtnbHIxTmZN?oc=5",
     "outlets": 1,
     "match": "headline names \"trojan\""
    }
