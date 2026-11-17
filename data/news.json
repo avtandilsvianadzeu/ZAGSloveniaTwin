@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T12:15:27.242Z",
+ "updated": "2026-11-17T13:17:29.662Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,6 +10,26 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
+   }
+  ],
+  "nm_brv": [
+   {
+    "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
+    "source": "Svet24.si",
+    "date": "2025-12-10T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
+    "outlets": 1,
+    "match": "headline names \"stukljev\""
+   }
+  ],
+  "verd": [
+   {
+    "title": "Manipulator / Neznosen hrup pod viaduktom Verd",
+    "source": "Mladina",
+    "date": "2026-10-21T14:55:39.000Z",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5NRGEyelozdS1Zd085cjdzLWFRaTNjajhwV1N4MExLWEVrcEY3Z3VxeHZncG5hM3BDZ2dtWDAxWkFEY0FEOXRHSFBxN09lb29rSW9FNlE5VkRVSm5ZMGFaYndGblR0RndXd3BFNGg3VQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"verd\""
    }
   ],
   "strunjan": [
@@ -132,14 +152,6 @@
     "source": "Finance.si",
     "date": "2026-06-17T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxONllRclhtYzJ3RkRYb1FROTNOTmpVVnozSHNTS2VaNWtQdGxCbExkV1RDR2xhTXZlYjdCRUtxRm01aGVOb1NOQ2xDZlg2MXcwVkxobzl6SU9zc3NxZFJudGl1VmVST214SmJFZkxxY3dUUVc0QkxPMUtyNTNkalB6a2RGQUo0YlgyaTRXeVh4UjNfRXNWQzk3TFBGNXdUMmhkZU5VRVhadWxETVZpMU10clV1ZmdKYWRzMHZnNEZ2TUFIQ2thSUMtdVNwTmFHb3hucXZsUUVlSE0?oc=5",
-    "outlets": 1,
-    "match": "headline names \"gradbenistvo in geodezijo\""
-   },
-   {
-    "title": "Hackathon GEO Slovenija: drugo mesto študentov ljubljanske fakultete za gradbeništvo in geodezijo",
-    "source": "Finance.si",
-    "date": "2026-06-03T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQS0pScG9YaFVyTGItZGc3bHFQTElPVlh2X3ExT3ZWS2RDbk0zMHBJaEpwZzQwdDV4TEVZVWFtdko3VEYxbHVLZWxhSUVhb3hBM0k0WUd3TlllOTRaYWlzZXp0RnZSazVLYkZrQWZMdnEzNGNlUmNtV25YTFhMUURPakh3bUF4bDFxUkdHR2NBUFhkNnRFWnhGdllLVDFFUWk1cnU0LVEtTTJYaWZvNEZ5QlI4NF91VmoyeUlfb1B4eTBaNUNRRkdCamxzcEpTRUdjM3QwdkFMeUFLU3o2em9F?oc=5",
     "outlets": 1,
     "match": "headline names \"gradbenistvo in geodezijo\""
    },
@@ -568,6 +580,14 @@
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUkhBOThtdWFPZERPOVVoeWladEs4b2VPTkR2Zmp3MFhZRl9zaTlxNjJVYkl1aDFBVjExSXoxYkI5MFBMcWNPcGJCb0RRSGRhVkVDNnVLaFFiM3R5UU4zWU9hNDlkQkNRYWRvN2dBV2NqU2dhOFZrTl82S0ZFcXZWeVpVU0REMmRWOTRiSE4zUlNMRHpvSVQwY25iS2o?oc=5",
     "outlets": 1,
     "match": "headline names \"livar\""
+   },
+   {
+    "title": "Črnomelj postaja srce Livarja, vse proizvodne aktivnosti na eni lokaciji",
+    "source": "Svet24.si",
+    "date": "2026-06-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQN2RVcC1oUmFTVUxNRkluNE95QlFaSW5HUUxEYzBIM2xkZFVHcGhlamhIei1BV0c4STczb2RxOUpnLTZiNVJ5WjJIbHhVN2MzS3B3T2JJU1F4QzRjdk1RTXJyaGFPdmw3Wkl5VTF3eXBtOUF3YVZHYmdWMUpvblkyM3Zob0xrazFuN0RLOEo3eV9veS1qQTZrSFFIMzhueXltRnFnekFibw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"livar\""
    }
   ],
   "ss_kocevje": [
@@ -599,7 +619,7 @@
    },
    {
     "title": "Potres v bližini Ravene je bilo čutiti tudi v Novi Gorici",
-    "source": "robin.si",
+    "source": "Radio Robin",
     "date": "2026-01-13T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWGdWb0d3eFVOTEpsbnZxSHA5amRKeXVsRk1FSWJOWDRRRFhVUm1BQzBUUkNlVmg3VHgwdFVQNmtIUHpVVFBwaU1BRHY1MEp5Uk1MeHp6WTE4UEhkREc0ZUFOenBKajk0NFJEOWVmWXp3clQ5Q0F4c2RNbkxPdWtManEyZEIyeUlpVEk4SkN3bzJ1Ty14ODhqS3Fn?oc=5",
     "outlets": 1,
@@ -607,14 +627,6 @@
    }
   ],
   "soca_quake": [
-   {
-    "title": "Ob 12.30 streslo okolico Tolmina: potres čutili prebivalci",
-    "source": "Slovenske novice",
-    "date": "2026-10-03T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdmVqSlA4emViMlJKT3drYmt1R09ZOVpwb25qSXhOZXgxNTlXVlh1WEpsbHQxNGVySWtOSTJRVGpncURoMzZVVW5MVTZKUlpFYi1xaWMtbG5ZWndTWFV0MW83a3hpaENYUXBaeGRLVDU4bHF2Q0U2U2tlM0xycFZyZWpQWElMWEwtUGl0dkM2QnlHMksxQWNBZ2lZT25uSlVDbzBVRFZrdElidw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
