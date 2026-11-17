@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T08:04:46.572Z",
+ "updated": "2026-11-17T09:06:54.856Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -136,6 +136,14 @@
     "match": "headline names \"gradbenistvo in geodezijo\""
    },
    {
+    "title": "Hackathon GEO Slovenija: drugo mesto študentov ljubljanske fakultete za gradbeništvo in geodezijo",
+    "source": "Finance.si",
+    "date": "2026-06-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQS0pScG9YaFVyTGItZGc3bHFQTElPVlh2X3ExT3ZWS2RDbk0zMHBJaEpwZzQwdDV4TEVZVWFtdko3VEYxbHVLZWxhSUVhb3hBM0k0WUd3TlllOTRaYWlzZXp0RnZSazVLYkZrQWZMdnEzNGNlUmNtV25YTFhMUURPakh3bUF4bDFxUkdHR2NBUFhkNnRFWnhGdllLVDFFUWk1cnU0LVEtTTJYaWZvNEZ5QlI4NF91VmoyeUlfb1B4eTBaNUNRRkdCamxzcEpTRUdjM3QwdkFMeUFLU3o2em9F?oc=5",
+    "outlets": 1,
+    "match": "headline names \"gradbenistvo in geodezijo\""
+   },
+   {
     "title": "Študentke ljubljanske fakultete za gradbeništvo in geodezijo prejele prvo nagrado",
     "source": "Finance.si",
     "date": "2025-11-21T08:00:00.000Z",
@@ -190,7 +198,7 @@
     "source": "Siol.net",
     "date": "2026-03-20T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUndjQ3hWbXJVR1hmSkl0ZV9HX3ZFOEdXSkFmVl9IVkl6cnNzNC15UzZ5c3dwSHV2MW9kWEVWUGV0UkppS3NMZm03S2tjRlMycmszbE10MEFKa3RpTzVyNEZEb3ZRRktWeHVEQk9EbFViYUwwS3hOdmwzT2E1alVabEJLLTh1Q1dhYzJyNTh6MWhFZw?oc=5",
-    "outlets": 7,
+    "outlets": 6,
     "match": "headline names \"karavank\""
    },
    {
@@ -213,7 +221,7 @@
   "golovec": [
    {
     "title": "Vozniki pozor: Predor Golovec bo zaprt v obe smeri",
-    "source": "Svet24.si",
+    "source": "Svet24",
     "date": "2026-04-09T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZlVldlc1cUFsZG9tUDdXb29iZ1hpRUZxLWpVYXpUWW43NFFrdEU3b290YWhiVFNPN253UGg0U190QV9CbTFfajZIaUpIWWc3dDBrdVhkb01qb25yaUxqVDNqR092cUhIRDJXVUJEbC1PcEpkSTJmT2NtODFOWGlZWF95WGtFYUdBZ0d0YVJB?oc=5",
     "outlets": 1,
@@ -412,16 +420,6 @@
     "match": "headline names \"avce\""
    }
   ],
-  "stoze": [
-   {
-    "title": "25 let od tragedije v Logu pod Mangartom: Spomin na plaz Stože",
-    "source": "Goriške novice",
-    "date": "2025-11-17T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOMlFWYUZWR2p2QldNNGVKcHhUb0l4dm12R3BJeUZnc1lpTlVLZTcxSmJ3S3BOSEJyWHdWaWkweTJHX2hRcnJkTnZaRUNaLWRBMG8zSGtHYjlfT0RUS3JtQzhmTm9CUGc3Rjg0MzJCWGFtbEVmU1J1b0xSUVZUaDJCam9md1VVR0NYMzY4YUo3TTY?oc=5",
-    "outlets": 1,
-    "match": "headline names \"stoze\""
-   }
-  ],
   "velikaplanina": [
    {
     "title": "Nihalka na Veliko planino bo zaradi remonta zaprta mesec dni",
@@ -477,6 +475,14 @@
    }
   ],
   "cerkno_z": [
+   {
+    "title": "Na Smučišču Cerkno prve smučarje pričakujejo v drugi polovici decembra",
+    "source": "www.primorski.eu",
+    "date": "2026-10-28T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbUk3bnM3TnNGLWh1Wk9pUGdZQUd3SVU2U0ZfR2lQdXBsVnJ1MDRvSGtzLUtPSGZqTlQ4WUpfQzl0em1oQS1IZG1QMGxqOHdRTWxDTXo0UFBVdkd1V25ZcUJHc1dVT2xrRXh0dHFhT09naVVpWHdPMy12NDBXNzJJYU9tYWFTNEVuTzZEU1doYjRrSDBaOG42b0FKMW9ETHRqUXRvUjdGa254c291?oc=5",
+    "outlets": 1,
+    "match": "headline names \"cerkn\""
+   },
    {
     "title": "Smučišče Cerkno v nedeljo odpira še preostale proge, med novostmi otroški vrtec in sankališče",
     "source": "robin.si",
