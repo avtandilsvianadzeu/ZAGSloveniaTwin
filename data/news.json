@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T13:17:29.662Z",
+ "updated": "2026-11-17T14:19:33.367Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -233,7 +233,7 @@
   "golovec": [
    {
     "title": "Vozniki pozor: Predor Golovec bo zaprt v obe smeri",
-    "source": "Svet24.si",
+    "source": "Svet24",
     "date": "2026-04-09T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZlVldlc1cUFsZG9tUDdXb29iZ1hpRUZxLWpVYXpUWW43NFFrdEU3b290YWhiVFNPN253UGg0U190QV9CbTFfajZIaUpIWWc3dDBrdVhkb01qb25yaUxqVDNqR092cUhIRDJXVUJEbC1PcEpkSTJmT2NtODFOWGlZWF95WGtFYUdBZ0d0YVJB?oc=5",
     "outlets": 1,
@@ -333,6 +333,14 @@
     "date": "2026-07-31T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbmRsdXpVZk9QMUNxZGRvOXg1RzdqUWhtX2twcTIxLXlTZ2ZqSV9Gc2NOOHN0M3ZqLThzM2F1Rm5sVV9pMXdhOWVnZEF5VXRXV05BYTctUVJLME1NWEtkWmNLTHpDcXZUNnpPdVMyWE9KWkFXYTR3VTFlSC0zRVhhbmU2eUE0RVA5ZHRuU0REdm5EU2R6RlN1Uk9nak91bFVm?oc=5",
     "outlets": 2,
+    "match": "headline names \"kastelec\""
+   },
+   {
+    "title": "MOČNA BURJA OHROMILA PROMET: Predor Kastelec je zaprt, prepovedi za več vrst vozil",
+    "source": "regionalobala.si",
+    "date": "2025-11-22T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOFlCaEVaT1M3bC1SN0Nwa0ZjLThyV2lZZ0FjRU81Ny1hZFFLNkJJTXZwTTRHcWVKUUVuT1h3UFhyWkQyOGJnT2dsY0R5MHIwVEdhUTNPN3RRUHJvQk0wc1NwOXhVVm14VHhndDF3MVhoM004cjJXdjFnRzk4NkNleHdndDZ6RlZGUWxDN2J1cF9OWjV2dXJTVWo1OGxHV2VpckZzc0V1Sk5ubUhLZHl2OEg3Rlc0VWc?oc=5",
+    "outlets": 1,
     "match": "headline names \"kastelec\""
    }
   ],
@@ -627,6 +635,14 @@
    }
   ],
   "soca_quake": [
+   {
+    "title": "Ob 12.30 streslo okolico Tolmina: potres čutili prebivalci",
+    "source": "Slovenske novice",
+    "date": "2026-10-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdmVqSlA4emViMlJKT3drYmt1R09ZOVpwb25qSXhOZXgxNTlXVlh1WEpsbHQxNGVySWtOSTJRVGpncURoMzZVVW5MVTZKUlpFYi1xaWMtbG5ZWndTWFV0MW83a3hpaENYUXBaeGRLVDU4bHF2Q0U2U2tlM0xycFZyZWpQWElMWEwtUGl0dkM2QnlHMksxQWNBZ2lZT25uSlVDbzBVRFZrdElidw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
