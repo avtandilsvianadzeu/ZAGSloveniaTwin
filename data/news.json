@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T16:24:27.864Z",
+ "updated": "2026-11-17T17:26:32.355Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -20,6 +20,16 @@
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
     "outlets": 1,
     "match": "headline names \"stukljev\""
+   }
+  ],
+  "verd": [
+   {
+    "title": "Manipulator / Neznosen hrup pod viaduktom Verd",
+    "source": "Mladina",
+    "date": "2026-10-21T14:55:39.000Z",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5NRGEyelozdS1Zd085cjdzLWFRaTNjajhwV1N4MExLWEVrcEY3Z3VxeHZncG5hM3BDZ2dtWDAxWkFEY0FEOXRHSFBxN09lb29rSW9FNlE5VkRVSm5ZMGFaYndGblR0RndXd3BFNGg3VQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"verd\""
    }
   ],
   "strunjan": [
@@ -324,6 +334,14 @@
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbmRsdXpVZk9QMUNxZGRvOXg1RzdqUWhtX2twcTIxLXlTZ2ZqSV9Gc2NOOHN0M3ZqLThzM2F1Rm5sVV9pMXdhOWVnZEF5VXRXV05BYTctUVJLME1NWEtkWmNLTHpDcXZUNnpPdVMyWE9KWkFXYTR3VTFlSC0zRVhhbmU2eUE0RVA5ZHRuU0REdm5EU2R6RlN1Uk9nak91bFVm?oc=5",
     "outlets": 2,
     "match": "headline names \"kastelec\""
+   },
+   {
+    "title": "MOČNA BURJA OHROMILA PROMET: Predor Kastelec je zaprt, prepovedi za več vrst vozil",
+    "source": "regionalobala.si",
+    "date": "2025-11-22T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOFlCaEVaT1M3bC1SN0Nwa0ZjLThyV2lZZ0FjRU81Ny1hZFFLNkJJTXZwTTRHcWVKUUVuT1h3UFhyWkQyOGJnT2dsY0R5MHIwVEdhUTNPN3RRUHJvQk0wc1NwOXhVVm14VHhndDF3MVhoM004cjJXdjFnRzk4NkNleHdndDZ6RlZGUWxDN2J1cF9OWjV2dXJTVWo1OGxHV2VpckZzc0V1Sk5ubUhLZHl2OEg3Rlc0VWc?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kastelec\""
    }
   ],
   "markovec": [
@@ -617,6 +635,14 @@
    }
   ],
   "soca_quake": [
+   {
+    "title": "Ob 12.30 streslo okolico Tolmina: potres čutili prebivalci",
+    "source": "Slovenske novice",
+    "date": "2026-10-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdmVqSlA4emViMlJKT3drYmt1R09ZOVpwb25qSXhOZXgxNTlXVlh1WEpsbHQxNGVySWtOSTJRVGpncURoMzZVVW5MVTZKUlpFYi1xaWMtbG5ZWndTWFV0MW83a3hpaENYUXBaeGRLVDU4bHF2Q0U2U2tlM0xycFZyZWpQWElMWEwtUGl0dkM2QnlHMksxQWNBZ2lZT25uSlVDbzBVRFZrdElidw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
