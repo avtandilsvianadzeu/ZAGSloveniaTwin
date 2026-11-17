@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T11:11:18.513Z",
+ "updated": "2026-11-17T12:13:30.155Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,6 +10,16 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
+   }
+  ],
+  "nm_brv": [
+   {
+    "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
+    "source": "Svet24.si",
+    "date": "2025-12-10T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
+    "outlets": 1,
+    "match": "headline names \"stukljev\""
    }
   ],
   "strunjan": [
@@ -158,7 +168,7 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
-    "outlets": 2,
+    "outlets": 1,
     "match": "headline names \"karavank\""
    },
    {
@@ -221,7 +231,7 @@
   "golovec": [
    {
     "title": "Vozniki pozor: Predor Golovec bo zaprt v obe smeri",
-    "source": "Svet24.si",
+    "source": "Svet24",
     "date": "2026-04-09T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZlVldlc1cUFsZG9tUDdXb29iZ1hpRUZxLWpVYXpUWW43NFFrdEU3b290YWhiVFNPN253UGg0U190QV9CbTFfajZIaUpIWWc3dDBrdVhkb01qb25yaUxqVDNqR092cUhIRDJXVUJEbC1PcEpkSTJmT2NtODFOWGlZWF95WGtFYUdBZ0d0YVJB?oc=5",
     "outlets": 1,
@@ -274,11 +284,11 @@
   ],
   "podmilj": [
    {
-    "title": "Pozor! Na štajerki v predoru Podmilj ovira na cesti",
-    "source": "Slovenske novice",
+    "title": "Pozor, obvoz! Štajerska avtocesta je v predoru Podmilj proti Mariboru zaprta",
+    "source": "Ptujinfo.com",
     "date": "2025-11-18T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOaEhFd3VpYmJtZVp3U2RlaVRYekI3R3ZXb0FTbmJkTXZUR3B1WmJSUXlWczNSdERRXy0waGV5M185bTBtNjNLeHJJbTA4REhGb016a0h6TFR3ekJCMUkzVlJtRERNckN2Y2RXTzFPWDN0bFJhaWFmMmtUNzR5RzJ1bERvSDUzejlKeW5aeG41WVZqeWN2eVE?oc=5",
-    "outlets": 1,
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVkJzMlAwbk0xNG9oOHpTTTVHNW9LY3oyS0NsYlIzdW1OQXBMVmlISjNoTHliS0hBbVZkQjMxLURhWU9ISVFLQ3VpektpWmpuUHFuTUVrdEJJczNrekRaanFPN1pvcjl3ekdLQkl3eXRKUEVxQ3JYZUJpaV9qOUJoVFF6LW10eHJ5ODZtRmw3bTl0VWU4MHJMcHZNbEdyWk9ObVZWbG00dk4tbm5adjRYUmVrLU1PUWM1?oc=5",
+    "outlets": 2,
     "match": "headline names \"podmilj\""
    }
   ],
@@ -441,9 +451,9 @@
    },
    {
     "title": "Janković napovedal drugi tir vzpenjače. Kaj se bo res gradilo?",
-    "source": "Svet24",
+    "source": "Svet24.si",
     "date": "2026-05-19T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOXA3QmYySnltMHBvXzZTVHdwaGM0YTBNQWUwbzJXZXVieUp2dHczWXpJT3RXMTctelJ6WWUwTEwybUhRMW8yU2FsWkx3aDRfbnYxdDNkTWlaNTBLc1FWd01IZHVrNkN5NElnUENOR2dSamRvRk5VcEZZdXpfLWlIeXlUc3BxYTdtNmc?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWWl1NWVQdGhZWm9WUnJjMjNud014Wm1nQ0tnS2tlUmdfX0VtZlJGZHpqcnZ6aTktUHF4eDNDbGJnd2MtYUZHVGlxekhjRzkxMHM1d1NmNjF5aFg0MTlIeGQzN0FWWWQ0M3VnMjY3Q2JTd19uY08tUzFGck5ROV9aVDdoOVdYVWRsZDNENEkzR1oxS3BkMlc5SkhPOA?oc=5",
     "outlets": 1,
     "match": "headline names \"vzpenjac\""
    },
@@ -608,6 +618,14 @@
   ],
   "soca_quake": [
    {
+    "title": "Ob 12.30 streslo okolico Tolmina: potres čutili prebivalci",
+    "source": "Slovenske novice",
+    "date": "2026-10-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdmVqSlA4emViMlJKT3drYmt1R09ZOVpwb25qSXhOZXgxNTlXVlh1WEpsbHQxNGVySWtOSTJRVGpncURoMzZVVW5MVTZKUlpFYi1xaWMtbG5ZWndTWFV0MW83a3hpaENYUXBaeGRLVDU4bHF2Q0U2U2tlM0xycFZyZWpQWElMWEwtUGl0dkM2QnlHMksxQWNBZ2lZT25uSlVDbzBVRFZrdElidw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
     "date": "2026-08-27T07:00:00.000Z",
@@ -641,7 +659,7 @@
    },
    {
     "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
-    "source": "Svet24.si",
+    "source": "Svet24",
     "date": "2026-05-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
     "outlets": 1,
