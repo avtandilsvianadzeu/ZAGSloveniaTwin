@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T20:34:41.723Z",
+ "updated": "2026-11-17T21:36:49.599Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -505,7 +505,7 @@
    },
    {
     "title": "Smučišče Cerkno v nedeljo odpira še preostale proge, med novostmi otroški vrtec in sankališče",
-    "source": "robin.si",
+    "source": "Radio Robin",
     "date": "2026-01-08T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOb0hkRDBscF9rQy1FRmgybDNCOEZWLTc2X0x1ZFl1Q0hoZWoyLVJyY0wxQXJZekYwSndUSUJHeldoUVJfeURSaUYtN0N5cllmRG9qR1FvZzkyRFVrSWdaN1gxMlIzVmJDODFLVl83SE10dFM0cF9IOFk3WDI1U3RyVG5tVFlicy1VeGZCRC16VFZnT1dVekRsdTRxWE5yYk80NzNIN2RUTF9vZFB6N1NPWHNGSklxRENOQ1o1QVU5NU9Za1lUV2h0Qg?oc=5",
     "outlets": 1,
@@ -547,7 +547,7 @@
    },
    {
     "title": "Zakaj nihalka na Golte še vedno ne obratuje?",
-    "source": "Svet24",
+    "source": "Svet24.si",
     "date": "2026-01-15T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTHF1Y092WkxVZ0ZqWnUtdXRVa2pmQ21HQ0hVZlY3V1ZPZlJLZi1aTzN2eFA1ck1tRkp5QzROay1RVF9RYzJqWXlkZy1kVE5Yc1FGRHNuQ2xjNkc1LWxfbTd6eUF4MTNsVHZnSjEwc2hSM1RCZFFqZGZrRlc0TFJWQjNn?oc=5",
     "outlets": 1,
@@ -635,14 +635,6 @@
    }
   ],
   "soca_quake": [
-   {
-    "title": "Ob 12.30 streslo okolico Tolmina: potres čutili prebivalci",
-    "source": "Slovenske novice",
-    "date": "2026-10-03T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdmVqSlA4emViMlJKT3drYmt1R09ZOVpwb25qSXhOZXgxNTlXVlh1WEpsbHQxNGVySWtOSTJRVGpncURoMzZVVW5MVTZKUlpFYi1xaWMtbG5ZWndTWFV0MW83a3hpaENYUXBaeGRLVDU4bHF2Q0U2U2tlM0xycFZyZWpQWElMWEwtUGl0dkM2QnlHMksxQWNBZ2lZT25uSlVDbzBVRFZrdElidw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
