@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T18:30:39.179Z",
+ "updated": "2026-11-17T19:32:40.828Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -30,6 +30,40 @@
     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5NRGEyelozdS1Zd085cjdzLWFRaTNjajhwV1N4MExLWEVrcEY3Z3VxeHZncG5hM3BDZ2dtWDAxWkFEY0FEOXRHSFBxN09lb29rSW9FNlE5VkRVSm5ZMGFaYndGblR0RndXd3BFNGg3VQ?oc=5",
     "outlets": 1,
     "match": "headline names \"verd\""
+   }
+  ],
+  "strunjan": [
+   {
+    "title": "Strunjanski klif: naravni biser, ki ga ogroža erozija",
+    "source": "Najdi.si novice",
+    "date": "2026-08-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOUjZNT19kX0tlbExJc3p6YWx6RWxwcFJnSDlQcFJYUkJRdkRnbXlMU2NWWE5IWkl6ZlFQVUtGWEpzQTFtYWtNNEUxdHBDRmRSZlJvMnBoV2ZMNmZUOUJRblhsRGNOR1ZULUJFbF9weDg0SlVTbFFTTUpDWG15dzNRS1FGNFUtN2Vwak12NTczbmFiUTZSdVBXNXY4akdDMEFLQnpCYnhTdUVic0hET3M1dnpXSkpzRl9yN282dmFuN0M3bVZ0eWdscTI2b244U0stSUprdzhTcWFvdzg?oc=5",
+    "outlets": 1,
+    "match": "headline names \"klif\""
+   },
+   {
+    "title": "Mesečev zaliv: Skriti biser slovenske obale",
+    "source": "Najdi.si novice",
+    "date": "2026-07-07T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOUWQ3VjBBSUlzaFhfbWhHRWwzS1J3eVNMcnpSQ2RNQXFfYzZRUU1tNV9FbHNnY18zeWlFNWJ5M1daMXZjWks1d2pqNkNvS3NzdllXWjdtZERCYkdkZHkyQTBJSlRzanBFSDhVX2NjMFp5ZlJtSzFxaW9mLUxSVzNBVU1PaVd4czRCMk00NzN5bFFXRkdrTGFVbmRXb0k1RlBUbGcydFRfaEdSMjYtdGRReVVxamZXWm5hRmxJbWMtRFRJRjVacmRaRUpZcG1naEk?oc=5",
+    "outlets": 1,
+    "match": "headline names \"mesecev\""
+   },
+   {
+    "title": "Dva mejnikа za Strunjan: ohranitev strunjanske artičoke in obnova poti v Mesečev zaliv",
+    "source": "OBALAplus",
+    "date": "2025-12-04T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPczFzcVRnRHNCU1FGb2hzVi0zRk85LXktN3NXQW1YQVFjWENjQjdMTkZXc01UT3VQU1Z0dVAyMDRTSXRIU0pWeTlhSUlQM3ZXZjNIV1pOUldzcXhaQlExQndDNExXZHl0ZWFoVGQtNWs3RkJoV2QteUxBRGJrc3hXT2NWRDhsbEVKNVRaa2xjUERMWi1PTTJuMVp4WWEtN21kZzBsVUhzQXNFd1FnWlR1eTBB?oc=5",
+    "outlets": 1,
+    "match": "headline names \"mesecev\""
+   },
+   {
+    "title": "Zgradila sta jih oče in sin: Kakšna zgodba stoji za stopnicami, ki vodijo v Mesečev zaliv?",
+    "source": "Večer",
+    "date": "2025-11-21T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUnNZUWtFQVVKQldmS0x0WHlvT2EtMkhJa252czQwRW9XTG91OXNPVzg4V3gxUGJDOGlBbDd2TDFVQl9vS3BBaWg2QXBTT3hTNmx0Ym9TTjlBbzJVU3F4T1hEMUNVeUZXYmFGaG44cnd2VGFZblQ5RkJwY3MwWHNqV1Q4NnFKcW4tQ0EzMkIzelA2TUlDZXlocHZhZmZjby1ZZ09SWGJhcE9FZVVhOGRMTjEyUFU0dWVtOS0xWWZhRm5lZw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"mesecev\""
    }
   ],
   "sitarjevec": [
@@ -378,6 +412,32 @@
     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcHRnenlfNkxRUlNFcW1LMEFTOXNWX0RQUTZXc1BqTE5tR3VUTGx2aTE1MF9PbnZ6NXZRRWkwWG1Bck1oMVc1dUZ6V2phd2tXdC1Jc0RUdlZvc1JXWHdFRnZJcUpTZlBmSUJMMFVHUXhQaVd6N2l0cHFVdVFCNXB6dHFkYUtBbWlLa0IwVGUwekl6Q3FwSVBjY1A1cVg1SXBBY0plLXBWbTRjWDJ0V3QxRUNRX1V3dHNhMWc0UXFoOWZNZw?oc=5",
     "outlets": 1,
     "match": "headline names \"blanca\""
+   }
+  ],
+  "che_avce": [
+   {
+    "title": "Posebnost ČHE Avče",
+    "source": "nas-stik.si",
+    "date": "2026-08-31T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5zbFYyeDJRbU9XQnpnRnpDZllTTjRQMmpzNnhaMVFyYnhBN2puSHAteGl0QVpUMTJ3MHlQUmhFTFk0U0NEYk1nRzB3a2MwamRyUVBXVHg5S1VWVl8y?oc=5",
+    "outlets": 1,
+    "match": "headline names \"avce\""
+   },
+   {
+    "title": "Podpisana pogodba za drugi remont ČHE Avče",
+    "source": "nas-stik.si",
+    "date": "2026-01-22T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa19CMDNLVVNyMU4zeXpOZkFiWFZfU282VzczYTY2eWxOWUJXa2RIMjFybDl5a0hGMUNrUE1kX2ZIQWxrVlJBOUs4T1FOd0U4M1J5bUt4ck5JUkFPTG9mN3JUVWR1bVNjX3ZHUm5NYUlhbF90OFhIUUNiSjA4SWhTejluMkRNUUg3bTYyWUxidHNoS1FXMktF?oc=5",
+    "outlets": 1,
+    "match": "headline names \"avce\""
+   },
+   {
+    "title": "Črpalna hidroelektrarna Avče – primer uspešnega sobivanja ljudi, energetike in narave",
+    "source": "Maribor24.si",
+    "date": "2025-11-20T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaHlzd2NjZEVSQXNNZ3ctQkVhbnFjRjkyOHdZUzRzM2V4eGFiZHVzdjVUNFJyTUNHVms2WFU2ZHVKY3VsMFpjcUkyRjg2cTZXdE4zNGtWODBTeWZHakt0VDc5SjhPMW1KVXAwWHJSMjdVR3B1QkVBOEpLTUhVdTVIRWZKblJiclo1ekNYdTdWczBBV20yb0U3ekswZlJIR2s0bWpZOXE4a2FuS3doZ3VjSVdJSEI?oc=5",
+    "outlets": 1,
+    "match": "headline names \"avce\""
    }
   ],
   "velikaplanina": [
