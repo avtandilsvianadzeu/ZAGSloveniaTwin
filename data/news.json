@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T12:13:30.155Z",
+ "updated": "2026-11-17T12:15:27.242Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,16 +10,6 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
-   }
-  ],
-  "nm_brv": [
-   {
-    "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
-    "source": "Svet24.si",
-    "date": "2025-12-10T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
-    "outlets": 1,
-    "match": "headline names \"stukljev\""
    }
   ],
   "strunjan": [
@@ -168,7 +158,7 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
-    "outlets": 1,
+    "outlets": 2,
     "match": "headline names \"karavank\""
    },
    {
@@ -231,7 +221,7 @@
   "golovec": [
    {
     "title": "Vozniki pozor: Predor Golovec bo zaprt v obe smeri",
-    "source": "Svet24",
+    "source": "Svet24.si",
     "date": "2026-04-09T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZlVldlc1cUFsZG9tUDdXb29iZ1hpRUZxLWpVYXpUWW43NFFrdEU3b290YWhiVFNPN253UGg0U190QV9CbTFfajZIaUpIWWc3dDBrdVhkb01qb25yaUxqVDNqR092cUhIRDJXVUJEbC1PcEpkSTJmT2NtODFOWGlZWF95WGtFYUdBZ0d0YVJB?oc=5",
     "outlets": 1,
@@ -609,7 +599,7 @@
    },
    {
     "title": "Potres v bližini Ravene je bilo čutiti tudi v Novi Gorici",
-    "source": "Radio Robin",
+    "source": "robin.si",
     "date": "2026-01-13T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWGdWb0d3eFVOTEpsbnZxSHA5amRKeXVsRk1FSWJOWDRRRFhVUm1BQzBUUkNlVmg3VHgwdFVQNmtIUHpVVFBwaU1BRHY1MEp5Uk1MeHp6WTE4UEhkREc0ZUFOenBKajk0NFJEOWVmWXp3clQ5Q0F4c2RNbkxPdWtManEyZEIyeUlpVEk4SkN3bzJ1Ty14ODhqS3Fn?oc=5",
     "outlets": 1,
