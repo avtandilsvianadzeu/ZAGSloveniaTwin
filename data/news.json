@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T01:50:21.532Z",
+ "updated": "2026-11-17T02:52:25.084Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -116,14 +116,6 @@
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
     "outlets": 1,
     "match": "headline names \"innorenew\""
-   },
-   {
-    "title": "ZA BOLJ ZDRAVE IN PRIJETNE STAVBE: InnoRenew CoE in UP IAM z inovativnim projektom 'BUILDWELL'",
-    "source": "regionalobala.si",
-    "date": "2026-01-31T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVXIyc1FLaTFKU1dnWTVBX1hQdVc5MEdxVGp4TjNjQlEwQmhYdmdrN1cwMzRQSXNRNVhhaEdIQXJuMXFSNVIzZ0lwWVZzdl8xRkszeFdOU1lvMXpaYlhYZDhCMDZsQlRCaTZKTGZ5RFhqYlFkMzlqbEhXQkMyM0JUX2ZjdXJtZlNabmRtX1RrYk80YV9aYzVEcUhJOWhPNk9tUnY3R1pRaVZWTFBXeHRyV3g0dXJSb1duWlpaZTdjWmhHNmRQT1E?oc=5",
-    "outlets": 1,
-    "match": "headline names \"innorenew\""
    }
   ],
   "ulfgg": [
@@ -198,7 +190,7 @@
     "source": "Siol.net",
     "date": "2026-03-20T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUndjQ3hWbXJVR1hmSkl0ZV9HX3ZFOEdXSkFmVl9IVkl6cnNzNC15UzZ5c3dwSHV2MW9kWEVWUGV0UkppS3NMZm03S2tjRlMycmszbE10MEFKa3RpTzVyNEZEb3ZRRktWeHVEQk9EbFViYUwwS3hOdmwzT2E1alVabEJLLTh1Q1dhYzJyNTh6MWhFZw?oc=5",
-    "outlets": 6,
+    "outlets": 7,
     "match": "headline names \"karavank\""
    },
    {
@@ -210,10 +202,10 @@
     "match": "headline names \"karavansk\""
    },
    {
-    "title": "V sredo bodo končno odprli drugo cev pod Karavankami",
-    "source": "Dnevnik",
-    "date": "2026-03-16T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOR3RGc1htY2hqQWh2d0xMNk1wX1FZQ3p6OVVGZzh3TnY3T3BPSExDdUNmSEc3bjg4Z2w2MmhLTDNxeDc5djVya0FaTk50SWdCYVRXZXNTYVc1NnZqVklFdHpMeTBzRGZwNjd0ZjRvWDQyMU5ZQVlObkhkWHJCM1ZaUkd0eEFsbmtoeXYwcnpvenh3MGZJZFBtSWZvajlGZ04yUVNmelI0VlVYRTJ6T29LRS1YLUEyWFVKcUNvYWhjTQ?oc=5",
+    "title": "Znano je, kdaj bo odprta druga cev predora Karavanke. Po njej se boste lahko peljali zelo kmalu",
+    "source": "Avto-magazin.si",
+    "date": "2026-03-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNkhWZ1Q5aUNYYWVMVnJXeDhObnV2dl9yLUFKSVF5d2pvNFM2b3kxVEQ0LXZCY2RCbG5jaG13N3VhSEFYNWN0TG1RYkdIckxzbHBWeWhZZUF2ZTFDTEluQnY1UHg4SkgyUnRrbDdfbW9BNTQtUF9UZE1tbk5nTHY5QkZVejRjV2NnMTVtNUxPeXhIbk1ERE1wR05nZw?oc=5",
     "outlets": 1,
     "match": "headline names \"karavank\""
    }
@@ -280,7 +272,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 4,
+    "outlets": 5,
     "match": "headline names \"kastelec\""
    },
    {
@@ -313,6 +305,14 @@
     "date": "2026-07-31T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbmRsdXpVZk9QMUNxZGRvOXg1RzdqUWhtX2twcTIxLXlTZ2ZqSV9Gc2NOOHN0M3ZqLThzM2F1Rm5sVV9pMXdhOWVnZEF5VXRXV05BYTctUVJLME1NWEtkWmNLTHpDcXZUNnpPdVMyWE9KWkFXYTR3VTFlSC0zRVhhbmU2eUE0RVA5ZHRuU0REdm5EU2R6RlN1Uk9nak91bFVm?oc=5",
     "outlets": 2,
+    "match": "headline names \"kastelec\""
+   },
+   {
+    "title": "MOČNA BURJA OHROMILA PROMET: Predor Kastelec je zaprt, prepovedi za več vrst vozil",
+    "source": "regionalobala.si",
+    "date": "2025-11-22T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOFlCaEVaT1M3bC1SN0Nwa0ZjLThyV2lZZ0FjRU81Ny1hZFFLNkJJTXZwTTRHcWVKUUVuT1h3UFhyWkQyOGJnT2dsY0R5MHIwVEdhUTNPN3RRUHJvQk0wc1NwOXhVVm14VHhndDF3MVhoM004cjJXdjFnRzk4NkNleHdndDZ6RlZGUWxDN2J1cF9OWjV2dXJTVWo1OGxHV2VpckZzc0V1Sk5ubUhLZHl2OEg3Rlc0VWc?oc=5",
+    "outlets": 1,
     "match": "headline names \"kastelec\""
    }
   ],
@@ -560,14 +560,6 @@
     "source": "Radio Odeon",
     "date": "2026-08-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUkhBOThtdWFPZERPOVVoeWladEs4b2VPTkR2Zmp3MFhZRl9zaTlxNjJVYkl1aDFBVjExSXoxYkI5MFBMcWNPcGJCb0RRSGRhVkVDNnVLaFFiM3R5UU4zWU9hNDlkQkNRYWRvN2dBV2NqU2dhOFZrTl82S0ZFcXZWeVpVU0REMmRWOTRiSE4zUlNMRHpvSVQwY25iS2o?oc=5",
-    "outlets": 1,
-    "match": "headline names \"livar\""
-   },
-   {
-    "title": "Črnomelj postaja srce Livarja, vse proizvodne aktivnosti na eni lokaciji",
-    "source": "Svet24.si",
-    "date": "2026-06-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQN2RVcC1oUmFTVUxNRkluNE95QlFaSW5HUUxEYzBIM2xkZFVHcGhlamhIei1BV0c4STczb2RxOUpnLTZiNVJ5WjJIbHhVN2MzS3B3T2JJU1F4QzRjdk1RTXJyaGFPdmw3Wkl5VTF3eXBtOUF3YVZHYmdWMUpvblkyM3Zob0xrazFuN0RLOEo3eV9veS1qQTZrSFFIMzhueXltRnFnekFibw?oc=5",
     "outlets": 1,
     "match": "headline names \"livar\""
    }
