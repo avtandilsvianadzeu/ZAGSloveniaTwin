@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T01:47:05.186Z",
+ "updated": "2026-11-18T02:49:06.270Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -300,7 +300,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 5,
+    "outlets": 4,
     "match": "headline names \"kastelec\""
    },
    {
@@ -461,9 +461,9 @@
    },
    {
     "title": "Janković napovedal drugi tir vzpenjače. Kaj se bo res gradilo?",
-    "source": "Svet24",
+    "source": "Svet24.si",
     "date": "2026-05-19T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOXA3QmYySnltMHBvXzZTVHdwaGM0YTBNQWUwbzJXZXVieUp2dHczWXpJT3RXMTctelJ6WWUwTEwybUhRMW8yU2FsWkx3aDRfbnYxdDNkTWlaNTBLc1FWd01IZHVrNkN5NElnUENOR2dSamRvRk5VcEZZdXpfLWlIeXlUc3BxYTdtNmc?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWWl1NWVQdGhZWm9WUnJjMjNud014Wm1nQ0tnS2tlUmdfX0VtZlJGZHpqcnZ6aTktUHF4eDNDbGJnd2MtYUZHVGlxekhjRzkxMHM1d1NmNjF5aFg0MTlIeGQzN0FWWWQ0M3VnMjY3Q2JTd19uY08tUzFGck5ROV9aVDdoOVdYVWRsZDNENEkzR1oxS3BkMlc5SkhPOA?oc=5",
     "outlets": 1,
     "match": "headline names \"vzpenjac\""
    },
@@ -599,7 +599,7 @@
    },
    {
     "title": "Črnomelj postaja srce Livarja, vse proizvodne aktivnosti na eni lokaciji",
-    "source": "Svet24",
+    "source": "Svet24.si",
     "date": "2026-06-23T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQN2RVcC1oUmFTVUxNRkluNE95QlFaSW5HUUxEYzBIM2xkZFVHcGhlamhIei1BV0c4STczb2RxOUpnLTZiNVJ5WjJIbHhVN2MzS3B3T2JJU1F4QzRjdk1RTXJyaGFPdmw3Wkl5VTF3eXBtOUF3YVZHYmdWMUpvblkyM3Zob0xrazFuN0RLOEo3eV9veS1qQTZrSFFIMzhueXltRnFnekFibw?oc=5",
     "outlets": 1,
