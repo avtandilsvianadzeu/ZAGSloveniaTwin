@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T14:18:05.791Z",
+ "updated": "2026-11-18T15:20:10.219Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -430,14 +430,6 @@
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQmtMdUJ1b0pIbnlaaF9URzlQaTdLeWhGa3RiSmoxSlMtRE5TbVNQbG5RZDExY3kxb1c0SUZ6SVllSEd1cXNhLXYyWXB6OHAzWEJrR2tNY1ZSeXp0bWx6ZWZoVDFNMU16SURwNVE1TEZWNXdSRng3S2lBNi1rUnpDUkhCa1R6VVdaU0lFTUhjM3NFcXN0VHZjYkpaSFo4X2c5TV93eVZHSzdxTms?oc=5",
     "outlets": 1,
     "match": "headline names \"velik\""
-   },
-   {
-    "title": "Nihalka na Veliko planino popravljena, ponovno bi lahko začela obratovati že v petek",
-    "source": "N1 Slovenija",
-    "date": "2025-12-02T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQa0l1WTdQN0prZEpXTEpQc0VVQXE4a3gwU0t6Q2QtbDNUdFpfNUM1emdpX0pURW81b3hCbnZCQV92Q2t3SFZLUGxGdjVPU1pCUWxYM2FkVXNnOHBIanpsWnhwQU1UU1dpbjlsN0Q2TGxmMDBQNUR0b3ZWa1k5SE1NZlVkclYyRDBKX2MtcFJPR05qSnpySjNUTEJ6cTZoamRCaWx0ektwb3c2NjFVUzc4R1NZZnFiVi13OExv?oc=5",
-    "outlets": 1,
-    "match": "headline names \"velik\""
    }
   ],
   "grad_vzpenjaca": [
@@ -633,6 +625,14 @@
    }
   ],
   "soca_quake": [
+   {
+    "title": "Okolico Tolmina stresel potres. Ste ga čutili?",
+    "source": "N1 Slovenija",
+    "date": "2026-10-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZTJfaXRoQUVqRld4TmJySFdmV3BGN2FseXdOTk81STVrbElmRXY1OWdNYlhYMFFzMDR4aFlHUTMwYkVfLVAwNkE2TGR0XzN6WkcydXBKLV9fcTk0aG9lVTZTNnJYdGliTGJaZWlMX2F0dlhxNEVuZkthMmFuX0Fjek1QQnhfWk0?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
