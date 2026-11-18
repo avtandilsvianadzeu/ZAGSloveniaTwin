@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T18:26:32.614Z",
+ "updated": "2026-11-18T19:28:35.720Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -451,9 +451,9 @@
    },
    {
     "title": "Janković napovedal drugi tir vzpenjače. Kaj se bo res gradilo?",
-    "source": "Svet24.si",
+    "source": "Svet24",
     "date": "2026-05-19T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWWl1NWVQdGhZWm9WUnJjMjNud014Wm1nQ0tnS2tlUmdfX0VtZlJGZHpqcnZ6aTktUHF4eDNDbGJnd2MtYUZHVGlxekhjRzkxMHM1d1NmNjF5aFg0MTlIeGQzN0FWWWQ0M3VnMjY3Q2JTd19uY08tUzFGck5ROV9aVDdoOVdYVWRsZDNENEkzR1oxS3BkMlc5SkhPOA?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOXA3QmYySnltMHBvXzZTVHdwaGM0YTBNQWUwbzJXZXVieUp2dHczWXpJT3RXMTctelJ6WWUwTEwybUhRMW8yU2FsWkx3aDRfbnYxdDNkTWlaNTBLc1FWd01IZHVrNkN5NElnUENOR2dSamRvRk5VcEZZdXpfLWlIeXlUc3BxYTdtNmc?oc=5",
     "outlets": 1,
     "match": "headline names \"vzpenjac\""
    },
@@ -628,6 +628,14 @@
     "source": "Metropolitan.si",
     "date": "2026-05-10T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1dTB0eUh0VEJndEk2NmJaR1Nrc2FYemw5SDZqUUJscHhFdWtISERIQzB5eGFWRmx3ZHJ4T2lzZHZvU3UxZGhudEV6eE5LSnpWNXpSRlNTYWRoNTdkajRfVUhwX1lPbi1rdmhDcldHU0d4TFA4dnItRXhubTd2VVU?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Zatresla so se tla, potres čutili številni",
+    "source": "Žurnal24",
+    "date": "2026-05-10T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMzdnakZLblNpMU5uQlAtd3pBaHBtdVlROVBfbVdRdGE1TWpyT1BWVWR0X2ptZFhjOWRxUm1yNEJhWG9TU2pyMWxXOHBpT0hsa2d6NllrNzBQSFBvYWlIekdkU1A0UFhmaEh4bEpSbEF5NmNXYWQ5RDBhX1V6VFQtOThJamwyemFGWVHSAY8BQVVfeXFMUHpGaHg4Z09Fb2c1VF9ncWRrZDdHRVVFellkUk85UEZDc25iWWRQSGtQMnNUc3E1Z3I4ZVcyNkJZcGN1a19yVTd1RzgwWFBrNFFDZldxX0VVUWg0ZnU1R0g2LTd1SW03RUttWkQ3dkVCLTB2WlhXdjJINExBdXRURE1aRFhwT015YjFad1BrVWs?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    },
