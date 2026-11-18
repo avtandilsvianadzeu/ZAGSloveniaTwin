@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T17:24:25.384Z",
+ "updated": "2026-11-18T18:26:32.614Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,6 +10,16 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
+   }
+  ],
+  "nm_brv": [
+   {
+    "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
+    "source": "Svet24.si",
+    "date": "2025-12-10T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
+    "outlets": 1,
+    "match": "headline names \"stukljev\""
    }
   ],
   "verd": [
@@ -136,6 +146,14 @@
     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxONllRclhtYzJ3RkRYb1FROTNOTmpVVnozSHNTS2VaNWtQdGxCbExkV1RDR2xhTXZlYjdCRUtxRm01aGVOb1NOQ2xDZlg2MXcwVkxobzl6SU9zc3NxZFJudGl1VmVST214SmJFZkxxY3dUUVc0QkxPMUtyNTNkalB6a2RGQUo0YlgyaTRXeVh4UjNfRXNWQzk3TFBGNXdUMmhkZU5VRVhadWxETVZpMU10clV1ZmdKYWRzMHZnNEZ2TUFIQ2thSUMtdVNwTmFHb3hucXZsUUVlSE0?oc=5",
     "outlets": 1,
     "match": "headline names \"gradbenistvo in geodezijo\""
+   },
+   {
+    "title": "Študentke ljubljanske fakultete za gradbeništvo in geodezijo prejele prvo nagrado",
+    "source": "Finance.si",
+    "date": "2025-11-21T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOMkFMNG55Q2xBWVd4cEZqcWxYemEwMy13MTlqUUxTQWNvRGJGOU1iWEdDa0NMSC1ERU1OdURpeFhETGZZblNJckpwZzNOMlJKZDZsTkdxMUUtZXRrWVpLNUJfbWt2UWt2RDN2TW5oRnY2Y2pidGduT2xTcVo4NEdLVWFza1JiRkxhajYyQXRFdjRDdHEzN1lPNkh3QTkzS2dhc0dGUXZNV3VheGxuaGVQeFBVOVhJdjVMYTY1TXJhVlNoN0pYM3RyNFc1SQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"gradbenistvo in geodezijo\""
    }
   ],
   "karavanke_c": [
@@ -144,7 +162,7 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
-    "outlets": 3,
+    "outlets": 2,
     "match": "headline names \"karavank\""
    },
    {
@@ -510,6 +528,14 @@
     "match": "headline names \"golte\""
    },
    {
+    "title": "First minute smučanje na Golteh: dopoldne na smučeh, popoldne v savni",
+    "source": "Vandraj",
+    "date": "2026-08-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA4VkF5MjNOdjhoNG85X2R1eWpCeWctejlaM2JfS1hiVXdhXzhoSXR4dlFlZlJBTGFYRWNJX2lKVFlhWkNrUnZoRXlkejVvZkZIbEFnZUY0M3R1UHhHVGxJNGM0RGpvSG1HYWFTdGFiMWs2eTlkZXZBQkxYZ0x1ajA?oc=5",
+    "outlets": 1,
+    "match": "headline names \"golte\""
+   },
+   {
     "title": "Smučišče Golte: kljub nižjim cenam vozovnic obiskovalcev toliko kot lani",
     "source": "Dnevnik",
     "date": "2026-03-31T07:00:00.000Z",
@@ -602,14 +628,6 @@
     "source": "Metropolitan.si",
     "date": "2026-05-10T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1dTB0eUh0VEJndEk2NmJaR1Nrc2FYemw5SDZqUUJscHhFdWtISERIQzB5eGFWRmx3ZHJ4T2lzZHZvU3UxZGhudEV6eE5LSnpWNXpSRlNTYWRoNTdkajRfVUhwX1lPbi1rdmhDcldHU0d4TFA4dnItRXhubTd2VVU?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Zatresla so se tla, potres čutili številni",
-    "source": "Žurnal24",
-    "date": "2026-05-10T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMzdnakZLblNpMU5uQlAtd3pBaHBtdVlROVBfbVdRdGE1TWpyT1BWVWR0X2ptZFhjOWRxUm1yNEJhWG9TU2pyMWxXOHBpT0hsa2d6NllrNzBQSFBvYWlIekdkU1A0UFhmaEh4bEpSbEF5NmNXYWQ5RDBhX1V6VFQtOThJamwyemFGWVHSAY8BQVVfeXFMUHpGaHg4Z09Fb2c1VF9ncWRrZDdHRVVFellkUk85UEZDc25iWWRQSGtQMnNUc3E1Z3I4ZVcyNkJZcGN1a19yVTd1RzgwWFBrNFFDZldxX0VVUWg0ZnU1R0g2LTd1SW03RUttWkQ3dkVCLTB2WlhXdjJINExBdXRURE1aRFhwT015YjFad1BrVWs?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    },
