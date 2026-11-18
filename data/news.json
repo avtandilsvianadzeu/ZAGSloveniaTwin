@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T19:30:39.506Z",
+ "updated": "2026-11-18T20:32:45.278Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -228,7 +228,7 @@
     "source": "Dnevnik",
     "date": "2026-06-30T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPQ3FvclpFSjVOR3hERS03QlpXSDlYYlRkQldJbUJ0Y2dXekpPWGdGNkNLaTdMbklNMERQME9HVDJfQjdta0VqYkFVSjB6VnROdzE3aWdLeHV1eHZEcWZPcURRT2JybUMzSUoxMVgwam9PQ3FXU1hDMjlWWGdqU3QteXhYX2xJeW5zcG9pTlI0ckhZQnk3TTVJZTdtQlVVSHVFNGlFcmZJUGszZnc4ZGRGdVBBaXNhRWJ1aWdKT2xsam5vLXBrOUdUUkMyQlI?oc=5",
-    "outlets": 2,
+    "outlets": 1,
     "match": "headline names \"sentvid\""
    },
    {
@@ -606,14 +606,6 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "Zatresla so se tla, potres čutili številni",
-    "source": "Žurnal24",
-    "date": "2026-05-10T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMzdnakZLblNpMU5uQlAtd3pBaHBtdVlROVBfbVdRdGE1TWpyT1BWVWR0X2ptZFhjOWRxUm1yNEJhWG9TU2pyMWxXOHBpT0hsa2d6NllrNzBQSFBvYWlIekdkU1A0UFhmaEh4bEpSbEF5NmNXYWQ5RDBhX1V6VFQtOThJamwyemFGWVHSAY8BQVVfeXFMUHpGaHg4Z09Fb2c1VF9ncWRrZDdHRVVFellkUk85UEZDc25iWWRQSGtQMnNUc3E1Z3I4ZVcyNkJZcGN1a19yVTd1RzgwWFBrNFFDZldxX0VVUWg0ZnU1R0g2LTd1SW03RUttWkQ3dkVCLTB2WlhXdjJINExBdXRURE1aRFhwT015YjFad1BrVWs?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
     "title": "Potres v bližini Ravene je bilo čutiti tudi v Novi Gorici",
     "source": "Radio Robin",
     "date": "2026-01-13T08:00:00.000Z",
@@ -623,6 +615,14 @@
    }
   ],
   "soca_quake": [
+   {
+    "title": "Okolico Tolmina stresel potres. Ste ga čutili?",
+    "source": "N1 Slovenija",
+    "date": "2026-10-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZTJfaXRoQUVqRld4TmJySFdmV3BGN2FseXdOTk81STVrbElmRXY1OWdNYlhYMFFzMDR4aFlHUTMwYkVfLVAwNkE2TGR0XzN6WkcydXBKLV9fcTk0aG9lVTZTNnJYdGliTGJaZWlMX2F0dlhxNEVuZkthMmFuX0Fjek1QQnhfWk0?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
