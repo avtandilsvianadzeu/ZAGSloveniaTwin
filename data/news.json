@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T15:20:10.219Z",
+ "updated": "2026-11-18T16:22:20.046Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -15,7 +15,7 @@
   "nm_brv": [
    {
     "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
-    "source": "Svet24.si",
+    "source": "Svet24",
     "date": "2025-12-10T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
     "outlets": 1,
@@ -162,7 +162,7 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
-    "outlets": 3,
+    "outlets": 2,
     "match": "headline names \"karavank\""
    },
    {
@@ -536,38 +536,20 @@
     "match": "headline names \"golte\""
    },
    {
+    "title": "Nihalka na Golte bo z jutrišnjim dnem znova obratovala",
+    "source": "Svet24",
+    "date": "2026-03-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVU1Idmh1UmFJbVgtckhlbFZZNGRsdlZPLVZIejZybnItSW1ET2d2bEFwdzcycXoxZDlRUzV0QUd6aWw2d0lpakhJcWhzOHVvdEd4RU94WlpVTkNENzlOOUtzelAzWHAwZXJtMUtBd2lrbkl6MWhMb29SanJOa3FjQ3ItYXItVTZJeFRzb2d3?oc=5",
+    "outlets": 1,
+    "match": "headline names \"golte\""
+   },
+   {
     "title": "Zakaj nihalka na Golte še vedno ne obratuje?",
     "source": "Svet24",
     "date": "2026-01-15T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTHF1Y092WkxVZ0ZqWnUtdXRVa2pmQ21HQ0hVZlY3V1ZPZlJLZi1aTzN2eFA1ck1tRkp5QzROay1RVF9RYzJqWXlkZy1kVE5Yc1FGRHNuQ2xjNkc1LWxfbTd6eUF4MTNsVHZnSjEwc2hSM1RCZFFqZGZrRlc0TFJWQjNn?oc=5",
     "outlets": 1,
     "match": "headline names \"golte\""
-   }
-  ],
-  "kanin_z": [
-   {
-    "title": "Vlada naj bi podvojila državno pomoč za oživitev smučišča Kanin",
-    "source": "Delo.si",
-    "date": "2026-10-02T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNDFZVV90eU9MM3FVc0V6ci0xa2YyM2RLNGJGcG43VlA5eTlEaGxvV29mdEJRSVlzbHRNVDhoTWprNzFRMmVvWEhRa0pINEx5WG1wX2NIalo0ODA3TGltYmZCMFJtMTlzNVF2VHBuU09majNneGxoTmlmeXpPOU1NMFZHNmctbmJVOFlYNkltbEZMYmxx?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kanin\""
-   },
-   {
-    "title": "Nova era za smučišče Kanin: Prihajajo nove žičnice",
-    "source": "Goriške novice",
-    "date": "2026-04-24T10:05:03.000Z",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNHBlVUFVTjZZMVNSSVJ3OVczdmZHaVNINnN5U0s5ZXROV0RfMUVuZWEwdU84R2pOTVkzalJobDh5d2JuUjJ0Tkx2ZkIzeXhRb2p3a1oyemVVSzJHSTRrdGMzWkdpb3pfbi1tNmNUVjhpYjduYzNBQ0RWUk1UQU5mTA?oc=5",
-    "outlets": 2,
-    "match": "headline names \"kanin\""
-   },
-   {
-    "title": "Bo Bojan Križaj vlagal v smučišče Kanin?",
-    "source": "Dnevnik",
-    "date": "2025-12-22T18:01:25.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcnNpbnh2b2ppWmdLRmZPbkp0T3E3bTNrdGhYYXlmUktLVkE0Q29PbjRaNGRqYmo4VVFTMXJmblJvR1VFUGNwMGh4bEZfcmNlNnJmeEh5S0NhTm9jTjZubF96aFJiZzRfbXR6N0FsN3YySlJaTzMwRl9Qb1lPMW1MM3BxVGVob2FHQklCTjNmQ3M0dw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kanin\""
    }
   ],
   "livarna_crnomelj": [
@@ -616,6 +598,14 @@
     "match": "headline names \"potres\""
    },
    {
+    "title": "Zatresla so se tla, potres čutili številni",
+    "source": "Žurnal24",
+    "date": "2026-05-10T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMzdnakZLblNpMU5uQlAtd3pBaHBtdVlROVBfbVdRdGE1TWpyT1BWVWR0X2ptZFhjOWRxUm1yNEJhWG9TU2pyMWxXOHBpT0hsa2d6NllrNzBQSFBvYWlIekdkU1A0UFhmaEh4bEpSbEF5NmNXYWQ5RDBhX1V6VFQtOThJamwyemFGWVHSAY8BQVVfeXFMUHpGaHg4Z09Fb2c1VF9ncWRrZDdHRVVFellkUk85UEZDc25iWWRQSGtQMnNUc3E1Z3I4ZVcyNkJZcGN1a19yVTd1RzgwWFBrNFFDZldxX0VVUWg0ZnU1R0g2LTd1SW03RUttWkQ3dkVCLTB2WlhXdjJINExBdXRURE1aRFhwT015YjFad1BrVWs?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
     "title": "Potres v bližini Ravene je bilo čutiti tudi v Novi Gorici",
     "source": "Radio Robin",
     "date": "2026-01-13T08:00:00.000Z",
@@ -625,14 +615,6 @@
    }
   ],
   "soca_quake": [
-   {
-    "title": "Okolico Tolmina stresel potres. Ste ga čutili?",
-    "source": "N1 Slovenija",
-    "date": "2026-10-03T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZTJfaXRoQUVqRld4TmJySFdmV3BGN2FseXdOTk81STVrbElmRXY1OWdNYlhYMFFzMDR4aFlHUTMwYkVfLVAwNkE2TGR0XzN6WkcydXBKLV9fcTk0aG9lVTZTNnJYdGliTGJaZWlMX2F0dlhxNEVuZkthMmFuX0Fjek1QQnhfWk0?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
