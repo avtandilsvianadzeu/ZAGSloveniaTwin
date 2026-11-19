@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T04:51:33.247Z",
+ "updated": "2026-11-19T05:53:34.001Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -124,6 +124,14 @@
     "source": "Primorske novice",
     "date": "2026-06-18T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
+    "outlets": 1,
+    "match": "headline names \"innorenew\""
+   },
+   {
+    "title": "ZA BOLJ ZDRAVE IN PRIJETNE STAVBE: InnoRenew CoE in UP IAM z inovativnim projektom 'BUILDWELL'",
+    "source": "regionalobala.si",
+    "date": "2026-01-31T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVXIyc1FLaTFKU1dnWTVBX1hQdVc5MEdxVGp4TjNjQlEwQmhYdmdrN1cwMzRQSXNRNVhhaEdIQXJuMXFSNVIzZ0lwWVZzdl8xRkszeFdOU1lvMXpaYlhYZDhCMDZsQlRCaTZKTGZ5RFhqYlFkMzlqbEhXQkMyM0JUX2ZjdXJtZlNabmRtX1RrYk80YV9aYzVEcUhJOWhPNk9tUnY3R1pRaVZWTFBXeHRyV3g0dXJSb1duWlpaZTdjWmhHNmRQT1E?oc=5",
     "outlets": 1,
     "match": "headline names \"innorenew\""
    }
