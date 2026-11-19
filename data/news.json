@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T16:18:36.900Z",
+ "updated": "2026-11-19T16:20:37.238Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -456,11 +456,19 @@
     "match": "headline names \"vzpenjac\""
    },
    {
-    "title": "Vzpenjača na ljubljanski grad začasno ne bo obratovala",
-    "source": "Si21",
-    "date": "2026-04-04T10:49:12.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa1MxdFZQVlJfajNZZks3eE5zWnc2RGdIY25IRE80T2Y3NEZ4MjAzdEdnYUFkMlBGMWgzMFhXUmFVdEtYdE8yWlMzU1FsUEJBbW96dGwzdXExOUVUSmh2bnVfUE1MTG9TcVY5Snh5SWtMdVNWd0pxLUk1ZjJ1S2FDRDNKaHVGblQtUHpOdDZGcEFiRnBZdWF5bFoySTZFbEd3VVIyQVVGb0pQdGMtaHlJTG45MA?oc=5",
-    "outlets": 2,
+    "title": "Janković napovedal drugi tir vzpenjače. Kaj se bo res gradilo?",
+    "source": "Svet24",
+    "date": "2026-05-19T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOXA3QmYySnltMHBvXzZTVHdwaGM0YTBNQWUwbzJXZXVieUp2dHczWXpJT3RXMTctelJ6WWUwTEwybUhRMW8yU2FsWkx3aDRfbnYxdDNkTWlaNTBLc1FWd01IZHVrNkN5NElnUENOR2dSamRvRk5VcEZZdXpfLWlIeXlUc3BxYTdtNmc?oc=5",
+    "outlets": 1,
+    "match": "headline names \"vzpenjac\""
+   },
+   {
+    "title": "Vzpenjača na Ljubljanski grad od danes ne obratuje",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-03-02T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUDFST2xRMjJic0d0UEE3eEpFaW10d2FFMlJvT0RWVjllOFFoTWtJTnZaMmRZMVJkaXFfdUVxWk91cGg1U3pOTi1PMFQ5eWhSYmFYOWFwT0k3eW1rWWxHS002RElta3BBX1c4QTJoQkI4OFg1ZHRXOVdVaDY5V04yUU1PcWFSN3FFREhpWUFZejVHb3cwa01HVWJTWG1NWUk?oc=5",
+    "outlets": 1,
     "match": "headline names \"vzpenjac\""
    },
    {
@@ -649,7 +657,7 @@
    },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
-    "source": "telegraf.si",
+    "source": "Telegraf",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
@@ -680,18 +688,18 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "50 let od rušilnega potresa: \"Strehe so se rušile, zemlja valovila, skale kotalile, živali norele\"",
-    "source": "rtvslo.si",
-    "date": "2026-05-06T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
     "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
     "source": "Svet24",
     "date": "2026-05-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "50 let od rušilnega potresa: \"Strehe so se rušile, zemlja valovila, skale kotalile, živali norele\"",
+    "source": "rtvslo.si",
+    "date": "2026-05-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    }
