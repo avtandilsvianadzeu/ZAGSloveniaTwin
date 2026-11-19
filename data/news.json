@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T16:20:37.238Z",
+ "updated": "2026-11-19T17:22:48.261Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -172,14 +172,6 @@
     "match": "headline names \"karavank\""
    },
    {
-    "title": "Predor Karavanke spet prevozen",
-    "source": "Delo.si",
-    "date": "2026-07-12T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQXNMa3VYQlFkdzlQdGx2ZmpEM0xMNTFXa2toY3BoU3RKYjhIN2stTHQ1VkMzU0d6cjZodE1sbGsxYzRBMVo3aGFnQ29nNTRvUVhxX1Bud2pXMzVoT0g0UzkzVm5GVmpXdlo5Ql9fN3VjS1AxNnAyVGttMU1iUW9MV0xXRFJDaG1BNU1V?oc=5",
-    "outlets": 1,
-    "match": "headline names \"karavank\""
-   },
-   {
     "title": "Kako je videti vožnja skozi novo cev predora Karavanke (VIDEO)",
     "source": "N1 Slovenija",
     "date": "2026-03-24T07:00:00.000Z",
@@ -208,6 +200,14 @@
     "source": "Avto-magazin.si",
     "date": "2026-03-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNkhWZ1Q5aUNYYWVMVnJXeDhObnV2dl9yLUFKSVF5d2pvNFM2b3kxVEQ0LXZCY2RCbG5jaG13N3VhSEFYNWN0TG1RYkdIckxzbHBWeWhZZUF2ZTFDTEluQnY1UHg4SkgyUnRrbDdfbW9BNTQtUF9UZE1tbk5nTHY5QkZVejRjV2NnMTVtNUxPeXhIbk1ERE1wR05nZw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"karavank\""
+   },
+   {
+    "title": "Vozniki, pozor: ponoči zapora predora Karavanke, težave tudi na prelazih",
+    "source": "Dnevnik",
+    "date": "2026-02-18T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUHJKbFdTR2NWbzZqUmdGYUxOUkFtRDE5dElLSnBGZFdENGlqLUEtaE41ZkJ0ekU2TmxmSVZPbVZBV2p1QUp6WWJvZWRFbzVmc1ZpXzBKbFJabmY3elpmVUtxLXlzYzluSkxNMXdDRkpFdHB6RmlidFpLM01LVW5OQUM2ZkprYzlnbUxKYlQzQzVGQkRmSS1leFQ3YnpjRHB0V2JUbWRjcG50QU1zQktXVGdjNlNTNFVJdVE?oc=5",
     "outlets": 1,
     "match": "headline names \"karavank\""
    }
@@ -380,7 +380,15 @@
     "source": "Novice.si",
     "date": "2026-11-09T13:24:12.000Z",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lbHpPU19KN2pDai05V0l3NW9TNF9CSlFxalRpTG1mZ3Jfa2hOZkNNVFVRYUZqS0k2OWZUYkdsel9tdHlMX3N0dTZuODlBUXRKNGFrLVVfOU5ERS1XdGt3RHY2VGVHMzB5ZjVwTnB4WUt5Skd3?oc=5",
-    "outlets": 8,
+    "outlets": 7,
+    "match": "headline names \"pletovarj\""
+   },
+   {
+    "title": "Zato je bil predor Pletovarje na štajerski avtocesti ponoči kar pet ur zaprt",
+    "source": "Večer",
+    "date": "2026-11-08T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaU5EMmI0bGZ0b1NYNFF1cFU0bFBuVlQtX0QxNmttZkV6Mk9RTWo5TnZYVW5rWnB5ZlpnUm15NEZQaFV3eGVvb25nOEx1Qm5lUUtGUFZ1SmFuTU5jX19LdURBU2s3OGNac29rcjYwNVhWQTVYOWxKQi1WSnQyOVBhcklYaFpXdzA2RWZJZ0QtNA?oc=5",
+    "outlets": 1,
     "match": "headline names \"pletovarj\""
    },
    {
