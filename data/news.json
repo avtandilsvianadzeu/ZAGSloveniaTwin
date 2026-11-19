@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T06:57:46.655Z",
+ "updated": "2026-11-19T07:59:58.686Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -280,7 +280,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 5,
+    "outlets": 4,
     "match": "headline names \"kastelec\""
    },
    {
@@ -362,6 +362,14 @@
     "source": "Primorske novice",
     "date": "2026-05-01T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNelFxTEJrVkJqNTV4U3VSeGRrR1VQNjhHdXVTUGRmVGNfdGtGWDdzQzBDWkNGUllLMmpYZ3NyU3hsNHVCdjJRVk9WcDJydlZycFJENzBPeFBTSW5oTzBYOHR2WGZJYWpsYU5yUkJ4TXhpNUw2OVJZdmRrYW9ZZVI4LWF1WDdnb2Jt?oc=5",
+    "outlets": 1,
+    "match": "headline names \"markovec\""
+   },
+   {
+    "title": "Predor Markovec ponovno odprt",
+    "source": "OBALAplus",
+    "date": "2026-04-30T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VVWhOYklWT2dTYVZCdVR0NmhheWlPc1c4R2pLcm1ZMDZsSnh0VHF4a2d3X0hYeEJEQnFxQ2tncnRRQ0tKQUlwRG5zSGpEUzJLcnFwRUJfamg5a0V5QklXMQ?oc=5",
     "outlets": 1,
     "match": "headline names \"markovec\""
    }
@@ -649,7 +657,7 @@
    },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
-    "source": "telegraf.si",
+    "source": "Telegraf",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
