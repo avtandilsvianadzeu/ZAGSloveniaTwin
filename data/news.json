@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T00:41:16.494Z",
+ "updated": "2026-11-19T02:47:29.574Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -124,14 +124,6 @@
     "source": "Primorske novice",
     "date": "2026-06-18T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
-    "outlets": 1,
-    "match": "headline names \"innorenew\""
-   },
-   {
-    "title": "ZA BOLJ ZDRAVE IN PRIJETNE STAVBE: InnoRenew CoE in UP IAM z inovativnim projektom 'BUILDWELL'",
-    "source": "regionalobala.si",
-    "date": "2026-01-31T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVXIyc1FLaTFKU1dnWTVBX1hQdVc5MEdxVGp4TjNjQlEwQmhYdmdrN1cwMzRQSXNRNVhhaEdIQXJuMXFSNVIzZ0lwWVZzdl8xRkszeFdOU1lvMXpaYlhYZDhCMDZsQlRCaTZKTGZ5RFhqYlFkMzlqbEhXQkMyM0JUX2ZjdXJtZlNabmRtX1RrYk80YV9aYzVEcUhJOWhPNk9tUnY3R1pRaVZWTFBXeHRyV3g0dXJSb1duWlpaZTdjWmhHNmRQT1E?oc=5",
     "outlets": 1,
     "match": "headline names \"innorenew\""
    }
@@ -680,18 +672,18 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
-    "source": "Svet24",
-    "date": "2026-05-06T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
     "title": "50 let od rušilnega potresa: \"Strehe so se rušile, zemlja valovila, skale kotalile, živali norele\"",
     "source": "rtvslo.si",
     "date": "2026-05-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
+    "source": "Svet24",
+    "date": "2026-05-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    }
