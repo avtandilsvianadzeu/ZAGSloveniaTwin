@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T12:10:19.966Z",
+ "updated": "2026-11-19T13:12:24.873Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,16 +10,6 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
-   }
-  ],
-  "nm_brv": [
-   {
-    "title": "OŠ Bršljin in OŠ Drska - sosednji skupnosti povezuje Štukljeva brv",
-    "source": "Svet24",
-    "date": "2025-12-10T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbDktX3VqSnZtRjJ2YjZwd1k5cWM5Z2dralNPSWZXT24tT1BjR0tTWXR4Y2F0aWVDTi1mdXFuSEhWQTBfLWpLLWZkQndkRGtncjRlaGpqWklFbzg0N2U3OXVNWmdnOGN5OE95WnFWOTViOG0temxXdTF3Z1h0VHFqTENhNnQ0OFZQTnFwc0tUNzF5WkM1SFNXOGRIU2F6aGN2RUk4WGZjUVFzOGhSNURYRjRXb2N0ckhkcHJvRkxjaG1mWFk?oc=5",
-    "outlets": 1,
-    "match": "headline names \"stukljev\""
    }
   ],
   "verd": [
@@ -602,14 +592,6 @@
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUkhBOThtdWFPZERPOVVoeWladEs4b2VPTkR2Zmp3MFhZRl9zaTlxNjJVYkl1aDFBVjExSXoxYkI5MFBMcWNPcGJCb0RRSGRhVkVDNnVLaFFiM3R5UU4zWU9hNDlkQkNRYWRvN2dBV2NqU2dhOFZrTl82S0ZFcXZWeVpVU0REMmRWOTRiSE4zUlNMRHpvSVQwY25iS2o?oc=5",
     "outlets": 1,
     "match": "headline names \"livar\""
-   },
-   {
-    "title": "Črnomelj postaja srce Livarja, vse proizvodne aktivnosti na eni lokaciji",
-    "source": "Svet24",
-    "date": "2026-06-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQN2RVcC1oUmFTVUxNRkluNE95QlFaSW5HUUxEYzBIM2xkZFVHcGhlamhIei1BV0c4STczb2RxOUpnLTZiNVJ5WjJIbHhVN2MzS3B3T2JJU1F4QzRjdk1RTXJyaGFPdmw3Wkl5VTF3eXBtOUF3YVZHYmdWMUpvblkyM3Zob0xrazFuN0RLOEo3eV9veS1qQTZrSFFIMzhueXltRnFnekFibw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"livar\""
    }
   ],
   "ss_kocevje": [
@@ -667,7 +649,7 @@
    },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
-    "source": "telegraf.si",
+    "source": "Telegraf",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
@@ -698,18 +680,18 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
-    "source": "Svet24",
-    "date": "2026-05-06T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
     "title": "50 let od rušilnega potresa: \"Strehe so se rušile, zemlja valovila, skale kotalile, živali norele\"",
     "source": "rtvslo.si",
     "date": "2026-05-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
+    "source": "Svet24",
+    "date": "2026-05-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    }
