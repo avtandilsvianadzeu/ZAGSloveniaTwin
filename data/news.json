@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T05:55:36.984Z",
+ "updated": "2026-11-19T06:57:46.655Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -449,9 +449,9 @@
    },
    {
     "title": "Janković napovedal drugi tir vzpenjače. Kaj se bo res gradilo?",
-    "source": "Svet24",
+    "source": "Svet24.si",
     "date": "2026-05-19T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOXA3QmYySnltMHBvXzZTVHdwaGM0YTBNQWUwbzJXZXVieUp2dHczWXpJT3RXMTctelJ6WWUwTEwybUhRMW8yU2FsWkx3aDRfbnYxdDNkTWlaNTBLc1FWd01IZHVrNkN5NElnUENOR2dSamRvRk5VcEZZdXpfLWlIeXlUc3BxYTdtNmc?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWWl1NWVQdGhZWm9WUnJjMjNud014Wm1nQ0tnS2tlUmdfX0VtZlJGZHpqcnZ6aTktUHF4eDNDbGJnd2MtYUZHVGlxekhjRzkxMHM1d1NmNjF5aFg0MTlIeGQzN0FWWWQ0M3VnMjY3Q2JTd19uY08tUzFGck5ROV9aVDdoOVdYVWRsZDNENEkzR1oxS3BkMlc5SkhPOA?oc=5",
     "outlets": 1,
     "match": "headline names \"vzpenjac\""
    },
