@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T07:57:57.271Z",
+ "updated": "2026-11-20T09:00:02.973Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -426,14 +426,6 @@
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa19CMDNLVVNyMU4zeXpOZkFiWFZfU282VzczYTY2eWxOWUJXa2RIMjFybDl5a0hGMUNrUE1kX2ZIQWxrVlJBOUs4T1FOd0U4M1J5bUt4ck5JUkFPTG9mN3JUVWR1bVNjX3ZHUm5NYUlhbF90OFhIUUNiSjA4SWhTejluMkRNUUg3bTYyWUxidHNoS1FXMktF?oc=5",
     "outlets": 1,
     "match": "headline names \"avce\""
-   },
-   {
-    "title": "Črpalna hidroelektrarna Avče – primer uspešnega sobivanja ljudi, energetike in narave",
-    "source": "Maribor24.si",
-    "date": "2025-11-20T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaHlzd2NjZEVSQXNNZ3ctQkVhbnFjRjkyOHdZUzRzM2V4eGFiZHVzdjVUNFJyTUNHVms2WFU2ZHVKY3VsMFpjcUkyRjg2cTZXdE4zNGtWODBTeWZHakt0VDc5SjhPMW1KVXAwWHJSMjdVR3B1QkVBOEpLTUhVdTVIRWZKblJiclo1ekNYdTdWczBBV20yb0U3ekswZlJIR2s0bWpZOXE4a2FuS3doZ3VjSVdJSEI?oc=5",
-    "outlets": 1,
-    "match": "headline names \"avce\""
    }
   ],
   "velikaplanina": [
@@ -584,11 +576,19 @@
     "match": "headline names \"kanin\""
    },
    {
+    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
+    "source": "Svet24",
+    "date": "2026-06-17T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
+    "outlets": 2,
+    "match": "headline names \"kanin\""
+   },
+   {
     "title": "Nova era za smučišče Kanin: Prihajajo nove žičnice",
     "source": "Goriške novice",
     "date": "2026-04-24T10:05:03.000Z",
     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNHBlVUFVTjZZMVNSSVJ3OVczdmZHaVNINnN5U0s5ZXROV0RfMUVuZWEwdU84R2pOTVkzalJobDh5d2JuUjJ0Tkx2ZkIzeXhRb2p3a1oyemVVSzJHSTRrdGMzWkdpb3pfbi1tNmNUVjhpYjduYzNBQ0RWUk1UQU5mTA?oc=5",
-    "outlets": 2,
+    "outlets": 3,
     "match": "headline names \"kanin\""
    },
    {
