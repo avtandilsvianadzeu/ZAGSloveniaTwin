@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T18:21:19.898Z",
+ "updated": "2026-11-20T18:23:19.274Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,6 +10,16 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
+   }
+  ],
+  "crna": [
+   {
+    "title": "Od jabke do mošta: folklora, ples, ustvarjalnost in bogate nagrade v Črni na Koroškem",
+    "source": "Koroške Novice",
+    "date": "2026-11-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNS0dYd3RRLVZFTi1tS0k5WmtJMDRqOUpVMWY0LTRGYUI5QUtHSHBiYmU4cTJYT1AyM2Nfa3J0YTluZWVEeklMTF9iQmVyd3hRTWxKT2Z4YklmRjB0bE9EejRtSzBYNzlmdVBaTTRpbGl0Umt5c0NtOHVUeDB2NlF0VUNpYjk3eWJpQ1hKZGZjUlRhTHBPSkMwRnk5VlV2Y2VhOU1zQU5ZXzJiNEtuVWRJZmNrTlNaanpvandj?oc=5",
+    "outlets": 1,
+    "match": "headline names \"na koroskem\""
    }
   ],
   "verd": [
@@ -280,7 +290,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 4,
+    "outlets": 5,
     "match": "headline names \"kastelec\""
    },
    {
@@ -320,7 +330,7 @@
     "source": "regionalobala.si",
     "date": "2025-11-22T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOFlCaEVaT1M3bC1SN0Nwa0ZjLThyV2lZZ0FjRU81Ny1hZFFLNkJJTXZwTTRHcWVKUUVuT1h3UFhyWkQyOGJnT2dsY0R5MHIwVEdhUTNPN3RRUHJvQk0wc1NwOXhVVm14VHhndDF3MVhoM004cjJXdjFnRzk4NkNleHdndDZ6RlZGUWxDN2J1cF9OWjV2dXJTVWo1OGxHV2VpckZzc0V1Sk5ubUhLZHl2OEg3Rlc0VWc?oc=5",
-    "outlets": 2,
+    "outlets": 1,
     "match": "headline names \"kastelec\""
    }
   ],
@@ -380,7 +390,7 @@
     "source": "Novice.si",
     "date": "2026-11-09T13:24:12.000Z",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lbHpPU19KN2pDai05V0l3NW9TNF9CSlFxalRpTG1mZ3Jfa2hOZkNNVFVRYUZqS0k2OWZUYkdsel9tdHlMX3N0dTZuODlBUXRKNGFrLVVfOU5ERS1XdGt3RHY2VGVHMzB5ZjVwTnB4WUt5Skd3?oc=5",
-    "outlets": 7,
+    "outlets": 6,
     "match": "headline names \"pletovarj\""
    },
    {
@@ -576,11 +586,19 @@
     "match": "headline names \"kanin\""
    },
    {
+    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
+    "source": "Svet24",
+    "date": "2026-06-17T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
+    "outlets": 2,
+    "match": "headline names \"kanin\""
+   },
+   {
     "title": "Nova era za smučišče Kanin: Prihajajo nove žičnice",
     "source": "Goriške novice",
     "date": "2026-04-24T10:05:03.000Z",
     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNHBlVUFVTjZZMVNSSVJ3OVczdmZHaVNINnN5U0s5ZXROV0RfMUVuZWEwdU84R2pOTVkzalJobDh5d2JuUjJ0Tkx2ZkIzeXhRb2p3a1oyemVVSzJHSTRrdGMzWkdpb3pfbi1tNmNUVjhpYjduYzNBQ0RWUk1UQU5mTA?oc=5",
-    "outlets": 2,
+    "outlets": 3,
     "match": "headline names \"kanin\""
    },
    {
