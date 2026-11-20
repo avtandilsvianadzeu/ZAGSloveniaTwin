@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T15:14:49.247Z",
+ "updated": "2026-11-20T16:16:58.773Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -568,19 +568,11 @@
     "match": "headline names \"kanin\""
    },
    {
-    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
-    "source": "Svet24",
-    "date": "2026-06-17T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
-    "outlets": 2,
-    "match": "headline names \"kanin\""
-   },
-   {
     "title": "Nova era za smučišče Kanin: Prihajajo nove žičnice",
     "source": "Goriške novice",
     "date": "2026-04-24T10:05:03.000Z",
     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNHBlVUFVTjZZMVNSSVJ3OVczdmZHaVNINnN5U0s5ZXROV0RfMUVuZWEwdU84R2pOTVkzalJobDh5d2JuUjJ0Tkx2ZkIzeXhRb2p3a1oyemVVSzJHSTRrdGMzWkdpb3pfbi1tNmNUVjhpYjduYzNBQ0RWUk1UQU5mTA?oc=5",
-    "outlets": 3,
+    "outlets": 2,
     "match": "headline names \"kanin\""
    },
    {
@@ -710,6 +702,38 @@
     "source": "Dnevnik",
     "date": "2026-08-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Zakaj so pod Nukom našli kipec z erekcijo penisa",
+    "source": "Dnevnik",
+    "date": "2026-03-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTDJ4eTh0V1p6bzdBSG0wS2lQdUtVQTF6Ym5oaWpIa3hmcXVtLUxRZHZvRmI2dmk4aGZ3UzA2ejI5V21hNEN0SzR0QjVZWENlc01uMDZHbWxqb3puckNVTWlqZUFaSHphbGQ4YW02Z05ZMDhTYXVLMl9RTExkX1pSUFhZNUdyTVNncGJJQzlkRkhYM1hWdHNEOVRGRzQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Od NUK-a do Pošte Slovenije, to so aktualna delovna mesta v Ljubljani",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-01-25T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQU3dTdHBvZzB0QnJ5anQya0h6TS1zUXdZZXJFQzE0NXJlV0dNZzJQZm1tWllGdTROQmdvdExfemNoT3hOaEV1V0dIcVhkcmMyOFU2czg5b0FONTRuZ1A5dVJITWk4VXVlNlcwS29lSWhZYUNaeWx2NXdjS0pxOVh5YnJ1eHpGWTZxMGVCdkJMeGE4OVJCd0tFTVNQblRLdjh4Q21rd0lwZkRNeFRGWmJvbw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Čitalnice v NUK odprte vse do 22.30",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-01-05T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPR0dORFMwZG01X01xLUlPMWZyU0pLQjM4M19RN0ZLREJycTl2WVNBQ3RIMXh0UkRZSkw3WmdfcFBIbm91M2NIcFZMcm9BR2I1cjZ1MHB6ejNoNGw1M190bHNIazBIaXRmV0d6azFkNHI3NHI3UUxCbHZ5amJmUDNYWXFkN2phOU4zX1E?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Super novica za študente! NUK podaljšuje odprtje čitalnice",
+    "source": "Student.si",
+    "date": "2025-12-30T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2dpVmJwMEVaM2lLdy10SXNEVzRCVTlhSXBUaVp3MTdqbTlOa09JM053REJsT0JJbDktaDd2OE91SzZ2c2kwY2ItVFpIUmJ3a2tNMTVfWjFYN280Tm1XZGZPbUFZOVNzVXkwelpPTHhsVXBUWmtHMXd1QzRhb2p2U3JvenNOa1RuWUhwb1d5VHVkYzVuMThUa1Vtc0pNT2U5VW14ZTE5MEE0UQ?oc=5",
     "outlets": 1,
     "match": "headline names \"nuk\""
    },
