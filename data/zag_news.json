@@ -1,6 +1,6 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-20T05:30:03.075Z",
+ "updated": "2026-11-20T06:32:07.905Z",
  "items": {
   "sl": [
    {
@@ -233,30 +233,6 @@
   ],
   "media": [
    {
-    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
-    "outlet": "MojaObčina.si",
-    "domain": "mojaobcina.si",
-    "kind": "news",
-    "reviewed": true,
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
-    "date": "2026-10-15T07:00:00.000Z",
-    "match": "headline names ZAG",
-    "records": [
-     "zag_logatec"
-    ]
-   },
-   {
-    "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
-    "outlet": "Večer",
-    "domain": "vecer.com",
-    "kind": "news",
-    "reviewed": true,
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhiUk5DMU9IdmZzN0s1SFZzOHlYTm5rcHlobGttQ29uMjgzVERyM1VjLUdpTTIwNFQ0dDY3Yk9SeDZNTkNiaGQ5UVh1Uy1CRlk4YTZwdWNCZUJkcmVFWnVSNUlremJxQ2NObDNMbnBtdDF0V0tyeHgyWkZ4MkpiMmlxSExWN3ZLcmw5ZWd5d3Q4dGNnc0RhOU5KRVdDMXRWNTZzcFZDT2huU0xSZXRma2hmcDM?oc=5",
-    "date": "2026-10-08T07:00:00.000Z",
-    "match": "headline names Zavod za gradbeništvo Slovenije",
-    "records": []
-   },
-   {
     "title": "V zavodu za gradbeništvo predstavili rešitev za shranjevanje odvečne poletne toplote",
     "outlet": "megafon.si",
     "domain": "megafon.si",
@@ -282,8 +258,8 @@
  },
  "media_check": {
   "queries": 5,
-  "kept": 4,
-  "reviewed": 3,
+  "kept": 2,
+  "reviewed": 1,
   "dropped": 0
  }
 }
