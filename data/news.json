@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T06:53:57.835Z",
+ "updated": "2026-11-20T07:55:59.992Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -172,14 +172,6 @@
     "match": "headline names \"karavank\""
    },
    {
-    "title": "Predor Karavanke spet prevozen",
-    "source": "Delo.si",
-    "date": "2026-07-12T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQXNMa3VYQlFkdzlQdGx2ZmpEM0xMNTFXa2toY3BoU3RKYjhIN2stTHQ1VkMzU0d6cjZodE1sbGsxYzRBMVo3aGFnQ29nNTRvUVhxX1Bud2pXMzVoT0g0UzkzVm5GVmpXdlo5Ql9fN3VjS1AxNnAyVGttMU1iUW9MV0xXRFJDaG1BNU1V?oc=5",
-    "outlets": 1,
-    "match": "headline names \"karavank\""
-   },
-   {
     "title": "Kako je videti vožnja skozi novo cev predora Karavanke (VIDEO)",
     "source": "N1 Slovenija",
     "date": "2026-03-24T07:00:00.000Z",
@@ -208,6 +200,14 @@
     "source": "Avto-magazin.si",
     "date": "2026-03-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNkhWZ1Q5aUNYYWVMVnJXeDhObnV2dl9yLUFKSVF5d2pvNFM2b3kxVEQ0LXZCY2RCbG5jaG13N3VhSEFYNWN0TG1RYkdIckxzbHBWeWhZZUF2ZTFDTEluQnY1UHg4SkgyUnRrbDdfbW9BNTQtUF9UZE1tbk5nTHY5QkZVejRjV2NnMTVtNUxPeXhIbk1ERE1wR05nZw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"karavank\""
+   },
+   {
+    "title": "Vozniki, pozor: ponoči zapora predora Karavanke, težave tudi na prelazih",
+    "source": "Dnevnik",
+    "date": "2026-02-18T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUHJKbFdTR2NWbzZqUmdGYUxOUkFtRDE5dElLSnBGZFdENGlqLUEtaE41ZkJ0ekU2TmxmSVZPbVZBV2p1QUp6WWJvZWRFbzVmc1ZpXzBKbFJabmY3elpmVUtxLXlzYzluSkxNMXdDRkpFdHB6RmlidFpLM01LVW5OQUM2ZkprYzlnbUxKYlQzQzVGQkRmSS1leFQ3YnpjRHB0V2JUbWRjcG50QU1zQktXVGdjNlNTNFVJdVE?oc=5",
     "outlets": 1,
     "match": "headline names \"karavank\""
    }
@@ -280,7 +280,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 6,
+    "outlets": 5,
     "match": "headline names \"kastelec\""
    },
    {
@@ -576,11 +576,19 @@
     "match": "headline names \"kanin\""
    },
    {
+    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
+    "source": "Svet24",
+    "date": "2026-06-17T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
+    "outlets": 2,
+    "match": "headline names \"kanin\""
+   },
+   {
     "title": "Nova era za smučišče Kanin: Prihajajo nove žičnice",
     "source": "Goriške novice",
     "date": "2026-04-24T10:05:03.000Z",
     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNHBlVUFVTjZZMVNSSVJ3OVczdmZHaVNINnN5U0s5ZXROV0RfMUVuZWEwdU84R2pOTVkzalJobDh5d2JuUjJ0Tkx2ZkIzeXhRb2p3a1oyemVVSzJHSTRrdGMzWkdpb3pfbi1tNmNUVjhpYjduYzNBQ0RWUk1UQU5mTA?oc=5",
-    "outlets": 2,
+    "outlets": 3,
     "match": "headline names \"kanin\""
    },
    {
