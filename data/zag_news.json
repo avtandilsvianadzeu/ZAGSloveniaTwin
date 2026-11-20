@@ -1,8 +1,15 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-20T12:04:45.175Z",
+ "updated": "2026-11-20T12:46:41.995Z",
  "items": {
   "sl": [
+   {
+    "title": "Od projektne ideje do uspešnega projektnega predloga, delavnica projekta LIFE IP Restart",
+    "url": "https://www.zag.si/od-projektne-ideje-do-uspesnega-projektnega-predloga-delavnica-projekta-life-ip-restart/",
+    "date": "2026-11-20T12:34:11.000Z",
+    "summary": "V četrtek, 19. novembra 2026, je na ZAG-u potekala druga delavnica »Od projektne ideje do projektnega predloga«, ki smo jo organizirali v sodelovanju s projektoma LIFE Krepitev zmogljivosti 2 in LIFE IP Restart. Delavnica je bila namenjena predvsem malim in",
+    "category": "Aktualno"
+   },
    {
     "title": "FRISSBE_Grajenje evropske odličnosti v požarni varnosti: Nova ERA raziskovanja požarov",
     "url": "https://www.zag.si/frissbe_evropska-odlicnost-pozarna-varnost-zakljucek-projekta/",
@@ -67,13 +74,6 @@
     "url": "https://www.zag.si/iz-laboratorija-v-posel-pokazal-pomembnost-povezovanja-z-industrijo/",
     "date": "2026-10-21T10:13:21.000Z",
     "summary": "V gradbenem sektorju obstaja mnogo različnih akterjev, z vidikov projektiranja, gradnje in vzdrževanja, preiskav in raziskav, financiranja ter zakonodaje. Vsak od teh opravlja svoj nabor nalog, pri čemer se marsikdaj sooča s specifičnimi težavami, ki jih sam",
-    "category": "Aktualno"
-   },
-   {
-    "title": "Prometna infrastruktura 5.0: izzivi in priložnosti",
-    "url": "https://www.zag.si/prometna-infrastruktura-5-0-izzivi-in-priloznosti/",
-    "date": "2026-10-13T14:15:30.000Z",
-    "summary": "Vabljeni na strokovni predavanji o trajnostnem in pametnem upravljanju prometne infrastrukture, ki bosta v ponedeljek, 19. oktobra 2026, od 13.30 do 15.00 v dvorani v 5. nadstropju ZAG-a. Predavatelja bosta Gerardo W. Flintsch, Ph.D., Virginia Tech in Dr.",
     "category": "Aktualno"
    }
   ],
@@ -151,6 +151,14 @@
   ],
   "latest": [
    {
+    "title": "Od projektne ideje do uspešnega projektnega predloga, delavnica projekta LIFE IP Restart",
+    "url": "https://www.zag.si/od-projektne-ideje-do-uspesnega-projektnega-predloga-delavnica-projekta-life-ip-restart/",
+    "date": "2026-11-20T12:34:11.000Z",
+    "summary": "V četrtek, 19. novembra 2026, je na ZAG-u potekala druga delavnica »Od projektne ideje do projektnega predloga«, ki smo jo organizirali v sodelovanju s projektoma LIFE Krepitev zmogljivosti 2 in LIFE IP Restart. Delavnica je bila namenjena predvsem malim in",
+    "category": "Aktualno",
+    "lang": "sl"
+   },
+   {
     "title": "FRISSBE_Building European Excellence in Fire Safety: A New ERA in Fire Research",
     "url": "https://www.zag.si/en/frissbe-european-excellence-fire-safety-project-conclusion/",
     "date": "2026-11-16T11:23:36.000Z",
@@ -219,14 +227,6 @@
     "url": "https://www.zag.si/iz-laboratorija-v-posel-pokazal-pomembnost-povezovanja-z-industrijo/",
     "date": "2026-10-21T10:13:21.000Z",
     "summary": "V gradbenem sektorju obstaja mnogo različnih akterjev, z vidikov projektiranja, gradnje in vzdrževanja, preiskav in raziskav, financiranja ter zakonodaje. Vsak od teh opravlja svoj nabor nalog, pri čemer se marsikdaj sooča s specifičnimi težavami, ki jih sam",
-    "category": "Aktualno",
-    "lang": "sl"
-   },
-   {
-    "title": "Prometna infrastruktura 5.0: izzivi in priložnosti",
-    "url": "https://www.zag.si/prometna-infrastruktura-5-0-izzivi-in-priloznosti/",
-    "date": "2026-10-13T14:15:30.000Z",
-    "summary": "Vabljeni na strokovni predavanji o trajnostnem in pametnem upravljanju prometne infrastrukture, ki bosta v ponedeljek, 19. oktobra 2026, od 13.30 do 15.00 v dvorani v 5. nadstropju ZAG-a. Predavatelja bosta Gerardo W. Flintsch, Ph.D., Virginia Tech in Dr.",
     "category": "Aktualno",
     "lang": "sl"
    }
