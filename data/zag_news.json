@@ -1,6 +1,6 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-20T01:19:47.962Z",
+ "updated": "2026-11-20T01:39:55.950Z",
  "items": {
   "sl": [
    {
@@ -257,17 +257,6 @@
     "records": []
    },
    {
-    "title": "V zavodu za gradbeništvo predstavili rešitev za shranjevanje odvečne poletne toplote",
-    "outlet": "megafon.si",
-    "domain": "megafon.si",
-    "kind": "not reviewed",
-    "reviewed": false,
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMzg3SnNUdHJVdzNZOUlmaFpwZVdZMEdGUUR4ODZ0X0lJWmhYaEoxN0xRRWJWeGN4NWxHbjg0RVBCckkyYnNSdFhJejNOeVJtSWlUbGJ3UkpwYUN4czNmbGxBUUp5dDU0Y1ZLUVA5R2piMmFxQVRBRHI0RW5uYzFKbWd3YXBMVnJzYTJFamxtc1VJTGxrVkJSN2c4WlVEbU1oOS1kVE1FMlRHTFlTYkpXZFFUV2g?oc=5",
-    "date": "2026-08-10T07:00:00.000Z",
-    "match": "headline names Zavod za gradbeništvo Slovenije",
-    "records": []
-   },
-   {
     "title": "Požarni laboratorij Zavoda za gradbeništvo Slovenije postal raziskovalna postaja Evropske vesoljske agencije",
     "outlet": "Nova24TV",
     "domain": "nova24tv.si",
@@ -282,7 +271,7 @@
  },
  "media_check": {
   "queries": 5,
-  "kept": 4,
+  "kept": 3,
   "reviewed": 3,
   "dropped": 0
  }
