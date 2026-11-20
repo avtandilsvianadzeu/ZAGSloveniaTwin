@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T01:41:38.950Z",
+ "updated": "2026-11-20T02:43:41.435Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -67,14 +67,6 @@
    }
   ],
   "zag": [
-   {
-    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
-    "source": "MojaObčina.si",
-    "date": "2026-10-15T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
-    "outlets": 1,
-    "match": "headline names \"zag\""
-   },
    {
     "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
     "source": "Večer",
@@ -288,7 +280,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 6,
+    "outlets": 5,
     "match": "headline names \"kastelec\""
    },
    {
@@ -680,14 +672,6 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "Streslo je v Breginju, potres so čutili v Zgornjem Posočju",
-    "source": "Svet24",
-    "date": "2026-08-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1lcVExb2pndTlmTk1ieTNRMmE5REdsSWdhQXBRRmpTaWNzX2tRRnNzMU5IRHZBZFpwLTNQVFM3Wm5JaWZwVU9EZmhPd0FYXzFxVmtuNjN2NzlaSTI2WHVFeUQtWUFkdEwyaGhDVFhEUnhtNW1GNUlGd3hUVkQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
     "title": "Pri Kobaridu so se stresla tla, potres čutili tudi v Tolminu",
     "source": "Žurnal24",
     "date": "2026-08-21T07:00:00.000Z",
@@ -734,6 +718,38 @@
     "source": "Dnevnik",
     "date": "2026-08-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Zakaj so pod Nukom našli kipec z erekcijo penisa",
+    "source": "Dnevnik",
+    "date": "2026-03-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTDJ4eTh0V1p6bzdBSG0wS2lQdUtVQTF6Ym5oaWpIa3hmcXVtLUxRZHZvRmI2dmk4aGZ3UzA2ejI5V21hNEN0SzR0QjVZWENlc01uMDZHbWxqb3puckNVTWlqZUFaSHphbGQ4YW02Z05ZMDhTYXVLMl9RTExkX1pSUFhZNUdyTVNncGJJQzlkRkhYM1hWdHNEOVRGRzQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Od NUK-a do Pošte Slovenije, to so aktualna delovna mesta v Ljubljani",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-01-25T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQU3dTdHBvZzB0QnJ5anQya0h6TS1zUXdZZXJFQzE0NXJlV0dNZzJQZm1tWllGdTROQmdvdExfemNoT3hOaEV1V0dIcVhkcmMyOFU2czg5b0FONTRuZ1A5dVJITWk4VXVlNlcwS29lSWhZYUNaeWx2NXdjS0pxOVh5YnJ1eHpGWTZxMGVCdkJMeGE4OVJCd0tFTVNQblRLdjh4Q21rd0lwZkRNeFRGWmJvbw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Čitalnice v NUK odprte vse do 22.30",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-01-05T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPR0dORFMwZG01X01xLUlPMWZyU0pLQjM4M19RN0ZLREJycTl2WVNBQ3RIMXh0UkRZSkw3WmdfcFBIbm91M2NIcFZMcm9BR2I1cjZ1MHB6ejNoNGw1M190bHNIazBIaXRmV0d6azFkNHI3NHI3UUxCbHZ5amJmUDNYWXFkN2phOU4zX1E?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Super novica za študente! NUK podaljšuje odprtje čitalnice",
+    "source": "Student.si",
+    "date": "2025-12-30T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2dpVmJwMEVaM2lLdy10SXNEVzRCVTlhSXBUaVp3MTdqbTlOa09JM053REJsT0JJbDktaDd2OE91SzZ2c2kwY2ItVFpIUmJ3a2tNMTVfWjFYN280Tm1XZGZPbUFZOVNzVXkwelpPTHhsVXBUWmtHMXd1QzRhb2p2U3JvenNOa1RuWUhwb1d5VHVkYzVuMThUa1Vtc0pNT2U5VW14ZTE5MEE0UQ?oc=5",
     "outlets": 1,
     "match": "headline names \"nuk\""
    },
