@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T13:10:28.384Z",
+ "updated": "2026-11-20T14:12:37.538Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -280,7 +280,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 5,
+    "outlets": 8,
     "match": "headline names \"kastelec\""
    },
    {
@@ -288,7 +288,7 @@
     "source": "Dnevnik",
     "date": "2026-09-24T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1JQWUtScWZqa0dlYTBtdEg5ekZocEZ5emRvTVE2c1lsM05RaVFvNXhHSkN3Q3BhZnpXRWVmVFFTR0Z6N3luTEZMMms4dzM2YnN6Tm5Rbkd4RDE2RDVNNWtGVnRaQUpNNDZWZFphQktDeG9fV1V5MFRaMjNNczZ5TGZEdUFaWGRWdUZEdGpHRC12NTNPTmM2M2tqNi1OV3NjNnhSdDlKcUwtM1EwN3c?oc=5",
-    "outlets": 1,
+    "outlets": 2,
     "match": "headline names \"kastelec\""
    },
    {
@@ -296,6 +296,14 @@
     "source": "regionalobala.si",
     "date": "2026-09-24T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUC1pVlJKZEFjUDVGU1dHX0pBaTktcGRXSmx2TjdYYUR2N0NjbmRTaTQzdlFLNldHa2gwNEg4NzRSSi11WjlaRTdMdWhXTHJ3aXlxYV91UTlDYnZhNUs4N1pSNGZTcWNPMFZXVDY1RkhpS0hobWN4a0REbUZrc05pSnRMNkZsTHQ1ZUxFU2g2czhzeTBHVHJQMllfQjdDNnZZUVl4MU9OeFZFQllVUFJlcHBKZEQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kastelec\""
+   },
+   {
+    "title": "Pri Izoli zavili na pokušino vin, zamujali, končalo se je v predoru Kastelec",
+    "source": "Moja Dolenjska",
+    "date": "2026-09-17T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXBfalRVZW01TmhBSklkdEhja21oejhsRzZrOE91a3pwNmJLQWJkUlczejdpMkJnSUIzY09pTW95QW01QjhMRDBub1BLMWtmcGZnWDk2WWsyX2lQUElNOXpaV3ZrTnRSQWZsa1h5ZGd4ZFZfbDdWYVVDN0VZS1ctSFphZmI3Y2h5M1ZLRHRULWVBdS1XMXkxNjExZm04dG11S0lZ?oc=5",
     "outlets": 1,
     "match": "headline names \"kastelec\""
    },
@@ -308,6 +316,14 @@
     "match": "headline names \"kastelec\""
    },
    {
+    "title": "Od počitniške hiše do predora Kastelec v pičlih 20 minutah",
+    "source": "Moja Dolenjska",
+    "date": "2026-08-05T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbkNQaXNOS0VpM1VSOUdoUnZXMFAtSWNPODZyMWRMZkJFZTBsczFTaHRmenRqV3NNNjNpNEdvNkZsNDNHc1h0dGNRU0NqMUIyRzhjU0ZUM1JOSG5mdEVnS1poV2FudGpDRHVvNGxWOFpCVC12cHdwSjJmeWUyS1hac01aS2tHdEtNb2hQVDN3?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kastelec\""
+   },
+   {
     "title": "Predor Kastelec na primorski avtocesti ponovno odprli",
     "source": "Delo.si",
     "date": "2026-07-31T07:00:00.000Z",
@@ -316,10 +332,10 @@
     "match": "headline names \"kastelec\""
    },
    {
-    "title": "MOČNA BURJA OHROMILA PROMET: Predor Kastelec je zaprt, prepovedi za več vrst vozil",
+    "title": "ZAPRT KASTELEC, PA ŠE REGIONALNA CESTA PRI KOZINI: Zaradi gorečega vozila obvoz čez Italijo",
     "source": "regionalobala.si",
-    "date": "2025-11-22T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOFlCaEVaT1M3bC1SN0Nwa0ZjLThyV2lZZ0FjRU81Ny1hZFFLNkJJTXZwTTRHcWVKUUVuT1h3UFhyWkQyOGJnT2dsY0R5MHIwVEdhUTNPN3RRUHJvQk0wc1NwOXhVVm14VHhndDF3MVhoM004cjJXdjFnRzk4NkNleHdndDZ6RlZGUWxDN2J1cF9OWjV2dXJTVWo1OGxHV2VpckZzc0V1Sk5ubUhLZHl2OEg3Rlc0VWc?oc=5",
+    "date": "2026-07-31T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaHVTbjhtWkpmVzE0RGEzaFBGWlZDTng1ek9WV25jbmlTdVdvRHd3Uk1KbHZfazQ1R1ZUcWM0bEJ2X0plOEtTUllORjdWTmZQMVh5T2dNclI2enNybEZ3LVFLdlpvMVFFTDF4d3FsZnhPSHhJZVd0QWdKeEMtVlI3YlJtU3k0Wl9wYWxCeThNMHpuTjdTTGVzbkNpVEtYaXc4QWh4VHNOcVhxdzFxVy1rQlJ1Q2lsM2RENmpqY1RTY3ZScHc?oc=5",
     "outlets": 1,
     "match": "headline names \"kastelec\""
    }
@@ -380,7 +396,15 @@
     "source": "Novice.si",
     "date": "2026-11-09T13:24:12.000Z",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lbHpPU19KN2pDai05V0l3NW9TNF9CSlFxalRpTG1mZ3Jfa2hOZkNNVFVRYUZqS0k2OWZUYkdsel9tdHlMX3N0dTZuODlBUXRKNGFrLVVfOU5ERS1XdGt3RHY2VGVHMzB5ZjVwTnB4WUt5Skd3?oc=5",
-    "outlets": 8,
+    "outlets": 7,
+    "match": "headline names \"pletovarj\""
+   },
+   {
+    "title": "Zato je bil predor Pletovarje na štajerski avtocesti ponoči kar pet ur zaprt",
+    "source": "Večer",
+    "date": "2026-11-08T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaU5EMmI0bGZ0b1NYNFF1cFU0bFBuVlQtX0QxNmttZkV6Mk9RTWo5TnZYVW5rWnB5ZlpnUm15NEZQaFV3eGVvb25nOEx1Qm5lUUtGUFZ1SmFuTU5jX19LdURBU2s3OGNac29rcjYwNVhWQTVYOWxKQi1WSnQyOVBhcklYaFpXdzA2RWZJZ0QtNA?oc=5",
+    "outlets": 1,
     "match": "headline names \"pletovarj\""
    },
    {
