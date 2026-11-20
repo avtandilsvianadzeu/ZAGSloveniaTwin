@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T23:37:31.604Z",
+ "updated": "2026-11-20T00:39:35.275Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -472,10 +472,10 @@
     "match": "headline names \"vzpenjac\""
    },
    {
-    "title": "Vzpenjača na ljubljanski grad začasno ne bo obratovala",
-    "source": "Si21",
-    "date": "2026-04-04T10:49:12.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa1MxdFZQVlJfajNZZks3eE5zWnc2RGdIY25IRE80T2Y3NEZ4MjAzdEdnYUFkMlBGMWgzMFhXUmFVdEtYdE8yWlMzU1FsUEJBbW96dGwzdXExOUVUSmh2bnVfUE1MTG9TcVY5Snh5SWtMdVNWd0pxLUk1ZjJ1S2FDRDNKaHVGblQtUHpOdDZGcEFiRnBZdWF5bFoySTZFbEd3VVIyQVVGb0pQdGMtaHlJTG45MA?oc=5",
+    "title": "Tirna vzpenjača je na Ljubljanski grad pripeljala že sedemmilijontega potnika",
+    "source": "MojaObčina.si",
+    "date": "2026-04-09T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOT1RCbmliYUowT3J4UWNNMURmck15YlVTdnJFVWE4aVhvT0VHUGxjMHBCVHZkS1l3dTBMTlJ4b1d0OG9FazNkTEVka2FHZWFvd01JMzFEMnNfUVI5UDFwTkNiTHF6OWtDdnlfVjNValBlME5iZXZBTnloZ3hGbkl3c1FzZ2FNWEUzcnpJY09KR1otbndDMVI2VW42LTBHaG5VN2FSdzV2dGZzVjlFUjd0RUJzR0NHek5aaGlZZmQwU1RrSE0?oc=5",
     "outlets": 2,
     "match": "headline names \"vzpenjac\""
    },
@@ -718,6 +718,38 @@
     "source": "Dnevnik",
     "date": "2026-08-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Zakaj so pod Nukom našli kipec z erekcijo penisa",
+    "source": "Dnevnik",
+    "date": "2026-03-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTDJ4eTh0V1p6bzdBSG0wS2lQdUtVQTF6Ym5oaWpIa3hmcXVtLUxRZHZvRmI2dmk4aGZ3UzA2ejI5V21hNEN0SzR0QjVZWENlc01uMDZHbWxqb3puckNVTWlqZUFaSHphbGQ4YW02Z05ZMDhTYXVLMl9RTExkX1pSUFhZNUdyTVNncGJJQzlkRkhYM1hWdHNEOVRGRzQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Od NUK-a do Pošte Slovenije, to so aktualna delovna mesta v Ljubljani",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-01-25T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQU3dTdHBvZzB0QnJ5anQya0h6TS1zUXdZZXJFQzE0NXJlV0dNZzJQZm1tWllGdTROQmdvdExfemNoT3hOaEV1V0dIcVhkcmMyOFU2czg5b0FONTRuZ1A5dVJITWk4VXVlNlcwS29lSWhZYUNaeWx2NXdjS0pxOVh5YnJ1eHpGWTZxMGVCdkJMeGE4OVJCd0tFTVNQblRLdjh4Q21rd0lwZkRNeFRGWmJvbw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Čitalnice v NUK odprte vse do 22.30",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-01-05T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPR0dORFMwZG01X01xLUlPMWZyU0pLQjM4M19RN0ZLREJycTl2WVNBQ3RIMXh0UkRZSkw3WmdfcFBIbm91M2NIcFZMcm9BR2I1cjZ1MHB6ejNoNGw1M190bHNIazBIaXRmV0d6azFkNHI3NHI3UUxCbHZ5amJmUDNYWXFkN2phOU4zX1E?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Super novica za študente! NUK podaljšuje odprtje čitalnice",
+    "source": "Student.si",
+    "date": "2025-12-30T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2dpVmJwMEVaM2lLdy10SXNEVzRCVTlhSXBUaVp3MTdqbTlOa09JM053REJsT0JJbDktaDd2OE91SzZ2c2kwY2ItVFpIUmJ3a2tNMTVfWjFYN280Tm1XZGZPbUFZOVNzVXkwelpPTHhsVXBUWmtHMXd1QzRhb2p2U3JvenNOa1RuWUhwb1d5VHVkYzVuMThUa1Vtc0pNT2U5VW14ZTE5MEE0UQ?oc=5",
     "outlets": 1,
     "match": "headline names \"nuk\""
    },
