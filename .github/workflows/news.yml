@@ -37,13 +37,18 @@ jobs:
             git pull --rebase -q || true
             node tools/fetch_zag_news.mjs || true
             if [ $((i % 3)) -eq 1 ]; then node tools/fetch_news.mjs || true; fi
-            printf '{"checked":"%s","by":"news workflow, every 20 minutes"}\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > data/news_status.json
-            git add data/news.json data/zag_news.json data/news_status.json
+            # new news goes out at once; when nothing changed, the time of the last check is saved once an hour,
+            # so the site is rebuilt at most a few times an hour (GitHub Pages allows about 10 builds an hour).
+            # The push itself starts the site build.
+            git add data/news.json data/zag_news.json
+            if ! git diff --cached --quiet || [ $((i % 3)) -eq 1 ]; then
+              printf '{"checked":"%s","by":"news workflow, every 20 minutes"}\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > data/news_status.json
+              git add data/news_status.json
+            fi
             if ! git diff --cached --quiet; then
               git commit -q -m "Update news"
               git pull --rebase -q || true
               git push -q || true
-              gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
             fi
             [ "$i" -lt 16 ] && sleep 1200
           done
