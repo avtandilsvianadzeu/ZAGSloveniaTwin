@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T07:53:59.006Z",
+ "updated": "2026-11-21T08:55:59.611Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,6 +10,16 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
+   }
+  ],
+  "crna": [
+   {
+    "title": "Od jabke do mošta: folklora, ples, ustvarjalnost in bogate nagrade v Črni na Koroškem",
+    "source": "Koroške Novice",
+    "date": "2026-11-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNS0dYd3RRLVZFTi1tS0k5WmtJMDRqOUpVMWY0LTRGYUI5QUtHSHBiYmU4cTJYT1AyM2Nfa3J0YTluZWVEeklMTF9iQmVyd3hRTWxKT2Z4YklmRjB0bE9EejRtSzBYNzlmdVBaTTRpbGl0Umt5c0NtOHVUeDB2NlF0VUNpYjk3eWJpQ1hKZGZjUlRhTHBPSkMwRnk5VlV2Y2VhOU1zQU5ZXzJiNEtuVWRJZmNrTlNaanpvandj?oc=5",
+    "outlets": 1,
+    "match": "headline names \"na koroskem\""
    }
   ],
   "verd": [
@@ -44,14 +54,6 @@
     "source": "OBALAplus",
     "date": "2025-12-04T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPczFzcVRnRHNCU1FGb2hzVi0zRk85LXktN3NXQW1YQVFjWENjQjdMTkZXc01UT3VQU1Z0dVAyMDRTSXRIU0pWeTlhSUlQM3ZXZjNIV1pOUldzcXhaQlExQndDNExXZHl0ZWFoVGQtNWs3RkJoV2QteUxBRGJrc3hXT2NWRDhsbEVKNVRaa2xjUERMWi1PTTJuMVp4WWEtN21kZzBsVUhzQXNFd1FnWlR1eTBB?oc=5",
-    "outlets": 1,
-    "match": "headline names \"mesecev\""
-   },
-   {
-    "title": "Zgradila sta jih oče in sin: Kakšna zgodba stoji za stopnicami, ki vodijo v Mesečev zaliv?",
-    "source": "Večer",
-    "date": "2025-11-21T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUnNZUWtFQVVKQldmS0x0WHlvT2EtMkhJa252czQwRW9XTG91OXNPVzg4V3gxUGJDOGlBbDd2TDFVQl9vS3BBaWg2QXBTT3hTNmx0Ym9TTjlBbzJVU3F4T1hEMUNVeUZXYmFGaG44cnd2VGFZblQ5RkJwY3MwWHNqV1Q4NnFKcW4tQ0EzMkIzelA2TUlDZXlocHZhZmZjby1ZZ09SWGJhcE9FZVVhOGRMTjEyUFU0dWVtOS0xWWZhRm5lZw?oc=5",
     "outlets": 1,
     "match": "headline names \"mesecev\""
    }
