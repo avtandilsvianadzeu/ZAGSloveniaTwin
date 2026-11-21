@@ -10,6 +10,7 @@
    Only public pages are read, at a gentle pace, and robots.txt is respected. Node 20, no packages. */
 import fs from 'node:fs';
 import path from 'node:path';
+import { inZagFields } from './zag_fields.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DAY = 864e5, NOW = Date.now(), TODAY = new Date().toISOString().slice(0, 10);
@@ -152,12 +153,14 @@ for (const m of CFG.members) {
 
 const titles = out.flatMap(m => m.news.map(i => i.t));
 await translate(titles, 'en'); await translate(titles, 'sl');
-for (const m of out) for (const i of m.news) { i.te = TR.en[i.t] && TR.en[i.t] !== i.t ? TR.en[i.t] : undefined; i.ts = TR.sl[i.t] && TR.sl[i.t] !== i.t ? TR.sl[i.t] : undefined; }
+for (const m of out) for (const i of m.news) { i.te = TR.en[i.t] && TR.en[i.t] !== i.t ? TR.en[i.t] : undefined; i.ts = TR.sl[i.t] && TR.sl[i.t] !== i.t ? TR.sl[i.t] : undefined;
+  /* z: in ZAG's fields (civil engineering, roads, bridges, materials, transport infrastructure), ZAG's own news always */
+  i.z = m.k === 'zag' || inZagFields(i.t + ' ' + (i.te || '')) ? 1 : 0; }
 /* only what the page needs is kept: translations of current titles, the first-seen days and checked dates of the last year */
 const keepU = new Set(out.flatMap(m => m.news.map(i => i.u))), keepT = new Set(titles);
 const prune = (o, keep) => Object.fromEntries(Object.entries(o).filter(([k]) => keep.has(k)));
 fs.writeFileSync(path.join(ROOT, 'data/fehrl.json'), JSON.stringify({
-  about: 'News of the FEHRL members from their own websites, read once a day by tools/fehrl_news.mjs. d is the published date (empty when the website gives none), f the day the article was first seen.',
+  about: 'News of the FEHRL members from their own websites, read once a day by tools/fehrl_news.mjs. d is the published date (empty when the website gives none), f the day the article was first seen, z 1 when the article is in ZAG\'s fields (only these are shown).',
   updated: new Date().toISOString(), members: out,
   seen: Object.fromEntries(Object.entries(SEEN).filter(([, v]) => NOW - Date.parse(v) < 400 * DAY)), ad: prune(AD, keepU), tr: { en: prune(TR.en || {}, keepT), sl: prune(TR.sl || {}, keepT) },
 }) + '\n');

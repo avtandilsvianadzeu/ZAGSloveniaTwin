@@ -133,7 +133,7 @@
   </div>
   <section class="glass imethod fnews" id="fnews" hidden aria-labelledby="fnh">
     <h2 id="fnh">News from FEHRL members</h2>
-    <p id="fnp">From the members' own websites, newest first, read once a day.</p>
+    <p id="fnp">From the members' own websites, in ZAG's fields, newest first, read once a day.</p>
     <div class="fbar" id="fbar"></div>
     <div class="fgrid" id="flist"></div>
     <button type="button" class="fmore" id="fmore" hidden>Show more</button>
@@ -255,7 +255,7 @@
   const flag=c=>{ const cc=String(c||'').toUpperCase(); if(!/^[A-Z]{2}$/.test(cc)) return ''; return `<img class="flag" alt="" src="${EMO+[...cc].map(x=>(127397+x.charCodeAt(0)).toString(16)).join('-')}.png" loading="lazy">`; };
   const TT=i=>SL?(i.ts||i.t):(i.te||i.t);
   const dS=d=>{ const x=new Date(d+'T12:00:00Z'), y=new Date().getFullYear(); return x.getDate()+'. '+(x.getMonth()+1)+'.'+(x.getFullYear()!==y?' '+x.getFullYear():''); };
-  const fnews=m=>(((FN[m.k]||{}).news)||[]).filter(i=>i.d).sort((a,b)=>b.d.localeCompare(a.d));
+  const fnews=m=>(((FN[m.k]||{}).news)||[]).filter(i=>i.d&&(i.z||m.home)).sort((a,b)=>b.d.localeCompare(a.d)); /* dated by the article itself, in ZAG's fields */
   const feCard=m=>{ const N=fnews(m), U=(((FN[m.k]||{}).news)||[]).filter(i=>!i.d), top=N.slice(0,3), pr=(m.pr||[]);
     return `<article class="icard${m.home?' on':''}" data-fk="${esc(m.k)}" tabindex="0"><div class="fehd">${flag(m.c)}<h3>${esc(m.s)}<small>${esc(m.n)}, ${esc(cname(m.c))}</small></h3></div>`
       +`<div class="sig">${m.home?`<span class="badge b-zag">${L('Member since 1994','Član od leta 1994')}</span>`:''}${!m.home&&pr.length?`<span class="badge b-fe">${pr.length} ${L(pr.length===1?'project with ZAG':'projects with ZAG',pr.length===1?'projekt z ZAG':pr.length===2?'projekta z ZAG':pr.length<5?'projekti z ZAG':'projektov z ZAG')}</span>`:''}</div>`
@@ -281,7 +281,7 @@
     $('fbar').querySelectorAll('[data-fc]').forEach(b=>b.onclick=()=>{ fC=b.dataset.fc; fN=20; drawFN(); });
     $('fmore').onclick=()=>{ fN+=20; drawFN(); };
   }
-  if(SL){ $('fnh').textContent='Novice članov FEHRL'; $('fnp').textContent='Z lastnih spletnih strani članov, najnovejše najprej, prebrane enkrat na dan.'; $('fmore').textContent='Pokaži več'; }
+  if(SL){ $('fnh').textContent='Novice članov FEHRL'; $('fnp').textContent='Z lastnih spletnih strani članov, s področij ZAG, najnovejše najprej, prebrane enkrat na dan.'; $('fmore').textContent='Pokaži več'; }
   drawFN();
   function pickStructure(id,fromMap){
     const s=D.structures.find(x=>x.id===id); if(!s) return;
