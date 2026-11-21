@@ -23,8 +23,13 @@ const tag = (x, t) => { const m = x.match(new RegExp(`<${t}[^>]*>([\\s\\S]*?)</$
 
 async function search(q) {
   const url = 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=sl&gl=SI&ceid=SI:sl';
-  const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (DigitalZAG news check)' } });
-  if (!r.ok) throw new Error('HTTP ' + r.status);
+  /* up to three tries, each within 30 seconds; when all fail, the record keeps its last good news (below) */
+  let r = null, err = null;
+  for (let t = 0; t < 3 && !(r && r.ok); t++) {
+    try { r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (DigitalZAG news check)' }, signal: AbortSignal.timeout(30000) }); if (!r.ok) err = new Error('HTTP ' + r.status); }
+    catch (e) { r = null; err = e; }
+    if (!(r && r.ok)) await sleep(4000 * (t + 1)); }
+  if (!r || !r.ok) throw err || new Error('no answer');
   const xml = await r.text();
   return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].map(m => {
     const it = m[1], source = tag(it, 'source');

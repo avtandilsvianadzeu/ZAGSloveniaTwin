@@ -36,9 +36,17 @@ const MAX = 10;
 const un = s => s.replace(/<!\[CDATA\[(.*?)\]\]>/gs, '$1').replace(/&#8211;/g, ', ').replace(/&#8217;/g, "'").replace(/&#8220;|&#8221;|&quot;/g, '"')
   .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (m, n) => String.fromCodePoint(+n)).replace(/\s*[\u2013\u2014]\s*/g, ', ').replace(/\s+/g, ' ').trim();
 const tag = (x, t) => { const m = x.match(new RegExp('<' + t + '[^>]*>([\\s\\S]*?)</' + t + '>')); return m ? un(m[1]) : ''; };
+/* one request, tried up to three times with a pause, each within 30 seconds, so a slow or busy moment of zag.si or
+   Google News does not leave a list empty */
+async function get(url) {
+  let last = null;
+  for (let t = 0; t < 3; t++) {
+    try { const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (DigitalZAG news reader)' }, signal: AbortSignal.timeout(30000) }); if (r.ok) return r; last = new Error('HTTP ' + r.status); }
+    catch (e) { last = e; }
+    await new Promise(z => setTimeout(z, 5000 * (t + 1))); }
+  throw last || new Error('no answer'); }
 async function read(lang, url) {
-  const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (DigitalZAG news reader)' } });
-  if (!r.ok) throw new Error(lang + ' ' + r.status);
+  const r = await get(url).catch(e => { throw new Error(lang + ' ' + e.message); });
   const xml = await r.text();
   return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, MAX).map(m => {
     const x = m[1], d = tag(x, 'pubDate');
@@ -47,8 +55,13 @@ async function read(lang, url) {
   }).filter(i => i.title && i.url);
 }
 const out = { source: 'https://www.zag.si/', updated: new Date().toISOString(), items: {} };
+/* a list that cannot be read this time keeps its items from the last good reading, so the page always shows the news */
+const file = path.join(ROOT, 'data/zag_news.json');
+let prev = null; try { prev = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (_) {}
+const last = k => (prev && prev.items && prev.items[k]) || null;
 for (const [lang, url] of Object.entries(FEEDS)) {
-  try { out.items[lang] = await read(lang, url); } catch (e) { console.error('zag.si feed failed', e.message); }
+  try { const got = await read(lang, url); out.items[lang] = got.length ? got : (last(lang) || []); }
+  catch (e) { console.error('zag.si feed not read this time, the last items stay', e.message); if (last(lang)) out.items[lang] = last(lang); }
 }
 /* the newest items in either language, without doubles: the English site publishes later than the Slovenian one,
    so an English reader is shown the Slovenian item until its translation exists */
@@ -62,7 +75,8 @@ for (const lang of ['en', 'sl']) for (const i of out.items[lang] || []) { if (!i
 latest.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 out.items.latest = latest.slice(0, MAX);
 const media = []; let dropped = 0;
-for (const url of MEDIA) { try { const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (DigitalZAG news reader)' } }); if (!r.ok) continue; const xml = await r.text();
+let mediaRead = 0;
+for (const url of MEDIA) { try { const r = await get(url).catch(() => null); if (!r) continue; mediaRead++; const xml = await r.text();
   for (const m of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) { const x = m[1], d = tag(x, 'pubDate'), t = tag(x, 'title'), src = tag(x, 'source');
     const title = src && t.endsWith(' - ' + src) ? t.slice(0, -(src.length + 3)) : t.replace(/\s+-\s+[^-]+$/, ''); const rule = ZAG_RULES.find(([re]) => re.test(title));
     const domain = ((x.match(/<source[^>]*url="https?:\/\/(?:www\.)?([^/"]+)/) || [])[1] || '').toLowerCase();
@@ -72,12 +86,11 @@ for (const url of MEDIA) { try { const r = await fetch(url, { headers: { 'user-a
     if (d && Date.now() - Date.parse(d) > 400 * 864e5) continue;
     const kind = kindOf(domain);
     media.push({ title, outlet: src || (t.match(/\s-\s([^-]+)$/) || [])[1] || '', domain, kind: kind || 'not reviewed', reviewed: !!kind, url: tag(x, 'link'), date: d ? new Date(d).toISOString() : null, match: rule[1], records: recordsIn(title) }); } } catch (e) { console.error('media feed failed', e.message); } }
+if (!mediaRead && last('media')) out.items.media = last('media'); /* no search answered: the last media list stays */
 if (media.length) out.items.media = media.filter(i => i.url).sort((a, b) => (b.reviewed - a.reviewed) || (b.date || '').localeCompare(a.date || '')).slice(0, 40).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 out.media_check = { queries: MEDIA.length, kept: (out.items.media || []).length, reviewed: (out.items.media || []).filter(i => i.reviewed).length, dropped };
 /* zag.si items: which atlas records they mention */
 for (const l of ['sl', 'en', 'latest']) (out.items[l] || []).forEach(i => { const r = recordsIn(i.title + ' ' + (i.summary || '')); if (r.length) i.records = r; });
-const file = path.join(ROOT, 'data/zag_news.json');
-let prev = null; try { prev = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (_) {}
 const same = prev && JSON.stringify(prev.items) === JSON.stringify(out.items);
 if (!Object.keys(out.items).length) { console.error('no feed read, file kept'); process.exit(0); }
 if (same) { console.log('zag.si news unchanged'); process.exit(0); }
