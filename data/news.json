@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T04:47:46.601Z",
+ "updated": "2026-11-21T05:49:53.629Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -343,7 +343,7 @@
    },
    {
     "title": "15-LETNIK PO ZADNJEM KOLESU SKOZI PREDOR MARKOVEC: Predelani moped zmogel vrtoglavih 109 km/h",
-    "source": "regionalobala.si",
+    "source": "Regional Obala",
     "date": "2026-10-20T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNbzNKWGNhR2JkWEg1RjRHOWlGemNxNlRBNjFqdTEySmE5OVZMc1Jrenh6c3JlaDJWbjVwUTFkeEpPR2Y0Umw2UjYzZzA5UXREZkRZYTVjLThyS0RUUEd1ZC1sVkNoUHM0VDVtVTF3Yy10cFVDMHJWNzFrS3BXcUpXcGRycGVESHJEMEx3RWhyamtBWTkzMmJwSTJvSzZ1bG5Sb3RaUEZ6c2ctMkV2cEV2MG9ObGljNTg5M1pRMXo2RnZaeGFBWHc?oc=5",
     "outlets": 1,
@@ -576,6 +576,22 @@
     "match": "headline names \"kanin\""
    },
    {
+    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
+    "source": "Svet24",
+    "date": "2026-06-17T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
+    "outlets": 2,
+    "match": "headline names \"kanin\""
+   },
+   {
+    "title": "Na Kaninu kmalu nove žičnice",
+    "source": "24ur.com",
+    "date": "2026-04-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE95eUZUbGx1VmppdTRPZ2tpOE1oX0d3enJ2dWMwZnl0MURMcFROclpxd0ZCQmxRb1o5SWU0TWJOX25ETWhXUFBsTDh5Nm10QW9SczZNWDZmbXk1QVdvRnBLcVoyUlZUWXFSb0ZYYjJoOHVMUkhxcnMyVFFMTQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kanin\""
+   },
+   {
     "title": "Na mizi nove rešitve za smučišče Kanin",
     "source": "OBALAplus",
     "date": "2026-02-26T08:00:00.000Z",
@@ -649,7 +665,7 @@
    },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
-    "source": "telegraf.si",
+    "source": "Telegraf",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
