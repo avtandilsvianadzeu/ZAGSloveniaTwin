@@ -4,11 +4,11 @@
    Scripts, styles, images and libraries: saved once per version (their address carries ?v=), then read from the device.
    Map tiles: the areas already looked at are kept, up to a limit, so the map still draws where you have been.
    Nothing is sent anywhere by this file. Sending a request from ZAGBot still needs a connection. */
-const VERSION = 'dz-2026-11-16a';
+const VERSION = 'dz-2026-11-21a';
 const CORE = `${VERSION}-core`, DATA = `${VERSION}-data`, TILES = 'dz-tiles', LIBS = 'dz-libs';
 const PAGES = ['index.html', 'twin.html', 'dashboard.html', 'questions.html', 'api.html', 'add.html', 'international.html', 'latest.html', 'value.html', '404.html'];
 const DATA_FILES = ['data.js', 'data/zag_projects.geojson', 'data/twins.json', 'data/international.json', 'data/zag_news.json', 'data/news.json', 'data/news_status.json',
-  'data/inspections.json', 'data/images.json', 'data/gurs_buildings.json', 'data/ownership.json', 'data/official_check.json', 'data/contacts.json', 'data/world.geojson',
+  'data/inspections.json', 'data/images.json', 'data/gurs_buildings.json', 'data/ownership.json', 'data/official_check.json', 'data/contacts.json', 'data/world.geojson', 'data/fehrl.json', 'data/fehrl_members.json',
   'api/v1/objects.json', 'api/v1/metadata.json', 'manifest.webmanifest'];
 const TILE_HOSTS = /(^|\.)(tiles\.openfreemap\.org|server\.arcgisonline\.com|s3\.amazonaws\.com|ipi\.eprostor\.gov\.si|gis\.level2\.si)$/;
 const LIB_HOSTS = /(^|\.)(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)$/;

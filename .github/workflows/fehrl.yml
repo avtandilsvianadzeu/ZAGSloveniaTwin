@@ -1,0 +1,42 @@
+name: FEHRL news
+
+# Once a day: the news of the FEHRL members from their own websites (data/fehrl.json), shown on the International page.
+on:
+  schedule:
+    - cron: '41 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: fehrl
+  cancel-in-progress: false
+
+jobs:
+  fehrl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Read the members' news
+        run: node tools/fehrl_news.mjs
+      - name: Save if changed
+        run: |
+          if [ -z "$(git status --porcelain -- data/fehrl.json)" ]; then
+            echo "No change."
+          else
+            git config user.name "fehrl-news"
+            git config user.email "fehrl-news@users.noreply.github.com"
+            git add data/fehrl.json
+            git commit -m "Update FEHRL news"
+            git pull --rebase -q || true
+            git push
+            gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
+          fi
