@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T16:25:35.217Z",
+ "updated": "2026-11-21T17:27:30.131Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -66,14 +66,6 @@
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMlhiUk5DMU9IdmZzN0s1SFZzOHlYTm5rcHlobGttQ29uMjgzVERyM1VjLUdpTTIwNFQ0dDY3Yk9SeDZNTkNiaGQ5UVh1Uy1CRlk4YTZwdWNCZUJkcmVFWnVSNUlremJxQ2NObDNMbnBtdDF0V0tyeHgyWkZ4MkpiMmlxSExWN3ZLcmw5ZWd5d3Q4dGNnc0RhOU5KRVdDMXRWNTZzcFZDT2huU0xSZXRma2hmcDM?oc=5",
     "outlets": 1,
     "match": "headline names \"zavod za gradbenistvo\""
-   },
-   {
-    "title": "Požarni laboratorij Zavoda za gradbeništvo Slovenije postal raziskovalna postaja Evropske vesoljske agencije",
-    "source": "Nova24TV",
-    "date": "2026-02-26T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZUY0Um43NkF3MUJDNk96bDk0MWZxNkgyekg5ekZ5d0Y3ZDVKalE3MVg1SWJrbW94LUx4V2tLcFl1TUItVS1OMkw4SVZJaUFIVktNaWswVjJmMWtYa0IwTXZDNnBfd0R2TWlhX0xka3MzNnVmTEVtN2NuMURXRzExV3A1UDZROFREeWMyVmwxVmNNR3p5U1IyX3dVaFFTRm5US2NDbVhHQm9PdjhWSkljcWU4dHFGdUFYbVZzSnpIVTlDNzdkdFE4cFR0WEY?oc=5",
-    "outlets": 1,
-    "match": "headline names \"zavoda za gradbenistvo\""
    }
   ],
   "zag_logatec": [
@@ -172,10 +164,18 @@
     "match": "headline names \"karavank\""
    },
    {
-    "title": "Stekel bo promet po novi cevi predora Karavanke",
-    "source": "Siol.net",
-    "date": "2026-03-20T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUndjQ3hWbXJVR1hmSkl0ZV9HX3ZFOEdXSkFmVl9IVkl6cnNzNC15UzZ5c3dwSHV2MW9kWEVWUGV0UkppS3NMZm03S2tjRlMycmszbE10MEFKa3RpTzVyNEZEb3ZRRktWeHVEQk9EbFViYUwwS3hOdmwzT2E1alVabEJLLTh1Q1dhYzJyNTh6MWhFZw?oc=5",
+    "title": "Odprtje nove cevi predora Karavanke",
+    "source": "PROMET.SI",
+    "date": "2026-03-28T17:19:50.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9lTGoxLU9zX2gyV2VrSWNadDBsbmowVEZOYThYLWVFeHdqOVJJM3RJMllwQkdvWDFiUGVPVkFhSjF5ZVdXRVdoQ0VGVUhRSU9aOXZiUnhyRmMzNmlweEVpUFo2WDdIbUk?oc=5",
+    "outlets": 2,
+    "match": "headline names \"karavank\""
+   },
+   {
+    "title": "Nova cev predora Karavanke je odprta, sledi še prenova stare",
+    "source": "dnevne-novice.com",
+    "date": "2026-03-19T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa2gzOTRuYjdmMzlEaGFMc3hXa3NVTHA0alFNZ1pJeTlaZ0hIQzhVU1hxa2hYTXdnVGI3SEotREs0VXdhazh2V084aDV3ZjhxcUxzMEZ3Rld6aVBLT1dYZ0Vab1ZqUFBhTkZldlg2dElqWmZvb2QyYVdfTFQ4VjVvYzRGOWhRdHdjdjZmblVkTQ?oc=5",
     "outlets": 7,
     "match": "headline names \"karavank\""
    },
@@ -192,14 +192,6 @@
     "source": "Forbes Slovenija",
     "date": "2026-03-08T08:27:21.000Z",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU2w4TWtGSkJmTGRJWmk3VVVNUEk1MlQ2TGxBeEhwbXVoQy1FaVh3YjdzaC1mWlRabVBWcjVOX2xlaTBQc1hhYWZrMnAtT1I4Q1VjeUhOQ192LWk4Y2hEalU1SXNXNV9IYlpqekU1QVlLekJNcUVnbDU4WXIyeFFpVHAzajlybjl4SE4yTTczOGZzUWEyN3E1R2x5dV9qZ0NIa0FRQ25FSQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"karavank\""
-   },
-   {
-    "title": "Vozniki, pozor: ponoči zapora predora Karavanke, težave tudi na prelazih",
-    "source": "Dnevnik",
-    "date": "2026-02-18T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUHJKbFdTR2NWbzZqUmdGYUxOUkFtRDE5dElLSnBGZFdENGlqLUEtaE41ZkJ0ekU2TmxmSVZPbVZBV2p1QUp6WWJvZWRFbzVmc1ZpXzBKbFJabmY3elpmVUtxLXlzYzluSkxNMXdDRkpFdHB6RmlidFpLM01LVW5OQUM2ZkprYzlnbUxKYlQzQzVGQkRmSS1leFQ3YnpjRHB0V2JUbWRjcG50QU1zQktXVGdjNlNTNFVJdVE?oc=5",
     "outlets": 1,
     "match": "headline names \"karavank\""
    }
@@ -584,16 +576,6 @@
     "match": "headline names \"kanin\""
    }
   ],
-  "livarna_crnomelj": [
-   {
-    "title": "Novi posnetki: kljub opozorilom iz Livarja še naprej gost dim",
-    "source": "Radio Odeon",
-    "date": "2026-08-12T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUkhBOThtdWFPZERPOVVoeWladEs4b2VPTkR2Zmp3MFhZRl9zaTlxNjJVYkl1aDFBVjExSXoxYkI5MFBMcWNPcGJCb0RRSGRhVkVDNnVLaFFiM3R5UU4zWU9hNDlkQkNRYWRvN2dBV2NqU2dhOFZrTl82S0ZFcXZWeVpVU0REMmRWOTRiSE4zUlNMRHpvSVQwY25iS2o?oc=5",
-    "outlets": 1,
-    "match": "headline names \"livar\""
-   }
-  ],
   "ss_kocevje": [
    {
     "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
@@ -632,19 +614,11 @@
   ],
   "soca_quake": [
    {
-    "title": "Potres čutili v več slovenskih krajih",
-    "source": "Mariborinfo.com",
-    "date": "2026-11-21T10:34:23.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOU25GYVQ5ejRCWXp6eGV5bFJPQmdDZEp5MDhCblpGaWRzaFJsbkFLZXl1cmJqS0MtOFBvblJHcjI2S0o1bFpLX2pVQjBMcXgxLXBsd2tGVVBwQUgxbVVfazdKdWxlOGlacGF0Vm96c0JGVmZTYVFaU2MyeHNqNV9iVzNIVFBvN3RSTXJORkZn?oc=5",
-    "outlets": 7,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "V bližini Tolmina potres z magnitudo 2,3",
-    "source": "rtvslo.si",
-    "date": "2026-11-21T09:43:41.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVWdPZjRhc0M2SktReXBkYWJFOG1RWkFqRUozbzVxN29WelhEdXlzdTNmbUQ2bjZBenNIQ1B2TG5ZSF9nakVidEZFQUp4Z01IMnc1T1ljMHZMNmF5OW42a1p0ZVJxQ0hhSGdtcTBHYllFR1dCQk92ZkZ3TU9KZmpyWnpR?oc=5",
-    "outlets": 1,
+    "title": "Nov potres v Sloveniji",
+    "source": "Ptujinfo.com",
+    "date": "2026-11-21T10:23:34.000Z",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9aZW1OVlVfdkU1QWd5cU9tN1d5TzNPWWVGcm8tUjZEMXVJQ3h0NGpLd1VGZXhDRHVYZW1YOEZwbkN3eWprRlFjcGc3a3NaTHNrUVRCTjFkRk5sMy02UXRmRzd0b09jUjRvNEJMZ3l5SzVJSHNLUVE?oc=5",
+    "outlets": 4,
     "match": "headline names \"potres\""
    },
    {
@@ -656,10 +630,18 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "Streslo je v Breginju, potres so čutili v Zgornjem Posočju",
-    "source": "Svet24",
-    "date": "2026-08-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1lcVExb2pndTlmTk1ieTNRMmE5REdsSWdhQXBRRmpTaWNzX2tRRnNzMU5IRHZBZFpwLTNQVFM3Wm5JaWZwVU9EZmhPd0FYXzFxVmtuNjN2NzlaSTI2WHVFeUQtWUFkdEwyaGhDVFhEUnhtNW1GNUlGd3hUVkQ?oc=5",
+    "title": "Pri Kobaridu so se stresla tla, potres čutili tudi v Tolminu",
+    "source": "Žurnal24",
+    "date": "2026-08-21T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZWNXczVnSldUTG1sc2xzZy1KWXhEcS1xMWNtcmdoaEZnTTQ1Q3V4SHE1WXNWS05hRFFSQkhkeDRmMDQ2UW5tTDVxMVRWejVuZ2RwWWdBeU5lcllZVjNyWkxBcFZDRk9OalQ4SWhRaE1zX3hnT2hHaWN1R3BzUlJ3a1Vjc1pZdndtUnZGbVZRTWdubi1IendtZnlQU2ZiR2vSAaQBQVVfeXFMTmpuV0J5OUZXaUw4QmowRVZsZEYxSG1NQmszdGl6MVNyU1NOLUVRWVAxWjZ2NHFudnE2SUpBMVozS013a1dfcDZON2xRS3pjRF9KY215VWYySDNBREZzQnMycWVtRmVndFVscm5iYjNTdFAtZHRVRVU0bjNNR3lmU3hrUjhyc3ZsV3FZbmVCa1c5cHBRUThYVjg2azc3eERYRFI0N0s?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Šibek jutranji potres stresel Posočje",
+    "source": "Radio Robin",
+    "date": "2026-07-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBEVkYtUG5DVEFYYzFzNGxJdmROV3pEZFN3Ul9DY1lRYTZfeFFXZXdGM0U1QXR2aXd5ellVVXh2aWJjRU9GOUF3Z3JRWE14Tk9qWnZfS1JfSDl1eHNGRTBjRDdId3JJUjJlT1F5Y290R1hYcjJDZ2c?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    },
