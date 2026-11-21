@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T21:37:14.850Z",
+ "updated": "2026-11-21T22:39:12.416Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -560,22 +560,6 @@
     "match": "headline names \"kanin\""
    },
    {
-    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
-    "source": "Svet24",
-    "date": "2026-06-17T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
-    "outlets": 2,
-    "match": "headline names \"kanin\""
-   },
-   {
-    "title": "Na Kaninu kmalu nove žičnice",
-    "source": "24ur.com",
-    "date": "2026-04-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE95eUZUbGx1VmppdTRPZ2tpOE1oX0d3enJ2dWMwZnl0MURMcFROclpxd0ZCQmxRb1o5SWU0TWJOX25ETWhXUFBsTDh5Nm10QW9SczZNWDZmbXk1QVdvRnBLcVoyUlZUWXFSb0ZYYjJoOHVMUkhxcnMyVFFMTQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kanin\""
-   },
-   {
     "title": "Na mizi nove rešitve za smučišče Kanin",
     "source": "OBALAplus",
     "date": "2026-02-26T08:00:00.000Z",
@@ -626,6 +610,14 @@
     "source": "Radio Robin",
     "date": "2026-07-15T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBEVkYtUG5DVEFYYzFzNGxJdmROV3pEZFN3Ul9DY1lRYTZfeFFXZXdGM0U1QXR2aXd5ellVVXh2aWJjRU9GOUF3Z3JRWE14Tk9qWnZfS1JfSDl1eHNGRTBjRDdId3JJUjJlT1F5Y290R1hYcjJDZ2c?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Močnejši potres blizu Petrinje, čutili so ga tudi v Zagrebu",
+    "source": "Siol.net",
+    "date": "2026-05-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPc2x3NVZlWndHak5KLWx6VFRSa1BGUG1VN1FKZVdIS2ZFQVRHTUpDcVZwWGhhbDF2bXJ5SkJzdFZ1OUVybURJQk1KMWVOWWRCbDhvRnUyNjdnMXdOMjc3THdURjl2S2hRWnVQUkxrSVdOOExtZlZwN3g0SHVHWl8yc05wTFBGZ25qRGxxMTRadjdRb0FxVE56UXdn?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    },
