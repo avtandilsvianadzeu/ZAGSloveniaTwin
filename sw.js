@@ -4,7 +4,7 @@
    Scripts, styles, images and libraries: saved once per version (their address carries ?v=), then read from the device.
    Map tiles: the areas already looked at are kept, up to a limit, so the map still draws where you have been.
    Nothing is sent anywhere by this file. Sending a request from ZAGBot still needs a connection. */
-const VERSION = 'dz-2026-11-16a';
+const VERSION = 'dz-2026-11-21a';
 const CORE = `${VERSION}-core`, DATA = `${VERSION}-data`, TILES = 'dz-tiles', LIBS = 'dz-libs';
 const PAGES = ['index.html', 'twin.html', 'dashboard.html', 'questions.html', 'api.html', 'add.html', 'international.html', 'latest.html', 'value.html', '404.html'];
 const DATA_FILES = ['data.js', 'data/zag_projects.geojson', 'data/twins.json', 'data/international.json', 'data/zag_news.json', 'data/news.json', 'data/news_status.json',

@@ -421,7 +421,7 @@ body.embed .pane-model .rothint{top:auto!important;bottom:12px!important}
 }
 /* site footer */
 .sitefoot{margin-top:28px;border-top:1px solid rgba(15,23,42,.08);background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
-.sf-in{max-width:1180px;margin:0 auto;padding:26px 20px 34px;display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:22px 28px;font-size:12.5px;line-height:1.5;color:var(--g-mut,#5F5F64)}
+.sf-in{max-width:1180px;margin:0 auto;padding:26px 20px 34px;display:grid;grid-template-columns:1.4fr repeat(5,1fr);gap:22px 28px;font-size:12.5px;line-height:1.5;color:var(--g-mut,#5F5F64)}
 .sf-in b{color:#1D1D1F}.sf-about b{font-size:14px;color:#213469}.sf-about p{margin:6px 0 0;max-width:36ch}
 .sf-in h3{margin:0 0 6px;font-size:12px;font-weight:600;color:#1D1D1F;letter-spacing:0}
 .sf-in nav,.sf-in>div{display:flex;flex-direction:column;gap:4px;min-width:0}
