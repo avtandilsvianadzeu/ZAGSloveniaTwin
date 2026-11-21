@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T03:43:46.207Z",
+ "updated": "2026-11-21T04:45:45.948Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -338,7 +338,7 @@
     "source": "OBALAplus",
     "date": "2026-10-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
-    "outlets": 3,
+    "outlets": 2,
     "match": "headline names \"markovec\""
    },
    {
@@ -576,11 +576,11 @@
     "match": "headline names \"kanin\""
    },
    {
-    "title": "Nova era za smučišče Kanin: Prihajajo nove žičnice",
-    "source": "Goriške novice",
-    "date": "2026-04-24T10:05:03.000Z",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNHBlVUFVTjZZMVNSSVJ3OVczdmZHaVNINnN5U0s5ZXROV0RfMUVuZWEwdU84R2pOTVkzalJobDh5d2JuUjJ0Tkx2ZkIzeXhRb2p3a1oyemVVSzJHSTRrdGMzWkdpb3pfbi1tNmNUVjhpYjduYzNBQ0RWUk1UQU5mTA?oc=5",
-    "outlets": 2,
+    "title": "Na mizi nove rešitve za smučišče Kanin",
+    "source": "OBALAplus",
+    "date": "2026-02-26T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LTVJLU09uUnBhdVhpcU9vSGlKNGprRk9GWHpHb1pSRDZJcUhUdEtDdlRLOXhYTEhFMTBLU0R0bVA4OS1lRll1RUtiLUZ3aW9EQS1Zb1Z0VTMzeXdFZGhGRFdZWTllc0trZlJKVw?oc=5",
+    "outlets": 1,
     "match": "headline names \"kanin\""
    },
    {
@@ -649,7 +649,7 @@
    },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
-    "source": "telegraf.si",
+    "source": "Telegraf",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
