@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T06:58:33.460Z",
+ "updated": "2026-11-22T08:00:23.712Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -100,14 +100,6 @@
     "source": "Primorske novice",
     "date": "2026-08-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVJxdUFqWEc0c2x4OExmcER6RkJUS0xIcHhFV2poOE5FaEFiQ0drazBCbUhvVTNtM3VaTmR4bXBVV0p0c2hVSFFUTWE4aU1INktKWm5xaEVrY1JhWnByR2Ntb0tQcC14cDNXWUlTNnJMdFJsc2ZNVTNpRVJOcHQ4VlFjTVJVZEVha2xMUld4S2JISi0wOF9EMjFzcEtzMFVNOHVISXlSWlpFdDBkY2J3QVNIYXFLaDBHc1l5T2Jpa1RxcGE4d1VUVXVUOFFQODByUFVHQQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"innorenew\""
-   },
-   {
-    "title": "InnoRenew CoE, UP IAM organizira konferenco IRIC2026",
-    "source": "Primorske novice",
-    "date": "2026-06-18T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
     "outlets": 1,
     "match": "headline names \"innorenew\""
    },
@@ -264,7 +256,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 4,
+    "outlets": 5,
     "match": "headline names \"kastelec\""
    },
    {
@@ -322,7 +314,7 @@
     "source": "OBALAplus",
     "date": "2026-10-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
-    "outlets": 3,
+    "outlets": 2,
     "match": "headline names \"markovec\""
    },
    {
@@ -472,14 +464,6 @@
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
-   },
-   {
-    "title": "V Kranjski Gori odprtje sedežnice do vrha Vitranca",
-    "source": "tv3m.si",
-    "date": "2026-06-25T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfa21KSXdmdDJuOC1mVzdpeG01N0JnTWctLTJqcVpuSnZYbEc5c1laSG1LTkxYWUZublFVTG1la2pIR1E1Uk9xUVpCZVgwYUJpWlRWdkFRMXZqOGJTSmg3ZHRacmVkXy1fdmJqQkpmNjZHOGc2RURDT2J3a3ZQeVU?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kranjsk\""
    }
   ],
   "cerkno_z": [
@@ -560,22 +544,6 @@
     "match": "headline names \"kanin\""
    },
    {
-    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
-    "source": "Svet24",
-    "date": "2026-06-17T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
-    "outlets": 2,
-    "match": "headline names \"kanin\""
-   },
-   {
-    "title": "Na Kaninu kmalu nove žičnice",
-    "source": "24ur.com",
-    "date": "2026-04-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE95eUZUbGx1VmppdTRPZ2tpOE1oX0d3enJ2dWMwZnl0MURMcFROclpxd0ZCQmxRb1o5SWU0TWJOX25ETWhXUFBsTDh5Nm10QW9SczZNWDZmbXk1QVdvRnBLcVoyUlZUWXFSb0ZYYjJoOHVMUkhxcnMyVFFMTQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kanin\""
-   },
-   {
     "title": "Na mizi nove rešitve za smučišče Kanin",
     "source": "OBALAplus",
     "date": "2026-02-26T08:00:00.000Z",
@@ -592,6 +560,26 @@
     "match": "headline names \"kanin\""
    }
   ],
+  "livarna_crnomelj": [
+   {
+    "title": "Novi posnetki: kljub opozorilom iz Livarja še naprej gost dim",
+    "source": "Radio Odeon",
+    "date": "2026-08-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUkhBOThtdWFPZERPOVVoeWladEs4b2VPTkR2Zmp3MFhZRl9zaTlxNjJVYkl1aDFBVjExSXoxYkI5MFBMcWNPcGJCb0RRSGRhVkVDNnVLaFFiM3R5UU4zWU9hNDlkQkNRYWRvN2dBV2NqU2dhOFZrTl82S0ZFcXZWeVpVU0REMmRWOTRiSE4zUlNMRHpvSVQwY25iS2o?oc=5",
+    "outlets": 1,
+    "match": "headline names \"livar\""
+   }
+  ],
+  "ss_kocevje": [
+   {
+    "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
+    "source": "E-utrip",
+    "date": "2026-02-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPSVRXVW1ULVU4SHJPR2tuOWFqV2VWNmpfRWw2Vy1CVGFFRzc0c3YtbTVWcExqWUF4cndPVEdvX0ZaOEprVXN4OU5YN0pXRDJNaG54clM1cTJvcTFmN3puc2R3REtINHZVd3Y4OXlJM3AwNEstS2c3VGtLT3NHRXhza3RR?oc=5",
+    "outlets": 1,
+    "match": "headline names \"gimnazij\""
+   }
+  ],
   "bovec_quake": [
    {
     "title": "Potres pri Tolminu: kje vse so ga čutili?",
@@ -599,14 +587,6 @@
     "date": "2026-11-21T09:20:02.000Z",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03aFNYb0plbTJTUUZoa2RCN0pIOUM0dzYtZThndGtEMjh3SFN5bzdDN3RyVHd4b0w5VmFHV2c4UnZSZ21MSHhxcnhUQXI2TWQxVi1UbG90bUl1QXVaVXc3Q0tRZmlNUFlVNzl5b29fS245dGxu?oc=5",
     "outlets": 3,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Območje Splita stresel potres",
-    "source": "24ur.com",
-    "date": "2026-08-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Xa2RZZklXdXBSQk1SVWthQzhhZXA1ZlR5bVk4NHZlWm01WDlQNzRNdG9hMXUzRmwyVXJLMmZIekRWd2szdkNfcnpKRE1FWGU1Uy1PLTVQQ25PX0NLOXBrWVZ1UTFETU45NGJtcXZiNmdpNE1xeXRfSg?oc=5",
-    "outlets": 1,
     "match": "headline names \"potres\""
    },
    {
