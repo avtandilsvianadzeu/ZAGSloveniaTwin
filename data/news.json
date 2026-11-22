@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T09:02:20.072Z",
+ "updated": "2026-11-22T10:04:08.582Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,16 +10,6 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
-   }
-  ],
-  "crna": [
-   {
-    "title": "Od jabke do mošta: folklora, ples, ustvarjalnost in bogate nagrade v Črni na Koroškem",
-    "source": "Koroške Novice",
-    "date": "2026-11-06T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNS0dYd3RRLVZFTi1tS0k5WmtJMDRqOUpVMWY0LTRGYUI5QUtHSHBiYmU4cTJYT1AyM2Nfa3J0YTluZWVEeklMTF9iQmVyd3hRTWxKT2Z4YklmRjB0bE9EejRtSzBYNzlmdVBaTTRpbGl0Umt5c0NtOHVUeDB2NlF0VUNpYjk3eWJpQ1hKZGZjUlRhTHBPSkMwRnk5VlV2Y2VhOU1zQU5ZXzJiNEtuVWRJZmNrTlNaanpvandj?oc=5",
-    "outlets": 1,
-    "match": "headline names \"na koroskem\""
    }
   ],
   "verd": [
@@ -114,6 +104,14 @@
     "match": "headline names \"innorenew\""
    },
    {
+    "title": "InnoRenew CoE, UP IAM organizira konferenco IRIC2026",
+    "source": "Primorske novice",
+    "date": "2026-06-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
+    "outlets": 1,
+    "match": "headline names \"innorenew\""
+   },
+   {
     "title": "ZA BOLJ ZDRAVE IN PRIJETNE STAVBE: InnoRenew CoE in UP IAM z inovativnim projektom 'BUILDWELL'",
     "source": "regionalobala.si",
     "date": "2026-01-31T08:00:00.000Z",
@@ -178,7 +176,7 @@
     "source": "dnevne-novice.com",
     "date": "2026-03-19T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa2gzOTRuYjdmMzlEaGFMc3hXa3NVTHA0alFNZ1pJeTlaZ0hIQzhVU1hxa2hYTXdnVGI3SEotREs0VXdhazh2V084aDV3ZjhxcUxzMEZ3Rld6aVBLT1dYZ0Vab1ZqUFBhTkZldlg2dElqWmZvb2QyYVdfTFQ4VjVvYzRGOWhRdHdjdjZmblVkTQ?oc=5",
-    "outlets": 5,
+    "outlets": 6,
     "match": "headline names \"karavank\""
    },
    {
@@ -466,14 +464,6 @@
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
-   },
-   {
-    "title": "V Kranjski Gori odprtje sedežnice do vrha Vitranca",
-    "source": "tv3m.si",
-    "date": "2026-06-25T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfa21KSXdmdDJuOC1mVzdpeG01N0JnTWctLTJqcVpuSnZYbEc5c1laSG1LTkxYWUZublFVTG1la2pIR1E1Uk9xUVpCZVgwYUJpWlRWdkFRMXZqOGJTSmg3ZHRacmVkXy1fdmJqQkpmNjZHOGc2RURDT2J3a3ZQeVU?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kranjsk\""
    }
   ],
   "cerkno_z": [
@@ -582,35 +572,67 @@
   ],
   "bovec_quake": [
    {
-    "title": "Potres pri Tolminu: kje vse so ga čutili?",
-    "source": "Svet24",
-    "date": "2026-11-21T09:20:02.000Z",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03aFNYb0plbTJTUUZoa2RCN0pIOUM0dzYtZThndGtEMjh3SFN5bzdDN3RyVHd4b0w5VmFHV2c4UnZSZ21MSHhxcnhUQXI2TWQxVi1UbG90bUl1QXVaVXc3Q0tRZmlNUFlVNzl5b29fS245dGxu?oc=5",
+    "title": "Tla so se zatresla pri Tolminu: Potres magnitude 2,3",
+    "source": "Radio Robin",
+    "date": "2026-11-21T09:34:20.000Z",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeVkwZUtqajRZSHp5cmxCa3ZIMkdKV1ZZWUtRRy1FenVBQkVISVBDZ2xwWkU2Q3hPcDRPZGJTN0dsaFpFYl9yU0xfd213NWVzNjZmcHgydWh4TnNQZWlURkVFTjVfMHFCaTRsV2YtS01PT2VJSWFTTTFwUGRFMHNpcmZzdXFLS00?oc=5",
     "outlets": 3,
     "match": "headline names \"potres\""
    },
    {
-    "title": "Šibek jutranji potres stresel Posočje",
+    "title": "Na severozahodu so se stresla tla. Ste čutili potres?",
+    "source": "Svet24",
+    "date": "2026-11-17T08:14:31.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUnpGajJibWJPR2FKZnczZ2REUWlpZnpsRXlsem9jUzk1bmJDUDcwYjhiRXFnOW1OT1NZUXFncDZpeDR5VDBzZGY4RFRrWFN4NUR1ZlJRTDRReThpUUUxeGh5ZTNaTHBieS02dmV5TTRlYzhCcld6bmY2SGNMWk83c2w2NjdVSGpkNkRN?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Tolminsko danes v času kosila stresel manjši potres",
     "source": "Radio Robin",
+    "date": "2026-10-03T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTExsRTV6cWlTek9sYlpieHVXdnVUbHhiV2lOdEZjdjVoUnNvXzJUZVVMalNoY1dwM1NwdVFxTVhQMFBZNTNuMjBqYjZsYk1uYzh5QnJlMTE4YjdLSzRkSzVBSlp3S3I0Y1RKQmhzTkxUb1QzM0xwcjROTVdSRzZpb3dLX3I4eDdY?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Danes ponoči rahel potres v bližini Breginja",
+    "source": "Radio Robin",
+    "date": "2026-08-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LZGlIVGxET0FUNS1CZGQ4QVBCR016d0dzbi1XWkZHWXhtWWxBMnJkX2ZxZGE3U0N2Nm9taGw5Y1JpS3Y3WnNMQzdDWG51c0FHcXgwTWxKWC0tbWQ4ZzA3QzFYOG04NFB4VlQ0NlN2Mnh3MU9VZVhwVi1iRmpnT0k?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Območje Splita stresel potres",
+    "source": "24ur.com",
+    "date": "2026-08-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Xa2RZZklXdXBSQk1SVWthQzhhZXA1ZlR5bVk4NHZlWm01WDlQNzRNdG9hMXUzRmwyVXJLMmZIekRWd2szdkNfcnpKRE1FWGU1Uy1PLTVQQ25PX0NLOXBrWVZ1UTFETU45NGJtcXZiNmdpNE1xeXRfSg?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Goriško streslo še drugič: tokrat precej močneje, potres čutili tudi v Tolminu in Bovcu",
+    "source": "NaDlani.si",
+    "date": "2026-08-21T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdVFVZG1QZ1hxWTJVdndneTlNQWF1RnJWVXptYWJkS3BvdGtCS3BWd3NhbE5VNWxYM01mQXZrN1pHN085SF95ZTV2ekNtWEZxSDdkbFNRbUI5T0VWRGJQRzVnYnBCQTg5cExCanFVblBXSmpPTlo4SnFteUxIdE11ektJQTNncGlubjRUVHhIRGVBX0R6WEdPWi05QlhhZW84QW1RcWkzY1lZNlNsTktnN0hfRWlZcFk?oc=5",
+    "outlets": 3,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Prizori po potresu v Italiji: Del pobočja se je zrušil na avtomobile",
+    "source": "Svet24",
+    "date": "2026-07-31T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNk1SMS04ckM0V0FPc3FaZFlyNzdkZFpoZ093U0xfaVA5M0I0N2xWQ3B2MjhXM2JTZ2xaQS1ISTd4aDVGTEI2Ti1GZlRLNHhjWWhTbzlROUpxQUN6MmxrTW5hU3RERkplQXA4bVhweEg3WGMtdXBmckliY3FSdk5nRXRoc3RPYko4UG5haC1LbmxPNm5HaXVSMg?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Šibek potresni sunek v bližini Kobarida",
+    "source": "24ur.com",
     "date": "2026-07-15T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBEVkYtUG5DVEFYYzFzNGxJdmROV3pEZFN3Ul9DY1lRYTZfeFFXZXdGM0U1QXR2aXd5ellVVXh2aWJjRU9GOUF3Z3JRWE14Tk9qWnZfS1JfSDl1eHNGRTBjRDdId3JJUjJlT1F5Y290R1hYcjJDZ2c?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Močnejši potres blizu Petrinje, čutili so ga tudi v Zagrebu",
-    "source": "Siol.net",
-    "date": "2026-05-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPc2x3NVZlWndHak5KLWx6VFRSa1BGUG1VN1FKZVdIS2ZFQVRHTUpDcVZwWGhhbDF2bXJ5SkJzdFZ1OUVybURJQk1KMWVOWWRCbDhvRnUyNjdnMXdOMjc3THdURjl2S2hRWnVQUkxrSVdOOExtZlZwN3g0SHVHWl8yc05wTFBGZ25qRGxxMTRadjdRb0FxVE56UXdn?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Potresni sunek na Goriškem: v bližini Bovca so se zatresla tla",
-    "source": "Metropolitan.si",
-    "date": "2026-05-10T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1dTB0eUh0VEJndEk2NmJaR1Nrc2FYemw5SDZqUUJscHhFdWtISERIQzB5eGFWRmx3ZHJ4T2lzZHZvU3UxZGhudEV6eE5LSnpWNXpSRlNTYWRoNTdkajRfVUhwX1lPbi1rdmhDcldHU0d4TFA4dnItRXhubTd2VVU?oc=5",
-    "outlets": 1,
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQlpETnI5ZVhvTm1qYVlta3Z5VDRac2JGNTZQTnhOUHQ2aTJFUEtxRVAzRU9uTkZrODIzVmlha1FPSUpNaEJiandxb2RXLWZTTk5TbXRYZmpNMUh4UVlkQklWMHYwRjlQOGZYd20talpGc2V1MTZGS2V0b0tqeF9QaDIwZWV6UUYzTlE?oc=5",
+    "outlets": 2,
     "match": "headline names \"potres\""
    }
   ],
