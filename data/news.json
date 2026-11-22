@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T04:52:46.108Z",
+ "updated": "2026-11-22T05:54:37.810Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,6 +10,16 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
+   }
+  ],
+  "crna": [
+   {
+    "title": "Od jabke do mošta: folklora, ples, ustvarjalnost in bogate nagrade v Črni na Koroškem",
+    "source": "Koroške Novice",
+    "date": "2026-11-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNS0dYd3RRLVZFTi1tS0k5WmtJMDRqOUpVMWY0LTRGYUI5QUtHSHBiYmU4cTJYT1AyM2Nfa3J0YTluZWVEeklMTF9iQmVyd3hRTWxKT2Z4YklmRjB0bE9EejRtSzBYNzlmdVBaTTRpbGl0Umt5c0NtOHVUeDB2NlF0VUNpYjk3eWJpQ1hKZGZjUlRhTHBPSkMwRnk5VlV2Y2VhOU1zQU5ZXzJiNEtuVWRJZmNrTlNaanpvandj?oc=5",
+    "outlets": 1,
+    "match": "headline names \"na koroskem\""
    }
   ],
   "verd": [
@@ -104,14 +114,6 @@
     "match": "headline names \"innorenew\""
    },
    {
-    "title": "InnoRenew CoE, UP IAM organizira konferenco IRIC2026",
-    "source": "Primorske novice",
-    "date": "2026-06-18T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
-    "outlets": 1,
-    "match": "headline names \"innorenew\""
-   },
-   {
     "title": "ZA BOLJ ZDRAVE IN PRIJETNE STAVBE: InnoRenew CoE in UP IAM z inovativnim projektom 'BUILDWELL'",
     "source": "regionalobala.si",
     "date": "2026-01-31T08:00:00.000Z",
@@ -164,11 +166,19 @@
     "match": "headline names \"karavank\""
    },
    {
-    "title": "Stekel bo promet po novi cevi predora Karavanke",
-    "source": "Siol.net",
-    "date": "2026-03-20T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUndjQ3hWbXJVR1hmSkl0ZV9HX3ZFOEdXSkFmVl9IVkl6cnNzNC15UzZ5c3dwSHV2MW9kWEVWUGV0UkppS3NMZm03S2tjRlMycmszbE10MEFKa3RpTzVyNEZEb3ZRRktWeHVEQk9EbFViYUwwS3hOdmwzT2E1alVabEJLLTh1Q1dhYzJyNTh6MWhFZw?oc=5",
-    "outlets": 5,
+    "title": "Odprtje nove cevi predora Karavanke",
+    "source": "PROMET.SI",
+    "date": "2026-03-28T17:19:50.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9lTGoxLU9zX2gyV2VrSWNadDBsbmowVEZOYThYLWVFeHdqOVJJM3RJMllwQkdvWDFiUGVPVkFhSjF5ZVdXRVdoQ0VGVUhRSU9aOXZiUnhyRmMzNmlweEVpUFo2WDdIbUk?oc=5",
+    "outlets": 2,
+    "match": "headline names \"karavank\""
+   },
+   {
+    "title": "Nova cev predora Karavanke je odprta, sledi še prenova stare",
+    "source": "dnevne-novice.com",
+    "date": "2026-03-19T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa2gzOTRuYjdmMzlEaGFMc3hXa3NVTHA0alFNZ1pJeTlaZ0hIQzhVU1hxa2hYTXdnVGI3SEotREs0VXdhazh2V084aDV3ZjhxcUxzMEZ3Rld6aVBLT1dYZ0Vab1ZqUFBhTkZldlg2dElqWmZvb2QyYVdfTFQ4VjVvYzRGOWhRdHdjdjZmblVkTQ?oc=5",
+    "outlets": 7,
     "match": "headline names \"karavank\""
    },
    {
@@ -178,14 +188,6 @@
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVFpoZF9Sa0J0dUV6TUFCVDN0YmlQcWdtTFJKVG9NajJleTF2YkxXMENBUi1GTmtabzlhMkNLQnByZTRMMWE3QlEyMWlsS1E1Z1F5enRyb290TUpzdlByMUlzaTI1ZjN3d2ZPclBlZEdvNjJOZjJiTVNHVW5JUzNNbjBrdWtEODBFbDN3ZDFJVkM3MEUyOHVmYm0zdVVSaHN6TlE?oc=5",
     "outlets": 1,
     "match": "headline names \"karavansk\""
-   },
-   {
-    "title": "Konec del na drugi cevi avtocestnega predora Karavanke",
-    "source": "24ur.com",
-    "date": "2026-03-13T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNY0p1bWhSc1NQNDY0QlFBTWpROHM2RVNSWnVZbkdDaU9FSFBVWnhHb3JGRXZFQ19VNlRSLXNpZ2F0alJ2N09wQ1dNVTFqdk9KeVowTTVEUTdVMFFLWUdESWdhTkFfa0pWR3dNeVk1WXpSUzVNNzZfVXoyU0VJUUlpX0JrTUFZVDUwT3AyZTUzQVhMYXIxd1F0ZjM4ZWF1Zw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"karavank\""
    },
    {
     "title": "Druga cev predora Karavanke se odpira kmalu, a se za tri leta zapira prva",
@@ -634,14 +636,6 @@
     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1dTB0eUh0VEJndEk2NmJaR1Nrc2FYemw5SDZqUUJscHhFdWtISERIQzB5eGFWRmx3ZHJ4T2lzZHZvU3UxZGhudEV6eE5LSnpWNXpSRlNTYWRoNTdkajRfVUhwX1lPbi1rdmhDcldHU0d4TFA4dnItRXhubTd2VVU?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
-   },
-   {
-    "title": "50 let pozneje: spomin na potres, ki je pretresel Furlanijo in Posočje",
-    "source": "24ur.com",
-    "date": "2026-05-06T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYkZMaVd1Y2U3T290NThUU1FDc19Vcmw0MjlYNHZuVzBJTllKMG91SHRMR1U0Uy1hVEhoUGZGVWl1TnV5VTczWHdpaVhhaXZxY2JFYURZTkNnWkxkeWk4TU9ma04zV3FkXzRYaE9tWV82TUExSi1uZXN3OGdxMmE4bWlEdEVQZk5FY3BsLXJ6TzRIemFXX294WlNvYWVJNHdrZ3BjTVJhV2hmVjQyTUtjVg?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
    }
   ],
   "soca_quake": [
@@ -655,7 +649,7 @@
    },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
-    "source": "telegraf.si",
+    "source": "Telegraf",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
@@ -708,30 +702,6 @@
     "source": "Dnevnik",
     "date": "2026-08-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
-    "outlets": 1,
-    "match": "headline names \"nuk\""
-   },
-   {
-    "title": "Zakaj so pod Nukom našli kipec z erekcijo penisa",
-    "source": "Dnevnik",
-    "date": "2026-03-03T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTDJ4eTh0V1p6bzdBSG0wS2lQdUtVQTF6Ym5oaWpIa3hmcXVtLUxRZHZvRmI2dmk4aGZ3UzA2ejI5V21hNEN0SzR0QjVZWENlc01uMDZHbWxqb3puckNVTWlqZUFaSHphbGQ4YW02Z05ZMDhTYXVLMl9RTExkX1pSUFhZNUdyTVNncGJJQzlkRkhYM1hWdHNEOVRGRzQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"nuk\""
-   },
-   {
-    "title": "Od NUK-a do Pošte Slovenije, to so aktualna delovna mesta v Ljubljani",
-    "source": "Ljubljanainfo.com",
-    "date": "2026-01-25T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQU3dTdHBvZzB0QnJ5anQya0h6TS1zUXdZZXJFQzE0NXJlV0dNZzJQZm1tWllGdTROQmdvdExfemNoT3hOaEV1V0dIcVhkcmMyOFU2czg5b0FONTRuZ1A5dVJITWk4VXVlNlcwS29lSWhZYUNaeWx2NXdjS0pxOVh5YnJ1eHpGWTZxMGVCdkJMeGE4OVJCd0tFTVNQblRLdjh4Q21rd0lwZkRNeFRGWmJvbw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"nuk\""
-   },
-   {
-    "title": "Super novica za študente! NUK podaljšuje odprtje čitalnice",
-    "source": "Student.si",
-    "date": "2025-12-30T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2dpVmJwMEVaM2lLdy10SXNEVzRCVTlhSXBUaVp3MTdqbTlOa09JM053REJsT0JJbDktaDd2OE91SzZ2c2kwY2ItVFpIUmJ3a2tNMTVfWjFYN280Tm1XZGZPbUFZOVNzVXkwelpPTHhsVXBUWmtHMXd1QzRhb2p2U3JvenNOa1RuWUhwb1d5VHVkYzVuMThUa1Vtc0pNT2U5VW14ZTE5MEE0UQ?oc=5",
     "outlets": 1,
     "match": "headline names \"nuk\""
    },
