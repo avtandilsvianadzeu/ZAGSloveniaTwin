@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T17:19:51.211Z",
+ "updated": "2026-11-22T17:21:49.852Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -412,6 +412,24 @@
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa19CMDNLVVNyMU4zeXpOZkFiWFZfU282VzczYTY2eWxOWUJXa2RIMjFybDl5a0hGMUNrUE1kX2ZIQWxrVlJBOUs4T1FOd0U4M1J5bUt4ck5JUkFPTG9mN3JUVWR1bVNjX3ZHUm5NYUlhbF90OFhIUUNiSjA4SWhTejluMkRNUUg3bTYyWUxidHNoS1FXMktF?oc=5",
     "outlets": 1,
     "match": "headline names \"avce\""
+   }
+  ],
+  "krvavec": [
+   {
+    "title": "Garažna hiša Krvavec: Edina rešitev za nered?",
+    "source": "Dnevnik",
+    "date": "2026-06-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYVVwYkNhM1lQT1BmY3JGUGNmNjZVZ3huS1RXNUJHVmNhVEhYTjBkODF6b1E5dHYtQWdZbWJSNmJFLUFCTmxUMHgxdGlwNEtaUE9XcmNEOF96UVhmTXNZTlNaaUhUbFprTWxZWkhRbzVfcEJGY3Fvd3JWUVppUTJkNF8yYjRQeklDMU5iUXlBcEpDMWdZ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"krvavec\""
+   },
+   {
+    "title": "Obvestilo - POPOLNA ZAPORA ceste od planine Jezerca (parkirišče) do zgornje postaje žičnice Krvavec, od 20.4.2026 do 14.11.2026",
+    "source": "MojaObčina.si",
+    "date": "2026-03-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNcE8zd3EzNDVOMjRqVk9Bcl9pMTkycEs1dVpGc2xXYVJyTDE4NGw4ZDc4a21LalpYSFlObGkwRVFLQy1YOS1RTFdSSFZ4c0NhTHNuMm1LT3pJVWFxUWx5OXljS1RlaDZQVWZLalZDRl9DM1pWa0F0bU5mdXFaYk43VXRrTFZOOUNpYlRUeHJwYlBsLXBJTnBkemtRLWFRbW50UUJpalAya1VfbTZiSDhvVUIzXzhDcEFOTFluUkJwcTRvdVdOMzdlLXJaejNud3VkWmsxdWVsQlpNRmJpY3ZJa0FuMm5oODY2NFZSaGo2THdrVmhpaEJhaXc1TXhXQ2xTLXJERFBVdnUwcVN6TW9F?oc=5",
+    "outlets": 1,
+    "match": "headline names \"krvavec\""
    }
   ],
   "velikaplanina": [
