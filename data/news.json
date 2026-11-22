@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T06:56:31.848Z",
+ "updated": "2026-11-22T06:58:33.460Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -60,14 +60,6 @@
   ],
   "zag": [
    {
-    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
-    "source": "MojaObčina.si",
-    "date": "2026-10-15T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
-    "outlets": 1,
-    "match": "headline names \"zag\""
-   },
-   {
     "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
     "source": "Večer",
     "date": "2026-10-08T07:00:00.000Z",
@@ -108,6 +100,14 @@
     "source": "Primorske novice",
     "date": "2026-08-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMVJxdUFqWEc0c2x4OExmcER6RkJUS0xIcHhFV2poOE5FaEFiQ0drazBCbUhvVTNtM3VaTmR4bXBVV0p0c2hVSFFUTWE4aU1INktKWm5xaEVrY1JhWnByR2Ntb0tQcC14cDNXWUlTNnJMdFJsc2ZNVTNpRVJOcHQ4VlFjTVJVZEVha2xMUld4S2JISi0wOF9EMjFzcEtzMFVNOHVISXlSWlpFdDBkY2J3QVNIYXFLaDBHc1l5T2Jpa1RxcGE4d1VUVXVUOFFQODByUFVHQQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"innorenew\""
+   },
+   {
+    "title": "InnoRenew CoE, UP IAM organizira konferenco IRIC2026",
+    "source": "Primorske novice",
+    "date": "2026-06-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNR1RuY0lOSHRiSnZxMlZEY2VyYmZ0RkExSDNFRnlSUzRtb1Q2el9PRGJoMXFaTlhJTlQ4RDk2eFMzYnFNYTRtbXdfQUVVM1FZN2pvVXkxUjc4dV9LWTBKam8wU2VGZFpzUzNUbmQ4dl9PYmNYR0l6ZnA2VHBwZFg1SDVTeFBvWTB0aE9SYnFJeGwyM1dpQzJJX3VSM3g?oc=5",
     "outlets": 1,
     "match": "headline names \"innorenew\""
    },
@@ -176,7 +176,7 @@
     "source": "dnevne-novice.com",
     "date": "2026-03-19T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa2gzOTRuYjdmMzlEaGFMc3hXa3NVTHA0alFNZ1pJeTlaZ0hIQzhVU1hxa2hYTXdnVGI3SEotREs0VXdhazh2V084aDV3ZjhxcUxzMEZ3Rld6aVBLT1dYZ0Vab1ZqUFBhTkZldlg2dElqWmZvb2QyYVdfTFQ4VjVvYzRGOWhRdHdjdjZmblVkTQ?oc=5",
-    "outlets": 7,
+    "outlets": 5,
     "match": "headline names \"karavank\""
    },
    {
@@ -188,10 +188,10 @@
     "match": "headline names \"karavansk\""
    },
    {
-    "title": "Druga cev predora Karavanke se odpira kmalu, a se za tri leta zapira prva",
-    "source": "Forbes Slovenija",
-    "date": "2026-03-08T08:27:21.000Z",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU2w4TWtGSkJmTGRJWmk3VVVNUEk1MlQ2TGxBeEhwbXVoQy1FaVh3YjdzaC1mWlRabVBWcjVOX2xlaTBQc1hhYWZrMnAtT1I4Q1VjeUhOQ192LWk4Y2hEalU1SXNXNV9IYlpqekU1QVlLekJNcUVnbDU4WXIyeFFpVHAzajlybjl4SE4yTTczOGZzUWEyN3E1R2x5dV9qZ0NIa0FRQ25FSQ?oc=5",
+    "title": "Konec del na drugi cevi avtocestnega predora Karavanke",
+    "source": "24ur.com",
+    "date": "2026-03-13T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNY0p1bWhSc1NQNDY0QlFBTWpROHM2RVNSWnVZbkdDaU9FSFBVWnhHb3JGRXZFQ19VNlRSLXNpZ2F0alJ2N09wQ1dNVTFqdk9KeVowTTVEUTdVMFFLWUdESWdhTkFfa0pWR3dNeVk1WXpSUzVNNzZfVXoyU0VJUUlpX0JrTUFZVDUwT3AyZTUzQVhMYXIxd1F0ZjM4ZWF1Zw?oc=5",
     "outlets": 1,
     "match": "headline names \"karavank\""
    }
@@ -322,7 +322,7 @@
     "source": "OBALAplus",
     "date": "2026-10-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
-    "outlets": 2,
+    "outlets": 3,
     "match": "headline names \"markovec\""
    },
    {
@@ -592,47 +592,13 @@
     "match": "headline names \"kanin\""
    }
   ],
-  "ss_kocevje": [
-   {
-    "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
-    "source": "E-utrip",
-    "date": "2026-02-03T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPSVRXVW1ULVU4SHJPR2tuOWFqV2VWNmpfRWw2Vy1CVGFFRzc0c3YtbTVWcExqWUF4cndPVEdvX0ZaOEprVXN4OU5YN0pXRDJNaG54clM1cTJvcTFmN3puc2R3REtINHZVd3Y4OXlJM3AwNEstS2c3VGtLT3NHRXhza3RR?oc=5",
-    "outlets": 1,
-    "match": "headline names \"gimnazij\""
-   }
-  ],
   "bovec_quake": [
    {
-    "title": "Tla so se zatresla pri Tolminu: Potres magnitude 2,3",
-    "source": "Radio Robin",
-    "date": "2026-11-21T09:34:20.000Z",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeVkwZUtqajRZSHp5cmxCa3ZIMkdKV1ZZWUtRRy1FenVBQkVISVBDZ2xwWkU2Q3hPcDRPZGJTN0dsaFpFYl9yU0xfd213NWVzNjZmcHgydWh4TnNQZWlURkVFTjVfMHFCaTRsV2YtS01PT2VJSWFTTTFwUGRFMHNpcmZzdXFLS00?oc=5",
-    "outlets": 3,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Na severozahodu so se stresla tla. Ste čutili potres?",
+    "title": "Potres pri Tolminu: kje vse so ga čutili?",
     "source": "Svet24",
-    "date": "2026-11-17T08:14:31.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUnpGajJibWJPR2FKZnczZ2REUWlpZnpsRXlsem9jUzk1bmJDUDcwYjhiRXFnOW1OT1NZUXFncDZpeDR5VDBzZGY4RFRrWFN4NUR1ZlJRTDRReThpUUUxeGh5ZTNaTHBieS02dmV5TTRlYzhCcld6bmY2SGNMWk83c2w2NjdVSGpkNkRN?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Tolminsko danes v času kosila stresel manjši potres",
-    "source": "Radio Robin",
-    "date": "2026-10-03T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTExsRTV6cWlTek9sYlpieHVXdnVUbHhiV2lOdEZjdjVoUnNvXzJUZVVMalNoY1dwM1NwdVFxTVhQMFBZNTNuMjBqYjZsYk1uYzh5QnJlMTE4YjdLSzRkSzVBSlp3S3I0Y1RKQmhzTkxUb1QzM0xwcjROTVdSRzZpb3dLX3I4eDdY?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Danes ponoči rahel potres v bližini Breginja",
-    "source": "Radio Robin",
-    "date": "2026-08-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LZGlIVGxET0FUNS1CZGQ4QVBCR016d0dzbi1XWkZHWXhtWWxBMnJkX2ZxZGE3U0N2Nm9taGw5Y1JpS3Y3WnNMQzdDWG51c0FHcXgwTWxKWC0tbWQ4ZzA3QzFYOG04NFB4VlQ0NlN2Mnh3MU9VZVhwVi1iRmpnT0k?oc=5",
-    "outlets": 1,
+    "date": "2026-11-21T09:20:02.000Z",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03aFNYb0plbTJTUUZoa2RCN0pIOUM0dzYtZThndGtEMjh3SFN5bzdDN3RyVHd4b0w5VmFHV2c4UnZSZ21MSHhxcnhUQXI2TWQxVi1UbG90bUl1QXVaVXc3Q0tRZmlNUFlVNzl5b29fS245dGxu?oc=5",
+    "outlets": 3,
     "match": "headline names \"potres\""
    },
    {
@@ -640,31 +606,31 @@
     "source": "24ur.com",
     "date": "2026-08-23T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Xa2RZZklXdXBSQk1SVWthQzhhZXA1ZlR5bVk4NHZlWm01WDlQNzRNdG9hMXUzRmwyVXJLMmZIekRWd2szdkNfcnpKRE1FWGU1Uy1PLTVQQ25PX0NLOXBrWVZ1UTFETU45NGJtcXZiNmdpNE1xeXRfSg?oc=5",
-    "outlets": 3,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Goriško streslo še drugič: tokrat precej močneje, potres čutili tudi v Tolminu in Bovcu",
-    "source": "NaDlani.si",
-    "date": "2026-08-21T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdVFVZG1QZ1hxWTJVdndneTlNQWF1RnJWVXptYWJkS3BvdGtCS3BWd3NhbE5VNWxYM01mQXZrN1pHN085SF95ZTV2ekNtWEZxSDdkbFNRbUI5T0VWRGJQRzVnYnBCQTg5cExCanFVblBXSmpPTlo4SnFteUxIdE11ektJQTNncGlubjRUVHhIRGVBX0R6WEdPWi05QlhhZW84QW1RcWkzY1lZNlNsTktnN0hfRWlZcFk?oc=5",
-    "outlets": 2,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Prizori po potresu v Italiji: Del pobočja se je zrušil na avtomobile",
-    "source": "Svet24",
-    "date": "2026-07-31T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNk1SMS04ckM0V0FPc3FaZFlyNzdkZFpoZ093U0xfaVA5M0I0N2xWQ3B2MjhXM2JTZ2xaQS1ISTd4aDVGTEI2Ti1GZlRLNHhjWWhTbzlROUpxQUN6MmxrTW5hU3RERkplQXA4bVhweEg3WGMtdXBmckliY3FSdk5nRXRoc3RPYko4UG5haC1LbmxPNm5HaXVSMg?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    },
    {
-    "title": "Šibek potresni sunek v bližini Kobarida",
-    "source": "24ur.com",
+    "title": "Šibek jutranji potres stresel Posočje",
+    "source": "Radio Robin",
     "date": "2026-07-15T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQlpETnI5ZVhvTm1qYVlta3Z5VDRac2JGNTZQTnhOUHQ2aTJFUEtxRVAzRU9uTkZrODIzVmlha1FPSUpNaEJiandxb2RXLWZTTk5TbXRYZmpNMUh4UVlkQklWMHYwRjlQOGZYd20talpGc2V1MTZGS2V0b0tqeF9QaDIwZWV6UUYzTlE?oc=5",
-    "outlets": 2,
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBEVkYtUG5DVEFYYzFzNGxJdmROV3pEZFN3Ul9DY1lRYTZfeFFXZXdGM0U1QXR2aXd5ellVVXh2aWJjRU9GOUF3Z3JRWE14Tk9qWnZfS1JfSDl1eHNGRTBjRDdId3JJUjJlT1F5Y290R1hYcjJDZ2c?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Močnejši potres blizu Petrinje, čutili so ga tudi v Zagrebu",
+    "source": "Siol.net",
+    "date": "2026-05-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPc2x3NVZlWndHak5KLWx6VFRSa1BGUG1VN1FKZVdIS2ZFQVRHTUpDcVZwWGhhbDF2bXJ5SkJzdFZ1OUVybURJQk1KMWVOWWRCbDhvRnUyNjdnMXdOMjc3THdURjl2S2hRWnVQUkxrSVdOOExtZlZwN3g0SHVHWl8yc05wTFBGZ25qRGxxMTRadjdRb0FxVE56UXdn?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Potresni sunek na Goriškem: v bližini Bovca so se zatresla tla",
+    "source": "Metropolitan.si",
+    "date": "2026-05-10T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1dTB0eUh0VEJndEk2NmJaR1Nrc2FYemw5SDZqUUJscHhFdWtISERIQzB5eGFWRmx3ZHJ4T2lzZHZvU3UxZGhudEV6eE5LSnpWNXpSRlNTYWRoNTdkajRfVUhwX1lPbi1rdmhDcldHU0d4TFA4dnItRXhubTd2VVU?oc=5",
+    "outlets": 1,
     "match": "headline names \"potres\""
    }
   ],
@@ -679,7 +645,7 @@
    },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
-    "source": "Telegraf",
+    "source": "telegraf.si",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
