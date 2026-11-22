@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T08:00:23.712Z",
+ "updated": "2026-11-22T09:02:20.072Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,6 +10,16 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
+   }
+  ],
+  "crna": [
+   {
+    "title": "Od jabke do mošta: folklora, ples, ustvarjalnost in bogate nagrade v Črni na Koroškem",
+    "source": "Koroške Novice",
+    "date": "2026-11-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNS0dYd3RRLVZFTi1tS0k5WmtJMDRqOUpVMWY0LTRGYUI5QUtHSHBiYmU4cTJYT1AyM2Nfa3J0YTluZWVEeklMTF9iQmVyd3hRTWxKT2Z4YklmRjB0bE9EejRtSzBYNzlmdVBaTTRpbGl0Umt5c0NtOHVUeDB2NlF0VUNpYjk3eWJpQ1hKZGZjUlRhTHBPSkMwRnk5VlV2Y2VhOU1zQU5ZXzJiNEtuVWRJZmNrTlNaanpvandj?oc=5",
+    "outlets": 1,
+    "match": "headline names \"na koroskem\""
    }
   ],
   "verd": [
@@ -256,7 +266,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 5,
+    "outlets": 2,
     "match": "headline names \"kastelec\""
    },
    {
@@ -289,14 +299,6 @@
     "date": "2026-07-31T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbmRsdXpVZk9QMUNxZGRvOXg1RzdqUWhtX2twcTIxLXlTZ2ZqSV9Gc2NOOHN0M3ZqLThzM2F1Rm5sVV9pMXdhOWVnZEF5VXRXV05BYTctUVJLME1NWEtkWmNLTHpDcXZUNnpPdVMyWE9KWkFXYTR3VTFlSC0zRVhhbmU2eUE0RVA5ZHRuU0REdm5EU2R6RlN1Uk9nak91bFVm?oc=5",
     "outlets": 2,
-    "match": "headline names \"kastelec\""
-   },
-   {
-    "title": "MOČNA BURJA OHROMILA PROMET: Predor Kastelec je zaprt, prepovedi za več vrst vozil",
-    "source": "regionalobala.si",
-    "date": "2025-11-22T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOFlCaEVaT1M3bC1SN0Nwa0ZjLThyV2lZZ0FjRU81Ny1hZFFLNkJJTXZwTTRHcWVKUUVuT1h3UFhyWkQyOGJnT2dsY0R5MHIwVEdhUTNPN3RRUHJvQk0wc1NwOXhVVm14VHhndDF3MVhoM004cjJXdjFnRzk4NkNleHdndDZ6RlZGUWxDN2J1cF9OWjV2dXJTVWo1OGxHV2VpckZzc0V1Sk5ubUhLZHl2OEg3Rlc0VWc?oc=5",
-    "outlets": 1,
     "match": "headline names \"kastelec\""
    }
   ],
@@ -464,6 +466,14 @@
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
+   },
+   {
+    "title": "V Kranjski Gori odprtje sedežnice do vrha Vitranca",
+    "source": "tv3m.si",
+    "date": "2026-06-25T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfa21KSXdmdDJuOC1mVzdpeG01N0JnTWctLTJqcVpuSnZYbEc5c1laSG1LTkxYWUZublFVTG1la2pIR1E1Uk9xUVpCZVgwYUJpWlRWdkFRMXZqOGJTSmg3ZHRacmVkXy1fdmJqQkpmNjZHOGc2RURDT2J3a3ZQeVU?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kranjsk\""
    }
   ],
   "cerkno_z": [
@@ -560,16 +570,6 @@
     "match": "headline names \"kanin\""
    }
   ],
-  "livarna_crnomelj": [
-   {
-    "title": "Novi posnetki: kljub opozorilom iz Livarja še naprej gost dim",
-    "source": "Radio Odeon",
-    "date": "2026-08-12T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUkhBOThtdWFPZERPOVVoeWladEs4b2VPTkR2Zmp3MFhZRl9zaTlxNjJVYkl1aDFBVjExSXoxYkI5MFBMcWNPcGJCb0RRSGRhVkVDNnVLaFFiM3R5UU4zWU9hNDlkQkNRYWRvN2dBV2NqU2dhOFZrTl82S0ZFcXZWeVpVU0REMmRWOTRiSE4zUlNMRHpvSVQwY25iS2o?oc=5",
-    "outlets": 1,
-    "match": "headline names \"livar\""
-   }
-  ],
   "ss_kocevje": [
    {
     "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
@@ -621,6 +621,14 @@
     "date": "2026-11-21T19:42:32.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVWdPZjRhc0M2SktReXBkYWJFOG1RWkFqRUozbzVxN29WelhEdXlzdTNmbUQ2bjZBenNIQ1B2TG5ZSF9nakVidEZFQUp4Z01IMnc1T1ljMHZMNmF5OW42a1p0ZVJxQ0hhSGdtcTBHYllFR1dCQk92ZkZ3TU9KZmpyWnpR?oc=5",
     "outlets": 4,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Potres čutili v več slovenskih krajih",
+    "source": "Mariborinfo.com",
+    "date": "2026-11-21T10:34:23.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOU25GYVQ5ejRCWXp6eGV5bFJPQmdDZEp5MDhCblpGaWRzaFJsbkFLZXl1cmJqS0MtOFBvblJHcjI2S0o1bFpLX2pVQjBMcXgxLXBsd2tGVVBwQUgxbVVfazdKdWxlOGlacGF0Vm96c0JGVmZTYVFaU2MyeHNqNV9iVzNIVFBvN3RSTXJORkZn?oc=5",
+    "outlets": 1,
     "match": "headline names \"potres\""
    },
    {
