@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T16:14:38.445Z",
+ "updated": "2026-11-23T17:16:37.158Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,16 +10,6 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
-   }
-  ],
-  "crna": [
-   {
-    "title": "Od jabke do mošta: folklora, ples, ustvarjalnost in bogate nagrade v Črni na Koroškem",
-    "source": "Koroške Novice",
-    "date": "2026-11-06T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNS0dYd3RRLVZFTi1tS0k5WmtJMDRqOUpVMWY0LTRGYUI5QUtHSHBiYmU4cTJYT1AyM2Nfa3J0YTluZWVEeklMTF9iQmVyd3hRTWxKT2Z4YklmRjB0bE9EejRtSzBYNzlmdVBaTTRpbGl0Umt5c0NtOHVUeDB2NlF0VUNpYjk3eWJpQ1hKZGZjUlRhTHBPSkMwRnk5VlV2Y2VhOU1zQU5ZXzJiNEtuVWRJZmNrTlNaanpvandj?oc=5",
-    "outlets": 1,
-    "match": "headline names \"na koroskem\""
    }
   ],
   "verd": [
@@ -142,6 +132,14 @@
   ],
   "karavanke_c": [
    {
+    "title": "Karavanški predor po 35 letih dobiva novo podobo, tovornjake pa bo pred vstopom nadzoroval termoskener",
+    "source": "Gorenjskainfo.com",
+    "date": "2026-11-23T17:00:40.000Z",
+    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNTl9xR2dVeVBBX0J4UDlEOGtQN28wbjZFLXBBai1hMVgydEl6N3F2LUI3dDZJOFExUlpMS19YS01EUTg4Zm1IbUMyNWk5cEozU0U3OGRfTGprUHVmc0FnYmhXOHZqZThYQjM1YkhVVGFzajJ6SzdmbzE1VWZxeFpndmhxZWt2SVJFRlNNUDhIUHFVTW1iYjdaVUpxeVU4MlQ4NWowQ0lOekR2NW5HVXhPNWdiX0JPSVoxdjREREp3Y3paRVkxUF92bG5vRG05R3lqUnRHVThiYTFzbWNSTnNXUWxtSWRmdw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"karavansk\""
+   },
+   {
     "title": "Zaradi varnosti zapirajo predor Karavanke",
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
@@ -196,14 +194,6 @@
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVFpoZF9Sa0J0dUV6TUFCVDN0YmlQcWdtTFJKVG9NajJleTF2YkxXMENBUi1GTmtabzlhMkNLQnByZTRMMWE3QlEyMWlsS1E1Z1F5enRyb290TUpzdlByMUlzaTI1ZjN3d2ZPclBlZEdvNjJOZjJiTVNHVW5JUzNNbjBrdWtEODBFbDN3ZDFJVkM3MEUyOHVmYm0zdVVSaHN6TlE?oc=5",
     "outlets": 1,
     "match": "headline names \"karavansk\""
-   },
-   {
-    "title": "Znano je, kdaj bo odprta druga cev predora Karavanke. Po njej se boste lahko peljali zelo kmalu",
-    "source": "Avto-magazin.si",
-    "date": "2026-03-12T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNkhWZ1Q5aUNYYWVMVnJXeDhObnV2dl9yLUFKSVF5d2pvNFM2b3kxVEQ0LXZCY2RCbG5jaG13N3VhSEFYNWN0TG1RYkdIckxzbHBWeWhZZUF2ZTFDTEluQnY1UHg4SkgyUnRrbDdfbW9BNTQtUF9UZE1tbk5nTHY5QkZVejRjV2NnMTVtNUxPeXhIbk1ERE1wR05nZw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"karavank\""
    }
   ],
   "golovec": [
@@ -337,7 +327,7 @@
    },
    {
     "title": "VOZNIKI, POZOR: Prali bodo predor Markovec, promet bo potekal po enem pasu",
-    "source": "Regional Obala",
+    "source": "regionalobala.si",
     "date": "2026-05-21T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSXZObHVEcWpramdDNGJkeWt0bnl3RXZIUHE5ZXFtdzdPaHBhTm9sVFB5RW9hUEV5a0FuNXlVTXdlRFZzWnhZaktNRjk3Nmg3QXc2RkFUSjVEdzNnaVpfZG9NdW9sWVN3YzBJckNLc1VNS0gzM1NfaWhVOU40emF0cHlGcUVjMGxlcDNsSVdSaXJHd1NkcXN0OWdLMUIwbk4zS1JZRDIxZmdTMkxJ?oc=5",
     "outlets": 1,
@@ -618,10 +608,10 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "Potres čutili v več slovenskih krajih",
-    "source": "Mariborinfo.com",
-    "date": "2026-11-21T10:34:23.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOU25GYVQ5ejRCWXp6eGV5bFJPQmdDZEp5MDhCblpGaWRzaFJsbkFLZXl1cmJqS0MtOFBvblJHcjI2S0o1bFpLX2pVQjBMcXgxLXBsd2tGVVBwQUgxbVVfazdKdWxlOGlacGF0Vm96c0JGVmZTYVFaU2MyeHNqNV9iVzNIVFBvN3RSTXJORkZn?oc=5",
+    "title": "Potres stresel Posočje, čutili so ga tudi prebivalci Gorenjske",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-11-21T10:26:43.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNcVpFUnRwdzhzSEZvS3FFa3ZGWlB6LWVMTXQ1ajI1OVlIMmpISmxvUG8xXzB6dVpXSVBXRXJ4d2FEc1pIQy03V3pHN1ZoUW03cXQ3cUhSVzVmOWZMS2hmWVpQZWU5dFBmRC1sYTNHUHhadzlxSU8zUXIzWnVTVGtMNE90TVF5Z21VbGs3NUF3c0NIWURjSVBidU5aRUNYdXdXeTNxc0NVZ0ZKLTZYOHdrdA?oc=5",
     "outlets": 3,
     "match": "headline names \"potres\""
    },
@@ -631,14 +621,6 @@
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Streslo je v Breginju, potres so čutili v Zgornjem Posočju",
-    "source": "Svet24",
-    "date": "2026-08-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1lcVExb2pndTlmTk1ieTNRMmE5REdsSWdhQXBRRmpTaWNzX2tRRnNzMU5IRHZBZFpwLTNQVFM3Wm5JaWZwVU9EZmhPd0FYXzFxVmtuNjN2NzlaSTI2WHVFeUQtWUFkdEwyaGhDVFhEUnhtNW1GNUlGd3hUVkQ?oc=5",
-    "outlets": 2,
     "match": "headline names \"potres\""
    },
    {
