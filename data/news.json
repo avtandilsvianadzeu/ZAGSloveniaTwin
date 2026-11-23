@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T07:53:43.235Z",
+ "updated": "2026-11-23T08:55:42.687Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -264,7 +264,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 4,
+    "outlets": 2,
     "match": "headline names \"kastelec\""
    },
    {
@@ -272,7 +272,7 @@
     "source": "Dnevnik",
     "date": "2026-09-24T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1JQWUtScWZqa0dlYTBtdEg5ekZocEZ5emRvTVE2c1lsM05RaVFvNXhHSkN3Q3BhZnpXRWVmVFFTR0Z6N3luTEZMMms4dzM2YnN6Tm5Rbkd4RDE2RDVNNWtGVnRaQUpNNDZWZFphQktDeG9fV1V5MFRaMjNNczZ5TGZEdUFaWGRWdUZEdGpHRC12NTNPTmM2M2tqNi1OV3NjNnhSdDlKcUwtM1EwN3c?oc=5",
-    "outlets": 2,
+    "outlets": 1,
     "match": "headline names \"kastelec\""
    },
    {
@@ -292,27 +292,11 @@
     "match": "headline names \"kastelec\""
    },
    {
-    "title": "Od počitniške hiše do predora Kastelec v pičlih 20 minutah",
-    "source": "Moja Dolenjska",
-    "date": "2026-08-05T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbkNQaXNOS0VpM1VSOUdoUnZXMFAtSWNPODZyMWRMZkJFZTBsczFTaHRmenRqV3NNNjNpNEdvNkZsNDNHc1h0dGNRU0NqMUIyRzhjU0ZUM1JOSG5mdEVnS1poV2FudGpDRHVvNGxWOFpCVC12cHdwSjJmeWUyS1hac01aS2tHdEtNb2hQVDN3?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kastelec\""
-   },
-   {
     "title": "Predor Kastelec na primorski avtocesti ponovno odprli",
     "source": "Delo.si",
     "date": "2026-07-31T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbmRsdXpVZk9QMUNxZGRvOXg1RzdqUWhtX2twcTIxLXlTZ2ZqSV9Gc2NOOHN0M3ZqLThzM2F1Rm5sVV9pMXdhOWVnZEF5VXRXV05BYTctUVJLME1NWEtkWmNLTHpDcXZUNnpPdVMyWE9KWkFXYTR3VTFlSC0zRVhhbmU2eUE0RVA5ZHRuU0REdm5EU2R6RlN1Uk9nak91bFVm?oc=5",
     "outlets": 2,
-    "match": "headline names \"kastelec\""
-   },
-   {
-    "title": "ZAPRT KASTELEC, PA ŠE REGIONALNA CESTA PRI KOZINI: Zaradi gorečega vozila obvoz čez Italijo",
-    "source": "Regional Obala",
-    "date": "2026-07-31T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaHVTbjhtWkpmVzE0RGEzaFBGWlZDTng1ek9WV25jbmlTdVdvRHd3Uk1KbHZfazQ1R1ZUcWM0bEJ2X0plOEtTUllORjdWTmZQMVh5T2dNclI2enNybEZ3LVFLdlpvMVFFTDF4d3FsZnhPSHhJZVd0QWdKeEMtVlI3YlJtU3k0Wl9wYWxCeThNMHpuTjdTTGVzbkNpVEtYaXc4QWh4VHNOcVhxdzFxVy1rQlJ1Q2lsM2RENmpqY1RTY3ZScHc?oc=5",
-    "outlets": 1,
     "match": "headline names \"kastelec\""
    }
   ],
@@ -428,24 +412,6 @@
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa19CMDNLVVNyMU4zeXpOZkFiWFZfU282VzczYTY2eWxOWUJXa2RIMjFybDl5a0hGMUNrUE1kX2ZIQWxrVlJBOUs4T1FOd0U4M1J5bUt4ck5JUkFPTG9mN3JUVWR1bVNjX3ZHUm5NYUlhbF90OFhIUUNiSjA4SWhTejluMkRNUUg3bTYyWUxidHNoS1FXMktF?oc=5",
     "outlets": 1,
     "match": "headline names \"avce\""
-   }
-  ],
-  "krvavec": [
-   {
-    "title": "Garažna hiša Krvavec: Edina rešitev za nered?",
-    "source": "Dnevnik",
-    "date": "2026-06-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYVVwYkNhM1lQT1BmY3JGUGNmNjZVZ3huS1RXNUJHVmNhVEhYTjBkODF6b1E5dHYtQWdZbWJSNmJFLUFCTmxUMHgxdGlwNEtaUE9XcmNEOF96UVhmTXNZTlNaaUhUbFprTWxZWkhRbzVfcEJGY3Fvd3JWUVppUTJkNF8yYjRQeklDMU5iUXlBcEpDMWdZ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"krvavec\""
-   },
-   {
-    "title": "Obvestilo - POPOLNA ZAPORA ceste od planine Jezerca (parkirišče) do zgornje postaje žičnice Krvavec, od 20.4.2026 do 14.11.2026",
-    "source": "MojaObčina.si",
-    "date": "2026-03-06T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNcE8zd3EzNDVOMjRqVk9Bcl9pMTkycEs1dVpGc2xXYVJyTDE4NGw4ZDc4a21LalpYSFlObGkwRVFLQy1YOS1RTFdSSFZ4c0NhTHNuMm1LT3pJVWFxUWx5OXljS1RlaDZQVWZLalZDRl9DM1pWa0F0bU5mdXFaYk43VXRrTFZOOUNpYlRUeHJwYlBsLXBJTnBkemtRLWFRbW50UUJpalAya1VfbTZiSDhvVUIzXzhDcEFOTFluUkJwcTRvdVdOMzdlLXJaejNud3VkWmsxdWVsQlpNRmJpY3ZJa0FuMm5oODY2NFZSaGo2THdrVmhpaEJhaXc1TXhXQ2xTLXJERFBVdnUwcVN6TW9F?oc=5",
-    "outlets": 1,
-    "match": "headline names \"krvavec\""
    }
   ],
   "velikaplanina": [
@@ -588,6 +554,22 @@
     "match": "headline names \"kanin\""
    },
    {
+    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
+    "source": "Svet24",
+    "date": "2026-06-17T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
+    "outlets": 2,
+    "match": "headline names \"kanin\""
+   },
+   {
+    "title": "Na Kaninu kmalu nove žičnice",
+    "source": "24ur.com",
+    "date": "2026-04-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE95eUZUbGx1VmppdTRPZ2tpOE1oX0d3enJ2dWMwZnl0MURMcFROclpxd0ZCQmxRb1o5SWU0TWJOX25ETWhXUFBsTDh5Nm10QW9SczZNWDZmbXk1QVdvRnBLcVoyUlZUWXFSb0ZYYjJoOHVMUkhxcnMyVFFMTQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kanin\""
+   },
+   {
     "title": "Na mizi nove rešitve za smučišče Kanin",
     "source": "OBALAplus",
     "date": "2026-02-26T08:00:00.000Z",
@@ -605,22 +587,6 @@
    }
   ],
   "ss_kocevje": [
-   {
-    "title": "Sodišče zavrnilo tožbo ravnatelja Gregorja Pečana zoper Gimnazijo Kočevje",
-    "source": "N1 Slovenija",
-    "date": "2026-04-24T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZGFYQTEtOC1tTGNOcGd2V2ZZTkw2SkRvb2RLZnh3SlpDVUtoSmVzVEZHVEtlQTNXVG5ucUZqLUJaYUtsV3N0S0FuVy1rOGNHUVYxMnIyNlpjbVNnX0N5WERLUkdqWnJMdFdQdklHcmtIeE5rdEFHQXYyMzQteGVIRTM2NGNGdjVXal9VV0RDQjRMNEhKWTFySW1TaUF0LU56c2c?oc=5",
-    "outlets": 2,
-    "match": "headline names \"gimnazij\""
-   },
-   {
-    "title": "Razrešeni ravnatelj zoper gimnazijo: aroganten ali dosleden? Mnenja deljena",
-    "source": "Dolenjski list",
-    "date": "2026-04-01T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaExfR3Y5ZXdtbHBDMlMyUGhWcTRGNzN6TmFLSGIwWFVERExoVi02UnF1TV9TWndHd1R5NGtVLVRxOFJWYWxrVUYzbVRDbHRpZXRhZjlPektWOWNzeDdBYjhTMWVvVnlodll6emg4WWlCQTRLRFZBb0xuM3VfNVlFSGp6TE9kTzFrRFRFQ2lCWExnWHNYY2NxUQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"gimnazij\""
-   },
    {
     "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
     "source": "E-utrip",
