@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T08:57:54.052Z",
+ "updated": "2026-11-23T09:59:47.319Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -176,7 +176,7 @@
     "source": "dnevne-novice.com",
     "date": "2026-03-19T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa2gzOTRuYjdmMzlEaGFMc3hXa3NVTHA0alFNZ1pJeTlaZ0hIQzhVU1hxa2hYTXdnVGI3SEotREs0VXdhazh2V084aDV3ZjhxcUxzMEZ3Rld6aVBLT1dYZ0Vab1ZqUFBhTkZldlg2dElqWmZvb2QyYVdfTFQ4VjVvYzRGOWhRdHdjdjZmblVkTQ?oc=5",
-    "outlets": 5,
+    "outlets": 7,
     "match": "headline names \"karavank\""
    },
    {
@@ -188,10 +188,10 @@
     "match": "headline names \"karavansk\""
    },
    {
-    "title": "Konec del na drugi cevi avtocestnega predora Karavanke",
-    "source": "24ur.com",
-    "date": "2026-03-13T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNY0p1bWhSc1NQNDY0QlFBTWpROHM2RVNSWnVZbkdDaU9FSFBVWnhHb3JGRXZFQ19VNlRSLXNpZ2F0alJ2N09wQ1dNVTFqdk9KeVowTTVEUTdVMFFLWUdESWdhTkFfa0pWR3dNeVk1WXpSUzVNNzZfVXoyU0VJUUlpX0JrTUFZVDUwT3AyZTUzQVhMYXIxd1F0ZjM4ZWF1Zw?oc=5",
+    "title": "Druga cev predora Karavanke se odpira kmalu, a se za tri leta zapira prva",
+    "source": "Forbes Slovenija",
+    "date": "2026-03-08T08:27:21.000Z",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU2w4TWtGSkJmTGRJWmk3VVVNUEk1MlQ2TGxBeEhwbXVoQy1FaVh3YjdzaC1mWlRabVBWcjVOX2xlaTBQc1hhYWZrMnAtT1I4Q1VjeUhOQ192LWk4Y2hEalU1SXNXNV9IYlpqekU1QVlLekJNcUVnbDU4WXIyeFFpVHAzajlybjl4SE4yTTczOGZzUWEyN3E1R2x5dV9qZ0NIa0FRQ25FSQ?oc=5",
     "outlets": 1,
     "match": "headline names \"karavank\""
    }
@@ -314,7 +314,7 @@
     "source": "OBALAplus",
     "date": "2026-10-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
-    "outlets": 3,
+    "outlets": 2,
     "match": "headline names \"markovec\""
    },
    {
@@ -624,10 +624,10 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "Potres čutili v več slovenskih krajih",
-    "source": "Mariborinfo.com",
-    "date": "2026-11-21T10:34:23.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOU25GYVQ5ejRCWXp6eGV5bFJPQmdDZEp5MDhCblpGaWRzaFJsbkFLZXl1cmJqS0MtOFBvblJHcjI2S0o1bFpLX2pVQjBMcXgxLXBsd2tGVVBwQUgxbVVfazdKdWxlOGlacGF0Vm96c0JGVmZTYVFaU2MyeHNqNV9iVzNIVFBvN3RSTXJORkZn?oc=5",
+    "title": "Potres stresel Posočje, čutili so ga tudi prebivalci Gorenjske",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-11-21T10:26:43.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNcVpFUnRwdzhzSEZvS3FFa3ZGWlB6LWVMTXQ1ajI1OVlIMmpISmxvUG8xXzB6dVpXSVBXRXJ4d2FEc1pIQy03V3pHN1ZoUW03cXQ3cUhSVzVmOWZMS2hmWVpQZWU5dFBmRC1sYTNHUHhadzlxSU8zUXIzWnVTVGtMNE90TVF5Z21VbGs3NUF3c0NIWURjSVBidU5aRUNYdXdXeTNxc0NVZ0ZKLTZYOHdrdA?oc=5",
     "outlets": 3,
     "match": "headline names \"potres\""
    },
