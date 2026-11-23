@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T02:41:24.472Z",
+ "updated": "2026-11-23T03:43:36.366Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -136,7 +136,7 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
-    "outlets": 3,
+    "outlets": 2,
     "match": "headline names \"karavank\""
    },
    {
@@ -176,7 +176,7 @@
     "source": "dnevne-novice.com",
     "date": "2026-03-19T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa2gzOTRuYjdmMzlEaGFMc3hXa3NVTHA0alFNZ1pJeTlaZ0hIQzhVU1hxa2hYTXdnVGI3SEotREs0VXdhazh2V084aDV3ZjhxcUxzMEZ3Rld6aVBLT1dYZ0Vab1ZqUFBhTkZldlg2dElqWmZvb2QyYVdfTFQ4VjVvYzRGOWhRdHdjdjZmblVkTQ?oc=5",
-    "outlets": 7,
+    "outlets": 5,
     "match": "headline names \"karavank\""
    },
    {
@@ -188,10 +188,10 @@
     "match": "headline names \"karavansk\""
    },
    {
-    "title": "Druga cev predora Karavanke se odpira kmalu, a se za tri leta zapira prva",
-    "source": "Forbes Slovenija",
-    "date": "2026-03-08T08:27:21.000Z",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU2w4TWtGSkJmTGRJWmk3VVVNUEk1MlQ2TGxBeEhwbXVoQy1FaVh3YjdzaC1mWlRabVBWcjVOX2xlaTBQc1hhYWZrMnAtT1I4Q1VjeUhOQ192LWk4Y2hEalU1SXNXNV9IYlpqekU1QVlLekJNcUVnbDU4WXIyeFFpVHAzajlybjl4SE4yTTczOGZzUWEyN3E1R2x5dV9qZ0NIa0FRQ25FSQ?oc=5",
+    "title": "Konec del na drugi cevi avtocestnega predora Karavanke",
+    "source": "24ur.com",
+    "date": "2026-03-13T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNY0p1bWhSc1NQNDY0QlFBTWpROHM2RVNSWnVZbkdDaU9FSFBVWnhHb3JGRXZFQ19VNlRSLXNpZ2F0alJ2N09wQ1dNVTFqdk9KeVowTTVEUTdVMFFLWUdESWdhTkFfa0pWR3dNeVk1WXpSUzVNNzZfVXoyU0VJUUlpX0JrTUFZVDUwT3AyZTUzQVhMYXIxd1F0ZjM4ZWF1Zw?oc=5",
     "outlets": 1,
     "match": "headline names \"karavank\""
    }
@@ -572,22 +572,6 @@
     "match": "headline names \"kanin\""
    },
    {
-    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
-    "source": "Svet24",
-    "date": "2026-06-17T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
-    "outlets": 2,
-    "match": "headline names \"kanin\""
-   },
-   {
-    "title": "Na Kaninu kmalu nove žičnice",
-    "source": "24ur.com",
-    "date": "2026-04-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE95eUZUbGx1VmppdTRPZ2tpOE1oX0d3enJ2dWMwZnl0MURMcFROclpxd0ZCQmxRb1o5SWU0TWJOX25ETWhXUFBsTDh5Nm10QW9SczZNWDZmbXk1QVdvRnBLcVoyUlZUWXFSb0ZYYjJoOHVMUkhxcnMyVFFMTQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kanin\""
-   },
-   {
     "title": "Na mizi nove rešitve za smučišče Kanin",
     "source": "OBALAplus",
     "date": "2026-02-26T08:00:00.000Z",
@@ -605,22 +589,6 @@
    }
   ],
   "ss_kocevje": [
-   {
-    "title": "Sodišče zavrnilo tožbo ravnatelja Gregorja Pečana zoper Gimnazijo Kočevje",
-    "source": "N1 Slovenija",
-    "date": "2026-04-24T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZGFYQTEtOC1tTGNOcGd2V2ZZTkw2SkRvb2RLZnh3SlpDVUtoSmVzVEZHVEtlQTNXVG5ucUZqLUJaYUtsV3N0S0FuVy1rOGNHUVYxMnIyNlpjbVNnX0N5WERLUkdqWnJMdFdQdklHcmtIeE5rdEFHQXYyMzQteGVIRTM2NGNGdjVXal9VV0RDQjRMNEhKWTFySW1TaUF0LU56c2c?oc=5",
-    "outlets": 2,
-    "match": "headline names \"gimnazij\""
-   },
-   {
-    "title": "Razrešeni ravnatelj zoper gimnazijo: aroganten ali dosleden? Mnenja deljena",
-    "source": "Dolenjski list",
-    "date": "2026-04-01T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaExfR3Y5ZXdtbHBDMlMyUGhWcTRGNzN6TmFLSGIwWFVERExoVi02UnF1TV9TWndHd1R5NGtVLVRxOFJWYWxrVUYzbVRDbHRpZXRhZjlPektWOWNzeDdBYjhTMWVvVnlodll6emg4WWlCQTRLRFZBb0xuM3VfNVlFSGp6TE9kTzFrRFRFQ2lCWExnWHNYY2NxUQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"gimnazij\""
-   },
    {
     "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
     "source": "E-utrip",
