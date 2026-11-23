@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T23:35:21.284Z",
+ "updated": "2026-11-23T00:37:19.933Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -686,6 +686,30 @@
     "source": "Dnevnik",
     "date": "2026-08-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Zakaj so pod Nukom našli kipec z erekcijo penisa",
+    "source": "Dnevnik",
+    "date": "2026-03-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTDJ4eTh0V1p6bzdBSG0wS2lQdUtVQTF6Ym5oaWpIa3hmcXVtLUxRZHZvRmI2dmk4aGZ3UzA2ejI5V21hNEN0SzR0QjVZWENlc01uMDZHbWxqb3puckNVTWlqZUFaSHphbGQ4YW02Z05ZMDhTYXVLMl9RTExkX1pSUFhZNUdyTVNncGJJQzlkRkhYM1hWdHNEOVRGRzQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Od NUK-a do Pošte Slovenije, to so aktualna delovna mesta v Ljubljani",
+    "source": "Ljubljanainfo.com",
+    "date": "2026-01-25T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQU3dTdHBvZzB0QnJ5anQya0h6TS1zUXdZZXJFQzE0NXJlV0dNZzJQZm1tWllGdTROQmdvdExfemNoT3hOaEV1V0dIcVhkcmMyOFU2czg5b0FONTRuZ1A5dVJITWk4VXVlNlcwS29lSWhZYUNaeWx2NXdjS0pxOVh5YnJ1eHpGWTZxMGVCdkJMeGE4OVJCd0tFTVNQblRLdjh4Q21rd0lwZkRNeFRGWmJvbw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Super novica za študente! NUK podaljšuje odprtje čitalnice",
+    "source": "Student.si",
+    "date": "2025-12-30T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2dpVmJwMEVaM2lLdy10SXNEVzRCVTlhSXBUaVp3MTdqbTlOa09JM053REJsT0JJbDktaDd2OE91SzZ2c2kwY2ItVFpIUmJ3a2tNMTVfWjFYN280Tm1XZGZPbUFZOVNzVXkwelpPTHhsVXBUWmtHMXd1QzRhb2p2U3JvenNOa1RuWUhwb1d5VHVkYzVuMThUa1Vtc0pNT2U5VW14ZTE5MEE0UQ?oc=5",
     "outlets": 1,
     "match": "headline names \"nuk\""
    },
