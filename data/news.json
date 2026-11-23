@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T03:43:36.366Z",
+ "updated": "2026-11-23T03:45:35.934Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -414,24 +414,6 @@
     "match": "headline names \"avce\""
    }
   ],
-  "krvavec": [
-   {
-    "title": "Garažna hiša Krvavec: Edina rešitev za nered?",
-    "source": "Dnevnik",
-    "date": "2026-06-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYVVwYkNhM1lQT1BmY3JGUGNmNjZVZ3huS1RXNUJHVmNhVEhYTjBkODF6b1E5dHYtQWdZbWJSNmJFLUFCTmxUMHgxdGlwNEtaUE9XcmNEOF96UVhmTXNZTlNaaUhUbFprTWxZWkhRbzVfcEJGY3Fvd3JWUVppUTJkNF8yYjRQeklDMU5iUXlBcEpDMWdZ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"krvavec\""
-   },
-   {
-    "title": "Obvestilo - POPOLNA ZAPORA ceste od planine Jezerca (parkirišče) do zgornje postaje žičnice Krvavec, od 20.4.2026 do 14.11.2026",
-    "source": "MojaObčina.si",
-    "date": "2026-03-06T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNcE8zd3EzNDVOMjRqVk9Bcl9pMTkycEs1dVpGc2xXYVJyTDE4NGw4ZDc4a21LalpYSFlObGkwRVFLQy1YOS1RTFdSSFZ4c0NhTHNuMm1LT3pJVWFxUWx5OXljS1RlaDZQVWZLalZDRl9DM1pWa0F0bU5mdXFaYk43VXRrTFZOOUNpYlRUeHJwYlBsLXBJTnBkemtRLWFRbW50UUJpalAya1VfbTZiSDhvVUIzXzhDcEFOTFluUkJwcTRvdVdOMzdlLXJaejNud3VkWmsxdWVsQlpNRmJpY3ZJa0FuMm5oODY2NFZSaGo2THdrVmhpaEJhaXc1TXhXQ2xTLXJERFBVdnUwcVN6TW9F?oc=5",
-    "outlets": 1,
-    "match": "headline names \"krvavec\""
-   }
-  ],
   "velikaplanina": [
    {
     "title": "Nihalka na Veliko planino bo zaradi remonta zaprta mesec dni",
@@ -635,7 +617,7 @@
    },
    {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
-    "source": "Telegraf",
+    "source": "telegraf.si",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
