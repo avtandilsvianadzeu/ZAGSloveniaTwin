@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T20:24:23.095Z",
+ "updated": "2026-11-23T21:26:13.353Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -314,7 +314,7 @@
     "source": "OBALAplus",
     "date": "2026-10-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
-    "outlets": 2,
+    "outlets": 1,
     "match": "headline names \"markovec\""
    },
    {
@@ -327,7 +327,7 @@
    },
    {
     "title": "VOZNIKI, POZOR: Prali bodo predor Markovec, promet bo potekal po enem pasu",
-    "source": "regionalobala.si",
+    "source": "Regional Obala",
     "date": "2026-05-21T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSXZObHVEcWpramdDNGJkeWt0bnl3RXZIUHE5ZXFtdzdPaHBhTm9sVFB5RW9hUEV5a0FuNXlVTXdlRFZzWnhZaktNRjk3Nmg3QXc2RkFUSjVEdzNnaVpfZG9NdW9sWVN3YzBJckNLc1VNS0gzM1NfaWhVOU40emF0cHlGcUVjMGxlcDNsSVdSaXJHd1NkcXN0OWdLMUIwbk4zS1JZRDIxZmdTMkxJ?oc=5",
     "outlets": 1,
@@ -394,6 +394,14 @@
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOd0sza3ZTalczVW8weXNMTUphanhWY1l6ZmNrcDlyZjRIbHRrYm9saEZJeDlobXhQSTk5TjhkdTk3eE9IWHhETFZvT2ZBVVFIOU1ZYkR5QWZYa1hodDJSVThpLW5LMkNuN0J0NExYQjRYMWFLaDRhbmN4NEtvNk9SLXJDZ1hfVmR4WjBkMlNZekxHeUFQX1FOTENuWGJTUnVfSEl5STZZemw2QW80X05Yag?oc=5",
     "outlets": 1,
     "match": "headline names \"he krsko\""
+   },
+   {
+    "title": "Od Drave do Soče: ribje steze ob slovenskih hidroelektrarnah",
+    "source": "nas-stik.si",
+    "date": "2025-12-31T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaTlRYjRUbTJzQVQwYmR0anFfZ293VVpDRzRTOXhxVGV4XzVLMVpteEQ0Tmp5R3h0VzlPVE0wLTFyWmxJTzVVRUc2aGU2U2o2enpIRWY0ZFo0YWFqenprRS1ET2JNTEJoeHh4T09vd19URnN5SG15WGx0ajc1NUliMGpuR3lPblp3azFvcjgzVFZMdDk1eUF5UzJQUXNpTlZMUlBRa3JoMkJVZEU2Wnc?oc=5",
+    "outlets": 1,
+    "match": "headline names \"hidroelektrarn\""
    }
   ],
   "che_avce": [
@@ -412,6 +420,24 @@
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa19CMDNLVVNyMU4zeXpOZkFiWFZfU282VzczYTY2eWxOWUJXa2RIMjFybDl5a0hGMUNrUE1kX2ZIQWxrVlJBOUs4T1FOd0U4M1J5bUt4ck5JUkFPTG9mN3JUVWR1bVNjX3ZHUm5NYUlhbF90OFhIUUNiSjA4SWhTejluMkRNUUg3bTYyWUxidHNoS1FXMktF?oc=5",
     "outlets": 1,
     "match": "headline names \"avce\""
+   }
+  ],
+  "krvavec": [
+   {
+    "title": "Garažna hiša Krvavec: Edina rešitev za nered?",
+    "source": "Dnevnik",
+    "date": "2026-06-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYVVwYkNhM1lQT1BmY3JGUGNmNjZVZ3huS1RXNUJHVmNhVEhYTjBkODF6b1E5dHYtQWdZbWJSNmJFLUFCTmxUMHgxdGlwNEtaUE9XcmNEOF96UVhmTXNZTlNaaUhUbFprTWxZWkhRbzVfcEJGY3Fvd3JWUVppUTJkNF8yYjRQeklDMU5iUXlBcEpDMWdZ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"krvavec\""
+   },
+   {
+    "title": "Obvestilo - POPOLNA ZAPORA ceste od planine Jezerca (parkirišče) do zgornje postaje žičnice Krvavec, od 20.4.2026 do 14.11.2026",
+    "source": "MojaObčina.si",
+    "date": "2026-03-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNcE8zd3EzNDVOMjRqVk9Bcl9pMTkycEs1dVpGc2xXYVJyTDE4NGw4ZDc4a21LalpYSFlObGkwRVFLQy1YOS1RTFdSSFZ4c0NhTHNuMm1LT3pJVWFxUWx5OXljS1RlaDZQVWZLalZDRl9DM1pWa0F0bU5mdXFaYk43VXRrTFZOOUNpYlRUeHJwYlBsLXBJTnBkemtRLWFRbW50UUJpalAya1VfbTZiSDhvVUIzXzhDcEFOTFluUkJwcTRvdVdOMzdlLXJaejNud3VkWmsxdWVsQlpNRmJpY3ZJa0FuMm5oODY2NFZSaGo2THdrVmhpaEJhaXc1TXhXQ2xTLXJERFBVdnUwcVN6TW9F?oc=5",
+    "outlets": 1,
+    "match": "headline names \"krvavec\""
    }
   ],
   "velikaplanina": [
@@ -571,22 +597,6 @@
    }
   ],
   "ss_kocevje": [
-   {
-    "title": "Sodišče zavrnilo tožbo ravnatelja Gregorja Pečana zoper Gimnazijo Kočevje",
-    "source": "N1 Slovenija",
-    "date": "2026-04-24T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZGFYQTEtOC1tTGNOcGd2V2ZZTkw2SkRvb2RLZnh3SlpDVUtoSmVzVEZHVEtlQTNXVG5ucUZqLUJaYUtsV3N0S0FuVy1rOGNHUVYxMnIyNlpjbVNnX0N5WERLUkdqWnJMdFdQdklHcmtIeE5rdEFHQXYyMzQteGVIRTM2NGNGdjVXal9VV0RDQjRMNEhKWTFySW1TaUF0LU56c2c?oc=5",
-    "outlets": 2,
-    "match": "headline names \"gimnazij\""
-   },
-   {
-    "title": "Razrešeni ravnatelj zoper gimnazijo: aroganten ali dosleden? Mnenja deljena",
-    "source": "Dolenjski list",
-    "date": "2026-04-01T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaExfR3Y5ZXdtbHBDMlMyUGhWcTRGNzN6TmFLSGIwWFVERExoVi02UnF1TV9TWndHd1R5NGtVLVRxOFJWYWxrVUYzbVRDbHRpZXRhZjlPektWOWNzeDdBYjhTMWVvVnlodll6emg4WWlCQTRLRFZBb0xuM3VfNVlFSGp6TE9kTzFrRFRFQ2lCWExnWHNYY2NxUQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"gimnazij\""
-   },
    {
     "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
     "source": "E-utrip",
