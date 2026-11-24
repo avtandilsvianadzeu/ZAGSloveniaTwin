@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T18:44:47.584Z",
+ "updated": "2026-11-24T19:46:47.156Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -404,6 +404,14 @@
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOd0sza3ZTalczVW8weXNMTUphanhWY1l6ZmNrcDlyZjRIbHRrYm9saEZJeDlobXhQSTk5TjhkdTk3eE9IWHhETFZvT2ZBVVFIOU1ZYkR5QWZYa1hodDJSVThpLW5LMkNuN0J0NExYQjRYMWFLaDRhbmN4NEtvNk9SLXJDZ1hfVmR4WjBkMlNZekxHeUFQX1FOTENuWGJTUnVfSEl5STZZemw2QW80X05Yag?oc=5",
     "outlets": 1,
     "match": "headline names \"he krsko\""
+   },
+   {
+    "title": "Od Drave do Soče: ribje steze ob slovenskih hidroelektrarnah",
+    "source": "nas-stik.si",
+    "date": "2025-12-31T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaTlRYjRUbTJzQVQwYmR0anFfZ293VVpDRzRTOXhxVGV4XzVLMVpteEQ0Tmp5R3h0VzlPVE0wLTFyWmxJTzVVRUc2aGU2U2o2enpIRWY0ZFo0YWFqenprRS1ET2JNTEJoeHh4T09vd19URnN5SG15WGx0ajc1NUliMGpuR3lPblp3azFvcjgzVFZMdDk1eUF5UzJQUXNpTlZMUlBRa3JoMkJVZEU2Wnc?oc=5",
+    "outlets": 1,
+    "match": "headline names \"hidroelektrarn\""
    }
   ],
   "che_avce": [
@@ -422,6 +430,24 @@
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa19CMDNLVVNyMU4zeXpOZkFiWFZfU282VzczYTY2eWxOWUJXa2RIMjFybDl5a0hGMUNrUE1kX2ZIQWxrVlJBOUs4T1FOd0U4M1J5bUt4ck5JUkFPTG9mN3JUVWR1bVNjX3ZHUm5NYUlhbF90OFhIUUNiSjA4SWhTejluMkRNUUg3bTYyWUxidHNoS1FXMktF?oc=5",
     "outlets": 1,
     "match": "headline names \"avce\""
+   }
+  ],
+  "krvavec": [
+   {
+    "title": "Garažna hiša Krvavec: Edina rešitev za nered?",
+    "source": "Dnevnik",
+    "date": "2026-06-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYVVwYkNhM1lQT1BmY3JGUGNmNjZVZ3huS1RXNUJHVmNhVEhYTjBkODF6b1E5dHYtQWdZbWJSNmJFLUFCTmxUMHgxdGlwNEtaUE9XcmNEOF96UVhmTXNZTlNaaUhUbFprTWxZWkhRbzVfcEJGY3Fvd3JWUVppUTJkNF8yYjRQeklDMU5iUXlBcEpDMWdZ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"krvavec\""
+   },
+   {
+    "title": "Obvestilo - POPOLNA ZAPORA ceste od planine Jezerca (parkirišče) do zgornje postaje žičnice Krvavec, od 20.4.2026 do 14.11.2026",
+    "source": "MojaObčina.si",
+    "date": "2026-03-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNcE8zd3EzNDVOMjRqVk9Bcl9pMTkycEs1dVpGc2xXYVJyTDE4NGw4ZDc4a21LalpYSFlObGkwRVFLQy1YOS1RTFdSSFZ4c0NhTHNuMm1LT3pJVWFxUWx5OXljS1RlaDZQVWZLalZDRl9DM1pWa0F0bU5mdXFaYk43VXRrTFZOOUNpYlRUeHJwYlBsLXBJTnBkemtRLWFRbW50UUJpalAya1VfbTZiSDhvVUIzXzhDcEFOTFluUkJwcTRvdVdOMzdlLXJaejNud3VkWmsxdWVsQlpNRmJpY3ZJa0FuMm5oODY2NFZSaGo2THdrVmhpaEJhaXc1TXhXQ2xTLXJERFBVdnUwcVN6TW9F?oc=5",
+    "outlets": 1,
+    "match": "headline names \"krvavec\""
    }
   ],
   "velikaplanina": [
@@ -530,6 +556,14 @@
     "match": "headline names \"golte\""
    },
    {
+    "title": "First minute smučanje na Golteh: dopoldne na smučeh, popoldne v savni",
+    "source": "Vandraj",
+    "date": "2026-08-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA4VkF5MjNOdjhoNG85X2R1eWpCeWctejlaM2JfS1hiVXdhXzhoSXR4dlFlZlJBTGFYRWNJX2lKVFlhWkNrUnZoRXlkejVvZkZIbEFnZUY0M3R1UHhHVGxJNGM0RGpvSG1HYWFTdGFiMWs2eTlkZXZBQkxYZ0x1ajA?oc=5",
+    "outlets": 1,
+    "match": "headline names \"golte\""
+   },
+   {
     "title": "Smučišče Golte: kljub nižjim cenam vozovnic obiskovalcev toliko kot lani",
     "source": "Dnevnik",
     "date": "2026-03-31T07:00:00.000Z",
@@ -592,6 +626,22 @@
   ],
   "ss_kocevje": [
    {
+    "title": "Sodišče zavrnilo tožbo ravnatelja Pečana zoper Gimnazijo Kočevje",
+    "source": "Dnevnik",
+    "date": "2026-04-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNjlGakxBTlQxWlRNblU2RVFiTmFyUEI1cFFlMUNjTGVxNEVoV3pWUnVZdWxrWU1IUHM5cVFxQmtZSTNzaGhfSWo1VTVFOWhjR3hKZVYwOUw2dXFWcWh5Rm5KeUlXSmhOMG9yS1VSbno0Wkl5WkRmcTMwaUV4LUJMb0Y2T3hSWDBzdzJEckRwaHJuYVljTXRLV3I2ZkRoVm5iQlNNdjl1NWFUVVpTYjdqLXRjOA?oc=5",
+    "outlets": 1,
+    "match": "headline names \"gimnazij\""
+   },
+   {
+    "title": "Razrešeni ravnatelj zoper gimnazijo: aroganten ali dosleden? Mnenja deljena",
+    "source": "Dolenjski list",
+    "date": "2026-04-01T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaExfR3Y5ZXdtbHBDMlMyUGhWcTRGNzN6TmFLSGIwWFVERExoVi02UnF1TV9TWndHd1R5NGtVLVRxOFJWYWxrVUYzbVRDbHRpZXRhZjlPektWOWNzeDdBYjhTMWVvVnlodll6emg4WWlCQTRLRFZBb0xuM3VfNVlFSGp6TE9kTzFrRFRFQ2lCWExnWHNYY2NxUQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"gimnazij\""
+   },
+   {
     "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
     "source": "E-utrip",
     "date": "2026-02-03T08:00:00.000Z",
@@ -602,10 +652,10 @@
   ],
   "bovec_quake": [
    {
-    "title": "Goriško streslo še drugič: tokrat precej močneje, potres čutili tudi v Tolminu in Bovcu",
-    "source": "NaDlani.si",
+    "title": "Pri Kobaridu so se stresla tla, potres čutili tudi v Tolminu",
+    "source": "Žurnal24",
     "date": "2026-08-21T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdVFVZG1QZ1hxWTJVdndneTlNQWF1RnJWVXptYWJkS3BvdGtCS3BWd3NhbE5VNWxYM01mQXZrN1pHN085SF95ZTV2ekNtWEZxSDdkbFNRbUI5T0VWRGJQRzVnYnBCQTg5cExCanFVblBXSmpPTlo4SnFteUxIdE11ektJQTNncGlubjRUVHhIRGVBX0R6WEdPWi05QlhhZW84QW1RcWkzY1lZNlNsTktnN0hfRWlZcFk?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZWNXczVnSldUTG1sc2xzZy1KWXhEcS1xMWNtcmdoaEZnTTQ1Q3V4SHE1WXNWS05hRFFSQkhkeDRmMDQ2UW5tTDVxMVRWejVuZ2RwWWdBeU5lcllZVjNyWkxBcFZDRk9OalQ4SWhRaE1zX3hnT2hHaWN1R3BzUlJ3a1Vjc1pZdndtUnZGbVZRTWdubi1IendtZnlQU2ZiR2vSAaQBQVVfeXFMTmpuV0J5OUZXaUw4QmowRVZsZEYxSG1NQmszdGl6MVNyU1NOLUVRWVAxWjZ2NHFudnE2SUpBMVozS013a1dfcDZON2xRS3pjRF9KY215VWYySDNBREZzQnMycWVtRmVndFVscm5iYjNTdFAtZHRVRVU0bjNNR3lmU3hrUjhyc3ZsV3FZbmVCa1c5cHBRUThYVjg2azc3eERYRFI0N0s?oc=5",
     "outlets": 2,
     "match": "headline names \"potres\""
    },
