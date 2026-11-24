@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T00:32:15.968Z",
+ "updated": "2026-11-24T00:34:32.664Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,16 +10,6 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
-   }
-  ],
-  "crna": [
-   {
-    "title": "Od jabke do mošta: folklora, ples, ustvarjalnost in bogate nagrade v Črni na Koroškem",
-    "source": "Koroške Novice",
-    "date": "2026-11-06T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNS0dYd3RRLVZFTi1tS0k5WmtJMDRqOUpVMWY0LTRGYUI5QUtHSHBiYmU4cTJYT1AyM2Nfa3J0YTluZWVEeklMTF9iQmVyd3hRTWxKT2Z4YklmRjB0bE9EejRtSzBYNzlmdVBaTTRpbGl0Umt5c0NtOHVUeDB2NlF0VUNpYjk3eWJpQ1hKZGZjUlRhTHBPSkMwRnk5VlV2Y2VhOU1zQU5ZXzJiNEtuVWRJZmNrTlNaanpvandj?oc=5",
-    "outlets": 1,
-    "match": "headline names \"na koroskem\""
    }
   ],
   "verd": [
@@ -154,7 +144,7 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
-    "outlets": 10,
+    "outlets": 2,
     "match": "headline names \"karavank\""
    },
    {
@@ -162,15 +152,7 @@
     "source": "Delo.si",
     "date": "2026-08-15T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdURWdFlIRXZfMGlZSFM1cjVMWmZUVjR4WklsXzVScG04ZzN0N1FCaktWLVBrckNkSFRwajAxVm1KNkEzMllDeXRkT3QyRl85eHpXN1hnY2wtOHcyUmV2YklxT3dVbGZDTTZ0S0h2YmJyLTlZWjBkTlV5cm9CRmZoOEFxTQ?oc=5",
-    "outlets": 2,
-    "match": "headline names \"karavank\""
-   },
-   {
-    "title": "Predor Karavanke spet odprt, goreče vozilo zaprlo štajersko avtocesto",
-    "source": "Siol.net",
-    "date": "2026-08-10T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMEJoMjduLWZZYkd6MnJhVllYNWV0NFNfd0pMWG9sRUM4eVA4bTlQMDVwcTZLVGo0QkVwRGJ3c0IwUDgyY0ExRzIxTWpmU0hTelQ3R0NadEVEaGtSemlMdGdqUF85eTZLUk9RWWJ1c1NHbUxpYWppNVJvOURIbmEwM2ZMN01sWlVKT0JoeDVBMnRiMWs?oc=5",
-    "outlets": 2,
+    "outlets": 1,
     "match": "headline names \"karavank\""
    },
    {
@@ -182,19 +164,11 @@
     "match": "headline names \"karavank\""
    },
    {
-    "title": "Predor Karavanke z novim elektroenergetskim sistemom",
-    "source": "nas-stik.si",
-    "date": "2026-07-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeXVqNWpBQmluWHVaWmJqUUxXUFVlOGhCRkVHM2lOWkJ2Ym5YR0ZycXlMMUQ5MTNVemprd2ZXNEZCT0JaVlJKYzktYjFqUzI0RG1wdEhod3BGUUNibTliMEdTQ1ZFdkpUclVXTlRwZ2t3ckQ3bXFfNW5pdnQ5RlBzLXpPOUVQaUVGbUJwNFI0LUxGN0dqWmNtbGZTanpfUEJVWWtmMQ?oc=5",
+    "title": "Predor Karavanke spet prevozen",
+    "source": "Delo.si",
+    "date": "2026-07-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQXNMa3VYQlFkdzlQdGx2ZmpEM0xMNTFXa2toY3BoU3RKYjhIN2stTHQ1VkMzU0d6cjZodE1sbGsxYzRBMVo3aGFnQ29nNTRvUVhxX1Bud2pXMzVoT0g0UzkzVm5GVmpXdlo5Ql9fN3VjS1AxNnAyVGttMU1iUW9MV0xXRFJDaG1BNU1V?oc=5",
     "outlets": 1,
-    "match": "headline names \"karavank\""
-   },
-   {
-    "title": "Primorska avtocesta zaprta med počivališčem Ravbarkomanda in Postojno v obe smeri, predor Karavanke ponovno odprt",
-    "source": "Lokalec.si",
-    "date": "2026-07-11T11:29:01.000Z",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNaW1iTWdmLXJESnlObmF6UjM3Q1V1Sl84WkUySnpveHdPdlAxZ1NXMXhuOVBIMFdnRDM0aVRpMUw0dDFVYVpGYW9tVVp3eDc0d2R2ZHM0WFFkYmpjc0tOZU1oYklFczhnd3EyazlKa2QtZE5NWWRGNGFlQnlwZzZ5Mjg2S0szNXBlYk5vY3ZBWVZHa0c2d1loMk1jdDVQMG5EUklaUFoyN3A1NGtuZjFvM3pNdG1aa09wN1pScUhqTUFySUhVam9neHBaRExYWUZEaHc?oc=5",
-    "outlets": 2,
     "match": "headline names \"karavank\""
    },
    {
@@ -204,6 +178,22 @@
     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9lTGoxLU9zX2gyV2VrSWNadDBsbmowVEZOYThYLWVFeHdqOVJJM3RJMllwQkdvWDFiUGVPVkFhSjF5ZVdXRVdoQ0VGVUhRSU9aOXZiUnhyRmMzNmlweEVpUFo2WDdIbUk?oc=5",
     "outlets": 2,
     "match": "headline names \"karavank\""
+   },
+   {
+    "title": "Nova cev predora Karavanke je odprta, sledi še prenova stare",
+    "source": "dnevne-novice.com",
+    "date": "2026-03-19T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa2gzOTRuYjdmMzlEaGFMc3hXa3NVTHA0alFNZ1pJeTlaZ0hIQzhVU1hxa2hYTXdnVGI3SEotREs0VXdhazh2V084aDV3ZjhxcUxzMEZ3Rld6aVBLT1dYZ0Vab1ZqUFBhTkZldlg2dElqWmZvb2QyYVdfTFQ4VjVvYzRGOWhRdHdjdjZmblVkTQ?oc=5",
+    "outlets": 7,
+    "match": "headline names \"karavank\""
+   },
+   {
+    "title": "(VIDEO) Zapeljali smo se skozi novi karavanški predor",
+    "source": "Dnevnik",
+    "date": "2026-03-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVFpoZF9Sa0J0dUV6TUFCVDN0YmlQcWdtTFJKVG9NajJleTF2YkxXMENBUi1GTmtabzlhMkNLQnByZTRMMWE3QlEyMWlsS1E1Z1F5enRyb290TUpzdlByMUlzaTI1ZjN3d2ZPclBlZEdvNjJOZjJiTVNHVW5JUzNNbjBrdWtEODBFbDN3ZDFJVkM3MEUyOHVmYm0zdVVSaHN6TlE?oc=5",
+    "outlets": 1,
+    "match": "headline names \"karavansk\""
    }
   ],
   "golovec": [
@@ -274,7 +264,15 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 7,
+    "outlets": 1,
+    "match": "headline names \"kastelec\""
+   },
+   {
+    "title": "Primorska avtocesta v predoru Kastelec proti Kopru ponovno odprta",
+    "source": "Dnevnik",
+    "date": "2026-09-24T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1JQWUtScWZqa0dlYTBtdEg5ekZocEZ5emRvTVE2c1lsM05RaVFvNXhHSkN3Q3BhZnpXRWVmVFFTR0Z6N3luTEZMMms4dzM2YnN6Tm5Rbkd4RDE2RDVNNWtGVnRaQUpNNDZWZFphQktDeG9fV1V5MFRaMjNNczZ5TGZEdUFaWGRWdUZEdGpHRC12NTNPTmM2M2tqNi1OV3NjNnhSdDlKcUwtM1EwN3c?oc=5",
+    "outlets": 1,
     "match": "headline names \"kastelec\""
    },
    {
@@ -300,14 +298,6 @@
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbmRsdXpVZk9QMUNxZGRvOXg1RzdqUWhtX2twcTIxLXlTZ2ZqSV9Gc2NOOHN0M3ZqLThzM2F1Rm5sVV9pMXdhOWVnZEF5VXRXV05BYTctUVJLME1NWEtkWmNLTHpDcXZUNnpPdVMyWE9KWkFXYTR3VTFlSC0zRVhhbmU2eUE0RVA5ZHRuU0REdm5EU2R6RlN1Uk9nak91bFVm?oc=5",
     "outlets": 2,
     "match": "headline names \"kastelec\""
-   },
-   {
-    "title": "ZAPRT KASTELEC, PA ŠE REGIONALNA CESTA PRI KOZINI: Zaradi gorečega vozila obvoz čez Italijo",
-    "source": "Regional Obala",
-    "date": "2026-07-31T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaHVTbjhtWkpmVzE0RGEzaFBGWlZDTng1ek9WV25jbmlTdVdvRHd3Uk1KbHZfazQ1R1ZUcWM0bEJ2X0plOEtTUllORjdWTmZQMVh5T2dNclI2enNybEZ3LVFLdlpvMVFFTDF4d3FsZnhPSHhJZVd0QWdKeEMtVlI3YlJtU3k0Wl9wYWxCeThNMHpuTjdTTGVzbkNpVEtYaXc4QWh4VHNOcVhxdzFxVy1rQlJ1Q2lsM2RENmpqY1RTY3ZScHc?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kastelec\""
    }
   ],
   "markovec": [
@@ -324,7 +314,7 @@
     "source": "OBALAplus",
     "date": "2026-10-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
-    "outlets": 1,
+    "outlets": 2,
     "match": "headline names \"markovec\""
    },
    {
@@ -404,14 +394,6 @@
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOd0sza3ZTalczVW8weXNMTUphanhWY1l6ZmNrcDlyZjRIbHRrYm9saEZJeDlobXhQSTk5TjhkdTk3eE9IWHhETFZvT2ZBVVFIOU1ZYkR5QWZYa1hodDJSVThpLW5LMkNuN0J0NExYQjRYMWFLaDRhbmN4NEtvNk9SLXJDZ1hfVmR4WjBkMlNZekxHeUFQX1FOTENuWGJTUnVfSEl5STZZemw2QW80X05Yag?oc=5",
     "outlets": 1,
     "match": "headline names \"he krsko\""
-   },
-   {
-    "title": "Od Drave do Soče: ribje steze ob slovenskih hidroelektrarnah",
-    "source": "nas-stik.si",
-    "date": "2025-12-31T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaTlRYjRUbTJzQVQwYmR0anFfZ293VVpDRzRTOXhxVGV4XzVLMVpteEQ0Tmp5R3h0VzlPVE0wLTFyWmxJTzVVRUc2aGU2U2o2enpIRWY0ZFo0YWFqenprRS1ET2JNTEJoeHh4T09vd19URnN5SG15WGx0ajc1NUliMGpuR3lPblp3azFvcjgzVFZMdDk1eUF5UzJQUXNpTlZMUlBRa3JoMkJVZEU2Wnc?oc=5",
-    "outlets": 1,
-    "match": "headline names \"hidroelektrarn\""
    }
   ],
   "che_avce": [
@@ -430,24 +412,6 @@
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa19CMDNLVVNyMU4zeXpOZkFiWFZfU282VzczYTY2eWxOWUJXa2RIMjFybDl5a0hGMUNrUE1kX2ZIQWxrVlJBOUs4T1FOd0U4M1J5bUt4ck5JUkFPTG9mN3JUVWR1bVNjX3ZHUm5NYUlhbF90OFhIUUNiSjA4SWhTejluMkRNUUg3bTYyWUxidHNoS1FXMktF?oc=5",
     "outlets": 1,
     "match": "headline names \"avce\""
-   }
-  ],
-  "krvavec": [
-   {
-    "title": "Garažna hiša Krvavec: Edina rešitev za nered?",
-    "source": "Dnevnik",
-    "date": "2026-06-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYVVwYkNhM1lQT1BmY3JGUGNmNjZVZ3huS1RXNUJHVmNhVEhYTjBkODF6b1E5dHYtQWdZbWJSNmJFLUFCTmxUMHgxdGlwNEtaUE9XcmNEOF96UVhmTXNZTlNaaUhUbFprTWxZWkhRbzVfcEJGY3Fvd3JWUVppUTJkNF8yYjRQeklDMU5iUXlBcEpDMWdZ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"krvavec\""
-   },
-   {
-    "title": "Obvestilo - POPOLNA ZAPORA ceste od planine Jezerca (parkirišče) do zgornje postaje žičnice Krvavec, od 20.4.2026 do 14.11.2026",
-    "source": "MojaObčina.si",
-    "date": "2026-03-06T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNcE8zd3EzNDVOMjRqVk9Bcl9pMTkycEs1dVpGc2xXYVJyTDE4NGw4ZDc4a21LalpYSFlObGkwRVFLQy1YOS1RTFdSSFZ4c0NhTHNuMm1LT3pJVWFxUWx5OXljS1RlaDZQVWZLalZDRl9DM1pWa0F0bU5mdXFaYk43VXRrTFZOOUNpYlRUeHJwYlBsLXBJTnBkemtRLWFRbW50UUJpalAya1VfbTZiSDhvVUIzXzhDcEFOTFluUkJwcTRvdVdOMzdlLXJaejNud3VkWmsxdWVsQlpNRmJpY3ZJa0FuMm5oODY2NFZSaGo2THdrVmhpaEJhaXc1TXhXQ2xTLXJERFBVdnUwcVN6TW9F?oc=5",
-    "outlets": 1,
-    "match": "headline names \"krvavec\""
    }
   ],
   "velikaplanina": [
@@ -590,6 +554,22 @@
     "match": "headline names \"kanin\""
    },
    {
+    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
+    "source": "Svet24",
+    "date": "2026-06-17T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
+    "outlets": 2,
+    "match": "headline names \"kanin\""
+   },
+   {
+    "title": "Na Kaninu kmalu nove žičnice",
+    "source": "24ur.com",
+    "date": "2026-04-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE95eUZUbGx1VmppdTRPZ2tpOE1oX0d3enJ2dWMwZnl0MURMcFROclpxd0ZCQmxRb1o5SWU0TWJOX25ETWhXUFBsTDh5Nm10QW9SczZNWDZmbXk1QVdvRnBLcVoyUlZUWXFSb0ZYYjJoOHVMUkhxcnMyVFFMTQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kanin\""
+   },
+   {
     "title": "Na mizi nove rešitve za smučišče Kanin",
     "source": "OBALAplus",
     "date": "2026-02-26T08:00:00.000Z",
@@ -607,22 +587,6 @@
    }
   ],
   "ss_kocevje": [
-   {
-    "title": "Sodišče zavrnilo tožbo ravnatelja Gregorja Pečana zoper Gimnazijo Kočevje",
-    "source": "N1 Slovenija",
-    "date": "2026-04-24T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZGFYQTEtOC1tTGNOcGd2V2ZZTkw2SkRvb2RLZnh3SlpDVUtoSmVzVEZHVEtlQTNXVG5ucUZqLUJaYUtsV3N0S0FuVy1rOGNHUVYxMnIyNlpjbVNnX0N5WERLUkdqWnJMdFdQdklHcmtIeE5rdEFHQXYyMzQteGVIRTM2NGNGdjVXal9VV0RDQjRMNEhKWTFySW1TaUF0LU56c2c?oc=5",
-    "outlets": 2,
-    "match": "headline names \"gimnazij\""
-   },
-   {
-    "title": "Razrešeni ravnatelj zoper gimnazijo: aroganten ali dosleden? Mnenja deljena",
-    "source": "Dolenjski list",
-    "date": "2026-04-01T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaExfR3Y5ZXdtbHBDMlMyUGhWcTRGNzN6TmFLSGIwWFVERExoVi02UnF1TV9TWndHd1R5NGtVLVRxOFJWYWxrVUYzbVRDbHRpZXRhZjlPektWOWNzeDdBYjhTMWVvVnlodll6emg4WWlCQTRLRFZBb0xuM3VfNVlFSGp6TE9kTzFrRFRFQ2lCWExnWHNYY2NxUQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"gimnazij\""
-   },
    {
     "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
     "source": "E-utrip",
@@ -714,22 +678,6 @@
     "source": "Dnevnik",
     "date": "2026-08-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
-    "outlets": 1,
-    "match": "headline names \"nuk\""
-   },
-   {
-    "title": "Zakaj so pod Nukom našli kipec z erekcijo penisa",
-    "source": "Dnevnik",
-    "date": "2026-03-03T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTDJ4eTh0V1p6bzdBSG0wS2lQdUtVQTF6Ym5oaWpIa3hmcXVtLUxRZHZvRmI2dmk4aGZ3UzA2ejI5V21hNEN0SzR0QjVZWENlc01uMDZHbWxqb3puckNVTWlqZUFaSHphbGQ4YW02Z05ZMDhTYXVLMl9RTExkX1pSUFhZNUdyTVNncGJJQzlkRkhYM1hWdHNEOVRGRzQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"nuk\""
-   },
-   {
-    "title": "Super novica za študente! NUK podaljšuje odprtje čitalnice",
-    "source": "Student.si",
-    "date": "2025-12-30T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2dpVmJwMEVaM2lLdy10SXNEVzRCVTlhSXBUaVp3MTdqbTlOa09JM053REJsT0JJbDktaDd2OE91SzZ2c2kwY2ItVFpIUmJ3a2tNMTVfWjFYN280Tm1XZGZPbUFZOVNzVXkwelpPTHhsVXBUWmtHMXd1QzRhb2p2U3JvenNOa1RuWUhwb1d5VHVkYzVuMThUa1Vtc0pNT2U5VW14ZTE5MEE0UQ?oc=5",
     "outlets": 1,
     "match": "headline names \"nuk\""
    },
