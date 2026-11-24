@@ -1,6 +1,6 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-24T15:26:59.050Z",
+ "updated": "2026-11-24T16:38:56.227Z",
  "items": {
   "sl": [
    {
@@ -159,10 +159,10 @@
     "date": "2026-11-23T08:58:03.000Z",
     "summary": "Vabljeni na strokovno delavnico „Gradbeništvo prihodnosti je digitalno in krožno” iz ciklusa Priložnosti za učinkovit in lažji prehod v krožno in trajnostno gradbeništvo, ki bo potekala v sredo, 2. 12. 2026, (11h-12h) prek spletne povezave MS Teams.",
     "category": "Aktualno",
+    "lang": "sl",
     "records": [
      "maribor_pilots"
-    ],
-    "lang": "sl"
+    ]
    },
    {
     "title": "Od projektne ideje do uspešnega projektnega predloga, delavnica projekta LIFE IP Restart",

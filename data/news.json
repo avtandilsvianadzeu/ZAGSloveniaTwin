@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T16:38:39.345Z",
+ "updated": "2026-11-24T16:40:38.398Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -144,7 +144,7 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
-    "outlets": 6,
+    "outlets": 2,
     "match": "headline names \"karavank\""
    },
    {
@@ -152,15 +152,7 @@
     "source": "Delo.si",
     "date": "2026-08-15T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdURWdFlIRXZfMGlZSFM1cjVMWmZUVjR4WklsXzVScG04ZzN0N1FCaktWLVBrckNkSFRwajAxVm1KNkEzMllDeXRkT3QyRl85eHpXN1hnY2wtOHcyUmV2YklxT3dVbGZDTTZ0S0h2YmJyLTlZWjBkTlV5cm9CRmZoOEFxTQ?oc=5",
-    "outlets": 2,
-    "match": "headline names \"karavank\""
-   },
-   {
-    "title": "Predor Karavanke spet odprt, goreče vozilo zaprlo štajersko avtocesto",
-    "source": "Siol.net",
-    "date": "2026-08-10T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMEJoMjduLWZZYkd6MnJhVllYNWV0NFNfd0pMWG9sRUM4eVA4bTlQMDVwcTZLVGo0QkVwRGJ3c0IwUDgyY0ExRzIxTWpmU0hTelQ3R0NadEVEaGtSemlMdGdqUF85eTZLUk9RWWJ1c1NHbUxpYWppNVJvOURIbmEwM2ZMN01sWlVKT0JoeDVBMnRiMWs?oc=5",
-    "outlets": 2,
+    "outlets": 1,
     "match": "headline names \"karavank\""
    },
    {
@@ -172,19 +164,11 @@
     "match": "headline names \"karavank\""
    },
    {
-    "title": "Predor Karavanke z novim elektroenergetskim sistemom",
-    "source": "nas-stik.si",
-    "date": "2026-07-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeXVqNWpBQmluWHVaWmJqUUxXUFVlOGhCRkVHM2lOWkJ2Ym5YR0ZycXlMMUQ5MTNVemprd2ZXNEZCT0JaVlJKYzktYjFqUzI0RG1wdEhod3BGUUNibTliMEdTQ1ZFdkpUclVXTlRwZ2t3ckQ3bXFfNW5pdnQ5RlBzLXpPOUVQaUVGbUJwNFI0LUxGN0dqWmNtbGZTanpfUEJVWWtmMQ?oc=5",
+    "title": "Predor Karavanke spet prevozen",
+    "source": "Delo.si",
+    "date": "2026-07-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQXNMa3VYQlFkdzlQdGx2ZmpEM0xMNTFXa2toY3BoU3RKYjhIN2stTHQ1VkMzU0d6cjZodE1sbGsxYzRBMVo3aGFnQ29nNTRvUVhxX1Bud2pXMzVoT0g0UzkzVm5GVmpXdlo5Ql9fN3VjS1AxNnAyVGttMU1iUW9MV0xXRFJDaG1BNU1V?oc=5",
     "outlets": 1,
-    "match": "headline names \"karavank\""
-   },
-   {
-    "title": "Primorska avtocesta zaprta med počivališčem Ravbarkomanda in Postojno v obe smeri, predor Karavanke ponovno odprt",
-    "source": "Lokalec.si",
-    "date": "2026-07-11T11:29:01.000Z",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNaW1iTWdmLXJESnlObmF6UjM3Q1V1Sl84WkUySnpveHdPdlAxZ1NXMXhuOVBIMFdnRDM0aVRpMUw0dDFVYVpGYW9tVVp3eDc0d2R2ZHM0WFFkYmpjc0tOZU1oYklFczhnd3EyazlKa2QtZE5NWWRGNGFlQnlwZzZ5Mjg2S0szNXBlYk5vY3ZBWVZHa0c2d1loMk1jdDVQMG5EUklaUFoyN3A1NGtuZjFvM3pNdG1aa09wN1pScUhqTUFySUhVam9neHBaRExYWUZEaHc?oc=5",
-    "outlets": 4,
     "match": "headline names \"karavank\""
    },
    {
@@ -194,6 +178,22 @@
     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9lTGoxLU9zX2gyV2VrSWNadDBsbmowVEZOYThYLWVFeHdqOVJJM3RJMllwQkdvWDFiUGVPVkFhSjF5ZVdXRVdoQ0VGVUhRSU9aOXZiUnhyRmMzNmlweEVpUFo2WDdIbUk?oc=5",
     "outlets": 2,
     "match": "headline names \"karavank\""
+   },
+   {
+    "title": "Odprta nova cev predora Karavanke, ministrica Bratušek o \"letu predorov\"",
+    "source": "Forbes Slovenija",
+    "date": "2026-03-18T14:04:48.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQYlZpUGd1em5tSEFPdkI0RjRuRnFJVmZTcTlhbWlPU0h1YTNnMloxOC1Oa1lJLUx0QnhpZHJ0bGVQZUk1MmZUY0owdkZVeVpZZmc4ZVRvZHpfdFlDa0x2N1B4RGh6bFExcTVHSlMwaVA1anVNU3FYM3ZMVGxrSDNHWkIxZWhwZlZJaGlvVVBmU05NaXFTTUp5d1RxeC1ZVWc5LVlj?oc=5",
+    "outlets": 6,
+    "match": "headline names \"karavank\""
+   },
+   {
+    "title": "(VIDEO) Zapeljali smo se skozi novi karavanški predor",
+    "source": "Dnevnik",
+    "date": "2026-03-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVFpoZF9Sa0J0dUV6TUFCVDN0YmlQcWdtTFJKVG9NajJleTF2YkxXMENBUi1GTmtabzlhMkNLQnByZTRMMWE3QlEyMWlsS1E1Z1F5enRyb290TUpzdlByMUlzaTI1ZjN3d2ZPclBlZEdvNjJOZjJiTVNHVW5JUzNNbjBrdWtEODBFbDN3ZDFJVkM3MEUyOHVmYm0zdVVSaHN6TlE?oc=5",
+    "outlets": 1,
+    "match": "headline names \"karavansk\""
    }
   ],
   "golovec": [
@@ -264,15 +264,7 @@
     "source": "rtvslo.si",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 4,
-    "match": "headline names \"kastelec\""
-   },
-   {
-    "title": "Primorska avtocesta v predoru Kastelec proti Kopru ponovno odprta",
-    "source": "Dnevnik",
-    "date": "2026-09-24T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1JQWUtScWZqa0dlYTBtdEg5ekZocEZ5emRvTVE2c1lsM05RaVFvNXhHSkN3Q3BhZnpXRWVmVFFTR0Z6N3luTEZMMms4dzM2YnN6Tm5Rbkd4RDE2RDVNNWtGVnRaQUpNNDZWZFphQktDeG9fV1V5MFRaMjNNczZ5TGZEdUFaWGRWdUZEdGpHRC12NTNPTmM2M2tqNi1OV3NjNnhSdDlKcUwtM1EwN3c?oc=5",
-    "outlets": 2,
+    "outlets": 7,
     "match": "headline names \"kastelec\""
    },
    {
@@ -288,14 +280,6 @@
     "source": "Večer",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNaDEtQWplLUZWRVg1SlNiQUg2aEtkc3R3eXJxUUxMRTVFQTM5VkNWblIwNlRITHlncTNNRmhXZ3YzZThIY2hoS2IwLU05RG1nc0htUktKY1liZno4bzV5b2hNQVZwak1IYnZLQ2FrYmRfRGx1VlR4dm5majF1YnR6dnlLZWRqWUZLSTNv?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kastelec\""
-   },
-   {
-    "title": "Od počitniške hiše do predora Kastelec v pičlih 20 minutah",
-    "source": "Moja Dolenjska",
-    "date": "2026-08-05T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbkNQaXNOS0VpM1VSOUdoUnZXMFAtSWNPODZyMWRMZkJFZTBsczFTaHRmenRqV3NNNjNpNEdvNkZsNDNHc1h0dGNRU0NqMUIyRzhjU0ZUM1JOSG5mdEVnS1poV2FudGpDRHVvNGxWOFpCVC12cHdwSjJmeWUyS1hac01aS2tHdEtNb2hQVDN3?oc=5",
     "outlets": 1,
     "match": "headline names \"kastelec\""
    },
@@ -498,14 +482,6 @@
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
-   },
-   {
-    "title": "Nova sedežnica na Vitranc: Kranjska Gora želi postati celoletni gorski center",
-    "source": "Gorenjskainfo.com",
-    "date": "2026-06-25T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeTNPcVNuOWFBNkY1R3RhN2k1SV81WUNwMDM1LU50MDVqdTMxZnRzRS1qdGZMZkZMaV9sVTFrQno0MUdPX1NNcDFSUkpKcFhpZVdUUmpqVFNQY1NXcnFTRGU2MHJ5TUc0RFV5SXNfaDFqbHhnRi1DTm9oRHFMdTBKZGZtSjhMRVl5Wmpfbm9CVG5iM09EQ2NLYl9TZzU3MjZZZkJ3cE9QNHd2U1JiM05KMUVSeExWVEZpR1NUMjZVUXNkZw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kranjsk\""
    }
   ],
   "cerkno_z": [
@@ -640,18 +616,66 @@
   ],
   "bovec_quake": [
    {
-    "title": "Goriško streslo še drugič: tokrat precej močneje, potres čutili tudi v Tolminu in Bovcu",
-    "source": "NaDlani.si",
-    "date": "2026-08-21T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdVFVZG1QZ1hxWTJVdndneTlNQWF1RnJWVXptYWJkS3BvdGtCS3BWd3NhbE5VNWxYM01mQXZrN1pHN085SF95ZTV2ekNtWEZxSDdkbFNRbUI5T0VWRGJQRzVnYnBCQTg5cExCanFVblBXSmpPTlo4SnFteUxIdE11ektJQTNncGlubjRUVHhIRGVBX0R6WEdPWi05QlhhZW84QW1RcWkzY1lZNlNsTktnN0hfRWlZcFk?oc=5",
-    "outlets": 2,
+    "title": "Potres pri Tolminu: kje vse so ga čutili?",
+    "source": "Svet24",
+    "date": "2026-11-21T09:20:02.000Z",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03aFNYb0plbTJTUUZoa2RCN0pIOUM0dzYtZThndGtEMjh3SFN5bzdDN3RyVHd4b0w5VmFHV2c4UnZSZ21MSHhxcnhUQXI2TWQxVi1UbG90bUl1QXVaVXc3Q0tRZmlNUFlVNzl5b29fS245dGxu?oc=5",
+    "outlets": 4,
     "match": "headline names \"potres\""
    },
    {
-    "title": "Šibek jutranji potres stresel Posočje",
-    "source": "Radio Robin",
+    "title": "Območje Splita stresel potres",
+    "source": "24ur.com",
+    "date": "2026-08-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Xa2RZZklXdXBSQk1SVWthQzhhZXA1ZlR5bVk4NHZlWm01WDlQNzRNdG9hMXUzRmwyVXJLMmZIekRWd2szdkNfcnpKRE1FWGU1Uy1PLTVQQ25PX0NLOXBrWVZ1UTFETU45NGJtcXZiNmdpNE1xeXRfSg?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "V Sloveniji zaznali potres: ste čutili tresenje tal?",
+    "source": "Slo24.si",
+    "date": "2026-08-21T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1YVnh4SVB4ZXF2WXI0VllpTng0Y21ZaEtwRnNpM1dDOW5aUzRRY28yWEJXaW1EWGw3elgxQ0lWZU1VWHZpMGh3c2RLVXVha0REdjBfVDNjWF9WRk5saVRBVUFha1B1NzloeDFCUFVIcHdPN1JZc3hN?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Prizori po potresu v Italiji: Del pobočja se je zrušil na avtomobile",
+    "source": "Svet24",
+    "date": "2026-07-31T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNk1SMS04ckM0V0FPc3FaZFlyNzdkZFpoZ093U0xfaVA5M0I0N2xWQ3B2MjhXM2JTZ2xaQS1ISTd4aDVGTEI2Ti1GZlRLNHhjWWhTbzlROUpxQUN6MmxrTW5hU3RERkplQXA4bVhweEg3WGMtdXBmckliY3FSdk5nRXRoc3RPYko4UG5haC1LbmxPNm5HaXVSMg?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Šibek potresni sunek v bližini Kobarida",
+    "source": "24ur.com",
     "date": "2026-07-15T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBEVkYtUG5DVEFYYzFzNGxJdmROV3pEZFN3Ul9DY1lRYTZfeFFXZXdGM0U1QXR2aXd5ellVVXh2aWJjRU9GOUF3Z3JRWE14Tk9qWnZfS1JfSDl1eHNGRTBjRDdId3JJUjJlT1F5Y290R1hYcjJDZ2c?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQlpETnI5ZVhvTm1qYVlta3Z5VDRac2JGNTZQTnhOUHQ2aTJFUEtxRVAzRU9uTkZrODIzVmlha1FPSUpNaEJiandxb2RXLWZTTk5TbXRYZmpNMUh4UVlkQklWMHYwRjlQOGZYd20talpGc2V1MTZGS2V0b0tqeF9QaDIwZWV6UUYzTlE?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Močnejši potres blizu Petrinje, čutili so ga tudi v Zagrebu",
+    "source": "Siol.net",
+    "date": "2026-05-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPc2x3NVZlWndHak5KLWx6VFRSa1BGUG1VN1FKZVdIS2ZFQVRHTUpDcVZwWGhhbDF2bXJ5SkJzdFZ1OUVybURJQk1KMWVOWWRCbDhvRnUyNjdnMXdOMjc3THdURjl2S2hRWnVQUkxrSVdOOExtZlZwN3g0SHVHWl8yc05wTFBGZ25qRGxxMTRadjdRb0FxVE56UXdn?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "NA PRIMORSKEM ZABELEŽILI POTRES: Kje so ga čutili?",
+    "source": "regionalobala.si",
+    "date": "2026-05-10T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMWttajY0QmhPaEk0NV9PNmI3NUxYU0NrY0xTUHNYOHBBanc5TzZYb1dEa1VCUTNmRlM2VzdJM2ZpTnFoc1A1OEFUTHU5QVN2OVo2d24zSlc1RVVNd3M0NlFpeGlWd1FRZTMtZENyNlV6TEhWU20yTkhla0Q4MVNxbktHNG5hbUpiajNrMTd3?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "50. obletnica rušilnega potresa v Posočju in Furlaniji",
+    "source": "MojaObčina.si",
+    "date": "2026-05-07T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdnh2VmpXd0RORGEzSmkxM3RTTF9vTF9tbWtiYms5NV9EUl82NlVLaUZQXzJac3RmVnBsczg5aWFYV0U0RXZkQzRUN3hUT0p5STk3VFpibzhuR3NGb2tqVS12UXRGSUpHWjF0R3NIay1zMWF6X0l6NDVqdF8tV05pd0R4UVZueDZnLWlKZDVRb3JhQlFKTXlXSmIycTVrTlly?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    }
@@ -728,6 +752,22 @@
     "source": "Dnevnik",
     "date": "2026-08-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Zakaj so pod Nukom našli kipec z erekcijo penisa",
+    "source": "Dnevnik",
+    "date": "2026-03-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTDJ4eTh0V1p6bzdBSG0wS2lQdUtVQTF6Ym5oaWpIa3hmcXVtLUxRZHZvRmI2dmk4aGZ3UzA2ejI5V21hNEN0SzR0QjVZWENlc01uMDZHbWxqb3puckNVTWlqZUFaSHphbGQ4YW02Z05ZMDhTYXVLMl9RTExkX1pSUFhZNUdyTVNncGJJQzlkRkhYM1hWdHNEOVRGRzQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Super novica za študente! NUK podaljšuje odprtje čitalnice",
+    "source": "Student.si",
+    "date": "2025-12-30T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2dpVmJwMEVaM2lLdy10SXNEVzRCVTlhSXBUaVp3MTdqbTlOa09JM053REJsT0JJbDktaDd2OE91SzZ2c2kwY2ItVFpIUmJ3a2tNMTVfWjFYN280Tm1XZGZPbUFZOVNzVXkwelpPTHhsVXBUWmtHMXd1QzRhb2p2U3JvenNOa1RuWUhwb1d5VHVkYzVuMThUa1Vtc0pNT2U5VW14ZTE5MEE0UQ?oc=5",
     "outlets": 1,
     "match": "headline names \"nuk\""
    },
