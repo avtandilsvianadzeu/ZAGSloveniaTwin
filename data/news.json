@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T10:20:00.889Z",
+ "updated": "2026-11-25T11:21:51.935Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -59,6 +59,14 @@
    }
   ],
   "zag": [
+   {
+    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
+    "source": "MojaObčina.si",
+    "date": "2026-10-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
+    "outlets": 1,
+    "match": "headline names \"zag\""
+   },
    {
     "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
     "source": "Večer",
@@ -260,18 +268,18 @@
     "match": "headline names \"kastelec\""
    },
    {
-    "title": "PREDOR KASTELEC JE ODPRT: Promet ni več preusmerjen na regionalno cesto",
-    "source": "Regional Obala",
-    "date": "2026-09-24T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUC1pVlJKZEFjUDVGU1dHX0pBaTktcGRXSmx2TjdYYUR2N0NjbmRTaTQzdlFLNldHa2gwNEg4NzRSSi11WjlaRTdMdWhXTHJ3aXlxYV91UTlDYnZhNUs4N1pSNGZTcWNPMFZXVDY1RkhpS0hobWN4a0REbUZrc05pSnRMNkZsTHQ1ZUxFU2g2czhzeTBHVHJQMllfQjdDNnZZUVl4MU9OeFZFQllVUFJlcHBKZEQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kastelec\""
-   },
-   {
     "title": "Primorska avtocesta v predoru Kastelec proti Kopru ponovno odprta",
     "source": "Dnevnik",
     "date": "2026-09-24T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1JQWUtScWZqa0dlYTBtdEg5ekZocEZ5emRvTVE2c1lsM05RaVFvNXhHSkN3Q3BhZnpXRWVmVFFTR0Z6N3luTEZMMms4dzM2YnN6Tm5Rbkd4RDE2RDVNNWtGVnRaQUpNNDZWZFphQktDeG9fV1V5MFRaMjNNczZ5TGZEdUFaWGRWdUZEdGpHRC12NTNPTmM2M2tqNi1OV3NjNnhSdDlKcUwtM1EwN3c?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kastelec\""
+   },
+   {
+    "title": "PREDOR KASTELEC JE ODPRT: Promet ni več preusmerjen na regionalno cesto",
+    "source": "Regional Obala",
+    "date": "2026-09-24T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUC1pVlJKZEFjUDVGU1dHX0pBaTktcGRXSmx2TjdYYUR2N0NjbmRTaTQzdlFLNldHa2gwNEg4NzRSSi11WjlaRTdMdWhXTHJ3aXlxYV91UTlDYnZhNUs4N1pSNGZTcWNPMFZXVDY1RkhpS0hobWN4a0REbUZrc05pSnRMNkZsTHQ1ZUxFU2g2czhzeTBHVHJQMllfQjdDNnZZUVl4MU9OeFZFQllVUFJlcHBKZEQ?oc=5",
     "outlets": 1,
     "match": "headline names \"kastelec\""
    },
@@ -370,14 +378,6 @@
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOd0sza3ZTalczVW8weXNMTUphanhWY1l6ZmNrcDlyZjRIbHRrYm9saEZJeDlobXhQSTk5TjhkdTk3eE9IWHhETFZvT2ZBVVFIOU1ZYkR5QWZYa1hodDJSVThpLW5LMkNuN0J0NExYQjRYMWFLaDRhbmN4NEtvNk9SLXJDZ1hfVmR4WjBkMlNZekxHeUFQX1FOTENuWGJTUnVfSEl5STZZemw2QW80X05Yag?oc=5",
     "outlets": 1,
     "match": "headline names \"he krsko\""
-   },
-   {
-    "title": "Od Drave do Soče: ribje steze ob slovenskih hidroelektrarnah",
-    "source": "nas-stik.si",
-    "date": "2025-12-31T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaTlRYjRUbTJzQVQwYmR0anFfZ293VVpDRzRTOXhxVGV4XzVLMVpteEQ0Tmp5R3h0VzlPVE0wLTFyWmxJTzVVRUc2aGU2U2o2enpIRWY0ZFo0YWFqenprRS1ET2JNTEJoeHh4T09vd19URnN5SG15WGx0ajc1NUliMGpuR3lPblp3azFvcjgzVFZMdDk1eUF5UzJQUXNpTlZMUlBRa3JoMkJVZEU2Wnc?oc=5",
-    "outlets": 1,
-    "match": "headline names \"hidroelektrarn\""
    }
   ],
   "che_avce": [
@@ -476,14 +476,6 @@
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
-   },
-   {
-    "title": "Nova sedežnica na Vitranc: Kranjska Gora želi postati celoletni gorski center",
-    "source": "Gorenjskainfo.com",
-    "date": "2026-06-25T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeTNPcVNuOWFBNkY1R3RhN2k1SV81WUNwMDM1LU50MDVqdTMxZnRzRS1qdGZMZkZMaV9sVTFrQno0MUdPX1NNcDFSUkpKcFhpZVdUUmpqVFNQY1NXcnFTRGU2MHJ5TUc0RFV5SXNfaDFqbHhnRi1DTm9oRHFMdTBKZGZtSjhMRVl5Wmpfbm9CVG5iM09EQ2NLYl9TZzU3MjZZZkJ3cE9QNHd2U1JiM05KMUVSeExWVEZpR1NUMjZVUXNkZw?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kranjsk\""
    }
   ],
   "cerkno_z": [
@@ -561,6 +553,14 @@
     "date": "2026-10-02T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNDFZVV90eU9MM3FVc0V6ci0xa2YyM2RLNGJGcG43VlA5eTlEaGxvV29mdEJRSVlzbHRNVDhoTWprNzFRMmVvWEhRa0pINEx5WG1wX2NIalo0ODA3TGltYmZCMFJtMTlzNVF2VHBuU09majNneGxoTmlmeXpPOU1NMFZHNmctbmJVOFlYNkltbEZMYmxx?oc=5",
     "outlets": 1,
+    "match": "headline names \"kanin\""
+   },
+   {
+    "title": "Kanin kupujejo Američani? Vail prihaja v Bovec? Priložnost je tu",
+    "source": "Svet24",
+    "date": "2026-06-17T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMbU5lMl9HZ1pXSFZadjg4eWlfZmtKcDkxSjRocjhON1cyMzMxYmx0aTRKMWlPSjNaVHNQc2VaTnI5UUNHSkE1enV1LURQXzZyMVlEMk9NMDNSM1d6LUZFcllmc0cxUlUxZzA1MXRObERfcWhYQ1dqRzVtWDZTQQ?oc=5",
+    "outlets": 2,
     "match": "headline names \"kanin\""
    },
    {
@@ -662,7 +662,7 @@
     "source": "24ur.com",
     "date": "2026-07-15T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQlpETnI5ZVhvTm1qYVlta3Z5VDRac2JGNTZQTnhOUHQ2aTJFUEtxRVAzRU9uTkZrODIzVmlha1FPSUpNaEJiandxb2RXLWZTTk5TbXRYZmpNMUh4UVlkQklWMHYwRjlQOGZYd20talpGc2V1MTZGS2V0b0tqeF9QaDIwZWV6UUYzTlE?oc=5",
-    "outlets": 1,
+    "outlets": 2,
     "match": "headline names \"potres\""
    },
    {
@@ -670,14 +670,6 @@
     "source": "Siol.net",
     "date": "2026-05-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPc2x3NVZlWndHak5KLWx6VFRSa1BGUG1VN1FKZVdIS2ZFQVRHTUpDcVZwWGhhbDF2bXJ5SkJzdFZ1OUVybURJQk1KMWVOWWRCbDhvRnUyNjdnMXdOMjc3THdURjl2S2hRWnVQUkxrSVdOOExtZlZwN3g0SHVHWl8yc05wTFBGZ25qRGxxMTRadjdRb0FxVE56UXdn?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "NA PRIMORSKEM ZABELEŽILI POTRES: Kje so ga čutili?",
-    "source": "Regional Obala",
-    "date": "2026-05-10T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMWttajY0QmhPaEk0NV9PNmI3NUxYU0NrY0xTUHNYOHBBanc5TzZYb1dEa1VCUTNmRlM2VzdJM2ZpTnFoc1A1OEFUTHU5QVN2OVo2d24zSlc1RVVNd3M0NlFpeGlWd1FRZTMtZENyNlV6TEhWU20yTkhla0Q4MVNxbktHNG5hbUpiajNrMTd3?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    },
@@ -705,6 +697,14 @@
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
     "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Streslo je v Breginju, potres so čutili v Zgornjem Posočju",
+    "source": "Svet24",
+    "date": "2026-08-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1lcVExb2pndTlmTk1ieTNRMmE5REdsSWdhQXBRRmpTaWNzX2tRRnNzMU5IRHZBZFpwLTNQVFM3Wm5JaWZwVU9EZmhPd0FYXzFxVmtuNjN2NzlaSTI2WHVFeUQtWUFkdEwyaGhDVFhEUnhtNW1GNUlGd3hUVkQ?oc=5",
+    "outlets": 2,
     "match": "headline names \"potres\""
    },
    {
