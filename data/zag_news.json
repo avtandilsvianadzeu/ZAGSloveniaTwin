@@ -1,8 +1,18 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-24T19:44:59.598Z",
+ "updated": "2026-11-25T14:08:08.389Z",
  "items": {
   "sl": [
+   {
+    "title": "Delegacija iz Egipta obiskala ZAG",
+    "url": "https://www.zag.si/delegacija-iz-egipta-obiskala-zag/",
+    "date": "2026-11-25T14:03:54.000Z",
+    "summary": "ZAG je v ponedeljek obiskala delegacija iz Egipta, ki je Slovenijo prišla v okviru mednarodnega projekta EUROMED4SB, ki pospešuje prehod gradbenega sektorja v evro-sredozemski regiji k trajnosti, krožnemu gospodarstvu in digitalizaciji. Obiskovalcem smo",
+    "category": "Aktualno",
+    "records": [
+     "maribor_pilots"
+    ]
+   },
    {
     "title": "Gradbeništvo prihodnosti je digitalno in krožno , vabilo na delavnico",
     "url": "https://www.zag.si/gradbenistvo-prihodnosti-je-digitalno-in-krozno-vabilo-na-delavnico/",
@@ -71,13 +81,6 @@
     "records": [
      "velikaplanina"
     ]
-   },
-   {
-    "title": "Dan odprtih vrat 2026",
-    "url": "https://www.zag.si/dan-odprtih-vrat-2026-2/",
-    "date": "2026-10-23T07:18:50.000Z",
-    "summary": "Vsako leto v jeseni povabimo splošno javnost na ogled naših laboratorijev, naprav in opreme. Obiskovalci se venomer naučijo kaj novega o gradbeništvu z vidika preiskav, analiz in testov. Dan odprtih vrat je letos na sedežu ZAG-a potekal v četrtek, 15. oktobra",
-    "category": "Aktualno"
    }
   ],
   "en": [
@@ -154,6 +157,17 @@
   ],
   "latest": [
    {
+    "title": "Delegacija iz Egipta obiskala ZAG",
+    "url": "https://www.zag.si/delegacija-iz-egipta-obiskala-zag/",
+    "date": "2026-11-25T14:03:54.000Z",
+    "summary": "ZAG je v ponedeljek obiskala delegacija iz Egipta, ki je Slovenijo prišla v okviru mednarodnega projekta EUROMED4SB, ki pospešuje prehod gradbenega sektorja v evro-sredozemski regiji k trajnosti, krožnemu gospodarstvu in digitalizaciji. Obiskovalcem smo",
+    "category": "Aktualno",
+    "lang": "sl",
+    "records": [
+     "maribor_pilots"
+    ]
+   },
+   {
     "title": "Gradbeništvo prihodnosti je digitalno in krožno , vabilo na delavnico",
     "url": "https://www.zag.si/gradbenistvo-prihodnosti-je-digitalno-in-krozno-vabilo-na-delavnico/",
     "date": "2026-11-23T08:58:03.000Z",
@@ -227,14 +241,6 @@
     "summary": "Researchers from the Slovenian National Building and Civil Engineering Institute (ZAG) were once again included among the top 2 percent of scientists worldwide, according to the list Top 2% Scientists. This is a prestigious international list and represents a",
     "category": "Latest news",
     "lang": "en"
-   },
-   {
-    "title": "Dan odprtih vrat 2026",
-    "url": "https://www.zag.si/dan-odprtih-vrat-2026-2/",
-    "date": "2026-10-23T07:18:50.000Z",
-    "summary": "Vsako leto v jeseni povabimo splošno javnost na ogled naših laboratorijev, naprav in opreme. Obiskovalci se venomer naučijo kaj novega o gradbeništvu z vidika preiskav, analiz in testov. Dan odprtih vrat je letos na sedežu ZAG-a potekal v četrtek, 15. oktobra",
-    "category": "Aktualno",
-    "lang": "sl"
    }
   ],
   "media": [
