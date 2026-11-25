@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T03:02:23.720Z",
+ "updated": "2026-11-25T03:04:26.460Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -10,6 +10,16 @@
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYkM3c0V4SkRZQS1RUU54SzF6cEUxcHctSDV2bGtNSmdtcDYxdU9TbFd6Wkh1dFUtR3BxRmE5c3BrSkpUZjJ6ekNFemh5SWZmcVp6bFBoYUZRckhBbUN0QUJveGxGUl9FeGhuak44cHJRbThHZWlTUmgzUmwzVTEwWUJkOS1FMjhYTVdiX1ItcVVobUtJRnFJaThRTXVuLVV1dDZmOGJoT0R3QWdabTFmZVNBYUJQTEI1em1JYS00SlVsUEdqUW1ybzhESS1aRTRreW0yUHBlcTdQOXU2VV9RUA?oc=5",
     "outlets": 1,
     "match": "headline names \"ravbarkomand\""
+   }
+  ],
+  "crna": [
+   {
+    "title": "Od jabke do mošta: folklora, ples, ustvarjalnost in bogate nagrade v Črni na Koroškem",
+    "source": "Koroške Novice",
+    "date": "2026-11-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNS0dYd3RRLVZFTi1tS0k5WmtJMDRqOUpVMWY0LTRGYUI5QUtHSHBiYmU4cTJYT1AyM2Nfa3J0YTluZWVEeklMTF9iQmVyd3hRTWxKT2Z4YklmRjB0bE9EejRtSzBYNzlmdVBaTTRpbGl0Umt5c0NtOHVUeDB2NlF0VUNpYjk3eWJpQ1hKZGZjUlRhTHBPSkMwRnk5VlV2Y2VhOU1zQU5ZXzJiNEtuVWRJZmNrTlNaanpvandj?oc=5",
+    "outlets": 1,
+    "match": "headline names \"na koroskem\""
    }
   ],
   "verd": [
@@ -394,14 +404,6 @@
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOd0sza3ZTalczVW8weXNMTUphanhWY1l6ZmNrcDlyZjRIbHRrYm9saEZJeDlobXhQSTk5TjhkdTk3eE9IWHhETFZvT2ZBVVFIOU1ZYkR5QWZYa1hodDJSVThpLW5LMkNuN0J0NExYQjRYMWFLaDRhbmN4NEtvNk9SLXJDZ1hfVmR4WjBkMlNZekxHeUFQX1FOTENuWGJTUnVfSEl5STZZemw2QW80X05Yag?oc=5",
     "outlets": 1,
     "match": "headline names \"he krsko\""
-   },
-   {
-    "title": "Od Drave do Soče: ribje steze ob slovenskih hidroelektrarnah",
-    "source": "nas-stik.si",
-    "date": "2025-12-31T08:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaTlRYjRUbTJzQVQwYmR0anFfZ293VVpDRzRTOXhxVGV4XzVLMVpteEQ0Tmp5R3h0VzlPVE0wLTFyWmxJTzVVRUc2aGU2U2o2enpIRWY0ZFo0YWFqenprRS1ET2JNTEJoeHh4T09vd19URnN5SG15WGx0ajc1NUliMGpuR3lPblp3azFvcjgzVFZMdDk1eUF5UzJQUXNpTlZMUlBRa3JoMkJVZEU2Wnc?oc=5",
-    "outlets": 1,
-    "match": "headline names \"hidroelektrarn\""
    }
   ],
   "che_avce": [
@@ -480,14 +482,6 @@
     "source": "Slovenske novice",
     "date": "2026-07-04T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMUxPeXpDWlpJeGVrdmtKSHFkR0F1SVFjQzltZUVXLTcxZ2JtN1E4ZEtXaF9OQ0NuNExkSG5zeG1NOWRPemhvOUpIa0RPSU5ESDhETHNMMkh3UXdzYVJBSkJhS2l5dzB1UjdGMzhYTGc4UmttalJBRnVjcXBNQVMtS3hjMTlVOHZCTHN6OEp6VjViU2VnOE14Y1NmcFh4WmEzVVRfQVc0QllrLTZ0SGdIc0RCZU9sX2l6RE5rYXgzUTZrUlgzbjV1ZEZFQQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kranjsk\""
-   },
-   {
-    "title": "Nova sedežnica na Vitranc: Kranjska Gora želi postati celoletni gorski center",
-    "source": "Gorenjskainfo.com",
-    "date": "2026-06-25T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeTNPcVNuOWFBNkY1R3RhN2k1SV81WUNwMDM1LU50MDVqdTMxZnRzRS1qdGZMZkZMaV9sVTFrQno0MUdPX1NNcDFSUkpKcFhpZVdUUmpqVFNQY1NXcnFTRGU2MHJ5TUc0RFV5SXNfaDFqbHhnRi1DTm9oRHFMdTBKZGZtSjhMRVl5Wmpfbm9CVG5iM09EQ2NLYl9TZzU3MjZZZkJ3cE9QNHd2U1JiM05KMUVSeExWVEZpR1NUMjZVUXNkZw?oc=5",
     "outlets": 1,
     "match": "headline names \"kranjsk\""
    }
@@ -588,6 +582,14 @@
   ],
   "livarna_crnomelj": [
    {
+    "title": "Novi posnetki: kljub opozorilom iz Livarja še naprej gost dim",
+    "source": "Radio Odeon",
+    "date": "2026-08-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUkhBOThtdWFPZERPOVVoeWladEs4b2VPTkR2Zmp3MFhZRl9zaTlxNjJVYkl1aDFBVjExSXoxYkI5MFBMcWNPcGJCb0RRSGRhVkVDNnVLaFFiM3R5UU4zWU9hNDlkQkNRYWRvN2dBV2NqU2dhOFZrTl82S0ZFcXZWeVpVU0REMmRWOTRiSE4zUlNMRHpvSVQwY25iS2o?oc=5",
+    "outlets": 1,
+    "match": "headline names \"livar\""
+   },
+   {
     "title": "Črnomelj postaja srce Livarja, vse proizvodne aktivnosti na eni lokaciji",
     "source": "Svet24",
     "date": "2026-06-23T07:00:00.000Z",
@@ -650,6 +652,14 @@
     "match": "headline names \"potres\""
    },
    {
+    "title": "Streslo je v Breginju, potres so čutili v Zgornjem Posočju",
+    "source": "Svet24",
+    "date": "2026-08-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1lcVExb2pndTlmTk1ieTNRMmE5REdsSWdhQXBRRmpTaWNzX2tRRnNzMU5IRHZBZFpwLTNQVFM3Wm5JaWZwVU9EZmhPd0FYXzFxVmtuNjN2NzlaSTI2WHVFeUQtWUFkdEwyaGhDVFhEUnhtNW1GNUlGd3hUVkQ?oc=5",
+    "outlets": 2,
+    "match": "headline names \"potres\""
+   },
+   {
     "title": "Pri Kobaridu so se stresla tla, potres čutili tudi v Tolminu",
     "source": "Žurnal24",
     "date": "2026-08-21T07:00:00.000Z",
@@ -678,14 +688,6 @@
     "source": "rtvslo.si",
     "date": "2026-05-06T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
-    "outlets": 1,
-    "match": "headline names \"potres\""
-   },
-   {
-    "title": "Prihaja potresna izkaznica: Kako varne so vaše stavbe?",
-    "source": "Svet24",
-    "date": "2026-05-06T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjBxSFBONTZkdEoydEZxckVZMUxpRzlmTEQzb0ZGQkl3QkJjbDlSbWFrNzhsNmF6bHVsakdYamlYLXBHdEF6NGl4Qk41SVo4QkdMV213aGdtd0xwZlRQclQ5OHJFS1ZlcWJrbERaVlFSYXpFdlBtTXdEaHZjbW5uOGJPbzFlSkJwSm9Ydm85RFZEUkI0czNRZkpHQmt1bDhLUWlr?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    }
