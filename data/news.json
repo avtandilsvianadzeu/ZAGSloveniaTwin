@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T03:04:26.460Z",
+ "updated": "2026-11-25T04:06:22.354Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -114,6 +114,14 @@
     "match": "headline names \"innorenew\""
    },
    {
+    "title": "Raziskava o zaščiti lesa na biološki osnovi raziskovalcev UP IAM, InnoRenew CoE, prejela priznanje Editor’s Choice revije Forests",
+    "source": "Primorske novice",
+    "date": "2026-08-08T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQNXFfVjNyZi14WHV5VGNXOGNPZDUwQTZmbGFPT2FVZnk0Z19KTGdNejRkaVFYWWRnMGhta0tKQlAwZ1loWGlmWHJTX3NOZWxONEpfcm1QNWJCT2haVndZbXMtNFZPSjZYdEN3ZU90aWtpeUFhWEpSR2UwWFkxVG5naWdxdy1jME5mcVlQLTJJcklnX2RVVElqZldUaXl1ODAwQld3bVg4d1N3MFhiQ2FydXFGbVdsQ1VJZC1KUGV3YWVnUDhBTnhNZ0dEXzgzWVBFNjNXZ2hWUGdyT1RzbTl6eWZOVEdXd0ZZNnZ3b285WWtTR010NmZIajB5Qm0tbjlnNUE?oc=5",
+    "outlets": 1,
+    "match": "headline names \"innorenew\""
+   },
+   {
     "title": "Želite izvedeti več o kakovosti zraka v vašem domu? Sodelujte v raziskavi Innorenew CoE, UP IAM",
     "source": "Primorske novice",
     "date": "2026-08-06T07:00:00.000Z",
@@ -130,16 +138,6 @@
     "match": "headline names \"innorenew\""
    }
   ],
-  "ulfgg": [
-   {
-    "title": "IZS študentom ljubljanske fakultete za gradbeništvo in geodezijo podelil najvišja priznanja",
-    "source": "Finance.si",
-    "date": "2026-06-17T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxONllRclhtYzJ3RkRYb1FROTNOTmpVVnozSHNTS2VaNWtQdGxCbExkV1RDR2xhTXZlYjdCRUtxRm01aGVOb1NOQ2xDZlg2MXcwVkxobzl6SU9zc3NxZFJudGl1VmVST214SmJFZkxxY3dUUVc0QkxPMUtyNTNkalB6a2RGQUo0YlgyaTRXeVh4UjNfRXNWQzk3TFBGNXdUMmhkZU5VRVhadWxETVZpMU10clV1ZmdKYWRzMHZnNEZ2TUFIQ2thSUMtdVNwTmFHb3hucXZsUUVlSE0?oc=5",
-    "outlets": 1,
-    "match": "headline names \"gradbenistvo in geodezijo\""
-   }
-  ],
   "karavanke_c": [
    {
     "title": "Karavanški predor po 35 letih dobiva novo podobo, tovornjake pa bo pred vstopom nadzoroval termoskener",
@@ -154,7 +152,7 @@
     "source": "Siol.net",
     "date": "2026-09-12T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWnd1STZaSnpOd2ljYlJhS0dqOEdvdmRNQkh5alo1V0ljZEJPM2hUZ0wyaE1OVlV6WjdkTmRQVnBGdFEwc3NGSXY3NEE3MmpXMzdnTHNaZ2FJUlNINjctZXZrNkhVRzA4RUtmMDQ4aEtCN0l5SzJRQlVDN0VZLWdqSE1CR1BacUs2?oc=5",
-    "outlets": 6,
+    "outlets": 2,
     "match": "headline names \"karavank\""
    },
    {
@@ -162,15 +160,7 @@
     "source": "Delo.si",
     "date": "2026-08-15T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdURWdFlIRXZfMGlZSFM1cjVMWmZUVjR4WklsXzVScG04ZzN0N1FCaktWLVBrckNkSFRwajAxVm1KNkEzMllDeXRkT3QyRl85eHpXN1hnY2wtOHcyUmV2YklxT3dVbGZDTTZ0S0h2YmJyLTlZWjBkTlV5cm9CRmZoOEFxTQ?oc=5",
-    "outlets": 2,
-    "match": "headline names \"karavank\""
-   },
-   {
-    "title": "Predor Karavanke spet odprt, goreče vozilo zaprlo štajersko avtocesto",
-    "source": "Siol.net",
-    "date": "2026-08-10T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMEJoMjduLWZZYkd6MnJhVllYNWV0NFNfd0pMWG9sRUM4eVA4bTlQMDVwcTZLVGo0QkVwRGJ3c0IwUDgyY0ExRzIxTWpmU0hTelQ3R0NadEVEaGtSemlMdGdqUF85eTZLUk9RWWJ1c1NHbUxpYWppNVJvOURIbmEwM2ZMN01sWlVKT0JoeDVBMnRiMWs?oc=5",
-    "outlets": 2,
+    "outlets": 1,
     "match": "headline names \"karavank\""
    },
    {
@@ -182,19 +172,11 @@
     "match": "headline names \"karavank\""
    },
    {
-    "title": "Predor Karavanke z novim elektroenergetskim sistemom",
-    "source": "nas-stik.si",
-    "date": "2026-07-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeXVqNWpBQmluWHVaWmJqUUxXUFVlOGhCRkVHM2lOWkJ2Ym5YR0ZycXlMMUQ5MTNVemprd2ZXNEZCT0JaVlJKYzktYjFqUzI0RG1wdEhod3BGUUNibTliMEdTQ1ZFdkpUclVXTlRwZ2t3ckQ3bXFfNW5pdnQ5RlBzLXpPOUVQaUVGbUJwNFI0LUxGN0dqWmNtbGZTanpfUEJVWWtmMQ?oc=5",
+    "title": "Predor Karavanke spet prevozen",
+    "source": "Delo.si",
+    "date": "2026-07-12T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQXNMa3VYQlFkdzlQdGx2ZmpEM0xMNTFXa2toY3BoU3RKYjhIN2stTHQ1VkMzU0d6cjZodE1sbGsxYzRBMVo3aGFnQ29nNTRvUVhxX1Bud2pXMzVoT0g0UzkzVm5GVmpXdlo5Ql9fN3VjS1AxNnAyVGttMU1iUW9MV0xXRFJDaG1BNU1V?oc=5",
     "outlets": 1,
-    "match": "headline names \"karavank\""
-   },
-   {
-    "title": "Primorska avtocesta zaprta med počivališčem Ravbarkomanda in Postojno v obe smeri, predor Karavanke ponovno odprt",
-    "source": "Lokalec.si",
-    "date": "2026-07-11T11:29:01.000Z",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNaW1iTWdmLXJESnlObmF6UjM3Q1V1Sl84WkUySnpveHdPdlAxZ1NXMXhuOVBIMFdnRDM0aVRpMUw0dDFVYVpGYW9tVVp3eDc0d2R2ZHM0WFFkYmpjc0tOZU1oYklFczhnd3EyazlKa2QtZE5NWWRGNGFlQnlwZzZ5Mjg2S0szNXBlYk5vY3ZBWVZHa0c2d1loMk1jdDVQMG5EUklaUFoyN3A1NGtuZjFvM3pNdG1aa09wN1pScUhqTUFySUhVam9neHBaRExYWUZEaHc?oc=5",
-    "outlets": 4,
     "match": "headline names \"karavank\""
    },
    {
@@ -204,6 +186,22 @@
     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9lTGoxLU9zX2gyV2VrSWNadDBsbmowVEZOYThYLWVFeHdqOVJJM3RJMllwQkdvWDFiUGVPVkFhSjF5ZVdXRVdoQ0VGVUhRSU9aOXZiUnhyRmMzNmlweEVpUFo2WDdIbUk?oc=5",
     "outlets": 2,
     "match": "headline names \"karavank\""
+   },
+   {
+    "title": "Odprta nova cev predora Karavanke, ministrica Bratušek o \"letu predorov\"",
+    "source": "Forbes Slovenija",
+    "date": "2026-03-18T14:04:48.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQYlZpUGd1em5tSEFPdkI0RjRuRnFJVmZTcTlhbWlPU0h1YTNnMloxOC1Oa1lJLUx0QnhpZHJ0bGVQZUk1MmZUY0owdkZVeVpZZmc4ZVRvZHpfdFlDa0x2N1B4RGh6bFExcTVHSlMwaVA1anVNU3FYM3ZMVGxrSDNHWkIxZWhwZlZJaGlvVVBmU05NaXFTTUp5d1RxeC1ZVWc5LVlj?oc=5",
+    "outlets": 6,
+    "match": "headline names \"karavank\""
+   },
+   {
+    "title": "(VIDEO) Zapeljali smo se skozi novi karavanški predor",
+    "source": "Dnevnik",
+    "date": "2026-03-18T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVFpoZF9Sa0J0dUV6TUFCVDN0YmlQcWdtTFJKVG9NajJleTF2YkxXMENBUi1GTmtabzlhMkNLQnByZTRMMWE3QlEyMWlsS1E1Z1F5enRyb290TUpzdlByMUlzaTI1ZjN3d2ZPclBlZEdvNjJOZjJiTVNHVW5JUzNNbjBrdWtEODBFbDN3ZDFJVkM3MEUyOHVmYm0zdVVSaHN6TlE?oc=5",
+    "outlets": 1,
+    "match": "headline names \"karavansk\""
    }
   ],
   "golovec": [
@@ -582,14 +580,6 @@
   ],
   "livarna_crnomelj": [
    {
-    "title": "Novi posnetki: kljub opozorilom iz Livarja še naprej gost dim",
-    "source": "Radio Odeon",
-    "date": "2026-08-12T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUkhBOThtdWFPZERPOVVoeWladEs4b2VPTkR2Zmp3MFhZRl9zaTlxNjJVYkl1aDFBVjExSXoxYkI5MFBMcWNPcGJCb0RRSGRhVkVDNnVLaFFiM3R5UU4zWU9hNDlkQkNRYWRvN2dBV2NqU2dhOFZrTl82S0ZFcXZWeVpVU0REMmRWOTRiSE4zUlNMRHpvSVQwY25iS2o?oc=5",
-    "outlets": 1,
-    "match": "headline names \"livar\""
-   },
-   {
     "title": "Črnomelj postaja srce Livarja, vse proizvodne aktivnosti na eni lokaciji",
     "source": "Svet24",
     "date": "2026-06-23T07:00:00.000Z",
@@ -629,7 +619,7 @@
   "soca_quake": [
    {
     "title": "V bližini Tolmina potres z magnitudo 2,3",
-    "source": "rtvslo.si",
+    "source": "RTV SLO",
     "date": "2026-11-21T19:42:32.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVWdPZjRhc0M2SktReXBkYWJFOG1RWkFqRUozbzVxN29WelhEdXlzdTNmbUQ2bjZBenNIQ1B2TG5ZSF9nakVidEZFQUp4Z01IMnc1T1ljMHZMNmF5OW42a1p0ZVJxQ0hhSGdtcTBHYllFR1dCQk92ZkZ3TU9KZmpyWnpR?oc=5",
     "outlets": 4,
