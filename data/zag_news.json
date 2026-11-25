@@ -1,6 +1,6 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-25T14:08:08.389Z",
+ "updated": "2026-11-25T14:28:17.534Z",
  "items": {
   "sl": [
    {
@@ -85,10 +85,24 @@
   ],
   "en": [
    {
+    "title": "Egyptian delegation visits ZAG",
+    "url": "https://www.zag.si/en/egyptian-delegation-visits-zag/",
+    "date": "2026-11-25T14:11:52.000Z",
+    "summary": "On Monday, ZAG welcomed a delegation from Egypt visiting Slovenia as part of the international project EUROMED4SB, which promotes the transition of the construction sector in the Euro-Mediterranean region towards sustainability, the circular economy and",
+    "category": "Latest news"
+   },
+   {
     "title": "FRISSBE_Building European Excellence in Fire Safety: A New ERA in Fire Research",
     "url": "https://www.zag.si/en/frissbe-european-excellence-fire-safety-project-conclusion/",
     "date": "2026-11-16T11:23:36.000Z",
     "summary": "From 2021 to the end of this year the Slovenian National Building and Civil Engineering Institute (ZAG) has been carrying out the European project FRISSBE (Fire-safe sustainable built environment), through which we have significantly strengthened research",
+    "category": "Latest news"
+   },
+   {
+    "title": "ZAG Hosts the Kickoff Meeting for the European ReConstruct4CE Project",
+    "url": "https://www.zag.si/en/zag-hosts-kickoff-meeting-for-the-european-project-reconstruct4ce/",
+    "date": "2026-11-12T07:58:51.000Z",
+    "summary": "The kick-off meeting for the Interreg CE ReConstruct4CE project is taking place at ZAG on November 11 and 12. The ReConstruct4CE project (full name : Recovery in Construction across borders: leveraging digital knowledge hubs, applied trainings, and material",
     "category": "Latest news"
    },
    {
@@ -139,23 +153,17 @@
     "date": "2026-07-30T12:21:56.000Z",
     "summary": "On Wednesday, 5 August 2026, at 12:00, you are cordially invited to a guest lecture by Prof. Sandrine ROSIN-PAUMIER entitled \"Heating, Cooling… What if the Ground Could Help? Insights into Energy Geostructures\". The lecture will be held at ZAG in the hall on",
     "category": "Latest news"
-   },
-   {
-    "title": "Guest lectures ZAG: High-resolution building exposure modelling",
-    "url": "https://www.zag.si/en/guest-lectures-zag-high-resolution-building-exposure-modelling/",
-    "date": "2026-07-27T14:17:58.000Z",
-    "summary": "The Slovenian National Building and Civil Engineering Institute (ZAG) regularly organizes Guest Lectures ZAG, aimed at experts, researchers and the interested public. This time we invite you to a lecture entitled “High-resolution building exposure modelling”,",
-    "category": "Latest news"
-   },
-   {
-    "title": "Guest lectures ZAG: Supplementary cementitious materials in Ghana",
-    "url": "https://www.zag.si/en/guest-lectures-zag-supplementary-cementitious-materials-ghana/",
-    "date": "2026-07-15T09:39:10.000Z",
-    "summary": "The Slovenian National Building and Civil Engineering Institute (ZAG) regularly organizes ZAG Guest Lectures, aimed at experts, researchers and the interested public. This time we invite you to a lecture entitled “Supplementary Cementitious Materials (SCMs)",
-    "category": "Latest news"
    }
   ],
   "latest": [
+   {
+    "title": "Egyptian delegation visits ZAG",
+    "url": "https://www.zag.si/en/egyptian-delegation-visits-zag/",
+    "date": "2026-11-25T14:11:52.000Z",
+    "summary": "On Monday, ZAG welcomed a delegation from Egypt visiting Slovenia as part of the international project EUROMED4SB, which promotes the transition of the construction sector in the Euro-Mediterranean region towards sustainability, the circular economy and",
+    "category": "Latest news",
+    "lang": "en"
+   },
    {
     "title": "Delegacija iz Egipta obiskala ZAG",
     "url": "https://www.zag.si/delegacija-iz-egipta-obiskala-zag/",
@@ -195,12 +203,12 @@
     "lang": "en"
    },
    {
-    "title": "ZAG gosti uvodno srečanje evropskega projekta ReConstruct4CE",
-    "url": "https://www.zag.si/zag-gosti-uvodno-srecanje-evropskega-projekta-reconstruct4ce/",
+    "title": "ZAG Hosts the Kickoff Meeting for the European ReConstruct4CE Project",
+    "url": "https://www.zag.si/en/zag-hosts-kickoff-meeting-for-the-european-project-reconstruct4ce/",
     "date": "2026-11-12T07:58:51.000Z",
-    "summary": "Na ZAG-u 11. in 12. novembra poteka začetni sestanek projekta Interreg CE ReConstruct4CE. Projekt ReConstruct4CE (s polnim imenom Recovery in Construction across borders: leveraging digital knowledge hubs, applied trainings, and material solutions for a more",
-    "category": "Aktualno",
-    "lang": "sl"
+    "summary": "The kick-off meeting for the Interreg CE ReConstruct4CE project is taking place at ZAG on November 11 and 12. The ReConstruct4CE project (full name : Recovery in Construction across borders: leveraging digital knowledge hubs, applied trainings, and material",
+    "category": "Latest news",
+    "lang": "en"
    },
    {
     "title": "Znanost za družbo, Kolokvij ZAG 2026",
@@ -233,14 +241,6 @@
     "summary": "ZAG-ov Laboratorij za metrologijo, 17. novembra 2026, organizira strokovni seminar Metrologija v praksi, namenjen predstavitvi novosti na področju meroslovja, sodobnih preskusnih metod in novih tehnoloških rešitev. Seminar ZAG organizira v sodelovanju s",
     "category": "Aktualno",
     "lang": "sl"
-   },
-   {
-    "title": "Our Researchers once again ranked among the “TOP 2% SCIENTISTS”",
-    "url": "https://www.zag.si/en/zag-researchers-the-worlds-best-scientists/",
-    "date": "2026-10-27T12:29:55.000Z",
-    "summary": "Researchers from the Slovenian National Building and Civil Engineering Institute (ZAG) were once again included among the top 2 percent of scientists worldwide, according to the list Top 2% Scientists. This is a prestigious international list and represents a",
-    "category": "Latest news",
-    "lang": "en"
    }
   ],
   "media": [
