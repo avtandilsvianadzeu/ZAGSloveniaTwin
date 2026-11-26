@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T11:17:58.298Z",
+ "updated": "2026-11-26T12:19:55.321Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -59,6 +59,14 @@
    }
   ],
   "zag": [
+   {
+    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
+    "source": "MojaObčina.si",
+    "date": "2026-10-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
+    "outlets": 1,
+    "match": "headline names \"zag\""
+   },
    {
     "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
     "source": "Večer",
@@ -160,7 +168,7 @@
     "source": "Siol.net",
     "date": "2026-08-10T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMEJoMjduLWZZYkd6MnJhVllYNWV0NFNfd0pMWG9sRUM4eVA4bTlQMDVwcTZLVGo0QkVwRGJ3c0IwUDgyY0ExRzIxTWpmU0hTelQ3R0NadEVEaGtSemlMdGdqUF85eTZLUk9RWWJ1c1NHbUxpYWppNVJvOURIbmEwM2ZMN01sWlVKT0JoeDVBMnRiMWs?oc=5",
-    "outlets": 1,
+    "outlets": 2,
     "match": "headline names \"karavank\""
    },
    {
@@ -264,7 +272,15 @@
     "source": "RTV SLO",
     "date": "2026-11-03T08:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTGJVRzJLSTVTb1I3YVFxeFoxdUI2QnRDQkdxWVFfV3BxQlN1WWtCelNtZWYyZkYwSnRzNEN1dnB6WGcxLXBiMG5tTmR6cDI3aGNZbFAwYS1LS2F5Q2ZmcTE4UnVUY0lUcnJndUZrZUtVY2FsV2hFaTAyVHEzek9fRGFfbTJjODNTZjN4cHJHYjBaYldueE9XeFdhSTJWX2gtQmFUaGU4OVVKYno0am5z?oc=5",
-    "outlets": 7,
+    "outlets": 2,
+    "match": "headline names \"kastelec\""
+   },
+   {
+    "title": "Primorska avtocesta v predoru Kastelec proti Kopru ponovno odprta",
+    "source": "Dnevnik",
+    "date": "2026-09-24T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1JQWUtScWZqa0dlYTBtdEg5ekZocEZ5emRvTVE2c1lsM05RaVFvNXhHSkN3Q3BhZnpXRWVmVFFTR0Z6N3luTEZMMms4dzM2YnN6Tm5Rbkd4RDE2RDVNNWtGVnRaQUpNNDZWZFphQktDeG9fV1V5MFRaMjNNczZ5TGZEdUFaWGRWdUZEdGpHRC12NTNPTmM2M2tqNi1OV3NjNnhSdDlKcUwtM1EwN3c?oc=5",
+    "outlets": 1,
     "match": "headline names \"kastelec\""
    },
    {
@@ -272,14 +288,6 @@
     "source": "Regional Obala",
     "date": "2026-09-24T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUC1pVlJKZEFjUDVGU1dHX0pBaTktcGRXSmx2TjdYYUR2N0NjbmRTaTQzdlFLNldHa2gwNEg4NzRSSi11WjlaRTdMdWhXTHJ3aXlxYV91UTlDYnZhNUs4N1pSNGZTcWNPMFZXVDY1RkhpS0hobWN4a0REbUZrc05pSnRMNkZsTHQ1ZUxFU2g2czhzeTBHVHJQMllfQjdDNnZZUVl4MU9OeFZFQllVUFJlcHBKZEQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kastelec\""
-   },
-   {
-    "title": "Pri Izoli zavili na pokušino vin, zamujali, končalo se je v predoru Kastelec",
-    "source": "Moja Dolenjska",
-    "date": "2026-09-17T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXBfalRVZW01TmhBSklkdEhja21oejhsRzZrOE91a3pwNmJLQWJkUlczejdpMkJnSUIzY09pTW95QW01QjhMRDBub1BLMWtmcGZnWDk2WWsyX2lQUElNOXpaV3ZrTnRSQWZsa1h5ZGd4ZFZfbDdWYVVDN0VZS1ctSFphZmI3Y2h5M1ZLRHRULWVBdS1XMXkxNjExZm04dG11S0lZ?oc=5",
     "outlets": 1,
     "match": "headline names \"kastelec\""
    },
@@ -292,27 +300,11 @@
     "match": "headline names \"kastelec\""
    },
    {
-    "title": "Od počitniške hiše do predora Kastelec v pičlih 20 minutah",
-    "source": "Moja Dolenjska",
-    "date": "2026-08-05T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbkNQaXNOS0VpM1VSOUdoUnZXMFAtSWNPODZyMWRMZkJFZTBsczFTaHRmenRqV3NNNjNpNEdvNkZsNDNHc1h0dGNRU0NqMUIyRzhjU0ZUM1JOSG5mdEVnS1poV2FudGpDRHVvNGxWOFpCVC12cHdwSjJmeWUyS1hac01aS2tHdEtNb2hQVDN3?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kastelec\""
-   },
-   {
     "title": "Predor Kastelec na primorski avtocesti ponovno odprli",
     "source": "Delo.si",
     "date": "2026-07-31T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbmRsdXpVZk9QMUNxZGRvOXg1RzdqUWhtX2twcTIxLXlTZ2ZqSV9Gc2NOOHN0M3ZqLThzM2F1Rm5sVV9pMXdhOWVnZEF5VXRXV05BYTctUVJLME1NWEtkWmNLTHpDcXZUNnpPdVMyWE9KWkFXYTR3VTFlSC0zRVhhbmU2eUE0RVA5ZHRuU0REdm5EU2R6RlN1Uk9nak91bFVm?oc=5",
     "outlets": 2,
-    "match": "headline names \"kastelec\""
-   },
-   {
-    "title": "ZAPRT KASTELEC, PA ŠE REGIONALNA CESTA PRI KOZINI: Zaradi gorečega vozila obvoz čez Italijo",
-    "source": "Regional Obala",
-    "date": "2026-07-31T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaHVTbjhtWkpmVzE0RGEzaFBGWlZDTng1ek9WV25jbmlTdVdvRHd3Uk1KbHZfazQ1R1ZUcWM0bEJ2X0plOEtTUllORjdWTmZQMVh5T2dNclI2enNybEZ3LVFLdlpvMVFFTDF4d3FsZnhPSHhJZVd0QWdKeEMtVlI3YlJtU3k0Wl9wYWxCeThNMHpuTjdTTGVzbkNpVEtYaXc4QWh4VHNOcVhxdzFxVy1rQlJ1Q2lsM2RENmpqY1RTY3ZScHc?oc=5",
-    "outlets": 1,
     "match": "headline names \"kastelec\""
    }
   ],
@@ -330,7 +322,7 @@
     "source": "OBALAplus",
     "date": "2026-10-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUnFDdVVkNUZZX0p0aEktSW1vdWN0MmV0bE5LR1cwVEhJQm0zMEZFemxrdnZFa0NxcWFDOHJCbEs2a0lGWTZGRDliMGdDMTItVDVFdHVsUURwT3JKTFpwVVJJOVhBS01CVW1teXYyWlhlSU5oaUJhR25GQkdmbjYxdDRR?oc=5",
-    "outlets": 3,
+    "outlets": 2,
     "match": "headline names \"markovec\""
    },
    {
@@ -414,6 +406,24 @@
     "match": "headline names \"avce\""
    }
   ],
+  "krvavec": [
+   {
+    "title": "Garažna hiša Krvavec: Edina rešitev za nered?",
+    "source": "Dnevnik",
+    "date": "2026-06-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYVVwYkNhM1lQT1BmY3JGUGNmNjZVZ3huS1RXNUJHVmNhVEhYTjBkODF6b1E5dHYtQWdZbWJSNmJFLUFCTmxUMHgxdGlwNEtaUE9XcmNEOF96UVhmTXNZTlNaaUhUbFprTWxZWkhRbzVfcEJGY3Fvd3JWUVppUTJkNF8yYjRQeklDMU5iUXlBcEpDMWdZ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"krvavec\""
+   },
+   {
+    "title": "Obvestilo - POPOLNA ZAPORA ceste od planine Jezerca (parkirišče) do zgornje postaje žičnice Krvavec, od 20.4.2026 do 14.11.2026",
+    "source": "MojaObčina.si",
+    "date": "2026-03-06T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNcE8zd3EzNDVOMjRqVk9Bcl9pMTkycEs1dVpGc2xXYVJyTDE4NGw4ZDc4a21LalpYSFlObGkwRVFLQy1YOS1RTFdSSFZ4c0NhTHNuMm1LT3pJVWFxUWx5OXljS1RlaDZQVWZLalZDRl9DM1pWa0F0bU5mdXFaYk43VXRrTFZOOUNpYlRUeHJwYlBsLXBJTnBkemtRLWFRbW50UUJpalAya1VfbTZiSDhvVUIzXzhDcEFOTFluUkJwcTRvdVdOMzdlLXJaejNud3VkWmsxdWVsQlpNRmJpY3ZJa0FuMm5oODY2NFZSaGo2THdrVmhpaEJhaXc1TXhXQ2xTLXJERFBVdnUwcVN6TW9F?oc=5",
+    "outlets": 1,
+    "match": "headline names \"krvavec\""
+   }
+  ],
   "velikaplanina": [
    {
     "title": "Nihalka na Veliko planino bo zaradi remonta zaprta mesec dni",
@@ -454,7 +464,7 @@
     "source": "MojaObčina.si",
     "date": "2026-04-09T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOT1RCbmliYUowT3J4UWNNMURmck15YlVTdnJFVWE4aVhvT0VHUGxjMHBCVHZkS1l3dTBMTlJ4b1d0OG9FazNkTEVka2FHZWFvd01JMzFEMnNfUVI5UDFwTkNiTHF6OWtDdnlfVjNValBlME5iZXZBTnloZ3hGbkl3c1FzZ2FNWEUzcnpJY09KR1otbndDMVI2VW42LTBHaG5VN2FSdzV2dGZzVjlFUjd0RUJzR0NHek5aaGlZZmQwU1RrSE0?oc=5",
-    "outlets": 3,
+    "outlets": 2,
     "match": "headline names \"vzpenjac\""
    },
    {
@@ -562,6 +572,14 @@
     "match": "headline names \"kanin\""
    },
    {
+    "title": "Največje smučišče znova na prelomnici, občina Bovec išče vlagatelja za Kanin",
+    "source": "Delo.si",
+    "date": "2026-06-15T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQekdnT3RJdzBJZUFWYk1oUUktYjRud1ZQbFRabU1GZWthLWVXU0hFUWxxaTJTOTY5dHJzaXlSbFdBVEtOejVvM3l4ZnJaMXpBNzFIOXUtVVhUYUoyQ3AtbE1rTXdzWmRkWEU3Rm5WTWhCaXRUX2JFaVpUTTROMkFuaVZjb1VZQWpzTDFj?oc=5",
+    "outlets": 1,
+    "match": "headline names \"kanin\""
+   },
+   {
     "title": "Na mizi nove rešitve za smučišče Kanin",
     "source": "OBALAplus",
     "date": "2026-02-26T08:00:00.000Z",
@@ -658,14 +676,6 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "Streslo je v Breginju, potres so čutili v Zgornjem Posočju",
-    "source": "Svet24",
-    "date": "2026-08-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1lcVExb2pndTlmTk1ieTNRMmE5REdsSWdhQXBRRmpTaWNzX2tRRnNzMU5IRHZBZFpwLTNQVFM3Wm5JaWZwVU9EZmhPd0FYXzFxVmtuNjN2NzlaSTI2WHVFeUQtWUFkdEwyaGhDVFhEUnhtNW1GNUlGd3hUVkQ?oc=5",
-    "outlets": 2,
-    "match": "headline names \"potres\""
-   },
-   {
     "title": "Pri Kobaridu so se stresla tla, potres čutili tudi v Tolminu",
     "source": "Žurnal24",
     "date": "2026-08-21T07:00:00.000Z",
@@ -688,6 +698,14 @@
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNY1QzSGhWVVJZYkdIdDlxWDlGTmtkVXFzNlhRZ3RTSmgwT2ZHUHMyNENQOXFROThLN19EelZOdWNfTWFNQjRxczVQZ3ZNd1ZaRmRZcmN4YWtkM3pqWEQwQ0ZJbHhVb2NNbGl5RFdVNXpmUU5OSWlWY1BZTU1qekl4U2lsNGU0UXdFcXlnVENJR3ZNTkxiMEd3YnFCOVpQSHBvd0NQLUdFYV9VZklzdk1CeA?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
+   },
+   {
+    "title": "50 let od rušilnega potresa: \"Strehe so se rušile, zemlja valovila, skale kotalile, živali norele\"",
+    "source": "rtvslo.si",
+    "date": "2026-05-06T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQlQ3ME9STzU5OGQyOXdzSzFfVkFCLTh6OEdWU00tcDFhbGxDVEFjZU5ZM0d0Y1NhMFdmSk9DUEcyTmhJWW5MUnhvUXo1RHVYbWNWU1ZXbEFNT0dCMWFPeklqQmhNeWZFX194ZWZMUE1TZnpJRk9idGs4V1YwM3NlWDl0dE1nS0o3YXFzRXo3aEpDQ0hVN0RWSTVyZ3lHbDBodHZqNDRSV2dfTzVMbGJBMFljN1ZfTVBBZ2VmTzlXRFFIbU96Vk1v?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
    }
   ],
   "nuk": [
@@ -696,6 +714,14 @@
     "source": "Dnevnik",
     "date": "2026-08-22T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONnZzQTVHWGl5S2RINklNbWtMaTlLRnk2cWhpOVE4NF9VaHUyTGFGSWktTDQ4N2tOMWJmNHJMMjUwTnVidzI5VkR6RndoNWQ3anM0MVI1Y0s2QTY3bHM2RXhwbUVxNW9uUHZMQ0ZYRFNxd0kzaHd1UG1Sbm10cTdRWHk5YlZvX1JHSkp0enZ3Y3BOb1JXTDhTNEVuNDJKUzk1SUlvQWJ3?oc=5",
+    "outlets": 1,
+    "match": "headline names \"nuk\""
+   },
+   {
+    "title": "Zakaj so pod Nukom našli kipec z erekcijo penisa",
+    "source": "Dnevnik",
+    "date": "2026-03-03T08:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTDJ4eTh0V1p6bzdBSG0wS2lQdUtVQTF6Ym5oaWpIa3hmcXVtLUxRZHZvRmI2dmk4aGZ3UzA2ejI5V21hNEN0SzR0QjVZWENlc01uMDZHbWxqb3puckNVTWlqZUFaSHphbGQ4YW02Z05ZMDhTYXVLMl9RTExkX1pSUFhZNUdyTVNncGJJQzlkRkhYM1hWdHNEOVRGRzQ?oc=5",
     "outlets": 1,
     "match": "headline names \"nuk\""
    },

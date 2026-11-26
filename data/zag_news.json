@@ -1,6 +1,6 @@
 {
  "source": "https://www.zag.si/",
- "updated": "2026-11-26T10:35:56.657Z",
+ "updated": "2026-11-26T12:18:14.139Z",
  "items": {
   "sl": [
    {
@@ -267,13 +267,24 @@
     "date": "2026-10-08T07:00:00.000Z",
     "match": "headline names Zavod za gradbeništvo Slovenije",
     "records": []
+   },
+   {
+    "title": "V zavodu za gradbeništvo predstavili rešitev za shranjevanje odvečne poletne toplote",
+    "outlet": "Gorenjski glas",
+    "domain": "gorenjskiglas.si",
+    "kind": "news",
+    "reviewed": true,
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPYWRLTllPQk5JeWljeFdnVW5IWnNYUzNUSnFMMEZGU3pBNlZOb1pBeUV2Wkp1Qzk5LVR3cUJiWTZDZjdzT3VScmNleWIza0VqVXZwREkxV2tsOThxQ3h3U203M2xjRmxZSWd3VUhlT1Y2T1hPcjZRU1NmVGV1dUMydWtHRGFNUmhObHA0V0lkUzBsWTFLU1JXOW9DbEpuRWw4RmlJQjBRWTdjY1R1ZUwtSDFLNXhjNGtlMk9KRElqR2Y?oc=5",
+    "date": "2026-08-10T07:00:00.000Z",
+    "match": "headline names Zavod za gradbeništvo Slovenije",
+    "records": []
    }
   ]
  },
  "media_check": {
   "queries": 5,
-  "kept": 2,
-  "reviewed": 2,
+  "kept": 3,
+  "reviewed": 3,
   "dropped": 0
  }
 }
