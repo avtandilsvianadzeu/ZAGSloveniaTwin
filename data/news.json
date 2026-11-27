@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T20:32:33.359Z",
+ "updated": "2026-11-27T21:34:29.950Z",
  "source": "Google News (sl-SI), headline match on Slovenian keywords",
  "items": {
   "ravbarkomanda": [
@@ -59,14 +59,6 @@
    }
   ],
   "zag": [
-   {
-    "title": "Dan odprtih vrat ZAG: Požarni laboratorij - dogodki v občini Logatec",
-    "source": "MojaObčina.si",
-    "date": "2026-10-15T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWZtTHUtQkdrejVDQmtLWnJFV3FvTExxUW9qdlptTlhjQmw4NUtjUnB2amMyQnpvSVJQNWRHcnlzNE54bm5nSG5jTndEaWdKUXRjeTBSWlNEYk5sZ3ZZNlJJS1VxR3RNNmhXMGt0SjVROU4zR0hhTTdRU0o2U3NuU01naUhhVUt5N19XeE1tUVU?oc=5",
-    "outlets": 1,
-    "match": "headline names \"zag\""
-   },
    {
     "title": "Zavod za gradbeništvo Slovenije odpira vrata laboratorijev: Kaj vse si boste lahko ogledali?",
     "source": "Večer",
@@ -342,14 +334,6 @@
     "match": "headline names \"markovec\""
    },
    {
-    "title": "VOZNIKI, POZOR: Prali bodo predor Markovec, promet bo potekal po enem pasu",
-    "source": "Regional Obala",
-    "date": "2026-05-21T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSXZObHVEcWpramdDNGJkeWt0bnl3RXZIUHE5ZXFtdzdPaHBhTm9sVFB5RW9hUEV5a0FuNXlVTXdlRFZzWnhZaktNRjk3Nmg3QXc2RkFUSjVEdzNnaVpfZG9NdW9sWVN3YzBJckNLc1VNS0gzM1NfaWhVOU40emF0cHlGcUVjMGxlcDNsSVdSaXJHd1NkcXN0OWdLMUIwbk4zS1JZRDIxZmdTMkxJ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"markovec\""
-   },
-   {
     "title": "Znano je, kaj se je zgodilo včeraj v predoru Markovec",
     "source": "Primorske novice",
     "date": "2026-05-01T07:00:00.000Z",
@@ -580,22 +564,6 @@
     "match": "headline names \"kanin\""
    },
    {
-    "title": "Največje smučišče znova na prelomnici, občina Bovec išče vlagatelja za Kanin",
-    "source": "Delo.si",
-    "date": "2026-06-15T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQekdnT3RJdzBJZUFWYk1oUUktYjRud1ZQbFRabU1GZWthLWVXU0hFUWxxaTJTOTY5dHJzaXlSbFdBVEtOejVvM3l4ZnJaMXpBNzFIOXUtVVhUYUoyQ3AtbE1rTXdzWmRkWEU3Rm5WTWhCaXRUX2JFaVpUTTROMkFuaVZjb1VZQWpzTDFj?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kanin\""
-   },
-   {
-    "title": "Na Kaninu kmalu nove žičnice",
-    "source": "24ur.com",
-    "date": "2026-04-23T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE95eUZUbGx1VmppdTRPZ2tpOE1oX0d3enJ2dWMwZnl0MURMcFROclpxd0ZCQmxRb1o5SWU0TWJOX25ETWhXUFBsTDh5Nm10QW9SczZNWDZmbXk1QVdvRnBLcVoyUlZUWXFSb0ZYYjJoOHVMUkhxcnMyVFFMTQ?oc=5",
-    "outlets": 1,
-    "match": "headline names \"kanin\""
-   },
-   {
     "title": "Na mizi nove rešitve za smučišče Kanin",
     "source": "OBALAplus",
     "date": "2026-02-26T08:00:00.000Z",
@@ -631,6 +599,22 @@
    }
   ],
   "ss_kocevje": [
+   {
+    "title": "Sodišče zavrnilo tožbo ravnatelja Pečana zoper Gimnazijo Kočevje",
+    "source": "Dnevnik",
+    "date": "2026-04-23T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNjlGakxBTlQxWlRNblU2RVFiTmFyUEI1cFFlMUNjTGVxNEVoV3pWUnVZdWxrWU1IUHM5cVFxQmtZSTNzaGhfSWo1VTVFOWhjR3hKZVYwOUw2dXFWcWh5Rm5KeUlXSmhOMG9yS1VSbno0Wkl5WkRmcTMwaUV4LUJMb0Y2T3hSWDBzdzJEckRwaHJuYVljTXRLV3I2ZkRoVm5iQlNNdjl1NWFUVVpTYjdqLXRjOA?oc=5",
+    "outlets": 1,
+    "match": "headline names \"gimnazij\""
+   },
+   {
+    "title": "Razrešeni ravnatelj zoper gimnazijo: aroganten ali dosleden? Mnenja deljena",
+    "source": "Svet24",
+    "date": "2026-04-01T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQakZnV2tNcXpYMTdWdl9FUExWMk9VZUhYU0lkWFBNaWg1Y0p3RkcwNkJsU21XSEpwWWFScHNjR1dZX0pKdGp1ZUl3T0hXZlk0U0h6OGFjSnR2OE9WYU5nZXBxRE1kMEhHYlB5Q2FVVlE5dVJmelFnYk5FQ29vOVF2dkNNTUF1dk5rbEdxOG9MT09uOW9CeGdSajFLN2tPUQ?oc=5",
+    "outlets": 1,
+    "match": "headline names \"gimnazij\""
+   },
    {
     "title": "»Leta, ki ti dajo zaleta« Gimnazija in srednja šola Kočevje",
     "source": "E-utrip",
@@ -672,7 +656,7 @@
     "source": "Ptujinfo.com",
     "date": "2026-11-21T10:23:34.000Z",
     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbmdKQVZpNzUySzVmSXFrcjhKaFFyUHJiam93ejVsaUxPWkJCYmlvRHNzVllMNEVTNmJsVElBV0pHUHlYU0RKYzRDOEpObmE1TVpod0p4T3RCNVVXaklFbVFpQXZBeFc0UGR5X19QdDVYYkduYU5xSEtKUjNtSjNJY1NLOWo5Tl9iR2Y1UnZhc3NNaG1uWFRldU9rRWdBbW40THpfUWtQVlhiZw?oc=5",
-    "outlets": 7,
+    "outlets": 6,
     "match": "headline names \"potres\""
    },
    {
@@ -684,18 +668,18 @@
     "match": "headline names \"potres\""
    },
    {
-    "title": "Streslo je v Breginju, potres so čutili v Zgornjem Posočju",
-    "source": "Svet24",
-    "date": "2026-08-27T07:00:00.000Z",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1lcVExb2pndTlmTk1ieTNRMmE5REdsSWdhQXBRRmpTaWNzX2tRRnNzMU5IRHZBZFpwLTNQVFM3Wm5JaWZwVU9EZmhPd0FYXzFxVmtuNjN2NzlaSTI2WHVFeUQtWUFkdEwyaGhDVFhEUnhtNW1GNUlGd3hUVkQ?oc=5",
-    "outlets": 2,
-    "match": "headline names \"potres\""
-   },
-   {
     "title": "Potres z magnitudo 2,9 pretresel Zgornje Posočje brez škode",
     "source": "telegraf.si",
     "date": "2026-08-27T07:00:00.000Z",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRTdpYUJIa1BESjhCSTZkOW1ySGZtUVQtc09HV043MnltNmI0emVUY0lnUTRoU2lqY29IaGpSVGJTQjVGUDN3aFd4QVF2Q0hvM1lLRHU1SHBBOW9EYy13VURBOWtUVmNyeDY1NWFabXZBQThnQWhGWUJEVWxkVlpfcUNfNVBUdw?oc=5",
+    "outlets": 1,
+    "match": "headline names \"potres\""
+   },
+   {
+    "title": "Močno tresenje v Breginjah: Potres odmeval po Zgornjem Posočju",
+    "source": "Telegraf",
+    "date": "2026-08-27T07:00:00.000Z",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSFVhZ2ZxbFdZLUFiOHlKWDF1OGwxdlZkXzhVbFZwN0lPUktCNVFwaDFNekFKWmlmdTFrRUZhN0RxV1ctMFFybm5HZmNSZTdjMlh6YVNQX3hkcDFiWkhleS12OERJOEIyaExKVnpqdFNuYzZqQ0FGclQwbGJmdjlQVG50b1hnWVVhc0E?oc=5",
     "outlets": 1,
     "match": "headline names \"potres\""
    },
